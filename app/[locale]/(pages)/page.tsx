@@ -6,6 +6,7 @@ import { buildLocaleAlternates } from "@/lib/metadata";
 import { JsonLd } from "@/components/common/JsonLd";
 import { loadMessages, resolveLocale } from "@/i18n/loadMessages";
 import { buildBreadcrumbJsonLd, buildWebPageJsonLd } from "@/seo/jsonld";
+import { TypewriterText } from "@/components/ui/TypewriterText";
 
 interface PageParams {
   params: { locale: string };
@@ -61,7 +62,9 @@ export default async function HomePage({ params }: PageParams) {
     subtitle: string;
     description: string;
     primary: string;
-    secondary: string;
+    typewriter: string[];
+    emailHeading: string;
+    emailButton: string;
   };
   const about = tHome.raw("about") as {
     heading: string;
@@ -97,11 +100,14 @@ export default async function HomePage({ params }: PageParams) {
     <div className="space-y-24 pb-24">
       <JsonLd id="jsonld-home" data={webPageJsonLd} />
       <JsonLd id="jsonld-breadcrumb" data={breadcrumbJsonLd} />
-      <section className="relative overflow-hidden bg-[#FFFEFE]">
+      <section className="relative overflow-hidden bg-[#FFFEFE]" id="hero">
         <div className="absolute inset-0 bg-gradient-to-br from-[#FFFEFE] via-[#FFEDED] to-[#FAD1D1]" aria-hidden="true" />
         <div className="relative mx-auto flex max-w-6xl flex-col items-center gap-8 px-4 py-24 text-center lg:flex-row lg:items-center lg:justify-between lg:text-left">
           <div className="max-w-xl space-y-6">
             <h1 className="text-4xl font-extrabold leading-tight text-[#A70909] sm:text-5xl lg:text-6xl">{hero.title}</h1>
+            <div className="text-lg font-semibold text-[#A70909] sm:text-xl">
+              <TypewriterText phrases={hero.typewriter} />
+            </div>
             <p className="text-xl font-semibold text-[#A70909]">{hero.subtitle}</p>
             <p className="text-base leading-relaxed text-gray-700 sm:text-lg">{hero.description}</p>
             <div className="flex flex-col items-center gap-4 pt-4 sm:flex-row sm:justify-start">
@@ -122,13 +128,13 @@ export default async function HomePage({ params }: PageParams) {
             </div>
           </div>
           <div className="flex max-w-md flex-col items-center gap-4 rounded-3xl border border-white/60 bg-white/70 p-6 shadow-xl backdrop-blur">
-            <p className="text-lg font-semibold text-[#A70909]">{hero.secondary}</p>
+            <p className="text-lg font-semibold text-[#A70909]">{hero.emailHeading}</p>
             <p className="text-sm text-gray-600">{COMPANY.legalNameTh}</p>
             <a
               href={`mailto:${COMPANY.email}`}
               className="rounded-full bg-[#A70909] px-6 py-3 text-sm font-semibold text-white transition hover:bg-[#C9341F]"
             >
-              {hero.secondary}
+              {hero.emailButton}
             </a>
           </div>
         </div>
@@ -187,7 +193,7 @@ export default async function HomePage({ params }: PageParams) {
         </div>
       </section>
 
-      <section className="mx-auto max-w-6xl px-4">
+      <section className="mx-auto max-w-6xl px-4" id="why-us">
         <div className="rounded-3xl bg-gradient-to-br from-[#A70909] to-[#6B0606] p-10 text-white">
           <h2 className="text-center text-3xl font-bold sm:text-4xl">{highlights.heading}</h2>
           <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">

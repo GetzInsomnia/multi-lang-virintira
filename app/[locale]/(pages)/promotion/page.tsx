@@ -54,10 +54,12 @@ export default async function PromotionPage({ params }: PageParams) {
   const { locale } = params;
   const tPromotion = await getTranslations({ locale, namespace: "promotion" });
   const tBreadcrumbs = await getTranslations({ locale, namespace: "breadcrumbs" });
+  const tLayout = await getTranslations({ locale, namespace: "layout" });
 
   const hero = tPromotion.raw("hero") as { title: string; intro: string };
   const offers = tPromotion.raw("offers") as Array<{ name: string; bullets: string[]; note: string }>;
   const cta = tPromotion("cta");
+  const chatLabel = tLayout("cta.chat");
 
   const breadcrumbJsonLd = buildBreadcrumbJsonLd([
     { name: tBreadcrumbs("home"), path: `/${locale}` },
@@ -112,7 +114,7 @@ export default async function PromotionPage({ params }: PageParams) {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                LINE
+                {chatLabel}
               </a>
             </div>
           </article>
