@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+  font-family: 'Prompt', 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  background-color: #fffefe;
+  color: #1f2937;
+}
+
 /* ================== INTER ================== */
 @font-face {
   font-family: 'Inter';
