@@ -8,7 +8,18 @@
     "start": "next start",
     "test": "node --test",
     "lint": "next lint",
-    "postbuild": "next-sitemap"
+    "postbuild": "next-sitemap",
+    "xray": "node scripts/xray-lite.mjs --out reports",
+    "xray:single": "node scripts/xray-lite.mjs --single --out reports/PROJECT-XRAY.md",
+    "prepare": "husky",
+    "i18n:audit": "node scripts/i18n-audit-from-en.mjs",
+    "i18n:fill": "node scripts/i18n-sync-from-en.mjs",
+    "i18n:sync": "node scripts/i18n-sync.mjs",
+    "repo:dump:single": "node scripts/repo-dump.mjs --single --out reports/REPO-DUMP.md",
+    "repo:dump:split": "node scripts/repo-dump.mjs --out reports --split",
+    "repo:dump:all": "node scripts/repo-dump.mjs --single --out reports/REPO-ALL.md --include-dotfiles --include-env --include-binaries --b64-binaries",
+    "prebuild": "powershell -NoProfile -Command \"if (Test-Path .next) { Remove-Item .next -Recurse -Force }; if (Test-Path .turbo) { Remove-Item .turbo -Recurse -Force }\"",
+    "build:log": "powershell -NoProfile -Command \"npm run build *>&1 | Tee-Object build.log\""
   },
   "dependencies": {
     "@testing-library/react": "^16.3.0",
