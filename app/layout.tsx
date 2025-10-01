@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import './globals.css';
+import '../styles/globals.css';
 import { absoluteUrl } from '@/config/site';
 
 export const metadata: Metadata = {
