@@ -103,8 +103,8 @@ export default async function MonthlyStatementsPage({ params }: PageParams) {
 
       <section className="bg-[#FFF5F5]">
         <div className="mx-auto max-w-4xl px-4 py-16 text-center">
-          <h1 className="text-4xl font-bold text-[#A70909] sm:text-5xl">{hero.title}</h1>
-          <p className="mt-6 text-base text-gray-700 sm:text-lg">{hero.description}</p>
+          <h1 className="text-[clamp(2.25rem,1.4rem+2.1vw,3.25rem)] font-bold text-[#A70909]">{hero.title}</h1>
+          <p className="mt-6 text-[clamp(0.95rem,0.9rem+0.3vw,1.1rem)] text-gray-700">{hero.description}</p>
         </div>
       </section>
 
@@ -115,7 +115,7 @@ export default async function MonthlyStatementsPage({ params }: PageParams) {
               <span className="mb-3 inline-flex h-10 w-10 items-center justify-center rounded-full bg-[#A70909]/10 text-sm font-semibold text-[#A70909]">
                 {index + 1}
               </span>
-              <h2 className="text-xl font-semibold text-[#A70909]">{step.title}</h2>
+              <h2 className="text-[clamp(1.5rem,1.1rem+1.2vw,2.1rem)] font-semibold text-[#A70909]">{step.title}</h2>
               <p className="mt-3 text-sm text-gray-700">{step.description}</p>
             </li>
           ))}
@@ -124,7 +124,7 @@ export default async function MonthlyStatementsPage({ params }: PageParams) {
 
       <section className="mx-auto max-w-4xl px-4">
         <div className="rounded-3xl bg-[#FFF0F0] p-8">
-          <h2 className="text-2xl font-semibold text-[#A70909]">{checklist.heading}</h2>
+          <h2 className="text-[clamp(1.5rem,1.1rem+1.2vw,2.1rem)] font-semibold text-[#A70909]">{checklist.heading}</h2>
           <ul className="mt-6 grid gap-3 sm:grid-cols-2">
             {checklist.items.map((item) => (
               <li key={item} className="flex items-start gap-3 text-sm text-gray-700">
@@ -138,7 +138,7 @@ export default async function MonthlyStatementsPage({ params }: PageParams) {
 
       <section className="mx-auto max-w-4xl px-4">
         <div className="rounded-3xl border border-[#A70909]/15 bg-white p-8 text-center shadow-sm">
-          <p className="text-base text-gray-700">
+          <p className="text-[clamp(0.95rem,0.9rem+0.3vw,1.1rem)] text-gray-700">
             {tHowTo('monthlyStatements.cta').replace('{email}', COMPANY.email)}
           </p>
           <div className="mt-4 flex flex-col gap-3 sm:flex-row sm:justify-center">

@@ -118,8 +118,8 @@ export default async function BookkeepingServicePage({ params }: PageParams) {
             <p className="text-sm font-semibold uppercase tracking-widest text-[#A70909]/70">
               {hero.subtitle}
             </p>
-            <h1 className="text-4xl font-bold text-[#A70909] sm:text-5xl">{hero.title}</h1>
-            <p className="text-base text-gray-700 sm:text-lg">{hero.description}</p>
+            <h1 className="text-[clamp(2.25rem,1.4rem+2.1vw,3.25rem)] font-bold text-[#A70909]">{hero.title}</h1>
+            <p className="text-[clamp(0.95rem,0.9rem+0.3vw,1.1rem)] text-gray-700">{hero.description}</p>
             <div className="grid gap-4 sm:grid-cols-2">
               {hero.highlights.map((item) => (
                 <div
@@ -157,11 +157,11 @@ export default async function BookkeepingServicePage({ params }: PageParams) {
       </section>
 
       <section className="mx-auto max-w-5xl px-4">
-        <h2 className="text-3xl font-bold text-[#A70909] sm:text-4xl">{features.heading}</h2>
+        <h2 className="text-[clamp(1.85rem,1.3rem+1.6vw,2.6rem)] font-bold text-[#A70909]">{features.heading}</h2>
         <div className="mt-8 grid gap-6 sm:grid-cols-2">
           {features.items.map((item) => (
             <div key={item.title} className="rounded-3xl border border-[#A70909]/15 bg-white p-6 shadow-sm">
-              <h3 className="text-lg font-semibold text-[#A70909]">{item.title}</h3>
+              <h3 className="text-[clamp(1.125rem,1rem+0.4vw,1.375rem)] font-semibold text-[#A70909]">{item.title}</h3>
               <p className="mt-3 text-sm text-gray-600">{item.description}</p>
             </div>
           ))}
@@ -170,7 +170,7 @@ export default async function BookkeepingServicePage({ params }: PageParams) {
 
       <section className="mx-auto max-w-5xl px-4">
         <div className="rounded-3xl bg-[#FFF0F0] p-8">
-          <h2 className="text-2xl font-semibold text-[#A70909]">{deliverables.heading}</h2>
+          <h2 className="text-[clamp(1.5rem,1.1rem+1.2vw,2.1rem)] font-semibold text-[#A70909]">{deliverables.heading}</h2>
           <ul className="mt-6 grid gap-3 sm:grid-cols-2">
             {deliverables.items.map((item) => (
               <li key={item} className="flex items-start gap-3 text-sm text-gray-700">
@@ -184,11 +184,11 @@ export default async function BookkeepingServicePage({ params }: PageParams) {
 
       <section className="mx-auto max-w-5xl px-4">
         <div className="rounded-3xl border border-[#A70909]/15 bg-white p-8 shadow-sm">
-          <h2 className="text-2xl font-semibold text-[#A70909]">{faq.heading}</h2>
+          <h2 className="text-[clamp(1.5rem,1.1rem+1.2vw,2.1rem)] font-semibold text-[#A70909]">{faq.heading}</h2>
           <div className="mt-6 space-y-4">
             {faq.items.map((item) => (
               <div key={item.question} className="rounded-2xl bg-[#FFF5F5] p-5">
-                <h3 className="text-base font-semibold text-[#A70909]">{item.question}</h3>
+                <h3 className="text-[clamp(1.05rem,0.95rem+0.3vw,1.2rem)] font-semibold text-[#A70909]">{item.question}</h3>
                 <p className="mt-2 text-sm text-gray-700">{item.answer}</p>
               </div>
             ))}

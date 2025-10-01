@@ -78,8 +78,8 @@ export default async function PromotionPage({ params }: PageParams) {
       <JsonLd id="jsonld-promotion-breadcrumb" data={breadcrumbJsonLd} />
       <section className="bg-[#FFF5F5]">
         <div className="mx-auto max-w-5xl px-4 py-16 text-center">
-          <h1 className="text-4xl font-bold text-[#A70909] sm:text-5xl">{hero.title}</h1>
-          <p className="mt-6 text-lg text-gray-700 sm:text-xl">{hero.intro}</p>
+          <h1 className="text-[clamp(2.25rem,1.4rem+2.1vw,3.25rem)] font-bold text-[#A70909]">{hero.title}</h1>
+          <p className="mt-6 text-[clamp(1.1rem,1rem+0.5vw,1.45rem)] text-gray-700">{hero.intro}</p>
         </div>
       </section>
       <section className="mx-auto max-w-5xl px-4 space-y-10">
@@ -87,8 +87,8 @@ export default async function PromotionPage({ params }: PageParams) {
           <article key={offer.name} className="rounded-3xl border border-[#A70909]/20 bg-white p-8 shadow-md">
             <div className="flex flex-col gap-4 lg:flex-row lg:items-start lg:justify-between">
               <div className="space-y-4">
-                <h2 className="text-2xl font-semibold text-[#A70909]">{offer.name}</h2>
-                <ul className="space-y-3 text-base text-gray-700">
+                <h2 className="text-[clamp(1.5rem,1.1rem+1.2vw,2.1rem)] font-semibold text-[#A70909]">{offer.name}</h2>
+                <ul className="space-y-3 text-[clamp(0.95rem,0.9rem+0.3vw,1.1rem)] text-gray-700">
                   {offer.bullets.map((bullet) => (
                     <li key={bullet} className="flex items-start gap-3">
                       <span className="mt-1 h-2 w-2 flex-shrink-0 rounded-full bg-[#A70909]" aria-hidden="true" />
@@ -98,7 +98,7 @@ export default async function PromotionPage({ params }: PageParams) {
                 </ul>
               </div>
               <div className="rounded-2xl bg-[#FFF0F0] p-6 text-left text-sm text-gray-600">
-                <p>{offer.note}</p>
+                <p className="text-[clamp(0.95rem,0.9rem+0.3vw,1.05rem)]">{offer.note}</p>
               </div>
             </div>
             <div className="mt-6 flex flex-col gap-3 sm:flex-row">
