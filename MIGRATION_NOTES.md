@@ -16,3 +16,8 @@
 ## Open Graph assets and binaries
 - Static OG image binaries in `public/` have been removed; dynamic `opengraph-image.tsx` routes provide previews.
 - Future assets must avoid committing binary files; prefer SVG or generated imagery.
+
+## Build tooling alignment (2024-)
+- TypeScript now resolves the `@/*` alias to `src/*` via `tsconfig.json`.
+- Added lightweight stubs for `@/lib/og`, `@/lib/metadata`, `@/config/site`, `@/data/company`, and `@/i18n/loadMessages` to satisfy App Router OG routes and metadata helpers.
+- Updated OG routes to rely on the shared alias-based imports with no binary assets introduced.

@@ -30,3 +30,16 @@ export const COMPANY = {
   ],
   areaServed: ['Thailand'],
 };
+
+export const company = {
+  legalName: 'Virintira Accounting Co., Ltd.',
+  brandName: 'Virintira Accounting',
+  phone: '+66-00-000-0000',
+  email: 'hello@example.com',
+  address: {
+    street: '',
+    city: 'Bangkok',
+    country: 'TH',
+  },
+  openingHours: ['Mo-Fr 09:00-18:00'],
+} as const;

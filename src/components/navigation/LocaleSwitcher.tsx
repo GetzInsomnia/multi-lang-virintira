@@ -2,7 +2,7 @@
 
 import { useTransition } from 'react';
 import { useLocale } from 'next-intl';
-import { i18n } from '@/i18n/config';
+import { i18n, type Locale } from '@/i18n/config';
 import { usePathname, useRouter } from '@/i18n/routing';
 
 const localeLabels: Record<string, string> = {
@@ -36,7 +36,7 @@ export function LocaleSwitcher() {
         className="rounded-full border border-[#A70909]/30 bg-white px-4 py-2 text-sm font-medium text-[#A70909] shadow-sm focus:outline-none focus:ring-2 focus:ring-[#A70909]"
         value={locale}
         onChange={(event) => {
-          const nextLocale = event.target.value;
+          const nextLocale = event.target.value as Locale;
           startTransition(() => {
             router.replace(pathname, { locale: nextLocale });
           });
