@@ -64,26 +64,51 @@ export default async function BookkeepingServicePage({ params }: PageParams) {
   const tServices = await getTranslations({ locale, namespace: 'services' });
   const tBreadcrumbs = await getTranslations({ locale, namespace: 'breadcrumbs' });
 
-  const hero = tServices.raw('bookkeeping.hero') as {
-    title: string;
-    subtitle: string;
-    description: string;
-    highlights: string[];
-    ctaCall: string;
-    ctaLine: string;
-    ctaEmail: string;
+  const ensureString = (value: unknown): string =>
+    typeof value === 'string' ? value : value != null ? String(value) : '';
+
+  const heroRaw = (tServices.raw('bookkeeping.hero') ?? {}) as Record<string, any>;
+  const hero = {
+    title: ensureString(heroRaw.title),
+    subtitle: ensureString(heroRaw.subtitle),
+    description: ensureString(heroRaw.description),
+    highlights: Array.isArray(heroRaw.highlights)
+      ? (heroRaw.highlights as unknown[])
+          .map((item) => ensureString(item))
+          .filter((item) => item.length > 0)
+      : [],
+    ctaCall: ensureString(heroRaw.ctaCall),
+    ctaLine: ensureString(heroRaw.ctaLine),
+    ctaEmail: ensureString(heroRaw.ctaEmail),
   };
-  const features = tServices.raw('bookkeeping.features') as {
-    heading: string;
-    items: Array<{ title: string; description: string }>;
+  const featuresRaw = (tServices.raw('bookkeeping.features') ?? {}) as Record<string, any>;
+  const features = {
+    heading: ensureString(featuresRaw.heading),
+    items: Array.isArray(featuresRaw.items)
+      ? (featuresRaw.items as Array<Record<string, unknown>>).map((item) => ({
+          title: ensureString(item?.title),
+          description: ensureString(item?.description),
+        }))
+      : [],
   };
-  const faq = tServices.raw('bookkeeping.faq') as {
-    heading: string;
-    items: Array<{ question: string; answer: string }>;
+  const faqRaw = (tServices.raw('bookkeeping.faq') ?? {}) as Record<string, any>;
+  const faq = {
+    heading: ensureString(faqRaw.heading),
+    items: Array.isArray(faqRaw.items)
+      ? (faqRaw.items as Array<Record<string, unknown>>).map((item) => ({
+          question: ensureString(item?.question),
+          answer: ensureString(item?.answer),
+        }))
+      : [],
   };
-  const deliverables = tServices.raw('bookkeeping.deliverables') as {
-    heading: string;
-    items: string[];
+  const deliverablesRaw = (tServices.raw('bookkeeping.deliverables') ?? {}) as Record<string, any>;
+  const deliverables = {
+    heading: ensureString(deliverablesRaw.heading),
+    items: Array.isArray(deliverablesRaw.items)
+      ? (deliverablesRaw.items as unknown[])
+          .map((item) => ensureString(item))
+          .filter((item) => item.length > 0)
+      : [],
   };
 
   const breadcrumbJsonLd = buildBreadcrumbJsonLd([

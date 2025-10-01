@@ -64,17 +64,29 @@ export default async function MonthlyStatementsPage({ params }: PageParams) {
   const tBreadcrumbs = await getTranslations({ locale, namespace: 'breadcrumbs' });
   const tLayout = await getTranslations({ locale, namespace: 'layout' });
 
-  const hero = tHowTo.raw('monthlyStatements.hero') as {
-    title: string;
-    description: string;
+  const ensureString = (value: unknown): string =>
+    typeof value === 'string' ? value : value != null ? String(value) : '';
+
+  const heroRaw = (tHowTo.raw('monthlyStatements.hero') ?? {}) as Record<string, unknown>;
+  const hero = {
+    title: ensureString(heroRaw.title),
+    description: ensureString(heroRaw.description),
   };
-  const steps = tHowTo.raw('monthlyStatements.steps') as Array<{
-    title: string;
-    description: string;
-  }>;
-  const checklist = tHowTo.raw('monthlyStatements.checklist') as {
-    heading: string;
-    items: string[];
+  const stepsRaw = Array.isArray(tHowTo.raw('monthlyStatements.steps'))
+    ? (tHowTo.raw('monthlyStatements.steps') as Array<Record<string, unknown>>)
+    : [];
+  const steps = stepsRaw.map((step) => ({
+    title: ensureString(step.title),
+    description: ensureString(step.description),
+  }));
+  const checklistRaw = (tHowTo.raw('monthlyStatements.checklist') ?? {}) as Record<string, unknown>;
+  const checklist = {
+    heading: ensureString(checklistRaw.heading),
+    items: Array.isArray(checklistRaw.items)
+      ? (checklistRaw.items as unknown[])
+          .map((item) => ensureString(item))
+          .filter((item) => item.length > 0)
+      : [],
   };
   const chatLabel = tLayout('cta.chat');
 
@@ -139,7 +151,7 @@ export default async function MonthlyStatementsPage({ params }: PageParams) {
       <section className="mx-auto max-w-4xl px-4">
         <div className="rounded-3xl border border-[#A70909]/15 bg-white p-8 text-center shadow-sm">
           <p className="text-[clamp(0.95rem,0.9rem+0.3vw,1.1rem)] text-gray-700">
-            {tHowTo('monthlyStatements.cta').replace('{email}', COMPANY.email)}
+            {tHowTo('monthlyStatements.cta', { email: COMPANY.email })}
           </p>
           <div className="mt-4 flex flex-col gap-3 sm:flex-row sm:justify-center">
             <a

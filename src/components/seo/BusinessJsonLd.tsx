@@ -2,16 +2,28 @@ import { COMPANY } from '@/data/company';
 import { JsonLd } from '@/components/common/JsonLd';
 import { absoluteUrl } from '@/config/site';
 
-export function BusinessJsonLd() {
+type Props = {
+  locale: string;
+};
+
+const MAP_URL = `https://www.google.com/maps/search/?api=1&query=${COMPANY.address.latitude},${COMPANY.address.longitude}`;
+
+export function BusinessJsonLd({ locale }: Props) {
+  const localizedUrl = absoluteUrl(`/${locale}`);
+
   const data = {
     '@context': 'https://schema.org',
     '@type': ['Organization', 'LocalBusiness'],
+    '@id': `${localizedUrl}#organization`,
     name: COMPANY.legalNameTh,
     legalName: COMPANY.legalNameTh,
     alternateName: COMPANY.legalNameEn,
-    url: absoluteUrl('/'),
+    url: localizedUrl,
+    logo: absoluteUrl('/logo.svg'),
+    image: absoluteUrl('/logo.svg'),
     email: COMPANY.email,
     telephone: COMPANY.phone,
+    priceRange: '฿฿',
     sameAs: [
       COMPANY.socials.facebook,
       COMPANY.socials.line,
@@ -31,13 +43,14 @@ export function BusinessJsonLd() {
       longitude: COMPANY.address.longitude,
     },
     areaServed: COMPANY.areaServed.map((name) => ({ '@type': 'Country', name })),
+    hasMap: MAP_URL,
     openingHoursSpecification: COMPANY.businessHours.map((hours) => ({
       '@type': 'OpeningHoursSpecification',
       dayOfWeek: hours.dayOfWeek,
       opens: hours.opens,
       closes: hours.closes,
     })),
-  };
+  } as const;
 
   return <JsonLd id="business-jsonld" data={data} />;
 }

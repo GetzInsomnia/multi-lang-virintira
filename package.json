@@ -17,8 +17,8 @@
     "repo:dump:single": "node scripts/repo-dump.mjs --single --out reports/REPO-DUMP.md",
     "repo:dump:split": "node scripts/repo-dump.mjs --out reports --split",
     "repo:dump:all": "node scripts/repo-dump.mjs --single --out reports/REPO-ALL.md --include-dotfiles --include-env --include-binaries --b64-binaries",
-    "prebuild": "powershell -NoProfile -Command \"if (Test-Path .next) { Remove-Item .next -Recurse -Force }; if (Test-Path .turbo) { Remove-Item .turbo -Recurse -Force }\"",
-    "build:log": "powershell -NoProfile -Command \"npm run build *>&1 | Tee-Object build.log\""
+    "prebuild": "rimraf .next .turbo",
+    "build:log": "node scripts/build-with-log.cjs"
   },
   "dependencies": {
     "@testing-library/react": "^16.3.0",
@@ -41,6 +41,7 @@
     "eslint": "8.57.0",
     "eslint-config-next": "14.2.30",
     "jsdom": "^26.1.0",
+    "rimraf": "^6.0.1",
     "ts-node": "^10.9.2",
     "typescript": "^5.8.3"
   }
