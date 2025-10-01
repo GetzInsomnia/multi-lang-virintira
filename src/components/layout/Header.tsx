@@ -1,6 +1,6 @@
 import { COMPANY } from '@/data/company';
-import { Link } from '@/i18n/routing';
 import { LocaleSwitcher } from '@/components/navigation/LocaleSwitcher';
+import { Link } from '@/i18n/routing';
 
 export type HeaderNavItem = {
   label: string;
@@ -20,29 +20,45 @@ export type HeaderData = {
   ctaSecondary: string;
 };
 
-function resolveHref(href: string, locale: string) {
-  if (href.startsWith('http')) return href;
+function resolveHref(rawHref: string) {
+  const href = rawHref.trim();
+  if (!href) return '#';
   if (href.startsWith('#')) return href;
-  return `/${locale}${href.startsWith('/') ? href : `/${href}`}`;
+  if (/^[a-zA-Z][a-zA-Z0-9+.-]*:/.test(href)) return href;
+  return href.startsWith('/') ? href : `/${href}`;
 }
 
-export function Header({ data, locale }: { data: HeaderData; locale: string }) {
+function isExternalHref(href: string) {
+  return /^[a-zA-Z][a-zA-Z0-9+.-]*:/.test(href) && !href.startsWith('/');
+}
+
+export function Header({ data }: { data: HeaderData }) {
+  const announcementHref = resolveHref(data.announcement.actionHref);
+  const announcementIsAnchor = data.announcement.actionHref.startsWith('#');
+  const announcementIsExternal = isExternalHref(announcementHref);
+
+  const announcementClassName =
+    'inline-flex items-center gap-2 rounded-full border border-white/40 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-white transition hover:bg-white hover:text-[#A70909]';
+
   return (
     <header className="bg-white/95 text-[#A70909] shadow-sm backdrop-blur">
       <div className="bg-[#A70909] text-white">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-2 text-sm">
           <p>{data.announcement.message}</p>
-          <a
-            className="inline-flex items-center gap-2 rounded-full border border-white/40 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-white transition hover:bg-white hover:text-[#A70909]"
-            href={resolveHref(data.announcement.actionHref, locale)}
-          >
-            {data.announcement.actionLabel}
-          </a>
+          {announcementIsAnchor || announcementIsExternal ? (
+            <a className={announcementClassName} href={announcementHref}>
+              {data.announcement.actionLabel}
+            </a>
+          ) : (
+            <Link className={announcementClassName} href={announcementHref} prefetch>
+              {data.announcement.actionLabel}
+            </Link>
+          )}
         </div>
       </div>
       <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-4 px-4 py-4">
         <div className="flex items-center gap-6">
-          <Link href={`/${locale}`} className="flex items-center gap-3" prefetch>
+          <Link href="/" className="flex items-center gap-3" prefetch>
             <div className="flex h-12 w-12 items-center justify-center rounded-full bg-[#A70909]/10 text-2xl font-bold">
               VT
             </div>
@@ -53,16 +69,23 @@ export function Header({ data, locale }: { data: HeaderData; locale: string }) {
           </Link>
           <nav aria-label="Primary" className="hidden items-center gap-4 lg:flex">
             {data.nav.map((item) => {
-              const href = resolveHref(item.href, locale);
-              return item.href.startsWith('#') ? (
-                <a
-                  key={item.label}
-                  href={href}
-                  className="rounded-full px-3 py-2 text-sm font-semibold text-[#A70909] transition hover:bg-[#A70909]/10"
-                >
-                  {item.label}
-                </a>
-              ) : (
+              const href = resolveHref(item.href);
+              const isAnchor = item.href.startsWith('#');
+              const isExternal = isExternalHref(href);
+
+              if (isAnchor || isExternal) {
+                return (
+                  <a
+                    key={item.label}
+                    href={href}
+                    className="rounded-full px-3 py-2 text-sm font-semibold text-[#A70909] transition hover:bg-[#A70909]/10"
+                  >
+                    {item.label}
+                  </a>
+                );
+              }
+
+              return (
                 <Link
                   key={item.label}
                   href={href}
@@ -90,18 +113,25 @@ export function Header({ data, locale }: { data: HeaderData; locale: string }) {
                       </p>
                       <ul className="space-y-2 text-sm">
                         {column.items.map((item) => {
-                          const href = resolveHref(item.href, locale);
+                          const href = resolveHref(item.href);
+                          const isAnchor = item.href.startsWith('#');
+                          const isExternal = isExternalHref(href);
                           const content = (
                             <div className="rounded-2xl border border-transparent p-3 transition hover:border-[#A70909]/20 hover:bg-[#A70909]/5">
                               <p className="font-semibold text-[#A70909]">{item.label}</p>
                               <p className="text-xs text-[#A70909]/70">{item.description}</p>
                             </div>
                           );
-                          return item.href.startsWith('#') ? (
-                            <li key={item.label}>
-                              <a href={href}>{content}</a>
-                            </li>
-                          ) : (
+
+                          if (isAnchor || isExternal) {
+                            return (
+                              <li key={item.label}>
+                                <a href={href}>{content}</a>
+                              </li>
+                            );
+                          }
+
+                          return (
                             <li key={item.label}>
                               <Link href={href} prefetch>
                                 {content}
@@ -138,3 +168,5 @@ export function Header({ data, locale }: { data: HeaderData; locale: string }) {
     </header>
   );
 }
+
+export default Header;

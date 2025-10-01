@@ -1,12 +1,13 @@
-import type { Metadata } from "next";
-import { getTranslations } from "next-intl/server";
-import { COMPANY } from "@/data/company";
-import { absoluteUrl } from "@/config/site";
-import { buildLocaleAlternates } from "@/lib/metadata";
-import { JsonLd } from "@/components/common/JsonLd";
-import { loadMessages, resolveLocale } from "@/i18n/loadMessages";
-import { buildBreadcrumbJsonLd, buildWebPageJsonLd } from "@/seo/jsonld";
-import { TypewriterText } from "@/components/ui/TypewriterText";
+import type { Metadata } from 'next';
+import { getTranslations } from 'next-intl/server';
+
+import { JsonLd } from '@/components/common/JsonLd';
+import { TypewriterText } from '@/components/ui/TypewriterText';
+import { COMPANY } from '@/data/company';
+import { absoluteUrl } from '@/config/site';
+import { buildLocaleAlternates } from '@/lib/metadata';
+import { loadMessages, resolveLocale } from '@/i18n/loadMessages';
+import { buildBreadcrumbJsonLd, buildWebPageJsonLd } from '@/seo/jsonld';
 
 interface PageParams {
   params: { locale: string };
@@ -51,36 +52,72 @@ export async function generateMetadata({ params }: PageParams): Promise<Metadata
   };
 }
 
+const ensureString = (value: unknown): string =>
+  typeof value === 'string' ? value : value != null ? String(value) : '';
+
+const ensureStringArray = (value: unknown): string[] =>
+  Array.isArray(value)
+    ? (value as unknown[])
+        .map((item) => ensureString(item))
+        .filter((item): item is string => item.length > 0)
+    : [];
+
 export default async function HomePage({ params }: PageParams) {
   const { locale } = params;
-  const tHome = await getTranslations({ locale, namespace: "home" });
-  const tLayout = await getTranslations({ locale, namespace: "layout" });
-  const tBreadcrumbs = await getTranslations({ locale, namespace: "breadcrumbs" });
+  const tHome = await getTranslations({ locale, namespace: 'home' });
+  const tLayout = await getTranslations({ locale, namespace: 'layout' });
+  const tBreadcrumbs = await getTranslations({ locale, namespace: 'breadcrumbs' });
 
-  const hero = tHome.raw("hero") as {
-    title: string;
-    subtitle: string;
-    description: string;
-    primary: string;
-    typewriter: string[];
-    emailHeading: string;
-    emailButton: string;
+  const heroRaw = (tHome.raw('hero') ?? {}) as Record<string, unknown>;
+  const hero = {
+    title: ensureString(heroRaw.title),
+    subtitle: ensureString(heroRaw.subtitle),
+    description: ensureString(heroRaw.description),
+    primary: ensureString(heroRaw.primary),
+    typewriter: ensureStringArray(heroRaw.typewriter),
+    emailHeading: ensureString(heroRaw.emailHeading),
+    emailButton: ensureString(heroRaw.emailButton),
   };
-  const about = tHome.raw("about") as {
-    heading: string;
-    paragraphs: string[];
-    link: string;
+
+  const aboutRaw = (tHome.raw('about') ?? {}) as Record<string, unknown>;
+  const aboutParagraphs = ensureStringArray(aboutRaw.paragraphs);
+  const about = {
+    heading: ensureString(aboutRaw.heading),
+    paragraphs: aboutParagraphs,
+    link: ensureString(aboutRaw.link),
   };
-  const services = tHome.raw("services") as {
-    heading: string;
-    items: Array<{ title: string; description: string }>;
+
+  const servicesRaw = (tHome.raw('services') ?? {}) as Record<string, unknown>;
+  const serviceItems = Array.isArray(servicesRaw.items) ? servicesRaw.items : [];
+  const services = {
+    heading: ensureString(servicesRaw.heading),
+    items: (serviceItems as Array<Record<string, unknown>>).map((item) => ({
+      title: ensureString(item?.title),
+      description: ensureString(item?.description),
+    })),
   };
-  const highlights = tHome.raw("highlights") as { heading: string; items: string[] };
-  const process = tHome.raw("process") as {
-    heading: string;
-    steps: Array<{ title: string; description: string }>;
+
+  const highlightsRaw = (tHome.raw('highlights') ?? {}) as Record<string, unknown>;
+  const highlights = {
+    heading: ensureString(highlightsRaw.heading),
+    items: ensureStringArray(highlightsRaw.items),
   };
-  const cta = tHome.raw("cta") as { heading: string; description: string };
+
+  const processRaw = (tHome.raw('process') ?? {}) as Record<string, unknown>;
+  const processSteps = Array.isArray(processRaw.steps) ? processRaw.steps : [];
+  const process = {
+    heading: ensureString(processRaw.heading),
+    steps: (processSteps as Array<Record<string, unknown>>).map((step) => ({
+      title: ensureString(step?.title),
+      description: ensureString(step?.description),
+    })),
+  };
+
+  const ctaRaw = (tHome.raw('cta') ?? {}) as Record<string, unknown>;
+  const cta = {
+    heading: ensureString(ctaRaw.heading),
+    description: ensureString(ctaRaw.description),
+  };
 
   const callLabel = tLayout("cta.call", { phone: COMPANY.phoneDisplay });
   const chatLabel = tLayout("cta.chat");

@@ -15,13 +15,19 @@ export type FooterData = {
   legal: string;
 };
 
-function resolveHref(href: string, locale: string) {
-  if (href.startsWith('http')) return href;
+function resolveHref(rawHref: string) {
+  const href = rawHref.trim();
+  if (!href) return '#';
   if (href.startsWith('#')) return href;
-  return `/${locale}${href.startsWith('/') ? href : `/${href}`}`;
+  if (/^[a-zA-Z][a-zA-Z0-9+.-]*:/.test(href)) return href;
+  return href.startsWith('/') ? href : `/${href}`;
 }
 
-export function Footer({ data, locale }: { data: FooterData; locale: string }) {
+function isExternalHref(href: string) {
+  return /^[a-zA-Z][a-zA-Z0-9+.-]*:/.test(href) && !href.startsWith('/');
+}
+
+export function Footer({ data }: { data: FooterData }) {
   return (
     <footer className="bg-[#2D0404] text-white">
       <div className="mx-auto grid max-w-6xl gap-10 px-4 py-16 sm:grid-cols-[1.2fr_1fr]">
@@ -58,14 +64,18 @@ export function Footer({ data, locale }: { data: FooterData; locale: string }) {
             <h3 className="text-sm font-semibold uppercase tracking-wide text-white/60">Quick links</h3>
             <ul className="mt-4 space-y-2 text-sm text-white/80">
               {data.quickLinks.map((link) => {
-                const href = resolveHref(link.href, locale);
-                return link.href.startsWith('#') ? (
-                  <li key={link.label}>
-                    <a href={href} className="transition hover:text-white">
-                      {link.label}
-                    </a>
-                  </li>
-                ) : (
+                const href = resolveHref(link.href);
+                if (link.href.startsWith('#') || isExternalHref(href)) {
+                  return (
+                    <li key={link.label}>
+                      <a href={href} className="transition hover:text-white">
+                        {link.label}
+                      </a>
+                    </li>
+                  );
+                }
+
+                return (
                   <li key={link.label}>
                     <Link href={href} className="transition hover:text-white" prefetch>
                       {link.label}
@@ -79,17 +89,32 @@ export function Footer({ data, locale }: { data: FooterData; locale: string }) {
             <h3 className="text-sm font-semibold uppercase tracking-wide text-white/60">Connect</h3>
             <ul className="mt-4 space-y-2 text-sm text-white/80">
               <li>
-                <a href={COMPANY.socials.facebook} target="_blank" rel="noopener noreferrer" className="transition hover:text-white">
+                <a
+                  href={COMPANY.socials.facebook}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="transition hover:text-white"
+                >
                   Facebook
                 </a>
               </li>
               <li>
-                <a href={COMPANY.socials.line} target="_blank" rel="noopener noreferrer" className="transition hover:text-white">
+                <a
+                  href={COMPANY.socials.line}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="transition hover:text-white"
+                >
                   LINE OA
                 </a>
               </li>
               <li>
-                <a href={COMPANY.socials.tiktok} target="_blank" rel="noopener noreferrer" className="transition hover:text-white">
+                <a
+                  href={COMPANY.socials.tiktok}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="transition hover:text-white"
+                >
                   TikTok
                 </a>
               </li>
@@ -103,3 +128,5 @@ export function Footer({ data, locale }: { data: FooterData; locale: string }) {
     </footer>
   );
 }
+
+export default Footer;
