@@ -17,6 +17,7 @@
     "repo:dump:single": "node scripts/repo-dump.mjs --single --out reports/REPO-DUMP.md",
     "repo:dump:split": "node scripts/repo-dump.mjs --out reports --split",
     "repo:dump:all": "node scripts/repo-dump.mjs --single --out reports/REPO-ALL.md --include-dotfiles --include-env --include-binaries --b64-binaries",
+    "legacy:extract": "node scripts/extract-legacy.mjs",
     "prebuild": "rimraf .next .turbo",
     "build:log": "node scripts/build-with-log.cjs"
   },
