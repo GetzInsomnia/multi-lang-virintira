@@ -58,25 +58,52 @@ export async function generateMetadata({ params }: PageParams): Promise<Metadata
   };
 }
 
+type ArticleSection = { heading: string; content: string[] };
+type TipItem = { title: string; description: string };
+
+const ensureString = (value: unknown): string =>
+  typeof value === 'string' ? value : value != null ? String(value) : '';
+
 export default async function BookkeepingMattersPage({ params }: PageParams) {
   const { locale } = params;
   const tBlog = await getTranslations({ locale, namespace: 'blog' });
   const tBreadcrumbs = await getTranslations({ locale, namespace: 'breadcrumbs' });
   const tLayout = await getTranslations({ locale, namespace: 'layout' });
 
-  const article = tBlog.raw('bookkeepingMatters.article') as {
-    title: string;
-    author: string;
-    intro: string;
-    sections: Array<{ heading: string; content: string[] }>;
-    conclusion: string;
-    published: string;
-    updated: string;
+  const articleRaw = (tBlog.raw('bookkeepingMatters.article') ?? {}) as Record<string, any>;
+  const sections = Array.isArray(articleRaw.sections)
+    ? (articleRaw.sections as Array<Record<string, unknown>>)
+    : [];
+  const normalizedSections: ArticleSection[] = sections.map((section) => ({
+    heading: typeof section?.heading === 'string' ? section.heading : '',
+    content: Array.isArray(section?.content)
+      ? (section.content as unknown[])
+          .map((paragraph) =>
+            typeof paragraph === 'string' ? paragraph : paragraph != null ? String(paragraph) : '',
+          )
+          .filter((paragraph): paragraph is string => paragraph.length > 0)
+      : [],
+  }));
+  const article = {
+    title: ensureString(articleRaw.title),
+    author: ensureString(articleRaw.author),
+    intro: ensureString(articleRaw.intro),
+    sections: normalizedSections,
+    conclusion: ensureString(articleRaw.conclusion),
+    published: ensureString(articleRaw.published),
+    updated: ensureString(articleRaw.updated),
   };
 
-  const tips = tBlog.raw('bookkeepingMatters.tips') as {
-    heading: string;
-    items: Array<{ title: string; description: string }>;
+  const tipsRaw = (tBlog.raw('bookkeepingMatters.tips') ?? {}) as Record<string, any>;
+  const tipItems: TipItem[] = Array.isArray(tipsRaw.items)
+    ? (tipsRaw.items as Array<Record<string, unknown>>).map((item) => ({
+        title: ensureString(item?.title),
+        description: ensureString(item?.description),
+      }))
+    : [];
+  const tips = {
+    heading: ensureString(tipsRaw.heading),
+    items: tipItems,
   };
   const callLabel = tLayout('cta.call', { phone: COMPANY.phoneDisplay });
   const chatLabel = tLayout('cta.chat');

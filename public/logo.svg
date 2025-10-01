@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-labelledby="virintira-logo-title">
+  <title id="virintira-logo-title">Virintira Logo</title>
+  <defs>
+    <linearGradient id="virintiraGradient" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#A70909" />
+      <stop offset="100%" stop-color="#D63C1F" />
+    </linearGradient>
+  </defs>
+  <rect width="120" height="120" rx="28" fill="url(#virintiraGradient)" />
+  <path
+    d="M34 86L58 34h12l24 52h-13l-17-38-17 38H34zm44-52l-7.2 16.4 7.2 15.8h12L76 48h12l6 13.2L98 34H78z"
+    fill="#fff"
+  />
+</svg>

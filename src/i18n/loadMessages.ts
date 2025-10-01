@@ -1,8 +1,11 @@
+import type thMessages from "@/messages/th.json";
 import { i18n, type Locale } from "./config";
 
-type Messages = Record<string, any>;
+export type Messages = typeof thMessages;
 
-const MESSAGE_LOADERS = {
+type Loader = () => Promise<{ default: Messages }>;
+
+const MESSAGE_LOADERS: Record<Locale, Loader> = {
   th: () => import("@/messages/th.json"),
   en: () => import("@/messages/en.json"),
   fr: () => import("@/messages/fr.json"),
@@ -19,7 +22,58 @@ const MESSAGE_LOADERS = {
   ar: () => import("@/messages/ar.json"),
   fa: () => import("@/messages/fa.json"),
   he: () => import("@/messages/he.json"),
-} as const satisfies Record<Locale, () => Promise<{ default: Messages }>>;
+};
+
+function isPlainObject(value: unknown): value is Record<string, unknown> {
+  return (
+    typeof value === "object" &&
+    value !== null &&
+    !Array.isArray(value)
+  );
+}
+
+function mergeMessages<T extends Record<string, unknown>>(
+  base: T,
+  override: Record<string, unknown> | undefined,
+): T {
+  if (!override) {
+    return base;
+  }
+
+  const output: Record<string, unknown> = { ...base };
+
+  for (const [key, overrideValue] of Object.entries(override)) {
+    const baseValue = output[key];
+
+    if (Array.isArray(baseValue) || Array.isArray(overrideValue)) {
+      output[key] = Array.isArray(overrideValue)
+        ? overrideValue
+        : Array.isArray(baseValue)
+          ? baseValue
+          : [];
+      continue;
+    }
+
+    if (isPlainObject(baseValue) && isPlainObject(overrideValue)) {
+      output[key] = mergeMessages(
+        baseValue as Record<string, unknown>,
+        overrideValue,
+      );
+      continue;
+    }
+
+    if (overrideValue !== undefined) {
+      output[key] = overrideValue;
+    }
+  }
+
+  return output as T;
+}
+
+async function importMessages(locale: Locale): Promise<Messages> {
+  const loader = MESSAGE_LOADERS[locale] ?? MESSAGE_LOADERS[i18n.defaultLocale];
+  return (await loader()).default;
+}
 
 export function resolveLocale(locale: string): Locale {
   const normalized = locale?.toString() || i18n.defaultLocale;
@@ -32,6 +86,17 @@ export function resolveLocale(locale: string): Locale {
 
 export async function loadMessages(locale: Locale | string): Promise<Messages> {
   const resolved = resolveLocale(locale.toString());
-  const loader = MESSAGE_LOADERS[resolved] ?? MESSAGE_LOADERS[i18n.defaultLocale];
-  return (await loader()).default;
+
+  const thai = await importMessages("th");
+  if (resolved === "th") {
+    return thai;
+  }
+
+  const english = mergeMessages({ ...thai }, await importMessages("en"));
+  if (resolved === "en") {
+    return english;
+  }
+
+  const specific = await importMessages(resolved);
+  return mergeMessages(english, specific);
 }

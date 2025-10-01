@@ -24,7 +24,28 @@ NEXT_PUBLIC_GA4_ID=G-XXXXXXXXXX
 NEXT_PUBLIC_GTM_ID=GTM-XXXXXXX
 ```
 
-`NEXT_PUBLIC_SITE_URL` is used by metadata helpers and the sitemap generator to create absolute links. `NEXT_PUBLIC_GA4_ID` and `NEXT_PUBLIC_GTM_ID` enable Google Analytics 4 and Google Tag Manager via the `AnalyticsManager` component. Leave the analytics variables unset if you do not want the scripts to load.
+`NEXT_PUBLIC_SITE_URL` is used by metadata helpers and the sitemap generator to create absolute links. `NEXT_PUBLIC_GA4_ID` and `NEXT_PUBLIC_GTM_ID` enable Google Analytics 4 and Google Tag Manager via the consent-aware `AnalyticsManager` component. Leave the analytics variables unset if you do not want the scripts to load.
+
+## Supported locales
+
+The site is localised into the following locales (default locale **th**). Missing strings fall back to English and then Thai to avoid runtime holes:
+
+- `th`
+- `en`
+- `fr`
+- `de`
+- `nl`
+- `it`
+- `zh-Hant`
+- `zh-Hans`
+- `ja`
+- `ko`
+- `ms`
+- `ta`
+- `hi`
+- `ar`
+- `fa`
+- `he`
 
 ## Development
 
@@ -69,7 +90,7 @@ npm run postbuild
 
 ## Locale detection
 
-[`middleware.ts`](middleware.ts) uses `next-intl`'s middleware to inspect the `Accept-Language` header. Requests without a locale prefix are redirected to the best matching locale (or the default `th` locale when no match is found).
+[middleware.ts](middleware.ts) uses `next-intl` middleware to inspect the `Accept-Language` header. Requests without a locale prefix are redirected to `/${locale}` where `locale` is one of the supported locales above (falling back to `/th` when no match is found). All App Router routes live under `/[locale]/…` and the middleware keeps the prefix consistent for crawlers and sitemap generation.
 
 ## License
 
