@@ -87,17 +87,17 @@ export default async function ResourcesPage({ params }: PageParams) {
       <JsonLd id="jsonld-resources-faq" data={faqJsonLd} />
       <section className="bg-[#FFFEFE]">
         <div className="mx-auto max-w-5xl px-4 py-16 text-center">
-          <h1 className="text-4xl font-bold text-[#A70909] sm:text-5xl">{hero.title}</h1>
-          <p className="mt-6 text-lg text-gray-700 sm:text-xl">{hero.description}</p>
+          <h1 className="text-[clamp(2.25rem,1.4rem+2.1vw,3.25rem)] font-bold text-[#A70909]">{hero.title}</h1>
+          <p className="mt-6 text-[clamp(1.1rem,1rem+0.5vw,1.45rem)] text-gray-700">{hero.description}</p>
         </div>
       </section>
       <section className="mx-auto max-w-5xl px-4">
-        <h2 className="text-2xl font-semibold text-[#A70909]">{documents.heading}</h2>
+        <h2 className="text-[clamp(1.5rem,1.1rem+1.2vw,2.1rem)] font-semibold text-[#A70909]">{documents.heading}</h2>
         <div className="mt-6 grid gap-6 lg:grid-cols-3">
           {documents.items.map((item) => (
             <div key={item.title} className="flex h-full flex-col justify-between rounded-3xl border border-[#A70909]/15 bg-white p-6 shadow-sm">
               <div className="space-y-4">
-                <h3 className="text-lg font-semibold text-[#A70909]">{item.title}</h3>
+                <h3 className="text-[clamp(1.125rem,1rem+0.4vw,1.375rem)] font-semibold text-[#A70909]">{item.title}</h3>
                 <p className="text-sm text-gray-600">{item.description}</p>
               </div>
               <a
@@ -115,8 +115,8 @@ export default async function ResourcesPage({ params }: PageParams) {
       <section className="bg-[#FFECEC]">
         <div className="mx-auto max-w-5xl px-4 py-16">
           <div className="space-y-6 rounded-3xl bg-white/80 p-10 text-center shadow-lg">
-            <h2 className="text-3xl font-bold text-[#A70909] sm:text-4xl">{contact.heading}</h2>
-            <p className="mx-auto max-w-3xl text-base text-gray-700 sm:text-lg">{contact.description}</p>
+            <h2 className="text-[clamp(1.85rem,1.3rem+1.6vw,2.6rem)] font-bold text-[#A70909]">{contact.heading}</h2>
+            <p className="mx-auto max-w-3xl text-[clamp(0.95rem,0.9rem+0.3vw,1.1rem)] text-gray-700">{contact.description}</p>
             <div className="flex flex-col gap-3 text-sm font-semibold text-[#A70909] sm:flex-row sm:justify-center">
               <a href={`tel:${COMPANY.phone}`} className="hover:text-[#C9341F]">
                 {contact.channels.phone.replace('{phone}', COMPANY.phoneDisplay)}

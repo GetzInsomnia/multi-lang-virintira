@@ -112,8 +112,8 @@ export default async function BookkeepingMattersPage({ params }: PageParams) {
           <p className="text-sm font-semibold uppercase tracking-widest text-[#A70909]/70">
             {article.author}
           </p>
-          <h1 className="mt-4 text-4xl font-bold text-[#A70909] sm:text-5xl">{article.title}</h1>
-          <p className="mt-6 text-base text-gray-700 sm:text-lg">{article.intro}</p>
+          <h1 className="mt-4 text-[clamp(2.25rem,1.4rem+2.1vw,3.25rem)] font-bold text-[#A70909]">{article.title}</h1>
+          <p className="mt-6 text-[clamp(0.95rem,0.9rem+0.3vw,1.1rem)] text-gray-700">{article.intro}</p>
           <p className="mt-4 text-xs uppercase tracking-widest text-[#A70909]/60">
             {article.published} • {article.updated}
           </p>
@@ -123,9 +123,9 @@ export default async function BookkeepingMattersPage({ params }: PageParams) {
       <div className="mx-auto flex max-w-4xl flex-col gap-12 px-4">
         {article.sections.map((section) => (
           <section key={section.heading} className="space-y-4">
-            <h2 className="text-2xl font-semibold text-[#A70909]">{section.heading}</h2>
+            <h2 className="text-[clamp(1.5rem,1.1rem+1.2vw,2.1rem)] font-semibold text-[#A70909]">{section.heading}</h2>
             {section.content.map((paragraph, index) => (
-              <p key={index} className="text-base leading-relaxed text-gray-700">
+              <p key={index} className="text-[clamp(0.95rem,0.9rem+0.3vw,1.1rem)] leading-relaxed text-gray-700">
                 {paragraph}
               </p>
             ))}
@@ -133,11 +133,11 @@ export default async function BookkeepingMattersPage({ params }: PageParams) {
         ))}
 
         <section className="rounded-3xl border border-[#A70909]/15 bg-white p-8 shadow-sm">
-          <h2 className="text-2xl font-semibold text-[#A70909]">{tips.heading}</h2>
+          <h2 className="text-[clamp(1.5rem,1.1rem+1.2vw,2.1rem)] font-semibold text-[#A70909]">{tips.heading}</h2>
           <div className="mt-6 space-y-4">
             {tips.items.map((item) => (
               <div key={item.title} className="rounded-2xl bg-[#FFF0F0] p-5">
-                <h3 className="text-base font-semibold text-[#A70909]">{item.title}</h3>
+                <h3 className="text-[clamp(1.05rem,0.95rem+0.3vw,1.2rem)] font-semibold text-[#A70909]">{item.title}</h3>
                 <p className="mt-2 text-sm text-gray-700">{item.description}</p>
               </div>
             ))}
@@ -145,7 +145,7 @@ export default async function BookkeepingMattersPage({ params }: PageParams) {
         </section>
 
         <section className="rounded-3xl bg-[#FFF5F5] p-8 text-center">
-          <p className="text-base text-gray-700">{article.conclusion}</p>
+          <p className="text-[clamp(0.95rem,0.9rem+0.3vw,1.1rem)] text-gray-700">{article.conclusion}</p>
           <div className="mt-4 flex flex-col gap-3 sm:flex-row sm:justify-center">
             <a
               href={`tel:${COMPANY.phone}`}
