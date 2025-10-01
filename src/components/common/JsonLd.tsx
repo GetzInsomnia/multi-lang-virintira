@@ -15,3 +15,5 @@ export function JsonLd({ data, id }: JsonLdProps) {
     />
   );
 }
+
+export { BusinessJsonLd } from '@/components/seo/BusinessJsonLd';

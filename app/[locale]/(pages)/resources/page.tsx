@@ -1,11 +1,12 @@
-import type { Metadata } from "next";
-import { getTranslations } from "next-intl/server";
-import { COMPANY } from "@/data/company";
-import { absoluteUrl } from "@/config/site";
-import { buildLocaleAlternates } from "@/lib/metadata";
-import { JsonLd } from "@/components/common/JsonLd";
-import { loadMessages, resolveLocale } from "@/i18n/loadMessages";
-import { buildBreadcrumbJsonLd, buildFaqJsonLd, buildWebPageJsonLd } from "@/seo/jsonld";
+import type { Metadata } from 'next';
+import { getTranslations } from 'next-intl/server';
+
+import { JsonLd } from '@/components/common/JsonLd';
+import { COMPANY } from '@/data/company';
+import { absoluteUrl } from '@/config/site';
+import { buildLocaleAlternates } from '@/lib/metadata';
+import { loadMessages, resolveLocale } from '@/i18n/loadMessages';
+import { buildBreadcrumbJsonLd, buildFaqJsonLd, buildWebPageJsonLd } from '@/seo/jsonld';
 
 interface PageParams {
   params: { locale: string };
@@ -50,20 +51,42 @@ export async function generateMetadata({ params }: PageParams): Promise<Metadata
   };
 }
 
+const ensureString = (value: unknown, fallback = ''): string =>
+  typeof value === 'string' ? value : value != null ? String(value) : fallback;
+
 export default async function ResourcesPage({ params }: PageParams) {
   const { locale } = params;
-  const tResources = await getTranslations({ locale, namespace: "resources" });
-  const tBreadcrumbs = await getTranslations({ locale, namespace: "breadcrumbs" });
+  const tResources = await getTranslations({ locale, namespace: 'resources' });
+  const tBreadcrumbs = await getTranslations({ locale, namespace: 'breadcrumbs' });
 
-  const hero = tResources.raw("hero") as { title: string; description: string };
-  const documents = tResources.raw("documents") as {
-    heading: string;
-    items: Array<{ title: string; description: string; actionLabel: string; actionHref: string }>;
+  const heroRaw = (tResources.raw('hero') ?? {}) as Record<string, unknown>;
+  const hero = {
+    title: ensureString(heroRaw.title),
+    description: ensureString(heroRaw.description),
   };
-  const contact = tResources.raw("contact") as {
-    heading: string;
-    description: string;
-    channels: { phone: string; line: string; email: string };
+
+  const documentsRaw = (tResources.raw('documents') ?? {}) as Record<string, unknown>;
+  const documentItemsRaw = Array.isArray(documentsRaw.items) ? documentsRaw.items : [];
+  const documents = {
+    heading: ensureString(documentsRaw.heading),
+    items: (documentItemsRaw as Array<Record<string, unknown>>).map((item) => ({
+      title: ensureString(item?.title),
+      description: ensureString(item?.description),
+      actionLabel: ensureString(item?.actionLabel),
+      actionHref: ensureString(item?.actionHref, '#') || '#',
+    })),
+  };
+
+  const contactRaw = (tResources.raw('contact') ?? {}) as Record<string, unknown>;
+  const channelsRaw = (contactRaw.channels ?? {}) as Record<string, unknown>;
+  const contact = {
+    heading: ensureString(contactRaw.heading),
+    description: ensureString(contactRaw.description),
+    channels: {
+      phone: ensureString(channelsRaw.phone),
+      line: ensureString(channelsRaw.line),
+      email: ensureString(channelsRaw.email),
+    },
   };
 
   const breadcrumbJsonLd = buildBreadcrumbJsonLd([

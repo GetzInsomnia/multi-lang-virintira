@@ -1,11 +1,12 @@
-import type { Metadata } from "next";
-import { getTranslations } from "next-intl/server";
-import { COMPANY } from "@/data/company";
-import { absoluteUrl } from "@/config/site";
-import { buildLocaleAlternates } from "@/lib/metadata";
-import { JsonLd } from "@/components/common/JsonLd";
-import { loadMessages, resolveLocale } from "@/i18n/loadMessages";
-import { buildBreadcrumbJsonLd, buildWebPageJsonLd } from "@/seo/jsonld";
+import type { Metadata } from 'next';
+import { getTranslations } from 'next-intl/server';
+
+import { JsonLd } from '@/components/common/JsonLd';
+import { COMPANY } from '@/data/company';
+import { absoluteUrl } from '@/config/site';
+import { buildLocaleAlternates } from '@/lib/metadata';
+import { loadMessages, resolveLocale } from '@/i18n/loadMessages';
+import { buildBreadcrumbJsonLd, buildWebPageJsonLd } from '@/seo/jsonld';
 
 interface PageParams {
   params: { locale: string };
@@ -50,16 +51,37 @@ export async function generateMetadata({ params }: PageParams): Promise<Metadata
   };
 }
 
+const ensureString = (value: unknown): string =>
+  typeof value === 'string' ? value : value != null ? String(value) : '';
+
 export default async function PromotionPage({ params }: PageParams) {
   const { locale } = params;
-  const tPromotion = await getTranslations({ locale, namespace: "promotion" });
-  const tBreadcrumbs = await getTranslations({ locale, namespace: "breadcrumbs" });
-  const tLayout = await getTranslations({ locale, namespace: "layout" });
+  const tPromotion = await getTranslations({ locale, namespace: 'promotion' });
+  const tBreadcrumbs = await getTranslations({ locale, namespace: 'breadcrumbs' });
+  const tLayout = await getTranslations({ locale, namespace: 'layout' });
 
-  const hero = tPromotion.raw("hero") as { title: string; intro: string };
-  const offers = tPromotion.raw("offers") as Array<{ name: string; bullets: string[]; note: string }>;
-  const cta = tPromotion("cta");
-  const chatLabel = tLayout("cta.chat");
+  const heroRaw = (tPromotion.raw('hero') ?? {}) as Record<string, unknown>;
+  const hero = {
+    title: ensureString(heroRaw.title),
+    intro: ensureString(heroRaw.intro),
+  };
+
+  const offersSource = tPromotion.raw('offers');
+  const offersRaw = Array.isArray(offersSource)
+    ? (offersSource as Array<Record<string, unknown>>)
+    : [];
+  const offers = offersRaw.map((offer) => ({
+    name: ensureString(offer?.name),
+    bullets: Array.isArray(offer?.bullets)
+      ? (offer.bullets as unknown[])
+          .map((bullet) => ensureString(bullet))
+          .filter((bullet): bullet is string => bullet.length > 0)
+      : [],
+    note: ensureString(offer?.note),
+  }));
+
+  const cta = ensureString(tPromotion.raw('cta'));
+  const chatLabel = tLayout('cta.chat');
 
   const breadcrumbJsonLd = buildBreadcrumbJsonLd([
     { name: tBreadcrumbs("home"), path: `/${locale}` },
