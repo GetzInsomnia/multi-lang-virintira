@@ -5,8 +5,9 @@ import type { ReactNode } from 'react';
 
 import { AnalyticsManager } from '@/components/common/AnalyticsManager';
 import { BusinessJsonLd } from '@/components/common/JsonLd';
-import Header, { type HeaderData, type HeaderMegaMenuColumn, type HeaderNavItem } from '@/components/layout/Header';
 import Footer, { type FooterData, type FooterLink } from '@/components/layout/Footer';
+import Navbar from '@/components/navbar/Navbar';
+import type { MegaMenuColumn, NavItem, NavbarData } from '@/components/navbar/types';
 import { i18n, type Locale } from '@/i18n/config';
 import { loadMessages, resolveLocale, type Messages } from '@/i18n/loadMessages';
 
@@ -18,26 +19,27 @@ function ensureString(value: unknown, fallback = ''): string {
   return fallback;
 }
 
-function sanitizeHeaderData(messages: Messages): HeaderData {
+function sanitizeNavbarData(messages: Messages): NavbarData {
   const raw = (messages.layout?.header ?? {}) as Record<string, unknown>;
   const nav = Array.isArray(raw.nav) ? raw.nav : [];
   const megaMenu = (raw.megaMenu ?? {}) as Record<string, unknown>;
   const columns = Array.isArray(megaMenu.columns) ? megaMenu.columns : [];
 
   return {
-    announcement: {
-      message: ensureString((raw.announcement as Record<string, unknown> | undefined)?.message),
-      actionLabel: ensureString((raw.announcement as Record<string, unknown> | undefined)?.actionLabel),
-      actionHref:
-        ensureString((raw.announcement as Record<string, unknown> | undefined)?.actionHref) || '/',
-    },
-    nav: (nav as HeaderNavItem[]).map((item) => ({
+    announcement: raw.announcement
+      ? {
+          message: ensureString((raw.announcement as Record<string, unknown>).message),
+          actionLabel: ensureString((raw.announcement as Record<string, unknown>).actionLabel),
+          actionHref: ensureString((raw.announcement as Record<string, unknown>).actionHref) || '/',
+        }
+      : undefined,
+    nav: (nav as NavItem[]).map((item) => ({
       label: ensureString(item?.label),
       href: ensureString(item?.href, '#') || '#',
     })),
     megaMenu: {
       triggerLabel: ensureString(megaMenu.triggerLabel),
-      columns: (columns as HeaderMegaMenuColumn[]).map((column) => ({
+      columns: (columns as MegaMenuColumn[]).map((column) => ({
         title: ensureString(column?.title),
         items: Array.isArray(column?.items)
           ? column.items.map((item) => ({
@@ -99,7 +101,7 @@ export default async function LocaleLayout({ children, params }: LayoutProps) {
   unstable_setRequestLocale(locale);
 
   const messages = await loadMessages(locale);
-  const header = sanitizeHeaderData(messages);
+  const navbar = sanitizeNavbarData(messages);
   const footer = sanitizeFooterData(messages);
 
   return (
@@ -110,7 +112,7 @@ export default async function LocaleLayout({ children, params }: LayoutProps) {
       <AnalyticsManager />
       <BusinessJsonLd locale={locale} />
       <div className="flex min-h-screen flex-col">
-        <Header data={header} />
+        <Navbar data={navbar} />
         <main className="flex-1">{children}</main>
         <Footer data={footer} />
       </div>
