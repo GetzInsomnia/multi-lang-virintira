@@ -1,126 +1,133 @@
 "use client";
 
-import { COMPANY } from '@/data/company';
+import { useEffect, useState } from 'react';
+
 import { Link } from '@/i18n/routing';
+import { isExternalHref, normalizeInternalHref } from '@/lib/links';
 
-import type { MegaMenuColumn, NavItem } from './types';
-import { LanguageSwitcher } from './LanguageSwitcher';
-import { BackButton } from './BackButton';
+export type MobileMenuEntry = {
+  label: string;
+  href?: string;
+  items?: MobileMenuEntry[];
+};
 
-function isExternal(href: string) {
-  return /^(https?:|mailto:|tel:)/.test(href);
-}
-
-function resolveHref(href: string) {
-  if (!href) return '#';
-  if (href.startsWith('#')) return href;
-  if (isExternal(href)) return href;
-  return href.startsWith('/') ? href : `/${href}`;
-}
+type MobileMenuViewProps = {
+  title: string;
+  items: MobileMenuEntry[];
+  onBack?: () => void;
+  onSelectSubMenu?: (items: MobileMenuEntry[], title: string) => void;
+  onClose: () => void;
+  index: number;
+  current: number;
+};
 
 export function MobileMenuView({
-  nav,
-  columns,
+  title,
+  items,
+  onBack,
+  onSelectSubMenu,
   onClose,
-  ctaPrimary,
-  ctaSecondary,
-}: {
-  nav: NavItem[];
-  columns: MegaMenuColumn[];
-  onClose: () => void;
-  ctaPrimary: string;
-  ctaSecondary: string;
-}) {
+  index,
+  current,
+}: MobileMenuViewProps) {
+  const [isActive, setIsActive] = useState(false);
+
+  useEffect(() => {
+    if (index === current) {
+      requestAnimationFrame(() => setIsActive(true));
+    } else {
+      setIsActive(false);
+    }
+  }, [current, index]);
+
+  const translate = isActive ? 0 : 100;
+
   return (
-    <div className="flex h-full flex-col gap-6 overflow-y-auto bg-white p-6">
-      <div className="flex items-center justify-between">
-        <BackButton onClick={onClose} label="Close" />
-        <LanguageSwitcher variant="pill" />
-      </div>
-      <nav className="space-y-3" aria-label="Primary">
-        {nav.map((item) => {
-          const href = resolveHref(item.href);
-          if (href.startsWith('#') || isExternal(href)) {
-            return (
-              <a
-                key={item.label}
-                href={href}
-                className="block rounded-2xl border border-transparent bg-virintira-soft px-4 py-3 text-lg font-semibold text-virintira-primary transition hover:border-virintira-primary/50 hover:bg-white"
-                onClick={onClose}
-              >
-                {item.label}
-              </a>
-            );
-          }
-          return (
-            <Link
-              key={item.label}
-              href={href}
-              className="block rounded-2xl border border-transparent bg-virintira-soft px-4 py-3 text-lg font-semibold text-virintira-primary transition hover:border-virintira-primary/50 hover:bg-white"
-              onClick={onClose}
-              prefetch
+    <div
+      className="absolute inset-0 h-full w-full transform transition-transform duration-500 ease-in-out"
+      style={{ transform: `translateX(${translate}%)` }}
+    >
+      <div className="flex h-full w-full flex-col bg-white p-6">
+        <div className="mb-4 flex items-center justify-between">
+          {onBack ? (
+            <button
+              type="button"
+              onClick={onBack}
+              className="text-lg font-semibold text-[#A70909]"
             >
-              {item.label}
-            </Link>
-          );
-        })}
-      </nav>
-      <div className="space-y-6">
-        {columns.map((column) => (
-          <section key={column.title} className="space-y-3">
-            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-virintira-muted">
-              {column.title}
-            </p>
-            <div className="space-y-3">
-              {column.items.map((item) => {
-                const href = resolveHref(item.href);
-                const card = (
-                  <div className="rounded-2xl border border-virintira-border bg-white p-4 shadow-sm transition hover:border-virintira-primary/40 hover:shadow-lg">
-                    <p className="font-semibold text-virintira-primary">{item.label}</p>
-                    {item.description ? (
-                      <p className="mt-1 text-sm text-virintira-muted">{item.description}</p>
-                    ) : null}
-                  </div>
-                );
+              ←
+            </button>
+          ) : (
+            <span className="w-4" />
+          )}
+          <h2 className="text-lg font-semibold text-[#A70909]">{title}</h2>
+          <button
+            type="button"
+            onClick={onClose}
+            className="text-2xl font-bold text-[#A70909]"
+            aria-label="Close menu"
+          >
+            ✕
+          </button>
+        </div>
+        <ul className="space-y-4" role="menu" aria-label={title}>
+          {items.map((item) => {
+            if (item.items?.length) {
+              return (
+                <li key={item.label}>
+                  <button
+                    type="button"
+                    onClick={() => onSelectSubMenu?.(item.items ?? [], item.label)}
+                    className="w-full text-left text-base font-medium text-black transition hover:text-[#A70909]"
+                  >
+                    {item.label}
+                  </button>
+                </li>
+              );
+            }
 
-                if (href.startsWith('#') || isExternal(href)) {
-                  return (
-                    <a key={item.label} href={href} onClick={onClose}>
-                      {card}
-                    </a>
+            const href = item.href ?? '#';
+            const label =
+              item.label.includes('โปรโมชั่น') && !item.label.includes('🔥')
+                ? (
+                    <>
+                      {item.label}{' '}
+                      <span className="inline-block animate-bounce">🔥</span>
+                    </>
+                  )
+                : (
+                    item.label
                   );
-                }
 
-                return (
-                  <Link key={item.label} href={href} onClick={onClose} prefetch>
-                    {card}
-                  </Link>
-                );
-              })}
-            </div>
-          </section>
-        ))}
-      </div>
-      <div className="space-y-3">
-        <a
-          href={`tel:${COMPANY.phone}`}
-          className="block w-full rounded-full bg-virintira-primary px-4 py-3 text-center text-sm font-semibold text-white shadow transition hover:bg-virintira-primary-dark"
-        >
-          {ctaPrimary}
-        </a>
-        <a
-          href={COMPANY.socials.line}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="block w-full rounded-full border border-[#06C755] bg-[#06C755] px-4 py-3 text-center text-sm font-semibold text-white shadow transition hover:brightness-110"
-        >
-          {ctaSecondary}
-        </a>
-      </div>
-      <div className="space-y-1 text-xs text-virintira-muted">
-        <p>{COMPANY.legalNameTh}</p>
-        <p>{COMPANY.legalNameEn}</p>
-        <p>{COMPANY.phoneDisplay}</p>
+            if (href.startsWith('#') || isExternalHref(href)) {
+              return (
+                <li key={item.label}>
+                  <a
+                    href={href}
+                    onClick={onClose}
+                    className="block text-base font-medium text-black transition hover:text-[#A70909]"
+                  >
+                    {label}
+                  </a>
+                </li>
+              );
+            }
+
+            const normalized = normalizeInternalHref(href);
+            return (
+              <li key={item.label}>
+                <Link
+                  href={normalized}
+                  onClick={onClose}
+                  className="block text-base font-medium text-black transition hover:text-[#A70909]"
+                  prefetch
+                >
+                  {label}
+                </Link>
+              </li>
+            );
+          })}
+        </ul>
       </div>
     </div>
   );
