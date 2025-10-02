@@ -163,7 +163,6 @@ export default async function HomePage({ params }: PageParams) {
       <StructuredData id="jsonld-home" data={webPageJsonLd} />
       <StructuredData id="jsonld-breadcrumb" data={breadcrumbJsonLd} />
       <HeroSection content={hero} chatLabel={chatLabel} />
-      <AboutSection heading={about.heading} paragraphs={about.paragraphs} linkLabel={about.link} />
       <PopularServices heading={services.heading} items={services.items} />
       <WhyChooseUsSection heading={highlights.heading} points={highlights.items} />
       <HowItWorksSection heading={process.heading} steps={process.steps} />
@@ -173,6 +172,7 @@ export default async function HomePage({ params }: PageParams) {
         ctaLabel={promotion.ctaLabel}
         ctaHref={promotion.ctaHref}
       />
+      <AboutSection heading={about.heading} paragraphs={about.paragraphs} linkLabel={about.link} />
       <ContactCTA
         heading={cta.heading}
         description={cta.description}
