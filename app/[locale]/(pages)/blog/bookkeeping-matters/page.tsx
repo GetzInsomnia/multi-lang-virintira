@@ -74,16 +74,18 @@ export default async function BookkeepingMattersPage({ params }: PageParams) {
   const sections = Array.isArray(articleRaw.sections)
     ? (articleRaw.sections as Array<Record<string, unknown>>)
     : [];
-  const normalizedSections: ArticleSection[] = sections.map((section) => ({
-    heading: typeof section?.heading === 'string' ? section.heading : '',
-    content: Array.isArray(section?.content)
-      ? (section.content as unknown[])
-          .map((paragraph) =>
-            typeof paragraph === 'string' ? paragraph : paragraph != null ? String(paragraph) : '',
-          )
-          .filter((paragraph): paragraph is string => paragraph.length > 0)
-      : [],
-  }));
+  const normalizedSections: ArticleSection[] = sections
+    .map((section) => ({
+      heading: typeof section?.heading === 'string' ? section.heading : '',
+      content: Array.isArray(section?.content)
+        ? (section.content as unknown[])
+            .map((paragraph) =>
+              typeof paragraph === 'string' ? paragraph : paragraph != null ? String(paragraph) : '',
+            )
+            .filter((paragraph): paragraph is string => paragraph.length > 0)
+        : [],
+    }))
+    .filter((section) => section.heading.length > 0 || section.content.length > 0);
   const article = {
     title: ensureString(articleRaw.title),
     author: ensureString(articleRaw.author),
@@ -96,15 +98,18 @@ export default async function BookkeepingMattersPage({ params }: PageParams) {
 
   const tipsRaw = (tBlog.raw('bookkeepingMatters.tips') ?? {}) as Record<string, any>;
   const tipItems: TipItem[] = Array.isArray(tipsRaw.items)
-    ? (tipsRaw.items as Array<Record<string, unknown>>).map((item) => ({
-        title: ensureString(item?.title),
-        description: ensureString(item?.description),
-      }))
+    ? (tipsRaw.items as Array<Record<string, unknown>>)
+        .map((item) => ({
+          title: ensureString(item?.title),
+          description: ensureString(item?.description),
+        }))
+        .filter((item) => item.title.length > 0 || item.description.length > 0)
     : [];
   const tips = {
     heading: ensureString(tipsRaw.heading),
     items: tipItems,
   };
+  const hasTips = tips.heading.length > 0 || tips.items.length > 0;
   const callLabel = tLayout('cta.call', { phone: COMPANY.phoneDisplay });
   const chatLabel = tLayout('cta.chat');
 
@@ -148,28 +153,51 @@ export default async function BookkeepingMattersPage({ params }: PageParams) {
       </header>
 
       <div className="mx-auto flex max-w-4xl flex-col gap-12 px-4">
-        {article.sections.map((section) => (
-          <section key={section.heading} className="space-y-4">
-            <h2 className="text-[clamp(1.5rem,1.1rem+1.2vw,2.1rem)] font-semibold text-[#A70909]">{section.heading}</h2>
-            {section.content.map((paragraph, index) => (
-              <p key={index} className="text-[clamp(0.95rem,0.9rem+0.3vw,1.1rem)] leading-relaxed text-gray-700">
-                {paragraph}
-              </p>
-            ))}
-          </section>
-        ))}
+        {article.sections.map((section, index) => {
+          const sectionKey = section.heading.length > 0 ? section.heading : `section-${index}`;
+          return (
+            <section key={sectionKey} className="space-y-4">
+              {section.heading.length > 0 ? (
+                <h2 className="text-[clamp(1.5rem,1.1rem+1.2vw,2.1rem)] font-semibold text-[#A70909]">
+                  {section.heading}
+                </h2>
+              ) : null}
+              {section.content.map((paragraph, paragraphIndex) => (
+                <p
+                  key={`${sectionKey}-paragraph-${paragraphIndex}`}
+                  className="text-[clamp(0.95rem,0.9rem+0.3vw,1.1rem)] leading-relaxed text-gray-700"
+                >
+                  {paragraph}
+                </p>
+              ))}
+            </section>
+          );
+        })}
 
-        <section className="rounded-3xl border border-[#A70909]/15 bg-white p-8 shadow-sm">
-          <h2 className="text-[clamp(1.5rem,1.1rem+1.2vw,2.1rem)] font-semibold text-[#A70909]">{tips.heading}</h2>
-          <div className="mt-6 space-y-4">
-            {tips.items.map((item) => (
-              <div key={item.title} className="rounded-2xl bg-[#FFF0F0] p-5">
-                <h3 className="text-[clamp(1.05rem,0.95rem+0.3vw,1.2rem)] font-semibold text-[#A70909]">{item.title}</h3>
-                <p className="mt-2 text-sm text-gray-700">{item.description}</p>
-              </div>
-            ))}
-          </div>
-        </section>
+        {hasTips ? (
+          <section className="rounded-3xl border border-[#A70909]/15 bg-white p-8 shadow-sm">
+            {tips.heading.length > 0 ? (
+              <h2 className="text-[clamp(1.5rem,1.1rem+1.2vw,2.1rem)] font-semibold text-[#A70909]">{tips.heading}</h2>
+            ) : null}
+            <div className="mt-6 space-y-4">
+              {tips.items.map((item, index) => {
+                const itemKey = item.title.length > 0 ? item.title : `tip-${index}`;
+                return (
+                  <div key={itemKey} className="rounded-2xl bg-[#FFF0F0] p-5">
+                    {item.title.length > 0 ? (
+                      <h3 className="text-[clamp(1.05rem,0.95rem+0.3vw,1.2rem)] font-semibold text-[#A70909]">
+                        {item.title}
+                      </h3>
+                    ) : null}
+                    {item.description.length > 0 ? (
+                      <p className="mt-2 text-sm text-gray-700">{item.description}</p>
+                    ) : null}
+                  </div>
+                );
+              })}
+            </div>
+          </section>
+        ) : null}
 
         <section className="rounded-3xl bg-[#FFF5F5] p-8 text-center">
           <p className="text-[clamp(0.95rem,0.9rem+0.3vw,1.1rem)] text-gray-700">{article.conclusion}</p>
