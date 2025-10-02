@@ -272,7 +272,50 @@
         ]
       },
       "ctaPrimary": "ขอคำปรึกษาฟรี",
-      "ctaSecondary": "LINE OA"
+      "ctaSecondary": "LINE OA",
+      "search": {
+        "placeholder": "ค้นหาแหล่งความรู้บัญชี",
+        "mobilePlaceholder": "ค้นหาแหล่งความรู้บัญชี",
+        "toggleLabel": "เปิดหรือปิดการค้นหา",
+        "submitLabel": "ค้นหา"
+      },
+      "language": {
+        "label": "ภาษา",
+        "dropdownLabel": "เลือกภาษา",
+        "options": {
+          "th": "ภาษาไทย",
+          "en": "English",
+          "fr": "ภาษาฝรั่งเศส",
+          "de": "ภาษาเยอรมัน",
+          "nl": "ภาษาดัตช์",
+          "it": "ภาษาอิตาลี",
+          "zh-Hant": "ภาษาจีน (ตัวเต็ม)",
+          "zh-Hans": "ภาษาจีน (ตัวย่อ)",
+          "ja": "ภาษาญี่ปุ่น",
+          "ko": "ภาษาเกาหลี",
+          "ms": "ภาษามาเลย์",
+          "ta": "ภาษาทมิฬ",
+          "hi": "ภาษาฮินดี",
+          "ar": "ภาษาอาหรับ",
+          "fa": "ภาษาเปอร์เซีย",
+          "he": "ภาษาฮีบรู"
+        }
+      },
+      "actions": {
+        "phoneLabel": "โทรหาเรา"
+      },
+      "social": {
+        "heading": "ติดต่อเรา",
+        "toggleLabel": "ติดต่อเรา",
+        "closeLabel": "ปิดแถบติดต่อ",
+        "links": {
+          "call": "โทร",
+          "line": "LINE",
+          "tiktok": "TikTok",
+          "facebook": "Facebook",
+          "email": "อีเมล"
+        }
+      }
     },
     "footer": {
       "tagline": "พาร์ตเนอร์บัญชีและธุรกิจครบวงจร",
