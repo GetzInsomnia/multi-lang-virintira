@@ -172,14 +172,18 @@ export function Navbar({ data }: { data: NavbarData }) {
                 const isExternal = isExternalHref(href);
                 const isAnchor = href.startsWith('#');
                 const content = (
-                  <span className="relative font-medium text-black transition hover:text-[#A70909] after:absolute after:-bottom-6 after:left-0 after:h-[7px] after:w-full after:rounded-t-full after:bg-[#A70909] after:origin-center after:scale-x-0 after:transition-transform hover:after:scale-x-[1.2]">
+                  <span className="relative font-medium text-black transition-colors duration-300 ease-in-out hover:text-[#A70909] after:absolute after:-bottom-6 after:left-0 after:h-[7px] after:w-full after:rounded-t-full after:bg-[#A70909] after:origin-center after:scale-x-0 after:transition-transform after:duration-300 hover:after:scale-x-[1.2]">
                     {item.label}
                   </span>
                 );
 
                 if (isExternal || isAnchor) {
                   return (
-                    <a key={item.label} href={href} className="inline-flex items-center">
+                    <a
+                      key={item.label}
+                      href={href}
+                      className="inline-flex items-center focus-visible:ring-2 focus-visible:ring-[#A70909] focus-visible:ring-offset-2 focus-visible:ring-offset-white"
+                    >
                       {content}
                     </a>
                   );
@@ -187,7 +191,12 @@ export function Navbar({ data }: { data: NavbarData }) {
 
                 const normalized = normalizeInternalHref(href);
                 return (
-                  <Link key={item.label} href={normalized} className="inline-flex items-center" prefetch>
+                  <Link
+                    key={item.label}
+                    href={normalized}
+                    className="inline-flex items-center focus-visible:ring-2 focus-visible:ring-[#A70909] focus-visible:ring-offset-2 focus-visible:ring-offset-white"
+                    prefetch
+                  >
                     {content}
                   </Link>
                 );
@@ -202,11 +211,11 @@ export function Navbar({ data }: { data: NavbarData }) {
                 >
                   <button
                     type="button"
-                    className={`relative font-medium transition ${
+                    className={`relative font-medium transition-colors duration-300 ease-in-out ${
                       isHoveringMenu ? 'text-[#A70909]' : 'text-black'
-                    } after:absolute after:-bottom-6 after:left-0 after:h-[7px] after:w-full after:rounded-t-full after:bg-[#A70909] after:origin-center after:transition-transform ${
+                    } after:absolute after:-bottom-6 after:left-0 after:h-[7px] after:w-full after:rounded-t-full after:bg-[#A70909] after:origin-center after:transition-transform after:duration-300 ${
                       isHoveringMenu ? 'after:scale-x-[1.2]' : 'after:scale-x-0'
-                    }`}
+                    } focus-visible:ring-2 focus-visible:ring-[#A70909] focus-visible:ring-offset-2 focus-visible:ring-offset-white`}
                     aria-haspopup="true"
                     aria-expanded={isHoveringMenu}
                     onClick={() => setIsHoveringMenu((prev) => !prev)}

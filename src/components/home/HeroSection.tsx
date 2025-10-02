@@ -38,13 +38,13 @@ export function HeroSection({ content, chatLabel }: { content: HeroContent; chat
           <div className="flex flex-col items-center gap-4 pt-4 sm:flex-row sm:justify-start">
             <a
               href={`tel:${COMPANY.phone}`}
-              className="inline-flex min-w-[200px] items-center justify-center rounded-full bg-virintira-primary px-6 py-3 text-sm font-semibold text-white shadow transition hover:bg-virintira-primary-dark"
+              className="inline-flex min-w-[200px] items-center justify-center rounded-full bg-virintira-primary px-6 py-3 text-sm font-semibold text-white shadow transition-colors duration-200 ease-in-out hover:bg-virintira-primary-dark focus-visible:ring-2 focus-visible:ring-virintira-primary focus-visible:ring-offset-2 focus-visible:ring-offset-white"
             >
               {content.primary}
             </a>
             <a
               href={COMPANY.socials.line}
-              className="inline-flex min-w-[200px] items-center justify-center rounded-full bg-[#06C755] px-6 py-3 text-sm font-semibold text-white transition hover:brightness-110"
+              className="inline-flex min-w-[200px] items-center justify-center rounded-full bg-[#06C755] px-6 py-3 text-sm font-semibold text-white transition duration-200 ease-in-out hover:brightness-110 focus-visible:ring-2 focus-visible:ring-[#06C755] focus-visible:ring-offset-2 focus-visible:ring-offset-white"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -59,7 +59,7 @@ export function HeroSection({ content, chatLabel }: { content: HeroContent; chat
           <p className="text-sm text-virintira-muted">{COMPANY.legalNameTh}</p>
           <a
             href={`mailto:${COMPANY.email}`}
-            className="inline-flex items-center justify-center rounded-full bg-virintira-primary px-6 py-3 text-sm font-semibold text-white transition hover:bg-virintira-primary-dark"
+            className="inline-flex items-center justify-center rounded-full bg-virintira-primary px-6 py-3 text-sm font-semibold text-white transition-colors duration-200 ease-in-out hover:bg-virintira-primary-dark focus-visible:ring-2 focus-visible:ring-virintira-primary focus-visible:ring-offset-2 focus-visible:ring-offset-white"
           >
             {content.emailButton}
           </a>

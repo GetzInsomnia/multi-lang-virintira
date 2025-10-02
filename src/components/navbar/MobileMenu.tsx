@@ -104,9 +104,13 @@ export function MobileMenu({
   return (
     <div
       className={`pointer-events-none fixed inset-0 z-50 transition ${open ? 'pointer-events-auto' : ''}`}
+      aria-hidden={!open}
     >
       <div
         ref={containerRef}
+        role="dialog"
+        aria-modal="true"
+        aria-label="Main menu"
         className={`absolute right-0 top-0 h-full w-4/5 max-w-xs transform bg-white shadow-lg transition-transform duration-300 ease-in-out ${
           open ? 'translate-x-0' : 'translate-x-full'
         }`}
@@ -129,7 +133,11 @@ export function MobileMenu({
       <button
         type="button"
         aria-label="Close menu"
-        className={`absolute inset-0 h-full w-full transition ${open ? 'bg-black/20' : 'bg-transparent'}`}
+        tabIndex={open ? 0 : -1}
+        aria-hidden={!open}
+        className={`absolute inset-0 h-full w-full transition-colors duration-300 ease-in-out focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/40 ${
+          open ? 'bg-black/20' : 'bg-transparent'
+        }`}
         onClick={onClose}
       />
     </div>

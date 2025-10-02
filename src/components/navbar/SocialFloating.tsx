@@ -13,7 +13,7 @@ export function SocialFloating() {
         <a
           key={link.label}
           href={link.href}
-          className={`inline-flex min-w-[140px] items-center justify-center rounded-full px-5 py-3 text-sm font-semibold shadow-xl transition hover:-translate-y-0.5 hover:shadow-2xl ${link.color} ${link.text} ${link.border ?? ''}`}
+          className={`inline-flex min-w-[140px] items-center justify-center rounded-full px-5 py-3 text-sm font-semibold shadow-xl transition-transform duration-300 ease-out hover:-translate-y-0.5 hover:shadow-2xl focus-visible:ring-2 focus-visible:ring-virintira-primary focus-visible:ring-offset-2 focus-visible:ring-offset-white ${link.color} ${link.text} ${link.border ?? ''}`}
           target={link.external ? '_blank' : undefined}
           rel={link.external ? 'noopener noreferrer' : undefined}
         >
