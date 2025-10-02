@@ -17,12 +17,7 @@ import {
 
 import type { IconDefinition } from '@fortawesome/fontawesome-svg-core';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {
-  faChevronDown,
-  faFire,
-  faMagnifyingGlass,
-  faPhone,
-} from '@fortawesome/free-solid-svg-icons';
+import { faChevronDown, faFire, faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 
 import { COMPANY } from '@/data/company';
 import { Link, usePathname } from '@/i18n/routing';
@@ -37,7 +32,7 @@ import { SocialFloating } from './SocialFloating';
 import SubMenu from './SubMenu';
 import type { NavItem, NavbarData } from './types';
 
-const DEFAULT_HEADER_HEIGHT = 72;
+const DEFAULT_HEADER_HEIGHT = 80;
 const OPEN_DELAY = 180;
 const CLOSE_DELAY = 240;
 
@@ -112,12 +107,47 @@ export function Navbar({ data }: { data: NavbarData }) {
   const mobilePlaceholder = t('search.mobilePlaceholder');
   const searchToggleLabel = t('search.toggleLabel');
   const searchSubmitLabel = t('search.submitLabel');
-  const phoneLabel = t('actions.phoneLabel');
 
   const hasMegaMenu = data.megaMenu.columns.length > 0;
-  const navItems = useMemo(() => {
-    return data.nav.filter((item) => item.label !== data.megaMenu.triggerLabel);
-  }, [data.nav, data.megaMenu.triggerLabel]);
+
+  type PrimaryItem =
+    | { type: 'link'; key: string; item: NavItem }
+    | { type: 'mega'; key: string };
+
+  const primaryItems = useMemo<PrimaryItem[]>(() => {
+    const items: PrimaryItem[] = [];
+    if (!data.nav.length && !hasMegaMenu) {
+      return items;
+    }
+
+    const triggerLabel = data.megaMenu.triggerLabel.trim().toLowerCase();
+    const indices = data.nav.map((_, index) => index);
+    const highlightIndices = indices.filter((index) => Boolean(getNavIcon(data.nav[index])));
+    const triggerIndices = indices.filter(
+      (index) => data.nav[index].label.trim().toLowerCase() === triggerLabel,
+    );
+    const remainingIndices = indices.filter(
+      (index) => !highlightIndices.includes(index) && !triggerIndices.includes(index),
+    );
+
+    const orderedIndices = [...highlightIndices, ...remainingIndices];
+    let megaInserted = false;
+
+    orderedIndices.forEach((index, position) => {
+      const item = data.nav[index];
+      items.push({ type: 'link', key: `link-${index}`, item });
+      if (!megaInserted && hasMegaMenu && position === 0) {
+        items.push({ type: 'mega', key: '__mega' });
+        megaInserted = true;
+      }
+    });
+
+    if (hasMegaMenu && !megaInserted) {
+      items.push({ type: 'mega', key: '__mega' });
+    }
+
+    return items;
+  }, [data.nav, data.megaMenu.triggerLabel, hasMegaMenu]);
 
   const megaMenuActive = useMemo(
     () =>
@@ -327,40 +357,10 @@ export function Navbar({ data }: { data: NavbarData }) {
     requestAnimationFrame(() => target?.focus());
   }, [searchOpen]);
 
-  const announcement = data.announcement;
-
   return (
     <>
       <SocialFloating />
       <header ref={headerRef} className="navbar-container">
-        {announcement?.message ? (
-          <div className="navbar-announcement" role="region" aria-live="polite">
-            <div className="navbar-announcement-content">
-              <p className="navbar-announcement-text">{announcement.message}</p>
-              {announcement.actionLabel && announcement.actionHref ? (
-                (() => {
-                  const href = announcement.actionHref;
-                  if (href.startsWith('#') || isExternalHref(href)) {
-                    return (
-                      <a href={href} className="navbar-announcement-action">
-                        {announcement.actionLabel}
-                      </a>
-                    );
-                  }
-                  return (
-                    <Link
-                      href={normalizeInternalHref(href)}
-                      className="navbar-announcement-action"
-                      prefetch
-                    >
-                      {announcement.actionLabel}
-                    </Link>
-                  );
-                })()
-              ) : null}
-            </div>
-          </div>
-        ) : null}
         <div className="navbar-bar">
           <div className="navbar-brand" onMouseLeave={cancelClose}>
             <Link href="/" className="navbar-brand-link" onClick={handleLogoClick} prefetch>
@@ -371,15 +371,59 @@ export function Navbar({ data }: { data: NavbarData }) {
                 height={40}
                 priority
               />
-              <span className="navbar-brand-text">VIRINTIRA</span>
+              <span className="navbar-brand-text">ViRINTIRA</span>
             </Link>
           </div>
           <nav className="navbar-primary" aria-label="Primary" role="menubar">
-            {navItems.map((item) => {
+            {primaryItems.map((entry) => {
+              if (entry.type === 'mega') {
+                if (!hasMegaMenu) {
+                  return null;
+                }
+                return (
+                  <div
+                    key={entry.key}
+                    className="navbar-item"
+                    onMouseEnter={() => scheduleOpen('__mega')}
+                    onMouseLeave={() => scheduleClose('__mega')}
+                  >
+                    <button
+                      type="button"
+                      className={`navbar-link nav-underline ${
+                        activeDropdown === '__mega' || megaMenuActive ? 'is-active' : ''
+                      }`}
+                      aria-haspopup="true"
+                      aria-expanded={activeDropdown === '__mega'}
+                      aria-current={megaMenuActive ? 'page' : undefined}
+                      onClick={() =>
+                        setActiveDropdown((prev) => (prev === '__mega' ? null : '__mega'))
+                      }
+                      onKeyDown={(event) => handleKeyDown(event, '__mega')}
+                      onFocus={() => scheduleOpen('__mega')}
+                    >
+                      <span className="navbar-link-inner">
+                        <span>{data.megaMenu.triggerLabel}</span>
+                        <FontAwesomeIcon icon={faChevronDown} className="navbar-link-caret" />
+                      </span>
+                    </button>
+                    {activeDropdown === '__mega' ? (
+                      <MegaMenu
+                        columns={data.megaMenu.columns}
+                        onMouseEnter={cancelClose}
+                        onMouseLeave={() => scheduleClose('__mega')}
+                        onLinkClick={closeDropdown}
+                      />
+                    ) : null}
+                  </div>
+                );
+              }
+
+              const item = entry.item;
               const icon = getNavIcon(item);
               const hasMenu = Boolean(item.subMenu?.length);
-              const key = item.label;
-              const isActive = isInternalMatch(currentPath, item.href) || hasActiveSubmenu(item, currentPath);
+              const key = item.label || entry.key;
+              const isActive =
+                isInternalMatch(currentPath, item.href) || hasActiveSubmenu(item, currentPath);
               const linkClassName = `navbar-link nav-underline ${
                 activeDropdown === key || isActive ? 'is-active' : ''
               }`;
@@ -451,41 +495,6 @@ export function Navbar({ data }: { data: NavbarData }) {
                 </Link>
               );
             })}
-            {hasMegaMenu ? (
-              <div
-                className="navbar-item"
-                onMouseEnter={() => scheduleOpen('__mega')}
-                onMouseLeave={() => scheduleClose('__mega')}
-              >
-                <button
-                  type="button"
-                  className={`navbar-link nav-underline ${
-                    activeDropdown === '__mega' || megaMenuActive ? 'is-active' : ''
-                  }`}
-                  aria-haspopup="true"
-                  aria-expanded={activeDropdown === '__mega'}
-                  aria-current={megaMenuActive ? 'page' : undefined}
-                  onClick={() =>
-                    setActiveDropdown((prev) => (prev === '__mega' ? null : '__mega'))
-                  }
-                  onKeyDown={(event) => handleKeyDown(event, '__mega')}
-                  onFocus={() => scheduleOpen('__mega')}
-                >
-                  <span className="navbar-link-inner">
-                    <span>{data.megaMenu.triggerLabel}</span>
-                    <FontAwesomeIcon icon={faChevronDown} className="navbar-link-caret" />
-                  </span>
-                </button>
-                {activeDropdown === '__mega' ? (
-                  <MegaMenu
-                    columns={data.megaMenu.columns}
-                    onMouseEnter={cancelClose}
-                    onMouseLeave={() => scheduleClose('__mega')}
-                    onLinkClick={closeDropdown}
-                  />
-                ) : null}
-              </div>
-            ) : null}
           </nav>
           <div className="navbar-actions">
             <div ref={searchContainerRef} className="navbar-search-group">
@@ -516,15 +525,6 @@ export function Navbar({ data }: { data: NavbarData }) {
                 onBlur={handleSearchBlur}
                 className="navbar-search-toggle-button"
               />
-            </div>
-            <div className="navbar-phone">
-              <FontAwesomeIcon icon={faPhone} aria-hidden className="navbar-phone-icon" />
-              <div className="navbar-phone-text">
-                <span className="navbar-phone-label">{phoneLabel}</span>
-                <a href={`tel:${COMPANY.phone}`} className="navbar-phone-number">
-                  {COMPANY.phoneDisplay}
-                </a>
-              </div>
             </div>
             <div className="navbar-language-wrapper">
               <LanguageSwitcher />

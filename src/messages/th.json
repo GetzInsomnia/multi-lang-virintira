@@ -72,11 +72,6 @@
       "book": "จองเวลาปรึกษา"
     },
     "header": {
-      "announcement": {
-        "message": "ทีมบัญชีมืออาชีพ ดูแลครบทุกขั้นตอนธุรกิจของคุณ",
-        "actionLabel": "ดูโปรโมชั่น",
-        "actionHref": "/promotion"
-      },
       "nav": [
         {
           "label": "โปรโมชั่น",

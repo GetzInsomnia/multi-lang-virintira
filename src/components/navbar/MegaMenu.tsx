@@ -1,6 +1,6 @@
 "use client";
 
-import { memo } from 'react';
+import { memo, useEffect, useState } from 'react';
 
 import Image from 'next/image';
 
@@ -18,13 +18,21 @@ export type MegaMenuProps = {
 };
 
 function MegaMenuComponent({ columns, onMouseEnter, onMouseLeave, onLinkClick }: MegaMenuProps) {
+  const [visible, setVisible] = useState(false);
+
+  useEffect(() => {
+    const frame = requestAnimationFrame(() => setVisible(true));
+    return () => cancelAnimationFrame(frame);
+  }, []);
+
   if (!columns.length) {
     return null;
   }
 
   return (
     <div
-      className="mega-menu-wrapper"
+      className="mega-menu-wrapper mega-enter"
+      data-open={visible}
       onMouseEnter={onMouseEnter}
       onMouseLeave={onMouseLeave}
       role="presentation"
