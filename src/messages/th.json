@@ -80,7 +80,9 @@
       "nav": [
         {
           "label": "โปรโมชั่น",
-          "href": "/promotion"
+          "href": "/promotion",
+          "highlight": true,
+          "icon": "promotion"
         },
         {
           "label": "ดาวน์โหลดเอกสาร",

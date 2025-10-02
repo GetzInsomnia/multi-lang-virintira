@@ -7,60 +7,85 @@ import { usePathname } from '@/i18n/routing';
 import type { MegaMenuColumn, NavItem } from './types';
 import { MobileMenuView } from './MobileMenuView';
 
-type MenuItem = {
-  label: string;
-  href?: string;
-  items?: MenuItem[];
-};
-
-export function MobileMenu({
-  open,
-  nav,
-  columns,
-  triggerLabel,
-  onClose,
-}: {
+export type MobileMenuProps = {
   open: boolean;
   nav: NavItem[];
   columns: MegaMenuColumn[];
   triggerLabel: string;
   onClose: () => void;
-}) {
+};
+
+type MenuItem = {
+  label: string;
+  href?: string;
+  description?: string;
+  items?: MenuItem[];
+};
+
+const ROOT_TITLE = 'ViRINTIRA';
+
+export function MobileMenu({ open, nav, columns, triggerLabel, onClose }: MobileMenuProps) {
   const pathname = usePathname();
   const containerRef = useRef<HTMLDivElement | null>(null);
-  const [stack, setStack] = useState<{ title: string; items: MenuItem[] }[]>([]);
+  const [stack, setStack] = useState<{ title: string; items: MenuItem[] }[]>([
+    { title: ROOT_TITLE, items: [] },
+  ]);
 
-  const rootItems = useMemo<MenuItem[]>(() => {
-    const baseItems: MenuItem[] = nav.map((item) => ({
+  const derivedRoot = useMemo<MenuItem[]>(() => {
+    const primaryItems: MenuItem[] = nav.map((item) => ({
       label: item.label,
       href: item.href,
+      description: item.description,
+      items: item.subMenu
+        ? item.subMenu.map((section) => ({
+            label: section.title || item.label,
+            description: section.title ? undefined : item.description,
+            items: section.items.map((entry) => ({
+              label: entry.label,
+              href: entry.href,
+              description: entry.description,
+            })),
+          }))
+        : undefined,
     }));
 
     if (columns.length) {
-      baseItems.splice(1, 0, {
+      const megaMenuItem: MenuItem = {
         label: triggerLabel,
         items: columns.map((column) => ({
           label: column.title,
-          items: column.items.map((subItem) => ({
-            label: subItem.label,
-            href: subItem.href,
+          description: column.subtitle,
+          items: column.items.map((item) => ({
+            label: item.label,
+            href: item.href,
+            description: item.description,
           })),
         })),
-      });
+      };
+
+      const existingIndex = primaryItems.findIndex((item) => item.label === triggerLabel);
+      if (existingIndex >= 0) {
+        primaryItems[existingIndex] = {
+          ...primaryItems[existingIndex],
+          items: megaMenuItem.items,
+        };
+      } else {
+        primaryItems.splice(1, 0, megaMenuItem);
+      }
     }
 
-    return baseItems;
+    return primaryItems;
   }, [columns, nav, triggerLabel]);
 
   useEffect(() => {
-    setStack([{ title: 'ViRINTIRA', items: rootItems }]);
-  }, [rootItems]);
+    setStack([{ title: ROOT_TITLE, items: derivedRoot }]);
+  }, [derivedRoot]);
 
   useEffect(() => {
     if (open) {
-      setStack([{ title: 'ViRINTIRA', items: rootItems }]);
+      setStack([{ title: ROOT_TITLE, items: derivedRoot }]);
     }
-  }, [open, rootItems]);
+  }, [open, derivedRoot]);
 
   useEffect(() => {
     if (!open) {
@@ -94,28 +119,27 @@ export function MobileMenu({
   }, [open, onClose]);
 
   const handleBack = () => {
-    setStack((prev) => prev.slice(0, -1));
+    setStack((prev) => (prev.length > 1 ? prev.slice(0, -1) : prev));
   };
 
-  const handleSelectSubMenu = (items: MenuItem[], title: string) => {
+  const handleSelect = (items: MenuItem[] | undefined, title: string) => {
+    if (!items || !items.length) {
+      onClose();
+      return;
+    }
     setStack((prev) => [...prev, { title, items }]);
   };
 
   return (
-    <div
-      className={`pointer-events-none fixed inset-0 z-50 transition ${open ? 'pointer-events-auto' : ''}`}
-      aria-hidden={!open}
-    >
+    <div className={`mobile-menu ${open ? 'is-open' : ''}`} aria-hidden={!open}>
       <div
         ref={containerRef}
         role="dialog"
         aria-modal="true"
         aria-label="Main menu"
-        className={`absolute right-0 top-0 h-full w-4/5 max-w-xs transform bg-white shadow-lg transition-transform duration-300 ease-in-out ${
-          open ? 'translate-x-0' : 'translate-x-full'
-        }`}
+        className="mobile-menu-panel"
       >
-        <div className="relative h-full w-full overflow-hidden">
+        <div className="mobile-menu-views">
           {stack.map((view, index) => (
             <MobileMenuView
               key={`${index}-${view.title}`}
@@ -124,7 +148,7 @@ export function MobileMenu({
               index={index}
               current={stack.length - 1}
               onBack={index > 0 ? handleBack : undefined}
-              onSelectSubMenu={handleSelectSubMenu}
+              onSelectSubMenu={handleSelect}
               onClose={onClose}
             />
           ))}
@@ -135,9 +159,7 @@ export function MobileMenu({
         aria-label="Close menu"
         tabIndex={open ? 0 : -1}
         aria-hidden={!open}
-        className={`absolute inset-0 h-full w-full transition-colors duration-300 ease-in-out focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/40 ${
-          open ? 'bg-black/20' : 'bg-transparent'
-        }`}
+        className="mobile-menu-backdrop"
         onClick={onClose}
       />
     </div>

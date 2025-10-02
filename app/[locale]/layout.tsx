@@ -6,8 +6,13 @@ import type { ReactNode } from 'react';
 import { AnalyticsManager } from '@/components/common/AnalyticsManager';
 import { BusinessJsonLd } from '@/components/common/JsonLd';
 import Footer, { type FooterData, type FooterLink } from '@/components/layout/Footer';
-import Navbar from '@/components/navbar/Navbar';
-import type { MegaMenuColumn, NavItem, NavbarData } from '@/components/navbar/types';
+import Header from '@/components/layout/Header';
+import type {
+  MegaMenuColumn,
+  NavItem,
+  NavbarData,
+  SubMenuSection,
+} from '@/components/navbar/types';
 import { i18n, type Locale } from '@/i18n/config';
 import { loadMessages, resolveLocale, type Messages } from '@/i18n/loadMessages';
 
@@ -28,6 +33,38 @@ function sanitizeNavbarData(messages: Messages): NavbarData {
   const megaMenu = (raw.megaMenu ?? {}) as Record<string, unknown>;
   const columns = Array.isArray(megaMenu.columns) ? megaMenu.columns : [];
 
+  const normalizeSubMenu = (sections: unknown): SubMenuSection[] | undefined => {
+    if (!Array.isArray(sections)) return undefined;
+    const normalizedSections: SubMenuSection[] = [];
+    for (const section of sections) {
+      const block = section as Record<string, unknown>;
+      const items = Array.isArray(block.items) ? block.items : [];
+      const normalizedItems = items
+        .map((entry) => {
+          const row = entry as Record<string, unknown>;
+          const href = ensureString(row.href);
+          if (!href) return undefined;
+          return {
+            label: ensureString(row.label),
+            description: ensureString(row.description),
+            href,
+            icon: ensureString(row.icon),
+          };
+        })
+        .filter((link): link is NonNullable<typeof link> => Boolean(link));
+
+      if (!normalizedItems.length) {
+        continue;
+      }
+
+      normalizedSections.push({
+        title: ensureString(block.title),
+        items: normalizedItems,
+      });
+    }
+    return normalizedSections.length ? normalizedSections : undefined;
+  };
+
   return {
     announcement: raw.announcement
       ? {
@@ -36,22 +73,52 @@ function sanitizeNavbarData(messages: Messages): NavbarData {
           actionHref: ensureString((raw.announcement as Record<string, unknown>).actionHref) || '/',
         }
       : undefined,
-    nav: (nav as NavItem[]).map((item) => ({
-      label: ensureString(item?.label),
-      href: ensureString(item?.href, '#') || '#',
-    })),
+    nav: (nav as NavItem[]).map((item) => {
+      const entry = item as Record<string, unknown>;
+      const href = ensureString(entry.href);
+      const subMenu = normalizeSubMenu(entry.subMenu);
+      return {
+        label: ensureString(entry.label),
+        href: href || undefined,
+        description: ensureString(entry.description),
+        highlight: Boolean(entry.highlight),
+        icon: ensureString(entry.icon),
+        subMenu,
+      };
+    }),
     megaMenu: {
       triggerLabel: ensureString(megaMenu.triggerLabel),
-      columns: (columns as MegaMenuColumn[]).map((column) => ({
-        title: ensureString(column?.title),
-        items: Array.isArray(column?.items)
-          ? column.items.map((item) => ({
-              label: ensureString(item?.label),
-              description: ensureString(item?.description),
-              href: ensureString(item?.href, '#') || '#',
-            }))
-          : [],
-      })),
+      columns: (() => {
+        const normalizedColumns: MegaMenuColumn[] = [];
+        for (const column of columns as MegaMenuColumn[]) {
+          const col = column as Record<string, unknown>;
+          const items = Array.isArray(col.items) ? col.items : [];
+          const normalizedItems = items
+            .map((item) => {
+              const row = item as Record<string, unknown>;
+              const href = ensureString(row.href);
+              if (!href) return undefined;
+              return {
+                label: ensureString(row.label),
+                description: ensureString(row.description),
+                href,
+                icon: ensureString(row.icon),
+              };
+            })
+            .filter((entry): entry is NonNullable<typeof entry> => Boolean(entry));
+
+          if (!normalizedItems.length) {
+            continue;
+          }
+
+          normalizedColumns.push({
+            title: ensureString(col.title),
+            subtitle: ensureString(col.subtitle),
+            items: normalizedItems,
+          });
+        }
+        return normalizedColumns;
+      })(),
     },
     ctaPrimary: ensureString(raw.ctaPrimary),
     ctaSecondary: ensureString(raw.ctaSecondary),
@@ -118,7 +185,7 @@ export default async function LocaleLayout({ children, params }: LayoutProps) {
       <AnalyticsManager />
       <BusinessJsonLd locale={locale} />
       <div className="flex min-h-screen flex-col">
-        <Navbar data={navbar} />
+        <Header data={navbar} />
         <main className="flex-1">{children}</main>
         <Footer data={footer} />
       </div>

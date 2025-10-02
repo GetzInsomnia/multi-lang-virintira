@@ -3,6 +3,9 @@
 import { useTransition } from 'react';
 import { useLocale } from 'next-intl';
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGlobe } from '@fortawesome/free-solid-svg-icons';
+
 import { i18n, type Locale } from '@/i18n/config';
 import { usePathname, useRouter } from '@/i18n/routing';
 
@@ -36,10 +39,13 @@ export function LanguageSwitcher({
   const [isPending, startTransition] = useTransition();
 
   return (
-    <label className={`relative ${variant === 'pill' ? 'block' : 'inline-flex items-center gap-2'}`}>
+    <label className={`navbar-language ${variant === 'pill' ? 'navbar-language-pill' : ''}`}>
       <span className="sr-only">Select language</span>
+      <span aria-hidden className="navbar-language-icon">
+        <FontAwesomeIcon icon={faGlobe} />
+      </span>
       <select
-        className={`rounded-full border border-virintira-border bg-white text-sm font-medium text-virintira-foreground shadow transition focus:outline-none focus:ring-2 focus:ring-virintira-primary disabled:opacity-50 ${variant === 'pill' ? 'w-full px-4 py-3' : 'px-4 py-2'}`}
+        className="navbar-language-select"
         value={locale}
         disabled={isPending}
         onChange={(event) => {

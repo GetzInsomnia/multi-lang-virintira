@@ -92,7 +92,9 @@
         },
         {
           "label": "Promotion",
-          "href": "/promotion"
+          "href": "/promotion",
+          "highlight": true,
+          "icon": "promotion"
         },
         {
           "label": "Resources",
