@@ -10,15 +10,22 @@ import type { SubMenuSection } from './types';
 export type SubMenuProps = {
   sections: SubMenuSection[];
   onItemClick?: () => void;
+  onMouseEnter?: () => void;
+  onMouseLeave?: () => void;
 };
 
-function SubMenuComponent({ sections, onItemClick }: SubMenuProps) {
+function SubMenuComponent({ sections, onItemClick, onMouseEnter, onMouseLeave }: SubMenuProps) {
   if (!sections.length) {
     return null;
   }
 
   return (
-    <div className="submenu-popover" role="presentation">
+    <div
+      className="submenu-popover"
+      role="presentation"
+      onMouseEnter={onMouseEnter}
+      onMouseLeave={onMouseLeave}
+    >
       <div className="submenu-surface" role="menu">
         {sections.map((section, index) => (
           <div key={`${section.title ?? 'section'}-${index}`} className="submenu-column">

@@ -272,7 +272,50 @@
         ]
       },
       "ctaPrimary": "Request consultation",
-      "ctaSecondary": "LINE OA"
+      "ctaSecondary": "LINE OA",
+      "search": {
+        "placeholder": "Search accounting resources",
+        "mobilePlaceholder": "Search accounting resources",
+        "toggleLabel": "Toggle search",
+        "submitLabel": "Search"
+      },
+      "language": {
+        "label": "Language",
+        "dropdownLabel": "Select language",
+        "options": {
+          "th": "Thai",
+          "en": "English",
+          "fr": "French",
+          "de": "German",
+          "nl": "Dutch",
+          "it": "Italian",
+          "zh-Hant": "Chinese (Traditional)",
+          "zh-Hans": "Chinese (Simplified)",
+          "ja": "Japanese",
+          "ko": "Korean",
+          "ms": "Malay",
+          "ta": "Tamil",
+          "hi": "Hindi",
+          "ar": "Arabic",
+          "fa": "Persian",
+          "he": "Hebrew"
+        }
+      },
+      "actions": {
+        "phoneLabel": "Call us"
+      },
+      "social": {
+        "heading": "Contact us",
+        "toggleLabel": "Contact us",
+        "closeLabel": "Close contact panel",
+        "links": {
+          "call": "Call",
+          "line": "LINE",
+          "tiktok": "TikTok",
+          "facebook": "Facebook",
+          "email": "Email"
+        }
+      }
     },
     "footer": {
       "tagline": "Your all-in-one accounting and business partner.",
