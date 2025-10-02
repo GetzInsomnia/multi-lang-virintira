@@ -66,104 +66,243 @@
   },
   "layout": {
     "cta": {
-      "call": "Call {phone}",
-      "chat": "Chat on LINE",
-      "consult": "Email our accountants",
-      "book": "Book a consultation"
+      "call": "โทร {phone}",
+      "chat": "แชทผ่าน LINE",
+      "consult": "อีเมลสอบถามเพิ่มเติม",
+      "book": "จองเวลาปรึกษา"
     },
     "header": {
       "announcement": {
-        "message": "Certified accountants helping entrepreneurs thrive across Thailand.",
-        "actionLabel": "Book consultation",
+        "message": "ทีมบัญชีมืออาชีพ ดูแลครบทุกขั้นตอนธุรกิจของคุณ",
+        "actionLabel": "ดูโปรโมชั่น",
         "actionHref": "/promotion"
       },
       "nav": [
         {
-          "label": "Services",
-          "href": "#services"
-        },
-        {
-          "label": "Why us",
-          "href": "#why-us"
-        },
-        {
-          "label": "Process",
-          "href": "#process"
-        },
-        {
-          "label": "Promotion",
+          "label": "โปรโมชั่น",
           "href": "/promotion"
         },
         {
-          "label": "Resources",
-          "href": "/resources"
+          "label": "ดาวน์โหลดเอกสาร",
+          "href": "/under-construction"
+        },
+        {
+          "label": "ติดต่อเรา",
+          "href": "/under-construction"
         }
       ],
       "megaMenu": {
-        "triggerLabel": "Explore",
+        "triggerLabel": "บริการ",
         "columns": [
           {
-            "title": "Accounting services",
+            "title": "จดทะเบียน",
             "items": [
               {
-                "label": "Bookkeeping",
-                "description": "Daily transaction posting, reconciliations, monthly reports.",
-                "href": "/services/bookkeeping"
+                "label": "บริษัทจำกัด",
+                "href": "/under-construction"
               },
               {
-                "label": "Payroll & social security",
-                "description": "Salary processing, payslips, and compliance filings.",
-                "href": "#services"
+                "label": "ห้างหุ้นส่วนจำกัด",
+                "href": "/under-construction"
+              },
+              {
+                "label": "มูลนิธิ",
+                "href": "/under-construction"
+              },
+              {
+                "label": "สมาคม",
+                "href": "/under-construction"
+              },
+              {
+                "label": "ทะเบียนพาณิชย์ร้านค้า",
+                "href": "/under-construction"
+              },
+              {
+                "label": "ขึ้นทะเบียนนายจ้าง",
+                "href": "/under-construction"
+              },
+              {
+                "label": "ภาษีมูลค่าเพิ่ม",
+                "href": "/under-construction"
               }
             ]
           },
           {
-            "title": "Business insights",
+            "title": "แก้ไขข้อมูลนิติบุคคล",
             "items": [
               {
-                "label": "Guides & checklists",
-                "description": "Templates that keep your team audit ready.",
-                "href": "/resources"
+                "label": "ชื่อนิติบุคคล",
+                "href": "/under-construction"
               },
               {
-                "label": "Latest article",
-                "description": "Why bookkeeping discipline accelerates growth.",
-                "href": "/blog/bookkeeping-matters"
+                "label": "ตรายาง",
+                "href": "/under-construction"
+              },
+              {
+                "label": "ข้อมูลกรรมการ",
+                "href": "/under-construction"
+              },
+              {
+                "label": "อำนาจลงนาม",
+                "href": "/under-construction"
+              },
+              {
+                "label": "ผู้ถือหุ้น",
+                "href": "/under-construction"
+              },
+              {
+                "label": "สัดส่วนหุ้น",
+                "href": "/under-construction"
+              },
+              {
+                "label": "เพิ่ม/ลดทุน",
+                "href": "/under-construction"
+              },
+              {
+                "label": "ย้ายที่ตั้ง",
+                "href": "/under-construction"
+              },
+              {
+                "label": "วัตถุประสงค์",
+                "href": "/under-construction"
+              },
+              {
+                "label": "เลิกกิจการ",
+                "href": "/under-construction"
+              }
+            ]
+          },
+          {
+            "title": "บัญชีและตรวจสอบ",
+            "items": [
+              {
+                "label": "บัญชีนิติบุคคล",
+                "href": "/under-construction"
+              },
+              {
+                "label": "ภาษีรายเดือน",
+                "href": "/under-construction"
+              },
+              {
+                "label": "งบประจำปี",
+                "href": "/under-construction"
+              },
+              {
+                "label": "บัญชีบุคคลธรรมดา",
+                "href": "/under-construction"
+              },
+              {
+                "label": "ตรวจสอบบัญชี",
+                "href": "/under-construction"
+              },
+              {
+                "label": "วางแผนภาษี",
+                "href": "/under-construction"
+              },
+              {
+                "label": "ขอเลขผู้เสียภาษีชาวต่างชาติ",
+                "href": "/under-construction"
+              }
+            ]
+          },
+          {
+            "title": "ขอใบอนุญาต",
+            "items": [
+              {
+                "label": "ประกอบกิจการท่องเที่ยว",
+                "href": "/under-construction"
+              },
+              {
+                "label": "อ.ย.",
+                "href": "/under-construction"
+              },
+              {
+                "label": "วีซ่าและใบอนุญาตทำงาน",
+                "href": "/under-construction"
+              }
+            ]
+          },
+          {
+            "title": "การตลาดออนไลน์",
+            "items": [
+              {
+                "label": "ทำเว็บไซต์",
+                "href": "/under-construction"
+              },
+              {
+                "label": "FaceBook Page",
+                "href": "/under-construction"
+              },
+              {
+                "label": "Line OA",
+                "href": "/under-construction"
+              },
+              {
+                "label": "TikTok",
+                "href": "/under-construction"
+              },
+              {
+                "label": "YouTube",
+                "href": "/under-construction"
+              },
+              {
+                "label": "Video Production",
+                "href": "/under-construction"
+              },
+              {
+                "label": "ยิงแอด",
+                "href": "/under-construction"
+              },
+              {
+                "label": "ระบบ Ai",
+                "href": "/under-construction"
+              },
+              {
+                "label": "Odoo ERP",
+                "href": "/under-construction"
+              },
+              {
+                "label": "เขียนโปรแกรมต่างๆ",
+                "href": "/under-construction"
               }
             ]
           }
         ]
       },
-      "ctaPrimary": "Talk to an expert",
+      "ctaPrimary": "ขอคำปรึกษาฟรี",
       "ctaSecondary": "LINE OA"
     },
     "footer": {
-      "tagline": "Your multilingual finance department.",
-      "description": "Virintira pairs Thai regulatory expertise with global language support so founders stay confident and compliant.",
+      "tagline": "พาร์ตเนอร์บัญชีและธุรกิจครบวงจร",
+      "description": "Virintira พร้อมดูแลตั้งแต่จดทะเบียน ทำบัญชี ไปจนถึงการตลาดออนไลน์ เพื่อให้ธุรกิจของคุณเดินหน้าได้อย่างมั่นใจและถูกต้องตามกฎหมายทุกขั้นตอน.",
       "contact": {
-        "phone": "Call us at {phone}",
-        "email": "Email {email}",
-        "line": "Message on LINE"
+        "phone": "โทร {phone}",
+        "email": "อีเมล {email}",
+        "line": "แชทผ่าน LINE"
       },
       "quickLinks": [
         {
-          "label": "Home",
+          "label": "หน้าแรก",
           "href": "/"
         },
         {
-          "label": "Bookkeeping service",
-          "href": "/services/bookkeeping"
-        },
-        {
-          "label": "Promotions",
+          "label": "โปรโมชั่น",
           "href": "/promotion"
         },
         {
-          "label": "Resources",
-          "href": "/resources"
+          "label": "ดาวน์โหลดเอกสาร",
+          "href": "/under-construction"
+        },
+        {
+          "label": "ติดต่อเรา",
+          "href": "/under-construction"
+        },
+        {
+          "label": "บริการทำบัญชี",
+          "href": "/services/bookkeeping"
         }
       ],
-      "legal": "© {year} Virintira Co., Ltd. All rights reserved."
+      "legal": "© {year} บริษัท วีรินทร์ทิรา จำกัด สงวนลิขสิทธิ์"
     }
   },
   "breadcrumbs": {
@@ -176,127 +315,114 @@
   },
   "home": {
     "hero": {
-      "title": "Trusted accounting for every language your clients speak",
-      "subtitle": "Full finance operations for Thai businesses expanding regionally",
-      "description": "From incorporation to monthly reporting, Virintira keeps your ledgers precise, audit ready, and explained in the languages your leadership team prefers.",
-      "primary": "Call now",
+      "title": "สำนักงานบัญชีและบริหารธุรกิจครบวงจร",
+      "subtitle": "",
+      "description": "บริการไว ใช้งานง่าย ครบจบทุกเรื่องธุรกิจ ดูแลโดยทีมงานมืออาชีพที่พร้อมให้คำปรึกษาในทุกขั้นตอน.",
+      "primary": "ขอคำปรึกษาฟรี",
       "typewriter": [
-        "Bookkeeping in 16 languages",
-        "Payroll and social security filings",
-        "Tax planning for Thai SMEs"
+        "บริการไว ใช้งานง่าย ครบจบทุกเรื่องธุรกิจ"
       ],
-      "emailHeading": "Prefer email?",
-      "emailButton": "Email Virintira"
+      "emailHeading": "",
+      "emailButton": ""
     },
     "about": {
-      "heading": "Why founders choose Virintira",
+      "heading": "Virintira — ไม่ใช่แค่สำนักงานบัญชี",
       "paragraphs": [
-        "Our bilingual accountants combine local compliance mastery with proactive advisory. Whether you are scaling ecommerce, hospitality, or professional services, we translate complex regulations into clear action steps.",
-        "With 10+ years serving SMEs, we design bookkeeping rhythms, dashboard reporting, and payroll processes that let your leadership focus on growth instead of paperwork."
+        "ด้วยทีมงานที่มีประสบการณ์กว่า 10 ปี Virintira พร้อมดูแลคุณในทุกด้านของการทำธุรกิจ — ไม่ว่าจะเป็นงานจดทะเบียนบริษัท การทำบัญชีรายเดือน ขอใบอนุญาตต่างๆ ไปจนถึงการวางแผนภาษีและการตลาดออนไลน์",
+        "เราเข้าใจว่าคุณต้องการมุ่งมั่นกับสิ่งที่คุณทำได้ดีที่สุด นั่นคือการพัฒนาธุรกิจของคุณ ส่วนเรื่องหลังบ้านปล่อยให้เราเป็นคนจัดการ",
+        "คุณสามารถมั่นใจได้ว่าเราไม่ทิ้งงานแน่นอน และเราสามารถเชื่อถือได้ เพราะเราจดทะเบียนกับกรมพัฒนาธุรกิจการค้าอย่างถูกต้อง",
+        "ด้วยบริการที่ครบวงจร รวดเร็ว ใส่ใจ และโปร่งใส — เราอยู่เคียงข้างคุณในทุกก้าวของการเติบโต เพราะคุณคือ “ลูกค้าคนสำคัญ” ของเราเสมอ"
       ],
-      "link": "Email our accountants"
+      "link": "เกี่ยวกับ Virintira"
     },
     "services": {
-      "heading": "Popular services",
+      "heading": "บริการยอดนิยม",
       "items": [
         {
-          "title": "Monthly bookkeeping",
-          "description": "Transaction recording, reconciliations, and IFRS-compliant statements."
+          "title": "จดทะเบียนบริษัท",
+          "description": "บริการจดทะเบียนบริษัท และหจก. แบบครบวงจร พร้อมให้คำปรึกษาโดยทีมงานมืออาชีพ"
         },
         {
-          "title": "Payroll outsourcing",
-          "description": "Payslips, social security, and Withholding Tax filings prepared accurately."
+          "title": "แก้ไขข้อมูลนิติบุคคล",
+          "description": "เปลี่ยนแปลงข้อมูลสำคัญของบริษัทอย่างถูกต้องและรวดเร็ว"
         },
         {
-          "title": "Tax & compliance",
-          "description": "VAT, corporate income tax, and BOI documentation handled end-to-end."
+          "title": "ทำบัญชีรายเดือน",
+          "description": "ทำบัญชีและยื่นภาษีอย่างถูกต้อง ดูแลครบทุกเอกสารสำคัญ"
         },
         {
-          "title": "Company secretary",
-          "description": "Board resolutions, share registers, and regulatory submissions on schedule."
+          "title": "ปิดงบการเงิน",
+          "description": "บริการปิดงบโดยผู้สอบบัญชีรับอนุญาต ตรวจสอบครบถ้วนมั่นใจได้"
         },
         {
-          "title": "Virtual CFO",
-          "description": "Forecasting, budgeting, and investor-ready reporting in Thai or English."
-        },
-        {
-          "title": "Startup launch",
-          "description": "Entity setup, bank integrations, and digital invoicing that scales with you."
+          "title": "วางแผนภาษี",
+          "description": "วางแผนภาษีให้ธุรกิจอย่างคุ้มค่า ลดความเสี่ยงและเพิ่มประสิทธิภาพ"
         }
       ]
     },
     "highlights": {
-      "heading": "Why choose Virintira",
+      "heading": "ทำไมต้องเลือก Virintira",
       "items": [
-        "Dedicated account manager fluent in Thai and English",
-        "Secure cloud accounting stack with daily reconciliations",
-        "Industry-specific workflows tailored to your operations",
-        "Transparent pricing with flexible add-ons",
-        "Certified CPAs and tax advisors",
-        "Support across 16 languages for multinational teams"
+        "บริการครบจบในที่เดียว",
+        "ทีมผู้เชี่ยวชาญประสบการณ์ 10+ ปี",
+        "ทำงานรวดเร็ว โปร่งใส ตรงเวลา",
+        "ให้คำปรึกษาฟรี ไม่จำกัดรอบ",
+        "ถูกต้องตามกฎหมาย 100%",
+        "รับผิดชอบ ไม่ทิ้งงาน"
       ]
     },
     "process": {
-      "heading": "How it works",
+      "heading": "ขั้นตอนการใช้บริการ",
       "steps": [
         {
-          "title": "Discovery",
-          "description": "Understand your entity structure, systems, and compliance obligations."
+          "title": "เลือกบริการ",
+          "description": "เลือกบริการที่คุณสนใจหรือต้องการขอคำปรึกษา"
         },
         {
-          "title": "Onboarding",
-          "description": "Connect accounting tools, gather historical data, and align reporting formats."
+          "title": "พูดคุยและวางแผน",
+          "description": "ติดต่อเราเพื่อปรึกษารายละเอียดหรือใช้บริการ"
         },
         {
-          "title": "Execution",
-          "description": "Our team posts transactions, prepares payroll, and manages tax filings."
+          "title": "ดำเนินการและเตรียมเอกสาร",
+          "description": "เราดูแลทุกขั้นตอน พร้อมอัปเดตให้คุณทราบทุกระยะ"
         },
         {
-          "title": "Insights",
-          "description": "Monthly meetings to review performance, forecast cash flow, and plan ahead."
+          "title": "เสร็จสิ้นอย่างราบรื่น",
+          "description": "ส่งงานตรงเวลา ถูกต้อง พร้อมให้คำแนะนำเพิ่มเติม"
         }
       ]
     },
     "cta": {
-      "heading": "Ready for stress-free accounting?",
-      "description": "Book a consultation with Virintira and receive a tailored action plan for your finance operations in under 48 hours."
+      "heading": "พร้อมให้เราเป็นพาร์ตเนอร์บัญชีของคุณหรือยัง?",
+      "description": "ติดต่อทีม Virintira เพื่อรับคำปรึกษาฟรี ประเมินค่าใช้จ่าย และเริ่มต้นบริการที่เหมาะกับธุรกิจของคุณได้ทันที."
     }
   },
   "promotion": {
     "hero": {
-      "title": "Special offers for new clients",
-      "intro": "Secure preferential rates when you entrust Virintira with your finance operations before the end of this quarter."
+      "title": "โปรโมชันพิเศษจาก Virintira",
+      "intro": "ลดค่าใช้จ่ายเริ่มต้นและรับบริการเสริมฟรีสำหรับลูกค้าใหม่และลูกค้าบัญชีของเรา."
     },
     "offers": [
       {
-        "name": "Startup launch bundle",
+        "name": "พิเศษสำหรับลูกค้าใหม่ 🔥",
         "bullets": [
-          "Company incorporation paperwork and tax registration",
-          "Cloud bookkeeping setup with chart of accounts",
-          "First three months of bookkeeping included"
+          "ฟรี! ค่าธรรมเนียมราชการจดบริษัท มูลค่า 5,200 บาท",
+          "ฟรี! ค่าคัดหนังสือรับรองชุดใหญ่ มูลค่า 1,100 บาท",
+          "ฟรี! บริการแถมต่างๆ รวมมูลค่ากว่า 7,900 บาท"
         ],
-        "note": "Perfect for founders preparing to invoice customers and hire the first team members."
+        "note": "สมัครใช้บริการกับ Virintira วันนี้ รับสิทธิ์ครบทุกข้อทันที"
       },
       {
-        "name": "Payroll peace of mind",
+        "name": "พิเศษสำหรับลูกค้าบัญชี 💡",
         "bullets": [
-          "Monthly payroll processing for up to 25 employees",
-          "Social security and Withholding Tax submissions",
-          "Employee onboarding checklist"
+          "ฟรี! บริการบันทึกบัญชี มูลค่ากว่า 3,500 บาท",
+          "ฟรี! บริการที่ปรึกษาธุรกิจไม่จำกัดจำนวนครั้ง",
+          "ฟรี! บริการวางแผนภาษีที่เหมาะกับธุรกิจของคุณโดยเฉพาะ"
         ],
-        "note": "Keeps your people paid accurately while staying fully compliant."
-      },
-      {
-        "name": "CFO insight sprint",
-        "bullets": [
-          "Financial health review and risk assessment",
-          "Cash-flow forecasting workshop",
-          "Investor-ready dashboard build-out"
-        ],
-        "note": "Ideal for scaling teams planning fundraising or expansion."
+        "note": "รับการดูแลรายเดือนแบบครบวงจร พร้อมทีมผู้เชี่ยวชาญเฉพาะด้าน"
       }
     ],
-    "cta": "Schedule consultation"
+    "cta": "โทรนัดหมายทีมงาน"
   },
   "resources": {
     "hero": {
