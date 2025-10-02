@@ -4,12 +4,14 @@ export type ProcessStep = {
 };
 
 export function HowItWorksSection({ heading, steps }: { heading: string; steps: ProcessStep[] }) {
+  const processSteps: ProcessStep[] = Array.isArray(steps) ? steps : [];
+
   return (
     <section className="mx-auto max-w-6xl px-4" id="process">
       <div className="space-y-8">
         <h2 className="text-center text-[clamp(1.9rem,1.3rem+1.6vw,2.6rem)] font-bold text-virintira-primary">{heading}</h2>
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-          {steps.map((step, index) => (
+          {processSteps.map((step, index) => (
             <article key={step.title} className="rounded-3xl border border-virintira-border bg-white p-6 shadow-sm">
               <span className="mb-4 inline-flex h-10 w-10 items-center justify-center rounded-full bg-virintira-primary/10 text-sm font-semibold text-virintira-primary">
                 {index + 1}

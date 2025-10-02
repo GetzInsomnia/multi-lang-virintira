@@ -1,13 +1,15 @@
 import { COMPANY } from '@/data/company';
 
 export function AboutSection({ heading, paragraphs, linkLabel }: { heading: string; paragraphs: string[]; linkLabel: string }) {
+  const details: string[] = Array.isArray(paragraphs) ? paragraphs : [];
+
   return (
     <section className="mx-auto max-w-6xl px-4" id="about">
       <div className="grid gap-12 lg:grid-cols-[1.2fr_1fr] lg:items-start">
         <div className="space-y-6">
           <h2 className="text-[clamp(1.85rem,1.3rem+1.6vw,2.6rem)] font-bold text-virintira-primary">{heading}</h2>
           <div className="space-y-4 text-[clamp(0.95rem,0.9rem+0.3vw,1.1rem)] leading-relaxed text-virintira-muted">
-            {paragraphs.map((paragraph, index) => (
+            {details.map((paragraph, index) => (
               <p key={index} className="indent-6">
                 {paragraph}
               </p>

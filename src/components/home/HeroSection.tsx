@@ -13,6 +13,8 @@ export type HeroContent = {
 };
 
 export function HeroSection({ content, chatLabel }: { content: HeroContent; chatLabel: string }) {
+  const typewriterPhrases: string[] = Array.isArray(content.typewriter) ? content.typewriter : [];
+
   return (
     <section className="relative overflow-hidden bg-virintira-soft" id="hero">
       <div className="absolute inset-0 bg-gradient-to-br from-virintira-soft via-white to-[#fde8e8]" aria-hidden="true" />
@@ -25,7 +27,7 @@ export function HeroSection({ content, chatLabel }: { content: HeroContent; chat
             {content.title}
           </h1>
           <div className="text-[clamp(1.1rem,1rem+0.4vw,1.35rem)] font-semibold text-virintira-primary">
-            <TypewriterText phrases={content.typewriter} />
+            <TypewriterText phrases={typewriterPhrases} />
           </div>
           <p className="text-[clamp(1.1rem,1rem+0.5vw,1.4rem)] font-semibold text-virintira-primary/90">
             {content.subtitle}

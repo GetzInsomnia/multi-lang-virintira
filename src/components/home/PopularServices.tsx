@@ -4,13 +4,15 @@ export type ServiceItem = {
 };
 
 export function PopularServices({ heading, items }: { heading: string; items: ServiceItem[] }) {
+  const services: ServiceItem[] = Array.isArray(items) ? items : [];
+
   return (
     <section className="bg-white" id="services">
       <div className="mx-auto max-w-6xl px-4 py-16">
         <div className="space-y-6 text-center">
           <h2 className="text-[clamp(1.9rem,1.3rem+1.6vw,2.6rem)] font-bold text-virintira-primary">{heading}</h2>
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {items.map((item, index) => (
+            {services.map((item, index) => (
               <article
                 key={item.title}
                 className="flex h-full flex-col rounded-3xl border border-virintira-border bg-white p-6 text-left shadow-sm transition hover:-translate-y-1 hover:border-virintira-primary/30 hover:shadow-xl"
