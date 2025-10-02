@@ -1,77 +1,115 @@
 "use client";
 
+import { memo } from 'react';
+
+import Image from 'next/image';
+
 import { COMPANY } from '@/data/company';
 import { Link } from '@/i18n/routing';
 import { isExternalHref, normalizeInternalHref } from '@/lib/links';
 
 import type { MegaMenuColumn } from './types';
 
-export function MegaMenu({
-  columns,
-  onMouseEnter,
-  onMouseLeave,
-  onLinkClick,
-}: {
+export type MegaMenuProps = {
   columns: MegaMenuColumn[];
   onMouseEnter?: () => void;
   onMouseLeave?: () => void;
   onLinkClick?: () => void;
-}) {
+};
+
+function MegaMenuComponent({ columns, onMouseEnter, onMouseLeave, onLinkClick }: MegaMenuProps) {
+  if (!columns.length) {
+    return null;
+  }
+
   return (
     <div
-      className="fixed left-0 top-[var(--header-height,72px)] z-40 w-full border-t border-gray-200 bg-white shadow-md"
+      className="mega-menu-wrapper"
       onMouseEnter={onMouseEnter}
       onMouseLeave={onMouseLeave}
+      role="presentation"
     >
-      <div className="mx-auto grid max-w-7xl grid-cols-1 gap-6 px-8 py-6 text-sm sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
-        {columns.map((column) => (
-          <div key={column.title} className="space-y-3">
-            <h4 className="text-base font-semibold text-[#A70909]">{column.title}</h4>
-            <ul className="space-y-2">
-              {column.items.map((item) => {
-                const href = item.href;
-                const isAnchor = href.startsWith('#');
-                const isExternal = isExternalHref(href);
-                const label = item.label;
+      <div className="mega-menu-surface" role="menu">
+        <div className="mega-menu-grid">
+          {columns.map((column) => (
+            <div key={column.title} className="mega-menu-column">
+              <div className="mega-menu-column-header">
+                <span className="mega-menu-column-title">{column.title}</span>
+                {column.subtitle ? (
+                  <span className="mega-menu-column-subtitle">{column.subtitle}</span>
+                ) : null}
+              </div>
+              <ul className="mega-menu-list" role="none">
+                {column.items.map((item) => {
+                  const href = item.href;
+                  const content = (
+                    <span className="mega-menu-link">
+                      <span className="mega-menu-link-label">{item.label}</span>
+                      {item.description ? (
+                        <span className="mega-menu-link-description">{item.description}</span>
+                      ) : null}
+                    </span>
+                  );
 
-                if (isAnchor || isExternal) {
+                  if (isExternalHref(href) || href.startsWith('#')) {
+                    return (
+                      <li key={item.label} role="none">
+                        <a
+                          href={href}
+                          className="mega-menu-anchor"
+                          onClick={onLinkClick}
+                          role="menuitem"
+                        >
+                          {content}
+                        </a>
+                      </li>
+                    );
+                  }
+
                   return (
-                    <li key={label}>
-                      <a
-                        href={href}
+                    <li key={item.label} role="none">
+                      <Link
+                        href={normalizeInternalHref(href)}
+                        className="mega-menu-anchor"
                         onClick={onLinkClick}
-                        className="block text-gray-700 transition hover:text-[#A70909]"
+                        role="menuitem"
+                        prefetch
                       >
-                        {label}
-                      </a>
+                        {content}
+                      </Link>
                     </li>
                   );
-                }
-
-                const normalized = normalizeInternalHref(href);
-                return (
-                  <li key={label}>
-                    <Link
-                      href={normalized}
-                      onClick={onLinkClick}
-                      className="block text-gray-700 transition hover:text-[#A70909]"
-                      prefetch
-                    >
-                      {label}
-                    </Link>
-                  </li>
-                );
-              })}
-            </ul>
+                })}
+              </ul>
+            </div>
+          ))}
+        </div>
+        <div className="mega-menu-footer" role="presentation">
+          <div className="mega-menu-footer-content">
+            <div className="mega-menu-footer-brand">
+              <Image
+                src="/logo.png"
+                alt={COMPANY.legalNameEn}
+                width={56}
+                height={56}
+                className="mega-menu-footer-logo"
+              />
+              <div>
+                <p className="mega-menu-footer-title">{COMPANY.legalNameTh}</p>
+                <p className="mega-menu-footer-subtitle">{COMPANY.legalNameEn}</p>
+              </div>
+            </div>
+            <div className="mega-menu-footer-contact">
+              <span className="mega-menu-footer-phone">{COMPANY.phoneDisplay}</span>
+              <span className="mega-menu-footer-note">{COMPANY.email}</span>
+            </div>
           </div>
-        ))}
-      </div>
-      <div className="border-t border-gray-200 bg-white/90">
-        <div className="mx-auto flex max-w-7xl items-center justify-between px-8 py-4 text-xs text-gray-600">
-          <span>{COMPANY.legalNameTh}</span>
-          <span>{COMPANY.phoneDisplay}</span>
         </div>
       </div>
     </div>
   );
 }
+
+export const MegaMenu = memo(MegaMenuComponent);
+
+export default MegaMenu;

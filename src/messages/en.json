@@ -80,7 +80,9 @@
       "nav": [
         {
           "label": "Promotions",
-          "href": "/promotion"
+          "href": "/promotion",
+          "highlight": true,
+          "icon": "promotion"
         },
         {
           "label": "Document downloads",

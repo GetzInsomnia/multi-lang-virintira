@@ -22,6 +22,11 @@
     "build:log": "node scripts/build-with-log.cjs"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.7.2",
+    "@fortawesome/free-brands-svg-icons": "^6.7.2",
+    "@fortawesome/free-regular-svg-icons": "^6.7.2",
+    "@fortawesome/free-solid-svg-icons": "^6.7.2",
+    "@fortawesome/react-fontawesome": "^0.2.2",
     "@testing-library/react": "^16.3.0",
     "autoprefixer": "^10.4.21",
     "eslint-plugin-react": "^7.37.5",

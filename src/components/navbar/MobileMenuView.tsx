@@ -2,12 +2,16 @@
 
 import { useEffect, useState } from 'react';
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faChevronLeft, faChevronRight, faXmark } from '@fortawesome/free-solid-svg-icons';
+
 import { Link } from '@/i18n/routing';
 import { isExternalHref, normalizeInternalHref } from '@/lib/links';
 
 export type MobileMenuEntry = {
   label: string;
   href?: string;
+  description?: string;
   items?: MobileMenuEntry[];
 };
 
@@ -15,7 +19,7 @@ type MobileMenuViewProps = {
   title: string;
   items: MobileMenuEntry[];
   onBack?: () => void;
-  onSelectSubMenu?: (items: MobileMenuEntry[], title: string) => void;
+  onSelectSubMenu?: (items: MobileMenuEntry[] | undefined, title: string) => void;
   onClose: () => void;
   index: number;
   current: number;
@@ -40,96 +44,85 @@ export function MobileMenuView({
     }
   }, [current, index]);
 
-  const translate = isActive ? 0 : 100;
+  const translate = index <= current ? 0 : 100;
 
   return (
     <div
-      className="absolute inset-0 h-full w-full transform transition-transform duration-500 ease-in-out"
+      className={`mobile-menu-view ${isActive ? 'is-active' : ''}`}
       style={{ transform: `translateX(${translate}%)` }}
       aria-hidden={index !== current}
     >
-      <div className="flex h-full w-full flex-col bg-white p-6">
-        <div className="mb-4 flex items-center justify-between">
-          {onBack ? (
-            <button
-              type="button"
-              onClick={onBack}
-              className="text-lg font-semibold text-[#A70909] transition-colors duration-200 ease-in-out focus-visible:ring-2 focus-visible:ring-[#A70909] focus-visible:ring-offset-2 focus-visible:ring-offset-white"
-            >
-              ←
-            </button>
-          ) : (
-            <span className="w-4" />
-          )}
-          <h2 className="text-lg font-semibold text-[#A70909]">{title}</h2>
-          <button
-            type="button"
-            onClick={onClose}
-            className="text-2xl font-bold text-[#A70909] transition-colors duration-200 ease-in-out focus-visible:ring-2 focus-visible:ring-[#A70909] focus-visible:ring-offset-2 focus-visible:ring-offset-white"
-            aria-label="Close menu"
-          >
-            ✕
+      <div className="mobile-menu-view-header">
+        {onBack ? (
+          <button type="button" onClick={onBack} className="mobile-menu-back">
+            <FontAwesomeIcon icon={faChevronLeft} />
+            <span className="sr-only">Back</span>
           </button>
-        </div>
-        <ul className="space-y-4" role="menu" aria-label={title}>
-          {items.map((item) => {
-            if (item.items?.length) {
-              return (
-                <li key={item.label}>
-                  <button
-                    type="button"
-                    onClick={() => onSelectSubMenu?.(item.items ?? [], item.label)}
-                    className="w-full text-left text-base font-medium text-black transition-colors duration-200 ease-in-out hover:text-[#A70909] focus-visible:ring-2 focus-visible:ring-[#A70909] focus-visible:ring-offset-2 focus-visible:ring-offset-white"
-                  >
-                    {item.label}
-                  </button>
-                </li>
-              );
-            }
-
-            const href = item.href ?? '#';
-            const label =
-              item.label.includes('โปรโมชั่น') && !item.label.includes('🔥')
-                ? (
-                    <>
-                      {item.label}{' '}
-                      <span className="inline-block animate-bounce">🔥</span>
-                    </>
-                  )
-                : (
-                    item.label
-                  );
-
-            if (href.startsWith('#') || isExternalHref(href)) {
-              return (
-                <li key={item.label}>
-                  <a
-                    href={href}
-                    onClick={onClose}
-                    className="block text-base font-medium text-black transition-colors duration-200 ease-in-out hover:text-[#A70909] focus-visible:ring-2 focus-visible:ring-[#A70909] focus-visible:ring-offset-2 focus-visible:ring-offset-white"
-                  >
-                    {label}
-                  </a>
-                </li>
-              );
-            }
-
-            const normalized = normalizeInternalHref(href);
+        ) : (
+          <span className="mobile-menu-back-placeholder" />
+        )}
+        <h2 className="mobile-menu-title">{title}</h2>
+        <button type="button" onClick={onClose} className="mobile-menu-close" aria-label="Close menu">
+          <FontAwesomeIcon icon={faXmark} />
+        </button>
+      </div>
+      <ul className="mobile-menu-list" role="menu" aria-label={title}>
+        {items.map((item) => {
+          if (item.items?.length) {
             return (
-              <li key={item.label}>
-                <Link
-                  href={normalized}
-                  onClick={onClose}
-                  className="block text-base font-medium text-black transition-colors duration-200 ease-in-out hover:text-[#A70909] focus-visible:ring-2 focus-visible:ring-[#A70909] focus-visible:ring-offset-2 focus-visible:ring-offset-white"
-                  prefetch
+              <li key={item.label} role="none">
+                <button
+                  type="button"
+                  className="mobile-menu-link has-children"
+                  onClick={() => onSelectSubMenu?.(item.items, item.label)}
                 >
-                  {label}
-                </Link>
+                  <span>
+                    <span className="mobile-menu-link-label">{item.label}</span>
+                    {item.description ? (
+                      <span className="mobile-menu-link-description">{item.description}</span>
+                    ) : null}
+                  </span>
+                  <FontAwesomeIcon icon={faChevronRight} className="mobile-menu-link-caret" />
+                </button>
               </li>
             );
-          })}
-        </ul>
-      </div>
+          }
+
+          const href = item.href ?? '#';
+          const content = (
+            <span className="mobile-menu-link">
+              <span className="mobile-menu-link-label">{item.label}</span>
+              {item.description ? (
+                <span className="mobile-menu-link-description">{item.description}</span>
+              ) : null}
+            </span>
+          );
+
+          if (href.startsWith('#') || isExternalHref(href)) {
+            return (
+              <li key={item.label} role="none">
+                <a href={href} onClick={onClose} className="mobile-menu-anchor" role="menuitem">
+                  {content}
+                </a>
+              </li>
+            );
+          }
+
+          return (
+            <li key={item.label} role="none">
+              <Link
+                href={normalizeInternalHref(href)}
+                onClick={onClose}
+                className="mobile-menu-anchor"
+                role="menuitem"
+                prefetch
+              >
+                {content}
+              </Link>
+            </li>
+          );
+        })}
+      </ul>
     </div>
   );
 }
