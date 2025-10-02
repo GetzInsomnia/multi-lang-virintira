@@ -67,7 +67,17 @@ export default async function BookkeepingServicePage({ params }: PageParams) {
   const ensureString = (value: unknown): string =>
     typeof value === 'string' ? value : value != null ? String(value) : '';
 
-  const heroRaw = (tServices.raw('bookkeeping.hero') ?? {}) as Record<string, any>;
+  const getSection = (key: string): Record<string, unknown> => {
+    try {
+      const value = tServices.raw(key);
+      return (value ?? {}) as Record<string, unknown>;
+    } catch (error) {
+      console.warn(`Missing translation for services.${key} (${locale})`);
+      return {};
+    }
+  };
+
+  const heroRaw = getSection('bookkeeping.hero');
   const hero = {
     title: ensureString(heroRaw.title),
     subtitle: ensureString(heroRaw.subtitle),
@@ -81,7 +91,7 @@ export default async function BookkeepingServicePage({ params }: PageParams) {
     ctaLine: ensureString(heroRaw.ctaLine),
     ctaEmail: ensureString(heroRaw.ctaEmail),
   };
-  const featuresRaw = (tServices.raw('bookkeeping.features') ?? {}) as Record<string, any>;
+  const featuresRaw = getSection('bookkeeping.features');
   const features = {
     heading: ensureString(featuresRaw.heading),
     items: Array.isArray(featuresRaw.items)
@@ -91,7 +101,7 @@ export default async function BookkeepingServicePage({ params }: PageParams) {
         }))
       : [],
   };
-  const overviewRaw = (tServices.raw('bookkeeping.overview') ?? {}) as Record<string, any>;
+  const overviewRaw = getSection('bookkeeping.overview');
   const overview = {
     introTitle: ensureString(overviewRaw.introTitle),
     introDescription: ensureString(overviewRaw.introDescription),
@@ -104,7 +114,7 @@ export default async function BookkeepingServicePage({ params }: PageParams) {
       : [],
     note: ensureString(overviewRaw.note),
   };
-  const metricsRaw = (tServices.raw('bookkeeping.metrics') ?? {}) as Record<string, any>;
+  const metricsRaw = getSection('bookkeeping.metrics');
   const metrics = {
     heading: ensureString(metricsRaw.heading),
     items: Array.isArray(metricsRaw.items)
@@ -114,7 +124,7 @@ export default async function BookkeepingServicePage({ params }: PageParams) {
         }))
       : [],
   };
-  const processRaw = (tServices.raw('bookkeeping.process') ?? {}) as Record<string, any>;
+  const processRaw = getSection('bookkeeping.process');
   const process = {
     heading: ensureString(processRaw.heading),
     description: ensureString(processRaw.description),
@@ -126,7 +136,7 @@ export default async function BookkeepingServicePage({ params }: PageParams) {
         }))
       : [],
   };
-  const faqRaw = (tServices.raw('bookkeeping.faq') ?? {}) as Record<string, any>;
+  const faqRaw = getSection('bookkeeping.faq');
   const faq = {
     heading: ensureString(faqRaw.heading),
     items: Array.isArray(faqRaw.items)
@@ -136,7 +146,7 @@ export default async function BookkeepingServicePage({ params }: PageParams) {
         }))
       : [],
   };
-  const deliverablesRaw = (tServices.raw('bookkeeping.deliverables') ?? {}) as Record<string, any>;
+  const deliverablesRaw = getSection('bookkeeping.deliverables');
   const deliverables = {
     heading: ensureString(deliverablesRaw.heading),
     items: Array.isArray(deliverablesRaw.items)
@@ -145,7 +155,7 @@ export default async function BookkeepingServicePage({ params }: PageParams) {
           .filter((item) => item.length > 0)
       : [],
   };
-  const supportRaw = (tServices.raw('bookkeeping.support') ?? {}) as Record<string, any>;
+  const supportRaw = getSection('bookkeeping.support');
   const support = {
     heading: ensureString(supportRaw.heading),
     items: Array.isArray(supportRaw.items)
@@ -155,7 +165,7 @@ export default async function BookkeepingServicePage({ params }: PageParams) {
         }))
       : [],
   };
-  const ctaBannerRaw = (tServices.raw('bookkeeping.ctaBanner') ?? {}) as Record<string, any>;
+  const ctaBannerRaw = getSection('bookkeeping.ctaBanner');
   const ctaBanner = {
     heading: ensureString(ctaBannerRaw.heading),
     description: ensureString(ctaBannerRaw.description),

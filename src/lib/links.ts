@@ -20,7 +20,8 @@ export function normalizeInternalHref(href: string): string {
   const sanitized = withLeadingSlash.replace(/\/+/g, '/');
 
   const segments = sanitized.split('/').filter(Boolean);
-  if (segments.length > 0 && (i18n.locales as Locale[]).includes(segments[0] as Locale)) {
+  const supportedLocales = i18n.locales as readonly Locale[];
+  if (segments.length > 0 && supportedLocales.includes(segments[0] as Locale)) {
     segments.shift();
   }
 

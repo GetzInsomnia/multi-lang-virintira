@@ -16,54 +16,63 @@ export function HeroSection({ content, chatLabel }: { content: HeroContent; chat
   const typewriterPhrases: string[] = Array.isArray(content.typewriter) ? content.typewriter : [];
 
   return (
-    <section className="relative overflow-hidden bg-virintira-soft" id="hero">
-      <div className="absolute inset-0 bg-gradient-to-br from-virintira-soft via-white to-[#fde8e8]" aria-hidden="true" />
-      <div className="relative mx-auto flex max-w-6xl flex-col items-center gap-10 px-4 py-24 text-center lg:flex-row lg:items-center lg:justify-between lg:text-left">
-        <div className="max-w-xl space-y-6">
-          <span className="inline-flex items-center rounded-full bg-white/70 px-4 py-1 text-xs font-semibold uppercase tracking-[0.3em] text-virintira-muted">
-            Virintira Accounting
-          </span>
-          <h1 className="text-[clamp(2.6rem,1.8rem+2.5vw,4rem)] font-extrabold leading-tight text-virintira-primary">
-            {content.title}
-          </h1>
-          <div className="text-[clamp(1.1rem,1rem+0.4vw,1.35rem)] font-semibold text-virintira-primary">
+    <section
+      id="herosection"
+      className="relative flex min-h-[calc(100dvh-var(--header-height))] items-center justify-center overflow-hidden bg-[#fffbfb] px-6"
+    >
+      <div className="pointer-events-none absolute inset-0 z-0 bg-gradient-to-br from-[#fff0f0] via-[#fff8f8] to-[#ffe4e4]" aria-hidden="true" />
+      <div className="pointer-events-none absolute inset-x-0 -top-32 h-[580px] rounded-full bg-[#ffe0e0] opacity-60 blur-3xl" aria-hidden="true" />
+      <div className="relative z-10 mx-auto flex w-full max-w-4xl flex-col items-center gap-6 text-center">
+        <span className="inline-flex items-center rounded-full bg-white/80 px-4 py-2 text-xs font-semibold uppercase tracking-[0.35em] text-[#A70909] shadow-sm">
+          Virintira Accounting
+        </span>
+        <h1 className="text-[clamp(2.4rem,1.8rem+2.6vw,4rem)] font-bold leading-snug tracking-tight text-[#A70909]">
+          {content.title}
+        </h1>
+        {typewriterPhrases.length ? (
+          <div className="text-[clamp(1.2rem,1.1rem+0.5vw,1.6rem)] font-semibold text-[#A70909]">
             <TypewriterText phrases={typewriterPhrases} />
           </div>
-          <p className="text-[clamp(1.1rem,1rem+0.5vw,1.4rem)] font-semibold text-virintira-primary/90">
+        ) : null}
+        {content.subtitle ? (
+          <p className="text-[clamp(1.05rem,0.98rem+0.4vw,1.35rem)] font-semibold text-[#8a1b1b]">
             {content.subtitle}
           </p>
-          <p className="text-[clamp(0.95rem,0.9rem+0.3vw,1.1rem)] leading-relaxed text-virintira-muted">
+        ) : null}
+        {content.description ? (
+          <p className="max-w-3xl text-[clamp(0.95rem,0.9rem+0.3vw,1.15rem)] leading-relaxed text-[#5d3f3f]">
             {content.description}
           </p>
-          <div className="flex flex-col items-center gap-4 pt-4 sm:flex-row sm:justify-start">
+        ) : null}
+        <div className="flex flex-col items-center justify-center gap-4 pt-4 sm:flex-row">
+          <a
+            href={`tel:${COMPANY.phone}`}
+            className="inline-flex min-w-[220px] items-center justify-center rounded-full bg-[#A70909] px-8 py-3 text-sm font-semibold text-white shadow-lg shadow-[#a70909]/30 transition-transform duration-300 ease-out hover:-translate-y-[3px] hover:bg-[#8c0808] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#A70909] focus-visible:ring-offset-2 focus-visible:ring-offset-white"
+          >
+            {content.primary}
+          </a>
+          <a
+            href={COMPANY.socials.line}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex min-w-[220px] items-center justify-center rounded-full bg-[#06C755] px-8 py-3 text-sm font-semibold text-white shadow-lg shadow-[#06c755]/20 transition-transform duration-300 ease-out hover:-translate-y-[3px] hover:brightness-110 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#06C755] focus-visible:ring-offset-2 focus-visible:ring-offset-white"
+          >
+            {chatLabel}
+          </a>
+          {content.emailButton ? (
             <a
-              href={`tel:${COMPANY.phone}`}
-              className="inline-flex min-w-[200px] items-center justify-center rounded-full bg-virintira-primary px-6 py-3 text-sm font-semibold text-white shadow transition-colors duration-200 ease-in-out hover:bg-virintira-primary-dark focus-visible:ring-2 focus-visible:ring-virintira-primary focus-visible:ring-offset-2 focus-visible:ring-offset-white"
+              href={`mailto:${COMPANY.email}`}
+              className="inline-flex min-w-[220px] items-center justify-center rounded-full border border-[#A70909]/40 bg-white px-8 py-3 text-sm font-semibold text-[#A70909] shadow-sm transition-transform duration-300 ease-out hover:-translate-y-[3px] hover:border-[#A70909] hover:bg-[#fff1f1] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#A70909] focus-visible:ring-offset-2 focus-visible:ring-offset-white"
             >
-              {content.primary}
+              {content.emailButton}
             </a>
-            <a
-              href={COMPANY.socials.line}
-              className="inline-flex min-w-[200px] items-center justify-center rounded-full bg-[#06C755] px-6 py-3 text-sm font-semibold text-white transition duration-200 ease-in-out hover:brightness-110 focus-visible:ring-2 focus-visible:ring-[#06C755] focus-visible:ring-offset-2 focus-visible:ring-offset-white"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              {chatLabel}
-            </a>
-          </div>
+          ) : null}
         </div>
-        <div className="flex max-w-md flex-col items-center gap-5 rounded-3xl border border-white/60 bg-white/80 p-6 shadow-xl backdrop-blur">
-          <p className="text-[clamp(1.1rem,1rem+0.4vw,1.35rem)] font-semibold text-virintira-primary">
+        {content.emailHeading ? (
+          <p className="text-sm font-medium uppercase tracking-[0.35em] text-[#a70909]/70">
             {content.emailHeading}
           </p>
-          <p className="text-sm text-virintira-muted">{COMPANY.legalNameTh}</p>
-          <a
-            href={`mailto:${COMPANY.email}`}
-            className="inline-flex items-center justify-center rounded-full bg-virintira-primary px-6 py-3 text-sm font-semibold text-white transition-colors duration-200 ease-in-out hover:bg-virintira-primary-dark focus-visible:ring-2 focus-visible:ring-virintira-primary focus-visible:ring-offset-2 focus-visible:ring-offset-white"
-          >
-            {content.emailButton}
-          </a>
-        </div>
+        ) : null}
       </div>
     </section>
   );
