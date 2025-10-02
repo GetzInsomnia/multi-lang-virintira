@@ -15,7 +15,7 @@ export function PopularServices({ heading, items }: { heading: string; items: Se
             {services.map((item, index) => (
               <article
                 key={item.title}
-                className="flex h-full flex-col rounded-3xl border border-virintira-border bg-white p-6 text-left shadow-sm transition hover:-translate-y-1 hover:border-virintira-primary/30 hover:shadow-xl"
+                className="flex h-full flex-col rounded-3xl border border-virintira-border bg-white p-6 text-left shadow-sm transition-transform duration-300 ease-out hover:-translate-y-1 hover:border-virintira-primary/30 hover:shadow-xl"
               >
                 <span className="mb-3 inline-flex h-10 w-10 items-center justify-center rounded-full bg-virintira-primary/10 text-sm font-semibold text-virintira-primary">
                   {index + 1}

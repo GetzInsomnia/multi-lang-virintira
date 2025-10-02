@@ -46,6 +46,7 @@ export function MobileMenuView({
     <div
       className="absolute inset-0 h-full w-full transform transition-transform duration-500 ease-in-out"
       style={{ transform: `translateX(${translate}%)` }}
+      aria-hidden={index !== current}
     >
       <div className="flex h-full w-full flex-col bg-white p-6">
         <div className="mb-4 flex items-center justify-between">
@@ -53,7 +54,7 @@ export function MobileMenuView({
             <button
               type="button"
               onClick={onBack}
-              className="text-lg font-semibold text-[#A70909]"
+              className="text-lg font-semibold text-[#A70909] transition-colors duration-200 ease-in-out focus-visible:ring-2 focus-visible:ring-[#A70909] focus-visible:ring-offset-2 focus-visible:ring-offset-white"
             >
               ←
             </button>
@@ -64,7 +65,7 @@ export function MobileMenuView({
           <button
             type="button"
             onClick={onClose}
-            className="text-2xl font-bold text-[#A70909]"
+            className="text-2xl font-bold text-[#A70909] transition-colors duration-200 ease-in-out focus-visible:ring-2 focus-visible:ring-[#A70909] focus-visible:ring-offset-2 focus-visible:ring-offset-white"
             aria-label="Close menu"
           >
             ✕
@@ -78,7 +79,7 @@ export function MobileMenuView({
                   <button
                     type="button"
                     onClick={() => onSelectSubMenu?.(item.items ?? [], item.label)}
-                    className="w-full text-left text-base font-medium text-black transition hover:text-[#A70909]"
+                    className="w-full text-left text-base font-medium text-black transition-colors duration-200 ease-in-out hover:text-[#A70909] focus-visible:ring-2 focus-visible:ring-[#A70909] focus-visible:ring-offset-2 focus-visible:ring-offset-white"
                   >
                     {item.label}
                   </button>
@@ -105,7 +106,7 @@ export function MobileMenuView({
                   <a
                     href={href}
                     onClick={onClose}
-                    className="block text-base font-medium text-black transition hover:text-[#A70909]"
+                    className="block text-base font-medium text-black transition-colors duration-200 ease-in-out hover:text-[#A70909] focus-visible:ring-2 focus-visible:ring-[#A70909] focus-visible:ring-offset-2 focus-visible:ring-offset-white"
                   >
                     {label}
                   </a>
@@ -119,7 +120,7 @@ export function MobileMenuView({
                 <Link
                   href={normalized}
                   onClick={onClose}
-                  className="block text-base font-medium text-black transition hover:text-[#A70909]"
+                  className="block text-base font-medium text-black transition-colors duration-200 ease-in-out hover:text-[#A70909] focus-visible:ring-2 focus-visible:ring-[#A70909] focus-visible:ring-offset-2 focus-visible:ring-offset-white"
                   prefetch
                 >
                   {label}

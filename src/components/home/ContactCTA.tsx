@@ -10,7 +10,7 @@ export function ContactCTA({ heading, description, callLabel, chatLabel, emailLa
           <div className="flex flex-col gap-4 sm:flex-row">
             <a
               href={`tel:${COMPANY.phone}`}
-              className="inline-flex min-w-[200px] items-center justify-center rounded-full border border-virintira-primary px-6 py-3 text-sm font-semibold text-virintira-primary transition hover:bg-virintira-primary hover:text-white"
+              className="inline-flex min-w-[200px] items-center justify-center rounded-full border border-virintira-primary px-6 py-3 text-sm font-semibold text-virintira-primary transition-colors duration-200 ease-in-out hover:bg-virintira-primary hover:text-white focus-visible:ring-2 focus-visible:ring-virintira-primary focus-visible:ring-offset-2 focus-visible:ring-offset-white"
             >
               {callLabel}
             </a>
@@ -18,13 +18,13 @@ export function ContactCTA({ heading, description, callLabel, chatLabel, emailLa
               href={COMPANY.socials.line}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex min-w-[200px] items-center justify-center rounded-full bg-[#06C755] px-6 py-3 text-sm font-semibold text-white transition hover:brightness-110"
+              className="inline-flex min-w-[200px] items-center justify-center rounded-full bg-[#06C755] px-6 py-3 text-sm font-semibold text-white transition duration-200 ease-in-out hover:brightness-110 focus-visible:ring-2 focus-visible:ring-[#06C755] focus-visible:ring-offset-2 focus-visible:ring-offset-white"
             >
               {chatLabel}
             </a>
             <a
               href={`mailto:${COMPANY.email}`}
-              className="inline-flex min-w-[200px] items-center justify-center rounded-full bg-virintira-primary px-6 py-3 text-sm font-semibold text-white transition hover:bg-virintira-primary-dark"
+              className="inline-flex min-w-[200px] items-center justify-center rounded-full bg-virintira-primary px-6 py-3 text-sm font-semibold text-white transition-colors duration-200 ease-in-out hover:bg-virintira-primary-dark focus-visible:ring-2 focus-visible:ring-virintira-primary focus-visible:ring-offset-2 focus-visible:ring-offset-white"
             >
               {emailLabel}
             </a>
