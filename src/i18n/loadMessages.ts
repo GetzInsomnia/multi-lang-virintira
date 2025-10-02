@@ -1,7 +1,6 @@
-import type thMessages from "@/messages/th.json";
 import { i18n, type Locale } from "./config";
 
-export type Messages = typeof thMessages;
+export type Messages = Record<string, unknown>;
 
 type Loader = () => Promise<{ default: Messages }>;
 

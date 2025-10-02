@@ -20,7 +20,10 @@ function ensureString(value: unknown, fallback = ''): string {
 }
 
 function sanitizeNavbarData(messages: Messages): NavbarData {
-  const raw = (messages.layout?.header ?? {}) as Record<string, unknown>;
+  const layout = ((messages ?? {}) as Record<string, unknown>).layout as
+    | Record<string, unknown>
+    | undefined;
+  const raw = (layout?.header ?? {}) as Record<string, unknown>;
   const nav = Array.isArray(raw.nav) ? raw.nav : [];
   const megaMenu = (raw.megaMenu ?? {}) as Record<string, unknown>;
   const columns = Array.isArray(megaMenu.columns) ? megaMenu.columns : [];
@@ -56,7 +59,10 @@ function sanitizeNavbarData(messages: Messages): NavbarData {
 }
 
 function sanitizeFooterData(messages: Messages): FooterData {
-  const raw = (messages.layout?.footer ?? {}) as Record<string, unknown>;
+  const layout = ((messages ?? {}) as Record<string, unknown>).layout as
+    | Record<string, unknown>
+    | undefined;
+  const raw = (layout?.footer ?? {}) as Record<string, unknown>;
   const contact = (raw.contact ?? {}) as Record<string, unknown>;
   const quickLinks = Array.isArray(raw.quickLinks) ? raw.quickLinks : [];
 

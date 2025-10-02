@@ -157,7 +157,7 @@ export default async function HomePage({ params }: PageParams) {
   });
 
   return (
-    <div className="space-y-24 pb-24">
+    <div className="space-y-0 pb-24">
       <LoadingScreen />
       <ScrollToHero />
       <StructuredData id="jsonld-home" data={webPageJsonLd} />
