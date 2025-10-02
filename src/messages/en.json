@@ -67,83 +67,218 @@
   "layout": {
     "cta": {
       "call": "Call {phone}",
-      "chat": "Chat on LINE",
-      "consult": "Email our accountants",
+      "chat": "Chat via LINE",
+      "consult": "Email our team",
       "book": "Book a consultation"
     },
     "header": {
       "announcement": {
-        "message": "Certified accountants helping entrepreneurs thrive across Thailand.",
-        "actionLabel": "Book consultation",
+        "message": "Accountants you can trust for every step of your business.",
+        "actionLabel": "View promotions",
         "actionHref": "/promotion"
       },
       "nav": [
         {
-          "label": "Services",
-          "href": "#services"
-        },
-        {
-          "label": "Why us",
-          "href": "#why-us"
-        },
-        {
-          "label": "Process",
-          "href": "#process"
-        },
-        {
-          "label": "Promotion",
+          "label": "Promotions",
           "href": "/promotion"
         },
         {
-          "label": "Resources",
-          "href": "/resources"
+          "label": "Document downloads",
+          "href": "/under-construction"
+        },
+        {
+          "label": "Contact us",
+          "href": "/under-construction"
         }
       ],
       "megaMenu": {
-        "triggerLabel": "Explore",
+        "triggerLabel": "Services",
         "columns": [
           {
-            "title": "Accounting services",
+            "title": "Registrations",
             "items": [
               {
-                "label": "Bookkeeping",
-                "description": "Daily transaction posting, reconciliations, monthly reports.",
-                "href": "/services/bookkeeping"
+                "label": "Limited company",
+                "href": "/under-construction"
               },
               {
-                "label": "Payroll & social security",
-                "description": "Salary processing, payslips, and compliance filings.",
-                "href": "#services"
+                "label": "Limited partnership",
+                "href": "/under-construction"
+              },
+              {
+                "label": "Foundation",
+                "href": "/under-construction"
+              },
+              {
+                "label": "Association",
+                "href": "/under-construction"
+              },
+              {
+                "label": "Commercial registration",
+                "href": "/under-construction"
+              },
+              {
+                "label": "Employer registration",
+                "href": "/under-construction"
+              },
+              {
+                "label": "VAT registration",
+                "href": "/under-construction"
               }
             ]
           },
           {
-            "title": "Business insights",
+            "title": "Corporate updates",
             "items": [
               {
-                "label": "Guides & checklists",
-                "description": "Templates that keep your team audit ready.",
-                "href": "/resources"
+                "label": "Entity name change",
+                "href": "/under-construction"
               },
               {
-                "label": "Latest article",
-                "description": "Why bookkeeping discipline accelerates growth.",
-                "href": "/blog/bookkeeping-matters"
+                "label": "Company seal",
+                "href": "/under-construction"
+              },
+              {
+                "label": "Director details",
+                "href": "/under-construction"
+              },
+              {
+                "label": "Signing authority",
+                "href": "/under-construction"
+              },
+              {
+                "label": "Shareholders",
+                "href": "/under-construction"
+              },
+              {
+                "label": "Share structure",
+                "href": "/under-construction"
+              },
+              {
+                "label": "Capital increase/decrease",
+                "href": "/under-construction"
+              },
+              {
+                "label": "Relocation",
+                "href": "/under-construction"
+              },
+              {
+                "label": "Objectives",
+                "href": "/under-construction"
+              },
+              {
+                "label": "Business closure",
+                "href": "/under-construction"
+              }
+            ]
+          },
+          {
+            "title": "Accounting & audit",
+            "items": [
+              {
+                "label": "Corporate bookkeeping",
+                "href": "/under-construction"
+              },
+              {
+                "label": "Monthly tax filings",
+                "href": "/under-construction"
+              },
+              {
+                "label": "Annual financial statements",
+                "href": "/under-construction"
+              },
+              {
+                "label": "Personal accounting",
+                "href": "/under-construction"
+              },
+              {
+                "label": "Audit services",
+                "href": "/under-construction"
+              },
+              {
+                "label": "Tax planning",
+                "href": "/under-construction"
+              },
+              {
+                "label": "Foreign taxpayer ID",
+                "href": "/under-construction"
+              }
+            ]
+          },
+          {
+            "title": "Licensing",
+            "items": [
+              {
+                "label": "Tourism business licence",
+                "href": "/under-construction"
+              },
+              {
+                "label": "FDA licence",
+                "href": "/under-construction"
+              },
+              {
+                "label": "Visa & work permit",
+                "href": "/under-construction"
+              }
+            ]
+          },
+          {
+            "title": "Digital marketing",
+            "items": [
+              {
+                "label": "Website development",
+                "href": "/under-construction"
+              },
+              {
+                "label": "Facebook Page",
+                "href": "/under-construction"
+              },
+              {
+                "label": "LINE OA",
+                "href": "/under-construction"
+              },
+              {
+                "label": "TikTok",
+                "href": "/under-construction"
+              },
+              {
+                "label": "YouTube",
+                "href": "/under-construction"
+              },
+              {
+                "label": "Video production",
+                "href": "/under-construction"
+              },
+              {
+                "label": "Paid ads",
+                "href": "/under-construction"
+              },
+              {
+                "label": "AI solutions",
+                "href": "/under-construction"
+              },
+              {
+                "label": "Odoo ERP",
+                "href": "/under-construction"
+              },
+              {
+                "label": "Custom software",
+                "href": "/under-construction"
               }
             ]
           }
         ]
       },
-      "ctaPrimary": "Talk to an expert",
+      "ctaPrimary": "Request consultation",
       "ctaSecondary": "LINE OA"
     },
     "footer": {
-      "tagline": "Your multilingual finance department.",
-      "description": "Virintira pairs Thai regulatory expertise with global language support so founders stay confident and compliant.",
+      "tagline": "Your all-in-one accounting and business partner.",
+      "description": "Virintira handles company registration, bookkeeping, licensing, and digital marketing so you can focus on growth with full compliance.",
       "contact": {
-        "phone": "Call us at {phone}",
+        "phone": "Call {phone}",
         "email": "Email {email}",
-        "line": "Message on LINE"
+        "line": "Chat via LINE"
       },
       "quickLinks": [
         {
@@ -151,16 +286,20 @@
           "href": "/"
         },
         {
-          "label": "Bookkeeping service",
-          "href": "/services/bookkeeping"
-        },
-        {
           "label": "Promotions",
           "href": "/promotion"
         },
         {
-          "label": "Resources",
-          "href": "/resources"
+          "label": "Document downloads",
+          "href": "/under-construction"
+        },
+        {
+          "label": "Contact us",
+          "href": "/under-construction"
+        },
+        {
+          "label": "Bookkeeping service",
+          "href": "/services/bookkeeping"
         }
       ],
       "legal": "© {year} Virintira Co., Ltd. All rights reserved."
@@ -176,127 +315,114 @@
   },
   "home": {
     "hero": {
-      "title": "Trusted accounting for every language your clients speak",
-      "subtitle": "Full finance operations for Thai businesses expanding regionally",
-      "description": "From incorporation to monthly reporting, Virintira keeps your ledgers precise, audit ready, and explained in the languages your leadership team prefers.",
-      "primary": "Call now",
+      "title": "Full-service accounting and business administration",
+      "subtitle": "",
+      "description": "Fast, easy, end-to-end support for Thai businesses from a dedicated professional team.",
+      "primary": "Request consultation",
       "typewriter": [
-        "Bookkeeping in 16 languages",
-        "Payroll and social security filings",
-        "Tax planning for Thai SMEs"
+        "Fast, easy, complete business support"
       ],
-      "emailHeading": "Prefer email?",
-      "emailButton": "Email Virintira"
+      "emailHeading": "",
+      "emailButton": ""
     },
     "about": {
-      "heading": "Why founders choose Virintira",
+      "heading": "Virintira is more than an accounting firm",
       "paragraphs": [
-        "Our bilingual accountants combine local compliance mastery with proactive advisory. Whether you are scaling ecommerce, hospitality, or professional services, we translate complex regulations into clear action steps.",
-        "With 10+ years serving SMEs, we design bookkeeping rhythms, dashboard reporting, and payroll processes that let your leadership focus on growth instead of paperwork."
+        "With over 10 years of experience, Virintira supports every part of your operations—from company formation and monthly bookkeeping to licensing, tax planning, and digital marketing.",
+        "We know you want to stay focused on growing your business, so we take care of the back office with clarity and speed.",
+        "You can rely on us. We are fully registered with the Department of Business Development and never leave projects unfinished.",
+        "Our all-in-one, transparent service means we stand beside you at every stage of growth because every client is important to us."
       ],
-      "link": "Email our accountants"
+      "link": "About Virintira"
     },
     "services": {
       "heading": "Popular services",
       "items": [
         {
+          "title": "Company registration",
+          "description": "Complete registration for limited companies and partnerships with expert guidance."
+        },
+        {
+          "title": "Corporate record updates",
+          "description": "Accurate, timely changes to critical company information."
+        },
+        {
           "title": "Monthly bookkeeping",
-          "description": "Transaction recording, reconciliations, and IFRS-compliant statements."
+          "description": "Accurate bookkeeping and tax filing with every document handled for you."
         },
         {
-          "title": "Payroll outsourcing",
-          "description": "Payslips, social security, and Withholding Tax filings prepared accurately."
+          "title": "Financial statement closing",
+          "description": "Certified auditors prepare and review your annual statements."
         },
         {
-          "title": "Tax & compliance",
-          "description": "VAT, corporate income tax, and BOI documentation handled end-to-end."
-        },
-        {
-          "title": "Company secretary",
-          "description": "Board resolutions, share registers, and regulatory submissions on schedule."
-        },
-        {
-          "title": "Virtual CFO",
-          "description": "Forecasting, budgeting, and investor-ready reporting in Thai or English."
-        },
-        {
-          "title": "Startup launch",
-          "description": "Entity setup, bank integrations, and digital invoicing that scales with you."
+          "title": "Tax planning",
+          "description": "Strategic tax planning that keeps your business compliant and efficient."
         }
       ]
     },
     "highlights": {
-      "heading": "Why choose Virintira",
+      "heading": "Why work with Virintira",
       "items": [
-        "Dedicated account manager fluent in Thai and English",
-        "Secure cloud accounting stack with daily reconciliations",
-        "Industry-specific workflows tailored to your operations",
-        "Transparent pricing with flexible add-ons",
-        "Certified CPAs and tax advisors",
-        "Support across 16 languages for multinational teams"
+        "Everything handled in one place",
+        "Experts with 10+ years of experience",
+        "Fast, transparent, on-time delivery",
+        "Unlimited free consultations",
+        "100% legal and compliant",
+        "Accountable partners who never leave your project"
       ]
     },
     "process": {
-      "heading": "How it works",
+      "heading": "How our service works",
       "steps": [
         {
-          "title": "Discovery",
-          "description": "Understand your entity structure, systems, and compliance obligations."
+          "title": "Choose your service",
+          "description": "Pick the service you need or request personalised advice."
         },
         {
-          "title": "Onboarding",
-          "description": "Connect accounting tools, gather historical data, and align reporting formats."
+          "title": "Discuss and plan",
+          "description": "Connect with our team to review details and scope."
         },
         {
-          "title": "Execution",
-          "description": "Our team posts transactions, prepares payroll, and manages tax filings."
+          "title": "Execution and paperwork",
+          "description": "We handle every step, keeping you updated throughout."
         },
         {
-          "title": "Insights",
-          "description": "Monthly meetings to review performance, forecast cash flow, and plan ahead."
+          "title": "Smooth completion",
+          "description": "Receive results on time with additional guidance as needed."
         }
       ]
     },
     "cta": {
-      "heading": "Ready for stress-free accounting?",
-      "description": "Book a consultation with Virintira and receive a tailored action plan for your finance operations in under 48 hours."
+      "heading": "Ready to have Virintira as your accounting partner?",
+      "description": "Talk with our team for a free consultation, pricing estimate, and a service plan tailored to your business."
     }
   },
   "promotion": {
     "hero": {
-      "title": "Special offers for new clients",
-      "intro": "Secure preferential rates when you entrust Virintira with your finance operations before the end of this quarter."
+      "title": "Special promotions from Virintira",
+      "intro": "Reduce startup costs and unlock complimentary services for new bookkeeping clients."
     },
     "offers": [
       {
-        "name": "Startup launch bundle",
+        "name": "Exclusive for new clients 🔥",
         "bullets": [
-          "Company incorporation paperwork and tax registration",
-          "Cloud bookkeeping setup with chart of accounts",
-          "First three months of bookkeeping included"
+          "Free government company registration fees valued at 5,200 THB",
+          "Free certified copy bundle valued at 1,100 THB",
+          "Bonus perks worth over 7,900 THB"
         ],
-        "note": "Perfect for founders preparing to invoice customers and hire the first team members."
+        "note": "Sign up with Virintira today to enjoy every benefit immediately."
       },
       {
-        "name": "Payroll peace of mind",
+        "name": "Exclusive for bookkeeping clients 💡",
         "bullets": [
-          "Monthly payroll processing for up to 25 employees",
-          "Social security and Withholding Tax submissions",
-          "Employee onboarding checklist"
+          "Free bookkeeping service valued at 3,500 THB",
+          "Unlimited business consulting sessions at no extra cost",
+          "Personalised tax planning designed for your business"
         ],
-        "note": "Keeps your people paid accurately while staying fully compliant."
-      },
-      {
-        "name": "CFO insight sprint",
-        "bullets": [
-          "Financial health review and risk assessment",
-          "Cash-flow forecasting workshop",
-          "Investor-ready dashboard build-out"
-        ],
-        "note": "Ideal for scaling teams planning fundraising or expansion."
+        "note": "Receive end-to-end monthly support from a dedicated expert team."
       }
     ],
-    "cta": "Schedule consultation"
+    "cta": "Call our team"
   },
   "resources": {
     "hero": {

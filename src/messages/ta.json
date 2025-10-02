@@ -373,6 +373,77 @@
           }
         ]
       },
+      "overview": {
+        "introTitle": "What our bookkeeping squad manages",
+        "introDescription": "From daily postings to monthly board packs, Virintira handles the detail so your leadership can focus on growth and compliance decisions.",
+        "coverageTitle": "Where we plug into your finance stack",
+        "coverageItems": [
+          {
+            "title": "General ledger control",
+            "description": "Chart of accounts governance, journal entries, and supporting documentation organised in the cloud."
+          },
+          {
+            "title": "Accounts payable and receivable",
+            "description": "Invoice scheduling, vendor communication, and customer collections with clear audit trails."
+          },
+          {
+            "title": "Expense and payroll sync",
+            "description": "Reimbursements, payroll summaries, and statutory deductions reconciled against bank activity."
+          },
+          {
+            "title": "Management commentary",
+            "description": "Variance analysis, KPI tracking, and insights tailored for founders and finance leaders."
+          }
+        ],
+        "note": "Every engagement includes bilingual support and quarterly strategy reviews."
+      },
+      "metrics": {
+        "heading": "Consistency you can measure",
+        "items": [
+          {
+            "value": "12h",
+            "label": "Average reconciliation turnaround"
+          },
+          {
+            "value": "98%",
+            "label": "On-time filing rate across VAT and WHT"
+          },
+          {
+            "value": "40+",
+            "label": "Industries served across Thailand and APAC"
+          },
+          {
+            "value": "16",
+            "label": "Languages supported for leadership reporting"
+          }
+        ]
+      },
+      "process": {
+        "heading": "How we keep your books current",
+        "description": "A proven onboarding and monthly rhythm that delivers accurate numbers and actionable commentary.",
+        "steps": [
+          {
+            "title": "Diagnostic and clean-up",
+            "description": "We review historical data, align your chart of accounts, and resolve outstanding reconciliations.",
+            "duration": "Week 1"
+          },
+          {
+            "title": "Systems integration",
+            "description": "Connect accounting platforms, banks, POS, and payroll tools to our secure automation stack.",
+            "duration": "Week 2"
+          },
+          {
+            "title": "Daily bookkeeping cadence",
+            "description": "Transactions are posted, reconciled, and matched with documents every business day.",
+            "duration": "Ongoing"
+          },
+          {
+            "title": "Monthly close & insights",
+            "description": "Deliver IFRS-compliant statements, KPI dashboards, and executive commentary for decision making.",
+            "duration": "Month-end"
+          }
+        ]
+      },
       "deliverables": {
         "heading": "What you receive",
         "items": [
@@ -383,6 +454,29 @@
           "Quarterly performance review call",
           "Audit-ready documentation archive"
         ]
+      },
+      "support": {
+        "heading": "Specialists on your side",
+        "items": [
+          {
+            "title": "Dedicated account manager",
+            "description": "One point of contact who understands your operations, reports, and preferred communication style."
+          },
+          {
+            "title": "Compliance vigilance",
+            "description": "Proactive monitoring of statutory deadlines, regulatory updates, and filing requirements."
+          },
+          {
+            "title": "Integrated tooling",
+            "description": "Access to dashboards, secure document sharing, and real-time status updates across every engagement."
+          }
+        ]
+      },
+      "ctaBanner": {
+        "heading": "Let Virintira run your books end-to-end",
+        "description": "Schedule a consultation and receive a tailored bookkeeping playbook with implementation steps in under 48 hours.",
+        "primary": "Book a consultation",
+        "secondary": "See sample reports"
       },
       "faq": {
         "heading": "Frequently asked questions",
