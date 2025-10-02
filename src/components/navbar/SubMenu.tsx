@@ -21,25 +21,30 @@ function SubMenuComponent({ sections, onItemClick, onMouseEnter, onMouseLeave }:
 
   return (
     <div
-      className="submenu-popover"
+      className="pointer-events-none absolute left-1/2 top-full z-40 mt-8 w-max -translate-x-1/2"
       role="presentation"
       onMouseEnter={onMouseEnter}
       onMouseLeave={onMouseLeave}
     >
-      <div className="submenu-surface" role="menu">
+      <div
+        className="pointer-events-auto grid min-w-[260px] gap-6 rounded-2xl bg-white px-8 py-6 text-sm shadow-[0_30px_60px_rgba(27,23,52,0.12)] sm:grid-cols-2"
+        role="menu"
+      >
         {sections.map((section, index) => (
-          <div key={`${section.title ?? 'section'}-${index}`} className="submenu-column">
+          <div key={`${section.title ?? 'section'}-${index}`} className="flex flex-col gap-3">
             {section.title ? (
-              <p className="submenu-column-title">{section.title}</p>
+              <p className="text-xs font-semibold uppercase tracking-[0.18em] text-virintira-primary">
+                {section.title}
+              </p>
             ) : null}
-            <ul className="submenu-list" role="none">
+            <ul className="space-y-2" role="none">
               {section.items.map((item) => {
                 const href = item.href;
                 const content = (
-                  <span className="submenu-link">
-                    <span className="submenu-link-label">{item.label}</span>
+                  <span className="flex flex-col gap-0.5 text-neutral-700 transition-colors duration-150 ease-out">
+                    <span className="font-semibold">{item.label}</span>
                     {item.description ? (
-                      <span className="submenu-link-description">{item.description}</span>
+                      <span className="text-xs text-neutral-500">{item.description}</span>
                     ) : null}
                   </span>
                 );
@@ -49,7 +54,7 @@ function SubMenuComponent({ sections, onItemClick, onMouseEnter, onMouseLeave }:
                     <li key={item.label} role="none">
                       <a
                         href={href}
-                        className="submenu-anchor"
+                        className="block rounded-lg px-0 py-1 transition-colors duration-150 ease-out hover:text-virintira-primary focus-visible:text-virintira-primary focus-visible:outline-none"
                         role="menuitem"
                         onClick={onItemClick}
                       >
@@ -63,7 +68,7 @@ function SubMenuComponent({ sections, onItemClick, onMouseEnter, onMouseLeave }:
                   <li key={item.label} role="none">
                     <Link
                       href={normalizeInternalHref(href)}
-                      className="submenu-anchor"
+                      className="block rounded-lg px-0 py-1 transition-colors duration-150 ease-out hover:text-virintira-primary focus-visible:text-virintira-primary focus-visible:outline-none"
                       role="menuitem"
                       onClick={onItemClick}
                       prefetch

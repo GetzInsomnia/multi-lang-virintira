@@ -70,6 +70,21 @@ export function SocialFloating() {
   const close = useCallback(() => setOpen(false), []);
   const toggle = useCallback(() => setOpen((prev) => !prev), []);
 
+  const stackedLabel = useMemo(
+    () => Array.from(t('toggleLabel').replace(/\s+/g, '').toUpperCase()).slice(0, 12),
+    [t],
+  );
+
+  const toneClasses: Record<SocialAction['tone'], string> = {
+    primary:
+      'bg-virintira-primary text-white shadow-[0_10px_26px_rgba(167,9,9,0.28)] hover:bg-[#C9341F] focus-visible:ring-virintira-primary/60',
+    secondary:
+      'bg-neutral-100 text-neutral-800 hover:bg-neutral-200 focus-visible:ring-neutral-300',
+    dark: 'bg-neutral-900 text-white hover:bg-neutral-800 focus-visible:ring-neutral-500',
+    facebook: 'bg-[#1877F2] text-white hover:bg-[#145DBF] focus-visible:ring-[#2563EB]/60',
+    line: 'bg-[#00C300] text-white hover:bg-[#00A000] focus-visible:ring-[#00C300]/60',
+  };
+
   useEffect(() => {
     if (!open) return;
     const handleClick = (event: MouseEvent) => {
@@ -98,62 +113,69 @@ export function SocialFloating() {
   }, [open, close]);
 
   return (
-    <div ref={containerRef} className="contact-floating" data-open={open}>
+    <div
+      ref={containerRef}
+      className="fixed right-0 top-1/2 z-40 hidden -translate-y-1/2 flex-col items-end space-y-3 lg:flex"
+      data-open={open}
+    >
       <div
         id="contact-floating-panel"
-        className="contact-floating-panel"
+        className="pointer-events-none w-72 translate-x-full opacity-0 transition-all duration-200 ease-out-soft data-[open=true]:pointer-events-auto data-[open=true]:translate-x-0 data-[open=true]:opacity-100"
         role="dialog"
         aria-modal="false"
         aria-hidden={!open}
+        data-open={open}
       >
-        <div className="contact-floating-header">
-          <span className="contact-floating-title">{t('heading')}</span>
-          <button
-            type="button"
-            className="contact-floating-close"
-            onClick={close}
-            aria-label={t('closeLabel')}
-          >
-            <FontAwesomeIcon icon={faXmark} aria-hidden />
-          </button>
+        <div className="rounded-3xl bg-white p-6 shadow-2xl ring-1 ring-black/5">
+          <div className="mb-4 flex items-center justify-between gap-4">
+            <span className="text-lg font-semibold text-virintira-primary">{t('heading')}</span>
+            <button
+              type="button"
+              className="flex h-9 w-9 items-center justify-center rounded-full bg-virintira-primary/10 text-virintira-primary transition-colors duration-150 ease-out hover:bg-virintira-primary hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-virintira-primary/40"
+              onClick={close}
+              aria-label={t('closeLabel')}
+            >
+              <FontAwesomeIcon icon={faXmark} aria-hidden />
+            </button>
+          </div>
+          <ul className="space-y-3" role="menu" aria-label={t('heading')}>
+            {actions.map((action) => (
+              <li key={action.id} role="none">
+                <a
+                  href={action.href}
+                  className={`flex items-center gap-3 rounded-2xl px-4 py-3 text-sm font-semibold transition-all duration-150 ease-out focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-white ${toneClasses[action.tone]}`}
+                  role="menuitem"
+                  aria-label={t(`links.${action.id}`)}
+                  target={action.external ? '_blank' : undefined}
+                  rel={action.external ? 'noopener noreferrer' : undefined}
+                >
+                  <FontAwesomeIcon icon={action.icon} className="text-base" aria-hidden />
+                  <span>{t(`links.${action.id}`)}</span>
+                </a>
+              </li>
+            ))}
+          </ul>
         </div>
-        <ul className="contact-floating-list" role="menu" aria-label={t('heading')}>
-          {actions.map((action) => (
-            <li key={action.id} role="none">
-              <a
-                href={action.href}
-                className={`contact-floating-link contact-floating-${action.id}`}
-                data-tone={action.tone}
-                role="menuitem"
-                aria-label={t(`links.${action.id}`)}
-                target={action.external ? '_blank' : undefined}
-                rel={action.external ? 'noopener noreferrer' : undefined}
-              >
-                <span className="contact-floating-link-inner">
-                  <FontAwesomeIcon
-                    icon={action.icon}
-                    className="contact-floating-icon"
-                    aria-hidden
-                  />
-                  <span className="contact-floating-text">{t(`links.${action.id}`)}</span>
-                </span>
-              </a>
-            </li>
-          ))}
-        </ul>
       </div>
       <button
         type="button"
-        className="contact-floating-tab"
+        className="flex flex-col items-center gap-2 rounded-l-md bg-virintira-primary px-2 py-3 text-[0.7rem] font-semibold uppercase tracking-[0.45em] text-white shadow-lg transition-all duration-200 ease-out hover:bg-[#C9341F] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/60"
         onClick={toggle}
         aria-expanded={open}
         aria-controls="contact-floating-panel"
       >
         <span className="sr-only">{t('toggleLabel')}</span>
-        <span aria-hidden className="contact-floating-tab-text">
-          {t('toggleLabel')}
+        <span aria-hidden className="flex flex-col items-center leading-[0.85rem]">
+          {stackedLabel.map((char, index) => (
+            <span key={`${char}-${index}`}>{char}</span>
+          ))}
         </span>
-        <FontAwesomeIcon icon={faChevronLeft} className="contact-floating-tab-icon" aria-hidden />
+        <FontAwesomeIcon
+          icon={faChevronLeft}
+          className="text-sm transition-transform duration-200 ease-out data-[open=true]:rotate-180"
+          aria-hidden
+          data-open={open}
+        />
       </button>
     </div>
   );

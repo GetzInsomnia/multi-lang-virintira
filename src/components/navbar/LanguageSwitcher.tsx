@@ -126,22 +126,26 @@ export function LanguageSwitcher({ className = '' }: LanguageSwitcherProps) {
   }, [open]);
 
   return (
-    <div ref={containerRef} className={`language-switcher ${className}`}>
+    <div ref={containerRef} className={`relative ${className}`.trim()}>
       <button
         type="button"
-        className="language-switcher-button"
+        className="flex h-10 w-10 items-center justify-center rounded-full text-lg text-virintira-primary transition-opacity duration-150 ease-out hover:opacity-80 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-virintira-primary/40"
         aria-haspopup="menu"
         aria-expanded={open}
         aria-label={t('language.dropdownLabel')}
         onClick={toggle}
         disabled={isPending}
       >
-        <FontAwesomeIcon icon={faGlobe} className="language-switcher-icon" />
+        <FontAwesomeIcon icon={faGlobe} />
       </button>
-      <div className="language-switcher-dropdown" data-open={open} role="presentation">
+      <div
+        className="absolute right-0 mt-3 w-32 bg-white nv-lang-menu transition-all duration-150 ease-out data-[open=false]:pointer-events-none data-[open=false]:opacity-0 data-[open=false]:translate-y-1 data-[open=true]:opacity-100 data-[open=true]:translate-y-0"
+        data-open={open}
+        role="presentation"
+      >
         <ul
           ref={listRef}
-          className="language-switcher-list lang-menu"
+          className="flex flex-col"
           role="menu"
           aria-label={t('language.dropdownLabel')}
         >
@@ -150,7 +154,7 @@ export function LanguageSwitcher({ className = '' }: LanguageSwitcherProps) {
               <button
                 type="button"
                 role="menuitemradio"
-                className="lang-item"
+                className="nv-lang-item w-full text-left text-sm font-semibold uppercase tracking-[0.28em] text-neutral-700 transition-colors duration-150 ease-out data-[selected=true]:text-virintira-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-virintira-primary/40 disabled:cursor-not-allowed disabled:opacity-60"
                 data-selected={code === locale}
                 aria-checked={code === locale}
                 onClick={() => handleSelect(code)}

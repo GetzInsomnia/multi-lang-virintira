@@ -73,6 +73,9 @@ module.exports = {
       borderRadius: {
         '3xl': '1.75rem',
       },
+      transitionTimingFunction: {
+        'out-soft': 'cubic-bezier(.22,1,.36,1)',
+      },
       keyframes: legacyKeyframes,
       animation: legacyAnimations,
     },
