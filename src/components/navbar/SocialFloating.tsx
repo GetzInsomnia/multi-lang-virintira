@@ -1,17 +1,16 @@
 "use client";
 
 import { useTranslations } from 'next-intl';
-import {
-  useCallback,
-  useEffect,
-  useMemo,
-  useRef,
-  useState,
-} from 'react';
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 
 import type { IconDefinition } from '@fortawesome/fontawesome-svg-core';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faChevronLeft, faEnvelope, faPhone } from '@fortawesome/free-solid-svg-icons';
+import {
+  faChevronLeft,
+  faEnvelope,
+  faPhone,
+  faXmark,
+} from '@fortawesome/free-solid-svg-icons';
 import { faFacebookF, faLine, faTiktok } from '@fortawesome/free-brands-svg-icons';
 
 import { COMPANY } from '@/data/company';
@@ -21,7 +20,7 @@ type SocialAction = {
   href: string;
   external?: boolean;
   icon: IconDefinition;
-  className: string;
+  tone: 'primary' | 'secondary' | 'dark' | 'facebook' | 'line';
 };
 
 export function SocialFloating() {
@@ -35,40 +34,41 @@ export function SocialFloating() {
         id: 'call',
         href: `tel:${COMPANY.phone}`,
         icon: faPhone,
-        className: 'social-floating-link-call',
+        tone: 'primary',
       },
       {
         id: 'line',
         href: COMPANY.socials.line,
         external: true,
         icon: faLine,
-        className: 'social-floating-link-line',
+        tone: 'line',
       },
       {
         id: 'tiktok',
         href: COMPANY.socials.tiktok,
         external: true,
         icon: faTiktok,
-        className: 'social-floating-link-tiktok',
+        tone: 'dark',
       },
       {
         id: 'facebook',
         href: COMPANY.socials.facebook,
         external: true,
         icon: faFacebookF,
-        className: 'social-floating-link-facebook',
+        tone: 'facebook',
       },
       {
         id: 'email',
         href: `mailto:${COMPANY.email}`,
         icon: faEnvelope,
-        className: 'social-floating-link-email',
+        tone: 'secondary',
       },
     ],
     [],
   );
 
   const close = useCallback(() => setOpen(false), []);
+  const toggle = useCallback(() => setOpen((prev) => !prev), []);
 
   useEffect(() => {
     if (!open) return;
@@ -97,42 +97,46 @@ export function SocialFloating() {
     };
   }, [open, close]);
 
-  const toggle = useCallback(() => {
-    setOpen((prev) => !prev);
-  }, []);
-
   return (
-    <div ref={containerRef} className="social-floating" data-open={open}>
+    <div ref={containerRef} className="contact-floating" data-open={open}>
       <div
-        id="social-floating-panel"
-        className="social-floating-panel"
+        id="contact-floating-panel"
+        className="contact-floating-panel"
         role="dialog"
         aria-modal="false"
         aria-hidden={!open}
       >
-        <div className="social-floating-header">
-          <span className="social-floating-title">{t('heading')}</span>
+        <div className="contact-floating-header">
+          <span className="contact-floating-title">{t('heading')}</span>
           <button
             type="button"
-            className="social-floating-close"
+            className="contact-floating-close"
             onClick={close}
             aria-label={t('closeLabel')}
           >
-            ×
+            <FontAwesomeIcon icon={faXmark} aria-hidden />
           </button>
         </div>
-        <ul className="social-floating-list" role="menu" aria-label={t('heading')}>
+        <ul className="contact-floating-list" role="menu" aria-label={t('heading')}>
           {actions.map((action) => (
             <li key={action.id} role="none">
               <a
                 href={action.href}
-                className={`social-floating-link ${action.className}`}
+                className={`contact-floating-link contact-floating-${action.id}`}
+                data-tone={action.tone}
                 role="menuitem"
+                aria-label={t(`links.${action.id}`)}
                 target={action.external ? '_blank' : undefined}
                 rel={action.external ? 'noopener noreferrer' : undefined}
               >
-                <FontAwesomeIcon icon={action.icon} className="social-floating-icon" />
-                <span className="social-floating-text">{t(`links.${action.id}`)}</span>
+                <span className="contact-floating-link-inner">
+                  <FontAwesomeIcon
+                    icon={action.icon}
+                    className="contact-floating-icon"
+                    aria-hidden
+                  />
+                  <span className="contact-floating-text">{t(`links.${action.id}`)}</span>
+                </span>
               </a>
             </li>
           ))}
@@ -140,17 +144,19 @@ export function SocialFloating() {
       </div>
       <button
         type="button"
-        className="social-floating-toggle"
+        className="contact-floating-tab"
         onClick={toggle}
         aria-expanded={open}
-        aria-controls="social-floating-panel"
-        aria-label={t('toggleLabel')}
+        aria-controls="contact-floating-panel"
       >
-        <span className="social-floating-toggle-text" aria-hidden>
+        <span className="sr-only">{t('toggleLabel')}</span>
+        <span aria-hidden className="contact-floating-tab-text">
           {t('toggleLabel')}
         </span>
-        <FontAwesomeIcon icon={faChevronLeft} className="social-floating-toggle-icon" aria-hidden />
+        <FontAwesomeIcon icon={faChevronLeft} className="contact-floating-tab-icon" aria-hidden />
       </button>
     </div>
   );
 }
+
+export default SocialFloating;

@@ -1,6 +1,5 @@
 "use client";
 
-import Image from 'next/image';
 import { useLocale, useTranslations } from 'next-intl';
 import {
   useCallback,
@@ -13,18 +12,19 @@ import {
 } from 'react';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faChevronDown, faGlobe } from '@fortawesome/free-solid-svg-icons';
+import { faGlobe } from '@fortawesome/free-solid-svg-icons';
 
 import { i18n, type Locale } from '@/i18n/config';
 import { usePathname, useRouter } from '@/i18n/routing';
 
-const FLAG_MAP: Partial<Record<Locale, string>> = {
-  th: '/flags/th.png',
-  en: '/flags/en.png',
-};
-
 type LanguageSwitcherProps = {
   className?: string;
+};
+
+type LanguageOption = {
+  code: Locale;
+  srLabel: string;
+  display: string;
 };
 
 export function LanguageSwitcher({ className = '' }: LanguageSwitcherProps) {
@@ -37,12 +37,12 @@ export function LanguageSwitcher({ className = '' }: LanguageSwitcherProps) {
   const containerRef = useRef<HTMLDivElement | null>(null);
   const listRef = useRef<HTMLUListElement | null>(null);
 
-  const options = useMemo(() => {
+  const options = useMemo<LanguageOption[]>(() => {
     const translate = t as unknown as (key: string) => string;
     return i18n.locales.map((code) => ({
-      code,
-      label: translate(`language.options.${code}`),
-      flag: FLAG_MAP[code as Locale] ?? '/flags/en.png',
+      code: code as Locale,
+      srLabel: translate(`language.options.${code}`),
+      display: code.toUpperCase(),
     }));
   }, [t]);
 
@@ -75,7 +75,7 @@ export function LanguageSwitcher({ className = '' }: LanguageSwitcherProps) {
     };
   }, [open, close]);
 
-  const handleToggle = useCallback(() => {
+  const toggle = useCallback(() => {
     setOpen((prev) => !prev);
   }, []);
 
@@ -94,9 +94,7 @@ export function LanguageSwitcher({ className = '' }: LanguageSwitcherProps) {
   );
 
   const focusByIndex = useCallback((index: number) => {
-    const items = listRef.current?.querySelectorAll<HTMLButtonElement>(
-      '.language-switcher-item',
-    );
+    const items = listRef.current?.querySelectorAll<HTMLButtonElement>('.lang-item');
     if (!items?.length) return;
     const next = ((index % items.length) + items.length) % items.length;
     items[next]?.focus();
@@ -123,9 +121,7 @@ export function LanguageSwitcher({ className = '' }: LanguageSwitcherProps) {
 
   useEffect(() => {
     if (!open) return;
-    const firstSelected = listRef.current?.querySelector<HTMLButtonElement>(
-      '[data-selected="true"]',
-    );
+    const firstSelected = listRef.current?.querySelector<HTMLButtonElement>('[data-selected="true"]');
     firstSelected?.focus();
   }, [open]);
 
@@ -133,40 +129,36 @@ export function LanguageSwitcher({ className = '' }: LanguageSwitcherProps) {
     <div ref={containerRef} className={`language-switcher ${className}`}>
       <button
         type="button"
-        className="language-switcher-trigger"
+        className="language-switcher-button"
         aria-haspopup="menu"
         aria-expanded={open}
         aria-label={t('language.dropdownLabel')}
-        onClick={handleToggle}
+        onClick={toggle}
         disabled={isPending}
       >
         <FontAwesomeIcon icon={faGlobe} className="language-switcher-icon" />
-        <span className="language-switcher-label">{t('language.label')}</span>
-        <FontAwesomeIcon icon={faChevronDown} className="language-switcher-caret" />
       </button>
       <div className="language-switcher-dropdown" data-open={open} role="presentation">
         <ul
           ref={listRef}
-          className="language-switcher-list"
+          className="language-switcher-list lang-menu"
           role="menu"
           aria-label={t('language.dropdownLabel')}
         >
-          {options.map(({ code, label, flag }, index) => (
+          {options.map(({ code, srLabel, display }, index) => (
             <li key={code} role="none">
               <button
                 type="button"
                 role="menuitemradio"
+                className="lang-item"
                 data-selected={code === locale}
                 aria-checked={code === locale}
-                className="language-switcher-item"
-                onClick={() => handleSelect(code as Locale)}
+                onClick={() => handleSelect(code)}
                 disabled={isPending && code !== locale}
                 onKeyDown={(event) => handleItemKeyDown(event, index)}
               >
-                <span className="language-switcher-flag" aria-hidden>
-                  <Image src={flag} alt="" width={20} height={14} />
-                </span>
-                <span className="language-switcher-name">{label}</span>
+                <span className="sr-only">{srLabel}</span>
+                <span aria-hidden>{display}</span>
               </button>
             </li>
           ))}
@@ -175,3 +167,5 @@ export function LanguageSwitcher({ className = '' }: LanguageSwitcherProps) {
     </div>
   );
 }
+
+export default LanguageSwitcher;

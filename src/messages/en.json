@@ -72,11 +72,6 @@
       "book": "Book a consultation"
     },
     "header": {
-      "announcement": {
-        "message": "Accountants you can trust for every step of your business.",
-        "actionLabel": "View promotions",
-        "actionHref": "/promotion"
-      },
       "nav": [
         {
           "label": "Promotions",
