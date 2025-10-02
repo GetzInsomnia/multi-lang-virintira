@@ -1,63 +1,137 @@
 "use client";
 
-import { createPortal } from 'react-dom';
-import { useEffect, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
+
+import { usePathname } from '@/i18n/routing';
 
 import type { MegaMenuColumn, NavItem } from './types';
 import { MobileMenuView } from './MobileMenuView';
+
+type MenuItem = {
+  label: string;
+  href?: string;
+  items?: MenuItem[];
+};
 
 export function MobileMenu({
   open,
   nav,
   columns,
-  ctaPrimary,
-  ctaSecondary,
+  triggerLabel,
   onClose,
 }: {
   open: boolean;
   nav: NavItem[];
   columns: MegaMenuColumn[];
-  ctaPrimary: string;
-  ctaSecondary: string;
+  triggerLabel: string;
   onClose: () => void;
 }) {
-  const [mounted, setMounted] = useState(false);
+  const pathname = usePathname();
+  const containerRef = useRef<HTMLDivElement | null>(null);
+  const [stack, setStack] = useState<{ title: string; items: MenuItem[] }[]>([]);
+
+  const rootItems = useMemo<MenuItem[]>(() => {
+    const baseItems: MenuItem[] = nav.map((item) => ({
+      label: item.label,
+      href: item.href,
+    }));
+
+    if (columns.length) {
+      baseItems.splice(1, 0, {
+        label: triggerLabel,
+        items: columns.map((column) => ({
+          label: column.title,
+          items: column.items.map((subItem) => ({
+            label: subItem.label,
+            href: subItem.href,
+          })),
+        })),
+      });
+    }
+
+    return baseItems;
+  }, [columns, nav, triggerLabel]);
 
   useEffect(() => {
-    setMounted(true);
+    setStack([{ title: 'ViRINTIRA', items: rootItems }]);
+  }, [rootItems]);
+
+  useEffect(() => {
     if (open) {
-      document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = '';
+      setStack([{ title: 'ViRINTIRA', items: rootItems }]);
     }
+  }, [open, rootItems]);
+
+  useEffect(() => {
+    if (!open) {
+      return;
+    }
+    const originalOverflow = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
     return () => {
-      document.body.style.overflow = '';
+      document.body.style.overflow = originalOverflow;
     };
   }, [open]);
 
-  if (!mounted) return null;
-  const portalTarget = document.body;
-  if (!portalTarget) return null;
-  if (!open) return null;
+  useEffect(() => {
+    if (!open) return;
+    onClose();
+  }, [pathname, open, onClose]);
 
-  return createPortal(
-    <div className="fixed inset-0 z-[80] bg-black/40 backdrop-blur-sm">
-      <div className="absolute inset-y-0 right-0 h-full w-full max-w-sm overflow-hidden bg-white shadow-2xl">
-        <MobileMenuView
-          nav={nav}
-          columns={columns}
-          ctaPrimary={ctaPrimary}
-          ctaSecondary={ctaSecondary}
-          onClose={onClose}
-        />
+  useEffect(() => {
+    if (!open) return;
+
+    const handleClickOutside = (event: MouseEvent) => {
+      if (containerRef.current && !containerRef.current.contains(event.target as Node)) {
+        onClose();
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [open, onClose]);
+
+  const handleBack = () => {
+    setStack((prev) => prev.slice(0, -1));
+  };
+
+  const handleSelectSubMenu = (items: MenuItem[], title: string) => {
+    setStack((prev) => [...prev, { title, items }]);
+  };
+
+  return (
+    <div
+      className={`pointer-events-none fixed inset-0 z-50 transition ${open ? 'pointer-events-auto' : ''}`}
+    >
+      <div
+        ref={containerRef}
+        className={`absolute right-0 top-0 h-full w-4/5 max-w-xs transform bg-white shadow-lg transition-transform duration-300 ease-in-out ${
+          open ? 'translate-x-0' : 'translate-x-full'
+        }`}
+      >
+        <div className="relative h-full w-full overflow-hidden">
+          {stack.map((view, index) => (
+            <MobileMenuView
+              key={`${index}-${view.title}`}
+              title={view.title}
+              items={view.items}
+              index={index}
+              current={stack.length - 1}
+              onBack={index > 0 ? handleBack : undefined}
+              onSelectSubMenu={handleSelectSubMenu}
+              onClose={onClose}
+            />
+          ))}
+        </div>
       </div>
       <button
         type="button"
-        className="absolute inset-y-0 left-0 h-full w-full max-w-[calc(100%-16rem)]"
-        onClick={onClose}
         aria-label="Close menu"
+        className={`absolute inset-0 h-full w-full transition ${open ? 'bg-black/20' : 'bg-transparent'}`}
+        onClick={onClose}
       />
-    </div>,
-    portalTarget,
+    </div>
   );
 }

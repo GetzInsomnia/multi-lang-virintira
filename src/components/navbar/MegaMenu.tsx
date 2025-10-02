@@ -1,52 +1,63 @@
+"use client";
+
 import { COMPANY } from '@/data/company';
 import { Link } from '@/i18n/routing';
+import { isExternalHref, normalizeInternalHref } from '@/lib/links';
 
 import type { MegaMenuColumn } from './types';
 
-function isExternal(href: string) {
-  return /^(https?:|mailto:|tel:)/.test(href);
-}
-
-function resolveHref(href: string) {
-  if (!href) return '#';
-  if (href.startsWith('#')) return href;
-  if (isExternal(href)) return href;
-  return href.startsWith('/') ? href : `/${href}`;
-}
-
-export function MegaMenu({ columns }: { columns: MegaMenuColumn[] }) {
+export function MegaMenu({
+  columns,
+  onMouseEnter,
+  onMouseLeave,
+  onLinkClick,
+}: {
+  columns: MegaMenuColumn[];
+  onMouseEnter?: () => void;
+  onMouseLeave?: () => void;
+  onLinkClick?: () => void;
+}) {
   return (
-    <div className="absolute left-1/2 top-full z-30 mt-4 w-[640px] -translate-x-1/2 rounded-[32px] border border-virintira-border bg-white p-8 text-left shadow-2xl shadow-black/10">
-      <div className="grid gap-8 sm:grid-cols-2">
+    <div
+      className="fixed left-0 top-[var(--header-height,72px)] z-40 w-full border-t border-gray-200 bg-white shadow-md"
+      onMouseEnter={onMouseEnter}
+      onMouseLeave={onMouseLeave}
+    >
+      <div className="mx-auto grid max-w-7xl grid-cols-1 gap-6 px-8 py-6 text-sm sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
         {columns.map((column) => (
-          <div key={column.title} className="space-y-4">
-            <p className="text-sm font-semibold uppercase tracking-[0.3em] text-virintira-muted">
-              {column.title}
-            </p>
-            <ul className="space-y-3">
+          <div key={column.title} className="space-y-3">
+            <h4 className="text-base font-semibold text-[#A70909]">{column.title}</h4>
+            <ul className="space-y-2">
               {column.items.map((item) => {
-                const href = resolveHref(item.href);
-                const content = (
-                  <div className="rounded-2xl border border-transparent p-4 transition hover:border-virintira-primary/30 hover:bg-virintira-soft">
-                    <p className="font-semibold text-virintira-primary">{item.label}</p>
-                    {item.description ? (
-                      <p className="mt-1 text-sm text-virintira-muted">{item.description}</p>
-                    ) : null}
-                  </div>
-                );
+                const href = item.href;
+                const isAnchor = href.startsWith('#');
+                const isExternal = isExternalHref(href);
+                const label = item.label;
 
-                if (href.startsWith('#') || isExternal(href)) {
+                if (isAnchor || isExternal) {
                   return (
-                    <li key={item.label}>
-                      <a href={href}>{content}</a>
+                    <li key={label}>
+                      <a
+                        href={href}
+                        onClick={onLinkClick}
+                        className="block text-gray-700 transition hover:text-[#A70909]"
+                      >
+                        {label}
+                      </a>
                     </li>
                   );
                 }
 
+                const normalized = normalizeInternalHref(href);
                 return (
-                  <li key={item.label}>
-                    <Link href={href} prefetch>
-                      {content}
+                  <li key={label}>
+                    <Link
+                      href={normalized}
+                      onClick={onLinkClick}
+                      className="block text-gray-700 transition hover:text-[#A70909]"
+                      prefetch
+                    >
+                      {label}
                     </Link>
                   </li>
                 );
@@ -55,11 +66,11 @@ export function MegaMenu({ columns }: { columns: MegaMenuColumn[] }) {
           </div>
         ))}
       </div>
-      <div className="mt-8 flex items-center justify-between rounded-2xl bg-virintira-soft px-6 py-4 text-sm text-virintira-muted">
-        <span>{COMPANY.legalNameTh}</span>
-        <a className="font-semibold text-virintira-primary" href={`tel:${COMPANY.phone}`}>
-          {COMPANY.phoneDisplay}
-        </a>
+      <div className="border-t border-gray-200 bg-white/90">
+        <div className="mx-auto flex max-w-7xl items-center justify-between px-8 py-4 text-xs text-gray-600">
+          <span>{COMPANY.legalNameTh}</span>
+          <span>{COMPANY.phoneDisplay}</span>
+        </div>
       </div>
     </div>
   );
