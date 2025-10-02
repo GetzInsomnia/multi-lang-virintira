@@ -120,34 +120,21 @@ export function Navbar({ data }: { data: NavbarData }) {
       return items;
     }
 
-    const triggerLabel = data.megaMenu.triggerLabel.trim().toLowerCase();
-    const indices = data.nav.map((_, index) => index);
-    const highlightIndices = indices.filter((index) => Boolean(getNavIcon(data.nav[index])));
-    const triggerIndices = indices.filter(
-      (index) => data.nav[index].label.trim().toLowerCase() === triggerLabel,
-    );
-    const remainingIndices = indices.filter(
-      (index) => !highlightIndices.includes(index) && !triggerIndices.includes(index),
-    );
-
-    const orderedIndices = [...highlightIndices, ...remainingIndices];
-    let megaInserted = false;
-
-    orderedIndices.forEach((index, position) => {
-      const item = data.nav[index];
-      items.push({ type: 'link', key: `link-${index}`, item });
-      if (!megaInserted && hasMegaMenu && position === 0) {
+    if (data.nav.length) {
+      const [first, ...rest] = data.nav;
+      items.push({ type: 'link', key: 'link-0', item: first });
+      if (hasMegaMenu) {
         items.push({ type: 'mega', key: '__mega' });
-        megaInserted = true;
       }
-    });
-
-    if (hasMegaMenu && !megaInserted) {
+      rest.forEach((item, index) => {
+        items.push({ type: 'link', key: `link-${index + 1}`, item });
+      });
+    } else if (hasMegaMenu) {
       items.push({ type: 'mega', key: '__mega' });
     }
 
     return items;
-  }, [data.nav, data.megaMenu.triggerLabel, hasMegaMenu]);
+  }, [data.nav, hasMegaMenu]);
 
   const megaMenuActive = useMemo(
     () =>
@@ -360,21 +347,27 @@ export function Navbar({ data }: { data: NavbarData }) {
   return (
     <>
       <SocialFloating />
-      <header ref={headerRef} className="navbar-container">
-        <div className="navbar-bar">
-          <div className="navbar-brand" onMouseLeave={cancelClose}>
-            <Link href="/" className="navbar-brand-link" onClick={handleLogoClick} prefetch>
-              <Image
-                src="/logo.png"
-                alt={COMPANY.legalNameEn}
-                width={40}
-                height={40}
-                priority
-              />
-              <span className="navbar-brand-text">ViRINTIRA</span>
+      <header
+        ref={headerRef}
+        className="fixed inset-x-0 top-0 z-50 border-b border-black/5 bg-[#FFFEFE] shadow-[0_2px_8px_rgba(0,0,0,0.06)]"
+      >
+        <div className="mx-auto flex h-[80px] w-full max-w-[1280px] items-center justify-between gap-8 px-6">
+          <div onMouseLeave={cancelClose}>
+            <Link
+              href="/"
+              className="flex items-center gap-3 text-left"
+              onClick={handleLogoClick}
+              prefetch
+            >
+              <Image src="/logo.png" alt={COMPANY.legalNameEn} width={44} height={44} priority />
+              <span className="text-xl font-extrabold tracking-[0.18em] text-virintira-primary">ViRINTIRA</span>
             </Link>
           </div>
-          <nav className="navbar-primary" aria-label="Primary" role="menubar">
+          <nav
+            className="hidden flex-1 items-center justify-center gap-10 lg:flex"
+            aria-label="Primary"
+            role="menubar"
+          >
             {primaryItems.map((entry) => {
               if (entry.type === 'mega') {
                 if (!hasMegaMenu) {
@@ -383,14 +376,14 @@ export function Navbar({ data }: { data: NavbarData }) {
                 return (
                   <div
                     key={entry.key}
-                    className="navbar-item"
+                    className="relative"
                     onMouseEnter={() => scheduleOpen('__mega')}
                     onMouseLeave={() => scheduleClose('__mega')}
                   >
                     <button
                       type="button"
-                      className={`navbar-link nav-underline ${
-                        activeDropdown === '__mega' || megaMenuActive ? 'is-active' : ''
+                      className={`nv-underline inline-flex items-center gap-2 px-2 py-1 text-[0.78rem] font-semibold uppercase tracking-[0.26em] text-[#2A2424] transition-colors duration-150 ease-out focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-virintira-primary/30 ${
+                        activeDropdown === '__mega' || megaMenuActive ? 'text-virintira-primary' : ''
                       }`}
                       aria-haspopup="true"
                       aria-expanded={activeDropdown === '__mega'}
@@ -401,9 +394,14 @@ export function Navbar({ data }: { data: NavbarData }) {
                       onKeyDown={(event) => handleKeyDown(event, '__mega')}
                       onFocus={() => scheduleOpen('__mega')}
                     >
-                      <span className="navbar-link-inner">
+                      <span className="flex items-center gap-2">
                         <span>{data.megaMenu.triggerLabel}</span>
-                        <FontAwesomeIcon icon={faChevronDown} className="navbar-link-caret" />
+                        <FontAwesomeIcon
+                          icon={faChevronDown}
+                          className={`text-xs transition-transform duration-150 ease-out ${
+                            activeDropdown === '__mega' ? 'rotate-180 text-virintira-primary' : ''
+                          }`}
+                        />
                       </span>
                     </button>
                     {activeDropdown === '__mega' ? (
@@ -424,16 +422,23 @@ export function Navbar({ data }: { data: NavbarData }) {
               const key = item.label || entry.key;
               const isActive =
                 isInternalMatch(currentPath, item.href) || hasActiveSubmenu(item, currentPath);
-              const linkClassName = `navbar-link nav-underline ${
-                activeDropdown === key || isActive ? 'is-active' : ''
+              const linkClassName = `nv-underline inline-flex items-center gap-2 px-2 py-1 text-[0.78rem] font-semibold uppercase tracking-[0.26em] text-[#2A2424] transition-colors duration-150 ease-out focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-virintira-primary/30 ${
+                activeDropdown === key || isActive ? 'text-virintira-primary' : ''
               }`;
 
               const content = (
-                <span className="navbar-link-inner">
-                  {icon ? <FontAwesomeIcon icon={icon} className="navbar-link-icon" /> : null}
+                <span className="flex items-center gap-2">
+                  {icon ? (
+                    <FontAwesomeIcon icon={icon} className="text-sm text-virintira-primary" />
+                  ) : null}
                   <span>{item.label}</span>
                   {hasMenu ? (
-                    <FontAwesomeIcon icon={faChevronDown} className="navbar-link-caret" />
+                    <FontAwesomeIcon
+                      icon={faChevronDown}
+                      className={`text-xs transition-transform duration-150 ease-out ${
+                        activeDropdown === key || isActive ? 'rotate-180 text-virintira-primary' : ''
+                      }`}
+                    />
                   ) : null}
                 </span>
               );
@@ -442,7 +447,7 @@ export function Navbar({ data }: { data: NavbarData }) {
                 return (
                   <div
                     key={key}
-                    className="navbar-item"
+                    className="relative"
                     onMouseEnter={() => scheduleOpen(key)}
                     onMouseLeave={() => scheduleClose(key)}
                   >
@@ -496,10 +501,10 @@ export function Navbar({ data }: { data: NavbarData }) {
               );
             })}
           </nav>
-          <div className="navbar-actions">
-            <div ref={searchContainerRef} className="navbar-search-group">
+          <div className="hidden items-center gap-6 lg:flex">
+            <div ref={searchContainerRef} className="relative h-10 w-10">
               <form
-                className="navbar-search-form search-collapse"
+                className="nv-search-collapse absolute right-12 top-1/2 flex h-10 -translate-y-1/2 items-center gap-3 rounded-md bg-white px-4 text-sm shadow-[0_10px_32px_rgba(167,9,9,0.12)] ring-1 ring-virintira-primary/20"
                 data-open={searchOpen}
                 onSubmit={handleSearchSubmit}
               >
@@ -511,11 +516,14 @@ export function Navbar({ data }: { data: NavbarData }) {
                   onBlur={handleSearchBlur}
                   placeholder={searchPlaceholder}
                   aria-label={searchPlaceholder}
-                  className="navbar-search-input"
+                  className="w-full border-none bg-transparent text-neutral-800 placeholder:text-neutral-400 focus:outline-none"
                 />
-                <button type="submit" className="navbar-search-submit">
+                <button
+                  type="submit"
+                  className="flex h-8 w-8 items-center justify-center rounded-full bg-virintira-primary text-white shadow-[0_10px_26px_rgba(167,9,9,0.28)] transition-colors duration-150 ease-out hover:bg-[#C9341F] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-virintira-primary/40"
+                >
                   <span className="sr-only">{searchSubmitLabel}</span>
-                  <FontAwesomeIcon icon={faMagnifyingGlass} className="navbar-search-submit-icon" />
+                  <FontAwesomeIcon icon={faMagnifyingGlass} className="text-sm" />
                 </button>
               </form>
               <SearchToggle
@@ -523,21 +531,18 @@ export function Navbar({ data }: { data: NavbarData }) {
                 srLabel={searchToggleLabel}
                 onClick={handleSearchToggle}
                 onBlur={handleSearchBlur}
-                className="navbar-search-toggle-button"
+                className="absolute right-0 top-1/2 -translate-y-1/2"
               />
             </div>
-            <div className="navbar-language-wrapper">
-              <LanguageSwitcher />
-            </div>
+            <LanguageSwitcher />
           </div>
-          <div className="navbar-mobile-actions">
+          <div className="flex items-center gap-4 lg:hidden">
             <SearchToggle
               active={searchOpen}
               srLabel={searchToggleLabel}
               onClick={handleSearchToggle}
-              className="navbar-mobile-search"
             />
-            <LanguageSwitcher className="navbar-mobile-language" />
+            <LanguageSwitcher />
             <HamburgerButton
               isOpen={mobileOpen}
               onClick={() => setMobileOpen((prev) => !prev)}
@@ -546,10 +551,13 @@ export function Navbar({ data }: { data: NavbarData }) {
         </div>
         <div
           ref={searchMobilePanelRef}
-          className="navbar-search-mobile"
+          className="overflow-hidden border-t border-virintira-primary/10 bg-[#FFFEFE] px-6 transition-all duration-200 ease-out-soft data-[open=false]:max-h-0 data-[open=false]:opacity-0 data-[open=true]:max-h-32 data-[open=true]:opacity-100 lg:hidden"
           data-open={searchOpen}
         >
-          <form className="navbar-search-mobile-form" onSubmit={handleSearchSubmit}>
+          <form
+            className="mx-auto my-4 flex max-w-md items-center gap-3 rounded-full border border-virintira-primary/20 bg-white px-5 py-3 shadow-[0_12px_32px_rgba(167,9,9,0.12)]"
+            onSubmit={handleSearchSubmit}
+          >
             <input
               ref={searchMobileInputRef}
               type="search"
@@ -558,11 +566,14 @@ export function Navbar({ data }: { data: NavbarData }) {
               onBlur={handleSearchBlur}
               placeholder={mobilePlaceholder}
               aria-label={mobilePlaceholder}
-              className="navbar-search-mobile-input"
+              className="flex-1 border-none bg-transparent text-sm text-neutral-800 placeholder:text-neutral-400 focus:outline-none"
             />
-            <button type="submit" className="navbar-search-mobile-submit">
+            <button
+              type="submit"
+              className="flex h-9 w-9 items-center justify-center rounded-full bg-virintira-primary text-white shadow-[0_10px_26px_rgba(167,9,9,0.28)] transition-colors duration-150 ease-out hover:bg-[#C9341F] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-virintira-primary/40"
+            >
               <span className="sr-only">{searchSubmitLabel}</span>
-              <FontAwesomeIcon icon={faMagnifyingGlass} />
+              <FontAwesomeIcon icon={faMagnifyingGlass} className="text-sm" />
             </button>
           </form>
         </div>

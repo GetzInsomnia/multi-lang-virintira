@@ -31,30 +31,33 @@ function MegaMenuComponent({ columns, onMouseEnter, onMouseLeave, onLinkClick }:
 
   return (
     <div
-      className="mega-menu-wrapper mega-enter"
+      className="nv-mega-enter pointer-events-none fixed left-0 top-[var(--header-height,80px)] z-40 w-full"
       data-open={visible}
       onMouseEnter={onMouseEnter}
       onMouseLeave={onMouseLeave}
       role="presentation"
     >
-      <div className="mega-menu-surface" role="menu">
-        <div className="mega-menu-grid">
+      <div
+        className="pointer-events-auto rounded-b-3xl border-t border-virintira-primary/10 bg-white shadow-[0_30px_60px_rgba(27,23,52,0.12)]"
+        role="menu"
+      >
+        <div className="mx-auto grid max-w-[1280px] gap-8 px-8 py-10 md:grid-cols-3 xl:grid-cols-5">
           {columns.map((column) => (
-            <div key={column.title} className="mega-menu-column">
-              <div className="mega-menu-column-header">
-                <span className="mega-menu-column-title">{column.title}</span>
+            <div key={column.title} className="flex flex-col gap-3">
+              <div className="flex flex-col gap-1.5">
+                <span className="text-base font-semibold text-virintira-primary">{column.title}</span>
                 {column.subtitle ? (
-                  <span className="mega-menu-column-subtitle">{column.subtitle}</span>
+                  <span className="text-sm text-neutral-600">{column.subtitle}</span>
                 ) : null}
               </div>
-              <ul className="mega-menu-list" role="none">
+              <ul className="space-y-2" role="none">
                 {column.items.map((item) => {
                   const href = item.href;
                   const content = (
-                    <span className="mega-menu-link">
-                      <span className="mega-menu-link-label">{item.label}</span>
+                    <span className="flex flex-col gap-0.5 text-sm leading-7 text-neutral-700 transition-colors duration-150 ease-out">
+                      <span className="font-semibold">{item.label}</span>
                       {item.description ? (
-                        <span className="mega-menu-link-description">{item.description}</span>
+                        <span className="text-xs text-neutral-500">{item.description}</span>
                       ) : null}
                     </span>
                   );
@@ -64,7 +67,7 @@ function MegaMenuComponent({ columns, onMouseEnter, onMouseLeave, onLinkClick }:
                       <li key={item.label} role="none">
                         <a
                           href={href}
-                          className="mega-menu-anchor"
+                          className="block rounded-lg px-0 py-1 transition-colors duration-150 ease-out hover:text-virintira-primary focus-visible:text-virintira-primary focus-visible:outline-none"
                           onClick={onLinkClick}
                           role="menuitem"
                         >
@@ -78,7 +81,7 @@ function MegaMenuComponent({ columns, onMouseEnter, onMouseLeave, onLinkClick }:
                     <li key={item.label} role="none">
                       <Link
                         href={normalizeInternalHref(href)}
-                        className="mega-menu-anchor"
+                        className="block rounded-lg px-0 py-1 transition-colors duration-150 ease-out hover:text-virintira-primary focus-visible:text-virintira-primary focus-visible:outline-none"
                         onClick={onLinkClick}
                         role="menuitem"
                         prefetch
@@ -92,24 +95,26 @@ function MegaMenuComponent({ columns, onMouseEnter, onMouseLeave, onLinkClick }:
             </div>
           ))}
         </div>
-        <div className="mega-menu-footer" role="presentation">
-          <div className="mega-menu-footer-content">
-            <div className="mega-menu-footer-brand">
+        <div className="border-t border-virintira-primary/10 bg-gradient-to-r from-[#FFF7F7]/95 to-white/95" role="presentation">
+          <div className="mx-auto flex max-w-[1280px] items-center justify-between gap-6 px-8 py-6 text-xs text-neutral-600">
+            <div className="flex items-center gap-3">
               <Image
                 src="/logo.png"
                 alt={COMPANY.legalNameEn}
                 width={56}
                 height={56}
-                className="mega-menu-footer-logo"
+                className="rounded-2xl shadow-[0_10px_30px_rgba(167,9,9,0.15)]"
               />
               <div>
-                <p className="mega-menu-footer-title">{COMPANY.legalNameTh}</p>
-                <p className="mega-menu-footer-subtitle">{COMPANY.legalNameEn}</p>
+                <p className="font-semibold text-virintira-primary">{COMPANY.legalNameTh}</p>
+                <p className="text-[0.7rem] uppercase tracking-[0.12em] text-neutral-500">
+                  {COMPANY.legalNameEn}
+                </p>
               </div>
             </div>
-            <div className="mega-menu-footer-contact">
-              <span className="mega-menu-footer-phone">{COMPANY.phoneDisplay}</span>
-              <span className="mega-menu-footer-note">{COMPANY.email}</span>
+            <div className="flex flex-col items-end gap-1 text-right">
+              <span className="font-semibold text-virintira-primary">{COMPANY.phoneDisplay}</span>
+              <span>{COMPANY.email}</span>
             </div>
           </div>
         </div>
