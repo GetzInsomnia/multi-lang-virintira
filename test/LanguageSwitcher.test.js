@@ -35,7 +35,7 @@ test('LanguageSwitcher sets aria-label and aria-current correctly', () => {
     return originalRequire.apply(this, arguments);
   };
 
-  const LanguageSwitcher = require('../components/LanguageSwitcher').default;
+  const LanguageSwitcher = require('../app/[locale]/(components)/LanguageSwitcher').default;
   render(React.createElement(LanguageSwitcher));
 
   Module.prototype.require = originalRequire;

@@ -6,14 +6,14 @@ import type { ReactNode } from 'react';
 import { AnalyticsManager } from '@/components/common/AnalyticsManager';
 import { BusinessJsonLd } from '@/components/common/JsonLd';
 import Footer, { type FooterData, type FooterLink } from '@/components/layout/Footer';
-import Header from '@/components/layout/Header';
+import Header from './(components)/Header';
 import HeaderSpacer from './(components)/HeaderSpacer';
 import type {
   MegaMenuColumn,
   NavItem,
   NavbarData,
   SubMenuSection,
-} from '@/components/navbar/types';
+} from './(components)/types';
 import { i18n, type Locale } from '@/i18n/config';
 import { loadMessages, resolveLocale, type Messages } from '@/i18n/loadMessages';
 
