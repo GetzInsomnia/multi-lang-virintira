@@ -104,6 +104,17 @@ export function Navbar({ data }: { data: NavbarData }) {
   const searchDesktopInputRef = useRef<HTMLInputElement | null>(null);
   const searchMobileInputRef = useRef<HTMLInputElement | null>(null);
 
+  const focusSearchInput = useCallback(() => {
+    if (typeof window === 'undefined') {
+      return;
+    }
+    const media = window.matchMedia('(min-width: 1024px)');
+    const target = media.matches
+      ? searchDesktopInputRef.current
+      : searchMobileInputRef.current;
+    requestAnimationFrame(() => target?.focus());
+  }, []);
+
   const searchPlaceholder = t('search.placeholder');
   const mobilePlaceholder = t('search.mobilePlaceholder');
   const searchToggleLabel = t('search.toggleLabel');
@@ -199,8 +210,16 @@ export function Navbar({ data }: { data: NavbarData }) {
   );
 
   const handleSearchToggle = useCallback(() => {
-    setSearchOpen((prev) => !prev);
-  }, []);
+    if (!searchOpen) {
+      setSearchOpen(true);
+      return;
+    }
+    if (searchQuery.trim()) {
+      focusSearchInput();
+      return;
+    }
+    setSearchOpen(false);
+  }, [focusSearchInput, searchOpen, searchQuery]);
 
   const handleSearchChange = useCallback((event: ChangeEvent<HTMLInputElement>) => {
     setSearchQuery(event.target.value);
@@ -288,6 +307,11 @@ export function Navbar({ data }: { data: NavbarData }) {
     }
     const handleKey = (event: KeyboardEvent) => {
       if (event.key === 'Escape') {
+        if (searchQuery.trim()) {
+          setSearchQuery('');
+          focusSearchInput();
+          return;
+        }
         closeSearch();
       }
     };
@@ -295,18 +319,14 @@ export function Navbar({ data }: { data: NavbarData }) {
     return () => {
       document.removeEventListener('keydown', handleKey);
     };
-  }, [searchOpen, closeSearch]);
+  }, [searchOpen, searchQuery, closeSearch, focusSearchInput]);
 
   useEffect(() => {
     if (!searchOpen) {
       return;
     }
-    const media = window.matchMedia('(min-width: 1024px)');
-    const target = media.matches
-      ? searchDesktopInputRef.current
-      : searchMobileInputRef.current;
-    requestAnimationFrame(() => target?.focus());
-  }, [searchOpen]);
+    focusSearchInput();
+  }, [searchOpen, focusSearchInput]);
 
   const linkBaseClasses =
     "group relative flex h-full items-center whitespace-nowrap px-3 text-[15px] font-medium tracking-[0.02em] text-[#211E1E] transition-colors duration-200 hover:text-[#A70909] aria-[current=page]:text-[#A70909] aria-[expanded=true]:text-[#A70909] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#A70909]/30 after:absolute after:left-0 after:right-0 after:-bottom-[18px] after:h-[4px] after:rounded-full after:bg-transparent after:content-[''] after:origin-left after:scale-x-0 after:transition-transform after:duration-200 hover:after:bg-[#A70909] hover:after:scale-x-100 aria-[current=page]:after:bg-[#A70909] aria-[current=page]:after:scale-x-100 aria-[expanded=true]:after:bg-[#A70909] aria-[expanded=true]:after:scale-x-100";
@@ -489,37 +509,40 @@ export function Navbar({ data }: { data: NavbarData }) {
           />
         </div>
       </div>
-      {searchOpen ? (
-        <div
-          ref={searchOverlayRef}
-          className="fixed left-1/2 top-[calc(var(--nav-h)+12px)] z-[60] w-[min(90vw,820px)] -translate-x-1/2 px-5 hidden lg:block"
+      <div
+        ref={searchOverlayRef}
+        aria-hidden={!searchOpen}
+        className={`fixed left-1/2 top-[calc(var(--nav-h)+12px)] z-[60] w-[min(90vw,820px)] -translate-x-1/2 px-5 transition-all duration-200 ease-out-soft transform-gpu hidden lg:block ${
+          searchOpen
+            ? 'pointer-events-auto opacity-100 translate-y-0'
+            : 'pointer-events-none opacity-0 -translate-y-2'
+        }`}
+      >
+        <form
+          onSubmit={handleSearchSubmit}
+          className="rounded-full border border-black/10 bg-white shadow-lg"
         >
-          <form
-            onSubmit={handleSearchSubmit}
-            className="rounded-full border border-black/10 bg-white shadow-lg"
-          >
-            <div className="flex h-12 items-center gap-3 px-5">
-              <FontAwesomeIcon icon={faSearch} className="text-[#A70909]" />
-              <input
-                ref={searchDesktopInputRef}
-                type="search"
-                value={searchQuery}
-                onChange={handleSearchChange}
-                onBlur={handleDesktopBlur}
-                placeholder={searchPlaceholder}
-                aria-label={searchPlaceholder}
-                className="h-full flex-1 bg-transparent text-[15px] text-neutral-800 placeholder:text-neutral-400 outline-none"
-              />
-              <button
-                type="submit"
-                className="rounded-full bg-[#A70909] px-4 py-1 text-sm font-medium text-white transition-colors duration-200 hover:bg-[#8F0707] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#A70909]/40"
-              >
-                {searchSubmitLabel}
-              </button>
-            </div>
-          </form>
-        </div>
-      ) : null}
+          <div className="flex h-12 items-center gap-3 px-5">
+            <FontAwesomeIcon icon={faSearch} className="text-[#A70909]" />
+            <input
+              ref={searchDesktopInputRef}
+              type="search"
+              value={searchQuery}
+              onChange={handleSearchChange}
+              onBlur={handleDesktopBlur}
+              placeholder={searchPlaceholder}
+              aria-label={searchPlaceholder}
+              className="h-full flex-1 bg-transparent text-[15px] text-neutral-800 placeholder:text-neutral-400 outline-none"
+            />
+            <button
+              type="submit"
+              className="rounded-full bg-[#A70909] px-4 py-1 text-sm font-medium text-white transition-colors duration-200 hover:bg-[#8F0707] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#A70909]/40"
+            >
+              {searchSubmitLabel}
+            </button>
+          </div>
+        </form>
+      </div>
       <div
         ref={searchMobilePanelRef}
         className="overflow-hidden border-t border-black/10 bg-white px-5 transition-all duration-300 ease-out-soft data-[open=false]:max-h-0 data-[open=false]:opacity-0 data-[open=true]:max-h-32 data-[open=true]:opacity-100 lg:hidden"
