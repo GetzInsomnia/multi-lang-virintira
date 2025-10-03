@@ -3,13 +3,13 @@
 import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 import {
+  type ChangeEvent,
+  type FocusEvent,
   type FormEvent,
   type KeyboardEvent as ReactKeyboardEvent,
   type MouseEvent as ReactMouseEvent,
-  type ChangeEvent,
   useCallback,
   useEffect,
-  useLayoutEffect,
   useMemo,
   useRef,
   useState,
@@ -17,7 +17,7 @@ import {
 
 import type { IconDefinition } from '@fortawesome/fontawesome-svg-core';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faChevronDown, faFire, faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
+import { faChevronDown, faFire, faSearch } from '@fortawesome/free-solid-svg-icons';
 
 import { COMPANY } from '@/data/company';
 import { Link, usePathname } from '@/i18n/routing';
@@ -29,12 +29,11 @@ import { MegaMenu } from './MegaMenu';
 import { MobileMenu } from './MobileMenu';
 import { SearchToggle } from './SearchToggle';
 import { SocialFloating } from './SocialFloating';
-import SubMenu from './SubMenu';
+import { SubMenu } from './SubMenu';
 import type { NavItem, NavbarData } from './types';
 
-const DEFAULT_HEADER_HEIGHT = 80;
 const OPEN_DELAY = 180;
-const CLOSE_DELAY = 240;
+const CLOSE_DELAY = 220;
 
 const navIconLookup: Record<string, IconDefinition> = {
   promotion: faFire,
@@ -84,6 +83,10 @@ function hasActiveSubmenu(item: NavItem, currentPath: string): boolean {
   );
 }
 
+type PrimaryItem =
+  | { type: 'link'; key: string; item: NavItem }
+  | { type: 'mega'; key: string };
+
 export function Navbar({ data }: { data: NavbarData }) {
   const t = useTranslations('layout.header');
   const pathname = usePathname();
@@ -94,11 +97,9 @@ export function Navbar({ data }: { data: NavbarData }) {
   const [searchQuery, setSearchQuery] = useState('');
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
 
-  const headerRef = useRef<HTMLElement | null>(null);
   const openTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
   const closeTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
-  const searchBlurTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
-  const searchContainerRef = useRef<HTMLDivElement | null>(null);
+  const searchOverlayRef = useRef<HTMLDivElement | null>(null);
   const searchMobilePanelRef = useRef<HTMLDivElement | null>(null);
   const searchDesktopInputRef = useRef<HTMLInputElement | null>(null);
   const searchMobileInputRef = useRef<HTMLInputElement | null>(null);
@@ -109,10 +110,6 @@ export function Navbar({ data }: { data: NavbarData }) {
   const searchSubmitLabel = t('search.submitLabel');
 
   const hasMegaMenu = data.megaMenu.columns.length > 0;
-
-  type PrimaryItem =
-    | { type: 'link'; key: string; item: NavItem }
-    | { type: 'mega'; key: string };
 
   const primaryItems = useMemo<PrimaryItem[]>(() => {
     const items: PrimaryItem[] = [];
@@ -169,17 +166,14 @@ export function Navbar({ data }: { data: NavbarData }) {
     [clearTimers],
   );
 
-  const scheduleClose = useCallback(
-    (key: string) => {
-      if (closeTimer.current) {
-        clearTimeout(closeTimer.current);
-      }
-      closeTimer.current = setTimeout(() => {
-        setActiveDropdown((prev) => (prev === key ? null : prev));
-      }, CLOSE_DELAY);
-    },
-    [],
-  );
+  const scheduleClose = useCallback((key: string) => {
+    if (closeTimer.current) {
+      clearTimeout(closeTimer.current);
+    }
+    closeTimer.current = setTimeout(() => {
+      setActiveDropdown((prev) => (prev === key ? null : prev));
+    }, CLOSE_DELAY);
+  }, []);
 
   const cancelClose = useCallback(() => {
     if (closeTimer.current) {
@@ -229,19 +223,15 @@ export function Navbar({ data }: { data: NavbarData }) {
     [closeSearch, searchQuery],
   );
 
-  const handleSearchBlur = useCallback(() => {
-    if (searchBlurTimer.current) {
-      clearTimeout(searchBlurTimer.current);
-    }
-    searchBlurTimer.current = setTimeout(() => {
-      const active = document.activeElement;
-      const containers = [searchContainerRef.current, searchMobilePanelRef.current];
-      if (containers.some((element) => element && element.contains(active))) {
+  const handleDesktopBlur = useCallback(
+    (event: FocusEvent<HTMLInputElement>) => {
+      if (event.currentTarget.value.trim()) {
         return;
       }
       closeSearch();
-    }, 150);
-  }, [closeSearch]);
+    },
+    [closeSearch],
+  );
 
   const handleKeyDown = useCallback(
     (event: ReactKeyboardEvent<HTMLButtonElement>, key: string) => {
@@ -264,9 +254,6 @@ export function Navbar({ data }: { data: NavbarData }) {
   useEffect(() => {
     return () => {
       clearTimers();
-      if (searchBlurTimer.current) {
-        clearTimeout(searchBlurTimer.current);
-      }
     };
   }, [clearTimers]);
 
@@ -277,44 +264,21 @@ export function Navbar({ data }: { data: NavbarData }) {
     setSearchQuery('');
   }, [pathname, closeDropdown, closeSearch]);
 
-  useLayoutEffect(() => {
-    const updateHeight = () => {
-      const header = headerRef.current;
-      if (!header) return;
-      const height = header.offsetHeight;
-      const root = document.documentElement;
-      const current = parseFloat(
-        getComputedStyle(root).getPropertyValue('--header-height') || '0',
-      );
-
-      if (height && height !== current) {
-        root.style.setProperty('--header-height', `${height}px`);
-      } else if (!current) {
-        root.style.setProperty('--header-height', `${DEFAULT_HEADER_HEIGHT}px`);
-      }
-    };
-
-    updateHeight();
-    window.addEventListener('resize', updateHeight);
-    return () => {
-      window.removeEventListener('resize', updateHeight);
-    };
-  }, []);
-
   useEffect(() => {
     if (!searchOpen) {
       return;
     }
-    const handleOutside = (event: globalThis.MouseEvent) => {
-      const containers = [searchContainerRef.current, searchMobilePanelRef.current];
-      if (containers.some((element) => element && element.contains(event.target as Node))) {
+    const handleClick = (event: MouseEvent) => {
+      const overlay = searchOverlayRef.current;
+      const mobilePanel = searchMobilePanelRef.current;
+      if (overlay?.contains(event.target as Node) || mobilePanel?.contains(event.target as Node)) {
         return;
       }
       closeSearch();
     };
-    document.addEventListener('mousedown', handleOutside);
+    document.addEventListener('mousedown', handleClick);
     return () => {
-      document.removeEventListener('mousedown', handleOutside);
+      document.removeEventListener('mousedown', handleClick);
     };
   }, [searchOpen, closeSearch]);
 
@@ -322,7 +286,7 @@ export function Navbar({ data }: { data: NavbarData }) {
     if (!searchOpen) {
       return;
     }
-    const handleKey = (event: globalThis.KeyboardEvent) => {
+    const handleKey = (event: KeyboardEvent) => {
       if (event.key === 'Escape') {
         closeSearch();
       }
@@ -344,240 +308,245 @@ export function Navbar({ data }: { data: NavbarData }) {
     requestAnimationFrame(() => target?.focus());
   }, [searchOpen]);
 
+  const linkBaseClasses =
+    "group relative flex h-full items-center whitespace-nowrap px-3 text-[15px] font-medium tracking-[0.02em] text-[#211E1E] transition-colors duration-200 hover:text-[#A70909] aria-[current=page]:text-[#A70909] aria-[expanded=true]:text-[#A70909] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#A70909]/30 after:absolute after:left-0 after:right-0 after:-bottom-[22px] after:h-[4px] after:rounded-full after:bg-transparent after:content-[''] after:origin-left after:scale-x-0 after:transition-transform after:duration-200 hover:after:bg-[#A70909] hover:after:scale-x-100 aria-[current=page]:after:bg-[#A70909] aria-[current=page]:after:scale-x-100 aria-[expanded=true]:after:bg-[#A70909] aria-[expanded=true]:after:scale-x-100";
+
   return (
     <>
       <SocialFloating />
-      <header
-        ref={headerRef}
-        className="fixed inset-x-0 top-0 z-50 border-b border-black/5 bg-[#FFFEFE] shadow-[0_2px_8px_rgba(0,0,0,0.06)]"
-      >
-        <div className="mx-auto flex h-[80px] w-full max-w-[1280px] items-center justify-between gap-8 px-6">
-          <div onMouseLeave={cancelClose}>
-            <Link
-              href="/"
-              className="flex items-center gap-3 text-left"
-              onClick={handleLogoClick}
-              prefetch
-            >
-              <Image src="/logo.png" alt={COMPANY.legalNameEn} width={44} height={44} priority />
-              <span className="text-xl font-extrabold tracking-[0.18em] text-virintira-primary">ViRINTIRA</span>
-            </Link>
-          </div>
-          <nav
-            className="hidden flex-1 items-center justify-center gap-10 lg:flex"
-            aria-label="Primary"
-            role="menubar"
-          >
-            {primaryItems.map((entry) => {
-              if (entry.type === 'mega') {
-                if (!hasMegaMenu) {
-                  return null;
-                }
-                return (
-                  <div
-                    key={entry.key}
-                    className="relative"
-                    onMouseEnter={() => scheduleOpen('__mega')}
-                    onMouseLeave={() => scheduleClose('__mega')}
-                  >
-                    <button
-                      type="button"
-                      className={`nv-underline inline-flex items-center gap-2 px-2 py-1 text-[0.78rem] font-semibold uppercase tracking-[0.26em] text-[#2A2424] transition-colors duration-150 ease-out focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-virintira-primary/30 ${
-                        activeDropdown === '__mega' || megaMenuActive ? 'text-virintira-primary' : ''
-                      }`}
-                      aria-haspopup="true"
-                      aria-expanded={activeDropdown === '__mega'}
-                      aria-current={megaMenuActive ? 'page' : undefined}
-                      onClick={() =>
-                        setActiveDropdown((prev) => (prev === '__mega' ? null : '__mega'))
-                      }
-                      onKeyDown={(event) => handleKeyDown(event, '__mega')}
-                      onFocus={() => scheduleOpen('__mega')}
-                    >
-                      <span className="flex items-center gap-2">
-                        <span>{data.megaMenu.triggerLabel}</span>
-                        <FontAwesomeIcon
-                          icon={faChevronDown}
-                          className={`text-xs transition-transform duration-150 ease-out ${
-                            activeDropdown === '__mega' ? 'rotate-180 text-virintira-primary' : ''
-                          }`}
-                        />
-                      </span>
-                    </button>
-                    {activeDropdown === '__mega' ? (
-                      <MegaMenu
-                        columns={data.megaMenu.columns}
-                        onMouseEnter={cancelClose}
-                        onMouseLeave={() => scheduleClose('__mega')}
-                        onLinkClick={closeDropdown}
-                      />
-                    ) : null}
-                  </div>
-                );
+      <div className="mx-auto flex h-[var(--nav-h)] w-full max-w-[1280px] items-center gap-6 px-5 sm:px-6 lg:px-8">
+        <Link
+          href="/"
+          className="flex shrink-0 items-center gap-3"
+          onClick={handleLogoClick}
+          prefetch
+        >
+          <Image
+            src="/logo.png"
+            alt={COMPANY.legalNameEn}
+            width={44}
+            height={44}
+            priority
+          />
+          <span className="text-[20px] font-bold tracking-[0.02em] text-[#A70909]">ViRINTIRA</span>
+        </Link>
+        <nav
+          className="hidden h-full flex-1 items-end justify-center gap-10 pb-[18px] lg:flex"
+          aria-label="Primary"
+          role="menubar"
+        >
+          {primaryItems.map((entry) => {
+            if (entry.type === 'mega') {
+              if (!hasMegaMenu) {
+                return null;
               }
-
-              const item = entry.item;
-              const icon = getNavIcon(item);
-              const hasMenu = Boolean(item.subMenu?.length);
-              const key = item.label || entry.key;
-              const isActive =
-                isInternalMatch(currentPath, item.href) || hasActiveSubmenu(item, currentPath);
-              const linkClassName = `nv-underline inline-flex items-center gap-2 px-2 py-1 text-[0.78rem] font-semibold uppercase tracking-[0.26em] text-[#2A2424] transition-colors duration-150 ease-out focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-virintira-primary/30 ${
-                activeDropdown === key || isActive ? 'text-virintira-primary' : ''
-              }`;
-
-              const content = (
-                <span className="flex items-center gap-2">
-                  {icon ? (
-                    <FontAwesomeIcon icon={icon} className="text-sm text-virintira-primary" />
-                  ) : null}
-                  <span>{item.label}</span>
-                  {hasMenu ? (
-                    <FontAwesomeIcon
-                      icon={faChevronDown}
-                      className={`text-xs transition-transform duration-150 ease-out ${
-                        activeDropdown === key || isActive ? 'rotate-180 text-virintira-primary' : ''
-                      }`}
+              const isActive = activeDropdown === '__mega' || megaMenuActive;
+              return (
+                <div
+                  key={entry.key}
+                  className="relative h-full"
+                  onMouseEnter={() => scheduleOpen('__mega')}
+                  onMouseLeave={() => scheduleClose('__mega')}
+                >
+                  <button
+                    type="button"
+                    className={linkBaseClasses}
+                    aria-haspopup="true"
+                    aria-expanded={activeDropdown === '__mega'}
+                    aria-current={megaMenuActive ? 'page' : undefined}
+                    onClick={() =>
+                      setActiveDropdown((prev) => (prev === '__mega' ? null : '__mega'))
+                    }
+                    onKeyDown={(event) => handleKeyDown(event, '__mega')}
+                    onFocus={() => scheduleOpen('__mega')}
+                    data-active={isActive}
+                  >
+                    <span className="flex items-center gap-2 text-[15px] leading-none">
+                      <span>{data.megaMenu.triggerLabel}</span>
+                    </span>
+                  </button>
+                  {activeDropdown === '__mega' ? (
+                    <MegaMenu
+                      columns={data.megaMenu.columns}
+                      onMouseEnter={cancelClose}
+                      onMouseLeave={() => scheduleClose('__mega')}
+                      onLinkClick={closeDropdown}
                     />
                   ) : null}
-                </span>
+                </div>
               );
+            }
 
-              if (hasMenu) {
-                return (
-                  <div
-                    key={key}
-                    className="relative"
-                    onMouseEnter={() => scheduleOpen(key)}
-                    onMouseLeave={() => scheduleClose(key)}
-                  >
-                    <button
-                      type="button"
-                      className={linkClassName}
-                      aria-haspopup="true"
-                      aria-expanded={activeDropdown === key}
-                      aria-current={isActive ? 'page' : undefined}
-                      onClick={() =>
-                        setActiveDropdown((prev) => (prev === key ? null : key))
-                      }
-                      onKeyDown={(event) => handleKeyDown(event, key)}
-                      onFocus={() => scheduleOpen(key)}
-                    >
-                      {content}
-                    </button>
-                    {activeDropdown === key ? (
-                      <SubMenu
-                        sections={item.subMenu ?? []}
-                        onItemClick={closeDropdown}
-                        onMouseEnter={cancelClose}
-                        onMouseLeave={() => scheduleClose(key)}
-                      />
-                    ) : null}
-                  </div>
-                );
-              }
+            const item = entry.item;
+            const icon = getNavIcon(item);
+            const hasMenu = Boolean(item.subMenu?.length);
+            const key = item.label || entry.key;
+            const isActive =
+              isInternalMatch(currentPath, item.href) || hasActiveSubmenu(item, currentPath);
 
-              const href = item.href ?? '#';
-              const linkProps = {
-                className: linkClassName,
-                'aria-current': isActive ? 'page' : undefined,
-                onFocus: closeDropdown,
-                onMouseEnter: () => scheduleOpen(key),
-                onMouseLeave: () => scheduleClose(key),
-              } as const;
+            const className = `${linkBaseClasses} ${
+              activeDropdown === key || isActive ? 'text-[#A70909]' : ''
+            }`;
 
-              if (href.startsWith('#') || isExternalHref(href)) {
-                return (
-                  <a key={key} href={href} {...linkProps}>
-                    {content}
-                  </a>
-                );
-              }
+            const showChevron = hasMenu && icon === undefined;
 
+            const content = (
+              <span className="flex items-center gap-2 text-[15px] leading-none">
+                {icon ? (
+                  <FontAwesomeIcon
+                    icon={icon}
+                    className="text-base text-[#A70909] motion-safe:animate-bounce"
+                  />
+                ) : null}
+                <span>{item.label}</span>
+                {showChevron ? (
+                  <FontAwesomeIcon
+                    icon={faChevronDown}
+                    className={`text-xs transition-transform duration-200 ${
+                      activeDropdown === key || isActive ? 'rotate-180 text-[#A70909]' : ''
+                    }`}
+                  />
+                ) : null}
+              </span>
+            );
+
+            if (hasMenu) {
               return (
-                <Link key={key} href={normalizeInternalHref(href)} {...linkProps} prefetch>
-                  {content}
-                </Link>
-              );
-            })}
-          </nav>
-          <div className="hidden items-center gap-6 lg:flex">
-            <div ref={searchContainerRef} className="relative h-10 w-10">
-              <form
-                className="nv-search-collapse absolute right-12 top-1/2 flex h-10 -translate-y-1/2 items-center gap-3 rounded-md bg-white px-4 text-sm shadow-[0_10px_32px_rgba(167,9,9,0.12)] ring-1 ring-virintira-primary/20"
-                data-open={searchOpen}
-                onSubmit={handleSearchSubmit}
-              >
-                <input
-                  ref={searchDesktopInputRef}
-                  type="search"
-                  value={searchQuery}
-                  onChange={handleSearchChange}
-                  onBlur={handleSearchBlur}
-                  placeholder={searchPlaceholder}
-                  aria-label={searchPlaceholder}
-                  className="w-full border-none bg-transparent text-neutral-800 placeholder:text-neutral-400 focus:outline-none"
-                />
-                <button
-                  type="submit"
-                  className="flex h-8 w-8 items-center justify-center rounded-full bg-virintira-primary text-white shadow-[0_10px_26px_rgba(167,9,9,0.28)] transition-colors duration-150 ease-out hover:bg-[#C9341F] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-virintira-primary/40"
+                <div
+                  key={key}
+                  className="relative h-full"
+                  onMouseEnter={() => scheduleOpen(key)}
+                  onMouseLeave={() => scheduleClose(key)}
                 >
-                  <span className="sr-only">{searchSubmitLabel}</span>
-                  <FontAwesomeIcon icon={faMagnifyingGlass} className="text-sm" />
-                </button>
-              </form>
-              <SearchToggle
-                active={searchOpen}
-                srLabel={searchToggleLabel}
-                onClick={handleSearchToggle}
-                onBlur={handleSearchBlur}
-                className="absolute right-0 top-1/2 -translate-y-1/2"
-              />
-            </div>
-            <LanguageSwitcher />
-          </div>
-          <div className="flex items-center gap-4 lg:hidden">
-            <SearchToggle
-              active={searchOpen}
-              srLabel={searchToggleLabel}
-              onClick={handleSearchToggle}
-            />
-            <LanguageSwitcher />
-            <HamburgerButton
-              isOpen={mobileOpen}
-              onClick={() => setMobileOpen((prev) => !prev)}
-            />
-          </div>
+                  <button
+                    type="button"
+                    className={className}
+                    aria-haspopup="true"
+                    aria-expanded={activeDropdown === key}
+                    aria-current={isActive ? 'page' : undefined}
+                    onClick={() =>
+                      setActiveDropdown((prev) => (prev === key ? null : key))
+                    }
+                    onKeyDown={(event) => handleKeyDown(event, key)}
+                    onFocus={() => scheduleOpen(key)}
+                  >
+                    {content}
+                  </button>
+                  {activeDropdown === key ? (
+                    <SubMenu
+                      sections={item.subMenu ?? []}
+                      onItemClick={closeDropdown}
+                      onMouseEnter={cancelClose}
+                      onMouseLeave={() => scheduleClose(key)}
+                    />
+                  ) : null}
+                </div>
+              );
+            }
+
+            const href = item.href ?? '#';
+            const linkProps = {
+              className,
+              'aria-current': isActive ? 'page' : undefined,
+              onFocus: closeDropdown,
+              onMouseEnter: () => scheduleOpen(key),
+              onMouseLeave: () => scheduleClose(key),
+            } as const;
+
+            if (href.startsWith('#') || isExternalHref(href)) {
+              return (
+                <a key={key} href={href} {...linkProps}>
+                  {content}
+                </a>
+              );
+            }
+
+            return (
+              <Link key={key} href={normalizeInternalHref(href)} {...linkProps} prefetch>
+                {content}
+              </Link>
+            );
+          })}
+        </nav>
+        <div className="ml-auto hidden items-center gap-5 lg:flex">
+          <SearchToggle
+            active={searchOpen}
+            srLabel={searchToggleLabel}
+            onClick={handleSearchToggle}
+          />
+          <LanguageSwitcher />
         </div>
+        <div className="ml-auto flex items-center gap-3 lg:hidden">
+          <SearchToggle
+            active={searchOpen}
+            srLabel={searchToggleLabel}
+            onClick={handleSearchToggle}
+          />
+          <LanguageSwitcher />
+          <HamburgerButton
+            isOpen={mobileOpen}
+            onClick={() => setMobileOpen((prev) => !prev)}
+          />
+        </div>
+      </div>
+      {searchOpen ? (
         <div
-          ref={searchMobilePanelRef}
-          className="overflow-hidden border-t border-virintira-primary/10 bg-[#FFFEFE] px-6 transition-all duration-200 ease-out-soft data-[open=false]:max-h-0 data-[open=false]:opacity-0 data-[open=true]:max-h-32 data-[open=true]:opacity-100 lg:hidden"
-          data-open={searchOpen}
+          ref={searchOverlayRef}
+          className="fixed left-1/2 top-[calc(var(--nav-h)+12px)] z-[60] w-[min(90vw,820px)] -translate-x-1/2 px-5 hidden lg:block"
         >
           <form
-            className="mx-auto my-4 flex max-w-md items-center gap-3 rounded-full border border-virintira-primary/20 bg-white px-5 py-3 shadow-[0_12px_32px_rgba(167,9,9,0.12)]"
             onSubmit={handleSearchSubmit}
+            className="rounded-full border border-black/10 bg-white shadow-lg"
           >
-            <input
-              ref={searchMobileInputRef}
-              type="search"
-              value={searchQuery}
-              onChange={handleSearchChange}
-              onBlur={handleSearchBlur}
-              placeholder={mobilePlaceholder}
-              aria-label={mobilePlaceholder}
-              className="flex-1 border-none bg-transparent text-sm text-neutral-800 placeholder:text-neutral-400 focus:outline-none"
-            />
-            <button
-              type="submit"
-              className="flex h-9 w-9 items-center justify-center rounded-full bg-virintira-primary text-white shadow-[0_10px_26px_rgba(167,9,9,0.28)] transition-colors duration-150 ease-out hover:bg-[#C9341F] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-virintira-primary/40"
-            >
-              <span className="sr-only">{searchSubmitLabel}</span>
-              <FontAwesomeIcon icon={faMagnifyingGlass} className="text-sm" />
-            </button>
+            <div className="flex h-12 items-center gap-3 px-5">
+              <FontAwesomeIcon icon={faSearch} className="text-[#A70909]" />
+              <input
+                ref={searchDesktopInputRef}
+                type="search"
+                value={searchQuery}
+                onChange={handleSearchChange}
+                onBlur={handleDesktopBlur}
+                placeholder={searchPlaceholder}
+                aria-label={searchPlaceholder}
+                className="h-full flex-1 bg-transparent text-[15px] text-neutral-800 placeholder:text-neutral-400 outline-none"
+              />
+              <button
+                type="submit"
+                className="rounded-full bg-[#A70909] px-4 py-1 text-sm font-medium text-white transition-colors duration-200 hover:bg-[#8F0707] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#A70909]/40"
+              >
+                {searchSubmitLabel}
+              </button>
+            </div>
           </form>
         </div>
-      </header>
+      ) : null}
+      <div
+        ref={searchMobilePanelRef}
+        className="overflow-hidden border-t border-black/10 bg-white px-5 transition-all duration-300 ease-out-soft data-[open=false]:max-h-0 data-[open=false]:opacity-0 data-[open=true]:max-h-32 data-[open=true]:opacity-100 lg:hidden"
+        data-open={searchOpen}
+      >
+        <form
+          className="mx-auto my-4 flex max-w-md items-center gap-3 rounded-full border border-black/10 bg-white px-5 py-3 shadow-lg"
+          onSubmit={handleSearchSubmit}
+        >
+          <FontAwesomeIcon icon={faSearch} className="text-[#A70909]" />
+          <input
+            ref={searchMobileInputRef}
+            type="search"
+            value={searchQuery}
+            onChange={handleSearchChange}
+            placeholder={mobilePlaceholder}
+            aria-label={mobilePlaceholder}
+            className="flex-1 border-none bg-transparent text-sm text-neutral-800 placeholder:text-neutral-400 outline-none"
+          />
+          <button
+            type="submit"
+            className="rounded-full bg-[#A70909] px-4 py-1 text-sm font-medium text-white transition-colors duration-200 hover:bg-[#8F0707] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#A70909]/40"
+          >
+            {searchSubmitLabel}
+          </button>
+        </form>
+      </div>
       <MobileMenu
         open={mobileOpen}
         nav={data.nav}

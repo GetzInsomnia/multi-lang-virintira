@@ -129,7 +129,9 @@ export function LanguageSwitcher({ className = '' }: LanguageSwitcherProps) {
     <div ref={containerRef} className={`relative ${className}`.trim()}>
       <button
         type="button"
-        className="flex h-10 w-10 items-center justify-center rounded-full text-lg text-virintira-primary transition-opacity duration-150 ease-out hover:opacity-80 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-virintira-primary/40"
+        className={`inline-flex items-center justify-center p-2 text-lg text-[#221F1F] transition-colors duration-200 hover:text-[#A70909] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#A70909]/30 ${
+          open ? 'text-[#A70909]' : ''
+        }`}
         aria-haspopup="menu"
         aria-expanded={open}
         aria-label={t('language.dropdownLabel')}
@@ -139,13 +141,13 @@ export function LanguageSwitcher({ className = '' }: LanguageSwitcherProps) {
         <FontAwesomeIcon icon={faGlobe} />
       </button>
       <div
-        className="absolute right-0 mt-3 w-32 bg-white nv-lang-menu transition-all duration-150 ease-out data-[open=false]:pointer-events-none data-[open=false]:opacity-0 data-[open=false]:translate-y-1 data-[open=true]:opacity-100 data-[open=true]:translate-y-0"
+        className="absolute right-0 top-full z-50 mt-2 w-32 rounded-2xl border border-black/10 bg-white shadow-xl transition-transform duration-150 ease-out data-[open=false]:pointer-events-none data-[open=false]:-translate-y-1 data-[open=false]:opacity-0 data-[open=true]:translate-y-0 data-[open=true]:opacity-100"
         data-open={open}
         role="presentation"
       >
         <ul
           ref={listRef}
-          className="flex flex-col"
+          className="flex flex-col gap-1 p-2"
           role="menu"
           aria-label={t('language.dropdownLabel')}
         >
@@ -154,7 +156,7 @@ export function LanguageSwitcher({ className = '' }: LanguageSwitcherProps) {
               <button
                 type="button"
                 role="menuitemradio"
-                className="nv-lang-item w-full text-left text-sm font-semibold uppercase tracking-[0.28em] text-neutral-700 transition-colors duration-150 ease-out data-[selected=true]:text-virintira-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-virintira-primary/40 disabled:cursor-not-allowed disabled:opacity-60"
+                className="w-full rounded-lg px-3 py-2 text-left text-sm font-medium uppercase tracking-[0.24em] text-[#1E1B1B] transition-colors duration-150 ease-out data-[selected=true]:bg-[#A70909]/10 data-[selected=true]:text-[#A70909] hover:bg-black/5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#A70909]/30 disabled:cursor-not-allowed disabled:opacity-60"
                 data-selected={code === locale}
                 aria-checked={code === locale}
                 onClick={() => handleSelect(code)}

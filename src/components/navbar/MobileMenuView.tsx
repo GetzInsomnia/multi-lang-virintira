@@ -58,7 +58,7 @@ export function MobileMenuView({
           <button
             type="button"
             onClick={onBack}
-            className="flex h-10 w-10 items-center justify-center rounded-full border border-virintira-primary/25 bg-white text-virintira-primary shadow-[0_4px_8px_rgba(167,9,9,0.12)] transition-all duration-200 ease-out hover:bg-virintira-primary hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-virintira-primary/40"
+            className="flex h-10 w-10 items-center justify-center rounded-full border border-[#A70909]/20 bg-white text-[#A70909] shadow-[0_4px_8px_rgba(167,9,9,0.12)] transition-colors duration-200 ease-out hover:bg-[#A70909] hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#A70909]/40"
           >
             <FontAwesomeIcon icon={faChevronLeft} />
             <span className="sr-only">Back</span>
@@ -66,11 +66,11 @@ export function MobileMenuView({
         ) : (
           <span className="h-10 w-10" />
         )}
-        <h2 className="text-lg font-semibold text-virintira-primary">{title}</h2>
+        <h2 className="text-lg font-semibold text-[#A70909]">{title}</h2>
         <button
           type="button"
           onClick={onClose}
-          className="flex h-10 w-10 items-center justify-center rounded-full border border-virintira-primary/25 bg-white text-virintira-primary shadow-[0_4px_8px_rgba(167,9,9,0.12)] transition-all duration-200 ease-out hover:bg-virintira-primary hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-virintira-primary/40"
+          className="flex h-10 w-10 items-center justify-center rounded-full border border-[#A70909]/20 bg-white text-[#A70909] shadow-[0_4px_8px_rgba(167,9,9,0.12)] transition-colors duration-200 ease-out hover:bg-[#A70909] hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#A70909]/40"
           aria-label="Close menu"
         >
           <FontAwesomeIcon icon={faXmark} />
@@ -83,7 +83,7 @@ export function MobileMenuView({
               <li key={item.label} role="none">
                 <button
                   type="button"
-                  className="flex w-full items-center justify-between gap-4 rounded-xl bg-virintira-primary/10 px-4 py-3 text-left text-sm font-semibold text-neutral-800 transition-colors duration-150 ease-out hover:bg-virintira-primary/20 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-virintira-primary/40"
+                  className="flex w-full items-center justify-between gap-4 rounded-xl bg-[#A70909]/10 px-4 py-3 text-left text-sm font-semibold text-neutral-800 transition-colors duration-150 ease-out hover:bg-[#A70909]/20 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#A70909]/40"
                   onClick={() => onSelectSubMenu?.(item.items, item.label)}
                 >
                   <span>
@@ -92,7 +92,7 @@ export function MobileMenuView({
                       <span className="mt-1 block text-xs font-medium text-neutral-500">{item.description}</span>
                     ) : null}
                   </span>
-                  <FontAwesomeIcon icon={faChevronRight} className="text-sm text-virintira-primary" />
+                  <FontAwesomeIcon icon={faChevronRight} className="text-sm text-[#A70909]" />
                 </button>
               </li>
             );
@@ -114,28 +114,28 @@ export function MobileMenuView({
                 <a
                   href={href}
                   onClick={onClose}
-                  className="block rounded-xl px-4 py-3 text-left text-sm font-semibold text-neutral-800 transition-colors duration-150 ease-out hover:bg-virintira-primary/10 hover:text-virintira-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-virintira-primary/40"
+                  className="block rounded-xl px-4 py-3 text-left text-sm font-semibold text-neutral-800 transition-colors duration-150 ease-out hover:bg-[#A70909]/10 hover:text-[#A70909] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#A70909]/40"
                   role="menuitem"
                 >
-                  {content}
-                </a>
-              </li>
-            );
-          }
-
-          return (
-            <li key={item.label} role="none">
-              <Link
-                href={normalizeInternalHref(href)}
-                onClick={onClose}
-                className="block rounded-xl px-4 py-3 text-left text-sm font-semibold text-neutral-800 transition-colors duration-150 ease-out hover:bg-virintira-primary/10 hover:text-virintira-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-virintira-primary/40"
-                role="menuitem"
-                prefetch
-              >
                 {content}
-              </Link>
+              </a>
             </li>
           );
+        }
+
+        return (
+          <li key={item.label} role="none">
+            <Link
+              href={normalizeInternalHref(href)}
+              onClick={onClose}
+              className="block rounded-xl px-4 py-3 text-left text-sm font-semibold text-neutral-800 transition-colors duration-150 ease-out hover:bg-[#A70909]/10 hover:text-[#A70909] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#A70909]/40"
+              role="menuitem"
+              prefetch
+            >
+              {content}
+            </Link>
+          </li>
+        );
         })}
       </ul>
     </div>
