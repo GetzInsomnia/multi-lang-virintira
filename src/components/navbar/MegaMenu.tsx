@@ -1,10 +1,6 @@
 "use client";
 
 import { memo, useEffect, useState } from 'react';
-
-import Image from 'next/image';
-
-import { COMPANY } from '@/data/company';
 import { Link } from '@/i18n/routing';
 import { isExternalHref, normalizeInternalHref } from '@/lib/links';
 
@@ -31,7 +27,7 @@ function MegaMenuComponent({ columns, onMouseEnter, onMouseLeave, onLinkClick }:
 
   return (
     <div
-      className="pointer-events-none fixed left-0 right-0 top-[var(--nav-h)] z-40 w-full transition-all duration-150 ease-out data-[open=false]:translate-y-2 data-[open=false]:opacity-0 data-[open=true]:pointer-events-auto data-[open=true]:translate-y-0 data-[open=true]:opacity-100"
+      className="pointer-events-none absolute left-0 right-0 top-full z-40 transition-all duration-150 ease-out data-[open=false]:translate-y-2 data-[open=false]:opacity-0 data-[open=true]:pointer-events-auto data-[open=true]:translate-y-0 data-[open=true]:opacity-100"
       data-open={visible}
       onMouseEnter={onMouseEnter}
       onMouseLeave={onMouseLeave}
@@ -41,7 +37,7 @@ function MegaMenuComponent({ columns, onMouseEnter, onMouseLeave, onLinkClick }:
         className="mx-auto max-w-[1280px] rounded-b-3xl border-t border-black/5 bg-white shadow-2xl"
         role="menu"
       >
-        <div className="grid gap-8 px-8 py-10 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-5">
+        <div className="grid gap-x-10 gap-y-8 px-10 py-12 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
           {columns.map((column) => (
             <div key={column.title} className="flex flex-col gap-3">
               <div className="flex flex-col gap-1.5">
@@ -94,29 +90,6 @@ function MegaMenuComponent({ columns, onMouseEnter, onMouseLeave, onLinkClick }:
               </ul>
             </div>
           ))}
-        </div>
-        <div className="border-t border-[#A70909]/10 bg-gradient-to-r from-[#FFF7F7]/95 to-white/95" role="presentation">
-          <div className="mx-auto flex max-w-[1280px] items-center justify-between gap-6 px-8 py-6 text-xs text-neutral-600">
-            <div className="flex items-center gap-3">
-              <Image
-                src="/logo.png"
-                alt={COMPANY.legalNameEn}
-                width={56}
-                height={56}
-                className="rounded-2xl shadow-[0_10px_30px_rgba(167,9,9,0.15)]"
-              />
-              <div>
-                <p className="font-semibold text-[#A70909]">{COMPANY.legalNameTh}</p>
-                <p className="text-[0.7rem] uppercase tracking-[0.12em] text-neutral-500">
-                  {COMPANY.legalNameEn}
-                </p>
-              </div>
-            </div>
-            <div className="flex flex-col items-end gap-1 text-right">
-              <span className="font-semibold text-[#A70909]">{COMPANY.phoneDisplay}</span>
-              <span>{COMPANY.email}</span>
-            </div>
-          </div>
         </div>
       </div>
     </div>
