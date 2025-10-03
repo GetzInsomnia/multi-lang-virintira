@@ -40,14 +40,14 @@ export default function MobileMenuView({
         {onBack ? (
           <button
             type="button"
-            className="flex h-10 w-10 items-center justify-center rounded-full bg-gray-100 text-[var(--nav-text)]"
+            className="flex h-10 w-10 items-center justify-center rounded-full bg-gray-100 text-[#2A2A2A]"
             onClick={onBack}
             aria-label="Back"
           >
             <FontAwesomeIcon icon={faChevronLeft} />
           </button>
         ) : null}
-        <span className="text-lg font-semibold text-[var(--nav-text)]">{title}</span>
+        <span className="text-lg font-semibold text-[#2A2A2A]">{title}</span>
       </div>
       <ul className="flex flex-col gap-4">
         {items.map((item) => {
@@ -60,9 +60,9 @@ export default function MobileMenuView({
                   className="flex w-full flex-col items-start gap-1 text-left"
                   onClick={() => onSelectSubMenu(item.items, item.label)}
                 >
-                  <span className="text-base font-semibold text-[var(--nav-text)]">{item.label}</span>
+                  <span className="text-base font-semibold text-[#2A2A2A]">{item.label}</span>
                   {item.description ? (
-                    <span className="text-sm text-[var(--nav-muted)]">{item.description}</span>
+                    <span className="text-sm text-[#6B7280]">{item.description}</span>
                   ) : null}
                 </button>
               </li>
@@ -77,9 +77,9 @@ export default function MobileMenuView({
                   className="flex flex-col gap-1 text-left"
                   onClick={onClose}
                 >
-                  <span className="text-base font-semibold text-[var(--nav-text)]">{item.label}</span>
+                  <span className="text-base font-semibold text-[#2A2A2A]">{item.label}</span>
                   {item.description ? (
-                    <span className="text-sm text-[var(--nav-muted)]">{item.description}</span>
+                    <span className="text-sm text-[#6B7280]">{item.description}</span>
                   ) : null}
                 </Link>
               </li>
@@ -88,9 +88,9 @@ export default function MobileMenuView({
 
           return (
             <li key={item.label}>
-              <span className="text-base font-semibold text-[var(--nav-text)]">{item.label}</span>
+              <span className="text-base font-semibold text-[#2A2A2A]">{item.label}</span>
               {item.description ? (
-                <span className="text-sm text-[var(--nav-muted)]">{item.description}</span>
+                <span className="text-sm text-[#6B7280]">{item.description}</span>
               ) : null}
             </li>
           );

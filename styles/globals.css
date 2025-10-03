@@ -3,12 +3,6 @@
 @tailwind utilities;
 
 :root {
-  --header-h: 72px;
-  --brand-red: #a70909;
-  --nav-text: #2a2a2a;
-  --nav-muted: #6b7280;
-  --surface: #ffffff;
-  --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.08);
   --font-size-body: clamp(0.95rem, 0.88rem + 0.35vw, 1.1rem);
   --font-size-small: clamp(0.85rem, 0.8rem + 0.25vw, 0.95rem);
   --font-size-h1: clamp(2.25rem, 1.5rem + 2.4vw, 3.5rem);
