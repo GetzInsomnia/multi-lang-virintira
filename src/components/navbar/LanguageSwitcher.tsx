@@ -92,38 +92,35 @@ export default function LanguageSwitcher({
 
       <div
         id="language-menu-panel"
-        className="nav-pop pointer-events-none data-[open=true]:pointer-events-auto"
+        className="pointer-events-none absolute top-full right-0 z-40 mt-4 opacity-0 transition-opacity duration-150 ease-out data-[open=true]:pointer-events-auto data-[open=true]:opacity-100"
         data-open={open ? 'true' : 'false'}
         aria-hidden={open ? undefined : 'true'}
-        style={{ opacity: open ? 1 : 0, transition: 'opacity 150ms ease-out' }}
       >
-        <div className="flex justify-center">
-          <div
-            ref={panelRef}
-            className="w-[min(360px,92vw)] rounded-2xl bg-[var(--surface)] p-2 shadow-[var(--shadow-lg)]"
-          >
-            <ul className="max-h-[60vh] overflow-y-auto">
-              {codes.map((code) => {
-                const normalized = code.toLowerCase();
-                const href = `/${normalized}`;
-                const isActive = normalized === currentLocale.toLowerCase();
-                const itemClasses = isActive
-                  ? 'block rounded-xl px-4 py-2 text-[16px] font-semibold text-[var(--brand-red)] bg-gray-100'
-                  : 'block rounded-xl px-4 py-2 text-[16px] font-semibold text-[var(--nav-text)] transition-colors duration-150 hover:bg-gray-100';
-                return (
-                  <li key={code}>
-                    <Link
-                      href={href}
-                      className={itemClasses}
-                      onClick={() => onOpenChange(false)}
-                    >
-                      {normalized.toUpperCase()}
-                    </Link>
-                  </li>
-                );
-              })}
-            </ul>
-          </div>
+        <div
+          ref={panelRef}
+          className="w-[min(360px,92vw)] rounded-xl bg-[var(--surface)] p-2 shadow-2xl"
+        >
+          <ul className="max-h-80 overflow-y-auto">
+            {codes.map((code) => {
+              const normalized = code.toLowerCase();
+              const href = `/${normalized}`;
+              const isActive = normalized === currentLocale.toLowerCase();
+              const itemClasses = isActive
+                ? 'block rounded-xl px-4 py-2 text-[16px] font-semibold text-[var(--brand-red)] bg-gray-100'
+                : 'block rounded-xl px-4 py-2 text-[16px] font-semibold text-[var(--nav-text)] transition-colors duration-150 hover:bg-gray-100';
+              return (
+                <li key={code}>
+                  <Link
+                    href={href}
+                    className={itemClasses}
+                    onClick={() => onOpenChange(false)}
+                  >
+                    {normalized.toUpperCase()}
+                  </Link>
+                </li>
+              );
+            })}
+          </ul>
         </div>
       </div>
     </>
