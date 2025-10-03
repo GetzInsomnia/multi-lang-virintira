@@ -5,7 +5,7 @@ import { useEffect, useMemo, useRef } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGlobe } from '@fortawesome/free-solid-svg-icons';
 
-import { Link } from '@/i18n/routing';
+import { usePathname, useRouter } from '@/i18n/routing';
 
 const DEFAULT_LOCALES = [
   'th',
@@ -41,11 +41,36 @@ export default function LanguageSwitcher({
 }: LanguageSwitcherProps) {
   const panelRef = useRef<HTMLDivElement | null>(null);
   const buttonRef = useRef<HTMLButtonElement | null>(null);
+  const router = useRouter();
+  const pathname = usePathname() || '/';
   const codes = useMemo(() => {
     const unique = new Set(locales.map((code) => code.toLowerCase()));
     unique.add(currentLocale.toLowerCase());
     return Array.from(unique);
   }, [currentLocale, locales]);
+
+  const buildPathForLocale = (targetLocale: string) => {
+    const normalizedLocale = targetLocale.toLowerCase();
+    const segments = pathname.split('/').filter(Boolean);
+
+    if (!segments.length) {
+      return `/${normalizedLocale}`;
+    }
+
+    const [, ...rest] = segments;
+    return `/${[normalizedLocale, ...rest].join('/')}`;
+  };
+
+  const handleSelect = (targetLocale: string) => {
+    const normalizedLocale = targetLocale.toLowerCase();
+    const nextPath = buildPathForLocale(normalizedLocale);
+
+    if (nextPath !== pathname) {
+      router.push(nextPath);
+    }
+
+    onOpenChange(false);
+  };
 
   useEffect(() => {
     if (!open) {
@@ -103,20 +128,20 @@ export default function LanguageSwitcher({
           <ul className="max-h-80 overflow-y-auto">
             {codes.map((code) => {
               const normalized = code.toLowerCase();
-              const href = `/${normalized}`;
               const isActive = normalized === currentLocale.toLowerCase();
               const itemClasses = isActive
                 ? 'block rounded-xl px-4 py-2 text-[16px] font-semibold text-[#A70909] bg-gray-100'
                 : 'block rounded-xl px-4 py-2 text-[16px] font-semibold text-[#2A2A2A] transition-colors duration-150 hover:bg-gray-100';
               return (
                 <li key={code}>
-                  <Link
-                    href={href}
+                  <button
+                    type="button"
                     className={itemClasses}
-                    onClick={() => onOpenChange(false)}
+                    onClick={() => handleSelect(code)}
+                    aria-current={isActive ? 'true' : undefined}
                   >
                     {normalized.toUpperCase()}
-                  </Link>
+                  </button>
                 </li>
               );
             })}
