@@ -4,6 +4,17 @@ const assert = require('node:assert/strict');
 const React = require('react');
 const { renderToStaticMarkup } = require('react-dom/server');
 
+const LANGUAGE_SWITCHER_MODULE_IDS = new Set([
+  '../components/LanguageSwitcher',
+  './components/LanguageSwitcher',
+  './../components/LanguageSwitcher',
+  '../../components/LanguageSwitcher',
+  '../app/[locale]/(components)/LanguageSwitcher',
+  './app/[locale]/(components)/LanguageSwitcher',
+  './../app/[locale]/(components)/LanguageSwitcher',
+  '../../app/[locale]/(components)/LanguageSwitcher',
+]);
+
 test('ServiceJsonLd escapes unsafe characters', () => {
   const Module = require('module');
   const originalRequire = Module.prototype.require;
@@ -90,7 +101,7 @@ test('index page JSON-LD escapes unsafe characters', () => {
         SiteLinksSearchBoxJsonLd: () => null,
       };
     }
-    if (request === '../components/LanguageSwitcher' || request === './components/LanguageSwitcher' || request === './../components/LanguageSwitcher') {
+    if (LANGUAGE_SWITCHER_MODULE_IDS.has(request)) {
       return () => null;
     }
     if (request === 'next/script') {
@@ -142,11 +153,7 @@ test('index page JSON-LD includes SpeakableSpecification', () => {
         SiteLinksSearchBoxJsonLd: () => null,
       };
     }
-    if (
-      request === '../components/LanguageSwitcher' ||
-      request === './components/LanguageSwitcher' ||
-      request === './../components/LanguageSwitcher'
-    ) {
+    if (LANGUAGE_SWITCHER_MODULE_IDS.has(request)) {
       return () => null;
     }
     if (request === 'next/script') {
@@ -202,10 +209,7 @@ test('blog page JSON-LD escapes unsafe characters', () => {
         BreadcrumbJsonLd: () => null,
       };
     }
-    if (
-      request === '../../components/LanguageSwitcher' ||
-      request === '../components/LanguageSwitcher'
-    ) {
+    if (LANGUAGE_SWITCHER_MODULE_IDS.has(request)) {
       return () => null;
     }
     if (request === 'next/head') {
@@ -261,10 +265,7 @@ test('blog page JSON-LD includes publisherName', () => {
         BreadcrumbJsonLd: () => null,
       };
     }
-    if (
-      request === '../../components/LanguageSwitcher' ||
-      request === '../components/LanguageSwitcher'
-    ) {
+    if (LANGUAGE_SWITCHER_MODULE_IDS.has(request)) {
       return () => null;
     }
     if (request === 'next/head') {
@@ -321,10 +322,7 @@ test('how-to page JSON-LD escapes unsafe characters', () => {
         BreadcrumbJsonLd: () => null,
       };
     }
-    if (
-      request === '../../components/LanguageSwitcher' ||
-      request === '../components/LanguageSwitcher'
-    ) {
+    if (LANGUAGE_SWITCHER_MODULE_IDS.has(request)) {
       return () => null;
     }
     if (request === 'next/head') {

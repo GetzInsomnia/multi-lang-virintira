@@ -1,6 +1,6 @@
-import type { NavbarData } from '@/components/navbar/types';
+import type { NavbarData } from './types';
 
-import Navbar from '../navbar/Navbar';
+import Navbar from './Navbar';
 
 export default function Header({ data }: { data: NavbarData }) {
   return (
