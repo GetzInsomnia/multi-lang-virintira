@@ -141,7 +141,7 @@ export function MobileMenu({ open, nav, columns, triggerLabel, onClose }: Mobile
         role="dialog"
         aria-modal="true"
         aria-label="Main menu"
-        className="absolute right-0 top-0 h-full w-[min(320px,85vw)] translate-x-full bg-white shadow-[-10px_0_40px_rgba(27,23,52,0.18)] transition-transform duration-300 ease-out data-[open=true]:translate-x-0"
+        className="absolute right-0 top-0 h-full w-[min(320px,85vw)] translate-x-full bg-white shadow-[-12px_0_40px_rgba(0,0,0,0.18)] transition-transform duration-300 ease-out-soft data-[open=true]:translate-x-0"
         data-open={open}
       >
         <div className="relative h-full overflow-hidden">
@@ -164,7 +164,7 @@ export function MobileMenu({ open, nav, columns, triggerLabel, onClose }: Mobile
         aria-label="Close menu"
         tabIndex={open ? 0 : -1}
         aria-hidden={!open}
-        className="pointer-events-none absolute inset-0 bg-black/40 opacity-0 transition-opacity duration-200 ease-out data-[open=true]:pointer-events-auto data-[open=true]:opacity-100"
+        className="pointer-events-none absolute inset-0 bg-black/40 opacity-0 transition-opacity duration-200 ease-out-soft data-[open=true]:pointer-events-auto data-[open=true]:opacity-100"
         data-open={open}
         onClick={onClose}
       />

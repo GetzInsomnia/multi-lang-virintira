@@ -3,7 +3,7 @@
 import type { ButtonHTMLAttributes } from 'react';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faMagnifyingGlass, faXmark } from '@fortawesome/free-solid-svg-icons';
+import { faSearch } from '@fortawesome/free-solid-svg-icons';
 
 type SearchToggleProps = {
   active: boolean;
@@ -17,10 +17,7 @@ export function SearchToggle({
   ...props
 }: SearchToggleProps) {
   const baseClasses =
-    'flex h-10 w-10 items-center justify-center rounded-full border border-virintira-primary/25 bg-white text-virintira-primary shadow-[0_4px_8px_rgba(167,9,9,0.12)] transition-all duration-200 ease-out focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-virintira-primary/40 hover:bg-virintira-primary hover:text-white';
-  const activeClasses = active
-    ? 'bg-virintira-primary text-white shadow-[0_12px_30px_rgba(167,9,9,0.25)]'
-    : '';
+    'inline-flex items-center justify-center p-2 text-[1.05rem] text-[#221F1F] transition-colors duration-200 hover:text-[#A70909] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#A70909]/30';
 
   return (
     <button
@@ -28,11 +25,11 @@ export function SearchToggle({
       aria-pressed={active}
       aria-expanded={active}
       data-active={active}
-      className={`${baseClasses} ${activeClasses} ${className}`.trim()}
+      className={`${baseClasses} ${active ? 'text-[#A70909]' : ''} ${className}`.trim()}
       {...props}
     >
       <span className="sr-only">{srLabel}</span>
-      <FontAwesomeIcon icon={active ? faXmark : faMagnifyingGlass} className="text-[0.95rem]" />
+      <FontAwesomeIcon icon={faSearch} />
     </button>
   );
 }

@@ -21,19 +21,19 @@ function SubMenuComponent({ sections, onItemClick, onMouseEnter, onMouseLeave }:
 
   return (
     <div
-      className="pointer-events-none absolute left-1/2 top-full z-40 mt-8 w-max -translate-x-1/2"
+      className="pointer-events-none absolute left-1/2 top-full z-40 mt-4 w-max -translate-x-1/2"
       role="presentation"
       onMouseEnter={onMouseEnter}
       onMouseLeave={onMouseLeave}
     >
       <div
-        className="pointer-events-auto grid min-w-[260px] gap-6 rounded-2xl bg-white px-8 py-6 text-sm shadow-[0_30px_60px_rgba(27,23,52,0.12)] sm:grid-cols-2"
+        className="pointer-events-auto grid min-w-[260px] gap-6 rounded-2xl border border-black/5 bg-white px-8 py-6 text-sm shadow-xl sm:grid-cols-2"
         role="menu"
       >
         {sections.map((section, index) => (
           <div key={`${section.title ?? 'section'}-${index}`} className="flex flex-col gap-3">
             {section.title ? (
-              <p className="text-xs font-semibold uppercase tracking-[0.18em] text-virintira-primary">
+              <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[#A70909]">
                 {section.title}
               </p>
             ) : null}
@@ -54,7 +54,7 @@ function SubMenuComponent({ sections, onItemClick, onMouseEnter, onMouseLeave }:
                     <li key={item.label} role="none">
                       <a
                         href={href}
-                        className="block rounded-lg px-0 py-1 transition-colors duration-150 ease-out hover:text-virintira-primary focus-visible:text-virintira-primary focus-visible:outline-none"
+                        className="block rounded-lg px-0 py-1 transition-colors duration-150 ease-out hover:text-[#A70909] focus-visible:text-[#A70909] focus-visible:outline-none"
                         role="menuitem"
                         onClick={onItemClick}
                       >
@@ -68,7 +68,7 @@ function SubMenuComponent({ sections, onItemClick, onMouseEnter, onMouseLeave }:
                   <li key={item.label} role="none">
                     <Link
                       href={normalizeInternalHref(href)}
-                      className="block rounded-lg px-0 py-1 transition-colors duration-150 ease-out hover:text-virintira-primary focus-visible:text-virintira-primary focus-visible:outline-none"
+                      className="block rounded-lg px-0 py-1 transition-colors duration-150 ease-out hover:text-[#A70909] focus-visible:text-[#A70909] focus-visible:outline-none"
                       role="menuitem"
                       onClick={onItemClick}
                       prefetch
