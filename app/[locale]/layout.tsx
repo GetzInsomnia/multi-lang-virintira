@@ -7,6 +7,7 @@ import { AnalyticsManager } from '@/components/common/AnalyticsManager';
 import { BusinessJsonLd } from '@/components/common/JsonLd';
 import Footer, { type FooterData, type FooterLink } from '@/components/layout/Footer';
 import Header from '@/components/layout/Header';
+import HeaderSpacer from './(components)/HeaderSpacer';
 import type {
   MegaMenuColumn,
   NavItem,
@@ -186,6 +187,7 @@ export default async function LocaleLayout({ children, params }: LayoutProps) {
       <BusinessJsonLd locale={locale} />
       <div className="flex min-h-screen flex-col">
         <Header data={navbar} />
+        <HeaderSpacer />
         <main className="flex-1">{children}</main>
         <Footer data={footer} />
       </div>

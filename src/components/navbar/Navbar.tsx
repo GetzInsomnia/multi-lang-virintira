@@ -309,12 +309,12 @@ export function Navbar({ data }: { data: NavbarData }) {
   }, [searchOpen]);
 
   const linkBaseClasses =
-    "group relative flex h-full items-center whitespace-nowrap px-3 text-[15px] font-medium tracking-[0.02em] text-[#211E1E] transition-colors duration-200 hover:text-[#A70909] aria-[current=page]:text-[#A70909] aria-[expanded=true]:text-[#A70909] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#A70909]/30 after:absolute after:left-0 after:right-0 after:-bottom-[22px] after:h-[4px] after:rounded-full after:bg-transparent after:content-[''] after:origin-left after:scale-x-0 after:transition-transform after:duration-200 hover:after:bg-[#A70909] hover:after:scale-x-100 aria-[current=page]:after:bg-[#A70909] aria-[current=page]:after:scale-x-100 aria-[expanded=true]:after:bg-[#A70909] aria-[expanded=true]:after:scale-x-100";
+    "group relative flex h-full items-center whitespace-nowrap px-3 text-[15px] font-medium tracking-[0.02em] text-[#211E1E] transition-colors duration-200 hover:text-[#A70909] aria-[current=page]:text-[#A70909] aria-[expanded=true]:text-[#A70909] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#A70909]/30 after:absolute after:left-0 after:right-0 after:-bottom-[18px] after:h-[4px] after:rounded-full after:bg-transparent after:content-[''] after:origin-left after:scale-x-0 after:transition-transform after:duration-200 hover:after:bg-[#A70909] hover:after:scale-x-100 aria-[current=page]:after:bg-[#A70909] aria-[current=page]:after:scale-x-100 aria-[expanded=true]:after:bg-[#A70909] aria-[expanded=true]:after:scale-x-100";
 
   return (
     <>
       <SocialFloating />
-      <div className="mx-auto flex h-[var(--nav-h)] w-full max-w-[1280px] items-center gap-6 px-5 sm:px-6 lg:px-8">
+      <div className="flex h-full w-full items-center gap-6">
         <Link
           href="/"
           className="flex shrink-0 items-center gap-3"
