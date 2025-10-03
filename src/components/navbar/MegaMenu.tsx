@@ -28,7 +28,7 @@ export default function MegaMenu({
       data-open={open ? 'true' : 'false'}
     >
       <div
-        className="pointer-events-auto w-full max-w-[1280px] rounded-xl bg-[var(--surface)] p-8 shadow-[var(--shadow-lg)]"
+        className="pointer-events-auto w-full max-w-[1280px] rounded-xl bg-white p-8 shadow-[0_10px_25px_rgba(0,0,0,0.08)]"
         onMouseEnter={onMouseEnter}
         onMouseLeave={onMouseLeave}
       >
@@ -36,11 +36,11 @@ export default function MegaMenu({
           {columns.map((column) => (
             <div key={column.title} className="flex flex-col gap-3">
               <div>
-                <p className="text-sm font-semibold uppercase tracking-[0.16em] text-[var(--brand-red)]">
+                <p className="text-sm font-semibold uppercase tracking-[0.16em] text-[#A70909]">
                   {column.title}
                 </p>
                 {column.subtitle ? (
-                  <p className="mt-1 text-sm text-[var(--nav-muted)]">{column.subtitle}</p>
+                  <p className="mt-1 text-sm text-[#6B7280]">{column.subtitle}</p>
                 ) : null}
               </div>
               <ul className="flex flex-col gap-2">
@@ -48,12 +48,12 @@ export default function MegaMenu({
                   <li key={item.href}>
                     <Link
                       href={item.href}
-                      className="block text-[15px] font-medium text-[var(--nav-text)] transition-colors duration-150 hover:text-[var(--brand-red)]"
+                      className="block text-[15px] font-medium text-[#2A2A2A] transition-colors duration-150 hover:text-[#A70909]"
                       onClick={onLinkClick}
                     >
                       <span className="block leading-snug">{item.label}</span>
                       {item.description ? (
-                        <span className="text-sm text-[var(--nav-muted)]">{item.description}</span>
+                        <span className="text-sm text-[#6B7280]">{item.description}</span>
                       ) : null}
                     </Link>
                   </li>

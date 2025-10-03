@@ -157,14 +157,14 @@ export default function Navbar({ data }: NavbarProps) {
   };
 
   return (
-    <header className="sticky top-0 z-50 bg-[var(--surface)] shadow-sm">
+    <header className="sticky top-0 z-50 bg-white shadow-sm">
       <SocialFloating />
       <div className="relative mx-auto max-w-[1280px] px-4">
-        <div className="flex h-[var(--header-h)] items-center justify-between">
+        <div className="flex h-[72px] items-center justify-between">
           <Link href={`/${locale}`} className="flex items-center gap-3" prefetch>
             <Image src="/logo.png" alt="ViRINTIRA" width={44} height={44} priority />
-            <span className="text-[22px] font-extrabold tracking-[0.02em] text-[var(--nav-text)]">
-              <span className="text-[var(--nav-text)]">Vi</span>RINTIRA
+            <span className="text-[22px] font-extrabold tracking-[0.02em] text-[#2A2A2A]">
+              <span className="text-[#2A2A2A]">Vi</span>RINTIRA
             </span>
           </Link>
 

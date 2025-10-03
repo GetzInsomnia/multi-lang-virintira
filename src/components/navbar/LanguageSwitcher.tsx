@@ -85,7 +85,7 @@ export default function LanguageSwitcher({
         aria-expanded={open}
         aria-controls="language-menu-panel"
         onClick={() => onOpenChange(!open)}
-        className="rounded-full p-2 text-[var(--nav-text)] transition-colors duration-150 hover:bg-gray-100"
+        className="rounded-full p-2 text-[#2A2A2A] transition-colors duration-150 hover:bg-gray-100"
       >
         <FontAwesomeIcon icon={faGlobe} className="h-5 w-5" />
       </button>
@@ -98,7 +98,7 @@ export default function LanguageSwitcher({
       >
         <div
           ref={panelRef}
-          className="w-[min(360px,92vw)] rounded-xl bg-[var(--surface)] p-2 shadow-2xl"
+          className="w-[min(360px,92vw)] rounded-xl bg-white p-2 shadow-2xl"
         >
           <ul className="max-h-80 overflow-y-auto">
             {codes.map((code) => {
@@ -106,8 +106,8 @@ export default function LanguageSwitcher({
               const href = `/${normalized}`;
               const isActive = normalized === currentLocale.toLowerCase();
               const itemClasses = isActive
-                ? 'block rounded-xl px-4 py-2 text-[16px] font-semibold text-[var(--brand-red)] bg-gray-100'
-                : 'block rounded-xl px-4 py-2 text-[16px] font-semibold text-[var(--nav-text)] transition-colors duration-150 hover:bg-gray-100';
+                ? 'block rounded-xl px-4 py-2 text-[16px] font-semibold text-[#A70909] bg-gray-100'
+                : 'block rounded-xl px-4 py-2 text-[16px] font-semibold text-[#2A2A2A] transition-colors duration-150 hover:bg-gray-100';
               return (
                 <li key={code}>
                   <Link

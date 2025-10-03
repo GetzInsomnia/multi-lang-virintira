@@ -125,7 +125,7 @@ export default function SearchToggle({
         aria-expanded={open}
         aria-controls="navbar-search-panel"
         onClick={handleToggle}
-        className="rounded-full p-2 text-[var(--nav-text)] transition-colors duration-150 hover:bg-gray-100"
+        className="rounded-full p-2 text-[#2A2A2A] transition-colors duration-150 hover:bg-gray-100"
       >
         <FontAwesomeIcon icon={faSearch} className="h-5 w-5" />
       </button>
@@ -138,7 +138,7 @@ export default function SearchToggle({
       >
         <div
           ref={shellRef}
-          className="w-[min(920px,92vw)] rounded-full bg-[var(--surface)] px-4 py-2 shadow-[var(--shadow-lg)]"
+          className="w-[min(920px,92vw)] rounded-full bg-white px-4 py-2 shadow-[0_10px_25px_rgba(0,0,0,0.08)]"
         >
           <form
             action={action}
@@ -146,7 +146,7 @@ export default function SearchToggle({
             className="flex items-center gap-3"
             onSubmit={handleSubmit}
           >
-            <FontAwesomeIcon icon={faSearch} className="h-5 w-5 text-[var(--nav-muted)]" />
+            <FontAwesomeIcon icon={faSearch} className="h-5 w-5 text-[#6B7280]" />
             <input
               ref={inputRef}
               value={query}
@@ -154,11 +154,11 @@ export default function SearchToggle({
               name="q"
               autoComplete="off"
               placeholder={placeholder}
-              className="h-10 w-full bg-transparent text-[17px] leading-none text-[var(--nav-text)] outline-none placeholder:text-[var(--nav-muted)]"
+              className="h-10 w-full bg-transparent text-[17px] leading-none text-[#2A2A2A] outline-none placeholder:text-[#6B7280]"
             />
             <button
               type="submit"
-              className="rounded-full bg-[var(--brand-red)] px-5 py-1.5 text-sm font-semibold text-white transition-opacity duration-150 hover:brightness-110"
+              className="rounded-full bg-[#A70909] px-5 py-1.5 text-sm font-semibold text-white transition-opacity duration-150 hover:brightness-110"
             >
               {submitLabel}
             </button>
