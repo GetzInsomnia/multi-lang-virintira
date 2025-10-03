@@ -16,37 +16,6 @@
   --font-size-h3: clamp(1.35rem, 1.1rem + 0.8vw, 1.85rem);
 }
 
-@layer components {
-  .nav-underline {
-    position: relative;
-  }
-  .nav-underline::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    right: 0;
-    height: 3px;
-    background: var(--brand-red);
-    bottom: -1px;
-    transform: scaleX(0);
-    transform-origin: left;
-    transition: transform 0.22s ease;
-  }
-  .nav-underline:hover::after,
-  .nav-underline[aria-current='page']::after,
-  .nav-underline[aria-expanded='true']::after {
-    transform: scaleX(1);
-  }
-
-  .nav-pop {
-    position: fixed;
-    left: 0;
-    right: 0;
-    top: var(--header-h);
-    z-index: 60;
-  }
-}
-
 body {
   font-family: var(--font-inter), system-ui, -apple-system, 'Segoe UI', Arial, sans-serif;
   font-size: var(--font-size-body);

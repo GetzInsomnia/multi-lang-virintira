@@ -37,7 +37,7 @@ export default function NavLink({
   ariaExpanded,
 }: NavLinkProps) {
   const baseClasses =
-    'group nav-underline text-[17px] font-semibold leading-none tracking-tight text-[var(--nav-text)] transition-colors duration-200 hover:text-[var(--brand-red)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--brand-red)]/30';
+    "group relative text-[17px] font-semibold leading-none tracking-tight text-[var(--nav-text)] transition-colors duration-200 hover:text-[var(--brand-red)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--brand-red)]/30 after:absolute after:-bottom-6 after:left-0 after:right-0 after:h-[7px] after:rounded-full after:bg-[#A70909] after:content-[''] after:origin-left after:scale-x-0 after:transition-transform after:duration-200 group-hover:after:scale-[1.2] aria-[current=page]:text-[var(--brand-red)] aria-expanded:text-[var(--brand-red)] aria-[current=page]:after:scale-[1.2] aria-expanded:after:scale-[1.2]";
   const classes = active ? `${baseClasses} text-[var(--brand-red)]` : baseClasses;
 
   return (
