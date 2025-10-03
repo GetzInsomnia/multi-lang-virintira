@@ -159,7 +159,7 @@ export default function Navbar({ data }: NavbarProps) {
   return (
     <header className="sticky top-0 z-50 bg-[var(--surface)] shadow-sm">
       <SocialFloating />
-      <div className="mx-auto max-w-[1280px] px-4">
+      <div className="relative mx-auto max-w-[1280px] px-4">
         <div className="flex h-[var(--header-h)] items-center justify-between">
           <Link href={`/${locale}`} className="flex items-center gap-3" prefetch>
             <Image src="/logo.png" alt="ViRINTIRA" width={44} height={44} priority />
@@ -239,23 +239,23 @@ export default function Navbar({ data }: NavbarProps) {
             </div>
           </div>
         </div>
+        {hasMegaMenu ? (
+          <MegaMenu
+            open={megaOpen}
+            columns={megaColumns}
+            onMouseEnter={(event) => {
+              void event;
+              cancelMegaClose();
+              setMegaOpen(true);
+            }}
+            onMouseLeave={(event) => {
+              void event;
+              scheduleMegaClose();
+            }}
+            onLinkClick={() => setMegaOpen(false)}
+          />
+        ) : null}
       </div>
-      {hasMegaMenu ? (
-        <MegaMenu
-          open={megaOpen}
-          columns={megaColumns}
-          onMouseEnter={(event) => {
-            void event;
-            cancelMegaClose();
-            setMegaOpen(true);
-          }}
-          onMouseLeave={(event) => {
-            void event;
-            scheduleMegaClose();
-          }}
-          onLinkClick={() => setMegaOpen(false)}
-        />
-      ) : null}
       <MobileMenu
         open={mobileOpen}
         nav={data.nav}
