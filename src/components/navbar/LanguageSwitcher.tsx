@@ -141,13 +141,13 @@ export function LanguageSwitcher({ className = '' }: LanguageSwitcherProps) {
         <FontAwesomeIcon icon={faGlobe} />
       </button>
       <div
-        className="absolute right-0 top-full z-50 mt-2 w-32 rounded-2xl border border-black/10 bg-white shadow-xl transition-transform duration-150 ease-out data-[open=false]:pointer-events-none data-[open=false]:-translate-y-1 data-[open=false]:opacity-0 data-[open=true]:translate-y-0 data-[open=true]:opacity-100"
+        className="absolute right-0 top-[calc(100%+0.5rem)] z-50 mt-0 w-44 rounded-xl border border-black/10 bg-white shadow-xl transition-transform duration-150 ease-out data-[open=false]:pointer-events-none data-[open=false]:-translate-y-1 data-[open=false]:opacity-0 data-[open=true]:translate-y-0 data-[open=true]:opacity-100"
         data-open={open}
         role="presentation"
       >
         <ul
           ref={listRef}
-          className="flex flex-col gap-1 p-2"
+          className="flex max-h-[70vh] flex-col gap-1 overflow-y-auto p-2"
           role="menu"
           aria-label={t('language.dropdownLabel')}
         >
