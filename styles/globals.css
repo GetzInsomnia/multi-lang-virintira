@@ -3,11 +3,48 @@
 @tailwind utilities;
 
 :root {
+  --header-h: 72px;
+  --brand-red: #a70909;
+  --nav-text: #2a2a2a;
+  --nav-muted: #6b7280;
+  --surface: #ffffff;
+  --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.08);
   --font-size-body: clamp(0.95rem, 0.88rem + 0.35vw, 1.1rem);
   --font-size-small: clamp(0.85rem, 0.8rem + 0.25vw, 0.95rem);
   --font-size-h1: clamp(2.25rem, 1.5rem + 2.4vw, 3.5rem);
   --font-size-h2: clamp(1.85rem, 1.3rem + 1.6vw, 2.6rem);
   --font-size-h3: clamp(1.35rem, 1.1rem + 0.8vw, 1.85rem);
+}
+
+@layer components {
+  .nav-underline {
+    position: relative;
+  }
+  .nav-underline::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: var(--brand-red);
+    bottom: -1px;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.22s ease;
+  }
+  .nav-underline:hover::after,
+  .nav-underline[aria-current='page']::after,
+  .nav-underline[aria-expanded='true']::after {
+    transform: scaleX(1);
+  }
+
+  .nav-pop {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: var(--header-h);
+    z-index: 60;
+  }
 }
 
 body {
