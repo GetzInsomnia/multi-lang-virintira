@@ -24,11 +24,12 @@ export default function MegaMenu({
   return (
     <div
       id="mega-menu-panel"
-      className="pointer-events-none absolute left-0 right-0 top-full z-40 flex justify-center pt-5 opacity-0 transition-opacity duration-150 ease-out data-[open=true]:pointer-events-auto data-[open=true]:opacity-100"
+      className="pointer-events-none fixed left-0 right-0 top-[var(--header-height)] z-40 flex justify-center opacity-0 transition-opacity duration-150 ease-out data-[open=true]:pointer-events-auto data-[open=true]:opacity-100"
       data-open={open ? 'true' : 'false'}
     >
       <div
-        className="pointer-events-auto w-full max-w-[1280px] rounded-xl bg-white p-8 shadow-[0_10px_25px_rgba(0,0,0,0.08)]"
+        className="pointer-events-none w-full max-w-[1280px] rounded-xl bg-white p-8 shadow-[0_10px_25px_rgba(0,0,0,0.08)] data-[open=true]:pointer-events-auto"
+        data-open={open ? 'true' : 'false'}
         onMouseEnter={onMouseEnter}
         onMouseLeave={onMouseLeave}
       >
