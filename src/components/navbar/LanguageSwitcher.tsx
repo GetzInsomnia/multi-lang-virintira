@@ -117,21 +117,23 @@ export default function LanguageSwitcher({
 
       <div
         id="language-menu-panel"
-        className="pointer-events-none absolute top-full right-0 z-40 mt-4 opacity-0 transition-opacity duration-150 ease-out data-[open=true]:pointer-events-auto data-[open=true]:opacity-100"
+        className="pointer-events-none fixed right-4 top-[var(--header-height)] z-40 w-[min(300px,92vw)] max-h-[70vh] overflow-y-auto opacity-0 transition-opacity duration-150 ease-out data-[open=true]:pointer-events-auto data-[open=true]:opacity-100"
         data-open={open ? 'true' : 'false'}
         aria-hidden={open ? undefined : 'true'}
       >
         <div
           ref={panelRef}
-          className="w-[min(360px,92vw)] rounded-xl bg-white p-2 shadow-2xl"
+          className="rounded-xl bg-white p-2 shadow-2xl"
         >
-          <ul className="max-h-80 overflow-y-auto">
+          <ul className="space-y-1">
             {codes.map((code) => {
               const normalized = code.toLowerCase();
               const isActive = normalized === currentLocale.toLowerCase();
+              const baseClasses =
+                'block rounded-xl px-4 py-2 text-[16px] font-normal text-[#2A2A2A] transition-colors duration-150 hover:bg-[#F5F5F5]';
               const itemClasses = isActive
-                ? 'block rounded-xl px-4 py-2 text-[16px] font-semibold text-[#A70909] bg-gray-100'
-                : 'block rounded-xl px-4 py-2 text-[16px] font-semibold text-[#2A2A2A] transition-colors duration-150 hover:bg-gray-100';
+                ? `${baseClasses} bg-[#FDEAEA] text-[#2A2A2A]`
+                : baseClasses;
               return (
                 <li key={code}>
                   <button
