@@ -132,7 +132,7 @@ export default function SearchToggle({
 
       <div
         id="navbar-search-panel"
-        className="pointer-events-none absolute left-1/2 top-full z-40 flex w-full -translate-x-1/2 justify-center pt-4 opacity-0 transition-opacity duration-150 ease-out data-[open=true]:pointer-events-auto data-[open=true]:opacity-100"
+        className="pointer-events-none fixed left-1/2 top-[calc(var(--header-height)+0px)] z-40 flex w-full -translate-x-1/2 justify-center opacity-0 transition-opacity duration-150 ease-out data-[open=true]:pointer-events-auto data-[open=true]:opacity-100"
         data-open={open ? 'true' : 'false'}
         aria-hidden={open ? undefined : 'true'}
       >
