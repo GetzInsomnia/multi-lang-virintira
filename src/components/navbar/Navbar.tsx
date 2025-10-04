@@ -2,7 +2,7 @@
 
 import Image from 'next/image';
 import { useLocale, useTranslations } from 'next-intl';
-import { useEffect, useMemo, useRef, useState } from 'react';
+import { useEffect, useMemo, useRef, useState, type CSSProperties } from 'react';
 
 import { Link, usePathname } from '@/i18n/routing';
 import { normalizeInternalHref } from '@/lib/links';
@@ -157,10 +157,13 @@ export default function Navbar({ data }: NavbarProps) {
   };
 
   return (
-    <header className="sticky top-0 z-50 bg-white shadow-sm">
+    <header
+      className="sticky top-0 z-50 bg-white shadow-sm"
+      style={{ '--header-height': '72px' } as CSSProperties}
+    >
       <SocialFloating />
       <div className="relative mx-auto max-w-[1280px] px-4">
-        <div className="flex h-[72px] items-center justify-between">
+        <div className="flex h-[var(--header-height)] items-center justify-between">
           <Link href={`/${locale}`} className="flex items-center gap-3" prefetch>
             <Image src="/logo.png" alt="ViRINTIRA" width={44} height={44} priority />
             <span className="text-[22px] font-extrabold tracking-[0.02em] text-[#2A2A2A]">
