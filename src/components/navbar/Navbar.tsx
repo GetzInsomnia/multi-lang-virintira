@@ -166,12 +166,12 @@ export default function Navbar({ data }: NavbarProps) {
         <div className="flex h-[var(--header-height)] items-center justify-between">
           <Link href={`/${locale}`} className="flex items-center gap-3" prefetch>
             <Image src="/logo.png" alt="ViRINTIRA" width={44} height={44} priority />
-            <span className="text-[22px] font-extrabold tracking-[0.02em] text-[#2A2A2A]">
-              <span className="text-[#2A2A2A]">Vi</span>RINTIRA
+            <span className="text-[22px] font-extrabold tracking-[0.02em] text-[#A70909]">
+              ViRINTIRA
             </span>
           </Link>
 
-          <nav className="hidden items-center gap-7 md:flex" aria-label="Primary navigation">
+          <nav className="hidden items-center gap-5 md:flex" aria-label="Primary navigation">
             {navEntries.map((entry, index) => {
               if (entry.type === 'mega') {
                 if (!hasMegaMenu) {
