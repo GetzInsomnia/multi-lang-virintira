@@ -110,14 +110,18 @@ export default function LanguageSwitcher({
         aria-expanded={open}
         aria-controls="language-menu-panel"
         onClick={() => onOpenChange(!open)}
-        className="rounded-full p-2 text-[#2A2A2A] transition-colors duration-150 hover:bg-gray-100"
+        className="rounded-full p-2 text-[#A70909] transition-colors duration-150 hover:opacity-80"
       >
         <FontAwesomeIcon icon={faGlobe} className="h-5 w-5" />
       </button>
 
       <div
         id="language-menu-panel"
-        className="pointer-events-none fixed right-4 top-[var(--header-height)] z-40 w-[min(300px,92vw)] max-h-[70vh] overflow-y-auto opacity-0 transition-opacity duration-150 ease-out data-[open=true]:pointer-events-auto data-[open=true]:opacity-100"
+        className="
+  pointer-events-none fixed right-50 top-[calc(var(--header-height)+1px)] z-40
+  w-auto max-w-[92vw] opacity-0 transition-opacity duration-150 ease-out
+  data-[open=true]:pointer-events-auto data-[open=true]:opacity-100
+"
         data-open={open ? 'true' : 'false'}
         aria-hidden={open ? undefined : 'true'}
       >
@@ -125,29 +129,36 @@ export default function LanguageSwitcher({
           ref={panelRef}
           className="rounded-xl bg-white p-2 shadow-2xl"
         >
-          <ul className="space-y-1">
-            {codes.map((code) => {
-              const normalized = code.toLowerCase();
-              const isActive = normalized === currentLocale.toLowerCase();
-              const baseClasses =
-                'block rounded-xl px-4 py-2 text-[16px] font-normal text-[#2A2A2A] transition-colors duration-150 hover:bg-[#F5F5F5]';
-              const itemClasses = isActive
-                ? `${baseClasses} bg-[#FDEAEA] text-[#2A2A2A]`
-                : baseClasses;
-              return (
-                <li key={code}>
-                  <button
-                    type="button"
-                    className={itemClasses}
-                    onClick={() => handleSelect(code)}
-                    aria-current={isActive ? 'true' : undefined}
-                  >
-                    {normalized.toUpperCase()}
-                  </button>
-                </li>
-              );
-            })}
-          </ul>
+          {/* ใส่ wrapper ที่ควบคุมความสูงเลื่อนแบบซ่อน scrollbar */}
+          <div className="relative max-h-[35vh] overflow-hidden">
+            {/* แถบไล่สีบอกเลื่อนขึ้น */}
+            <div className="pointer-events-none absolute inset-x-0 top-0 h-4 bg-gradient-to-b from-white to-transparent" />
+
+            <ul className="max-h-[35vh] overflow-auto pr-1 scrollbar-hide space-y-1">
+              {codes.map((code) => {
+                const normalized = code.toLowerCase();
+                const isActive = normalized === currentLocale.toLowerCase();
+                const baseClasses =
+                  'block rounded-xl px-4 py-2 text-[16px] font-normal text-[#2A2A2A] transition-colors duration-150 hover:bg-[#FDEAEA]';
+                const itemClasses = isActive
+                  ? `${baseClasses} bg-[#FDEAEA]`
+                  : baseClasses;
+                return (
+                  <li key={code}>
+                    <button
+                      type="button"
+                      className={itemClasses}
+                      onClick={() => handleSelect(code)}
+                      aria-current={isActive ? 'true' : undefined}
+                    >
+                      {normalized.toUpperCase()}
+                    </button>
+                  </li>
+                );
+              })}
+            </ul>
+            <div className="pointer-events-none absolute inset-x-0 bottom-0 h-4 bg-gradient-to-t from-white to-transparent" />
+          </div>
         </div>
       </div>
     </>

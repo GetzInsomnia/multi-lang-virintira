@@ -115,7 +115,7 @@ export function SocialFloating() {
   return (
     <div
       ref={containerRef}
-      className="fixed right-0 top-1/2 z-40 hidden -translate-y-1/2 items-center gap-3 lg:flex"
+      className="fixed top-3/4 right-0 z-40 hidden -translate-y-1/2 items-center gap-3 lg:flex"
       data-open={open}
     >
       <div

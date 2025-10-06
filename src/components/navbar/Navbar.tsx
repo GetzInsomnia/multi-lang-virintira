@@ -171,7 +171,7 @@ export default function Navbar({ data }: NavbarProps) {
             </span>
           </Link>
 
-          <nav className="hidden items-center gap-5 md:flex" aria-label="Primary navigation">
+          <nav className="hidden items-center gap-5 md:flex overflow-visible" aria-label="Primary navigation">
             {navEntries.map((entry, index) => {
               if (entry.type === 'mega') {
                 if (!hasMegaMenu) {

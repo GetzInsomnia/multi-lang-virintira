@@ -24,16 +24,16 @@ export default function MegaMenu({
   return (
     <div
       id="mega-menu-panel"
-      className="pointer-events-none fixed left-0 right-0 top-[var(--header-height)] z-40 flex justify-center opacity-0 transition-opacity duration-150 ease-out data-[open=true]:pointer-events-auto data-[open=true]:opacity-100"
+      className="pointer-events-none fixed inset-x-0 top-[calc(var(--header-height)+px)] z-40 opacity-0 transition-opacity duration-150 ease-out data-[open=true]:pointer-events-auto data-[open=true]:opacity-100"
       data-open={open ? 'true' : 'false'}
     >
       <div
-        className="pointer-events-none w-full max-w-[1280px] rounded-xl bg-white p-8 shadow-[0_10px_25px_rgba(0,0,0,0.08)] data-[open=true]:pointer-events-auto"
+        className="w-full bg-white border-t border-gray-200 shadow-md data-[open=true]:pointer-events-auto"
         data-open={open ? 'true' : 'false'}
         onMouseEnter={onMouseEnter}
         onMouseLeave={onMouseLeave}
       >
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-3 lg:grid-cols-5 lg:gap-10">
+        <div className="mx-auto max-w-[1280px] px-8 py-6 grid grid-cols-1 gap-8 md:grid-cols-3 lg:grid-cols-5 lg:gap-10">
           {columns.map((column) => (
             <div key={column.title} className="flex flex-col gap-3">
               <div>

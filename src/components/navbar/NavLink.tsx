@@ -55,14 +55,14 @@ export default function NavLink({
       aria-controls={ariaControls}
       aria-expanded={ariaExpanded}
     >
-      <span className="inline-flex items-center gap-2">
+      <span className="inline-flex h-[30px] items-center gap-2 leading-none">
         {flame ? (
           <FontAwesomeIcon
             icon={faFire}
-            className="h-4 w-4 self-center text-[#A70909] animate-bounce"
+            className="h-4 w-4 text-[#A70909] animate-bounce relative -top-px align-middle"
           />
         ) : null}
-        <span>{label}</span>
+        <span className="leading-none">{label}</span>
       </span>
     </Link>
   );

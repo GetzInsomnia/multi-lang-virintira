@@ -125,45 +125,46 @@ export default function SearchToggle({
         aria-expanded={open}
         aria-controls="navbar-search-panel"
         onClick={handleToggle}
-        className="rounded-full p-2 text-[#2A2A2A] transition-colors duration-150 hover:bg-gray-100"
+        className="rounded-full p-2 text-[#A70909] transition-colors duration-150 hover:opacity-80"
       >
         <FontAwesomeIcon icon={faSearch} className="h-5 w-5" />
       </button>
 
+      {/* Desktop inline search (slide from right) */}
       <div
         id="navbar-search-panel"
-        className="pointer-events-none fixed left-1/2 top-[calc(var(--header-height)+0px)] z-40 flex w-full -translate-x-1/2 justify-center opacity-0 transition-opacity duration-150 ease-out data-[open=true]:pointer-events-auto data-[open=true]:opacity-100"
+        className={`
+    pointer-events-none absolute right-0 top-1/2 z-40 hidden -translate-y-1/2 items-center
+    rounded-md bg-white pl-3 pr-10 shadow-md transition-all duration-300 ease-out
+    md:flex
+    ${open ? 'pointer-events-auto opacity-100 w-72' : 'opacity-0 w-0'}
+  `}
         data-open={open ? 'true' : 'false'}
         aria-hidden={open ? undefined : 'true'}
+        ref={shellRef}
       >
-        <div
-          ref={shellRef}
-          className="w-[min(920px,92vw)] rounded-full bg-white px-4 py-2 shadow-[0_10px_25px_rgba(0,0,0,0.08)]"
+        <form
+          action={action}
+          method="get"
+          className="flex h-8 w-full items-center gap-2"
+          onSubmit={handleSubmit}
         >
-          <form
-            action={action}
-            method="get"
-            className="flex items-center gap-3"
-            onSubmit={handleSubmit}
+          <FontAwesomeIcon icon={faSearch} className="h-4 w-4 text-[#6B7280]" />
+          <input
+            ref={inputRef}
+            value={query}
+            onChange={(e) => setQuery(e.target.value)}
+            name="q"
+            placeholder={placeholder}
+            className="w-full bg-transparent text-sm text-[#2A2A2A] outline-none placeholder:text-[#6B7280]"
+          />
+          <button
+            type="submit"
+            className="absolute right-2 rounded px-3 py-1 text-xs font-semibold text-white bg-[#A70909] hover:brightness-110"
           >
-            <FontAwesomeIcon icon={faSearch} className="h-5 w-5 text-[#6B7280]" />
-            <input
-              ref={inputRef}
-              value={query}
-              onChange={(event) => setQuery(event.target.value)}
-              name="q"
-              autoComplete="off"
-              placeholder={placeholder}
-              className="h-10 w-full bg-transparent text-[17px] leading-none text-[#2A2A2A] outline-none placeholder:text-[#6B7280]"
-            />
-            <button
-              type="submit"
-              className="rounded-full bg-[#A70909] px-5 py-1.5 text-sm font-semibold text-white transition-opacity duration-150 hover:brightness-110"
-            >
-              {submitLabel}
-            </button>
-          </form>
-        </div>
+            {submitLabel}
+          </button>
+        </form>
       </div>
     </>
   );
