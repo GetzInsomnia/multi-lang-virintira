@@ -43,9 +43,6 @@ export default function SearchToggle({
       if (shellRef.current?.contains(target) || buttonRef.current?.contains(target)) {
         return;
       }
-      if (query.trim().length > 0) {
-        return;
-      }
       close();
     };
 
@@ -53,7 +50,7 @@ export default function SearchToggle({
     return () => {
       window.removeEventListener('mousedown', handleClick);
     };
-  }, [close, open, query]);
+  }, [close, open]);
 
   useEffect(() => {
     if (!open) {
@@ -61,18 +58,13 @@ export default function SearchToggle({
     }
     const handleKey = (event: KeyboardEvent) => {
       if (event.key === 'Escape') {
-        if (query.trim().length > 0) {
-          setQuery('');
-          requestAnimationFrame(() => inputRef.current?.focus());
-          return;
-        }
         close();
       }
     };
 
     window.addEventListener('keydown', handleKey);
     return () => window.removeEventListener('keydown', handleKey);
-  }, [close, open, query]);
+  }, [close, open]);
 
   useEffect(() => {
     if (!open) {
@@ -95,10 +87,6 @@ export default function SearchToggle({
       onOpenChange(true);
       return;
     }
-    if (query.trim().length > 0) {
-      requestAnimationFrame(() => inputRef.current?.focus());
-      return;
-    }
     close();
   };
 
@@ -117,7 +105,7 @@ export default function SearchToggle({
   );
 
   return (
-    <>
+    <div className="relative h-full">
       <button
         ref={buttonRef}
         type="button"
@@ -133,12 +121,7 @@ export default function SearchToggle({
       {/* Desktop inline search (slide from right) */}
       <div
         id="navbar-search-panel"
-        className={`
-    pointer-events-none absolute right-0 top-1/2 z-40 hidden -translate-y-1/2 items-center
-    rounded-md bg-white pl-3 pr-10 shadow-md transition-all duration-300 ease-out
-    md:flex
-    ${open ? 'pointer-events-auto opacity-100 w-72' : 'opacity-0 w-0'}
-  `}
+        className={`absolute right-0 top-1/2 hidden h-10 w-[520px] -translate-y-1/2 translate-x-full items-center rounded-md bg-white shadow-md transition-all duration-300 ease-out md:flex md:z-40 ${open ? 'pointer-events-auto translate-x-0 opacity-100' : 'pointer-events-none opacity-0'}`}
         data-open={open ? 'true' : 'false'}
         aria-hidden={open ? undefined : 'true'}
         ref={shellRef}
@@ -146,26 +129,33 @@ export default function SearchToggle({
         <form
           action={action}
           method="get"
-          className="flex h-8 w-full items-center gap-2"
+          className="relative flex h-full w-full items-center"
           onSubmit={handleSubmit}
         >
-          <FontAwesomeIcon icon={faSearch} className="h-4 w-4 text-[#6B7280]" />
           <input
             ref={inputRef}
             value={query}
             onChange={(e) => setQuery(e.target.value)}
             name="q"
             placeholder={placeholder}
-            className="w-full bg-transparent text-sm text-[#2A2A2A] outline-none placeholder:text-[#6B7280]"
+            className="h-full w-full bg-transparent pr-28 pl-4 text-sm text-[#2A2A2A] outline-none placeholder:text-[#6B7280]"
           />
           <button
             type="submit"
-            className="absolute right-2 rounded px-3 py-1 text-xs font-semibold text-white bg-[#A70909] hover:brightness-110"
+            className="absolute right-12 rounded px-3 py-1 text-xs font-semibold text-white bg-[#A70909] hover:brightness-110"
           >
             {submitLabel}
           </button>
+          <button
+            type="button"
+            aria-label="Close search"
+            onClick={handleToggle}
+            className="absolute right-3 top-1/2 -translate-y-1/2 text-[#6B7280]"
+          >
+            <FontAwesomeIcon icon={faSearch} className="h-5 w-5" />
+          </button>
         </form>
       </div>
-    </>
+    </div>
   );
 }
