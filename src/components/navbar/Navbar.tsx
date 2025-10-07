@@ -4,9 +4,6 @@ import Image from 'next/image';
 import { useLocale, useTranslations } from 'next-intl';
 import { useEffect, useMemo, useRef, useState, type CSSProperties } from 'react';
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faFire } from '@fortawesome/free-solid-svg-icons';
-
 import { Link, usePathname } from '@/i18n/routing';
 import { normalizeInternalHref } from '@/lib/links';
 
@@ -14,6 +11,7 @@ import HamburgerButton from './HamburgerButton';
 import LanguageSwitcher from './LanguageSwitcher';
 import MegaMenu from './MegaMenu';
 import MobileMenu from './MobileMenu';
+import NavLink from './NavLink';
 import SearchToggle from './SearchToggle';
 import SocialFloating from './SocialFloating';
 import type { MegaMenuColumn, NavItem, NavbarData } from './types';
@@ -37,11 +35,6 @@ function hasActiveMega(columns: MegaMenuColumn[], currentPath: string) {
     column.items.some((item) => isInternalMatch(currentPath, item.href)),
   );
 }
-
-const linkBaseClasses =
-  "group relative text-[17px] font-normal leading-none tracking-tight text-[#2A2A2A] transition-colors duration-200 hover:text-[#A70909] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#A70909]/30 after:absolute after:bottom-[-24px] after:left-0 after:right-0 after:h-[7px] after:w-full after:rounded-t-full after:bg-[#A70909] after:content-[''] after:origin-center after:scale-0 after:transition-transform after:duration-200 group-hover:after:scale-100 aria-[current=true]:text-[#A70909] aria-[expanded=true]:text-[#A70909] aria-[current=true]:after:scale-100 aria-[expanded=true]:after:scale-100";
-const linkContentClasses = 'inline-flex h-[30px] items-center gap-2 leading-none';
-const linkLabelClasses = 'leading-none';
 
 type NavEntry = { type: 'link'; item: NavItem } | { type: 'mega' };
 
@@ -194,12 +187,12 @@ export default function Navbar({ data }: NavbarProps) {
                     onFocus={scheduleMegaOpen}
                     onBlur={scheduleMegaClose}
                   >
-                    <button
-                      type="button"
-                      className={isOpen ? `${linkBaseClasses} text-[#A70909]` : linkBaseClasses}
-                      aria-expanded={isOpen}
-                      aria-controls="mega-menu-panel"
-                      onClick={() => {
+                    <NavLink
+                      href="#"
+                      label={data.megaMenu.triggerLabel}
+                      active={isOpen}
+                      onClick={(event) => {
+                        event.preventDefault();
                         if (isOpen) {
                           setMegaOpen(false);
                         } else {
@@ -208,11 +201,10 @@ export default function Navbar({ data }: NavbarProps) {
                           setLanguageOpen(false);
                         }
                       }}
-                    >
-                      <span className={linkContentClasses}>
-                        <span className={linkLabelClasses}>{data.megaMenu.triggerLabel}</span>
-                      </span>
-                    </button>
+                      ariaExpanded={isOpen}
+                      ariaControls="mega-menu-panel"
+                      role="button"
+                    />
                   </div>
                 );
               }
@@ -220,24 +212,14 @@ export default function Navbar({ data }: NavbarProps) {
               const { item } = entry;
               const active = isInternalMatch(currentPath, item.href);
               return (
-                <Link
+                <NavLink
                   key={item.label}
                   href={item.href || '#'}
-                  className={active ? `${linkBaseClasses} text-[#A70909]` : linkBaseClasses}
-                  aria-current={active ? 'true' : undefined}
-                  data-flame={item.highlight ? 'true' : undefined}
+                  label={item.label}
+                  flame={Boolean(item.highlight)}
+                  active={active}
                   onMouseEnter={() => setMegaOpen(false)}
-                >
-                  <span className={linkContentClasses}>
-                    {item.highlight ? (
-                      <FontAwesomeIcon
-                        icon={faFire}
-                        className="h-4 w-4 text-[#A70909] animate-bounce relative -top-px align-middle"
-                      />
-                    ) : null}
-                    <span className={linkLabelClasses}>{item.label}</span>
-                  </span>
-                </Link>
+                />
               );
             })}
           </nav>
