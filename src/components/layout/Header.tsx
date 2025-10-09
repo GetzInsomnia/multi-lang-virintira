@@ -1,6 +1,6 @@
+'use client';
 import type { NavbarData } from '@/components/navbar/types';
-
-import Navbar from './Navbar';
+import Navbar from '@/components/navbar/Navbar';
 
 export default function Header({ data }: { data: NavbarData }) {
   return <Navbar data={data} />;

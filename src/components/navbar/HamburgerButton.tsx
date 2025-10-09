@@ -7,25 +7,23 @@ type HamburgerButtonProps = {
 } & ButtonHTMLAttributes<HTMLButtonElement>;
 
 export default function HamburgerButton({ isOpen, className = '', ...props }: HamburgerButtonProps) {
-  const baseClasses =
-    'relative flex h-10 w-10 items-center justify-center rounded-full border border-[#A70909]/25 bg-white text-[#A70909] shadow-[0_4px_8px_rgba(167,9,9,0.12)] transition-all duration-200 ease-out focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#A70909]/40 hover:bg-[#A70909] hover:text-white';
-  const activeClasses = isOpen
-    ? 'bg-[#A70909] text-white shadow-[0_12px_30px_rgba(167,9,9,0.25)]'
-    : '';
-  const lineBase =
-    'absolute h-0.5 w-6 rounded-full bg-current transition-all duration-200 ease-out-soft';
+  // ปุ่มเรียบ ๆ ขนาดเท่าปุ่มอื่น
+  const baseBtn = 'inline-flex h-8 w-8 items-center justify-center text-[#A70909] translate-y-[2px] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#A70909]/30';
+
+  // เส้น: 3px, ความยาว 20px, ขยับเป็นจำนวนเต็มพิกเซล เพื่อลดอาการเบลอ
+  const line = 'absolute h-[3px] w-5 rounded-full bg-current transition-transform duration-200 will-change-transform';
 
   return (
     <button
       type="button"
       aria-expanded={isOpen}
       aria-label={isOpen ? 'Close menu' : 'Open menu'}
-      className={`${baseClasses} ${activeClasses} ${className}`.trim()}
+      className={`${baseBtn} ${className}`.trim()}
       {...props}
     >
-      <span className={`${lineBase} ${isOpen ? 'translate-y-0 rotate-45' : '-translate-y-[6px]'}`} />
-      <span className={`${lineBase} ${isOpen ? 'opacity-0' : 'opacity-100'}`} />
-      <span className={`${lineBase} ${isOpen ? 'translate-y-0 -rotate-45' : 'translate-y-[6px]'}`} />
+      <span className={`${line} ${isOpen ? 'translate-y-0 rotate-45' : '-translate-y-[6px]'}`} />
+      <span className={`${line} ${isOpen ? 'opacity-0' : 'opacity-100'}`} />
+      <span className={`${line} ${isOpen ? 'translate-y-0 -rotate-45' : 'translate-y-[6px]'}`} />
     </button>
   );
 }

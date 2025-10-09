@@ -5,30 +5,32 @@ import type { ReactNode } from 'react';
 
 import { AnalyticsManager } from '@/components/common/AnalyticsManager';
 import { BusinessJsonLd } from '@/components/common/JsonLd';
-import Footer, { type FooterData, type FooterLink } from '@/components/layout/Footer';
-import Header from './(components)/Header';
-import HeaderSpacer from './(components)/HeaderSpacer';
+
+// ใช้ Header/Spacer จาก src/components ไม่ใช่ app/[locale]/(components)
+import Header from '@/components/layout/Header';
+import HeaderSpacer from '@/components/layout/HeaderSpacer';
+
+// ใช้ types ชุดเดียวกับ navbar จริง ๆ
 import type {
   MegaMenuColumn,
   NavItem,
   NavbarData,
   SubMenuSection,
-} from './(components)/types';
+} from '@/components/navbar/types';
+
+import Footer, { type FooterData, type FooterLink } from '@/components/layout/Footer';
+
 import { i18n, type Locale } from '@/i18n/config';
 import { loadMessages, resolveLocale, type Messages } from '@/i18n/loadMessages';
 
 function ensureString(value: unknown, fallback = ''): string {
   if (typeof value === 'string') return value;
-  if (typeof value === 'number' || typeof value === 'boolean') {
-    return String(value);
-  }
+  if (typeof value === 'number' || typeof value === 'boolean') return String(value);
   return fallback;
 }
 
 function sanitizeNavbarData(messages: Messages): NavbarData {
-  const layout = ((messages ?? {}) as Record<string, unknown>).layout as
-    | Record<string, unknown>
-    | undefined;
+  const layout = ((messages ?? {}) as Record<string, unknown>).layout as Record<string, unknown> | undefined;
   const raw = (layout?.header ?? {}) as Record<string, unknown>;
   const nav = Array.isArray(raw.nav) ? raw.nav : [];
   const megaMenu = (raw.megaMenu ?? {}) as Record<string, unknown>;
@@ -53,15 +55,8 @@ function sanitizeNavbarData(messages: Messages): NavbarData {
           };
         })
         .filter((link): link is NonNullable<typeof link> => Boolean(link));
-
-      if (!normalizedItems.length) {
-        continue;
-      }
-
-      normalizedSections.push({
-        title: ensureString(block.title),
-        items: normalizedItems,
-      });
+      if (!normalizedItems.length) continue;
+      normalizedSections.push({ title: ensureString(block.title), items: normalizedItems });
     }
     return normalizedSections.length ? normalizedSections : undefined;
   };
@@ -107,11 +102,7 @@ function sanitizeNavbarData(messages: Messages): NavbarData {
               };
             })
             .filter((entry): entry is NonNullable<typeof entry> => Boolean(entry));
-
-          if (!normalizedItems.length) {
-            continue;
-          }
-
+          if (!normalizedItems.length) continue;
           normalizedColumns.push({
             title: ensureString(col.title),
             subtitle: ensureString(col.subtitle),
@@ -127,9 +118,7 @@ function sanitizeNavbarData(messages: Messages): NavbarData {
 }
 
 function sanitizeFooterData(messages: Messages): FooterData {
-  const layout = ((messages ?? {}) as Record<string, unknown>).layout as
-    | Record<string, unknown>
-    | undefined;
+  const layout = ((messages ?? {}) as Record<string, unknown>).layout as Record<string, unknown> | undefined;
   const raw = (layout?.footer ?? {}) as Record<string, unknown>;
   const contact = (raw.contact ?? {}) as Record<string, unknown>;
   const quickLinks = Array.isArray(raw.quickLinks) ? raw.quickLinks : [];
@@ -156,22 +145,14 @@ export async function generateStaticParams() {
 
 export const dynamicParams = false;
 
-type LayoutProps = {
-  children: ReactNode;
-  params: { locale: string };
-};
+type LayoutProps = { children: ReactNode; params: { locale: string } };
 
 export default async function LocaleLayout({ children, params }: LayoutProps) {
   const requested = params.locale;
-  const matchedLocale = i18n.locales.find(
-    (supported) => supported.toLowerCase() === requested.toLowerCase(),
-  ) as Locale | undefined;
-  if (!matchedLocale) {
-    notFound();
-  }
+  const matchedLocale = i18n.locales.find((supported) => supported.toLowerCase() === requested.toLowerCase()) as Locale | undefined;
+  if (!matchedLocale) { notFound(); }
 
   const locale = resolveLocale(requested);
-
   unstable_setRequestLocale(locale);
 
   const messages = await loadMessages(locale);
@@ -179,10 +160,7 @@ export default async function LocaleLayout({ children, params }: LayoutProps) {
   const footer = sanitizeFooterData(messages);
 
   return (
-    <NextIntlClientProvider
-      locale={locale}
-      messages={messages as unknown as AbstractIntlMessages}
-    >
+    <NextIntlClientProvider locale={locale} messages={messages as unknown as AbstractIntlMessages}>
       <AnalyticsManager />
       <BusinessJsonLd locale={locale} />
       <div className="flex min-h-screen flex-col">

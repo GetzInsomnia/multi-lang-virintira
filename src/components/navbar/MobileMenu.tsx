@@ -1,143 +1,130 @@
+// src/components/navbar/MobileMenu.tsx
 'use client';
 
-import { useEffect, useMemo, useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
+import { usePathname } from 'next/navigation';
+import MobileMenuView from './MobileMenuView';
 
-import { usePathname } from '@/i18n/routing';
+export interface MenuItem {
+  label: string;
+  href?: string;
+  items?: MenuItem[];
+}
 
-import type { MegaMenuColumn, NavItem } from './types';
-import MobileMenuView, { type MenuItem } from './MobileMenuView';
-
-export type MobileMenuProps = {
-  open: boolean;
-  nav: NavItem[];
-  columns: MegaMenuColumn[];
-  triggerLabel: string;
+interface MobileMenuProps {
+  isOpen: boolean;
   onClose: () => void;
-};
+  openerRef?: React.RefObject<HTMLElement>;
+  rootTitle?: string;
+  items: MenuItem[];
+}
 
-const ROOT_TITLE = 'ViRINTIRA';
-
-export default function MobileMenu({ open, nav, columns, triggerLabel, onClose }: MobileMenuProps) {
-  const pathname = usePathname();
-  const containerRef = useRef<HTMLDivElement | null>(null);
+export default function MobileMenu({
+  isOpen,
+  onClose,
+  openerRef,
+  rootTitle = 'ViRINTIRA',
+  items,
+}: MobileMenuProps) {
+  const [mounted, setMounted] = useState(false);
+  const [show, setShow] = useState(false);
   const [stack, setStack] = useState<{ title: string; items: MenuItem[] }[]>([
-    { title: ROOT_TITLE, items: [] },
+    { title: rootTitle, items },
   ]);
 
-  const derivedRoot = useMemo<MenuItem[]>(() => {
-    const primaryItems: MenuItem[] = nav.map((item) => ({
-      label: item.label,
-      href: item.href,
-      description: item.description,
-      items: item.subMenu
-        ? item.subMenu.map((section) => ({
-            label: section.title || item.label,
-            description: section.title ? undefined : item.description,
-            items: section.items.map((entry) => ({
-              label: entry.label,
-              href: entry.href,
-              description: entry.description,
-            })),
-          }))
-        : undefined,
-    }));
+  const backdropRef = useRef<HTMLDivElement | null>(null);
+  const panelRef = useRef<HTMLDivElement | null>(null);
+  const openingLock = useRef(false);
+  const pathname = usePathname();
 
-    if (columns.length) {
-      const megaMenuItem: MenuItem = {
-        label: triggerLabel,
-        items: columns.map((column) => ({
-          label: column.title,
-          description: column.subtitle,
-          items: column.items.map((item) => ({
-            label: item.label,
-            href: item.href,
-            description: item.description,
-          })),
-        })),
-      };
-
-      const existingIndex = primaryItems.findIndex((item) => item.label === triggerLabel);
-      if (existingIndex >= 0) {
-        primaryItems[existingIndex] = {
-          ...primaryItems[existingIndex],
-          items: megaMenuItem.items,
-        };
-      } else {
-        primaryItems.splice(1, 0, megaMenuItem);
-      }
-    }
-
-    return primaryItems;
-  }, [columns, nav, triggerLabel]);
-
+  // ปิดเมื่อเปลี่ยนเส้นทาง
   useEffect(() => {
-    setStack([{ title: ROOT_TITLE, items: derivedRoot }]);
-  }, [derivedRoot]);
-
-  useEffect(() => {
-    if (open) {
-      setStack([{ title: ROOT_TITLE, items: derivedRoot }]);
-    }
-  }, [open, derivedRoot]);
-
-  useEffect(() => {
-    if (!open) {
-      return;
-    }
-    const originalOverflow = document.body.style.overflow;
-    document.body.style.overflow = 'hidden';
-    return () => {
-      document.body.style.overflow = originalOverflow;
-    };
-  }, [open]);
-
-  useEffect(() => {
-    if (!open) return;
     onClose();
-  }, [pathname, open, onClose]);
+  }, [pathname, onClose]);
 
+  // Mount / Unmount + Smooth fade
   useEffect(() => {
-    if (!open) return;
+    if (isOpen) {
+      setMounted(true);
+      requestAnimationFrame(() => setShow(true));
 
-    const handleClickOutside = (event: MouseEvent) => {
-      if (containerRef.current && !containerRef.current.contains(event.target as Node)) {
-        onClose();
-      }
-    };
-
-    document.addEventListener('mousedown', handleClickOutside);
-    return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
-    };
-  }, [open, onClose]);
-
-  const handleBack = () => {
-    setStack((prev) => (prev.length > 1 ? prev.slice(0, -1) : prev));
-  };
-
-  const handleSelect = (items: MenuItem[] | undefined, title: string) => {
-    if (!items || !items.length) {
-      onClose();
-      return;
+      // ล็อก 250ms กันคลิกแรก
+      openingLock.current = true;
+      const id = setTimeout(() => {
+        openingLock.current = false;
+      }, 250);
+      return () => clearTimeout(id);
+    } else {
+      setShow(false);
+      const id = setTimeout(() => setMounted(false), 300);
+      return () => clearTimeout(id);
     }
+  }, [isOpen]);
+
+  // ปิดด้วย ESC
+  useEffect(() => {
+    if (!isOpen) return;
+    const handleKey = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') onClose();
+    };
+    window.addEventListener('keydown', handleKey);
+    return () => window.removeEventListener('keydown', handleKey);
+  }, [isOpen, onClose]);
+
+  // outside-click แบบปลอดภัย (mousedown + capture)
+  useEffect(() => {
+    if (!isOpen) return;
+
+    const handler = (e: MouseEvent) => {
+      if (openingLock.current) return;
+
+      const target = e.target as Node;
+      if (panelRef.current?.contains(target)) return;
+      if (openerRef?.current?.contains(target)) return;
+
+      onClose();
+    };
+
+    document.addEventListener('mousedown', handler, true);
+    return () => document.removeEventListener('mousedown', handler, true);
+  }, [isOpen, onClose, openerRef]);
+
+  // รีเซ็ต stack เมื่อปิด
+  useEffect(() => {
+    if (!isOpen) setStack([{ title: rootTitle, items }]);
+  }, [isOpen, items, rootTitle]);
+
+  const handleBack = () => setStack((prev) => prev.slice(0, -1));
+  const handleSelectSubMenu = (items: MenuItem[], title: string) =>
     setStack((prev) => [...prev, { title, items }]);
-  };
+
+  if (!mounted) return null;
 
   return (
-    <div
-      className="pointer-events-none fixed inset-0 z-50 data-[open=true]:pointer-events-auto"
-      data-open={open}
-      aria-hidden={!open}
-    >
+    <>
+      {/* Backdrop */}
       <div
-        ref={containerRef}
-        role="dialog"
-        aria-modal="true"
-        aria-label="Main menu"
-        className="absolute right-0 top-0 h-full w-[min(320px,85vw)] translate-x-full bg-white shadow-[-12px_0_40px_rgba(0,0,0,0.18)] transition-transform duration-300 ease-out-soft data-[open=true]:translate-x-0"
-        data-open={open}
+        ref={backdropRef}
+        aria-hidden
+        className={[
+          'fixed inset-0 z-40 bg-black/40 transition-opacity duration-300 ease-out',
+          show ? 'opacity-100' : 'opacity-0 pointer-events-none',
+        ].join(' ')}
+        onMouseDown={(e) => e.stopPropagation()}
+        onClick={onClose}
+      />
+
+      {/* Slide Panel */}
+      <div
+        ref={panelRef}
+        className={[
+          'fixed top-0 right-0 z-50 h-full w-4/5 max-w-xs bg-white shadow-lg',
+          'transform transition-transform duration-300 ease-in-out',
+          show ? 'translate-x-0' : 'translate-x-full',
+        ].join(' ')}
+        onMouseDown={(e) => e.stopPropagation()}
       >
-        <div className="relative h-full overflow-hidden">
+        <div className="relative w-full h-full overflow-hidden">
           {stack.map((view, index) => (
             <MobileMenuView
               key={`${index}-${view.title}`}
@@ -146,21 +133,12 @@ export default function MobileMenu({ open, nav, columns, triggerLabel, onClose }
               index={index}
               current={stack.length - 1}
               onBack={index > 0 ? handleBack : undefined}
-              onSelectSubMenu={handleSelect}
+              onSelectSubMenu={handleSelectSubMenu}
               onClose={onClose}
             />
           ))}
         </div>
       </div>
-      <button
-        type="button"
-        aria-label="Close menu"
-        tabIndex={open ? 0 : -1}
-        aria-hidden={!open}
-        className="pointer-events-none absolute inset-0 bg-black/40 opacity-0 transition-opacity duration-200 ease-out-soft data-[open=true]:pointer-events-auto data-[open=true]:opacity-100"
-        data-open={open}
-        onClick={onClose}
-      />
-    </div>
+    </>
   );
 }

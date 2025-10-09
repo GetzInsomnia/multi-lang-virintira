@@ -1,3 +1,4 @@
+// src/components/navbar/Navbar.tsx
 'use client';
 
 import Image from 'next/image';
@@ -15,18 +16,13 @@ import NavLink from './NavLink';
 import SearchToggle from './SearchToggle';
 import SocialFloating from './SocialFloating';
 import type { MegaMenuColumn, NavItem, NavbarData } from './types';
+import type { MenuItem } from './MobileMenuView';
 
 function isInternalMatch(currentPath: string, href?: string): boolean {
-  if (!href || href.startsWith('#')) {
-    return false;
-  }
+  if (!href || href.startsWith('#')) return false;
   const target = normalizeInternalHref(href);
-  if (!target || target === '#') {
-    return false;
-  }
-  if (target === '/') {
-    return currentPath === '/';
-  }
+  if (!target || target === '#') return false;
+  if (target === '/') return currentPath === '/';
   return currentPath === target || currentPath.startsWith(`${target}/`);
 }
 
@@ -38,9 +34,34 @@ function hasActiveMega(columns: MegaMenuColumn[], currentPath: string) {
 
 type NavEntry = { type: 'link'; item: NavItem } | { type: 'mega' };
 
-type NavbarProps = {
-  data: NavbarData;
-};
+type NavbarProps = { data: NavbarData };
+
+// สร้างข้อมูลสำหรับ MobileMenu (ชั้นซ้อนแบบ legacy)
+function buildMobileItems(nav: NavItem[], columns: MegaMenuColumn[], triggerLabel: string): MenuItem[] {
+  const items: MenuItem[] = [];
+
+  if (nav.length > 0) {
+    const first = nav[0];
+    items.push({ label: first.label, href: first.href });
+  }
+
+  if (columns.length > 0) {
+    items.push({
+      label: triggerLabel,
+      href: '/under-construction',
+      items: columns.map((col) => ({
+        label: col.title,
+        items: col.items.map((it) => ({ label: it.label, href: it.href })),
+      })),
+    });
+  }
+
+  for (let i = 1; i < nav.length; i += 1) {
+    items.push({ label: nav[i].label, href: nav[i].href });
+  }
+
+  return items;
+}
 
 export default function Navbar({ data }: NavbarProps) {
   const locale = useLocale();
@@ -56,17 +77,16 @@ export default function Navbar({ data }: NavbarProps) {
   const megaOpenTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
   const megaCloseTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
 
+  // สำคัญ: ใช้ครอบ "ปุ่ม" จริง ๆ และกัน bubble ด้วย onMouseDown
+  const openerRef = useRef<HTMLSpanElement | null>(null);
+
   const megaColumns = data.megaMenu.columns;
   const hasMegaMenu = megaColumns.length > 0;
 
   const navEntries = useMemo<NavEntry[]>(() => {
     const entries: NavEntry[] = [];
-    if (data.nav.length > 0) {
-      entries.push({ type: 'link', item: data.nav[0] });
-    }
-    if (hasMegaMenu) {
-      entries.push({ type: 'mega' });
-    }
+    if (data.nav.length > 0) entries.push({ type: 'link', item: data.nav[0] });
+    if (hasMegaMenu) entries.push({ type: 'mega' });
     for (let index = 1; index < data.nav.length; index += 1) {
       entries.push({ type: 'link', item: data.nav[index] });
     }
@@ -87,24 +107,15 @@ export default function Navbar({ data }: NavbarProps) {
 
   useEffect(() => {
     return () => {
-      if (megaOpenTimer.current) {
-        clearTimeout(megaOpenTimer.current);
-      }
-      if (megaCloseTimer.current) {
-        clearTimeout(megaCloseTimer.current);
-      }
+      if (megaOpenTimer.current) clearTimeout(megaOpenTimer.current);
+      if (megaCloseTimer.current) clearTimeout(megaCloseTimer.current);
     };
   }, []);
 
   const scheduleMegaOpen = () => {
     if (!hasMegaMenu) return;
-    if (megaCloseTimer.current) {
-      clearTimeout(megaCloseTimer.current);
-      megaCloseTimer.current = null;
-    }
-    if (megaOpenTimer.current) {
-      clearTimeout(megaOpenTimer.current);
-    }
+    if (megaCloseTimer.current) { clearTimeout(megaCloseTimer.current); megaCloseTimer.current = null; }
+    if (megaOpenTimer.current) clearTimeout(megaOpenTimer.current);
     megaOpenTimer.current = setTimeout(() => {
       setMegaOpen(true);
       setSearchOpen(false);
@@ -114,23 +125,13 @@ export default function Navbar({ data }: NavbarProps) {
 
   const scheduleMegaClose = () => {
     if (!hasMegaMenu) return;
-    if (megaOpenTimer.current) {
-      clearTimeout(megaOpenTimer.current);
-      megaOpenTimer.current = null;
-    }
-    if (megaCloseTimer.current) {
-      clearTimeout(megaCloseTimer.current);
-    }
-    megaCloseTimer.current = setTimeout(() => {
-      setMegaOpen(false);
-    }, 140);
+    if (megaOpenTimer.current) { clearTimeout(megaOpenTimer.current); megaOpenTimer.current = null; }
+    if (megaCloseTimer.current) clearTimeout(megaCloseTimer.current);
+    megaCloseTimer.current = setTimeout(() => setMegaOpen(false), 140);
   };
 
   const cancelMegaClose = () => {
-    if (megaCloseTimer.current) {
-      clearTimeout(megaCloseTimer.current);
-      megaCloseTimer.current = null;
-    }
+    if (megaCloseTimer.current) { clearTimeout(megaCloseTimer.current); megaCloseTimer.current = null; }
   };
 
   const handleMobileToggle = () => {
@@ -142,41 +143,34 @@ export default function Navbar({ data }: NavbarProps) {
 
   const onSearchOpenChange = (open: boolean) => {
     setSearchOpen(open);
-    if (open) {
-      setLanguageOpen(false);
-      setMegaOpen(false);
-    }
+    if (open) { setLanguageOpen(false); setMegaOpen(false); }
   };
 
   const onLanguageOpenChange = (open: boolean) => {
     setLanguageOpen(open);
-    if (open) {
-      setSearchOpen(false);
-      setMegaOpen(false);
-    }
+    if (open) { setSearchOpen(false); setMegaOpen(false); }
   };
 
+  const mobileItems = useMemo(
+    () => buildMobileItems(data.nav, data.megaMenu.columns, data.megaMenu.triggerLabel),
+    [data.nav, data.megaMenu.columns, data.megaMenu.triggerLabel],
+  );
+
   return (
-    <header
-      className="sticky top-0 z-50 bg-white shadow-sm"
-      style={{ '--header-height': '72px' } as CSSProperties}
-    >
-      <SocialFloating />
+    <header className="sticky top-0 z-50 bg-white shadow-sm" style={{ '--header-height': '72px' } as CSSProperties}>
+      <SocialFloating {...({ menuOpen: mobileOpen } as any)} />
+
       <div className="relative mx-auto max-w-[1280px] px-4">
         <div className="flex h-[var(--header-height)] items-center justify-between">
           <Link href={`/${locale}`} className="flex items-center gap-3" prefetch>
             <Image src="/logo.png" alt="ViRINTIRA" width={44} height={44} priority />
-            <span className="text-[22px] font-extrabold tracking-[0.02em] text-[#A70909]">
-              ViRINTIRA
-            </span>
+            <span className="text-[22px] font-extrabold tracking-[0.02em] text-[#A70909]">ViRINTIRA</span>
           </Link>
 
           <nav className="hidden items-center gap-5 md:flex overflow-visible" aria-label="Primary navigation">
             {navEntries.map((entry, index) => {
               if (entry.type === 'mega') {
-                if (!hasMegaMenu) {
-                  return null;
-                }
+                if (!hasMegaMenu) return null;
                 const isOpen = megaOpen || megaActive;
                 return (
                   <div
@@ -193,9 +187,8 @@ export default function Navbar({ data }: NavbarProps) {
                       active={isOpen}
                       onClick={(event) => {
                         event.preventDefault();
-                        if (isOpen) {
-                          setMegaOpen(false);
-                        } else {
+                        if (isOpen) setMegaOpen(false);
+                        else {
                           setMegaOpen(true);
                           setSearchOpen(false);
                           setLanguageOpen(false);
@@ -213,7 +206,7 @@ export default function Navbar({ data }: NavbarProps) {
               const active = isInternalMatch(currentPath, item.href);
               return (
                 <NavLink
-                  key={item.label}
+                  key={`${item.label}-${index}`}
                   href={item.href || '#'}
                   label={item.label}
                   flame={Boolean(item.highlight)}
@@ -238,33 +231,31 @@ export default function Navbar({ data }: NavbarProps) {
               currentLocale={locale}
             />
             <div className="md:hidden">
-              <HamburgerButton isOpen={mobileOpen} onClick={handleMobileToggle} />
+              {/* กัน bubble คลิกแรกไม่ให้กลายเป็น outside-click */}
+              <span ref={openerRef} className="inline-flex" onMouseDown={(e) => e.stopPropagation()}>
+                <HamburgerButton isOpen={mobileOpen} onClick={handleMobileToggle} />
+              </span>
             </div>
           </div>
         </div>
+
         {hasMegaMenu ? (
           <MegaMenu
             open={megaOpen}
             columns={megaColumns}
-            onMouseEnter={(event) => {
-              void event;
-              cancelMegaClose();
-              setMegaOpen(true);
-            }}
-            onMouseLeave={(event) => {
-              void event;
-              scheduleMegaClose();
-            }}
+            onMouseEnter={(e) => { void e; cancelMegaClose(); setMegaOpen(true); }}
+            onMouseLeave={(e) => { void e; scheduleMegaClose(); }}
             onLinkClick={() => setMegaOpen(false)}
           />
         ) : null}
       </div>
+
       <MobileMenu
-        open={mobileOpen}
-        nav={data.nav}
-        columns={megaColumns}
-        triggerLabel={data.megaMenu.triggerLabel}
+        isOpen={mobileOpen}
         onClose={() => setMobileOpen(false)}
+        openerRef={openerRef}
+        rootTitle="ViRINTIRA"
+        items={mobileItems}
       />
     </header>
   );
