@@ -34,6 +34,8 @@ export default function MobileMenu({
   const backdropRef = useRef<HTMLDivElement | null>(null);
   const panelRef = useRef<HTMLDivElement | null>(null);
   const openingLock = useRef(false);
+  const raf1Ref = useRef<number | null>(null);
+  const raf2Ref = useRef<number | null>(null);
   const pathname = usePathname();
 
   /** ✅ ป้องกัน onClose() รันตอน mount ครั้งแรก */
@@ -48,12 +50,6 @@ export default function MobileMenu({
   useEffect(() => {
     if (isOpen) {
       setMounted(true);
-      let raf1: number | null = null;
-      let raf2: number | null = null;
-
-      raf1 = requestAnimationFrame(() => {
-        raf2 = requestAnimationFrame(() => setShow(true));
-      });
 
       openingLock.current = true;
       const id = setTimeout(() => {
@@ -61,15 +57,41 @@ export default function MobileMenu({
       }, 250);
       return () => {
         clearTimeout(id);
-        if (raf1 !== null) cancelAnimationFrame(raf1);
-        if (raf2 !== null) cancelAnimationFrame(raf2);
       };
-    } else {
-      setShow(false);
-      const id = setTimeout(() => setMounted(false), 350); // ← เพิ่มเล็กน้อยให้เนียนขึ้น
-      return () => clearTimeout(id);
     }
+
+    setShow(false);
+    const id = setTimeout(() => setMounted(false), 350); // ← เพิ่มเล็กน้อยให้เนียนขึ้น
+    return () => clearTimeout(id);
   }, [isOpen]);
+
+  useEffect(() => {
+    const cancelQueuedFrames = () => {
+      if (raf1Ref.current !== null) {
+        cancelAnimationFrame(raf1Ref.current);
+        raf1Ref.current = null;
+      }
+      if (raf2Ref.current !== null) {
+        cancelAnimationFrame(raf2Ref.current);
+        raf2Ref.current = null;
+      }
+    };
+
+    if (!mounted || !isOpen) {
+      cancelQueuedFrames();
+      return undefined;
+    }
+
+    raf1Ref.current = requestAnimationFrame(() => {
+      raf2Ref.current = requestAnimationFrame(() => {
+        setShow(true);
+      });
+    });
+
+    return () => {
+      cancelQueuedFrames();
+    };
+  }, [mounted, isOpen]);
 
   // ปิดด้วย ESC
   useEffect(() => {
@@ -140,6 +162,7 @@ export default function MobileMenu({
               items={view.items}
               index={index}
               current={stack.length - 1}
+              panelVisible={show}
               onBack={index > 0 ? handleBack : undefined}
               onSelectSubMenu={handleSelectSubMenu}
               onClose={onClose}

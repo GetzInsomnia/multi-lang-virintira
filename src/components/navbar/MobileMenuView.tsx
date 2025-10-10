@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { FaChevronLeft } from 'react-icons/fa';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faXmark } from '@fortawesome/free-solid-svg-icons';
@@ -24,6 +24,7 @@ export default function MobileMenuView({
   onClose,
   index,
   current,
+  panelVisible,
 }: {
   title: string;
   items: MenuItem[];
@@ -32,18 +33,43 @@ export default function MobileMenuView({
   onClose: () => void;
   index: number;
   current: number;
+  panelVisible: boolean;
 }) {
   const [enter, setEnter] = useState(false);
+  const raf1Ref = useRef<number | null>(null);
+  const raf2Ref = useRef<number | null>(null);
 
   useEffect(() => {
-    if (index === current) {
-      const id = requestAnimationFrame(() => setEnter(true));
-      return () => cancelAnimationFrame(id);
-    }
-    setEnter(false);
-  }, [current, index]);
+    const cancelQueuedFrames = () => {
+      if (raf1Ref.current !== null) {
+        cancelAnimationFrame(raf1Ref.current);
+        raf1Ref.current = null;
+      }
+      if (raf2Ref.current !== null) {
+        cancelAnimationFrame(raf2Ref.current);
+        raf2Ref.current = null;
+      }
+    };
 
-  const active = index === current;
+    const isCurrent = index === current;
+    if (!isCurrent || !panelVisible) {
+      cancelQueuedFrames();
+      setEnter(false);
+      return undefined;
+    }
+
+    raf1Ref.current = requestAnimationFrame(() => {
+      raf2Ref.current = requestAnimationFrame(() => {
+        setEnter(true);
+      });
+    });
+
+    return () => {
+      cancelQueuedFrames();
+    };
+  }, [current, index, panelVisible]);
+
+  const active = index === current && panelVisible;
 
   return (
     <div
