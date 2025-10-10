@@ -3,6 +3,11 @@
 import { useEffect, useRef, useState } from 'react';
 import { usePathname } from 'next/navigation';
 import MobileMenuView from './MobileMenuView';
+import {
+  MOBILE_MENU_CLOSE_DELAY_MS,
+  MOBILE_MENU_TRANSITION_DURATION_CLASS,
+  MOBILE_MENU_TRANSITION_EASING_CLASS,
+} from './mobileMenuTransition';
 
 export interface MenuItem {
   label: string;
@@ -61,7 +66,7 @@ export default function MobileMenu({
     }
 
     setShow(false);
-    const id = setTimeout(() => setMounted(false), 350); // ← เพิ่มเล็กน้อยให้เนียนขึ้น
+    const id = setTimeout(() => setMounted(false), MOBILE_MENU_CLOSE_DELAY_MS); // ← เพิ่มเล็กน้อยให้เนียนขึ้น
     return () => clearTimeout(id);
   }, [isOpen]);
 
@@ -149,7 +154,9 @@ export default function MobileMenu({
         ref={panelRef}
         className={[
           'fixed top-0 right-0 z-50 h-full w-4/5 max-w-xs bg-white shadow-lg',
-          'transform transition-[transform,opacity] duration-900 ease-[cubic-bezier(0.2,0,0,1)]',
+          'transform transition-[transform,opacity]',
+          MOBILE_MENU_TRANSITION_DURATION_CLASS,
+          MOBILE_MENU_TRANSITION_EASING_CLASS,
           show ? 'translate-x-0 opacity-100' : 'translate-x-full opacity-0', // 👈 sync delay
         ].join(' ')}
         onMouseDown={(e) => e.stopPropagation()}

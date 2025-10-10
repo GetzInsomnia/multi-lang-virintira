@@ -7,6 +7,10 @@ import { faXmark } from '@fortawesome/free-solid-svg-icons';
 import { faFire } from '@fortawesome/free-solid-svg-icons';
 import { Link } from '@/i18n/routing';
 import { normalizeInternalHref } from '@/lib/links';
+import {
+  MOBILE_MENU_TRANSITION_DURATION_CLASS,
+  MOBILE_MENU_TRANSITION_EASING_CLASS,
+} from './mobileMenuTransition';
 
 export type MenuItem = {
   label: string;
@@ -75,7 +79,9 @@ export default function MobileMenuView({
     <div
       className={[
         'absolute inset-0',
-        'transition-[transform,opacity] duration-500 ease-[cubic-bezier(0.2,0,0,1)]',
+        'transition-[transform,opacity]',
+        MOBILE_MENU_TRANSITION_DURATION_CLASS,
+        MOBILE_MENU_TRANSITION_EASING_CLASS,
         'will-change-transform will-change-opacity',
         enter ? 'translate-x-0 opacity-100' : 'translate-x-full opacity-0',
         active ? 'pointer-events-auto' : 'pointer-events-none',
