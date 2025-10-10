@@ -1,3 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@400;500&subset=latin,thai&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500&subset=latin,chinese-simplified&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500&subset=latin,chinese-traditional&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500&subset=latin,japanese&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500&subset=latin,korean&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500&subset=latin,devanagari&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Tamil:wght@400;500&subset=latin,tamil&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Hebrew:wght@400;500&subset=latin,hebrew&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Naskh+Arabic:wght@400;500&subset=arabic&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500&subset=latin,arabic&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
