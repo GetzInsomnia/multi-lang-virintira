@@ -154,10 +154,11 @@ export default function MobileMenu({
         ref={panelRef}
         className={[
           'fixed top-0 right-0 z-50 h-full w-4/5 max-w-xs bg-white shadow-lg',
-          'transform transition-[transform,opacity]',
+          'transform transition-transform',
+          'opacity-100',
           MOBILE_MENU_TRANSITION_DURATION_CLASS,
           MOBILE_MENU_TRANSITION_EASING_CLASS,
-          show ? 'translate-x-0 opacity-100' : 'translate-x-full opacity-0', // 👈 sync delay
+          show ? 'translate-x-0' : 'translate-x-full', // 👈 sync delay
         ].join(' ')}
         onMouseDown={(e) => e.stopPropagation()}
       >
