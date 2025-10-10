@@ -114,7 +114,7 @@ export default function SearchToggle({
           ref={shellRef}
           aria-hidden={open ? undefined : 'true'}
           className={[
-            'w-full rounded-md bg-white px-4 py-2 shadow-md',
+            'w-full rounded-md bg-white px-2 py-2 shadow-md',
             'transition-[opacity,transform] duration-300 ease-in-out',
             open ? 'opacity-100 translate-y-0 pointer-events-auto' : 'opacity-0 -translate-y-2 pointer-events-none',
           ].join(' ')}
