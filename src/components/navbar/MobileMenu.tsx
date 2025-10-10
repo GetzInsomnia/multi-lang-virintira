@@ -48,13 +48,22 @@ export default function MobileMenu({
   useEffect(() => {
     if (isOpen) {
       setMounted(true);
-      requestAnimationFrame(() => setShow(true));
+      let raf1: number | null = null;
+      let raf2: number | null = null;
+
+      raf1 = requestAnimationFrame(() => {
+        raf2 = requestAnimationFrame(() => setShow(true));
+      });
 
       openingLock.current = true;
       const id = setTimeout(() => {
         openingLock.current = false;
       }, 250);
-      return () => clearTimeout(id);
+      return () => {
+        clearTimeout(id);
+        if (raf1 !== null) cancelAnimationFrame(raf1);
+        if (raf2 !== null) cancelAnimationFrame(raf2);
+      };
     } else {
       setShow(false);
       const id = setTimeout(() => setMounted(false), 350); // ← เพิ่มเล็กน้อยให้เนียนขึ้น
