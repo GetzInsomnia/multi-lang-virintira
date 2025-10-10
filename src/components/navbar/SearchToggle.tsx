@@ -1,11 +1,12 @@
 'use client';
 
 import { useCallback, useEffect, useRef, useState, type FormEvent } from 'react';
+
+import { normalizeInternalHref } from '@/lib/links';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
 
 type SearchToggleProps = {
-  locale: string;
   open: boolean;
   onOpenChange: (open: boolean) => void;
   placeholder: string;
@@ -16,7 +17,6 @@ type SearchToggleProps = {
 const DEFAULT_ACTION = '/search';
 
 export default function SearchToggle({
-  locale,
   open,
   onOpenChange,
   placeholder,
@@ -78,9 +78,7 @@ export default function SearchToggle({
     }
   };
 
-  const action = `${locale ? `/${locale}` : ''}${
-    actionHref.startsWith('/') ? actionHref : `/${actionHref}`
-  }`.replace(/\/+/g, '/');
+  const action = normalizeInternalHref(actionHref);
 
   return (
     <div className="relative h-full">

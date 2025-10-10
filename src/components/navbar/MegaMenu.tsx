@@ -3,6 +3,7 @@
 import type { MouseEventHandler } from 'react';
 
 import { Link } from '@/i18n/routing';
+import { normalizeInternalHref } from '@/lib/links';
 
 import type { MegaMenuColumn } from './types';
 
@@ -48,7 +49,7 @@ export default function MegaMenu({
                 {column.items.map((item) => (
                   <li key={item.href}>
                     <Link
-                      href={item.href}
+                      href={normalizeInternalHref(item.href)}
                       className="block text-[15px] font-medium text-[#2A2A2A] transition-colors duration-150 hover:text-[#A70909]"
                       onClick={onLinkClick}
                     >

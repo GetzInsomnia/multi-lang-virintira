@@ -5,6 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFire } from '@fortawesome/free-solid-svg-icons';
 
 import { Link } from '@/i18n/routing';
+import { normalizeInternalHref } from '@/lib/links';
 
 type NavLinkProps = {
   href: string;
@@ -62,7 +63,7 @@ export default function NavLink({
 
   return (
     <Link
-      href={href}
+      href={normalizeInternalHref(href)}
       className={classes}
       aria-current={active ? 'true' : undefined}
       data-flame={flame ? 'true' : undefined}

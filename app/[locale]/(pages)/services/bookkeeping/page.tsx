@@ -4,6 +4,8 @@ import { COMPANY } from '@/data/company';
 import { absoluteUrl } from '@/config/site';
 import { buildLocaleAlternates } from '@/lib/metadata';
 import { JsonLd } from '@/components/common/JsonLd';
+import { Link } from '@/i18n/routing';
+import { normalizeInternalHref } from '@/lib/links';
 import { loadMessages, resolveLocale } from '@/i18n/loadMessages';
 import {
   buildBreadcrumbJsonLd,
@@ -433,12 +435,12 @@ export default async function BookkeepingServicePage({ params }: PageParams) {
                 </a>
               )}
               {ctaBanner.secondary && (
-                <a
-                  href="/resources"
+                <Link
+                  href={normalizeInternalHref('/resources')}
                   className="inline-flex min-w-[200px] items-center justify-center rounded-full border border-white/60 px-6 py-3 text-sm font-semibold text-white transition hover:-translate-y-0.5 hover:bg-white/10"
                 >
                   {ctaBanner.secondary}
-                </a>
+                </Link>
               )}
             </div>
           </div>
