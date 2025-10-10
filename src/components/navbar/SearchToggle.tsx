@@ -1,7 +1,7 @@
+// src/components/navbar/SearchToggle.tsx
 'use client';
 
 import { useCallback, useEffect, useRef, useState, type FormEvent } from 'react';
-
 import { normalizeInternalHref } from '@/lib/links';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
@@ -56,11 +56,15 @@ export default function SearchToggle({
     return () => document.removeEventListener('keydown', onKey);
   }, [open, close]);
 
-  // โฟกัส input เมื่อเปิด
+  // โฟกัส input เมื่อเปิด (autoFocus + rAF + setTimeout ให้ชัวร์ทุกเบราว์เซอร์)
   useEffect(() => {
     if (!open) return;
-    const id = requestAnimationFrame(() => inputRef.current?.focus());
-    return () => cancelAnimationFrame(id);
+    const raf = requestAnimationFrame(() => inputRef.current?.focus());
+    const tid = setTimeout(() => inputRef.current?.focus(), 50);
+    return () => {
+      cancelAnimationFrame(raf);
+      clearTimeout(tid);
+    };
   }, [open]);
 
   // ล้าง query เมื่อปิด
@@ -82,7 +86,7 @@ export default function SearchToggle({
 
   return (
     <div className="relative h-full">
-      {/* ปุ่มนอก: เดสก์ท็อปไม่เฟด (กันกะพริบ); มือถือ/<1240px ค่อยเฟดตอนเปิด */}
+      {/* ปุ่มนอก */}
       <button
         ref={buttonRef}
         type="button"
@@ -93,72 +97,42 @@ export default function SearchToggle({
         className={[
           'inline-flex h-8 w-8 items-center justify-center rounded-full p-2 text-[#A70909]',
           'transition-opacity duration-200',
-          // ซ่อนเฉพาะ <1240px ตอนเปิด เพื่อไม่ให้ซ้อนกับกล่องด้านล่าง navbar
-          open ? 'max-[1239px]:opacity-0 max-[1239px]:pointer-events-none' : 'opacity-100',
-          open ? '' : 'hover:opacity-80',
+          open ? 'opacity-0 pointer-events-none' : 'opacity-100 hover:opacity-80',
         ].join(' ')}
       >
         <FontAwesomeIcon icon={faSearch} className="h-5 w-5" />
       </button>
 
-      {/* ≥1240px: ช่องค้นหา inline — งอกจากตำแหน่งไอคอน (ขยายไปทางซ้าย) */}
+      {/* แผงค้นหาใต้นาฟบาร์: ใช้ตัวแปรความสูงเฮดเดอร์ */}
       <div
         id="navbar-search-panel"
         ref={shellRef}
         aria-hidden={open ? undefined : 'true'}
         className={[
-          'pointer-events-none absolute right-0 top-1/2 z-40 hidden -translate-y-1/2 items-center',
-          'rounded-md bg-white shadow-md transition-all duration-300 ease-in-out',
-          'min-[1240px]:flex',
-          open ? 'pointer-events-auto opacity-100 w-72 pl-3' : 'opacity-0 w-0 pl-0',
+          'fixed left-1/2 z-40 w-full max-w-[800px] -translate-x-1/2 rounded-md bg-white px-4 py-2 shadow-md',
+          'transition-all duration-300 ease-in-out',
+          open ? 'opacity-100 translate-y-0 pointer-events-auto' : 'opacity-0 -translate-y-2 pointer-events-none',
         ].join(' ')}
+        // วางชิดใต้เฮดเดอร์อย่างพอดี
+        style={{ top: 'calc(var(--header-height) + 1px)' }} // ถ้าต้องการชิดลงอีก 1px: 'calc(var(--header-height) + 1px)'
       >
-        <form
-          action={action}
-          method="get"
-          className="relative flex h-8 w-full items-center"
-          onSubmit={handleSubmit}
-        >
+        <form action={action} method="get" className="flex items-center gap-2" onSubmit={handleSubmit}>
           <input
             ref={inputRef}
             name="q"
             value={query}
             onChange={(e) => setQuery(e.target.value)}
             placeholder={placeholder}
-            className="h-full w-full bg-transparent text-sm text-[#2A2A2A] outline-none placeholder:text-[#6B7280] pr-14"
+            autoFocus={open}               // ให้โฟกัสตอนเปิด
+            enterKeyHint="search"          // มือถือจะแสดงปุ่ม "Search"
+            className="w-full bg-transparent outline-none text-sm text-[#2A2A2A] placeholder:text-[#6B7280] pr-10"
           />
-          {/* ปุ่มไอคอนในกล่อง: ตำแหน่งทับปุ่มนอกพอดี และไม่ทำ hover flicker */}
           <button
             type="submit"
             aria-label={submitLabel}
-            className="absolute right-[0px] top-1/2 -mt-px -translate-y-1/2 h-8 w-8 p-2 text-[#A70909] flex items-center justify-center"
+            className="text-[#A70909] inline-flex h-8 w-8 items-center justify-center"
           >
             <FontAwesomeIcon icon={faSearch} className="h-5 w-5" />
-          </button>
-        </form>
-      </div>
-
-      {/* <1240px: กล่องใต้ navbar (เหมือน legacy) */}
-      <div
-        className={[
-          'fixed left-0 top-[72px] w-full rounded-md bg-white px-4 py-2 shadow-md',
-          'transition-all duration-300 ease-in-out',
-          'max-[1239px]:block min-[1240px]:hidden',
-          open ? 'opacity-100 translate-y-0 pointer-events-auto' : 'opacity-0 -translate-y-2 pointer-events-none',
-        ].join(' ')}
-      >
-        <form action={action} method="get" className="flex items-center space-x-2" onSubmit={handleSubmit}>
-          <input
-            ref={inputRef}
-            name="q"
-            value={query}
-            onChange={(e) => setQuery(e.target.value)}
-            placeholder={placeholder}
-            className="w-full bg-transparent outline-none text-sm text-black placeholder-gray-400 pr-10"
-          />
-        {/* ไอคอนในกล่อง (ขนาดเท่าปุ่มนอก) */}
-          <button type="submit" aria-label={submitLabel} className="text-[#A70909] inline-flex h-8 w-8 items-center justify-center">
-            <FontAwesomeIcon icon={faSearch} className="w-5 h-5" />
           </button>
         </form>
       </div>
