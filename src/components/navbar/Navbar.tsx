@@ -42,7 +42,7 @@ function buildMobileItems(nav: NavItem[], columns: MegaMenuColumn[], triggerLabe
 
   if (nav.length > 0) {
     const first = nav[0];
-    items.push({ label: first.label, href: first.href });
+    items.push({ label: first.label, href: first.href, highlight: first.highlight });
   }
 
   if (columns.length > 0) {
@@ -57,7 +57,7 @@ function buildMobileItems(nav: NavItem[], columns: MegaMenuColumn[], triggerLabe
   }
 
   for (let i = 1; i < nav.length; i += 1) {
-    items.push({ label: nav[i].label, href: nav[i].href });
+    items.push({ label: nav[i].label, href: nav[i].href, highlight: nav[i].highlight });
   }
 
   return items;
