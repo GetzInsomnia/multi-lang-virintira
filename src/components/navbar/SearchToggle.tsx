@@ -105,40 +105,36 @@ export default function SearchToggle({
 
       {/* แผงค้นหาใต้นาฟบาร์: ใช้ตัวแปรความสูงเฮดเดอร์ */}
       <div
-        className="fixed left-1/2 z-40 w-full max-w-[800px] -translate-x-1/2 pointer-events-none"
+        id="navbar-search-panel"
+        ref={shellRef}
+        aria-hidden={open ? undefined : 'true'}
+        className={[
+          'fixed left-1/2 z-40 w-full max-w-[800px] -translate-x-1/2 rounded-md bg-white px-4 py-2 shadow-md',
+          'transition-all duration-300 ease-in-out',
+          open ? 'opacity-100 translate-y-0 pointer-events-auto' : 'opacity-0 -translate-y-2 pointer-events-none',
+        ].join(' ')}
         // วางชิดใต้เฮดเดอร์อย่างพอดี
         style={{ top: 'calc(var(--header-height) + 1px)' }} // ถ้าต้องการชิดลงอีก 1px: 'calc(var(--header-height) + 1px)'
       >
-        <div
-          id="navbar-search-panel"
-          ref={shellRef}
-          aria-hidden={open ? undefined : 'true'}
-          className={[
-            'w-full rounded-md bg-white px-2 py-2 shadow-md',
-            'transition-[opacity,transform] duration-300 ease-in-out',
-            open ? 'opacity-100 translate-y-0 pointer-events-auto' : 'opacity-0 -translate-y-2 pointer-events-none',
-          ].join(' ')}
-        >
-          <form action={action} method="get" className="flex items-center gap-2" onSubmit={handleSubmit}>
-            <input
-              ref={inputRef}
-              name="q"
-              value={query}
-              onChange={(e) => setQuery(e.target.value)}
-              placeholder={placeholder}
-              autoFocus={open}               // ให้โฟกัสตอนเปิด
-              enterKeyHint="search"          // มือถือจะแสดงปุ่ม "Search"
-              className="w-full bg-transparent outline-none text-sm text-[#2A2A2A] placeholder:text-[#6B7280] pr-10"
-            />
-            <button
-              type="submit"
-              aria-label={submitLabel}
-              className="text-[#A70909] inline-flex h-8 w-8 items-center justify-center"
-            >
-              <FontAwesomeIcon icon={faSearch} className="h-5 w-5" />
-            </button>
-          </form>
-        </div>
+        <form action={action} method="get" className="flex items-center gap-2" onSubmit={handleSubmit}>
+          <input
+            ref={inputRef}
+            name="q"
+            value={query}
+            onChange={(e) => setQuery(e.target.value)}
+            placeholder={placeholder}
+            autoFocus={open}               // ให้โฟกัสตอนเปิด
+            enterKeyHint="search"          // มือถือจะแสดงปุ่ม "Search"
+            className="w-full bg-transparent outline-none text-sm text-[#2A2A2A] placeholder:text-[#6B7280] pr-2"
+          />
+          <button
+            type="submit"
+            aria-label={submitLabel}
+            className="text-[#A70909] inline-flex h-8 w-8 items-center justify-center"
+          >
+            <FontAwesomeIcon icon={faSearch} className="h-5 w-5" />
+          </button>
+        </form>
       </div>
     </div>
   );
