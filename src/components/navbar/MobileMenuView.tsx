@@ -6,6 +6,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faXmark } from '@fortawesome/free-solid-svg-icons';
 import { faFire } from '@fortawesome/free-solid-svg-icons';
 import { Link } from '@/i18n/routing';
+import { normalizeInternalHref } from '@/lib/links';
 
 export type MenuItem = {
   label: string;
@@ -106,7 +107,7 @@ export default function MobileMenuView({
               return (
                 <li key={key}>
                   <Link
-                    href={item.href}
+                    href={normalizeInternalHref(item.href)}
                     onClick={onClose}
                     className="block text-black hover:text-[#A70909] transition-colors font-normal text-base"
                     prefetch

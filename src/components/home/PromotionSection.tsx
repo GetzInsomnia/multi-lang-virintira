@@ -1,4 +1,5 @@
 import { Link } from '@/i18n/routing';
+import { normalizeInternalHref } from '@/lib/links';
 
 export function PromotionSection({ heading, description, ctaLabel, ctaHref }: { heading: string; description: string; ctaLabel: string; ctaHref: string }) {
   return (
@@ -27,7 +28,7 @@ export function PromotionSection({ heading, description, ctaLabel, ctaHref }: { 
             </div>
             <div className="flex flex-col items-start gap-4 lg:items-end">
               <Link
-                href={ctaHref}
+                href={normalizeInternalHref(ctaHref)}
                 className="inline-flex w-full items-center justify-center rounded-full bg-[#A70909] px-8 py-3 text-sm font-semibold text-white shadow-lg shadow-[#a70909]/30 transition-transform duration-300 ease-out hover:-translate-y-1 hover:bg-[#8c0808] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#A70909] focus-visible:ring-offset-2 focus-visible:ring-offset-white lg:w-auto"
               >
                 {ctaLabel}

@@ -162,7 +162,7 @@ export default function Navbar({ data }: NavbarProps) {
 
       <div className="relative mx-auto max-w-[1280px] px-4">
         <div className="flex h-[var(--header-height)] items-center justify-between">
-          <Link href={`/${locale}`} className="flex items-center gap-3" prefetch>
+          <Link href={normalizeInternalHref('/')} className="flex items-center gap-3" prefetch>
             <Image src="/logo.png" alt="ViRINTIRA" width={44} height={44} priority />
             <span className="text-[22px] font-extrabold tracking-[0.02em] text-[#A70909]">ViRINTIRA</span>
           </Link>
@@ -219,7 +219,6 @@ export default function Navbar({ data }: NavbarProps) {
 
           <div className="flex items-center gap-4">
             <SearchToggle
-              locale={locale}
               open={searchOpen}
               onOpenChange={onSearchOpenChange}
               placeholder={t('search.placeholder')}

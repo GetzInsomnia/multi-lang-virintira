@@ -4,6 +4,7 @@ import { useTransition } from 'react';
 import { useLocale } from 'next-intl';
 import { i18n, type Locale } from '@/i18n/config';
 import { usePathname, useRouter } from '@/i18n/routing';
+import { normalizeInternalHref } from '@/lib/links';
 
 const localeLabels: Record<string, string> = {
   th: 'ไทย',
@@ -38,7 +39,8 @@ export function LocaleSwitcher() {
         onChange={(event) => {
           const nextLocale = event.target.value as Locale;
           startTransition(() => {
-            router.replace(pathname, { locale: nextLocale });
+            const basePath = normalizeInternalHref(pathname) || '/';
+            router.replace(basePath, { locale: nextLocale });
           });
         }}
         disabled={isPending}

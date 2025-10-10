@@ -6,6 +6,7 @@ import type { SVGProps } from 'react';
 
 import { COMPANY } from '@/data/company';
 import { Link } from '@/i18n/routing';
+import { normalizeInternalHref } from '@/lib/links';
 
 export type FooterLink = { label: string; href: string };
 
@@ -95,7 +96,7 @@ function renderFooterLink(link: FooterLink) {
   }
 
   return (
-    <Link className="hover:underline text-[#A70909] font-medium" href={href} prefetch>
+    <Link className="hover:underline text-[#A70909] font-medium" href={normalizeInternalHref(href)} prefetch>
       {link.label}
     </Link>
   );
