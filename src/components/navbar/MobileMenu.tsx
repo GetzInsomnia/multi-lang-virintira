@@ -1,4 +1,3 @@
-// src/components/navbar/MobileMenu.tsx
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
@@ -37,18 +36,20 @@ export default function MobileMenu({
   const openingLock = useRef(false);
   const pathname = usePathname();
 
-  // ปิดเมื่อเปลี่ยนเส้นทาง
+  /** ✅ ป้องกัน onClose() รันตอน mount ครั้งแรก */
+  const lastPathRef = useRef(pathname);
   useEffect(() => {
+    if (lastPathRef.current === pathname) return;
+    lastPathRef.current = pathname;
     onClose();
   }, [pathname, onClose]);
 
-  // Mount / Unmount + Smooth fade
+  /** ✅ Mount / Unmount + sync panel & content transition */
   useEffect(() => {
     if (isOpen) {
       setMounted(true);
       requestAnimationFrame(() => setShow(true));
 
-      // ล็อก 250ms กันคลิกแรก
       openingLock.current = true;
       const id = setTimeout(() => {
         openingLock.current = false;
@@ -56,7 +57,7 @@ export default function MobileMenu({
       return () => clearTimeout(id);
     } else {
       setShow(false);
-      const id = setTimeout(() => setMounted(false), 300);
+      const id = setTimeout(() => setMounted(false), 350); // ← เพิ่มเล็กน้อยให้เนียนขึ้น
       return () => clearTimeout(id);
     }
   }, [isOpen]);
@@ -71,17 +72,15 @@ export default function MobileMenu({
     return () => window.removeEventListener('keydown', handleKey);
   }, [isOpen, onClose]);
 
-  // outside-click แบบปลอดภัย (mousedown + capture)
+  // outside-click แบบปลอดภัย
   useEffect(() => {
     if (!isOpen) return;
 
     const handler = (e: MouseEvent) => {
       if (openingLock.current) return;
-
       const target = e.target as Node;
       if (panelRef.current?.contains(target)) return;
       if (openerRef?.current?.contains(target)) return;
-
       onClose();
     };
 
@@ -114,13 +113,13 @@ export default function MobileMenu({
         onClick={onClose}
       />
 
-      {/* Slide Panel */}
+      {/* ✅ Slide Panel - synced transition */}
       <div
         ref={panelRef}
         className={[
           'fixed top-0 right-0 z-50 h-full w-4/5 max-w-xs bg-white shadow-lg',
-          'transform transition-transform duration-300 ease-in-out',
-          show ? 'translate-x-0' : 'translate-x-full',
+          'transform transition-[transform,opacity] duration-900 ease-[cubic-bezier(0.2,0,0,1)]',
+          show ? 'translate-x-0 opacity-100' : 'translate-x-full opacity-0', // 👈 sync delay
         ].join(' ')}
         onMouseDown={(e) => e.stopPropagation()}
       >

@@ -1,11 +1,12 @@
 'use client';
 
 import { useEffect, useMemo, useRef } from 'react';
-
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGlobe } from '@fortawesome/free-solid-svg-icons';
 
 import { usePathname, useRouter } from '@/i18n/routing';
+import { normalizeInternalHref } from '@/lib/links';
+import type { Locale } from '@/i18n/config';
 
 const DEFAULT_LOCALES = [
   'th',
@@ -43,44 +44,33 @@ export default function LanguageSwitcher({
   const buttonRef = useRef<HTMLButtonElement | null>(null);
   const router = useRouter();
   const pathname = usePathname() || '/';
+  const basePath = normalizeInternalHref(pathname) || '/';
+
   const codes = useMemo(() => {
     const unique = new Set(locales.map((code) => code.toLowerCase()));
     unique.add(currentLocale.toLowerCase());
     return Array.from(unique);
   }, [currentLocale, locales]);
 
-  const buildPathForLocale = (targetLocale: string) => {
-    const normalizedLocale = targetLocale.toLowerCase();
-    const segments = pathname.split('/').filter(Boolean);
-
-    if (!segments.length) {
-      return `/${normalizedLocale}`;
-    }
-
-    const [, ...rest] = segments;
-    return `/${[normalizedLocale, ...rest].join('/')}`;
-  };
-
+  /** ✅ FIX: ใช้ router.push(basePath, { locale }) แทน buildPathForLocale() */
   const handleSelect = (targetLocale: string) => {
     const normalizedLocale = targetLocale.toLowerCase();
-    const nextPath = buildPathForLocale(normalizedLocale);
 
-    if (nextPath !== pathname) {
-      router.push(nextPath);
+    if (normalizedLocale === currentLocale.toLowerCase()) {
+      onOpenChange(false);
+      return;
     }
 
+    router.push(basePath, { locale: normalizedLocale as Locale });
     onOpenChange(false);
   };
 
+  // ปิดเมื่อคลิกนอก
   useEffect(() => {
-    if (!open) {
-      return;
-    }
+    if (!open) return;
     const handleClick = (event: MouseEvent) => {
       const target = event.target as Node | null;
-      if (panelRef.current?.contains(target) || buttonRef.current?.contains(target)) {
-        return;
-      }
+      if (panelRef.current?.contains(target) || buttonRef.current?.contains(target)) return;
       onOpenChange(false);
     };
 
@@ -88,14 +78,11 @@ export default function LanguageSwitcher({
     return () => window.removeEventListener('mousedown', handleClick);
   }, [open, onOpenChange]);
 
+  // ปิดเมื่อกด Esc
   useEffect(() => {
-    if (!open) {
-      return;
-    }
+    if (!open) return;
     const handleKey = (event: KeyboardEvent) => {
-      if (event.key === 'Escape') {
-        onOpenChange(false);
-      }
+      if (event.key === 'Escape') onOpenChange(false);
     };
     window.addEventListener('keydown', handleKey);
     return () => window.removeEventListener('keydown', handleKey);
@@ -118,20 +105,15 @@ export default function LanguageSwitcher({
       <div
         id="language-menu-panel"
         className="
-  pointer-events-none fixed right-50 top-[calc(var(--header-height)+1px)] z-40
-  w-auto max-w-[92vw] opacity-0 transition-opacity duration-150 ease-out
-  data-[open=true]:pointer-events-auto data-[open=true]:opacity-100
-"
+          pointer-events-none fixed right-50 top-[calc(var(--header-height)+1px)] z-40
+          w-auto max-w-[92vw] opacity-0 transition-opacity duration-150 ease-out
+          data-[open=true]:pointer-events-auto data-[open=true]:opacity-100
+        "
         data-open={open ? 'true' : 'false'}
         aria-hidden={open ? undefined : 'true'}
       >
-        <div
-          ref={panelRef}
-          className="rounded-xl bg-white p-2 shadow-2xl"
-        >
-          {/* ใส่ wrapper ที่ควบคุมความสูงเลื่อนแบบซ่อน scrollbar */}
+        <div ref={panelRef} className="rounded-xl bg-white p-2 shadow-2xl">
           <div className="relative max-h-[35vh] overflow-hidden">
-            {/* แถบไล่สีบอกเลื่อนขึ้น */}
             <div className="pointer-events-none absolute inset-x-0 top-0 h-4 bg-gradient-to-b from-white to-transparent" />
 
             <ul className="max-h-[35vh] overflow-auto pr-1 scrollbar-hide space-y-1">
@@ -140,9 +122,7 @@ export default function LanguageSwitcher({
                 const isActive = normalized === currentLocale.toLowerCase();
                 const baseClasses =
                   'block rounded-xl px-4 py-2 text-[16px] font-normal text-[#2A2A2A] transition-colors duration-150 hover:bg-[#FDEAEA]';
-                const itemClasses = isActive
-                  ? `${baseClasses} bg-[#FDEAEA]`
-                  : baseClasses;
+                const itemClasses = isActive ? `${baseClasses} bg-[#FDEAEA]` : baseClasses;
                 return (
                   <li key={code}>
                     <button
@@ -157,6 +137,7 @@ export default function LanguageSwitcher({
                 );
               })}
             </ul>
+
             <div className="pointer-events-none absolute inset-x-0 bottom-0 h-4 bg-gradient-to-t from-white to-transparent" />
           </div>
         </div>

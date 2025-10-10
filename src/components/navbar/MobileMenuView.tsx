@@ -1,8 +1,10 @@
-// src/components/navbar/MobileMenuView.tsx
 'use client';
 
 import { useEffect, useState } from 'react';
 import { FaChevronLeft } from 'react-icons/fa';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faXmark } from '@fortawesome/free-solid-svg-icons';
+import { faFire } from '@fortawesome/free-solid-svg-icons';
 import { Link } from '@/i18n/routing';
 
 export type MenuItem = {
@@ -33,30 +35,28 @@ export default function MobileMenuView({
 
   useEffect(() => {
     if (index === current) {
-      // รอ 1 เฟรมก่อนเข้า เพื่อให้ได้ทรานซิชัน
       const id = requestAnimationFrame(() => setEnter(true));
       return () => cancelAnimationFrame(id);
     }
     setEnter(false);
   }, [current, index]);
 
-  // สมูท: slide-in + fade (เหมือน legacy)
   const active = index === current;
-  const tx = enter ? 'translate-x-0 opacity-100' : 'translate-x-full opacity-0';
 
   return (
     <div
       className={[
         'absolute inset-0',
-        'transition-[transform,opacity] duration-500 ease-in-out',
+        'transition-[transform,opacity] duration-500 ease-[cubic-bezier(0.2,0,0,1)]',
         'will-change-transform will-change-opacity',
-        tx,
+        enter ? 'translate-x-0 opacity-100' : 'translate-x-full opacity-0',
         active ? 'pointer-events-auto' : 'pointer-events-none',
       ].join(' ')}
       aria-hidden={!active}
       tabIndex={active ? 0 : -1}
     >
       <div className="bg-white w-full h-full p-6">
+        {/* Header */}
         <div className="mb-4 flex items-center justify-between">
           {onBack ? (
             <button
@@ -70,28 +70,30 @@ export default function MobileMenuView({
           ) : (
             <div />
           )}
+
           <h2 className="text-lg font-semibold text-[#A70909]">{title}</h2>
+
+          {/* ✅ ปุ่มปิดแบบ faXmark */}
           <button
             onClick={onClose}
-            className="text-[#A70909] text-2xl font-[1000]"
             aria-label="Close Menu"
+            className="text-[#A70909] text-xl hover:opacity-80 transition"
           >
-            ✕
+            <FontAwesomeIcon icon={faXmark} />
           </button>
         </div>
 
+        {/* ✅ เมนูทั้งหมดเป็นสีดำ (รวมบรรทัดแรก) */}
         <ul className="space-y-4" role="menu" aria-label={title}>
           {items.map((item, idx) => {
-            // กัน key ซ้ำ แม้ href จะเหมือนกัน
             const key = `${item.label}-${item.href ?? 'nohref'}-${idx}`;
-
             if (item.items && item.items.length > 0) {
               return (
                 <li key={key}>
                   <button
                     type="button"
                     onClick={() => onSelectSubMenu?.(item.items!, item.label)}
-                    className="w-full text-left text-black hover:text-[#A70909] transition-colors font-medium text-base"
+                    className="w-full text-left text-black hover:text-[#A70909] transition-colors font-normal text-base"
                   >
                     {item.label}
                   </button>
@@ -105,13 +107,17 @@ export default function MobileMenuView({
                   <Link
                     href={item.href}
                     onClick={onClose}
-                    className="block text-black hover:text-[#A70909] transition-colors font-medium text-base"
+                    className="block text-black hover:text-[#A70909] transition-colors font-normal text-base"
                     prefetch
                     role="menuitem"
                   >
                     {item.label.includes('โปรโมชั่น') ? (
                       <>
-                        โปรโมชั่น <span className="inline-block animate-bounce">🔥</span>
+                        โปรโมชั่น{' '}
+                        <FontAwesomeIcon
+                          icon={faFire}
+                          className="inline-block animate-bounce text-[#A70909]"
+                        />
                       </>
                     ) : (
                       item.label
