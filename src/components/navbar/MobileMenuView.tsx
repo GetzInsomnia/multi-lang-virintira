@@ -11,6 +11,7 @@ export type MenuItem = {
   label: string;
   href?: string;
   description?: string;
+  highlight?: boolean;
   items?: MenuItem[];
 };
 
@@ -111,9 +112,9 @@ export default function MobileMenuView({
                     prefetch
                     role="menuitem"
                   >
-                    {item.label.includes('โปรโมชั่น') ? (
+                    {item.highlight ? (
                       <>
-                        โปรโมชั่น{' '}
+                        {item.label}{' '}
                         <FontAwesomeIcon
                           icon={faFire}
                           className="inline-block animate-bounce text-[#A70909]"
