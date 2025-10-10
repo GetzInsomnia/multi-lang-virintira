@@ -3,6 +3,11 @@
 import { useEffect, useRef, useState } from 'react';
 import { usePathname } from 'next/navigation';
 import MobileMenuView from './MobileMenuView';
+import {
+  MOBILE_MENU_CLOSE_DELAY_MS,
+  MOBILE_MENU_TRANSITION_DURATION_CLASS,
+  MOBILE_MENU_TRANSITION_EASING_CLASS,
+} from './mobileMenuTransition';
 
 export interface MenuItem {
   label: string;
@@ -34,6 +39,8 @@ export default function MobileMenu({
   const backdropRef = useRef<HTMLDivElement | null>(null);
   const panelRef = useRef<HTMLDivElement | null>(null);
   const openingLock = useRef(false);
+  const raf1Ref = useRef<number | null>(null);
+  const raf2Ref = useRef<number | null>(null);
   const pathname = usePathname();
 
   /** ✅ ป้องกัน onClose() รันตอน mount ครั้งแรก */
@@ -48,12 +55,6 @@ export default function MobileMenu({
   useEffect(() => {
     if (isOpen) {
       setMounted(true);
-      let raf1: number | null = null;
-      let raf2: number | null = null;
-
-      raf1 = requestAnimationFrame(() => {
-        raf2 = requestAnimationFrame(() => setShow(true));
-      });
 
       openingLock.current = true;
       const id = setTimeout(() => {
@@ -61,15 +62,41 @@ export default function MobileMenu({
       }, 250);
       return () => {
         clearTimeout(id);
-        if (raf1 !== null) cancelAnimationFrame(raf1);
-        if (raf2 !== null) cancelAnimationFrame(raf2);
       };
-    } else {
-      setShow(false);
-      const id = setTimeout(() => setMounted(false), 350); // ← เพิ่มเล็กน้อยให้เนียนขึ้น
-      return () => clearTimeout(id);
     }
+
+    setShow(false);
+    const id = setTimeout(() => setMounted(false), MOBILE_MENU_CLOSE_DELAY_MS); // ← เพิ่มเล็กน้อยให้เนียนขึ้น
+    return () => clearTimeout(id);
   }, [isOpen]);
+
+  useEffect(() => {
+    const cancelQueuedFrames = () => {
+      if (raf1Ref.current !== null) {
+        cancelAnimationFrame(raf1Ref.current);
+        raf1Ref.current = null;
+      }
+      if (raf2Ref.current !== null) {
+        cancelAnimationFrame(raf2Ref.current);
+        raf2Ref.current = null;
+      }
+    };
+
+    if (!mounted || !isOpen) {
+      cancelQueuedFrames();
+      return undefined;
+    }
+
+    raf1Ref.current = requestAnimationFrame(() => {
+      raf2Ref.current = requestAnimationFrame(() => {
+        setShow(true);
+      });
+    });
+
+    return () => {
+      cancelQueuedFrames();
+    };
+  }, [mounted, isOpen]);
 
   // ปิดด้วย ESC
   useEffect(() => {
@@ -127,7 +154,9 @@ export default function MobileMenu({
         ref={panelRef}
         className={[
           'fixed top-0 right-0 z-50 h-full w-4/5 max-w-xs bg-white shadow-lg',
-          'transform transition-[transform,opacity] duration-900 ease-[cubic-bezier(0.2,0,0,1)]',
+          'transform transition-[transform,opacity]',
+          MOBILE_MENU_TRANSITION_DURATION_CLASS,
+          MOBILE_MENU_TRANSITION_EASING_CLASS,
           show ? 'translate-x-0 opacity-100' : 'translate-x-full opacity-0', // 👈 sync delay
         ].join(' ')}
         onMouseDown={(e) => e.stopPropagation()}
@@ -140,6 +169,7 @@ export default function MobileMenu({
               items={view.items}
               index={index}
               current={stack.length - 1}
+              panelVisible={show}
               onBack={index > 0 ? handleBack : undefined}
               onSelectSubMenu={handleSelectSubMenu}
               onClose={onClose}
