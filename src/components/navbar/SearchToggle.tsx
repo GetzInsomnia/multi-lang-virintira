@@ -105,36 +105,48 @@ export default function SearchToggle({
 
       {/* แผงค้นหาใต้นาฟบาร์: ใช้ตัวแปรความสูงเฮดเดอร์ */}
       <div
-        id="navbar-search-panel"
-        ref={shellRef}
-        aria-hidden={open ? undefined : 'true'}
-        className={[
-          'fixed inset-x-0 mx-auto z-40 w-full max-w-[800px] rounded-md bg-white px-4 py-2 shadow-md',
-          'transition-all duration-300 ease-in-out',
-          open ? 'opacity-100 translate-y-0 pointer-events-auto' : 'opacity-0 -translate-y-2 pointer-events-none',
-        ].join(' ')}
+        className="fixed inset-x-0 z-40 mx-auto w-full max-w-[800px] pointer-events-none"
         // วางชิดใต้เฮดเดอร์อย่างพอดี
         style={{ top: 'calc(var(--header-height) + 1px)' }} // ถ้าต้องการชิดลงอีก 1px: 'calc(var(--header-height) + 1px)'
       >
-        <form action={action} method="get" className="flex items-center gap-2" onSubmit={handleSubmit}>
-          <input
-            ref={inputRef}
-            name="q"
-            value={query}
-            onChange={(e) => setQuery(e.target.value)}
-            placeholder={placeholder}
-            autoFocus={open}               // ให้โฟกัสตอนเปิด
-            enterKeyHint="search"          // มือถือจะแสดงปุ่ม "Search"
-            className="w-full bg-transparent outline-none text-sm text-[#2A2A2A] placeholder:text-[#6B7280] pr-2"
-          />
-          <button
-            type="submit"
-            aria-label={submitLabel}
-            className="text-[#A70909] inline-flex h-8 w-8 items-center justify-center"
+        <div
+          id="navbar-search-panel"
+          ref={shellRef}
+          aria-hidden={open ? undefined : 'true'}
+          className={[
+            'w-full transition-opacity duration-300 ease-in-out',
+            open ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none',
+          ].join(' ')}
+        >
+          <div
+            className={[
+              'transition-transform duration-300 ease-in-out',
+              open ? 'translate-y-0' : '-translate-y-2',
+            ].join(' ')}
           >
-            <FontAwesomeIcon icon={faSearch} className="h-5 w-5" />
-          </button>
-        </form>
+            <div className="rounded-md bg-white px-4 py-2 shadow-md">
+              <form action={action} method="get" className="flex items-center gap-2" onSubmit={handleSubmit}>
+                <input
+                  ref={inputRef}
+                  name="q"
+                  value={query}
+                  onChange={(e) => setQuery(e.target.value)}
+                  placeholder={placeholder}
+                  autoFocus={open}               // ให้โฟกัสตอนเปิด
+                  enterKeyHint="search"          // มือถือจะแสดงปุ่ม "Search"
+                  className="w-full bg-transparent outline-none text-sm text-[#2A2A2A] placeholder:text-[#6B7280] pr-2"
+                />
+                <button
+                  type="submit"
+                  aria-label={submitLabel}
+                  className="text-[#A70909] inline-flex h-8 w-8 items-center justify-center"
+                >
+                  <FontAwesomeIcon icon={faSearch} className="h-5 w-5" />
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
