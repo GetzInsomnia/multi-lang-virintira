@@ -86,7 +86,7 @@ export default function SearchToggle({
 
   return (
     <div className="relative h-full">
-      {/* ปุ่มนอก */}
+      {/* ปุ่มแว่นขยาย */}
       <button
         ref={buttonRef}
         type="button"
@@ -103,37 +103,46 @@ export default function SearchToggle({
         <FontAwesomeIcon icon={faSearch} className="h-5 w-5" />
       </button>
 
-      {/* แผงค้นหาใต้นาฟบาร์: ใช้ตัวแปรความสูงเฮดเดอร์ */}
+      {/* ชั้นนอกสุด: จัดวาง + กึ่งกลางด้วย flex */}
       <div
-        className="fixed inset-x-0 z-40 mx-auto w-full max-w-[800px] pointer-events-none"
-        // วางชิดใต้เฮดเดอร์อย่างพอดี
-        style={{ top: 'calc(var(--header-height) + 1px)' }} // ถ้าต้องการชิดลงอีก 1px: 'calc(var(--header-height) + 1px)'
+        className="fixed inset-x-0 z-40 pointer-events-none flex justify-center"
+        style={{ top: 'var(--header-height)' }}
       >
+        {/* ชั้นกลาง: คุม opacity + pointer-events */}
         <div
           id="navbar-search-panel"
           ref={shellRef}
           aria-hidden={open ? undefined : 'true'}
           className={[
-            'w-full transition-opacity duration-300 ease-in-out',
+            'w-full max-w-[800px]',
+            'transition-opacity duration-300 ease-in-out',
             open ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none',
           ].join(' ')}
         >
+          {/* ชั้นแอนิเมชัน: slide เฉพาะแกน Y (ไม่ยุ่งกับกึ่งกลางแนวนอน) */}
           <div
             className={[
+              'transform-gpu will-change-transform',
               'transition-transform duration-300 ease-in-out',
               open ? 'translate-y-0' : '-translate-y-2',
             ].join(' ')}
           >
-            <div className="rounded-md bg-white px-4 py-2 shadow-md">
-              <form action={action} method="get" className="flex items-center gap-2" onSubmit={handleSubmit}>
+            {/* ชั้นคอนเทนต์: เงา + พื้นหลัง + padding */}
+            <div className="rounded-md bg-white px-4 py-2 shadow-md w-full border-t border-gray-200">
+              <form
+                action={action}
+                method="get"
+                className="flex items-center gap-2"
+                onSubmit={handleSubmit}
+              >
                 <input
                   ref={inputRef}
                   name="q"
                   value={query}
                   onChange={(e) => setQuery(e.target.value)}
                   placeholder={placeholder}
-                  autoFocus={open}               // ให้โฟกัสตอนเปิด
-                  enterKeyHint="search"          // มือถือจะแสดงปุ่ม "Search"
+                  autoFocus={open}
+                  enterKeyHint="search"
                   className="w-full bg-transparent outline-none text-sm text-[#2A2A2A] placeholder:text-[#6B7280] pr-2"
                 />
                 <button

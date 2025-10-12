@@ -105,14 +105,14 @@ export default function LanguageSwitcher({
       <div
         id="language-menu-panel"
         className="
-          pointer-events-none fixed right-50 top-[calc(var(--header-height)+1px)] z-40
+          pointer-events-none fixed right-50 top-[var(--header-height)] z-40
           w-auto max-w-[92vw] opacity-0 transition-opacity duration-150 ease-out
           data-[open=true]:pointer-events-auto data-[open=true]:opacity-100
         "
         data-open={open ? 'true' : 'false'}
         aria-hidden={open ? undefined : 'true'}
       >
-        <div ref={panelRef} className="rounded-xl bg-white p-2 shadow-2xl">
+        <div ref={panelRef} className="rounded-md bg-white p-2 shadow-2xl border-t border-gray-200">
           <div className="relative max-h-[35vh] overflow-hidden">
             <div className="pointer-events-none absolute inset-x-0 top-0 h-4 bg-gradient-to-b from-white to-transparent" />
 
