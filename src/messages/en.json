@@ -313,36 +313,53 @@
       }
     },
     "footer": {
-      "tagline": "Your all-in-one accounting and business partner.",
-      "description": "Virintira handles company registration, bookkeeping, licensing, and digital marketing so you can focus on growth with full compliance.",
-      "contact": {
-        "phone": "Call {phone}",
-        "email": "Email {email}",
-        "line": "Chat via LINE"
+      "tagline": "พาร์ตเนอร์บัญชีและธุรกิจครบวงจร",
+      "description": "Virintira พร้อมดูแลตั้งแต่จดทะเบียน ทำบัญชี ไปจนถึงการตลาดออนไลน์ เพื่อให้ธุรกิจของคุณเดินหน้าได้อย่างมั่นใจและถูกต้องตามกฎหมายทุกขั้นตอน.",
+      "sections": {
+        "services": "บริการ"
+      },
+      "services": {
+        "registration": "จดทะเบียน",
+        "editRegistration": "แก้ไขข้อมูลนิติบุคคล",
+        "accountAndAudit": "บัญชีและตรวจสอบ",
+        "applyLicense": "ขอใบอนุญาต",
+        "marketing": "การตลาดออนไลน์"
       },
       "quickLinks": [
         {
-          "label": "Home",
-          "href": "/"
-        },
-        {
-          "label": "Promotions",
+          "label": "โปรโมชั่น",
           "href": "/promotion"
         },
         {
-          "label": "Document downloads",
+          "label": "ดาวน์โหลดเอกสาร",
           "href": "/under-construction"
         },
         {
-          "label": "Contact us",
+          "label": "ติดต่อเรา",
           "href": "/under-construction"
         },
         {
-          "label": "Bookkeeping service",
-          "href": "/services/bookkeeping"
+          "label": "จดทะเบียน",
+          "href": "/under-construction"
+        },
+        {
+          "label": "แก้ไขข้อมูลนิติบุคคล",
+          "href": "/under-construction"
+        },
+        {
+          "label": "บัญชีและตรวจสอบ",
+          "href": "/under-construction"
+        },
+        {
+          "label": "ขอใบอนุญาต",
+          "href": "/under-construction"
+        },
+        {
+          "label": "การตลาดออนไลน์",
+          "href": "/under-construction"
         }
       ],
-      "legal": "© {year} Virintira Co., Ltd. All rights reserved."
+      "legal": "Copyright © {year} Virintira Co., Ltd. All rights reserved. | {poweredBy}"
     }
   },
   "breadcrumbs": {

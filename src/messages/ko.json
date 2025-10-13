@@ -183,32 +183,53 @@
       }
     },
     "footer": {
-      "tagline": "Your multilingual finance department.",
-      "description": "Virintira pairs Thai regulatory expertise with global language support so founders stay confident and compliant.",
-      "contact": {
-        "phone": "Call us at {phone}",
-        "email": "Email {email}",
-        "line": "Message on LINE"
+      "tagline": "พาร์ตเนอร์บัญชีและธุรกิจครบวงจร",
+      "description": "Virintira พร้อมดูแลตั้งแต่จดทะเบียน ทำบัญชี ไปจนถึงการตลาดออนไลน์ เพื่อให้ธุรกิจของคุณเดินหน้าได้อย่างมั่นใจและถูกต้องตามกฎหมายทุกขั้นตอน.",
+      "sections": {
+        "services": "บริการ"
+      },
+      "services": {
+        "registration": "จดทะเบียน",
+        "editRegistration": "แก้ไขข้อมูลนิติบุคคล",
+        "accountAndAudit": "บัญชีและตรวจสอบ",
+        "applyLicense": "ขอใบอนุญาต",
+        "marketing": "การตลาดออนไลน์"
       },
       "quickLinks": [
         {
-          "label": "Home",
-          "href": "/"
-        },
-        {
-          "label": "Bookkeeping service",
-          "href": "/services/bookkeeping"
-        },
-        {
-          "label": "Promotions",
+          "label": "โปรโมชั่น",
           "href": "/promotion"
         },
         {
-          "label": "Resources",
-          "href": "/resources"
+          "label": "ดาวน์โหลดเอกสาร",
+          "href": "/under-construction"
+        },
+        {
+          "label": "ติดต่อเรา",
+          "href": "/under-construction"
+        },
+        {
+          "label": "จดทะเบียน",
+          "href": "/under-construction"
+        },
+        {
+          "label": "แก้ไขข้อมูลนิติบุคคล",
+          "href": "/under-construction"
+        },
+        {
+          "label": "บัญชีและตรวจสอบ",
+          "href": "/under-construction"
+        },
+        {
+          "label": "ขอใบอนุญาต",
+          "href": "/under-construction"
+        },
+        {
+          "label": "การตลาดออนไลน์",
+          "href": "/under-construction"
         }
       ],
-      "legal": "© {year} Virintira Co., Ltd. All rights reserved."
+      "legal": "Copyright © {year} Virintira Co., Ltd. All rights reserved. | {poweredBy}"
     }
   },
   "breadcrumbs": {
