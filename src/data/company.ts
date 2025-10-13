@@ -2,7 +2,7 @@ export const COMPANY = {
   brand: 'Virintira',
   brandMark: 'ViRINTIRA',
   legalNameTh: 'บริษัท วีรินทร์ทิรา จำกัด (สำนักงานใหญ่)',
-  legalNameEn: 'Virintira Co., Ltd. (Head Quarter) ',
+  legalNameEn: 'Virintira Co., Ltd. (Head Quarter)',
   taxId: '0105562068366',
   phone: '+66928825556',
   phoneDisplay: '092-882-5556',
@@ -43,8 +43,8 @@ export const COMPANY = {
 };
 
 export const company = {
-  legalName: 'Virintira Accounting Co., Ltd.',
-  brandName: 'Virintira Accounting',
+  legalName: 'Virintira Co., Ltd.',
+  brandName: 'ViRINTIRA',
   phone: '+66-92-882-5556',
   email: 'virintirabusiness@gmail.com',
   address: {
