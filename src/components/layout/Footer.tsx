@@ -2,6 +2,7 @@
 
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
+import { useTranslations } from 'next-intl';
 import type { SVGProps } from 'react';
 
 import { COMPANY } from '@/data/company';
@@ -20,6 +21,16 @@ export type FooterData = {
   };
   quickLinks: FooterLink[];
   legal: string;
+  sections?: {
+    services?: string;
+  };
+  services?: {
+    registration?: string;
+    editRegistration?: string;
+    accountAndAudit?: string;
+    applyLicense?: string;
+    marketing?: string;
+  };
 };
 
 const externalPattern = /^[a-zA-Z][a-zA-Z0-9+.-]*:/;
@@ -80,23 +91,19 @@ function EnvelopeIcon(props: IconProps) {
   );
 }
 
-function splitQuickLinks(links: FooterLink[]) {
-  const midpoint = Math.ceil(links.length / 2);
-  return [links.slice(0, midpoint), links.slice(midpoint)] as const;
-}
-
-function renderFooterLink(link: FooterLink) {
+function renderFooterLink(link: FooterLink, extraClassName = '') {
   const href = resolveHref(link.href);
+  const className = `text-[#A70909] hover:underline ${extraClassName}`.trim();
   if (link.href.startsWith('#') || isExternalHref(href)) {
     return (
-      <a className="hover:underline text-[#A70909] font-medium" href={href}>
+      <a className={className} href={href}>
         {link.label}
       </a>
     );
   }
 
   return (
-    <Link className="hover:underline text-[#A70909] font-medium" href={normalizeInternalHref(href)} prefetch>
+    <Link className={className} href={normalizeInternalHref(href)} prefetch>
       {link.label}
     </Link>
   );
@@ -104,24 +111,38 @@ function renderFooterLink(link: FooterLink) {
 
 export function Footer({ data }: { data: FooterData }) {
   const pathname = usePathname();
+  const t = useTranslations('layout.footer');
   const year = new Date().getFullYear().toString();
 
-  const [primaryQuickLinks, secondaryQuickLinks] = splitQuickLinks(data.quickLinks);
-  const contactLinks = [
-    {
-      label: data.contact.phone.replace('{phone}', COMPANY.phoneDisplay),
-      href: `tel:${COMPANY.phone}`,
-    },
-    {
-      label: data.contact.email.replace('{email}', COMPANY.email),
-      href: `mailto:${COMPANY.email}`,
-    },
-    {
-      label: data.contact.line,
-      href: COMPANY.socials.line,
-      external: true,
-    },
-  ];
+  const quickLinks = Array.isArray(data.quickLinks) ? data.quickLinks : [];
+  const mainQuickLinks = quickLinks.slice(0, 3);
+  const serviceKeys = ['registration', 'editRegistration', 'accountAndAudit', 'applyLicense', 'marketing'] as const;
+  const serviceLinks = serviceKeys.map((key, index) => {
+    const fallbackLabel = quickLinks[3 + index]?.label ?? '';
+    const label = t(`services.${key}`, { defaultMessage: fallbackLabel });
+    const matchedLink = quickLinks.find((item) => item.label === label);
+    return {
+      label,
+      href: matchedLink?.href ?? quickLinks[3 + index]?.href ?? '#',
+    };
+  });
+  const servicesHeading = t('sections.services', {
+    defaultMessage: data.sections?.services ?? 'บริการ',
+  });
+
+  const poweredByNode = (
+    <a
+      href="https://techbiz-solution.com/"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="text-[#A70909] hover:underline decoration-[#A70909] decoration-2"
+    >
+      Powered by Techbiz Solution Co., Ltd.
+    </a>
+  );
+
+  const legalTemplate = (data.legal ?? '').replace('{year}', year);
+  const [legalPrefix, legalSuffix = ''] = legalTemplate.split('{poweredBy}');
 
   const handleLogoClick = () => {
     if (typeof window === 'undefined') return;
@@ -141,57 +162,46 @@ export function Footer({ data }: { data: FooterData }) {
 
   return (
     <footer className="snap-start bg-[#F9F9F9] text-gray-700 text-sm">
-      <div className="hidden lg:grid max-w-[1600px] mx-auto px-4 py-10 grid-cols-4 gap-y-12 gap-x-10">
+      <div className="hidden lg:grid max-w-[1600px] mx-auto px-4 py-10 grid-cols-4 gap-y-16 gap-x-10">
         <button
           type="button"
           className="flex flex-col items-center justify-center text-center h-full cursor-pointer"
           onClick={handleLogoClick}
         >
           <Image src="/logo.png" alt={`${COMPANY.brand} logo`} width={120} height={120} />
-          <span className="mt-2 font-bold text-[#A70909] text-2xl">
+          <span className="mt-3 font-bold text-[#A70909] text-[clamp(22px,1.8vw,28px)] lg:text-2xl">
             {COMPANY.brand.toUpperCase()}
           </span>
         </button>
-        <div className="flex flex-col justify-center h-full text-left max-w-md px-2">
-          <span className="font-semibold text-lg text-[#A70909] block mb-4 whitespace-nowrap">
+        <div className="flex flex-col justify-center h-full text-left max-w-md px-2 space-y-6">
+          <span className="font-semibold text-lg text-[#A70909] block whitespace-nowrap">
             {COMPANY.legalNameEn}
           </span>
-          <div className="space-y-1">
-            <p>Tax ID: {COMPANY.taxId}</p>
-            <p>{COMPANY.address.streetAddress}</p>
-            <p>
+          <div className="space-y-2 text-[clamp(13px,1vw,15px)] leading-relaxed lg:text-[15px]">
+            <p className="text-gray-700">Tax ID: {COMPANY.taxId}</p>
+            <p className="text-gray-700">{COMPANY.address.streetAddress}</p>
+            <p className="text-gray-700">
               {COMPANY.address.subDistrict} {COMPANY.address.district}
             </p>
-            <p>
+            <p className="text-gray-700">
               {COMPANY.address.province} {COMPANY.address.postalCode}
             </p>
-            <p>{COMPANY.phoneDisplay}</p>
-            <p>{COMPANY.email}</p>
+            <p className="text-gray-700">{COMPANY.phoneDisplay}</p>
+            <p className="text-gray-700">{COMPANY.email}</p>
           </div>
         </div>
-        <div className="ml-auto flex flex-col justify-center h-full gap-6 px-2">
-          <div className="flex gap-6">
-            <div className="flex flex-col gap-2">
-              {primaryQuickLinks.map((link) => (
+        <div className="flex flex-col justify-center h-full px-2">
+          <div className="flex gap-8 text-left">
+            <div className="flex flex-col gap-3 min-w-[140px] text-[15px]">
+              {mainQuickLinks.map((link) => (
                 <div key={link.label}>{renderFooterLink(link)}</div>
               ))}
             </div>
-            <div className="flex flex-col gap-1">
-              <span className="text-[#A70909] font-medium">Contact</span>
+            <div className="flex flex-col gap-2">
+              <span className="text-[#A70909] font-medium text-[15px]">{servicesHeading}</span>
               <div className="ml-3 mt-1 space-y-1 text-sm">
-                {secondaryQuickLinks.map((link) => (
+                {serviceLinks.map((link) => (
                   <div key={link.label}>{renderFooterLink(link)}</div>
-                ))}
-                {contactLinks.map((link) => (
-                  <a
-                    key={link.label}
-                    href={link.href}
-                    target={link.external ? '_blank' : undefined}
-                    rel={link.external ? 'noopener noreferrer' : undefined}
-                    className="text-[#A70909] block hover:underline"
-                  >
-                    {link.label}
-                  </a>
                 ))}
               </div>
             </div>
@@ -248,7 +258,7 @@ export function Footer({ data }: { data: FooterData }) {
         </div>
       </div>
 
-      <div className="hidden sm:flex lg:hidden flex-col gap-10 max-w-[1600px] mx-auto px-4 py-10">
+      <div className="hidden sm:flex lg:hidden flex-col gap-12 max-w-[1600px] mx-auto px-4 py-10">
         <div className="flex flex-col sm:flex-row justify-center items-center gap-6">
           <button
             type="button"
@@ -256,7 +266,7 @@ export function Footer({ data }: { data: FooterData }) {
             onClick={handleLogoClick}
           >
             <Image src="/logo.png" alt={`${COMPANY.brand} logo`} width={120} height={120} />
-            <span className="mt-2 font-bold text-[#A70909] text-2xl">
+            <span className="mt-3 font-bold text-[#A70909] text-[clamp(22px,2.6vw,26px)]">
               {COMPANY.brand.toUpperCase()}
             </span>
           </button>
@@ -264,7 +274,7 @@ export function Footer({ data }: { data: FooterData }) {
             <span className="font-semibold text-lg text-[#A70909] block mb-4 whitespace-nowrap">
               {COMPANY.legalNameEn}
             </span>
-            <div className="space-y-1">
+            <div className="space-y-2 text-[clamp(13px,1.8vw,15px)] leading-relaxed">
               <p>Tax ID: {COMPANY.taxId}</p>
               <p>{COMPANY.address.streetAddress}</p>
               <p>
@@ -279,28 +289,17 @@ export function Footer({ data }: { data: FooterData }) {
           </div>
         </div>
 
-        <div className="flex justify-center gap-10 px-2 flex-wrap sm:flex-nowrap">
-          <div className="flex flex-col gap-2 min-w-[140px]">
-            {primaryQuickLinks.map((link) => (
+        <div className="flex justify-center gap-12 px-2 flex-wrap sm:flex-nowrap">
+          <div className="flex flex-col gap-3 min-w-[160px] text-[clamp(14px,2vw,16px)]">
+            {mainQuickLinks.map((link) => (
               <div key={link.label}>{renderFooterLink(link)}</div>
             ))}
           </div>
-          <div className="flex flex-col gap-1">
-            <span className="text-[#A70909] font-medium">Contact</span>
-            <div className="ml-3 mt-1 space-y-1 text-sm">
-              {secondaryQuickLinks.map((link) => (
+          <div className="flex flex-col gap-2">
+            <span className="text-[#A70909] font-medium text-[clamp(15px,2.2vw,18px)]">{servicesHeading}</span>
+            <div className="ml-3 mt-1 space-y-2 text-[clamp(13px,1.8vw,15px)]">
+              {serviceLinks.map((link) => (
                 <div key={link.label}>{renderFooterLink(link)}</div>
-              ))}
-              {contactLinks.map((link) => (
-                <a
-                  key={link.label}
-                  href={link.href}
-                  target={link.external ? '_blank' : undefined}
-                  rel={link.external ? 'noopener noreferrer' : undefined}
-                  className="text-[#A70909] block hover:underline"
-                >
-                  {link.label}
-                </a>
               ))}
             </div>
           </div>
@@ -351,14 +350,14 @@ export function Footer({ data }: { data: FooterData }) {
         </div>
       </div>
 
-      <div className="sm:hidden flex flex-col gap-10 max-w-[1600px] mx-auto px-4 py-10 pt-20">
+      <div className="sm:hidden flex flex-col gap-12 max-w-[1600px] mx-auto px-4 py-10 pt-20">
         <button
           type="button"
           className="flex flex-col items-center justify-center text-center mt-6 cursor-pointer"
           onClick={handleLogoClick}
         >
           <Image src="/logo.png" alt={`${COMPANY.brand} logo`} width={120} height={120} />
-          <span className="mt-2 font-bold text-[#A70909] text-2xl">
+          <span className="mt-3 font-bold text-[#A70909] text-[clamp(22px,8vw,26px)]">
             {COMPANY.brand.toUpperCase()}
           </span>
         </button>
@@ -367,7 +366,7 @@ export function Footer({ data }: { data: FooterData }) {
           <span className="font-semibold text-lg text-[#A70909] block mb-4 whitespace-nowrap">
             {COMPANY.legalNameEn}
           </span>
-          <div className="space-y-1">
+          <div className="space-y-2 text-[clamp(13px,4vw,15px)] leading-relaxed">
             <p>Tax ID: {COMPANY.taxId}</p>
             <p>{COMPANY.address.streetAddress}</p>
             <p>
@@ -381,28 +380,17 @@ export function Footer({ data }: { data: FooterData }) {
           </div>
         </div>
 
-        <div className="flex justify-center gap-10 px-2">
-          <div className="flex flex-col gap-2">
-            {primaryQuickLinks.map((link) => (
-              <div key={link.label}>{renderFooterLink(link)}</div>
-            ))}
-            {secondaryQuickLinks.map((link) => (
+        <div className="flex flex-col gap-6 px-2">
+          <div className="flex flex-col gap-3 text-[clamp(14px,5vw,16px)]">
+            {mainQuickLinks.map((link) => (
               <div key={link.label}>{renderFooterLink(link)}</div>
             ))}
           </div>
-          <div className="flex flex-col gap-1">
-            <span className="text-[#A70909] font-medium">Contact</span>
-            <div className="ml-3 mt-1 space-y-1 text-sm">
-              {contactLinks.map((link) => (
-                <a
-                  key={link.label}
-                  href={link.href}
-                  target={link.external ? '_blank' : undefined}
-                  rel={link.external ? 'noopener noreferrer' : undefined}
-                  className="text-[#A70909] block hover:underline"
-                >
-                  {link.label}
-                </a>
+          <div className="flex flex-col gap-2">
+            <span className="text-[#A70909] font-medium text-[clamp(15px,5.5vw,18px)]">{servicesHeading}</span>
+            <div className="ml-3 mt-1 space-y-2 text-[clamp(13px,4.5vw,15px)]">
+              {serviceLinks.map((link) => (
+                <div key={link.label}>{renderFooterLink(link)}</div>
               ))}
             </div>
           </div>
@@ -452,9 +440,10 @@ export function Footer({ data }: { data: FooterData }) {
           </a>
         </div>
       </div>
-
-      <div className="text-center py-4 border-t border-gray-200 text-sm text-gray-500">
-        {data.legal.replace('{year}', year)}
+      <div className="text-center py-4 border-t border-gray-200 text-sm text-gray-500 text-[clamp(12px,1.4vw,14px)]">
+        {legalPrefix}
+        {poweredByNode}
+        {legalSuffix}
       </div>
     </footer>
   );
