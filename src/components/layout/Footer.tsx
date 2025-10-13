@@ -6,7 +6,7 @@ import { usePathname } from 'next/navigation';
 import { useTranslations, useLocale } from 'next-intl';
 import type { SVGProps } from 'react';
 
-import { COMPANY } from '@/data/company';
+import { COMPANY, getLocalizedAddress } from '@/data/company';
 import { Link } from '@/i18n/routing';
 import { normalizeInternalHref } from '@/lib/links';
 
@@ -118,7 +118,7 @@ export function Footer({ data }: { data: FooterData }) {
 
   // ข้อมูลบริษัทตามภาษา
   const legalName = isThai ? COMPANY.legalNameTh : COMPANY.legalNameEn;
-  const address = isThai ? COMPANY.addressTh : COMPANY.addressEn;
+  const address = getLocalizedAddress(locale);
 
   const quickLinks = Array.isArray(data.quickLinks) ? data.quickLinks : [];
   const mainQuickLinks = quickLinks.slice(0, 3);
