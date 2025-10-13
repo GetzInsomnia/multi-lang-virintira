@@ -75,11 +75,11 @@ export default function SocialFloating({ menuOpen = false }: { menuOpen?: boolea
             rel="noopener noreferrer"
             className={[
               'bg-[#06C755] rounded-full shadow-md hover:opacity-80',
-              'p-2',
-              'lg:p-2 xl:p-2.5',
+              'p-1',
+              'lg:p-1 xl:p-1',
             ].join(' ')}
           >
-            <FaLine className="w-6 h-6 text-white lg:w-5 lg:h-5 xl:w-6 xl:h-6" />
+            <FaLine className="w-8 h-8 text-white lg:w-7.5 lg:h-7.5 xl:w-9 xl:h-9" />
           </a>
 
           {/* TikTok */}
