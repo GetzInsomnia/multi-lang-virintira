@@ -1,8 +1,9 @@
-"use client";
+// src/components/layout/Footer.tsx
+'use client';
 
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
-import { useTranslations } from 'next-intl';
+import { useTranslations, useLocale } from 'next-intl';
 import type { SVGProps } from 'react';
 
 import { COMPANY } from '@/data/company';
@@ -86,7 +87,7 @@ function FacebookIcon(props: IconProps) {
 function EnvelopeIcon(props: IconProps) {
   return (
     <svg viewBox="0 0 512 512" fill="currentColor" aria-hidden="true" {...props}>
-      <path d="M502.3 190.8c3.9-3.1 9.7-.2 9.7 4.7V400c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V195.6c0-5 5.7-7.8 9.7-4.7 22.4 17.4 52.1 39.5 154.1 113.6 21.1 15.4 56.7 47.8 92.2 47.6 35.7.3 72-32.8 92.3-47.6 102-74.1 131.6-96.3 154-113.7zM256 320c23.2.4 56.6-29.2 73.4-41.4 132.7-96.3 142.8-104.7 173.4-128.7 5.8-4.5 9.2-11.5 9.2-18.9v-19c0-26.5-21.5-48-48-48H48C21.5 64 0 85.5 0 112v19c0 7.4 3.4 14.3 9.2 18.9 30.6 23.9 40.7 32.4 173.4 128.7 16.8 12.2 50.2 41.8 73.4 41.4z" />
+      <path d="M502.3 190.8c3.9-3.1 9.7-.2 9.7 4.7V400c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V195.6c0-5 5.7-7.8 9.7-4.7 22.4 17.4 52.1 39.5 154.1 113.6 21.1 15.4 56.7 47.8 92.2 47.6 35.7.3 72-32.8 92.3-47.6 102-74.1 131.6-96.3 154-113.7z" />
     </svg>
   );
 }
@@ -101,7 +102,6 @@ function renderFooterLink(link: FooterLink, extraClassName = '') {
       </a>
     );
   }
-
   return (
     <Link className={className} href={normalizeInternalHref(href)} prefetch>
       {link.label}
@@ -112,11 +112,25 @@ function renderFooterLink(link: FooterLink, extraClassName = '') {
 export function Footer({ data }: { data: FooterData }) {
   const pathname = usePathname();
   const t = useTranslations('layout.footer');
+  const locale = useLocale();
+  const isThai = (locale || '').toLowerCase().startsWith('th');
   const year = new Date().getFullYear().toString();
+
+  // ข้อมูลบริษัทตามภาษา
+  const legalName = isThai ? COMPANY.legalNameTh : COMPANY.legalNameEn;
+  const address = isThai ? COMPANY.addressTh : COMPANY.addressEn;
 
   const quickLinks = Array.isArray(data.quickLinks) ? data.quickLinks : [];
   const mainQuickLinks = quickLinks.slice(0, 3);
-  const serviceKeys = ['registration', 'editRegistration', 'accountAndAudit', 'applyLicense', 'marketing'] as const;
+
+  const serviceKeys = [
+    'registration',
+    'editRegistration',
+    'accountAndAudit',
+    'applyLicense',
+    'marketing',
+  ] as const;
+
   const serviceLinks = serviceKeys.map((key, index) => {
     const fallbackLabel = quickLinks[3 + index]?.label ?? '';
     const label = t(`services.${key}`, { defaultMessage: fallbackLabel });
@@ -126,16 +140,18 @@ export function Footer({ data }: { data: FooterData }) {
       href: matchedLink?.href ?? quickLinks[3 + index]?.href ?? '#',
     };
   });
+
   const servicesHeading = t('sections.services', {
     defaultMessage: data.sections?.services ?? 'บริการ',
   });
 
+  // สีสืบทอดและเป็นแดงเมื่อ hover (ไม่มีเส้นใต้)
   const poweredByNode = (
     <a
       href="https://techbiz-solution.com/"
       target="_blank"
       rel="noopener noreferrer"
-      className="text-[#A70909] hover:underline decoration-[#A70909] decoration-2"
+      className="text-inherit hover:text-[#A70909] hover:no-underline transition-colors"
     >
       Powered by Techbiz Solution Co., Ltd.
     </a>
@@ -146,23 +162,24 @@ export function Footer({ data }: { data: FooterData }) {
 
   const handleLogoClick = () => {
     if (typeof window === 'undefined') return;
-
     if (pathname === '/') {
       window.location.hash = HERO_SECTION_ID;
       const target = document.getElementById(HERO_SECTION_ID);
-      if (target) {
-        target.scrollIntoView({ behavior: 'smooth' });
-      } else {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-      }
+      if (target) target.scrollIntoView({ behavior: 'smooth' });
+      else window.scrollTo({ top: 0, behavior: 'smooth' });
     } else {
       window.location.href = `/#${HERO_SECTION_ID}`;
     }
   };
 
+  // ทำให้ลิงก์เมนู “ขนาด/น้ำหนักเดียวกัน”
+  const linkClass = 'text-[15px] font-medium';
+
   return (
     <footer className="snap-start bg-[#F9F9F9] text-gray-700 text-sm">
+      {/* Desktop */}
       <div className="hidden lg:grid max-w-[1600px] mx-auto px-4 py-10 grid-cols-4 gap-y-16 gap-x-10">
+        {/* โลโก้ */}
         <button
           type="button"
           className="flex flex-col items-center justify-center text-center h-full cursor-pointer"
@@ -170,43 +187,49 @@ export function Footer({ data }: { data: FooterData }) {
         >
           <Image src="/logo.png" alt={`${COMPANY.brand} logo`} width={120} height={120} />
           <span className="mt-3 font-bold text-[#A70909] text-[clamp(22px,1.8vw,28px)] lg:text-2xl">
-            {COMPANY.brand.toUpperCase()}
+            {COMPANY.brandMark ?? COMPANY.brand}
           </span>
         </button>
+
+        {/* ข้อมูลบริษัท */}
         <div className="flex flex-col justify-center h-full text-left max-w-md px-2 space-y-6">
           <span className="font-semibold text-lg text-[#A70909] block whitespace-nowrap">
-            {COMPANY.legalNameEn}
+            {legalName}
           </span>
-          <div className="space-y-2 text-[clamp(13px,1vw,15px)] leading-relaxed lg:text-[15px]">
+          <div className="space-y-1.5 text-[clamp(12px,0.9vw,14px)] leading-[1.5] lg:text-[14px]">
             <p className="text-gray-700">Tax ID: {COMPANY.taxId}</p>
-            <p className="text-gray-700">{COMPANY.address.streetAddress}</p>
+            <p className="text-gray-700">{address.streetAddress}</p>
             <p className="text-gray-700">
-              {COMPANY.address.subDistrict} {COMPANY.address.district}
+              {address.subDistrict} {address.district}
             </p>
             <p className="text-gray-700">
-              {COMPANY.address.province} {COMPANY.address.postalCode}
+              {address.province} {address.postalCode}
             </p>
             <p className="text-gray-700">{COMPANY.phoneDisplay}</p>
             <p className="text-gray-700">{COMPANY.email}</p>
           </div>
         </div>
+
+        {/* เมนู */}
         <div className="flex flex-col justify-center h-full px-2">
           <div className="flex gap-8 text-left">
-            <div className="flex flex-col gap-3 min-w-[140px] text-[15px]">
+            <div className="flex flex-col gap-3 min-w-[140px]">
               {mainQuickLinks.map((link) => (
-                <div key={link.label}>{renderFooterLink(link)}</div>
+                <div key={link.label}>{renderFooterLink(link, linkClass)}</div>
               ))}
             </div>
             <div className="flex flex-col gap-2">
               <span className="text-[#A70909] font-medium text-[15px]">{servicesHeading}</span>
-              <div className="ml-3 mt-1 space-y-1 text-sm">
+              <div className="ml-3 mt-1 space-y-1">
                 {serviceLinks.map((link) => (
-                  <div key={link.label}>{renderFooterLink(link)}</div>
+                  <div key={link.label}>{renderFooterLink(link, linkClass)}</div>
                 ))}
               </div>
             </div>
           </div>
         </div>
+
+        {/* โซเชียล */}
         <div className="hidden lg:flex justify-center h-full px-2">
           <div className="flex gap-6">
             <div className="flex flex-col gap-2">
@@ -242,7 +265,8 @@ export function Footer({ data }: { data: FooterData }) {
                 className="bg-[#06C755] rounded-full w-11 h-11 flex items-center justify-center shadow-md hover:opacity-80"
                 aria-label="Virintira on LINE"
               >
-                <LineIcon className="h-7 w-7 text-white" />
+                {/* ขยายเฉพาะไอคอนด้านใน */}
+                <LineIcon className="h-8 w-8 text-white" />
               </a>
               <a
                 href={COMPANY.socials.facebook}
@@ -258,6 +282,7 @@ export function Footer({ data }: { data: FooterData }) {
         </div>
       </div>
 
+      {/* Tablet */}
       <div className="hidden sm:flex lg:hidden flex-col gap-12 max-w-[1600px] mx-auto px-4 py-10">
         <div className="flex flex-col sm:flex-row justify-center items-center gap-6">
           <button
@@ -267,21 +292,21 @@ export function Footer({ data }: { data: FooterData }) {
           >
             <Image src="/logo.png" alt={`${COMPANY.brand} logo`} width={120} height={120} />
             <span className="mt-3 font-bold text-[#A70909] text-[clamp(22px,2.6vw,26px)]">
-              {COMPANY.brand.toUpperCase()}
+              {COMPANY.brandMark ?? COMPANY.brand}
             </span>
           </button>
           <div className="text-left px-2">
             <span className="font-semibold text-lg text-[#A70909] block mb-4 whitespace-nowrap">
-              {COMPANY.legalNameEn}
+              {legalName}
             </span>
             <div className="space-y-2 text-[clamp(13px,1.8vw,15px)] leading-relaxed">
               <p>Tax ID: {COMPANY.taxId}</p>
-              <p>{COMPANY.address.streetAddress}</p>
+              <p>{address.streetAddress}</p>
               <p>
-                {COMPANY.address.subDistrict} {COMPANY.address.district}
+                {address.subDistrict} {address.district}
               </p>
               <p>
-                {COMPANY.address.province} {COMPANY.address.postalCode}
+                {address.province} {address.postalCode}
               </p>
               <p>{COMPANY.phoneDisplay}</p>
               <p>{COMPANY.email}</p>
@@ -290,16 +315,18 @@ export function Footer({ data }: { data: FooterData }) {
         </div>
 
         <div className="flex justify-center gap-12 px-2 flex-wrap sm:flex-nowrap">
-          <div className="flex flex-col gap-3 min-w-[160px] text-[clamp(14px,2vw,16px)]">
+          <div className="flex flex-col gap-3 min-w-[160px]">
             {mainQuickLinks.map((link) => (
-              <div key={link.label}>{renderFooterLink(link)}</div>
+              <div key={link.label}>{renderFooterLink(link, linkClass)}</div>
             ))}
           </div>
           <div className="flex flex-col gap-2">
-            <span className="text-[#A70909] font-medium text-[clamp(15px,2.2vw,18px)]">{servicesHeading}</span>
+            <span className="text-[#A70909] font-medium text-[clamp(15px,2.2vw,18px)]">
+              {servicesHeading}
+            </span>
             <div className="ml-3 mt-1 space-y-2 text-[clamp(13px,1.8vw,15px)]">
               {serviceLinks.map((link) => (
-                <div key={link.label}>{renderFooterLink(link)}</div>
+                <div key={link.label}>{renderFooterLink(link, linkClass)}</div>
               ))}
             </div>
           </div>
@@ -320,7 +347,7 @@ export function Footer({ data }: { data: FooterData }) {
             className="bg-[#06C755] rounded-full w-11 h-11 flex items-center justify-center shadow-md hover:opacity-80"
             aria-label="Virintira on LINE"
           >
-            <LineIcon className="h-7 w-7 text-white" />
+            <LineIcon className="h-8 w-8 text-white" />
           </a>
           <a
             href={COMPANY.socials.tiktok}
@@ -350,6 +377,7 @@ export function Footer({ data }: { data: FooterData }) {
         </div>
       </div>
 
+      {/* Mobile */}
       <div className="sm:hidden flex flex-col gap-12 max-w-[1600px] mx-auto px-4 py-10 pt-20">
         <button
           type="button"
@@ -358,22 +386,22 @@ export function Footer({ data }: { data: FooterData }) {
         >
           <Image src="/logo.png" alt={`${COMPANY.brand} logo`} width={120} height={120} />
           <span className="mt-3 font-bold text-[#A70909] text-[clamp(22px,8vw,26px)]">
-            {COMPANY.brand.toUpperCase()}
+            {COMPANY.brandMark ?? COMPANY.brand}
           </span>
         </button>
 
         <div className="indent-5 text-left px-2">
           <span className="font-semibold text-lg text-[#A70909] block mb-4 whitespace-nowrap">
-            {COMPANY.legalNameEn}
+            {legalName}
           </span>
           <div className="space-y-2 text-[clamp(13px,4vw,15px)] leading-relaxed">
             <p>Tax ID: {COMPANY.taxId}</p>
-            <p>{COMPANY.address.streetAddress}</p>
+            <p>{address.streetAddress}</p>
             <p>
-              {COMPANY.address.subDistrict} {COMPANY.address.district}
+              {address.subDistrict} {address.district}
             </p>
             <p>
-              {COMPANY.address.province} {COMPANY.address.postalCode}
+              {address.province} {address.postalCode}
             </p>
             <p>{COMPANY.phoneDisplay}</p>
             <p>{COMPANY.email}</p>
@@ -381,16 +409,18 @@ export function Footer({ data }: { data: FooterData }) {
         </div>
 
         <div className="flex flex-col gap-6 px-2">
-          <div className="flex flex-col gap-3 text-[clamp(14px,5vw,16px)]">
+          <div className="flex flex-col gap-3">
             {mainQuickLinks.map((link) => (
-              <div key={link.label}>{renderFooterLink(link)}</div>
+              <div key={link.label}>{renderFooterLink(link, linkClass)}</div>
             ))}
           </div>
           <div className="flex flex-col gap-2">
-            <span className="text-[#A70909] font-medium text-[clamp(15px,5.5vw,18px)]">{servicesHeading}</span>
+            <span className="text-[#A70909] font-medium text-[clamp(15px,5.5vw,18px)]">
+              {servicesHeading}
+            </span>
             <div className="ml-3 mt-1 space-y-2 text-[clamp(13px,4.5vw,15px)]">
               {serviceLinks.map((link) => (
-                <div key={link.label}>{renderFooterLink(link)}</div>
+                <div key={link.label}>{renderFooterLink(link, linkClass)}</div>
               ))}
             </div>
           </div>
@@ -411,7 +441,7 @@ export function Footer({ data }: { data: FooterData }) {
             className="bg-[#06C755] rounded-full w-11 h-11 flex items-center justify-center shadow-md hover:opacity-80"
             aria-label="Virintira on LINE"
           >
-            <LineIcon className="h-7 w-7 text-white" />
+            <LineIcon className="h-8 w-8 text-white" />
           </a>
           <a
             href={COMPANY.socials.tiktok}
@@ -440,6 +470,8 @@ export function Footer({ data }: { data: FooterData }) {
           </a>
         </div>
       </div>
+
+      {/* Legal */}
       <div className="text-center py-4 border-t border-gray-200 text-sm text-gray-500 text-[clamp(12px,1.4vw,14px)]">
         {legalPrefix}
         {poweredByNode}
