@@ -1,9 +1,15 @@
-import { COMPANY } from '@/data/company';
+"use client";
+
+import { useLocale } from 'next-intl';
+
+import { COMPANY, getLocalizedAddress } from '@/data/company';
 
 export function AboutSection({ heading, paragraphs, linkLabel }: { heading: string; paragraphs: string[]; linkLabel: string }) {
   const details: string[] = Array.isArray(paragraphs) ? paragraphs : [];
 
   const highlight = details[0] ?? heading;
+  const locale = useLocale();
+  const address = getLocalizedAddress(locale);
 
   return (
     <section
@@ -47,9 +53,9 @@ export function AboutSection({ heading, paragraphs, linkLabel }: { heading: stri
               </div>
               <div>
                 <dt className="font-semibold text-[#A70909]">Address</dt>
-                <dd>{COMPANY.address.streetAddress}</dd>
+                <dd>{address.streetAddress}</dd>
                 <dd>
-                  {COMPANY.address.subDistrict} {COMPANY.address.district} {COMPANY.address.province} {COMPANY.address.postalCode}
+                  {address.subDistrict} {address.district} {address.province} {address.postalCode}
                 </dd>
               </div>
               <div>

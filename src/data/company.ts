@@ -7,6 +7,10 @@ export const COMPANY = {
   phone: '+66928825556',
   phoneDisplay: '092-882-5556',
   email: 'virintirabusiness@gmail.com',
+  geo: {
+    latitude: 13.832931,
+    longitude: 100.728633,
+  },
   addressTh: {
     streetAddress: '222/172 ถนนสามวา',
     subDistrict: 'แขวงบางชัน',
@@ -14,8 +18,6 @@ export const COMPANY = {
     province: 'กรุงเทพมหานคร',
     postalCode: '10510',
     country: 'TH',
-    latitude: 13.832931,
-    longitude: 100.728633,
   },
   addressEn: {
     streetAddress: '222/172 Sam Wa Rd.,',
@@ -24,8 +26,6 @@ export const COMPANY = {
     province: 'Bangkok,',
     postalCode: '10510',
     country: 'TH',
-    latitude: 13.832931,
-    longitude: 100.728633,
   },
   socials: {
     facebook: 'https://www.facebook.com/AccountbyVirintira',
@@ -41,6 +41,13 @@ export const COMPANY = {
   ],
   areaServed: ['Thailand'],
 };
+
+export function getLocalizedAddress(locale?: string) {
+  const thaiAddress = COMPANY.addressTh;
+  const englishAddress = COMPANY.addressEn ?? thaiAddress;
+  const useThai = (locale ?? 'th').toLowerCase().startsWith('th');
+  return useThai ? thaiAddress : { ...thaiAddress, ...englishAddress };
+}
 
 export const company = {
   legalName: 'Virintira Co., Ltd.',
