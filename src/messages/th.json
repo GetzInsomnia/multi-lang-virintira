@@ -315,16 +315,17 @@
     "footer": {
       "tagline": "พาร์ตเนอร์บัญชีและธุรกิจครบวงจร",
       "description": "Virintira พร้อมดูแลตั้งแต่จดทะเบียน ทำบัญชี ไปจนถึงการตลาดออนไลน์ เพื่อให้ธุรกิจของคุณเดินหน้าได้อย่างมั่นใจและถูกต้องตามกฎหมายทุกขั้นตอน.",
-      "contact": {
-        "phone": "โทร {phone}",
-        "email": "อีเมล {email}",
-        "line": "แชทผ่าน LINE"
+      "sections": {
+        "services": "บริการ"
+      },
+      "services": {
+        "registration": "จดทะเบียน",
+        "editRegistration": "แก้ไขข้อมูลนิติบุคคล",
+        "accountAndAudit": "บัญชีและตรวจสอบ",
+        "applyLicense": "ขอใบอนุญาต",
+        "marketing": "การตลาดออนไลน์"
       },
       "quickLinks": [
-        {
-          "label": "หน้าแรก",
-          "href": "/"
-        },
         {
           "label": "โปรโมชั่น",
           "href": "/promotion"
@@ -338,11 +339,27 @@
           "href": "/under-construction"
         },
         {
-          "label": "บริการทำบัญชี",
-          "href": "/services/bookkeeping"
+          "label": "จดทะเบียน",
+          "href": "/under-construction"
+        },
+        {
+          "label": "แก้ไขข้อมูลนิติบุคคล",
+          "href": "/under-construction"
+        },
+        {
+          "label": "บัญชีและตรวจสอบ",
+          "href": "/under-construction"
+        },
+        {
+          "label": "ขอใบอนุญาต",
+          "href": "/under-construction"
+        },
+        {
+          "label": "การตลาดออนไลน์",
+          "href": "/under-construction"
         }
       ],
-      "legal": "© {year} บริษัท วีรินทร์ทิรา จำกัด สงวนลิขสิทธิ์"
+      "legal": "Copyright © {year} Virintira Co., Ltd. All rights reserved. | {poweredBy}"
     }
   },
   "breadcrumbs": {
