@@ -4,27 +4,29 @@
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { useTranslations, useLocale } from 'next-intl';
-import type { SVGProps } from 'react';
 
 import { COMPANY, getLocalizedAddress } from '@/data/company';
 import { Link } from '@/i18n/routing';
 import { normalizeInternalHref } from '@/lib/links';
+
+// ใช้ react-icons แบบเดียวกับ SocialFloating
+import {
+  FaPhoneAlt,
+  FaLine,
+  FaTiktok,
+  FaFacebookF,
+  FaEnvelope,
+} from 'react-icons/fa';
 
 export type FooterLink = { label: string; href: string };
 
 export type FooterData = {
   tagline: string;
   description: string;
-  contact: {
-    phone: string;
-    email: string;
-    line: string;
-  };
+  contact: { phone: string; email: string; line: string };
   quickLinks: FooterLink[];
   legal: string;
-  sections?: {
-    services?: string;
-  };
+  sections?: { services?: string };
   services?: {
     registration?: string;
     editRegistration?: string;
@@ -43,64 +45,17 @@ function resolveHref(rawHref: string) {
   if (externalPattern.test(href)) return href;
   return href.startsWith('/') ? href : `/${href}`;
 }
-
 function isExternalHref(href: string) {
   return externalPattern.test(href) && !href.startsWith('/');
 }
 
 const HERO_SECTION_ID = 'herosection';
 
-type IconProps = SVGProps<SVGSVGElement>;
-
-function PhoneIcon(props: IconProps) {
-  return (
-    <svg viewBox="0 0 512 512" fill="currentColor" aria-hidden="true" {...props}>
-      <path d="M497.39 361.8l-112-48a24 24 0 0 0-28 6.9l-49.6 60.6A370.66 370.66 0 0 1 130.6 204.11l60.6-49.6a23.94 23.94 0 0 0 6.9-28l-48-112A24.16 24.16 0 0 0 122.6.61l-104 24A24 24 0 0 0 0 48c0 256.5 207.9 464 464 464a24 24 0 0 0 23.4-18.6l24-104a24.29 24.29 0 0 0-14.01-27.6z" />
-    </svg>
-  );
-}
-
-function LineIcon(props: IconProps) {
-  return (
-    <svg viewBox="0 0 448 512" fill="currentColor" aria-hidden="true" {...props}>
-      <path d="M272.1 204.2v71.1c0 1.8-1.4 3.2-3.2 3.2h-11.4c-1.1 0-2.1-.6-2.6-1.3l-32.6-44v42.2c0 1.8-1.4 3.2-3.2 3.2h-11.4c-1.8 0-3.2-1.4-3.2-3.2v-71.1c0-1.8 1.4-3.2 3.2-3.2H219c1 0 2.1.5 2.6 1.4l32.6 44v-42.2c0-1.8 1.4-3.2 3.2-3.2h11.4c1.8-.1 3.3 1.4 3.3 3.1zm-82-3.2h-11.4c-1.8 0-3.2 1.4-3.2 3.2v71.1c0 1.8 1.4 3.2 3.2 3.2h11.4c1.8 0 3.2-1.4 3.2-3.2v-71.1c0-1.7-1.4-3.2-3.2-3.2zm-27.5 59.6h-31.1v-56.4c0-1.8-1.4-3.2-3.2-3.2h-11.4c-1.8 0-3.2 1.4-3.2 3.2v71.1c0 .9.3 1.6.9 2.2.6.5 1.3.9 2.2.9h45.7c1.8 0 3.2-1.4 3.2-3.2v-11.4c0-1.7-1.4-3.2-3.1-3.2zM332.1 201h-45.7c-1.7 0-3.2 1.4-3.2 3.2v71.1c0 1.7 1.4 3.2 3.2 3.2h45.7c1.8 0 3.2-1.4 3.2-3.2v-11.4c0-1.8-1.4-3.2-3.2-3.2H301v-12h31.1c1.8 0 3.2-1.4 3.2-3.2V234c0-1.8-1.4-3.2-3.2-3.2H301v-12h31.1c1.8 0 3.2-1.4 3.2-3.2v-11.4c-.1-1.7-1.5-3.2-3.2-3.2zM448 113.7V399c-.1 44.8-36.8 81.1-81.7 81H81c-44.8-.1-81.1-36.9-81-81.7V113c.1-44.8 36.9-81.1 81.7-81H367c44.8.1 81.1 36.8 81 81.7zm-61.6 122.6c0-73-73.2-132.4-163.1-132.4-89.9 0-163.1 59.4-163.1 132.4 0 65.4 58 120.2 136.4 130.6 19.1 4.1 16.9 11.1 12.6 36.8-.7 4.1-3.3 16.1 14.1 8.8 17.4-7.3 93.9-55.3 128.2-94.7 23.6-26 34.9-52.3 34.9-81.5z" />
-    </svg>
-  );
-}
-
-function TiktokIcon(props: IconProps) {
-  return (
-    <svg viewBox="0 0 448 512" fill="currentColor" aria-hidden="true" {...props}>
-      <path d="M448 209.91a210.06 210.06 0 0 1-122.77-39.25V349.38A162.55 162.55 0 1 1 185 188.31V278.2a74.62 74.62 0 1 0 52.23 71.18V0h88a121.18 121.18 0 0 0 1.86 22.17A122.18 122.18 0 0 0 381 102.39a121.43 121.43 0 0 0 67 20.14z" />
-    </svg>
-  );
-}
-
-function FacebookIcon(props: IconProps) {
-  return (
-    <svg viewBox="0 0 320 512" fill="currentColor" aria-hidden="true" {...props}>
-      <path d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z" />
-    </svg>
-  );
-}
-
-function EnvelopeIcon(props: IconProps) {
-  return (
-    <svg viewBox="0 0 512 512" fill="currentColor" aria-hidden="true" {...props}>
-      <path d="M502.3 190.8c3.9-3.1 9.7-.2 9.7 4.7V400c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V195.6c0-5 5.7-7.8 9.7-4.7 22.4 17.4 52.1 39.5 154.1 113.6 21.1 15.4 56.7 47.8 92.2 47.6 35.7.3 72-32.8 92.3-47.6 102-74.1 131.6-96.3 154-113.7z" />
-    </svg>
-  );
-}
-
 function renderFooterLink(link: FooterLink, extraClassName = '') {
   const href = resolveHref(link.href);
   const className = `text-[#A70909] hover:underline ${extraClassName}`.trim();
   if (link.href.startsWith('#') || isExternalHref(href)) {
-    return (
-      <a className={className} href={href}>
-        {link.label}
-      </a>
-    );
+    return <a className={className} href={href}>{link.label}</a>;
   }
   return (
     <Link className={className} href={normalizeInternalHref(href)} prefetch>
@@ -109,7 +64,7 @@ function renderFooterLink(link: FooterLink, extraClassName = '') {
   );
 }
 
-export function Footer({ data }: { data: FooterData }) {
+export default function Footer({ data }: { data: FooterData }) {
   const pathname = usePathname();
   const t = useTranslations('layout.footer');
   const locale = useLocale();
@@ -120,32 +75,26 @@ export function Footer({ data }: { data: FooterData }) {
   const legalName = isThai ? COMPANY.legalNameTh : COMPANY.legalNameEn;
   const address = getLocalizedAddress(locale);
 
+  // บรรทัดแสดงที่อยู่ = 2 บรรทัดคงที่
+  const addressLine1 = address.streetAddress;
+  const addressLine2 = `${address.subDistrict} ${address.district}${isThai ? ' ' : ', '}${address.province} ${address.postalCode}`;
+
   const quickLinks = Array.isArray(data.quickLinks) ? data.quickLinks : [];
   const mainQuickLinks = quickLinks.slice(0, 3);
 
-  const serviceKeys = [
-    'registration',
-    'editRegistration',
-    'accountAndAudit',
-    'applyLicense',
-    'marketing',
-  ] as const;
-
+  const serviceKeys = ['registration','editRegistration','accountAndAudit','applyLicense','marketing'] as const;
   const serviceLinks = serviceKeys.map((key, index) => {
     const fallbackLabel = quickLinks[3 + index]?.label ?? '';
     const label = t(`services.${key}`, { defaultMessage: fallbackLabel });
     const matchedLink = quickLinks.find((item) => item.label === label);
-    return {
-      label,
-      href: matchedLink?.href ?? quickLinks[3 + index]?.href ?? '#',
-    };
+    return { label, href: matchedLink?.href ?? quickLinks[3 + index]?.href ?? '#' };
   });
 
   const servicesHeading = t('sections.services', {
     defaultMessage: data.sections?.services ?? 'บริการ',
   });
 
-  // สีสืบทอดและเป็นแดงเมื่อ hover (ไม่มีเส้นใต้)
+  // สีสืบทอด และแดงเมื่อ hover (ไม่ขีดเส้นใต้)
   const poweredByNode = (
     <a
       href="https://techbiz-solution.com/"
@@ -172,17 +121,17 @@ export function Footer({ data }: { data: FooterData }) {
     }
   };
 
-  // ทำให้ลิงก์เมนู “ขนาด/น้ำหนักเดียวกัน”
-  const linkClass = 'text-[15px] font-medium';
+  // เมนูฟุตเตอร์: ใช้ขนาด/น้ำหนักเดียวกัน + ไม่ตัดขึ้นบรรทัด
+  const linkClass = 'text-[15px] font-normal whitespace-nowrap';
 
   return (
-    <footer className="snap-start bg-[#F9F9F9] text-gray-700 text-sm">
+    <footer className="snap-start bg-[#F9F9F9] text-gray-700">
       {/* Desktop */}
-      <div className="hidden lg:grid max-w-[1600px] mx-auto px-4 py-10 grid-cols-4 gap-y-16 gap-x-10">
+      <div className="hidden lg:grid max-w-[1600px] mx-auto px-4 py-10 grid-cols-4 gap-y-16 gap-x-12 xl:gap-x-14 2xl:gap-x-16">
         {/* โลโก้ */}
         <button
           type="button"
-          className="flex flex-col items-center justify-center text-center h-full cursor-pointer"
+          className="min-w-0 flex flex-col items-center justify-center text-center h-full cursor-pointer"
           onClick={handleLogoClick}
         >
           <Image src="/logo.png" alt={`${COMPANY.brand} logo`} width={120} height={120} />
@@ -191,35 +140,31 @@ export function Footer({ data }: { data: FooterData }) {
           </span>
         </button>
 
-        {/* ข้อมูลบริษัท */}
-        <div className="flex flex-col justify-center h-full text-left max-w-md px-2 space-y-6">
+        {/* ข้อมูลบริษัท (คงขนาดเดิม) */}
+        <div className="min-w-0 flex flex-col justify-center h-full text-left max-w-[36ch] px-2 space-y-4">
           <span className="font-semibold text-lg text-[#A70909] block whitespace-nowrap">
             {legalName}
           </span>
-          <div className="space-y-1.5 text-[clamp(12px,0.9vw,14px)] leading-[1.5] lg:text-[14px]">
+          <div className="space-y-1 text-[14px] xl:text-[15px] leading-[1.4]">
             <p className="text-gray-700">Tax ID: {COMPANY.taxId}</p>
-            <p className="text-gray-700">{address.streetAddress}</p>
-            <p className="text-gray-700">
-              {address.subDistrict} {address.district}
-            </p>
-            <p className="text-gray-700">
-              {address.province} {address.postalCode}
-            </p>
+            <p className="text-gray-700">{addressLine1}</p>
+            <p className="text-gray-700">{addressLine2}</p>
             <p className="text-gray-700">{COMPANY.phoneDisplay}</p>
             <p className="text-gray-700">{COMPANY.email}</p>
           </div>
         </div>
 
         {/* เมนู */}
-        <div className="flex flex-col justify-center h-full px-2">
+        <div className="min-w-0 flex flex-col justify-center h-full px-2 lg:pl-6">
           <div className="flex gap-8 text-left">
-            <div className="flex flex-col gap-3 min-w-[140px]">
+            <div className="flex flex-col gap-3">
               {mainQuickLinks.map((link) => (
                 <div key={link.label}>{renderFooterLink(link, linkClass)}</div>
               ))}
             </div>
             <div className="flex flex-col gap-2">
-              <span className="text-[#A70909] font-medium text-[15px]">{servicesHeading}</span>
+              {/* น้ำหนักปกติ */}
+              <span className="text-[#A70909] font-normal text-[15px]">{servicesHeading}</span>
               <div className="ml-3 mt-1 space-y-1">
                 {serviceLinks.map((link) => (
                   <div key={link.label}>{renderFooterLink(link, linkClass)}</div>
@@ -229,32 +174,32 @@ export function Footer({ data }: { data: FooterData }) {
           </div>
         </div>
 
-        {/* โซเชียล */}
-        <div className="hidden lg:flex justify-center h-full px-2">
+        {/* โซเชียล — ใช้ react-icons และสัดส่วนเดียวกับ SocialFloating */}
+        <div className="min-w-0 hidden lg:flex justify-center h-full px-2">
           <div className="flex gap-6">
             <div className="flex flex-col gap-2">
               <a
                 href={`tel:${COMPANY.phone}`}
-                className="text-white bg-[#A70909] rounded-full w-11 h-11 flex items-center justify-center shadow-md hover:opacity-80"
+                className="text-white bg-[#A70909] rounded-full w-11 h-11 p-2.5 flex items-center justify-center shadow-md hover:opacity-80"
                 aria-label="Call Virintira"
               >
-                <PhoneIcon className="h-5 w-5" />
+                <FaPhoneAlt className="w-5 h-5" />
               </a>
               <a
                 href={COMPANY.socials.tiktok}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-black rounded-full w-11 h-11 flex items-center justify-center shadow-md hover:opacity-80"
+                className="bg-black rounded-full w-11 h-11 p-2.5 flex items-center justify-center shadow-md hover:opacity-80"
                 aria-label="Virintira on TikTok"
               >
-                <TiktokIcon className="h-5 w-5 text-white" />
+                <FaTiktok className="w-5 h-5 text-white" />
               </a>
               <a
                 href={`mailto:${COMPANY.email}`}
-                className="text-white bg-[#A70909] rounded-full w-11 h-11 flex items-center justify-center shadow-md hover:opacity-80"
+                className="text-white bg-[#A70909] rounded-full w-11 h-11 p-2.5 flex items-center justify-center shadow-md hover:opacity-80"
                 aria-label="Email Virintira"
               >
-                <EnvelopeIcon className="h-5 w-5" />
+                <FaEnvelope className="w-5 h-5" />
               </a>
             </div>
             <div className="flex flex-col gap-2">
@@ -262,20 +207,19 @@ export function Footer({ data }: { data: FooterData }) {
                 href={COMPANY.socials.line}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-[#06C755] rounded-full w-11 h-11 flex items-center justify-center shadow-md hover:opacity-80"
+                className="bg-[#06C755] rounded-full w-11 h-11 p-1 flex items-center justify-center shadow-md hover:opacity-80"
                 aria-label="Virintira on LINE"
               >
-                {/* ขยายเฉพาะไอคอนด้านใน */}
-                <LineIcon className="h-8 w-8 text-white" />
+                <FaLine className="w-8 h-8 text-white" />
               </a>
               <a
                 href={COMPANY.socials.facebook}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-[#1877F2] rounded-full w-11 h-11 flex items-center justify-center shadow-md hover:opacity-80"
+                className="bg-[#1877F2] rounded-full w-11 h-11 p-2.5 flex items-center justify-center shadow-md hover:opacity-80"
                 aria-label="Virintira on Facebook"
               >
-                <FacebookIcon className="h-5 w-5 text-white" />
+                <FaFacebookF className="w-5 h-5 text-white" />
               </a>
             </div>
           </div>
@@ -295,19 +239,14 @@ export function Footer({ data }: { data: FooterData }) {
               {COMPANY.brandMark ?? COMPANY.brand}
             </span>
           </button>
-          <div className="text-left px-2">
+          <div className="text-left px-2 max-w-[38ch] min-w-0">
             <span className="font-semibold text-lg text-[#A70909] block mb-4 whitespace-nowrap">
               {legalName}
             </span>
-            <div className="space-y-2 text-[clamp(13px,1.8vw,15px)] leading-relaxed">
+            <div className="space-y-1.5 text-[14px] leading-[1.4]">
               <p>Tax ID: {COMPANY.taxId}</p>
-              <p>{address.streetAddress}</p>
-              <p>
-                {address.subDistrict} {address.district}
-              </p>
-              <p>
-                {address.province} {address.postalCode}
-              </p>
+              <p>{addressLine1}</p>
+              <p>{addressLine2}</p>
               <p>{COMPANY.phoneDisplay}</p>
               <p>{COMPANY.email}</p>
             </div>
@@ -315,16 +254,16 @@ export function Footer({ data }: { data: FooterData }) {
         </div>
 
         <div className="flex justify-center gap-12 px-2 flex-wrap sm:flex-nowrap">
-          <div className="flex flex-col gap-3 min-w-[160px]">
+          <div className="flex flex-col gap-3">
             {mainQuickLinks.map((link) => (
               <div key={link.label}>{renderFooterLink(link, linkClass)}</div>
             ))}
           </div>
           <div className="flex flex-col gap-2">
-            <span className="text-[#A70909] font-medium text-[clamp(15px,2.2vw,18px)]">
+            <span className="text-[#A70909] font-normal text-[clamp(15px,2.2vw,18px)]">
               {servicesHeading}
             </span>
-            <div className="ml-3 mt-1 space-y-2 text-[clamp(13px,1.8vw,15px)]">
+            <div className="ml-3 mt-1 space-y-2 text-[14px]">
               {serviceLinks.map((link) => (
                 <div key={link.label}>{renderFooterLink(link, linkClass)}</div>
               ))}
@@ -332,47 +271,22 @@ export function Footer({ data }: { data: FooterData }) {
           </div>
         </div>
 
+        {/* ไอคอน tablet ใช้สัดส่วนเดียวกับ desktop */}
         <div className="flex justify-center gap-4 flex-wrap px-2">
-          <a
-            href={`tel:${COMPANY.phone}`}
-            className="text-white bg-[#A70909] rounded-full w-11 h-11 flex items-center justify-center shadow-md hover:opacity-80"
-            aria-label="Call Virintira"
-          >
-            <PhoneIcon className="h-5 w-5" />
+          <a href={`tel:${COMPANY.phone}`} className="text-white bg-[#A70909] rounded-full w-11 h-11 p-2.5 flex items-center justify-center shadow-md hover:opacity-80" aria-label="Call Virintira">
+            <FaPhoneAlt className="w-5 h-5" />
           </a>
-          <a
-            href={COMPANY.socials.line}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="bg-[#06C755] rounded-full w-11 h-11 flex items-center justify-center shadow-md hover:opacity-80"
-            aria-label="Virintira on LINE"
-          >
-            <LineIcon className="h-8 w-8 text-white" />
+          <a href={COMPANY.socials.line} target="_blank" rel="noopener noreferrer" className="bg-[#06C755] rounded-full w-11 h-11 p-1 flex items-center justify-center shadow-md hover:opacity-80" aria-label="Virintira on LINE">
+            <FaLine className="w-8 h-8 text-white" />
           </a>
-          <a
-            href={COMPANY.socials.tiktok}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="bg-black rounded-full w-11 h-11 flex items-center justify-center shadow-md hover:opacity-80"
-            aria-label="Virintira on TikTok"
-          >
-            <TiktokIcon className="h-5 w-5 text-white" />
+          <a href={COMPANY.socials.tiktok} target="_blank" rel="noopener noreferrer" className="bg-black rounded-full w-11 h-11 p-2.5 flex items-center justify-center shadow-md hover:opacity-80" aria-label="Virintira on TikTok">
+            <FaTiktok className="w-5 h-5 text-white" />
           </a>
-          <a
-            href={COMPANY.socials.facebook}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="bg-[#1877F2] rounded-full w-11 h-11 flex items-center justify-center shadow-md hover:opacity-80"
-            aria-label="Virintira on Facebook"
-          >
-            <FacebookIcon className="h-5 w-5 text-white" />
+          <a href={COMPANY.socials.facebook} target="_blank" rel="noopener noreferrer" className="bg-[#1877F2] rounded-full w-11 h-11 p-2.5 flex items-center justify-center shadow-md hover:opacity-80" aria-label="Virintira on Facebook">
+            <FaFacebookF className="w-5 h-5 text-white" />
           </a>
-          <a
-            href={`mailto:${COMPANY.email}`}
-            className="text-white bg-[#A70909] rounded-full w-11 h-11 flex items-center justify-center shadow-md hover:opacity-80"
-            aria-label="Email Virintira"
-          >
-            <EnvelopeIcon className="h-5 w-5" />
+          <a href={`mailto:${COMPANY.email}`} className="text-white bg-[#A70909] rounded-full w-11 h-11 p-2.5 flex items-center justify-center shadow-md hover:opacity-80" aria-label="Email Virintira">
+            <FaEnvelope className="w-5 h-5" />
           </a>
         </div>
       </div>
@@ -390,95 +304,50 @@ export function Footer({ data }: { data: FooterData }) {
           </span>
         </button>
 
-        <div className="indent-5 text-left px-2">
+        <div className="indent-5 text-left px-2 max-w-[40ch] min-w-0">
           <span className="font-semibold text-lg text-[#A70909] block mb-4 whitespace-nowrap">
             {legalName}
           </span>
-          <div className="space-y-2 text-[clamp(13px,4vw,15px)] leading-relaxed">
+          <div className="space-y-1.5 text-[14px] leading-[1.45]">
             <p>Tax ID: {COMPANY.taxId}</p>
-            <p>{address.streetAddress}</p>
-            <p>
-              {address.subDistrict} {address.district}
-            </p>
-            <p>
-              {address.province} {address.postalCode}
-            </p>
+            <p>{addressLine1}</p>
+            <p>{addressLine2}</p>
             <p>{COMPANY.phoneDisplay}</p>
             <p>{COMPANY.email}</p>
           </div>
         </div>
 
-        <div className="flex flex-col gap-6 px-2">
-          <div className="flex flex-col gap-3">
-            {mainQuickLinks.map((link) => (
-              <div key={link.label}>{renderFooterLink(link, linkClass)}</div>
-            ))}
-          </div>
-          <div className="flex flex-col gap-2">
-            <span className="text-[#A70909] font-medium text-[clamp(15px,5.5vw,18px)]">
-              {servicesHeading}
-            </span>
-            <div className="ml-3 mt-1 space-y-2 text-[clamp(13px,4.5vw,15px)]">
-              {serviceLinks.map((link) => (
-                <div key={link.label}>{renderFooterLink(link, linkClass)}</div>
-              ))}
-            </div>
-          </div>
-        </div>
-
         <div className="flex justify-center gap-4 flex-wrap">
-          <a
-            href={`tel:${COMPANY.phone}`}
-            className="text-white bg-[#A70909] rounded-full w-11 h-11 flex items-center justify-center shadow-md hover:opacity-80"
-            aria-label="Call Virintira"
-          >
-            <PhoneIcon className="h-5 w-5" />
+          <a href={`tel:${COMPANY.phone}`} className="text-white bg-[#A70909] rounded-full w-11 h-11 p-2.5 flex items-center justify-center shadow-md hover:opacity-80" aria-label="Call Virintira">
+            <FaPhoneAlt className="w-5 h-5" />
           </a>
-          <a
-            href={COMPANY.socials.line}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="bg-[#06C755] rounded-full w-11 h-11 flex items-center justify-center shadow-md hover:opacity-80"
-            aria-label="Virintira on LINE"
-          >
-            <LineIcon className="h-8 w-8 text-white" />
+          <a href={COMPANY.socials.line} target="_blank" rel="noopener noreferrer" className="bg-[#06C755] rounded-full w-11 h-11 p-1 flex items-center justify-center shadow-md hover:opacity-80" aria-label="Virintira on LINE">
+            <FaLine className="w-8 h-8 text-white" />
           </a>
-          <a
-            href={COMPANY.socials.tiktok}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="bg-black rounded-full w-11 h-11 flex items-center justify-center shadow-md hover:opacity-80"
-            aria-label="Virintira on TikTok"
-          >
-            <TiktokIcon className="h-5 w-5 text-white" />
+          <a href={COMPANY.socials.tiktok} target="_blank" rel="noopener noreferrer" className="bg-black rounded-full w-11 h-11 p-2.5 flex items-center justify-center shadow-md hover:opacity-80" aria-label="Virintira on TikTok">
+            <FaTiktok className="w-5 h-5 text-white" />
           </a>
-          <a
-            href={COMPANY.socials.facebook}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="bg-[#1877F2] rounded-full w-11 h-11 flex items-center justify-center shadow-md hover:opacity-80"
-            aria-label="Virintira on Facebook"
-          >
-            <FacebookIcon className="h-5 w-5 text-white" />
+          <a href={COMPANY.socials.facebook} target="_blank" rel="noopener noreferrer" className="bg-[#1877F2] rounded-full w-11 h-11 p-2.5 flex items-center justify-center shadow-md hover:opacity-80" aria-label="Virintira on Facebook">
+            <FaFacebookF className="w-5 h-5 text-white" />
           </a>
-          <a
-            href={`mailto:${COMPANY.email}`}
-            className="text-white bg-[#A70909] rounded-full w-11 h-11 flex items-center justify-center shadow-md hover:opacity-80"
-            aria-label="Email Virintira"
-          >
-            <EnvelopeIcon className="h-5 w-5" />
+          <a href={`mailto:${COMPANY.email}`} className="text-white bg-[#A70909] rounded-full w-11 h-11 p-2.5 flex items-center justify-center shadow-md hover:opacity-80" aria-label="Email Virintira">
+            <FaEnvelope className="w-5 h-5" />
           </a>
         </div>
       </div>
 
       {/* Legal */}
-      <div className="text-center py-4 border-t border-gray-200 text-sm text-gray-500 text-[clamp(12px,1.4vw,14px)]">
-        {legalPrefix}
+      <div className="text-center py-4 border-t border-gray-200 text-gray-500 text-[clamp(12px,1.4vw,14px)]">
+        <span className="mr-1">
+          {legalPrefix.replace(/\|\s*$/, '').trim()}
+        </span>
+        {/* โชว์ | เฉพาะหน้าจอ ≥ 640px */}
+        <span className="hidden sm:inline mx-1">|</span>
+        {/* จอเล็กบังคับขึ้นบรรทัดใหม่ก่อน Powered by */}
+        <br className="sm:hidden" />
         {poweredByNode}
         {legalSuffix}
       </div>
     </footer>
   );
 }
-
-export default Footer;
