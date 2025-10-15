@@ -83,6 +83,14 @@
           "href": "#services"
         },
         {
+          "label": "기사",
+          "href": "/blog/bookkeeping-matters"
+        },
+        {
+          "label": "다운로드",
+          "href": "/resources"
+        },
+        {
           "label": "Why us",
           "href": "#why-us"
         },
@@ -95,10 +103,6 @@
           "href": "/promotion",
           "highlight": true,
           "icon": "promotion"
-        },
-        {
-          "label": "Resources",
-          "href": "/resources"
         }
       ],
       "megaMenu": {
@@ -201,8 +205,12 @@
           "href": "/promotion"
         },
         {
-          "label": "ดาวน์โหลดเอกสาร",
-          "href": "/under-construction"
+          "label": "기사",
+          "href": "/blog/bookkeeping-matters"
+        },
+        {
+          "label": "다운로드",
+          "href": "/resources"
         },
         {
           "label": "ติดต่อเรา",
