@@ -16,66 +16,77 @@ const inter = Inter({
   subsets: ['latin'],
   weight: ['400', '500', '600', '700'],
   display: 'swap',
+  variable: '--font-en',
 });
 
 const prompt = Prompt({
   subsets: ['thai', 'latin'],
   weight: ['300', '400', '500', '700'],
   display: 'swap',
+  variable: '--font-th',
 });
 
 const notoSansSC = Noto_Sans_SC({
-  subsets: ['latin'],
+  subsets: ['latin', 'chinese-simplified'],
   weight: ['400', '500', '700'],
   display: 'swap',
+  variable: '--font-zh-hans',
 });
 
 const notoSansTC = Noto_Sans_TC({
-  subsets: ['latin'],
+  subsets: ['latin', 'chinese-traditional'],
   weight: ['400', '500', '700'],
   display: 'swap',
+  variable: '--font-zh-hant',
 });
 
 const notoSansJP = Noto_Sans_JP({
-  subsets: ['latin'],
+  subsets: ['latin', 'japanese'],
   weight: ['400', '500', '700'],
   display: 'swap',
+  variable: '--font-ja',
 });
 
 const notoSansKR = Noto_Sans_KR({
-  subsets: ['latin'],
+  subsets: ['latin', 'korean'],
   weight: ['400', '500', '700'],
   display: 'swap',
+  variable: '--font-ko',
 });
 
 const notoSansDevanagari = Noto_Sans_Devanagari({
   subsets: ['latin', 'devanagari'],
   weight: ['400', '500', '700'],
   display: 'swap',
+  variable: '--font-hi',
 });
 
 const notoSansTamil = Noto_Sans_Tamil({
-  subsets: ['tamil', 'latin'],
+  subsets: ['latin', 'tamil'],
   weight: ['400', '500', '700'],
   display: 'swap',
+  variable: '--font-ta',
 });
 
 const notoSansHebrew = Noto_Sans_Hebrew({
   subsets: ['latin', 'hebrew'],
   weight: ['400', '500', '700'],
   display: 'swap',
+  variable: '--font-he',
 });
 
 const notoNaskhArabic = Noto_Naskh_Arabic({
   subsets: ['arabic'],
   weight: ['400', '500', '700'],
   display: 'swap',
+  variable: '--font-ar',
 });
 
 const vazirmatn = Vazirmatn({
-  subsets: ['arabic'],
+  subsets: ['latin', 'arabic'],
   weight: ['400', '500', '700'],
   display: 'swap',
+  variable: '--font-fa',
 });
 
 export const fonts = {
@@ -98,3 +109,8 @@ export const fonts = {
 } as const;
 
 export type SupportedLocale = keyof typeof fonts;
+
+export const fontVariableClassName = Object.values(fonts)
+  .map((font) => font.variable)
+  .filter(Boolean)
+  .join(' ');
