@@ -80,8 +80,12 @@
           "icon": "promotion"
         },
         {
-          "label": "Document downloads",
-          "href": "/under-construction"
+          "label": "Articles",
+          "href": "/blog/bookkeeping-matters"
+        },
+        {
+          "label": "Downloads",
+          "href": "/resources"
         },
         {
           "label": "Contact us",
@@ -331,8 +335,12 @@
           "href": "/promotion"
         },
         {
-          "label": "ดาวน์โหลดเอกสาร",
-          "href": "/under-construction"
+          "label": "Articles",
+          "href": "/blog/bookkeeping-matters"
+        },
+        {
+          "label": "Downloads",
+          "href": "/resources"
         },
         {
           "label": "ติดต่อเรา",
