@@ -99,11 +99,11 @@
             "title": "Registrations",
             "items": [
               {
-                "label": "Limited company",
+                "label": "Company Limited",
                 "href": "/under-construction"
               },
               {
-                "label": "Limited partnership",
+                "label": "Limited Partnership",
                 "href": "/under-construction"
               },
               {
@@ -115,52 +115,48 @@
                 "href": "/under-construction"
               },
               {
-                "label": "Commercial registration",
+                "label": "Commercial Registration",
                 "href": "/under-construction"
               },
               {
-                "label": "Employer registration",
+                "label": "Employer Registration",
                 "href": "/under-construction"
               },
               {
-                "label": "VAT registration",
+                "label": "VAT Registration",
                 "href": "/under-construction"
               }
             ]
           },
           {
-            "title": "Corporate updates",
+            "title": "Corporate Amendment",
             "items": [
               {
-                "label": "Entity name change",
+                "label": "Corporate Name",
                 "href": "/under-construction"
               },
               {
-                "label": "Company seal",
+                "label": "Corporate Seal",
                 "href": "/under-construction"
               },
               {
-                "label": "Director details",
+                "label": "Director Information",
                 "href": "/under-construction"
               },
               {
-                "label": "Signing authority",
+                "label": "Signing Authority",
                 "href": "/under-construction"
               },
               {
-                "label": "Shareholders",
+                "label": "Shareholders / Share Structure",
                 "href": "/under-construction"
               },
               {
-                "label": "Share structure",
+                "label": "Capital Increase / Decrease",
                 "href": "/under-construction"
               },
               {
-                "label": "Capital increase/decrease",
-                "href": "/under-construction"
-              },
-              {
-                "label": "Relocation",
+                "label": "Address / Branch",
                 "href": "/under-construction"
               },
               {
@@ -168,7 +164,7 @@
                 "href": "/under-construction"
               },
               {
-                "label": "Business closure",
+                "label": "Corporate Dissolution",
                 "href": "/under-construction"
               }
             ]
