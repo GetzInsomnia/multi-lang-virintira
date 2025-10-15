@@ -14,15 +14,21 @@
 @tailwind components;
 @tailwind utilities;
 
+/* CSS variables / design tokens */
 :root {
   color-scheme: light;
   --background: #ffffff;
   --foreground: #171717;
+
   --header-height: 72px;
+
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+
   --font-sans: var(--font-th, var(--font-en, sans-serif));
   --font-mono: var(--font-en, monospace);
+
+  /* type scale */
   --step--1: clamp(0.85rem, 0.8rem + 0.25vw, 0.95rem);
   --step-0: clamp(0.95rem, 0.9rem + 0.3vw, 1.1rem);
   --step-1: clamp(1.15rem, 1rem + 0.4vw, 1.35rem);
@@ -38,66 +44,72 @@
   }
 }
 
+/* Box model baseline (ปล่อยไว้นอก layer ได้) */
 * {
   box-sizing: border-box;
 }
 
-body {
-  margin: 0;
-  min-height: 100vh;
-  background-color: var(--color-background);
-  color: var(--color-foreground);
-  font-size: var(--step-0);
-  line-height: 1.65;
-  text-rendering: optimizeLegibility;
+/* ✅ ย้าย “ดีฟอลต์ตัวอักษร” เข้า base layer
+   เพื่อให้ Tailwind utilities (เช่น text-[14px]) ชนะตามคาด */
+@layer base {
+  body {
+    margin: 0;
+    min-height: 100vh;
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-size: var(--step-0);
+    line-height: 1.65;
+    text-rendering: optimizeLegibility;
+    font-family: var(--font-sans);
+  }
+
+  a {
+    color: inherit;
+  }
+
+  p,
+  li {
+    font-size: inherit;
+  }
+
+  small,
+  .text-xs {
+    font-size: var(--step--1);
+  }
+
+  h1,
+  .text-h1 {
+    font-size: var(--step-4);
+    line-height: 1.1;
+  }
+
+  h2,
+  .text-h2 {
+    font-size: var(--step-3);
+    line-height: 1.2;
+  }
+
+  h3,
+  .text-h3 {
+    font-size: var(--step-2);
+    line-height: 1.25;
+  }
 }
 
-a {
-  color: inherit;
-}
-
-p,
-li {
-  font-size: var(--step-0);
-}
-
-small,
-.text-xs {
-  font-size: var(--step--1);
-}
-
-h1,
-.text-h1 {
-  font-size: var(--step-4);
-  line-height: 1.1;
-}
-
-h2,
-.text-h2 {
-  font-size: var(--step-3);
-  line-height: 1.2;
-}
-
-h3,
-.text-h3 {
-  font-size: var(--step-2);
-  line-height: 1.25;
-}
-
+/* behavior / motion */
 html {
   scroll-behavior: smooth;
 }
-
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
   }
 }
 
+/* RTL helpers (คงไว้ global ได้) */
 html[dir='rtl'] body {
   text-align: right;
 }
-
 html[dir='rtl'] a,
 html[dir='rtl'] p,
 html[dir='rtl'] h1,
@@ -106,10 +118,10 @@ html[dir='rtl'] h3 {
   direction: rtl;
 }
 
+/* Utilities (เล็กๆ น้อยๆ) */
 .text-shadow-white {
   text-shadow: 0 2px 6px rgba(255, 255, 255, 0.5);
 }
-
 .no-image-fade {
   animation: none !important;
   transition: none !important;

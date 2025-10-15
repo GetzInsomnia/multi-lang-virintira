@@ -5,7 +5,8 @@ export const COMPANY = {
   legalNameEn: 'Virintira Co., Ltd. (Head Quarter)',
   taxId: '0105562068366',
   phone: '+66928825556',
-  phoneDisplay: '092-882-5556',
+  phoneDisplayTh: 'โทร. 0928825556',
+  phoneDisplayEn: 'Tel. +66928825556',
   email: 'virintirabusiness@gmail.com',
   geo: {
     latitude: 13.832931,
@@ -20,10 +21,10 @@ export const COMPANY = {
     country: 'TH',
   },
   addressEn: {
-    streetAddress: '222/172 Sam Wa Rd.,',
+    streetAddress: '222/172 Sam Wa Rd.',
     subDistrict: 'Bang Chan Subdistrict,',
-    district: 'Khlong Sam Wa District,',
-    province: 'Bangkok,',
+    district: 'Khlong Sam Wa District',
+    province: 'Bangkok.',
     postalCode: '10510',
     country: 'TH',
   },
