@@ -50,7 +50,7 @@ export default function MegaMenu({
                   <li key={item.href}>
                     <Link
                       href={normalizeInternalHref(item.href)}
-                      className="block text-[15px] font-medium text-[#2A2A2A] transition-colors duration-150 hover:text-[#A70909]"
+                      className="block text-[15px] font-normal text-[#2A2A2A] transition-colors duration-150 hover:text-[#A70909]"
                       onClick={onLinkClick}
                     >
                       <span className="block leading-snug">{item.label}</span>
