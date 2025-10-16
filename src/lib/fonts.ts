@@ -27,28 +27,28 @@ const prompt = Prompt({
 });
 
 const notoSansSC = Noto_Sans_SC({
-  subsets: ['latin', 'chinese-simplified'],
+  subsets: ['latin'],
   weight: ['400', '500', '700'],
   display: 'swap',
   variable: '--font-zh-hans',
 });
 
 const notoSansTC = Noto_Sans_TC({
-  subsets: ['latin', 'chinese-traditional'],
+  subsets: ['latin'],
   weight: ['400', '500', '700'],
   display: 'swap',
   variable: '--font-zh-hant',
 });
 
 const notoSansJP = Noto_Sans_JP({
-  subsets: ['latin', 'japanese'],
+  subsets: ['latin'],
   weight: ['400', '500', '700'],
   display: 'swap',
   variable: '--font-ja',
 });
 
 const notoSansKR = Noto_Sans_KR({
-  subsets: ['latin', 'korean'],
+  subsets: ['latin'],
   weight: ['400', '500', '700'],
   display: 'swap',
   variable: '--font-ko',
