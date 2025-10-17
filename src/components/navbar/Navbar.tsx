@@ -396,7 +396,7 @@ export default function Navbar({ data }: NavbarProps) {
               currentLocale={locale}
             />
             {/* Surface the hamburger on desktop only when space is constrained (no breakpoint changes). */}
-            <div className={`md:hidden${forceMobile ? ' md:block' : ''}`}>
+            <div className={forceMobile ? 'md:block' : 'md:hidden'}>
               {/* กัน bubble คลิกแรกไม่ให้กลายเป็น outside-click */}
               <span ref={openerRef} className="inline-flex" onMouseDown={(e) => e.stopPropagation()}>
                 <HamburgerButton isOpen={mobileOpen} onClick={handleMobileToggle} />
