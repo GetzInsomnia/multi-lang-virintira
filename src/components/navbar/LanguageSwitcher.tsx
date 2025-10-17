@@ -107,6 +107,7 @@ export default function LanguageSwitcher({
         className="
           pointer-events-none fixed right-50 top-[var(--header-height)] z-40
           w-auto max-w-[92vw] opacity-0 transition-opacity duration-150 ease-out
+          max-[466px]:right-0
           data-[open=true]:pointer-events-auto data-[open=true]:opacity-100
         "
         data-open={open ? 'true' : 'false'}
