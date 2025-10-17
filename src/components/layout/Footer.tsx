@@ -240,9 +240,11 @@ export default function Footer({ data }: { data: FooterData }) {
       {/* <768px: 2 ส่วน — ข้อมูลบริษัท (บล็อกกึ่งกลาง, ข้อความชิดซ้าย) + โซเชียลแนวนอน */}
       <div className="md:hidden w-full px-4 py-10">
         <div className="mx-auto flex flex-col items-center gap-10">
-          {/* ขยับบล็อกไปทางขวาเล็กน้อย โดยยังคงกึ่งกลางด้วย mx-auto */}
-          <div className="w-full max-w-[42ch] px-6 mx-auto translate-x-6">
-            <CompanyInfo />
+          {/* Centered container; apply a small logical start padding on very small screens to bias content right without overflow */}
+          <div className="w-full max-w-[42ch] px-6 mx-auto">
+            <div className="max-[466px]:[padding-inline-start:0.75rem]">
+              <CompanyInfo />
+            </div>
           </div>
           <SocialIconsRow />
         </div>
