@@ -113,7 +113,21 @@ export default function Footer({ data }: { data: FooterData }) {
   // ===== Sub-components =====
   const CompanyInfo = () => (
     <div className="min-w-0 text-left max-w-[36ch] space-y-4">
-      <span className="font-semibold text-lg text-[#A70909] block whitespace-nowrap">{legalName}</span>
+      {/* Clamp brand sizing at <=466/380/340px to prevent footer overflow while preserving baseline styling */}
+      <span
+        className={[
+          'block font-semibold text-[#A70909]',
+          'text-lg',
+          'max-w-full',
+          'whitespace-nowrap',
+          'max-[466px]:text-[clamp(17px,4.8vw,19px)]',
+          'max-[380px]:text-[clamp(16px,5.2vw,18px)]',
+          'max-[340px]:whitespace-normal',
+          'max-[340px]:[overflow-wrap:anywhere]',
+        ].join(' ')}
+      >
+        {legalName}
+      </span>
       <div className="space-y-1 text-[13px] xl:text-[14px] leading-[1.4]">
         <p className="text-gray-700">Tax ID: {COMPANY.taxId}</p>
         <p className="text-gray-700">{addressLine1}</p>
