@@ -86,38 +86,34 @@ export default function SearchToggle({
 
   const action = normalizeInternalHref(actionHref);
 
-  return (
-    <div
-      className={[
-        'relative h-full',
-        compactHidden ? 'max-[340px]:opacity-0 max-[340px]:pointer-events-none' : '',
-      ]
-        .filter(Boolean)
-        .join(' ')}
-      aria-hidden={compactHidden ? true : undefined}
-    >
-      {/* ปุ่มแว่นขยาย */}
-      <button
-        ref={buttonRef}
-        type="button"
-        aria-label="Search"
-        aria-expanded={open}
-        aria-controls="navbar-search-panel"
-        onClick={handleToggle}
-        className={[
-          'inline-flex h-8 w-8 items-center justify-center rounded-full p-2 text-[#A70909]',
-          'transition-opacity duration-200',
-          open ? 'opacity-0 pointer-events-none' : 'opacity-100 hover:opacity-80',
-        ]
-          .filter(Boolean)
-          .join(' ')}
-        tabIndex={compactHidden ? -1 : undefined}
-        aria-hidden={compactHidden ? true : undefined}
-      >
-        <FontAwesomeIcon icon={faSearch} className="h-5 w-5" />
-      </button>
+  const shouldHideTrigger = compactHidden && !open; // Explicit guard replaces the old max-[340px] hide.
 
-      {/* ชั้นนอกสุด: จัดวาง + กึ่งกลางด้วย flex */}
+  return (
+    <div className="relative h-full" aria-hidden={shouldHideTrigger ? true : undefined}>
+      {/* ปุ่มแว่นขยาย */}
+      {!shouldHideTrigger && (
+        <button
+          ref={buttonRef}
+          type="button"
+          aria-label="Search"
+          aria-expanded={open}
+          aria-controls="navbar-search-panel"
+          onClick={handleToggle}
+          className={[
+            'inline-flex h-8 w-8 items-center justify-center rounded-full p-2 text-[#A70909]',
+            'transition-opacity duration-200',
+            open ? 'opacity-0 pointer-events-none' : 'opacity-100 hover:opacity-80',
+          ]
+            .filter(Boolean)
+            .join(' ')}
+          tabIndex={compactHidden ? -1 : undefined}
+          aria-hidden={compactHidden ? true : undefined}
+        >
+          <FontAwesomeIcon icon={faSearch} className="h-5 w-5" />
+        </button>
+      )}
+
+      {/* ชั้นนอกสุด: จัดวาง + กึ่งกลางด้วย flex (overlay stays mounted regardless of compaction) */}
       <div
         className={[
           'fixed inset-x-0 z-40 pointer-events-none flex justify-center',

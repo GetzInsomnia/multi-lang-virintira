@@ -47,6 +47,7 @@ export default function LanguageSwitcher({
   const router = useRouter();
   const pathname = usePathname() || '/';
   const basePath = normalizeInternalHref(pathname) || '/';
+  const shouldRender = !compactHidden; // Navbar handles compaction; avoid rendering duplicates in ultra-small viewports.
 
   const codes = useMemo(() => {
     const unique = new Set(locales.map((code) => code.toLowerCase()));
@@ -69,7 +70,7 @@ export default function LanguageSwitcher({
 
   // ปิดเมื่อคลิกนอก
   useEffect(() => {
-    if (!open) return;
+    if (!open || !shouldRender) return;
     const handleClick = (event: MouseEvent) => {
       const target = event.target as Node | null;
       if (panelRef.current?.contains(target) || buttonRef.current?.contains(target)) return;
@@ -78,17 +79,26 @@ export default function LanguageSwitcher({
 
     window.addEventListener('mousedown', handleClick);
     return () => window.removeEventListener('mousedown', handleClick);
-  }, [open, onOpenChange]);
+  }, [open, onOpenChange, shouldRender]);
 
   // ปิดเมื่อกด Esc
   useEffect(() => {
-    if (!open) return;
+    if (!open || !shouldRender) return;
     const handleKey = (event: KeyboardEvent) => {
       if (event.key === 'Escape') onOpenChange(false);
     };
     window.addEventListener('keydown', handleKey);
     return () => window.removeEventListener('keydown', handleKey);
-  }, [open, onOpenChange]);
+  }, [open, onOpenChange, shouldRender]);
+
+  useEffect(() => {
+    if (shouldRender || !open) return;
+    onOpenChange(false);
+  }, [shouldRender, open, onOpenChange]);
+
+  if (!shouldRender) {
+    return null;
+  }
 
   return (
     <>
@@ -99,11 +109,7 @@ export default function LanguageSwitcher({
         aria-expanded={open}
         aria-controls="language-menu-panel"
         onClick={() => onOpenChange(!open)}
-        className={`rounded-full p-2 text-[#A70909] transition-colors duration-150 hover:opacity-80${
-          compactHidden ? ' max-[340px]:opacity-0 max-[340px]:pointer-events-none' : ''
-        }`}
-        tabIndex={compactHidden ? -1 : undefined}
-        aria-hidden={compactHidden ? true : undefined}
+        className="rounded-full p-2 text-[#A70909] transition-colors duration-150 hover:opacity-80"
       >
         <FontAwesomeIcon icon={faGlobe} className="h-5 w-5" />
       </button>
