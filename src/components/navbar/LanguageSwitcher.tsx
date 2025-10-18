@@ -47,8 +47,6 @@ export default function LanguageSwitcher({
   const router = useRouter();
   const pathname = usePathname() || '/';
   const basePath = normalizeInternalHref(pathname) || '/';
-  const shouldRender = !compactHidden; // Navbar handles compaction; avoid rendering duplicates in ultra-small viewports.
-
   const codes = useMemo(() => {
     const unique = new Set(locales.map((code) => code.toLowerCase()));
     unique.add(currentLocale.toLowerCase());
@@ -70,7 +68,7 @@ export default function LanguageSwitcher({
 
   // ปิดเมื่อคลิกนอก
   useEffect(() => {
-    if (!open || !shouldRender) return;
+    if (!open || compactHidden) return;
     const handleClick = (event: MouseEvent) => {
       const target = event.target as Node | null;
       if (panelRef.current?.contains(target) || buttonRef.current?.contains(target)) return;
@@ -79,24 +77,24 @@ export default function LanguageSwitcher({
 
     window.addEventListener('mousedown', handleClick);
     return () => window.removeEventListener('mousedown', handleClick);
-  }, [open, onOpenChange, shouldRender]);
+  }, [open, onOpenChange, compactHidden]);
 
   // ปิดเมื่อกด Esc
   useEffect(() => {
-    if (!open || !shouldRender) return;
+    if (!open || compactHidden) return;
     const handleKey = (event: KeyboardEvent) => {
       if (event.key === 'Escape') onOpenChange(false);
     };
     window.addEventListener('keydown', handleKey);
     return () => window.removeEventListener('keydown', handleKey);
-  }, [open, onOpenChange, shouldRender]);
+  }, [open, onOpenChange, compactHidden]);
 
   useEffect(() => {
-    if (shouldRender || !open) return;
+    if (!compactHidden || !open) return;
     onOpenChange(false);
-  }, [shouldRender, open, onOpenChange]);
+  }, [compactHidden, open, onOpenChange]);
 
-  if (!shouldRender) {
+  if (compactHidden) {
     return null;
   }
 

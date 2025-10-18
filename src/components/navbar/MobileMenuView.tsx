@@ -270,9 +270,12 @@ export default function MobileMenuView({
                   id={languageListId}
                   role="listbox"
                   aria-hidden={languageExpanded ? undefined : true}
-                  className={`mt-2 rounded-md border border-gray-200 bg-white transition-[max-height,opacity] duration-200 ease-out ${
-                    languageExpanded ? 'max-h-40 opacity-100' : 'max-h-0 opacity-0 overflow-hidden'
-                  }`}
+                  className={[
+                    'mt-2 rounded-md border border-gray-200 bg-white transition-[max-height,opacity] duration-200 ease-out',
+                    languageExpanded
+                      ? 'max-h-40 opacity-100'
+                      : 'max-h-0 opacity-0 overflow-hidden',
+                  ].join(' ')}
                 >
                   <ul className="drawer-language-scroll max-h-40 overflow-auto pr-1">
                     {languageLocales.map((code) => {
@@ -280,21 +283,28 @@ export default function MobileMenuView({
                       const isActive = normalized === currentLocale?.toLowerCase();
                       return (
                         <li key={code}>
-                        <button
-                          type="button"
-                          role="option"
-                          aria-selected={isActive}
-                          onClick={() => handleLanguageSelect(code)}
-                          className={`flex w-full items-center justify-between px-4 py-2 text-sm transition-colors ${
-                            isActive ? 'bg-[#FDEAEA] text-[#A70909]' : 'text-[#2A2A2A] hover:bg-[#FDEAEA]'
-                          }`}
-                        >
-                          <span>{normalized.toUpperCase()}</span>
-                          {isActive ? <span className="h-2 w-2 rounded-full bg-[#A70909]" aria-hidden /> : <span className="h-2 w-2" aria-hidden />}
-                        </button>
-                      </li>
-                    );
-                  })}
+                          <button
+                            type="button"
+                            role="option"
+                            aria-selected={isActive}
+                            onClick={() => handleLanguageSelect(code)}
+                            className={[
+                              'flex w-full items-center justify-between px-4 py-2 text-sm transition-colors',
+                              isActive
+                                ? 'bg-[#FDEAEA] text-[#A70909]'
+                                : 'text-[#2A2A2A] hover:bg-[#FDEAEA]',
+                            ].join(' ')}
+                          >
+                            <span>{normalized.toUpperCase()}</span>
+                            {isActive ? (
+                              <span className="h-2 w-2 rounded-full bg-[#A70909]" aria-hidden />
+                            ) : (
+                              <span className="h-2 w-2" aria-hidden />
+                            )}
+                          </button>
+                        </li>
+                      );
+                    })}
                   </ul>
                 </div>
               </div>

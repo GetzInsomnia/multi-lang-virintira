@@ -159,17 +159,20 @@ export default function Navbar({ data }: NavbarProps) {
       const actionsEl = actionsRef.current;
       if (!logoEl || !navEl || !actionsEl) return;
 
-      const logoRect = logoEl.getBoundingClientRect();
-      const actionsRect = actionsEl.getBoundingClientRect();
-      const clusterGap = actionsRect.left - logoRect.right;
-      const safeClusterGap = Math.max(0, clusterGap);
-      const isUltraSmallViewport = window.innerWidth < 350;
-      const shouldCompact = isUltraSmallViewport && safeClusterGap < 20;
+      const vw = window.innerWidth;
+      const nextCompact = vw <= 349;
 
       setCompactActions((prev) => {
-        if (prev === shouldCompact) return prev;
-        return shouldCompact;
+        if (prev === nextCompact) return prev;
+        return nextCompact;
       });
+
+      if (nextCompact) {
+        return;
+      }
+
+      const logoRect = logoEl.getBoundingClientRect();
+      const actionsRect = actionsEl.getBoundingClientRect();
 
       const mobileQuery = window.matchMedia('(max-width: 767px)');
       if (mobileQuery.matches) {
