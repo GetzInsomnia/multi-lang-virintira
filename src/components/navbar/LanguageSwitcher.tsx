@@ -90,17 +90,6 @@ export default function LanguageSwitcher({
     return () => window.removeEventListener('keydown', handleKey);
   }, [open, onOpenChange]);
 
-  // Align with Navbar's compactActions state: when space is constrained, skip
-  // rendering the header trigger altogether instead of relying on breakpoint
-  // utilities. Close any active popover as the button disappears.
-  useEffect(() => {
-    if (compactHidden && open) onOpenChange(false);
-  }, [compactHidden, open, onOpenChange]);
-
-  if (compactHidden) {
-    return null;
-  }
-
   return (
     <>
       <button
@@ -110,7 +99,11 @@ export default function LanguageSwitcher({
         aria-expanded={open}
         aria-controls="language-menu-panel"
         onClick={() => onOpenChange(!open)}
-        className="rounded-full p-2 text-[#A70909] transition-colors duration-150 hover:opacity-80"
+        className={`rounded-full p-2 text-[#A70909] transition-colors duration-150 hover:opacity-80${
+          compactHidden ? ' max-[340px]:opacity-0 max-[340px]:pointer-events-none' : ''
+        }`}
+        tabIndex={compactHidden ? -1 : undefined}
+        aria-hidden={compactHidden ? true : undefined}
       >
         <FontAwesomeIcon icon={faGlobe} className="h-5 w-5" />
       </button>

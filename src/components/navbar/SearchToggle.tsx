@@ -86,34 +86,36 @@ export default function SearchToggle({
 
   const action = normalizeInternalHref(actionHref);
 
-  // When the header enters the ultra-compact state we now defer to Navbar's
-  // compactActions flag instead of breakpoint utilities. Hide only the trigger
-  // while closed so the drawer can still show this overlay without any CSS
-  // timing issues.
-  const hideTrigger = compactHidden && !open;
-
   return (
-    <div className="relative h-full">
+    <div
+      className={[
+        'relative h-full',
+        compactHidden ? 'max-[340px]:opacity-0 max-[340px]:pointer-events-none' : '',
+      ]
+        .filter(Boolean)
+        .join(' ')}
+      aria-hidden={compactHidden ? true : undefined}
+    >
       {/* ปุ่มแว่นขยาย */}
-      {!hideTrigger ? (
-        <button
-          ref={buttonRef}
-          type="button"
-          aria-label="Search"
-          aria-expanded={open}
-          aria-controls="navbar-search-panel"
-          onClick={handleToggle}
-          className={[
-            'inline-flex h-8 w-8 items-center justify-center rounded-full p-2 text-[#A70909]',
-            'transition-opacity duration-200',
-            open ? 'opacity-0 pointer-events-none' : 'opacity-100 hover:opacity-80',
-          ]
-            .filter(Boolean)
-            .join(' ')}
-        >
-          <FontAwesomeIcon icon={faSearch} className="h-5 w-5" />
-        </button>
-      ) : null}
+      <button
+        ref={buttonRef}
+        type="button"
+        aria-label="Search"
+        aria-expanded={open}
+        aria-controls="navbar-search-panel"
+        onClick={handleToggle}
+        className={[
+          'inline-flex h-8 w-8 items-center justify-center rounded-full p-2 text-[#A70909]',
+          'transition-opacity duration-200',
+          open ? 'opacity-0 pointer-events-none' : 'opacity-100 hover:opacity-80',
+        ]
+          .filter(Boolean)
+          .join(' ')}
+        tabIndex={compactHidden ? -1 : undefined}
+        aria-hidden={compactHidden ? true : undefined}
+      >
+        <FontAwesomeIcon icon={faSearch} className="h-5 w-5" />
+      </button>
 
       {/* ชั้นนอกสุด: จัดวาง + กึ่งกลางด้วย flex */}
       <div

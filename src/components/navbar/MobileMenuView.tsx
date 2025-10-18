@@ -247,8 +247,6 @@ export default function MobileMenuView({
 
             <div>
               <div ref={languageSectionRef} className="relative">
-                {/* Relies on drawer utility styling; the red stripe pseudo-element was removed */}
-                {/* so the button stays consistent across ultra-compact layouts. */}
                 <button
                   type="button"
                   onClick={(event) => {
@@ -258,7 +256,7 @@ export default function MobileMenuView({
                   aria-expanded={languageExpanded}
                   aria-controls={languageListId}
                   data-open={languageExpanded ? 'true' : 'false'}
-                  className="relative flex w-full items-center justify-between rounded-md border border-transparent px-3 py-2 text-left text-base font-medium text-[#A70909] transition-colors hover:border-[#F5B5B5] hover:bg-[#FDEAEA]"
+                  className="relative flex w-full items-center justify-between rounded-md border border-transparent px-3 py-2 text-left text-base font-medium text-[#A70909] transition-colors hover:border-[#F5B5B5] hover:bg-[#FDEAEA] before:absolute before:left-0 before:top-1 before:bottom-1 before:w-1 before:rounded-full before:bg-[#A70909] before:opacity-0 before:transition-opacity before:duration-150 data-[open=true]:before:opacity-100"
                 >
                   <span className="flex items-center gap-3">
                     <FontAwesomeIcon icon={faGlobe} className="h-4 w-4" />
@@ -275,8 +273,7 @@ export default function MobileMenuView({
                     languageExpanded ? 'max-h-40 opacity-100' : 'max-h-0 opacity-0 overflow-hidden'
                   }`}
                 >
-                  {/* Hide the scrollbar rail only within the drawer language list. */}
-                  <ul className="max-h-40 overflow-auto pr-1 drawer-language-scroll">
+                  <ul className="max-h-40 overflow-auto pr-1 scrollbar-hide">
                     {languageLocales.map((code) => {
                       const normalized = code.toLowerCase();
                       const isActive = normalized === currentLocale?.toLowerCase();
