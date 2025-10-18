@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { FaChevronLeft } from 'react-icons/fa';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faXmark } from '@fortawesome/free-solid-svg-icons';
+import { faXmark, faSearch, faGlobe } from '@fortawesome/free-solid-svg-icons';
 import { faFire } from '@fortawesome/free-solid-svg-icons';
 import { Link } from '@/i18n/routing';
 import { normalizeInternalHref } from '@/lib/links';
@@ -29,6 +29,13 @@ export default function MobileMenuView({
   index,
   current,
   panelVisible,
+  showUtilities = false,
+  onUtilitySearch,
+  languageLocales = [],
+  currentLocale,
+  onUtilityLocaleSelect,
+  languageLabel = 'Language',
+  searchLabel = 'Search',
 }: {
   title: string;
   items: MenuItem[];
@@ -38,8 +45,16 @@ export default function MobileMenuView({
   index: number;
   current: number;
   panelVisible: boolean;
+  showUtilities?: boolean;
+  onUtilitySearch?: () => void;
+  languageLocales?: readonly string[];
+  currentLocale?: string;
+  onUtilityLocaleSelect?: (locale: string) => void;
+  languageLabel?: string;
+  searchLabel?: string;
 }) {
   const [enter, setEnter] = useState(false);
+  const [languageExpanded, setLanguageExpanded] = useState(false);
   const raf1Ref = useRef<number | null>(null);
   const raf2Ref = useRef<number | null>(null);
 
@@ -74,6 +89,23 @@ export default function MobileMenuView({
   }, [current, index, panelVisible]);
 
   const active = index === current && panelVisible;
+
+  useEffect(() => {
+    if (!active || !showUtilities) {
+      setLanguageExpanded(false);
+    }
+  }, [active, showUtilities]);
+
+  const languageListId = `mobile-language-list-${index}`;
+
+  const handleLanguageToggle = () => {
+    setLanguageExpanded((prev) => !prev);
+  };
+
+  const handleLanguageSelect = (code: string) => {
+    onUtilityLocaleSelect?.(code);
+    setLanguageExpanded(false);
+  };
 
   return (
     <div
@@ -168,6 +200,70 @@ export default function MobileMenuView({
             );
           })}
         </ul>
+
+        {showUtilities ? (
+          <div className="mt-4 border-t border-gray-200 pt-4 space-y-3">
+            <button
+              type="button"
+              onClick={() => onUtilitySearch?.()}
+              className="flex w-full items-center gap-3 rounded-md border border-transparent px-3 py-2 text-left text-base font-medium text-[#A70909] transition-colors hover:border-[#F5B5B5] hover:bg-[#FDEAEA]"
+            >
+              <FontAwesomeIcon icon={faSearch} className="h-4 w-4" />
+              <span>{searchLabel}</span>
+            </button>
+
+            <div>
+              <button
+                type="button"
+                onClick={(event) => {
+                  event.stopPropagation();
+                  handleLanguageToggle();
+                }}
+                aria-expanded={languageExpanded}
+                aria-controls={languageListId}
+                className="flex w-full items-center justify-between rounded-md border border-transparent px-3 py-2 text-left text-base font-medium text-[#A70909] transition-colors hover:border-[#F5B5B5] hover:bg-[#FDEAEA]"
+              >
+                <span className="flex items-center gap-3">
+                  <FontAwesomeIcon icon={faGlobe} className="h-4 w-4" />
+                  <span>{languageLabel}</span>
+                </span>
+                <span className="text-sm text-[#6B7280]">{currentLocale?.toUpperCase()}</span>
+              </button>
+
+              <div
+                id={languageListId}
+                role="listbox"
+                aria-hidden={languageExpanded ? undefined : true}
+                className={`mt-2 rounded-md border border-gray-200 bg-white transition-[max-height,opacity] duration-200 ease-out ${
+                  languageExpanded ? 'max-h-40 opacity-100' : 'max-h-0 opacity-0 overflow-hidden'
+                }`}
+              >
+                <ul className="max-h-40 overflow-auto pr-1">
+                  {languageLocales.map((code) => {
+                    const normalized = code.toLowerCase();
+                    const isActive = normalized === currentLocale?.toLowerCase();
+                    return (
+                      <li key={code}>
+                        <button
+                          type="button"
+                          role="option"
+                          aria-selected={isActive}
+                          onClick={() => handleLanguageSelect(code)}
+                          className={`flex w-full items-center justify-between px-4 py-2 text-sm transition-colors ${
+                            isActive ? 'bg-[#FDEAEA] text-[#A70909]' : 'text-[#2A2A2A] hover:bg-[#FDEAEA]'
+                          }`}
+                        >
+                          <span>{normalized.toUpperCase()}</span>
+                          {isActive ? <span className="h-2 w-2 rounded-full bg-[#A70909]" aria-hidden /> : <span className="h-2 w-2" aria-hidden />}
+                        </button>
+                      </li>
+                    );
+                  })}
+                </ul>
+              </div>
+            </div>
+          </div>
+        ) : null}
       </div>
     </div>
   );
