@@ -120,8 +120,8 @@ export default function Footer({ data }: { data: FooterData }) {
           'text-lg',
           'max-w-full',
           'whitespace-nowrap',
-          'max-[466px]:text-[clamp(17px,4.8vw,19px)]',
-          'max-[380px]:text-[clamp(16px,5.2vw,18px)]',
+          'max-[466px]:text-[clamp(15px,4.8vw,17px)]',
+          'max-[380px]:text-[clamp(14px,5.2vw,16px)]',
           'max-[340px]:whitespace-normal',
           'max-[340px]:[overflow-wrap:anywhere]',
         ].join(' ')}
