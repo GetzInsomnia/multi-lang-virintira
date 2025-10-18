@@ -121,7 +121,6 @@ export default function SearchToggle({
       <div
         className={[
           'fixed inset-x-0 z-40 pointer-events-none flex justify-center',
-          'max-[466px]:px-2 max-[466px]:pr-[calc(env(safe-area-inset-right)+0.5rem)]',
           'max-[340px]:px-2',
           'max-[340px]:pr-[calc(env(safe-area-inset-right)+0.5rem)]',
         ].join(' ')}
