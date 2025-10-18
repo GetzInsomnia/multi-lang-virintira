@@ -57,6 +57,7 @@ export default function MobileMenuView({
   const [languageExpanded, setLanguageExpanded] = useState(false);
   const raf1Ref = useRef<number | null>(null);
   const raf2Ref = useRef<number | null>(null);
+  const languageSectionRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
     const cancelQueuedFrames = () => {
@@ -95,6 +96,38 @@ export default function MobileMenuView({
       setLanguageExpanded(false);
     }
   }, [active, showUtilities]);
+
+  useEffect(() => {
+    if (!languageExpanded) return;
+
+    const handlePointerDown = (event: MouseEvent) => {
+      const target = event.target as Node | null;
+      if (languageSectionRef.current?.contains(target)) return;
+      setLanguageExpanded(false);
+    };
+
+    document.addEventListener('mousedown', handlePointerDown, true);
+
+    return () => {
+      document.removeEventListener('mousedown', handlePointerDown, true);
+    };
+  }, [languageExpanded]);
+
+  useEffect(() => {
+    if (!languageExpanded) return;
+
+    const handleKey = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') {
+        setLanguageExpanded(false);
+      }
+    };
+
+    window.addEventListener('keydown', handleKey);
+
+    return () => {
+      window.removeEventListener('keydown', handleKey);
+    };
+  }, [languageExpanded]);
 
   const languageListId = `mobile-language-list-${index}`;
 
@@ -213,37 +246,39 @@ export default function MobileMenuView({
             </button>
 
             <div>
-              <button
-                type="button"
-                onClick={(event) => {
-                  event.stopPropagation();
-                  handleLanguageToggle();
-                }}
-                aria-expanded={languageExpanded}
-                aria-controls={languageListId}
-                className="flex w-full items-center justify-between rounded-md border border-transparent px-3 py-2 text-left text-base font-medium text-[#A70909] transition-colors hover:border-[#F5B5B5] hover:bg-[#FDEAEA]"
-              >
-                <span className="flex items-center gap-3">
-                  <FontAwesomeIcon icon={faGlobe} className="h-4 w-4" />
-                  <span>{languageLabel}</span>
-                </span>
-                <span className="text-sm text-[#6B7280]">{currentLocale?.toUpperCase()}</span>
-              </button>
+              <div ref={languageSectionRef} className="relative">
+                <button
+                  type="button"
+                  onClick={(event) => {
+                    event.stopPropagation();
+                    handleLanguageToggle();
+                  }}
+                  aria-expanded={languageExpanded}
+                  aria-controls={languageListId}
+                  data-open={languageExpanded ? 'true' : 'false'}
+                  className="relative flex w-full items-center justify-between rounded-md border border-transparent px-3 py-2 text-left text-base font-medium text-[#A70909] transition-colors hover:border-[#F5B5B5] hover:bg-[#FDEAEA] before:absolute before:left-0 before:top-1 before:bottom-1 before:w-1 before:rounded-full before:bg-[#A70909] before:opacity-0 before:transition-opacity before:duration-150 data-[open=true]:before:opacity-100"
+                >
+                  <span className="flex items-center gap-3">
+                    <FontAwesomeIcon icon={faGlobe} className="h-4 w-4" />
+                    <span>{languageLabel}</span>
+                  </span>
+                  <span className="text-sm text-[#6B7280]">{currentLocale?.toUpperCase()}</span>
+                </button>
 
-              <div
-                id={languageListId}
-                role="listbox"
-                aria-hidden={languageExpanded ? undefined : true}
-                className={`mt-2 rounded-md border border-gray-200 bg-white transition-[max-height,opacity] duration-200 ease-out ${
-                  languageExpanded ? 'max-h-40 opacity-100' : 'max-h-0 opacity-0 overflow-hidden'
-                }`}
-              >
-                <ul className="max-h-40 overflow-auto pr-1">
-                  {languageLocales.map((code) => {
-                    const normalized = code.toLowerCase();
-                    const isActive = normalized === currentLocale?.toLowerCase();
-                    return (
-                      <li key={code}>
+                <div
+                  id={languageListId}
+                  role="listbox"
+                  aria-hidden={languageExpanded ? undefined : true}
+                  className={`mt-2 rounded-md border border-gray-200 bg-white transition-[max-height,opacity] duration-200 ease-out ${
+                    languageExpanded ? 'max-h-40 opacity-100' : 'max-h-0 opacity-0 overflow-hidden'
+                  }`}
+                >
+                  <ul className="max-h-40 overflow-auto pr-1 scrollbar-hide">
+                    {languageLocales.map((code) => {
+                      const normalized = code.toLowerCase();
+                      const isActive = normalized === currentLocale?.toLowerCase();
+                      return (
+                        <li key={code}>
                         <button
                           type="button"
                           role="option"
@@ -259,7 +294,8 @@ export default function MobileMenuView({
                       </li>
                     );
                   })}
-                </ul>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
