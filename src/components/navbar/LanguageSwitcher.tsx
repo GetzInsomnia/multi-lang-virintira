@@ -8,7 +8,7 @@ import { usePathname, useRouter } from '@/i18n/routing';
 import { normalizeInternalHref } from '@/lib/links';
 import type { Locale } from '@/i18n/config';
 
-const DEFAULT_LOCALES = [
+export const DEFAULT_LOCALES = [
   'th',
   'en',
   'fr',
@@ -32,6 +32,7 @@ type LanguageSwitcherProps = {
   onOpenChange: (open: boolean) => void;
   currentLocale: string;
   locales?: readonly string[];
+  compactHidden?: boolean;
 };
 
 export default function LanguageSwitcher({
@@ -39,6 +40,7 @@ export default function LanguageSwitcher({
   onOpenChange,
   currentLocale,
   locales = DEFAULT_LOCALES,
+  compactHidden = false,
 }: LanguageSwitcherProps) {
   const panelRef = useRef<HTMLDivElement | null>(null);
   const buttonRef = useRef<HTMLButtonElement | null>(null);
@@ -97,7 +99,11 @@ export default function LanguageSwitcher({
         aria-expanded={open}
         aria-controls="language-menu-panel"
         onClick={() => onOpenChange(!open)}
-        className="rounded-full p-2 text-[#A70909] transition-colors duration-150 hover:opacity-80"
+        className={`rounded-full p-2 text-[#A70909] transition-colors duration-150 hover:opacity-80${
+          compactHidden ? ' max-[340px]:opacity-0 max-[340px]:pointer-events-none' : ''
+        }`}
+        tabIndex={compactHidden ? -1 : undefined}
+        aria-hidden={compactHidden ? true : undefined}
       >
         <FontAwesomeIcon icon={faGlobe} className="h-5 w-5" />
       </button>
@@ -108,6 +114,8 @@ export default function LanguageSwitcher({
           pointer-events-none fixed right-50 top-[var(--header-height)] z-40
           w-auto max-w-[92vw] opacity-0 transition-opacity duration-150 ease-out
           max-[466px]:right-0
+          max-[340px]:right-0 max-[340px]:max-w-[min(92vw,calc(100vw-1rem))]
+          max-[340px]:pr-[env(safe-area-inset-right)]
           data-[open=true]:pointer-events-auto data-[open=true]:opacity-100
         "
         data-open={open ? 'true' : 'false'}
