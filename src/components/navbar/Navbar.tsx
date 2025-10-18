@@ -5,11 +5,11 @@ import Image from 'next/image';
 import { useLocale, useTranslations } from 'next-intl';
 import { useCallback, useEffect, useMemo, useRef, useState, type CSSProperties } from 'react';
 
-import { Link, usePathname } from '@/i18n/routing';
+import { Link, usePathname, useRouter } from '@/i18n/routing';
 import { normalizeInternalHref } from '@/lib/links';
 
 import HamburgerButton from './HamburgerButton';
-import LanguageSwitcher from './LanguageSwitcher';
+import LanguageSwitcher, { DEFAULT_LOCALES } from './LanguageSwitcher';
 import MegaMenu from './MegaMenu';
 import MobileMenu from './MobileMenu';
 import NavLink from './NavLink';
@@ -17,6 +17,7 @@ import SearchToggle from './SearchToggle';
 import SocialFloating from './SocialFloating';
 import type { MegaMenuColumn, NavItem, NavbarData } from './types';
 import type { MenuItem } from './MobileMenuView';
+import type { Locale } from '@/i18n/config';
 
 // Minimum spacing (in px) to keep between the desktop nav and surrounding controls.
 const SAFE_GAP_PX = 30;
@@ -70,13 +71,17 @@ export default function Navbar({ data }: NavbarProps) {
   const locale = useLocale();
   const t = useTranslations('layout.header');
   const pathname = usePathname() || '/';
-  const currentPath = useMemo(() => normalizeInternalHref(pathname), [pathname]);
+  const router = useRouter();
+  const normalizedPath = useMemo(() => normalizeInternalHref(pathname) || '/', [pathname]);
+  const currentPath = normalizedPath;
+  const basePath = normalizedPath;
 
   const [megaOpen, setMegaOpen] = useState(false);
   const [searchOpen, setSearchOpen] = useState(false);
   const [languageOpen, setLanguageOpen] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [forceMobile, setForceMobile] = useState(false);
+  const [compactActions, setCompactActions] = useState(false);
 
   const megaOpenTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
   const megaCloseTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
@@ -139,14 +144,22 @@ export default function Navbar({ data }: NavbarProps) {
       const actionsEl = actionsRef.current;
       if (!logoEl || !navEl || !actionsEl) return;
 
+      const logoRect = logoEl.getBoundingClientRect();
+      const actionsRect = actionsEl.getBoundingClientRect();
+      const clusterGap = actionsRect.left - logoRect.right;
+      const isUltraSmallViewport = window.innerWidth <= 340;
+      const shouldCompact = isUltraSmallViewport && clusterGap < 5;
+
+      setCompactActions((prev) => {
+        if (prev === shouldCompact) return prev;
+        return shouldCompact;
+      });
+
       const mobileQuery = window.matchMedia('(max-width: 767px)');
       if (mobileQuery.matches) {
         setForceMobile((prev) => (prev ? false : prev));
         return;
       }
-
-      const logoRect = logoEl.getBoundingClientRect();
-      const actionsRect = actionsEl.getBoundingClientRect();
 
       let leftGap: number;
       let rightGap: number;
@@ -297,19 +310,62 @@ export default function Navbar({ data }: NavbarProps) {
     setMegaOpen(false);
   };
 
-  const onSearchOpenChange = (open: boolean) => {
+  const onSearchOpenChange = useCallback((open: boolean) => {
     setSearchOpen(open);
-    if (open) { setLanguageOpen(false); setMegaOpen(false); }
-  };
+    if (open) {
+      setLanguageOpen(false);
+      setMegaOpen(false);
+    }
+  }, []);
 
-  const onLanguageOpenChange = (open: boolean) => {
+  const onLanguageOpenChange = useCallback((open: boolean) => {
     setLanguageOpen(open);
-    if (open) { setSearchOpen(false); setMegaOpen(false); }
-  };
+    if (open) {
+      setSearchOpen(false);
+      setMegaOpen(false);
+    }
+  }, []);
+
+  useEffect(() => {
+    if (!compactActions) return;
+    setSearchOpen(false);
+    setLanguageOpen(false);
+  }, [compactActions]);
 
   const mobileItems = useMemo(
     () => buildMobileItems(data.nav, data.megaMenu.columns, data.megaMenu.triggerLabel),
     [data.nav, data.megaMenu.columns, data.megaMenu.triggerLabel],
+  );
+
+  const languageCodes = useMemo(() => {
+    const unique = new Set(DEFAULT_LOCALES.map((code) => code.toLowerCase()));
+    unique.add(locale.toLowerCase());
+    return Array.from(unique);
+  }, [locale]);
+
+  const handleDrawerSearch = useCallback(() => {
+    setMobileOpen(false);
+    requestAnimationFrame(() => {
+      onSearchOpenChange(true);
+    });
+  }, [onSearchOpenChange]);
+
+  const handleDrawerLocaleSelect = useCallback(
+    (targetLocale: string) => {
+      const normalizedLocale = targetLocale.toLowerCase();
+
+      setLanguageOpen(false);
+      setSearchOpen(false);
+
+      if (normalizedLocale === locale.toLowerCase()) {
+        setMobileOpen(false);
+        return;
+      }
+
+      router.push(basePath, { locale: normalizedLocale as Locale });
+      setMobileOpen(false);
+    },
+    [router, basePath, locale],
   );
 
   return (
@@ -389,11 +445,13 @@ export default function Navbar({ data }: NavbarProps) {
               onOpenChange={onSearchOpenChange}
               placeholder={t('search.placeholder')}
               submitLabel={t('search.submitLabel')}
+              compactHidden={compactActions}
             />
             <LanguageSwitcher
               open={languageOpen}
               onOpenChange={onLanguageOpenChange}
               currentLocale={locale}
+              compactHidden={compactActions}
             />
             {/* Surface the hamburger on desktop only when space is constrained (no breakpoint changes). */}
             <div className={forceMobile ? 'md:block' : 'md:hidden'}>
@@ -422,6 +480,13 @@ export default function Navbar({ data }: NavbarProps) {
         openerRef={openerRef}
         rootTitle="ViRINTIRA"
         items={mobileItems}
+        compactActions={compactActions}
+        onRequestSearch={handleDrawerSearch}
+        languageLocales={languageCodes}
+        currentLocale={locale}
+        onSelectLocale={handleDrawerLocaleSelect}
+        languageLabel="Language"
+        searchLabel={t('search.submitLabel')}
       />
     </header>
   );

@@ -21,6 +21,13 @@ interface MobileMenuProps {
   openerRef?: React.RefObject<HTMLElement>;
   rootTitle?: string;
   items: MenuItem[];
+  compactActions?: boolean;
+  onRequestSearch?: () => void;
+  languageLocales?: readonly string[];
+  currentLocale?: string;
+  onSelectLocale?: (locale: string) => void;
+  languageLabel?: string;
+  searchLabel?: string;
 }
 
 export default function MobileMenu({
@@ -29,6 +36,13 @@ export default function MobileMenu({
   openerRef,
   rootTitle = 'ViRINTIRA',
   items,
+  compactActions = false,
+  onRequestSearch,
+  languageLocales,
+  currentLocale,
+  onSelectLocale,
+  languageLabel,
+  searchLabel,
 }: MobileMenuProps) {
   const [mounted, setMounted] = useState(false);
   const [show, setShow] = useState(false);
@@ -174,6 +188,13 @@ export default function MobileMenu({
               onBack={index > 0 ? handleBack : undefined}
               onSelectSubMenu={handleSelectSubMenu}
               onClose={onClose}
+              showUtilities={compactActions && index === 0}
+              onUtilitySearch={onRequestSearch}
+              languageLocales={languageLocales}
+              currentLocale={currentLocale}
+              onUtilityLocaleSelect={onSelectLocale}
+              languageLabel={languageLabel}
+              searchLabel={searchLabel}
             />
           ))}
         </div>
