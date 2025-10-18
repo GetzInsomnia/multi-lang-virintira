@@ -165,3 +165,13 @@ html[dir='rtl'] h3 {
 }
 
 /* Removed legacy navbar rules in favour of Tailwind utilities. */
+
+@layer utilities {
+  .drawer-language-scroll {
+    scrollbar-width: none;
+  }
+
+  .drawer-language-scroll::-webkit-scrollbar {
+    display: none;
+  }
+}

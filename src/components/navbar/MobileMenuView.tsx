@@ -256,8 +256,9 @@ export default function MobileMenuView({
                   aria-expanded={languageExpanded}
                   aria-controls={languageListId}
                   data-open={languageExpanded ? 'true' : 'false'}
-                  className="relative flex w-full items-center justify-between rounded-md border border-transparent px-3 py-2 text-left text-base font-medium text-[#A70909] transition-colors hover:border-[#F5B5B5] hover:bg-[#FDEAEA] before:absolute before:left-0 before:top-1 before:bottom-1 before:w-1 before:rounded-full before:bg-[#A70909] before:opacity-0 before:transition-opacity before:duration-150 data-[open=true]:before:opacity-100"
+                  className="relative flex w-full items-center justify-between rounded-md border border-transparent px-3 py-2 text-left text-base font-medium text-[#A70909] transition-colors hover:border-[#F5B5B5] hover:bg-[#FDEAEA]"
                 >
+                  {/* Red stripe pseudo-element removed to keep compact styling consistent. */}
                   <span className="flex items-center gap-3">
                     <FontAwesomeIcon icon={faGlobe} className="h-4 w-4" />
                     <span>{languageLabel}</span>
@@ -273,7 +274,7 @@ export default function MobileMenuView({
                     languageExpanded ? 'max-h-40 opacity-100' : 'max-h-0 opacity-0 overflow-hidden'
                   }`}
                 >
-                  <ul className="max-h-40 overflow-auto pr-1 scrollbar-hide">
+                  <ul className="drawer-language-scroll max-h-40 overflow-auto pr-1">
                     {languageLocales.map((code) => {
                       const normalized = code.toLowerCase();
                       const isActive = normalized === currentLocale?.toLowerCase();
