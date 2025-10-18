@@ -95,6 +95,8 @@ export default function Navbar({ data }: NavbarProps) {
   const navWidthRef = useRef(0);
   const measureRaf = useRef<number | null>(null);
   const resizeRaf = useRef<number | null>(null);
+  const deferredSearchRaf = useRef<number | null>(null);
+  const deferredSearchTimeout = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   const megaColumns = data.megaMenu.columns;
   const hasMegaMenu = megaColumns.length > 0;
@@ -128,6 +130,19 @@ export default function Navbar({ data }: NavbarProps) {
     };
   }, []);
 
+  useEffect(() => {
+    return () => {
+      if (deferredSearchRaf.current !== null) {
+        cancelAnimationFrame(deferredSearchRaf.current);
+        deferredSearchRaf.current = null;
+      }
+      if (deferredSearchTimeout.current !== null) {
+        clearTimeout(deferredSearchTimeout.current);
+        deferredSearchTimeout.current = null;
+      }
+    };
+  }, []);
+
   const measureHeaderSpace = useCallback(() => {
     // Measure layout on the next animation frame to avoid layout thrashing.
     if (typeof window === 'undefined') return;
@@ -147,8 +162,9 @@ export default function Navbar({ data }: NavbarProps) {
       const logoRect = logoEl.getBoundingClientRect();
       const actionsRect = actionsEl.getBoundingClientRect();
       const clusterGap = actionsRect.left - logoRect.right;
-      const isUltraSmallViewport = window.innerWidth <= 340;
-      const shouldCompact = isUltraSmallViewport && clusterGap < 5;
+      const safeClusterGap = Math.max(0, clusterGap);
+      const isUltraSmallViewport = window.innerWidth < 350;
+      const shouldCompact = isUltraSmallViewport && safeClusterGap < 20;
 
       setCompactActions((prev) => {
         if (prev === shouldCompact) return prev;
@@ -345,8 +361,21 @@ export default function Navbar({ data }: NavbarProps) {
 
   const handleDrawerSearch = useCallback(() => {
     setMobileOpen(false);
-    requestAnimationFrame(() => {
-      onSearchOpenChange(true);
+
+    if (deferredSearchRaf.current !== null) {
+      cancelAnimationFrame(deferredSearchRaf.current);
+      deferredSearchRaf.current = null;
+    }
+    if (deferredSearchTimeout.current !== null) {
+      clearTimeout(deferredSearchTimeout.current);
+      deferredSearchTimeout.current = null;
+    }
+
+    deferredSearchRaf.current = requestAnimationFrame(() => {
+      deferredSearchTimeout.current = setTimeout(() => {
+        deferredSearchTimeout.current = null;
+        onSearchOpenChange(true);
+      }, 24);
     });
   }, [onSearchOpenChange]);
 
