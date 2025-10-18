@@ -476,12 +476,14 @@ export default function Navbar({ data }: NavbarProps) {
               submitLabel={t('search.submitLabel')}
               compactHidden={compactActions}
             />
-            <LanguageSwitcher
-              open={languageOpen}
-              onOpenChange={onLanguageOpenChange}
-              currentLocale={locale}
-              compactHidden={compactActions}
-            />
+            {/* Let compactActions fully control whether the header language trigger appears. */}
+            {!compactActions ? (
+              <LanguageSwitcher
+                open={languageOpen}
+                onOpenChange={onLanguageOpenChange}
+                currentLocale={locale}
+              />
+            ) : null}
             {/* Surface the hamburger on desktop only when space is constrained (no breakpoint changes). */}
             <div className={forceMobile ? 'md:block' : 'md:hidden'}>
               {/* กัน bubble คลิกแรกไม่ให้กลายเป็น outside-click */}
