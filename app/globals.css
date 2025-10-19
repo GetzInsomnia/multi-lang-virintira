@@ -174,4 +174,15 @@ html[dir='rtl'] h3 {
   .drawer-language-scroll::-webkit-scrollbar {
     display: none;
   }
+
+  .drawer-utilities [data-drawer-active='true']::before {
+    position: absolute;
+    inset-inline-start: 0;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    border-radius: 9999px;
+    background: #a70909;
+    content: '';
+  }
 }

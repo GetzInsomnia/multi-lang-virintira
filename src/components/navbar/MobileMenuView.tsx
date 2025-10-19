@@ -55,6 +55,7 @@ export default function MobileMenuView({
 }) {
   const [enter, setEnter] = useState(false);
   const [languageExpanded, setLanguageExpanded] = useState(false);
+  const [searchActivated, setSearchActivated] = useState(false);
   const raf1Ref = useRef<number | null>(null);
   const raf2Ref = useRef<number | null>(null);
   const languageSectionRef = useRef<HTMLDivElement | null>(null);
@@ -94,6 +95,7 @@ export default function MobileMenuView({
   useEffect(() => {
     if (!active || !showUtilities) {
       setLanguageExpanded(false);
+      setSearchActivated(false);
     }
   }, [active, showUtilities]);
 
@@ -235,11 +237,15 @@ export default function MobileMenuView({
         </ul>
 
         {showUtilities ? (
-          <div className="mt-4 border-t border-gray-200 pt-4 space-y-3">
+          <div className="drawer-utilities mt-4 border-t border-gray-200 pt-4 space-y-3">
             <button
               type="button"
-              onClick={() => onUtilitySearch?.()}
-              className="flex w-full items-center gap-3 rounded-md border border-transparent px-3 py-2 text-left text-base font-medium text-[#A70909] transition-colors hover:border-[#F5B5B5] hover:bg-[#FDEAEA]"
+              onClick={() => {
+                setSearchActivated(true);
+                onUtilitySearch?.();
+              }}
+              data-drawer-active={searchActivated ? 'true' : undefined}
+              className="relative flex w-full items-center gap-3 rounded-md border border-transparent px-3 py-2 text-left text-base font-medium text-[#A70909] transition-colors hover:border-[#F5B5B5] hover:bg-[#FDEAEA]"
             >
               <FontAwesomeIcon icon={faSearch} className="h-4 w-4" />
               <span>{searchLabel}</span>
@@ -256,6 +262,7 @@ export default function MobileMenuView({
                   aria-expanded={languageExpanded}
                   aria-controls={languageListId}
                   data-open={languageExpanded ? 'true' : 'false'}
+                  data-drawer-active={languageExpanded ? 'true' : undefined}
                   className="relative flex w-full items-center justify-between rounded-md border border-transparent px-3 py-2 text-left text-base font-medium text-[#A70909] transition-colors hover:border-[#F5B5B5] hover:bg-[#FDEAEA]"
                 >
                   {/* Red stripe pseudo-element removed to keep compact styling consistent. */}
