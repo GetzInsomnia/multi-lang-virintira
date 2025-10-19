@@ -117,7 +117,7 @@ export default function LanguageSwitcher({
         className="
           pointer-events-none fixed right-50 top-[var(--header-height)] z-40
           w-auto max-w-[92vw] opacity-0 transition-opacity duration-150 ease-out
-          max-[466px]:right-[calc(env(safe-area-inset-right)+0.5rem)]
+          max-[466px]:right-[calc(env(safe-area-inset-right)+1.5rem)]
           max-[466px]:max-w-[min(92vw,calc(100vw-1rem-env(safe-area-inset-right)))]
           max-[340px]:right-0 max-[340px]:max-w-[min(92vw,calc(100vw-1rem))]
           max-[340px]:pr-[env(safe-area-inset-right)]
