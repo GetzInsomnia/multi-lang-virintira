@@ -62,6 +62,7 @@ export default function MobileMenuView({
   const panelRef = useRef<HTMLDivElement | null>(null);
   const searchButtonRef = useRef<HTMLButtonElement | null>(null);
   const languageSectionRef = useRef<HTMLDivElement | null>(null);
+  const utilitiesWrapperRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
     const cancelQueuedFrames = () => {
@@ -115,6 +116,11 @@ export default function MobileMenuView({
     focusNeutralizerRef.current = requestAnimationFrame(() => {
       focusNeutralizerRef.current = null;
       if (searchButtonRef.current !== document.activeElement) {
+        return;
+      }
+
+      if (utilitiesWrapperRef.current) {
+        utilitiesWrapperRef.current.focus();
         return;
       }
 
@@ -273,7 +279,11 @@ export default function MobileMenuView({
         </ul>
 
         {showUtilities ? (
-          <div className="drawer-utilities mt-4 border-t border-gray-200 pt-4 space-y-3">
+          <div
+            ref={utilitiesWrapperRef}
+            tabIndex={-1}
+            className="drawer-utilities mt-4 border-t border-gray-200 pt-4 space-y-3 focus:outline-none"
+          >
             <button
               type="button"
               onClick={() => {
@@ -281,6 +291,7 @@ export default function MobileMenuView({
                 onUtilitySearch?.();
               }}
               data-drawer-active={searchActivated ? 'true' : undefined}
+              aria-pressed={searchActivated}
               className="relative flex w-full items-center gap-3 rounded-md border border-transparent px-3 py-2 text-left text-base font-medium text-[#A70909] transition-colors hover:border-[#F5B5B5] hover:bg-[#FDEAEA]"
               ref={searchButtonRef}
             >
