@@ -58,6 +58,9 @@ export default function MobileMenuView({
   const [searchActivated, setSearchActivated] = useState(false);
   const raf1Ref = useRef<number | null>(null);
   const raf2Ref = useRef<number | null>(null);
+  const focusNeutralizerRef = useRef<number | null>(null);
+  const panelRef = useRef<HTMLDivElement | null>(null);
+  const searchButtonRef = useRef<HTMLButtonElement | null>(null);
   const languageSectionRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
@@ -98,6 +101,38 @@ export default function MobileMenuView({
       setSearchActivated(false);
     }
   }, [active, showUtilities]);
+
+  useEffect(() => {
+    if (focusNeutralizerRef.current !== null) {
+      cancelAnimationFrame(focusNeutralizerRef.current);
+      focusNeutralizerRef.current = null;
+    }
+
+    if (!active || !showUtilities || searchActivated) {
+      return undefined;
+    }
+
+    focusNeutralizerRef.current = requestAnimationFrame(() => {
+      focusNeutralizerRef.current = null;
+      if (searchButtonRef.current !== document.activeElement) {
+        return;
+      }
+
+      if (panelRef.current) {
+        panelRef.current.focus();
+        return;
+      }
+
+      searchButtonRef.current?.blur();
+    });
+
+    return () => {
+      if (focusNeutralizerRef.current !== null) {
+        cancelAnimationFrame(focusNeutralizerRef.current);
+        focusNeutralizerRef.current = null;
+      }
+    };
+  }, [active, showUtilities, searchActivated]);
 
   useEffect(() => {
     if (!languageExpanded) return;
@@ -155,6 +190,7 @@ export default function MobileMenuView({
       ].join(' ')}
       aria-hidden={!active}
       tabIndex={active ? 0 : -1}
+      ref={panelRef}
     >
       <div className="bg-white w-full h-full p-6">
         {/* Header */}
@@ -246,6 +282,7 @@ export default function MobileMenuView({
               }}
               data-drawer-active={searchActivated ? 'true' : undefined}
               className="relative flex w-full items-center gap-3 rounded-md border border-transparent px-3 py-2 text-left text-base font-medium text-[#A70909] transition-colors hover:border-[#F5B5B5] hover:bg-[#FDEAEA]"
+              ref={searchButtonRef}
             >
               <FontAwesomeIcon icon={faSearch} className="h-4 w-4" />
               <span>{searchLabel}</span>
