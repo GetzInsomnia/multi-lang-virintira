@@ -176,8 +176,8 @@ html[dir='rtl'] h3 {
   }
 
   .drawer-utilities [data-drawer-active='true'] {
-    border-color: #f5b5b5;
-    border-width: 2px;
+    border-color: #a70909;
+    border-width: 1px;
     background-color: #ffffff;
     color: #a70909;
   }
