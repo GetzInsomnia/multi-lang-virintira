@@ -175,14 +175,8 @@ html[dir='rtl'] h3 {
     display: none;
   }
 
-  .drawer-utilities [data-drawer-active='true']::before {
-    position: absolute;
-    inset-inline-start: 0;
-    top: 0;
-    bottom: 0;
-    width: 3px;
-    border-radius: 9999px;
-    background: #a70909;
-    content: '';
+  .drawer-utilities [data-drawer-active='true'] {
+    outline: auto;
+    outline-offset: 2px;
   }
 }
