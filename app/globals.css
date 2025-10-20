@@ -176,7 +176,13 @@ html[dir='rtl'] h3 {
   }
 
   .drawer-utilities [data-drawer-active='true'] {
-    outline: auto;
+    border-color: #f5b5b5;
+    background-color: #fdeaea;
+    color: #a70909;
+  }
+
+  .drawer-utilities [data-drawer-active='true']:focus-visible {
+    outline: 2px solid #a70909;
     outline-offset: 2px;
   }
 }
