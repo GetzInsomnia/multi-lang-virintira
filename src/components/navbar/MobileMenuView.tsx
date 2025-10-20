@@ -109,27 +109,27 @@ export default function MobileMenuView({
       focusNeutralizerRef.current = null;
     }
 
-    if (!active || !showUtilities || searchActivated) {
+    const isActive = index === current && panelVisible;
+    if (!isActive || !showUtilities || searchActivated) {
       return undefined;
     }
 
     focusNeutralizerRef.current = requestAnimationFrame(() => {
       focusNeutralizerRef.current = null;
-      if (searchButtonRef.current !== document.activeElement) {
-        return;
-      }
 
       if (utilitiesWrapperRef.current) {
-        utilitiesWrapperRef.current.focus();
+        utilitiesWrapperRef.current.focus({ preventScroll: true });
         return;
       }
 
       if (panelRef.current) {
-        panelRef.current.focus();
+        panelRef.current.focus({ preventScroll: true });
         return;
       }
 
-      searchButtonRef.current?.blur();
+      if (searchButtonRef.current === document.activeElement) {
+        searchButtonRef.current.blur();
+      }
     });
 
     return () => {
@@ -138,7 +138,7 @@ export default function MobileMenuView({
         focusNeutralizerRef.current = null;
       }
     };
-  }, [active, showUtilities, searchActivated]);
+  }, [index, current, panelVisible, showUtilities, searchActivated]);
 
   useEffect(() => {
     if (!languageExpanded) return;
