@@ -44,6 +44,20 @@ const TEXT_EXT = new Set([
   '.svg',
   '.gitignore',
   '.gitattributes',
+  '.lock',
+  '.log',
+  '.tsconfig',
+  '.babelrc',
+  '.prettierrc',
+  '.prettierignore',
+  '.eslintrc',
+  '.eslintignore',
+  '.stylelintrc',
+  '.npmrc',
+  '.npmignore',
+  '.editorconfig',
+  '.dockerignore',
+  '.dockerfile',
 ]);
 
 const FENCE = {
@@ -70,6 +84,20 @@ const FENCE = {
   '.env': 'ini',
   '.env.local': 'ini',
   '.txt': '',
+  '.lock': '',
+  '.log': '',
+  '.tsconfig': 'json',
+  '.babelrc': 'json',
+  '.prettierrc': 'json',
+  '.prettierignore': '',
+  '.eslintrc': 'json',
+  '.eslintignore': '',
+  '.stylelintrc': 'json',
+  '.npmrc': 'ini',
+  '.npmignore': '',
+  '.editorconfig': 'ini',
+  '.dockerignore': '',
+  '.dockerfile': 'dockerfile',
 };
 
 function parseArgs() {
@@ -82,7 +110,7 @@ function parseArgs() {
 
   const out = get('--out', 'reports'); // dir or single .md
   const single = has('--single') || (out && out.toLowerCase().endsWith('.md'));
-  return {
+  const opts = {
     root: path.resolve(get('--root', projectRoot)),
     out,
     single,
@@ -94,6 +122,17 @@ function parseArgs() {
     includeAll: has('--include-all'), // disable default ignores
     maxBytes: Number(get('--max-bytes', '0')) || 0, // 0 = no limit
   };
+
+  if (has('--everything')) {
+    opts.includeDotfiles = true;
+    opts.includeBinaries = true;
+    opts.b64Binaries = true;
+    opts.includeEnv = true;
+    opts.includeAll = true;
+    opts.maxBytes = 0;
+  }
+
+  return opts;
 }
 
 async function walk(dir, opts, bag = []) {
@@ -125,11 +164,36 @@ function isEnvPath(p) {
   return b === '.env' || b.startsWith('.env.');
 }
 
-function isTextLike(file) {
+async function isTextLike(file) {
   const ext = path.extname(file).toLowerCase();
   if (TEXT_EXT.has(ext)) return true;
-  // treat unknown as text if size small (heuristic) — real binary handled later
-  return false;
+
+  let fd;
+  try {
+    fd = await fs.open(file, 'r');
+    const buf = Buffer.alloc(4096);
+    const { bytesRead } = await fd.read(buf, 0, buf.length, 0);
+    await fd.close();
+    const slice = buf.subarray(0, bytesRead);
+    if (slice.length === 0) return true;
+    if (slice.includes(0)) return false;
+
+    const text = slice.toString('utf8');
+    if (text.includes('\uFFFD')) return false;
+
+    const roundTrip = Buffer.from(text, 'utf8');
+    const maxLen = Math.max(roundTrip.length, slice.length) || 1;
+    let diff = Math.abs(roundTrip.length - slice.length);
+    const minLen = Math.min(roundTrip.length, slice.length);
+    for (let i = 0; i < minLen; i++) {
+      if (roundTrip[i] !== slice[i]) diff++;
+    }
+    const ratio = diff / maxLen;
+    return ratio <= 0.1;
+  } catch {
+    if (fd) await fd.close().catch(() => {});
+    return false;
+  }
 }
 
 // crude binary detection by scanning null bytes in first chunk
@@ -214,7 +278,7 @@ async function buildDump(opts) {
 
     const r = rel(abs);
     const ext = path.extname(abs).toLowerCase();
-    const textLike = isTextLike(abs);
+    const textLike = await isTextLike(abs);
     const envFile = isEnvPath(abs);
 
     let includeContent = true;
@@ -237,7 +301,7 @@ async function buildDump(opts) {
 
     let header = `### ${r}\n_Size:_ ${stat.size} bytes\n`;
     if (!includeContent) {
-      sections.push(`${header}${reason}\n`);
+      sections.push(`${header}${reason}\n---\n`);
     } else {
       let contentBuf = await fs.readFile(abs);
       if (opts.maxBytes > 0 && contentBuf.length > opts.maxBytes) {
@@ -248,16 +312,16 @@ async function buildDump(opts) {
       if (binary && opts.includeBinaries) {
         if (opts.b64Binaries) {
           const b64 = contentBuf.toString('base64');
-          sections.push(`${header}_Encoding:_ base64\n\`\`\`\n${b64}\n\`\`\`\n`);
+          sections.push(`${header}_Encoding:_ base64\n\`\`\`\n${b64}\n\`\`\`\n${reason}\n---\n`);
         } else {
           sections.push(
-            `${header}_Binary file included as raw bytes preview disabled._\n`,
+            `${header}_Binary file included as raw bytes preview disabled._\n${reason}\n---\n`,
           );
         }
       } else {
         const fence = codeFenceFor(abs);
         const text = mdEscape(contentBuf.toString('utf8'));
-        sections.push(`${header}\`\`\`${fence}\n${text}\n\`\`\`\n${reason}\n`);
+        sections.push(`${header}\`\`\`${fence}\n${text}\n\`\`\`\n${reason}\n---\n`);
       }
     }
 
@@ -286,19 +350,17 @@ async function writeOutputs(opts) {
   if (opts.single) {
     const outFile = path.isAbsolute(opts.out) ? opts.out : path.join(opts.root, opts.out);
     await ensureDir(path.dirname(outFile));
-    const single = `# REPOSITORY DUMP
-_Generated: ${nowIso()}_
-
-## 1) Tree
-${treeMd}
-
-## 2) Inventory
-${inventoryMd}
-
-## 3) Files (full contents)
-${sections.join('\n')}
-`;
-    await fs.writeFile(outFile, single, 'utf8');
+    const header = `# REPOSITORY DUMP\n_Generated: ${nowIso()}_\n\n## 1) Tree\n${treeMd}\n\n## 2) Inventory\n${inventoryMd}\n\n## 3) Files (full contents)\n`;
+    const handle = await fs.open(outFile, 'w');
+    try {
+      await handle.writeFile(header, 'utf8');
+      for (const section of sections) {
+        const chunk = section.endsWith('\n') ? section : `${section}\n`;
+        await handle.writeFile(chunk, 'utf8');
+      }
+    } finally {
+      await handle.close();
+    }
     console.log(`✔ Single dump -> ${rel(outFile)}`);
     return;
   }
@@ -307,11 +369,22 @@ ${sections.join('\n')}
   const outDir = path.isAbsolute(opts.out) ? opts.out : path.join(opts.root, opts.out);
   await ensureDir(outDir);
   await fs.writeFile(path.join(outDir, 'REPO-TREE.md'), treeMd + '\n', 'utf8');
-  await fs.writeFile(
-    path.join(outDir, 'ALL_FILES.md'),
-    `# ALL FILES (Full contents)\n_Generated: ${nowIso()}_\n\n${sections.join('\n')}`,
-    'utf8',
-  );
+  {
+    const allFile = path.join(outDir, 'ALL_FILES.md');
+    const handle = await fs.open(allFile, 'w');
+    try {
+      await handle.writeFile(
+        `# ALL FILES (Full contents)\n_Generated: ${nowIso()}_\n\n`,
+        'utf8',
+      );
+      for (const section of sections) {
+        const chunk = section.endsWith('\n') ? section : `${section}\n`;
+        await handle.writeFile(chunk, 'utf8');
+      }
+    } finally {
+      await handle.close();
+    }
+  }
   await fs.writeFile(path.join(outDir, 'INVENTORY.md'), inventoryMd, 'utf8');
 
   if (opts.split) {
