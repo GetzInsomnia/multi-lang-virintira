@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useLayoutEffect, useRef, useState } from 'react';
 import { FaChevronLeft } from 'react-icons/fa';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faXmark, faSearch, faGlobe } from '@fortawesome/free-solid-svg-icons';
@@ -103,7 +103,7 @@ export default function MobileMenuView({
     }
   }, [active, showUtilities]);
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     if (focusNeutralizerRef.current !== null) {
       cancelAnimationFrame(focusNeutralizerRef.current);
       focusNeutralizerRef.current = null;
@@ -117,6 +117,10 @@ export default function MobileMenuView({
     focusNeutralizerRef.current = requestAnimationFrame(() => {
       focusNeutralizerRef.current = null;
 
+      if (document.activeElement !== searchButtonRef.current) {
+        return;
+      }
+
       if (utilitiesWrapperRef.current) {
         utilitiesWrapperRef.current.focus({ preventScroll: true });
         return;
@@ -127,9 +131,7 @@ export default function MobileMenuView({
         return;
       }
 
-      if (searchButtonRef.current === document.activeElement) {
-        searchButtonRef.current.blur();
-      }
+      searchButtonRef.current?.blur();
     });
 
     return () => {
