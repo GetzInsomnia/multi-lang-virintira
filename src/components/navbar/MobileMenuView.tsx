@@ -61,6 +61,7 @@ export default function MobileMenuView({
   const focusNeutralizerRef = useRef<number | null>(null);
   const panelRef = useRef<HTMLDivElement | null>(null);
   const searchButtonRef = useRef<HTMLButtonElement | null>(null);
+  const closeButtonRef = useRef<HTMLButtonElement | null>(null);
   const languageSectionRef = useRef<HTMLDivElement | null>(null);
   const utilitiesWrapperRef = useRef<HTMLDivElement | null>(null);
 
@@ -97,6 +98,11 @@ export default function MobileMenuView({
   const active = index === current && panelVisible;
 
   useEffect(() => {
+    if (!active) return;
+    closeButtonRef.current?.focus({ preventScroll: true });
+  }, [active]);
+
+  useEffect(() => {
     if (!active || !showUtilities) {
       setLanguageExpanded(false);
       setSearchActivated(false);
@@ -122,7 +128,9 @@ export default function MobileMenuView({
           searchButtonRef.current &&
           document.activeElement === searchButtonRef.current
         ) {
-          if (utilitiesWrapperRef.current) {
+          if (closeButtonRef.current) {
+            closeButtonRef.current.focus({ preventScroll: true });
+          } else if (utilitiesWrapperRef.current) {
             utilitiesWrapperRef.current.focus({ preventScroll: true });
           } else if (panelRef.current) {
             panelRef.current.focus({ preventScroll: true });
@@ -224,6 +232,7 @@ export default function MobileMenuView({
             onClick={onClose}
             aria-label="Close Menu"
             className="text-[#A70909] text-xl hover:opacity-80 transition"
+            ref={closeButtonRef}
           >
             <FontAwesomeIcon icon={faXmark} />
           </button>
