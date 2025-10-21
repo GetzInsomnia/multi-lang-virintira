@@ -114,25 +114,26 @@ export default function MobileMenuView({
       return undefined;
     }
 
-    focusNeutralizerRef.current = requestAnimationFrame(() => {
-      focusNeutralizerRef.current = null;
+    const raf1 = requestAnimationFrame(() => {
+      const raf2 = requestAnimationFrame(() => {
+        focusNeutralizerRef.current = null;
 
-      if (document.activeElement !== searchButtonRef.current) {
-        return;
-      }
-
-      if (utilitiesWrapperRef.current) {
-        utilitiesWrapperRef.current.focus({ preventScroll: true });
-        return;
-      }
-
-      if (panelRef.current) {
-        panelRef.current.focus({ preventScroll: true });
-        return;
-      }
-
-      searchButtonRef.current?.blur();
+        if (
+          searchButtonRef.current &&
+          document.activeElement === searchButtonRef.current
+        ) {
+          if (utilitiesWrapperRef.current) {
+            utilitiesWrapperRef.current.focus({ preventScroll: true });
+          } else if (panelRef.current) {
+            panelRef.current.focus({ preventScroll: true });
+          } else {
+            searchButtonRef.current.blur();
+          }
+        }
+      });
+      focusNeutralizerRef.current = raf2;
     });
+    focusNeutralizerRef.current = raf1;
 
     return () => {
       if (focusNeutralizerRef.current !== null) {
