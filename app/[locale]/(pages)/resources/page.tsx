@@ -89,6 +89,9 @@ export default async function ResourcesPage({ params }: PageParams) {
     },
   };
 
+  const phoneDisplay =
+    locale === 'th' ? COMPANY.phoneDisplayTh : COMPANY.phoneDisplayEn;
+
   const breadcrumbJsonLd = buildBreadcrumbJsonLd([
     { name: tBreadcrumbs("home"), path: `/${locale}` },
     { name: tBreadcrumbs("resources"), path: `/${locale}/resources` },
@@ -142,7 +145,7 @@ export default async function ResourcesPage({ params }: PageParams) {
             <p className="mx-auto max-w-3xl text-[clamp(0.95rem,0.9rem+0.3vw,1.1rem)] text-gray-700">{contact.description}</p>
             <div className="flex flex-col gap-3 text-sm font-semibold text-[#A70909] sm:flex-row sm:justify-center">
               <a href={`tel:${COMPANY.phone}`} className="hover:text-[#C9341F]">
-                {contact.channels.phone.replace('{phone}', COMPANY.phoneDisplay)}
+                {contact.channels.phone.replace('{phone}', phoneDisplay)}
               </a>
               <span className="hidden sm:inline">•</span>
               <a href={COMPANY.socials.line} target="_blank" rel="noopener noreferrer" className="hover:text-[#C9341F]">

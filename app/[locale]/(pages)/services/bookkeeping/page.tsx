@@ -194,6 +194,9 @@ export default async function BookkeepingServicePage({ params }: PageParams) {
     path: `/${locale}/services/bookkeeping`,
   });
 
+  const phoneDisplay =
+    locale === 'th' ? COMPANY.phoneDisplayTh : COMPANY.phoneDisplayEn;
+
   return (
     <div className="space-y-24 pb-32">
       <JsonLd id="jsonld-bookkeeping-page" data={webPageJsonLd} />
@@ -242,7 +245,7 @@ export default async function BookkeepingServicePage({ params }: PageParams) {
                     href={`tel:${COMPANY.phone}`}
                     className="inline-flex min-w-[220px] items-center justify-center rounded-full border-2 border-[#A70909] bg-white/90 px-7 py-3 text-sm font-semibold text-[#A70909] transition hover:-translate-y-0.5 hover:bg-[#A70909] hover:text-white"
                   >
-                    {hero.ctaCall.replace('{phone}', COMPANY.phoneDisplay)}
+                    {hero.ctaCall.replace('{phone}', phoneDisplay)}
                   </a>
                 )}
                 {hero.ctaLine && (

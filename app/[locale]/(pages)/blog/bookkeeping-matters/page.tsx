@@ -110,7 +110,9 @@ export default async function BookkeepingMattersPage({ params }: PageParams) {
     items: tipItems,
   };
   const hasTips = tips.heading.length > 0 || tips.items.length > 0;
-  const callLabel = tLayout('cta.call', { phone: COMPANY.phoneDisplay });
+  const phoneDisplay =
+    locale === 'th' ? COMPANY.phoneDisplayTh : COMPANY.phoneDisplayEn;
+  const callLabel = tLayout('cta.call', { phone: phoneDisplay });
   const chatLabel = tLayout('cta.chat');
 
   const breadcrumbJsonLd = buildBreadcrumbJsonLd([
