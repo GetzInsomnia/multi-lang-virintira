@@ -1,56 +1,102 @@
-import { COMPANY } from '@/data/company';
+'use client';
 
-import { TypewriterText } from '@/components/common/TypewriterText';
+import { COMPANY } from '@/data/company';
+import { motion } from 'framer-motion';
+import { TypewriterText } from '@/components/common/TypewriterText'; // ← ใช้เวอร์ชันที่คุณเพิ่งปรับให้เหมือน legacy (พิมพ์เดินหน้า, font-normal)
 
 export type HeroContent = {
   title: string;
   subtitle: string;
   description: string;
   primary: string;
-  typewriter: string[];
+  typewriter: string[]; // จะใช้เฉพาะตัวแรกให้เป็นข้อความเดี่ยวเหมือน legacy
   emailHeading: string;
   emailButton: string;
 };
 
 export function HeroSection({ content, chatLabel }: { content: HeroContent; chatLabel: string }) {
-  const typewriterPhrases: string[] = Array.isArray(content.typewriter) ? content.typewriter : [];
+  // ให้ behavior แบบ legacy: ใช้ข้อความตัวแรกเท่านั้น
+  const typewriterText = Array.isArray(content.typewriter) && content.typewriter.length > 0
+    ? content.typewriter[0]
+    : '';
 
   return (
     <section
       id="herosection"
-      className="relative flex min-h-[calc(100dvh-var(--header-height))] items-center justify-center overflow-hidden bg-[#fffbfb] px-6"
+      // minHeight ตาม legacy: 100dvh - header
+      style={{ minHeight: 'calc(100dvh - var(--header-height))' }}
+      className="relative min-h-[calc(100dvh-var(--header-height))] flex items-center justify-center text-center px-6 bg-[#FFFEFE] snap-start overflow-hidden"
     >
-      <div className="pointer-events-none absolute inset-0 z-0 bg-gradient-to-br from-[#fff0f0] via-[#fff8f8] to-[#ffe4e4]" aria-hidden="true" />
-      <div className="pointer-events-none absolute inset-x-0 -top-32 h-[580px] rounded-full bg-[#ffe0e0] opacity-60 blur-3xl" aria-hidden="true" />
-      <div className="relative z-10 mx-auto flex w-full max-w-4xl flex-col items-center gap-6 text-center">
-        <span className="inline-flex items-center rounded-full bg-white/80 px-4 py-2 text-xs font-semibold uppercase tracking-[0.35em] text-[#A70909] shadow-sm">
-          Virintira Accounting
-        </span>
-        <h1 className="text-[clamp(2.4rem,1.8rem+2.6vw,4rem)] font-bold leading-snug tracking-tight text-[#A70909]">
+      {/* Background image (เหมือน legacy) */}
+      <div
+        className="absolute -top-[10px] inset-x-0 bottom-0 z-0 bg-[url('/bg-hero.webp')] bg-cover bg-center opacity-15"
+        aria-hidden="true"
+      />
+
+      {/* Foreground content (โครง + motion เหมือน legacy) */}
+      <div className="relative z-10 mx-auto max-w-xl space-y-6">
+        {/* H1: ใช้ clamp ให้ได้สเกลใกล้เคียง text-4xl→lg:text-6xl */}
+        <motion.h1
+          className="text-[clamp(2.25rem,2rem+1.6vw,3.75rem)] font-bold leading-snug tracking-tight text-[#A70909]"
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.6, ease: 'easeOut' }}
+        >
           {content.title}
-        </h1>
-        {typewriterPhrases.length ? (
-          <div className="text-[clamp(1.2rem,1.1rem+0.5vw,1.6rem)] font-semibold text-[#A70909]">
-            <TypewriterText phrases={typewriterPhrases} />
-          </div>
+        </motion.h1>
+
+        {/* Typewriter: พฤติกรรม/หน้าตาเหมือน legacy (ตัวคอมโพเนนต์กำหนดสี/น้ำหนัก/เคอร์เซอร์แล้ว)
+            ใช้ motion เหมือนเดิม */}
+        {typewriterText ? (
+          <motion.div
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+          >
+            {/* ตัว TypewriterText (เวอร์ชันที่ปรับแล้ว) จะเรนเดอร์เป็น <h2 class="text-lg lg:text-2xl font-normal text-[#A70909] ..."> */}
+            <TypewriterText text={typewriterText} />
+          </motion.div>
         ) : null}
+
+        {/* รองรับ subtitle/description เดิมของ repo ใหม่ แต่ไม่บังคับ (legacy ไม่มี) */}
         {content.subtitle ? (
-          <p className="text-[clamp(1.05rem,0.98rem+0.4vw,1.35rem)] font-semibold text-[#8a1b1b]">
+          <motion.p
+            className="text-[clamp(1.05rem,0.98rem+0.4vw,1.35rem)] font-semibold text-[#8a1b1b]"
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.4, delay: 0.45, ease: 'easeOut' }}
+          >
             {content.subtitle}
-          </p>
+          </motion.p>
         ) : null}
+
         {content.description ? (
-          <p className="max-w-3xl text-[clamp(0.95rem,0.9rem+0.3vw,1.15rem)] leading-relaxed text-[#5d3f3f]">
+          <motion.p
+            className="text-[clamp(0.95rem,0.9rem+0.3vw,1.15rem)] leading-relaxed text-[#5d3f3f]"
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.4, delay: 0.5, ease: 'easeOut' }}
+          >
             {content.description}
-          </p>
+          </motion.p>
         ) : null}
-        <div className="flex flex-col items-center justify-center gap-4 pt-4 sm:flex-row">
+
+        {/* CTA block: จัดวางคล้าย legacy (ปุ่มอยู่บล็อกท้าย, มี motion เข้ามา) */}
+        <motion.div
+          className="pt-6 flex flex-col items-center justify-center gap-4 sm:flex-row"
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.4, delay: 0.6, ease: 'easeOut' }}
+        >
+          {/* ปุ่มโทร (เดิมใน repo ใหม่) */}
           <a
             href={`tel:${COMPANY.phone}`}
             className="inline-flex min-w-[220px] items-center justify-center rounded-full bg-[#A70909] px-8 py-3 text-sm font-semibold text-white shadow-lg shadow-[#a70909]/30 transition-transform duration-300 ease-out hover:-translate-y-[3px] hover:bg-[#8c0808] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#A70909] focus-visible:ring-offset-2 focus-visible:ring-offset-white"
           >
             {content.primary}
           </a>
+
+          {/* ปุ่ม Line (เดิมใน repo ใหม่) */}
           <a
             href={COMPANY.socials.line}
             target="_blank"
@@ -59,6 +105,8 @@ export function HeroSection({ content, chatLabel }: { content: HeroContent; chat
           >
             {chatLabel}
           </a>
+
+          {/* ปุ่ม Email (ถ้ามี) */}
           {content.emailButton ? (
             <a
               href={`mailto:${COMPANY.email}`}
@@ -67,11 +115,18 @@ export function HeroSection({ content, chatLabel }: { content: HeroContent; chat
               {content.emailButton}
             </a>
           ) : null}
-        </div>
+        </motion.div>
+
+        {/* Email heading (ถ้ามี) */}
         {content.emailHeading ? (
-          <p className="text-sm font-medium uppercase tracking-[0.35em] text-[#a70909]/70">
+          <motion.p
+            className="text-sm font-medium uppercase tracking-[0.35em] text-[#a70909]/70"
+            initial={{ opacity: 0, y: 8 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.35, delay: 0.7, ease: 'easeOut' }}
+          >
             {content.emailHeading}
-          </p>
+          </motion.p>
         ) : null}
       </div>
     </section>

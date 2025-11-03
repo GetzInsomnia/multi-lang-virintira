@@ -1,54 +1,75 @@
 "use client";
 
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useMemo, useState } from "react";
 
-interface TypewriterTextProps {
-  phrases: string[];
+type LegacyProps = {
+  /** ข้อความเดี่ยวตามสไตล์ legacy */
+  text: string;
+  /** ความเร็วพิมพ์ ต่ออักษร (ms) – ดีฟอลต์ 80 ตาม legacy */
+  speed?: number;
+  /** คลาสเพิ่มตามต้องการ */
+  className?: string;
+};
+
+type CompatProps = {
+  /** รูปแบบใหม่ที่เคยใช้ใน repo ปัจจุบัน – จะใช้เฉพาะตัวแรก */
+  phrases?: string[];
   interval?: number;
-}
+  className?: string;
+};
 
-export function TypewriterText({ phrases, interval = 2800 }: TypewriterTextProps) {
-  const [index, setIndex] = useState(0);
-  const [displayText, setDisplayText] = useState('');
-  const [isDeleting, setIsDeleting] = useState(false);
-  const pauseRef = useRef<ReturnType<typeof setTimeout>>();
+/**
+ * พฤติกรรม & หน้าตาแบบ legacy:
+ * - พิมพ์เดินหน้าอย่างเดียวจนจบ แล้วหยุด
+ * - แสดงเป็น <h2> พร้อมสไตล์เดิม
+ * - มีเคอร์เซอร์ '|' กระพริบ
+ *
+ * ยังรองรับ props แบบใหม่ (phrases) เพื่อไม่ให้ import เดิมพัง:
+ * - ถ้าให้ phrases มา 1 ตัว: ถือว่าเป็นข้อความเดี่ยว (เหมือน text)
+ * - ถ้าให้หลายตัว: ใช้เฉพาะตัวแรก (ไม่วน/ไม่ลบ) เพื่อคงพฤติกรรม legacy
+ */
+export function TypewriterText(props: LegacyProps | CompatProps) {
+  // ปรับให้รองรับทั้ง text (legacy) และ phrases (ใหม่)
+  const effectiveText = useMemo(() => {
+    if ("text" in props && typeof props.text === "string") return props.text;
+    if ("phrases" in props && Array.isArray(props.phrases)) {
+      return props.phrases[0] ?? ""; // ใช้เฉพาะตัวแรก (คงพฤติกรรม legacy)
+    }
+    return "";
+  }, [props]);
 
-  useEffect(() => {
-    if (!phrases.length) return;
+  const speed =
+    "speed" in props && typeof props.speed === "number" ? props.speed : 80;
 
-    const current = phrases[index % phrases.length];
-    const timeout = setTimeout(() => {
-      if (!isDeleting) {
-        const nextText = current.slice(0, displayText.length + 1);
-        setDisplayText(nextText);
-        if (nextText === current) {
-          if (pauseRef.current) clearTimeout(pauseRef.current);
-          pauseRef.current = setTimeout(() => setIsDeleting(true), interval / 2);
-        }
-      } else {
-        const nextText = current.slice(0, Math.max(0, displayText.length - 1));
-        setDisplayText(nextText);
-        if (nextText === '') {
-          setIsDeleting(false);
-          setIndex((prev) => (prev + 1) % phrases.length);
-        }
-      }
-    }, isDeleting ? 45 : 85);
+  const className =
+    ("className" in props && props.className) || "";
 
-    return () => clearTimeout(timeout);
-  }, [phrases, index, displayText, isDeleting, interval]);
+  const [subIndex, setSubIndex] = useState(0);
 
   useEffect(() => {
-    return () => {
-      if (pauseRef.current) {
-        clearTimeout(pauseRef.current);
-      }
-    };
-  }, []);
+    if (!effectiveText) {
+      setSubIndex(0);
+      return;
+    }
+
+    if (subIndex < effectiveText.length) {
+      const t = setTimeout(() => {
+        setSubIndex((prev) => prev + 1);
+      }, speed);
+      return () => clearTimeout(t);
+    }
+  }, [effectiveText, subIndex, speed]);
 
   return (
-    <span className="whitespace-nowrap border-r-2 border-[#A70909] pr-2 text-[#A70909]">
-      {displayText}
-    </span>
+    <h2
+      style={{ fontWeight: 400 }}
+      className={`text-lg lg:text-2xl text-[#A70909] leading-relaxed ${className}`}
+      aria-live="polite"
+    >
+      {effectiveText.substring(0, subIndex)}
+      <span className="inline-block w-[1ch] animate-pulse">|</span>
+    </h2>
   );
 }
+
+export default TypewriterText;

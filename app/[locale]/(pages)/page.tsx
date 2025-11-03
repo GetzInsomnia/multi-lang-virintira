@@ -3,7 +3,6 @@ import { getTranslations } from 'next-intl/server';
 
 import { StructuredData } from '@/components/common/StructuredData';
 import { ScrollToHero } from '@/components/common/ScrollToHero';
-import { LoadingScreen } from '@/components/common/LoadingScreen';
 import { HeroSection, type HeroContent } from '@/components/home/HeroSection';
 import { AboutSection } from '@/components/home/AboutSection';
 import { PopularServices, type ServiceItem } from '@/components/home/PopularServices';
@@ -142,9 +141,11 @@ export default async function HomePage({ params }: PageParams) {
     ctaHref: '/promotion',
   };
 
-  const callLabel = tLayout('cta.call', { phone: COMPANY.phoneDisplay });
+  const phoneDisplay =
+  locale === 'th' ? COMPANY.phoneDisplayTh : COMPANY.phoneDisplayEn;
+  const callLabel = tLayout('cta.call', { phone: phoneDisplay });
   const chatLabel = tLayout('cta.chat');
-  const consultLabel = tLayout('cta.consult', { phone: COMPANY.phoneDisplay });
+  const consultLabel = tLayout('cta.consult', { phone: phoneDisplay });
 
   const breadcrumbJsonLd = buildBreadcrumbJsonLd([
     { name: tBreadcrumbs('home'), path: `/${locale}` },
@@ -158,7 +159,6 @@ export default async function HomePage({ params }: PageParams) {
 
   return (
     <div className="space-y-0 pb-24">
-      <LoadingScreen />
       <ScrollToHero />
       <StructuredData id="jsonld-home" data={webPageJsonLd} />
       <StructuredData id="jsonld-breadcrumb" data={breadcrumbJsonLd} />
