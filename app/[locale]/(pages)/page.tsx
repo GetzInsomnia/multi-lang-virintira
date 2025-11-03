@@ -142,6 +142,9 @@ export default async function HomePage({ params }: PageParams) {
   };
 
   const chatLabel = tLayout('cta.chat');
+  const phoneDisplay =
+  locale === 'th' ? COMPANY.phoneDisplayTh : COMPANY.phoneDisplayEn;
+  const callLabel = tLayout('cta.call', { phone: phoneDisplay });
   const consultLabel = tLayout('cta.consult', { phone: phoneDisplay });
 
   const breadcrumbJsonLd = buildBreadcrumbJsonLd([
