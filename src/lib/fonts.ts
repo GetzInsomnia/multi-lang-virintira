@@ -15,14 +15,14 @@ import {
 const inter = Inter({
   subsets: ['latin'],
   weight: ['400', '500', '600', '700'],
-  display: 'swap',
+  display: 'optional',
   variable: '--font-en',
 });
 
 const prompt = Prompt({
   subsets: ['thai', 'latin'],
   weight: ['300', '400', '500', '700'],
-  display: 'swap',
+  display: 'optional',
   variable: '--font-th',
 });
 
