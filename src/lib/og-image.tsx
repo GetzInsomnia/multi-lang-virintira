@@ -18,6 +18,8 @@ export function createOgImage({
   subtitle?: string;
   footer?: string;
 }) {
+  const phoneDisplay = COMPANY.phoneDisplayEn;
+
   return new ImageResponse(
     (
       <div
@@ -63,7 +65,7 @@ export function createOgImage({
             </div>
           </div>
           <div style={{ textAlign: 'right', color: '#7A2D2D', fontSize: '18px', fontWeight: 500 }}>
-            {COMPANY.phoneDisplay}
+            {phoneDisplay}
             <br />
             {COMPANY.email}
           </div>
@@ -106,7 +108,7 @@ export function createOgImage({
           }}
         >
           <span>{footer ?? 'Multilingual accounting partner for growing businesses.'}</span>
-          <span>virintirabusiness@gmail.com • {COMPANY.phoneDisplay}</span>
+          <span>virintirabusiness@gmail.com • {phoneDisplay}</span>
         </div>
       </div>
     ),

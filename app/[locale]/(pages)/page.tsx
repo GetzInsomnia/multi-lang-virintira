@@ -141,9 +141,6 @@ export default async function HomePage({ params }: PageParams) {
     ctaHref: '/promotion',
   };
 
-  const phoneDisplay =
-  locale === 'th' ? COMPANY.phoneDisplayTh : COMPANY.phoneDisplayEn;
-  const callLabel = tLayout('cta.call', { phone: phoneDisplay });
   const chatLabel = tLayout('cta.chat');
   const consultLabel = tLayout('cta.consult', { phone: phoneDisplay });
 
