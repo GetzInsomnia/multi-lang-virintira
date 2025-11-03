@@ -43,7 +43,8 @@ export default function NavLink({
     'relative inline-flex h-[30px] items-center gap-2 leading-none',
 
     // ตัวอักษร + transition
-    'text-[17px] font-normal tracking-tight text-[#2A2A2A]',
+    // Explicitly pin weight/size to avoid fallback swap jump
+    'text-[17px] font-normal leading-none tracking-tight text-[#2A2A2A]',
     'transition-colors duration-200 hover:text-[#A70909]',
     'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#A70909]/30',
 
@@ -82,7 +83,8 @@ export default function NavLink({
           className="h-4 w-4 text-[#A70909] animate-bounce relative -top-px align-middle"
         />
       ) : null}
-      <span className="leading-none">{label}</span>
+      {/* Ensure the label itself cannot inherit a different weight from ancestors */}
+      <span className="leading-none font-normal text-[17px]">{label}</span>
     </Link>
   );
 }
