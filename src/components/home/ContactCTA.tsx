@@ -1,6 +1,13 @@
-import { COMPANY } from '@/data/company';
+'use client';
 
-export function ContactCTA({ heading, description, callLabel, chatLabel, emailLabel }: { heading: string; description: string; callLabel: string; chatLabel: string; emailLabel: string }) {
+import { COMPANY } from '@/data/company';
+import CTAReveal from '@/components/common/CTAReveal';
+import { useLocale } from 'next-intl';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faLine } from '@fortawesome/free-brands-svg-icons';
+import { faPhone, faEnvelope } from '@fortawesome/free-solid-svg-icons';
+
+export function ContactCTA({ heading, description, callLabel, chatLabel, emailLabel, triggerLabel }: { heading: string; description: string; callLabel: string; chatLabel: string; emailLabel: string; triggerLabel: string }) {
   return (
     <section
       id="contact"
@@ -19,30 +26,49 @@ export function ContactCTA({ heading, description, callLabel, chatLabel, emailLa
               {description}
             </p>
           ) : null}
-          <div className="flex flex-col gap-4 pt-2 sm:flex-row sm:justify-center">
-            <a
-              href={`tel:${COMPANY.phone}`}
-              className="inline-flex min-w-[220px] items-center justify-center rounded-full border border-[#A70909]/40 bg-white px-8 py-3 text-sm font-semibold text-[#A70909] shadow-sm transition-transform duration-300 ease-out hover:-translate-y-1 hover:border-[#A70909] hover:bg-[#fff1f1] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#A70909] focus-visible:ring-offset-2 focus-visible:ring-offset-white"
-            >
-              {callLabel}
-            </a>
-            <a
-              href={COMPANY.socials.line}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex min-w-[220px] items-center justify-center rounded-full bg-[#06C755] px-8 py-3 text-sm font-semibold text-white shadow-lg shadow-[#06c755]/20 transition-transform duration-300 ease-out hover:-translate-y-1 hover:brightness-110 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#06C755] focus-visible:ring-offset-2 focus-visible:ring-offset-white"
-            >
-              {chatLabel}
-            </a>
-            <a
-              href={`mailto:${COMPANY.email}`}
-              className="inline-flex min-w-[220px] items-center justify-center rounded-full bg-[#A70909] px-8 py-3 text-sm font-semibold text-white shadow-lg shadow-[#a70909]/30 transition-transform duration-300 ease-out hover:-translate-y-1 hover:bg-[#8c0808] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#A70909] focus-visible:ring-offset-2 focus-visible:ring-offset-white"
-            >
-              {emailLabel}
-            </a>
-          </div>
+          <ContactCTAButtons triggerLabel={triggerLabel} chatLabel={chatLabel} emailLabel={emailLabel} callLabel={callLabel} />
         </div>
       </div>
     </section>
+  );
+}
+
+function ContactCTAButtons({ triggerLabel, chatLabel, emailLabel, callLabel }: { triggerLabel: string; chatLabel: string; emailLabel: string; callLabel: string }) {
+  const locale = useLocale();
+  const isThai = locale === 'th';
+  const phoneHref = isThai ? 'tel:0928825556' : 'tel:+66928825556';
+  const phoneText = isThai ? '📞 092 882 5556' : '📞 +669 2882 5556';
+
+  return (
+    <CTAReveal
+      triggerLabel={triggerLabel}
+      className="flex justify-center"
+      groupClassName="flex-col pt-2 sm:flex-row sm:justify-center"
+    >
+      <a
+        href={phoneHref}
+        aria-label={callLabel}
+        className="inline-flex min-w-[220px] items-center justify-center rounded-full border border-[#A70909]/40 bg-white px-8 py-3 text-sm font-semibold text-[#A70909] shadow-sm transition-transform duration-300 ease-out hover:-translate-y-1 hover:border-[#A70909] hover:bg-[#fff1f1] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#A70909] focus-visible:ring-offset-2 focus-visible:ring-offset-white gap-2"
+      >
+        <FontAwesomeIcon icon={faPhone} className="h-4 w-4" aria-hidden />
+        <span>{phoneText}</span>
+      </a>
+      <a
+        href={COMPANY.socials.line}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="inline-flex min-w-[220px] items-center justify-center rounded-full bg-[#06C755] px-8 py-3 text-sm font-semibold text-white shadow-lg shadow-[#06c755]/20 transition-transform duration-300 ease-out hover:-translate-y-1 hover:brightness-110 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#06C755] focus-visible:ring-offset-2 focus-visible:ring-offset-white gap-2"
+      >
+        <FontAwesomeIcon icon={faLine} className="h-4 w-4" aria-hidden />
+        <span>{chatLabel}</span>
+      </a>
+      <a
+        href={`mailto:${COMPANY.email}`}
+        className="inline-flex min-w-[220px] items-center justify-center rounded-full bg-[#A70909] px-8 py-3 text-sm font-semibold text-white shadow-lg shadow-[#a70909]/30 transition-transform duration-300 ease-out hover:-translate-y-1 hover:bg-[#8c0808] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#A70909] focus-visible:ring-offset-2 focus-visible:ring-offset-white gap-2"
+      >
+        <FontAwesomeIcon icon={faEnvelope} className="h-4 w-4" aria-hidden />
+        <span>{emailLabel}</span>
+      </a>
+    </CTAReveal>
   );
 }

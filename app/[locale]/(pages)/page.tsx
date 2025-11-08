@@ -142,8 +142,9 @@ export default async function HomePage({ params }: PageParams) {
   };
 
   const chatLabel = tLayout('cta.chat');
+  const triggerLabel = tLayout('cta.trigger');
   const phoneDisplay =
-  locale === 'th' ? COMPANY.phoneDisplayTh : COMPANY.phoneDisplayEn;
+    locale === 'th' ? COMPANY.phoneDisplayTh : COMPANY.phoneDisplayEn;
   const callLabel = tLayout('cta.call', { phone: phoneDisplay });
   const consultLabel = tLayout('cta.consult', { phone: phoneDisplay });
 
@@ -162,7 +163,7 @@ export default async function HomePage({ params }: PageParams) {
       <ScrollToHero />
       <StructuredData id="jsonld-home" data={webPageJsonLd} />
       <StructuredData id="jsonld-breadcrumb" data={breadcrumbJsonLd} />
-      <HeroSection content={hero} chatLabel={chatLabel} />
+      <HeroSection content={hero} chatLabel={chatLabel} triggerLabel={triggerLabel} />
       <PopularServices heading={services.heading} items={services.items} />
       <WhyChooseUsSection heading={highlights.heading} points={highlights.items} />
       <HowItWorksSection heading={process.heading} steps={process.steps} />
@@ -179,6 +180,7 @@ export default async function HomePage({ params }: PageParams) {
         callLabel={callLabel}
         chatLabel={chatLabel}
         emailLabel={consultLabel}
+        triggerLabel={triggerLabel}
       />
     </div>
   );

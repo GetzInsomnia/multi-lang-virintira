@@ -24,6 +24,7 @@ export default function SocialFloating({ menuOpen = false }: { menuOpen?: boolea
     setTimeout(() => {
       setIsOpen(false);
       setIsAnimating(false);
+      window.dispatchEvent(new Event('social:close'));
     }, 350);
   };
 
@@ -31,9 +32,22 @@ export default function SocialFloating({ menuOpen = false }: { menuOpen?: boolea
     setIsOpen(true);
     setIsAnimating(true);
     setTimeout(() => setIsAnimating(false), 350);
+    window.dispatchEvent(new Event('social:open'));
   };
 
   const isMobile = isClient && typeof window !== 'undefined' && window.innerWidth < 1024;
+
+  useEffect(() => {
+    const handleCTAOpen = () => {
+      if (isOpen) {
+        handleClose();
+      }
+    };
+
+    window.addEventListener('cta:open', handleCTAOpen);
+    return () => window.removeEventListener('cta:open', handleCTAOpen);
+  }, [isOpen]);
+
   if (!isClient || (menuOpen && isMobile)) return null;
 
   return (
