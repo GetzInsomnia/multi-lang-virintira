@@ -3,6 +3,11 @@
 import { COMPANY } from '@/data/company';
 import { motion } from 'framer-motion';
 import { TypewriterText } from '@/components/common/TypewriterText'; // ← ใช้เวอร์ชันที่คุณเพิ่งปรับให้เหมือน legacy (พิมพ์เดินหน้า, font-normal)
+import CTAReveal from '@/components/common/CTAReveal';
+import { useLocale } from 'next-intl';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPhone, faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import { faLine } from '@fortawesome/free-brands-svg-icons';
 
 export type HeroContent = {
   title: string;
@@ -14,7 +19,15 @@ export type HeroContent = {
   emailButton: string;
 };
 
-export function HeroSection({ content, chatLabel }: { content: HeroContent; chatLabel: string }) {
+export function HeroSection({
+  content,
+  chatLabel,
+  triggerLabel,
+}: {
+  content: HeroContent;
+  chatLabel: string;
+  triggerLabel: string;
+}) {
   // ให้ behavior แบบ legacy: ใช้ข้อความตัวแรกเท่านั้น
   const typewriterText = Array.isArray(content.typewriter) && content.typewriter.length > 0
     ? content.typewriter[0]
@@ -88,33 +101,12 @@ export function HeroSection({ content, chatLabel }: { content: HeroContent; chat
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.4, delay: 0.6, ease: 'easeOut' }}
         >
-          {/* ปุ่มโทร (เดิมใน repo ใหม่) */}
-          <a
-            href={`tel:${COMPANY.phone}`}
-            className="inline-flex min-w-[220px] items-center justify-center rounded-full bg-[#A70909] px-8 py-3 text-sm font-semibold text-white shadow-lg shadow-[#a70909]/30 transition-transform duration-300 ease-out hover:-translate-y-[3px] hover:bg-[#8c0808] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#A70909] focus-visible:ring-offset-2 focus-visible:ring-offset-white"
-          >
-            {content.primary}
-          </a>
-
-          {/* ปุ่ม Line (เดิมใน repo ใหม่) */}
-          <a
-            href={COMPANY.socials.line}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex min-w-[220px] items-center justify-center rounded-full bg-[#06C755] px-8 py-3 text-sm font-semibold text-white shadow-lg shadow-[#06c755]/20 transition-transform duration-300 ease-out hover:-translate-y-[3px] hover:brightness-110 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#06C755] focus-visible:ring-offset-2 focus-visible:ring-offset-white"
-          >
-            {chatLabel}
-          </a>
-
-          {/* ปุ่ม Email (ถ้ามี) */}
-          {content.emailButton ? (
-            <a
-              href={`mailto:${COMPANY.email}`}
-              className="inline-flex min-w-[220px] items-center justify-center rounded-full border border-[#A70909]/40 bg-white px-8 py-3 text-sm font-semibold text-[#A70909] shadow-sm transition-transform duration-300 ease-out hover:-translate-y-[3px] hover:border-[#A70909] hover:bg-[#fff1f1] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#A70909] focus-visible:ring-offset-2 focus-visible:ring-offset-white"
-            >
-              {content.emailButton}
-            </a>
-          ) : null}
+          <HeroCTAButtons
+            triggerLabel={triggerLabel}
+            chatLabel={chatLabel}
+            emailLabel={content.emailButton}
+            phoneAriaLabel={content.primary}
+          />
         </motion.div>
 
         {/* Email heading (ถ้ามี) */}
@@ -130,5 +122,57 @@ export function HeroSection({ content, chatLabel }: { content: HeroContent; chat
         ) : null}
       </div>
     </section>
+  );
+}
+
+function HeroCTAButtons({
+  triggerLabel,
+  chatLabel,
+  emailLabel,
+  phoneAriaLabel,
+}: {
+  triggerLabel: string;
+  chatLabel: string;
+  emailLabel?: string;
+  phoneAriaLabel: string;
+}) {
+  const locale = useLocale();
+  const isThai = locale === 'th';
+  const phoneHref = isThai ? 'tel:0928825556' : 'tel:+66928825556';
+  const phoneText = isThai ? '📞 092 882 5556' : '📞 +669 2882 5556';
+
+  return (
+    <CTAReveal
+      triggerLabel={triggerLabel}
+      className="flex justify-center"
+      groupClassName="flex-col sm:flex-row"
+    >
+      <a
+        href={phoneHref}
+        aria-label={phoneAriaLabel}
+        className="inline-flex min-w-[220px] items-center justify-center rounded-full bg-[#A70909] px-8 py-3 text-sm font-semibold text-white shadow-lg shadow-[#a70909]/30 transition-transform duration-300 ease-out hover:-translate-y-[3px] hover:bg-[#8c0808] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#A70909] focus-visible:ring-offset-2 focus-visible:ring-offset-white gap-2"
+      >
+        <FontAwesomeIcon icon={faPhone} className="h-4 w-4" aria-hidden />
+        <span>{phoneText}</span>
+      </a>
+      <a
+        href={COMPANY.socials.line}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="inline-flex min-w-[220px] items-center justify-center rounded-full bg-[#06C755] px-8 py-3 text-sm font-semibold text-white shadow-lg shadow-[#06c755]/20 transition-transform duration-300 ease-out hover:-translate-y-[3px] hover:brightness-110 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#06C755] focus-visible:ring-offset-2 focus-visible:ring-offset-white gap-2"
+      >
+        <FontAwesomeIcon icon={faLine} className="h-4 w-4" aria-hidden />
+        <span>{chatLabel}</span>
+      </a>
+      {emailLabel ? (
+        <a
+          href={`mailto:${COMPANY.email}`}
+          className="inline-flex min-w-[220px] items-center justify-center rounded-full border border-[#A70909]/40 bg-white px-8 py-3 text-sm font-semibold text-[#A70909] shadow-sm transition-transform duration-300 ease-out hover:-translate-y-[3px] hover:border-[#A70909] hover:bg-[#fff1f1] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#A70909] focus-visible:ring-offset-2 focus-visible:ring-offset-white gap-2"
+        >
+          <FontAwesomeIcon icon={faEnvelope} className="h-4 w-4" aria-hidden />
+          <span>{emailLabel}</span>
+        </a>
+      ) : null}
+    </CTAReveal>
   );
 }

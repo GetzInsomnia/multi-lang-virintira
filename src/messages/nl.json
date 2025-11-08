@@ -69,7 +69,8 @@
       "call": "Call {phone}",
       "chat": "Chat on LINE",
       "consult": "Email our accountants",
-      "book": "Book a consultation"
+      "book": "Book a consultation",
+      "trigger": "Request free consultation"
     },
     "header": {
       "announcement": {

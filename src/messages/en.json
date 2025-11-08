@@ -69,7 +69,8 @@
       "call": "Call {phone}",
       "chat": "Chat via LINE",
       "consult": "Email our team",
-      "book": "Book a consultation"
+      "book": "Book a consultation",
+      "trigger": "Request free consultation"
     },
     "header": {
       "nav": [
