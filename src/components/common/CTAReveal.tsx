@@ -66,7 +66,7 @@ export default function CTAReveal({
           className={[
             'col-start-1 row-start-1 inline-flex min-w-[220px] items-center justify-center rounded-full',
             'bg-[#A70909] px-8 py-3 text-sm font-semibold text-white',
-            'shadow-lg shadow-[#a70909]/30 transition-transform duration-300 ease-out transition-opacity',
+            'shadow-lg shadow-[#a70909]/30 transition-transform duration-300 ease-out',
             'hover:-translate-y-[3px] hover:bg-[#8c0808]',
             'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#A70909] focus-visible:ring-offset-2 focus-visible:ring-offset-white',
             open ? 'pointer-events-none scale-95 opacity-0' : 'pointer-events-auto scale-100 opacity-100',
@@ -80,7 +80,7 @@ export default function CTAReveal({
         <div
           id={triggerId}
           className={[
-            'col-start-1 row-start-1 flex items-center justify-center gap-4 transition-transform duration-300 transition-opacity ease-out',
+            'col-start-1 row-start-1 flex items-center justify-center gap-4 transition-transform duration-300 ease-out',
             groupClassName ?? '',
             open ? 'pointer-events-auto scale-100 opacity-100' : 'pointer-events-none scale-95 opacity-0',
           ].join(' ')}

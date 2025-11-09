@@ -139,7 +139,7 @@ function HeroCTAButtons({
   const locale = useLocale();
   const isThai = locale === 'th';
   const phoneHref = isThai ? 'tel:0928825556' : 'tel:+66928825556';
-  const phoneText = isThai ? '📞 092 882 5556' : '📞 +669 2882 5556';
+  const phoneText = isThai ? '092 882 5556' : '+669 2882 5556';
 
   return (
     <CTAReveal
@@ -161,7 +161,7 @@ function HeroCTAButtons({
         rel="noopener noreferrer"
         className="inline-flex min-w-[220px] items-center justify-center rounded-full bg-[#06C755] px-8 py-3 text-sm font-semibold text-white shadow-lg shadow-[#06c755]/20 transition-transform duration-300 ease-out hover:-translate-y-[3px] hover:brightness-110 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#06C755] focus-visible:ring-offset-2 focus-visible:ring-offset-white gap-2"
       >
-        <FontAwesomeIcon icon={faLine} className="h-4 w-4" aria-hidden />
+        <FontAwesomeIcon icon={faLine} className="h-5 w-5 ransform scale-[1.50]" aria-hidden />
         <span>{chatLabel}</span>
       </a>
       {emailLabel ? (
@@ -169,7 +169,7 @@ function HeroCTAButtons({
           href={`mailto:${COMPANY.email}`}
           className="inline-flex min-w-[220px] items-center justify-center rounded-full border border-[#A70909]/40 bg-white px-8 py-3 text-sm font-semibold text-[#A70909] shadow-sm transition-transform duration-300 ease-out hover:-translate-y-[3px] hover:border-[#A70909] hover:bg-[#fff1f1] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#A70909] focus-visible:ring-offset-2 focus-visible:ring-offset-white gap-2"
         >
-          <FontAwesomeIcon icon={faEnvelope} className="h-4 w-4" aria-hidden />
+          <FontAwesomeIcon icon={faEnvelope} className="h-4 w-4 scale-[1.50]" aria-hidden />
           <span>{emailLabel}</span>
         </a>
       ) : null}
