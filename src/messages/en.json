@@ -381,12 +381,12 @@
   },
   "home": {
     "hero": {
-      "title": "Full-service accounting and business administration",
+      "title": "Full-service accounting and\nbusiness administration",
       "subtitle": "",
       "description": "",
       "primary": "Request consultation",
       "typewriter": [
-        "Fast, easy, complete business support"
+        "Fast, simple, complete business solutions"
       ],
       "emailHeading": "",
       "emailButton": ""

@@ -251,14 +251,12 @@
   },
   "home": {
     "hero": {
-      "title": "Trusted accounting for every language your clients speak",
+      "title": "フルサービスの会計と\nビジネス管理",
       "subtitle": "Full finance operations for Thai businesses expanding regionally",
       "description": "From incorporation to monthly reporting, Virintira keeps your ledgers precise, audit ready, and explained in the languages your leadership team prefers.",
       "primary": "Call now",
       "typewriter": [
-        "Bookkeeping in 16 languages",
-        "Payroll and social security filings",
-        "Tax planning for Thai SMEs"
+        "速くて簡単、すべてのビジネスをサポート"
       ],
       "emailHeading": "Prefer email?",
       "emailButton": "Email Virintira"

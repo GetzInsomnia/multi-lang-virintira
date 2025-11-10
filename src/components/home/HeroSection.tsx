@@ -50,12 +50,16 @@ export function HeroSection({
       <div className="relative z-10 mx-auto max-w-xl space-y-6">
         {/* H1: ใช้ clamp ให้ได้สเกลใกล้เคียง text-4xl→lg:text-6xl */}
         <motion.h1
-          className="text-[clamp(2.25rem,2rem+1.6vw,3.75rem)] font-bold leading-snug tracking-tight text-[#A70909]"
+          className="text-[clamp(2.25rem,2rem+1.6vw,3.75rem)] font-bold leading-snug tracking-tight text-[#A70909] supports-[text-wrap:balance]:text-balance"
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.6, ease: 'easeOut' }}
         >
-          {content.title}
+          {(content.title ?? '')
+            .split('\n')
+            .map((line, i) => (
+              <span key={i} className="block">{line}</span>
+            ))}
         </motion.h1>
 
         {/* Typewriter: พฤติกรรม/หน้าตาเหมือน legacy (ตัวคอมโพเนนต์กำหนดสี/น้ำหนัก/เคอร์เซอร์แล้ว)
@@ -163,7 +167,7 @@ function HeroCTAButtons({
         href={COMPANY.socials.line}
         target="_blank"
         rel="noopener noreferrer"
-        className="inline-flex min-w-[220px] items-center justify-center rounded-full bg-[#06C755] px-8 py-3 text-sm font-semibold text-white shadow-lg shadow-[#06c755]/20 transition-transform duration-300 ease-out hover:-translate-y-[3px] hover:brightness-110 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#06C755] focus-visible:ring-offset-2 focus-visible:ring-offset-white gap-2.5"
+        className="inline-flex min-w-[220px] items-center justify-center rounded-full bg-[#06C755] px-8 py-3 text-sm font-semibold text-white shadow-lg shadow-[#06c755]/20 transition-transform duration-300 ease-out hover:-translate-y-[3px] hover:brightness-110 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#06C755] focus-visible:ring-offset-2 focus-visible:ring-offset-white gap-3"
       >
         <FontAwesomeIcon
           icon={faLine}
@@ -175,7 +179,7 @@ function HeroCTAButtons({
       {emailLabel ? (
         <a
           href={`mailto:${COMPANY.email}`}
-          className="inline-flex min-w-[220px] items-center justify-center rounded-full border border-[#A70909]/40 bg-white px-8 py-3 text-sm font-semibold text-[#A70909] shadow-sm transition-transform duration-300 ease-out hover:-translate-y-[3px] hover:border-[#A70909] hover:bg-[#fff1f1] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#A70909] focus-visible:ring-offset-2 focus-visible:ring-offset-white gap-2.5"
+          className="inline-flex min-w-[220px] items-center justify-center rounded-full border border-[#A70909]/40 bg-white px-8 py-3 text-sm font-semibold text-[#A70909] shadow-sm transition-transform duration-300 ease-out hover:-translate-y-[3px] hover:border-[#A70909] hover:bg-[#fff1f1] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#A70909] focus-visible:ring-offset-2 focus-visible:ring-offset-white gap-3"
         >
           <FontAwesomeIcon
             icon={faEnvelope}
