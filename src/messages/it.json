@@ -70,7 +70,7 @@
       "chat": "Chat on LINE",
       "consult": "Email our accountants",
       "book": "Book a consultation",
-      "trigger": "Consulenza gratis"
+      "trigger": "Consulenza gratuita"
     },
     "header": {
       "announcement": {
@@ -251,14 +251,12 @@
   },
   "home": {
     "hero": {
-      "title": "Trusted accounting for every language your clients speak",
+      "title": "Contabilità completa e\namministrazione aziendale",
       "subtitle": "Full finance operations for Thai businesses expanding regionally",
       "description": "From incorporation to monthly reporting, Virintira keeps your ledgers precise, audit ready, and explained in the languages your leadership team prefers.",
       "primary": "Call now",
       "typewriter": [
-        "Bookkeeping in 16 languages",
-        "Payroll and social security filings",
-        "Tax planning for Thai SMEs"
+        "Veloce, semplice e completo per la tua azienda"
       ],
       "emailHeading": "Prefer email?",
       "emailButton": "Email Virintira"
