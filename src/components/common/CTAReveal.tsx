@@ -65,7 +65,7 @@ export default function CTAReveal({
           onClick={() => setOpen(true)}
           className={[
             'col-start-1 row-start-1 inline-flex min-w-[220px] items-center justify-center rounded-full',
-            'bg-[#A70909] px-8 py-3 text-sm font-semibold text-white',
+            'bg-[#A70909] px-8 py-3 text-base font-semibold text-white',
             'shadow-lg shadow-[#a70909]/30 transition-transform duration-300 ease-out',
             'hover:-translate-y-[3px] hover:bg-[#8c0808]',
             'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#A70909] focus-visible:ring-offset-2 focus-visible:ring-offset-white',
