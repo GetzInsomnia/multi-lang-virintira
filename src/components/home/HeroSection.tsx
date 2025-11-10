@@ -96,7 +96,7 @@ export function HeroSection({
 
         {/* CTA block: จัดวางคล้าย legacy (ปุ่มอยู่บล็อกท้าย, มี motion เข้ามา) */}
         <motion.div
-          className="pt-6 flex flex-col items-center justify-center gap-4 sm:flex-row"
+          className="pt-16 flex flex-col items-center justify-center gap-4 sm:flex-row"
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.4, delay: 0.6, ease: 'easeOut' }}
@@ -167,7 +167,7 @@ function HeroCTAButtons({
       >
         <FontAwesomeIcon
           icon={faLine}
-          className="h-4 w-4 shrink-0 translate-y-[0.5px] scale-110 md:h-5 md:w-5"
+          className="h-4 w-4 shrink-0 translate-y-[0.5px] scale-150 md:h-5 md:w-5"
           aria-hidden
         />
         <span className="whitespace-nowrap leading-none text-[clamp(0.95rem,0.88rem+0.25vw,1rem)]">{chatLabel}</span>
