@@ -70,7 +70,7 @@
       "chat": "Chat via LINE",
       "consult": "Email our team",
       "book": "Book a consultation",
-      "trigger": "Request free consultation"
+      "trigger": "Free consult"
     },
     "header": {
       "nav": [
@@ -217,8 +217,7 @@
               {
                 "label": "Visa / work permit",
                 "href": "/under-construction"
-              }
-              ,
+              },
               {
                 "label": "BOI Certificate",
                 "href": "/under-construction"
