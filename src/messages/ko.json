@@ -252,13 +252,13 @@
   "home": {
     "hero": {
       "title": "풀서비스 회계 및\n비즈니스 관리",
-      "subtitle": "Full finance operations for Thai businesses expanding regionally",
-      "description": "From incorporation to monthly reporting, Virintira keeps your ledgers precise, audit ready, and explained in the languages your leadership team prefers.",
+      "subtitle": "",
+      "description": "",
       "primary": "Call now",
       "typewriter": [
         "빠르고 간편한 원스톱 비즈니스 서비스"
       ],
-      "emailHeading": "Prefer email?",
+      "emailHeading": "",
       "emailButton": "Email Virintira"
     },
     "about": {

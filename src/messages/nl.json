@@ -252,13 +252,13 @@
   "home": {
     "hero": {
       "title": "Volledige boekhouding en\nbedrijfsadministratie",
-      "subtitle": "Full finance operations for Thai businesses expanding regionally",
-      "description": "From incorporation to monthly reporting, Virintira keeps your ledgers precise, audit ready, and explained in the languages your leadership team prefers.",
+      "subtitle": "",
+      "description": "",
       "primary": "Call now",
       "typewriter": [
         "Snel, eenvoudig en compleet voor uw bedrijf"
       ],
-      "emailHeading": "Prefer email?",
+      "emailHeading": "",
       "emailButton": "Email Virintira"
     },
     "about": {
