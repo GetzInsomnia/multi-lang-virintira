@@ -67,8 +67,8 @@
   "layout": {
     "cta": {
       "call": "Call {phone}",
-      "chat": "Chat on LINE",
-      "consult": "Email our accountants",
+      "chat": "LINE चैट",
+      "consult": "ईमेल Virintira",
       "book": "Book a consultation",
       "trigger": "निःशुल्क परामर्श"
     },
@@ -80,7 +80,13 @@
       },
       "nav": [
         {
-          "label": "Services",
+          "label": "प्रमोशन",
+          "href": "/promotion",
+          "highlight": true,
+          "icon": "promotion"
+        },
+        {
+          "label": "सेवाएँ",
           "href": "#services"
         },
         {
@@ -92,18 +98,8 @@
           "href": "/resources"
         },
         {
-          "label": "Why us",
-          "href": "#why-us"
-        },
-        {
-          "label": "Process",
-          "href": "#process"
-        },
-        {
-          "label": "Promotion",
-          "href": "/promotion",
-          "highlight": true,
-          "icon": "promotion"
+          "label": "संपर्क",
+          "href": "/under-construction"
         }
       ],
       "megaMenu": {

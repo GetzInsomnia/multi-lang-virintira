@@ -89,6 +89,7 @@ export default function Navbar({ data }: NavbarProps) {
   // สำคัญ: ใช้ครอบ "ปุ่ม" จริง ๆ และกัน bubble ด้วย onMouseDown
   const openerRef = useRef<HTMLSpanElement | null>(null);
   // Refs for measuring layout gaps without restructuring the header DOM.
+  const containerRef = useRef<HTMLDivElement | null>(null);
   const logoRef = useRef<HTMLAnchorElement | null>(null);
   const navRef = useRef<HTMLElement | null>(null);
   const actionsRef = useRef<HTMLDivElement | null>(null);
@@ -159,6 +160,8 @@ export default function Navbar({ data }: NavbarProps) {
       const actionsEl = actionsRef.current;
       if (!logoEl || !navEl || !actionsEl) return;
 
+      const containerWidth = containerRef.current?.clientWidth ?? window.innerWidth;
+
       const vw = window.innerWidth;
       const nextCompact = vw <= 349;
 
@@ -182,10 +185,12 @@ export default function Navbar({ data }: NavbarProps) {
 
       let leftGap: number;
       let rightGap: number;
+      let navWidth = navWidthRef.current;
 
       if (!forceMobile) {
         const navRect = navEl.getBoundingClientRect();
         navWidthRef.current = navRect.width;
+        navWidth = navRect.width;
         leftGap = navRect.left - logoRect.right;
         rightGap = actionsRect.left - navRect.right;
       } else {
@@ -197,7 +202,9 @@ export default function Navbar({ data }: NavbarProps) {
         rightGap = simulatedGap;
       }
 
-      const shouldForce = leftGap < SAFE_GAP_PX || rightGap < SAFE_GAP_PX;
+      const combinedWidth = logoRect.width + navWidth + actionsRect.width + SAFE_GAP_PX;
+      const overflowDetected = combinedWidth > containerWidth;
+      const shouldForce = overflowDetected || leftGap < SAFE_GAP_PX || rightGap < SAFE_GAP_PX;
 
       setForceMobile((prev) => {
         if (shouldForce && !prev && megaOpen) {
@@ -246,6 +253,7 @@ export default function Navbar({ data }: NavbarProps) {
     });
 
     const elements: Element[] = [];
+    if (containerRef.current) elements.push(containerRef.current);
     if (logoRef.current) elements.push(logoRef.current);
     if (navRef.current) elements.push(navRef.current);
     if (actionsRef.current) elements.push(actionsRef.current);
@@ -394,7 +402,13 @@ export default function Navbar({ data }: NavbarProps) {
         return;
       }
 
-      router.push(basePath, { locale: normalizedLocale as Locale });
+      if (typeof window !== 'undefined') {
+        try {
+          sessionStorage.setItem('vir-scrollY', String(window.scrollY));
+        } catch {}
+      }
+
+      router.push(basePath, { locale: normalizedLocale as Locale, scroll: false });
       setMobileOpen(false);
     },
     [router, basePath, locale],
@@ -404,7 +418,7 @@ export default function Navbar({ data }: NavbarProps) {
     <header className="sticky top-0 z-50 bg-white shadow-sm" style={{ '--header-height': '72px' } as CSSProperties}>
       <SocialFloating {...({ menuOpen: mobileOpen } as any)} />
 
-      <div className="relative mx-auto max-w-[1280px] px-4">
+      <div ref={containerRef} className="relative mx-auto max-w-[1280px] px-4">
         <div className="flex h-[var(--header-height)] items-center justify-between">
           <Link
             ref={logoRef}

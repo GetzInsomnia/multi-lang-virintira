@@ -5,6 +5,7 @@ import type { ReactNode } from 'react';
 
 import { AnalyticsManager } from '@/components/common/AnalyticsManager';
 import { BusinessJsonLd } from '@/components/common/JsonLd';
+import { ScrollRestorer } from '@/components/common/ScrollRestorer';
 
 // ใช้ Header/Spacer จาก src/components ไม่ใช่ app/[locale]/(components)
 import Header from '@/components/layout/Header';
@@ -164,6 +165,7 @@ export default async function LocaleLayout({ children, params }: LayoutProps) {
       <AnalyticsManager />
       <BusinessJsonLd locale={locale} />
       <div className="flex min-h-screen flex-col">
+        <ScrollRestorer />
         <Header data={navbar} />
         <HeaderSpacer />
         <main className="flex-1">{children}</main>

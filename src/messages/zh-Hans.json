@@ -67,8 +67,8 @@
   "layout": {
     "cta": {
       "call": "Call {phone}",
-      "chat": "Chat on LINE",
-      "consult": "Email our accountants",
+      "chat": "LINE 咨询",
+      "consult": "邮件 Virintira",
       "book": "Book a consultation",
       "trigger": "免费咨询"
     },
@@ -80,7 +80,13 @@
       },
       "nav": [
         {
-          "label": "Services",
+          "label": "优惠",
+          "href": "/promotion",
+          "highlight": true,
+          "icon": "promotion"
+        },
+        {
+          "label": "服务",
           "href": "#services"
         },
         {
@@ -92,18 +98,8 @@
           "href": "/resources"
         },
         {
-          "label": "Why us",
-          "href": "#why-us"
-        },
-        {
-          "label": "Process",
-          "href": "#process"
-        },
-        {
-          "label": "Promotion",
-          "href": "/promotion",
-          "highlight": true,
-          "icon": "promotion"
+          "label": "联系我们",
+          "href": "/under-construction"
         }
       ],
       "megaMenu": {

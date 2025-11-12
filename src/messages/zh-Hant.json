@@ -67,8 +67,8 @@
   "layout": {
     "cta": {
       "call": "Call {phone}",
-      "chat": "Chat on LINE",
-      "consult": "Email our accountants",
+      "chat": "LINE 諮詢",
+      "consult": "電郵 Virintira",
       "book": "Book a consultation",
       "trigger": "免費諮詢"
     },
@@ -80,7 +80,13 @@
       },
       "nav": [
         {
-          "label": "Services",
+          "label": "優惠",
+          "href": "/promotion",
+          "highlight": true,
+          "icon": "promotion"
+        },
+        {
+          "label": "服務",
           "href": "#services"
         },
         {
@@ -92,18 +98,8 @@
           "href": "/resources"
         },
         {
-          "label": "Why us",
-          "href": "#why-us"
-        },
-        {
-          "label": "Process",
-          "href": "#process"
-        },
-        {
-          "label": "Promotion",
-          "href": "/promotion",
-          "highlight": true,
-          "icon": "promotion"
+          "label": "聯絡我們",
+          "href": "/under-construction"
         }
       ],
       "megaMenu": {

@@ -67,8 +67,8 @@
   "layout": {
     "cta": {
       "call": "Call {phone}",
-      "chat": "Chat on LINE",
-      "consult": "Email our accountants",
+      "chat": "LINE-Chat",
+      "consult": "E-Mail an Virintira",
       "book": "Book a consultation",
       "trigger": "Kostenlose Beratung"
     },
@@ -80,11 +80,17 @@
       },
       "nav": [
         {
-          "label": "Services",
+          "label": "Aktionen",
+          "href": "/promotion",
+          "highlight": true,
+          "icon": "promotion"
+        },
+        {
+          "label": "Service",
           "href": "#services"
         },
         {
-          "label": "Artikel",
+          "label": "Ratgeber",
           "href": "/blog/bookkeeping-matters"
         },
         {
@@ -92,18 +98,8 @@
           "href": "/resources"
         },
         {
-          "label": "Why us",
-          "href": "#why-us"
-        },
-        {
-          "label": "Process",
-          "href": "#process"
-        },
-        {
-          "label": "Promotion",
-          "href": "/promotion",
-          "highlight": true,
-          "icon": "promotion"
+          "label": "Kontakt",
+          "href": "/under-construction"
         }
       ],
       "megaMenu": {

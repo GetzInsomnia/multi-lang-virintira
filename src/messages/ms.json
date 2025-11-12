@@ -67,8 +67,8 @@
   "layout": {
     "cta": {
       "call": "Call {phone}",
-      "chat": "Chat on LINE",
-      "consult": "Email our accountants",
+      "chat": "Chat di LINE",
+      "consult": "E-mel Virintira",
       "book": "Book a consultation",
       "trigger": "Konsultasi percuma"
     },
@@ -80,7 +80,13 @@
       },
       "nav": [
         {
-          "label": "Services",
+          "label": "Promosi",
+          "href": "/promotion",
+          "highlight": true,
+          "icon": "promotion"
+        },
+        {
+          "label": "Servis",
           "href": "#services"
         },
         {
@@ -92,18 +98,8 @@
           "href": "/resources"
         },
         {
-          "label": "Why us",
-          "href": "#why-us"
-        },
-        {
-          "label": "Process",
-          "href": "#process"
-        },
-        {
-          "label": "Promotion",
-          "href": "/promotion",
-          "highlight": true,
-          "icon": "promotion"
+          "label": "Hubungi",
+          "href": "/under-construction"
         }
       ],
       "megaMenu": {

@@ -67,8 +67,8 @@
   "layout": {
     "cta": {
       "call": "Call {phone}",
-      "chat": "Chat on LINE",
-      "consult": "Email our accountants",
+      "chat": "دردشة LINE",
+      "consult": "بريد Virintira",
       "book": "Book a consultation",
       "trigger": "استشارة مجانية"
     },
@@ -80,30 +80,26 @@
       },
       "nav": [
         {
-          "label": "Services",
-          "href": "#services"
-        },
-        {
-          "label": "المقالات",
-          "href": "/blog/bookkeeping-matters"
-        },
-        {
-          "label": "التنزيلات",
-          "href": "/resources"
-        },
-        {
-          "label": "Why us",
-          "href": "#why-us"
-        },
-        {
-          "label": "Process",
-          "href": "#process"
-        },
-        {
-          "label": "Promotion",
+          "label": "عروض",
           "href": "/promotion",
           "highlight": true,
           "icon": "promotion"
+        },
+        {
+          "label": "خدمات",
+          "href": "#services"
+        },
+        {
+          "label": "مقالات",
+          "href": "/blog/bookkeeping-matters"
+        },
+        {
+          "label": "تنزيلات",
+          "href": "/resources"
+        },
+        {
+          "label": "اتصل بنا",
+          "href": "/under-construction"
         }
       ],
       "megaMenu": {

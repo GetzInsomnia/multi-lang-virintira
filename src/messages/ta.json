@@ -67,8 +67,8 @@
   "layout": {
     "cta": {
       "call": "Call {phone}",
-      "chat": "Chat on LINE",
-      "consult": "Email our accountants",
+      "chat": "LINE உரையாடல்",
+      "consult": "மின்னஞ்சல் Virintira",
       "book": "Book a consultation",
       "trigger": "இலவச ஆலோசனை"
     },
@@ -80,7 +80,13 @@
       },
       "nav": [
         {
-          "label": "Services",
+          "label": "சலுகைகள்",
+          "href": "/promotion",
+          "highlight": true,
+          "icon": "promotion"
+        },
+        {
+          "label": "சேவைகள்",
           "href": "#services"
         },
         {
@@ -88,22 +94,12 @@
           "href": "/blog/bookkeeping-matters"
         },
         {
-          "label": "பதிவிறக்கங்கள்",
+          "label": "பதிவிறக்க",
           "href": "/resources"
         },
         {
-          "label": "Why us",
-          "href": "#why-us"
-        },
-        {
-          "label": "Process",
-          "href": "#process"
-        },
-        {
-          "label": "Promotion",
-          "href": "/promotion",
-          "highlight": true,
-          "icon": "promotion"
+          "label": "தொடர்பு",
+          "href": "/under-construction"
         }
       ],
       "megaMenu": {

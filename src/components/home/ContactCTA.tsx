@@ -48,37 +48,25 @@ function ContactCTAButtons({ triggerLabel, chatLabel, emailLabel, callLabel }: {
       <a
         href={phoneHref}
         aria-label={callLabel}
-        className="inline-flex min-w-[220px] items-center justify-center rounded-full border border-[#A70909]/40 bg-white px-8 py-3 text-sm font-semibold text-[#A70909] shadow-sm transition-transform duration-300 ease-out hover:-translate-y-1 hover:border-[#A70909] hover:bg-[#fff1f1] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#A70909] focus-visible:ring-offset-2 focus-visible:ring-offset-white gap-2"
+        className="inline-flex min-w-[220px] items-center justify-center rounded-full border border-[#A70909]/50 bg-white px-8 py-3 text-base font-semibold text-[#A70909] shadow-sm transition-transform duration-200 ease-out hover:-translate-y-1 will-change-transform hover:bg-[#fff1f1] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#A70909] focus-visible:ring-offset-2 focus-visible:ring-offset-white gap-3"
       >
-        <FontAwesomeIcon
-          icon={faPhone}
-          className="h-4 w-4 shrink-0 translate-y-[0.5px] md:h-5 md:w-5"
-          aria-hidden
-        />
+        <FontAwesomeIcon icon={faPhone} className="h-5 w-5 shrink-0" aria-hidden />
         <span className="whitespace-nowrap leading-none text-[clamp(0.95rem,0.88rem+0.25vw,1rem)]">{phoneText}</span>
       </a>
       <a
         href={COMPANY.socials.line}
         target="_blank"
         rel="noopener noreferrer"
-        className="inline-flex min-w-[220px] items-center justify-center rounded-full bg-[#06C755] px-8 py-3 text-sm font-semibold text-white shadow-lg shadow-[#06c755]/20 transition-transform duration-300 ease-out hover:-translate-y-1 hover:brightness-110 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#06C755] focus-visible:ring-offset-2 focus-visible:ring-offset-white gap-2.5"
+        className="inline-flex min-w-[220px] items-center justify-center rounded-full bg-[#06C755] px-8 py-3 text-base font-semibold text-white shadow-lg shadow-[#06c755]/20 transition-transform duration-200 ease-out hover:-translate-y-1 will-change-transform hover:brightness-110 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#06C755] focus-visible:ring-offset-2 focus-visible:ring-offset-white gap-3"
       >
-        <FontAwesomeIcon
-          icon={faLine}
-          className="h-4 w-4 shrink-0 translate-y-[0.5px] scale-110 md:h-5 md:w-5"
-          aria-hidden
-        />
+        <FontAwesomeIcon icon={faLine} className="h-5 w-5 shrink-0" aria-hidden />
         <span className="whitespace-nowrap leading-none text-[clamp(0.95rem,0.88rem+0.25vw,1rem)]">{chatLabel}</span>
       </a>
       <a
         href={`mailto:${COMPANY.email}`}
-        className="inline-flex min-w-[220px] items-center justify-center rounded-full bg-[#A70909] px-8 py-3 text-sm font-semibold text-white shadow-lg shadow-[#a70909]/30 transition-transform duration-300 ease-out hover:-translate-y-1 hover:bg-[#8c0808] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#A70909] focus-visible:ring-offset-2 focus-visible:ring-offset-white gap-2.5"
+        className="inline-flex min-w-[220px] items-center justify-center rounded-full bg-[#A70909] px-8 py-3 text-base font-semibold text-white shadow-lg shadow-[#a70909]/30 transition-transform duration-200 ease-out hover:-translate-y-1 will-change-transform hover:bg-[#8c0808] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#A70909] focus-visible:ring-offset-2 focus-visible:ring-offset-white gap-3"
       >
-        <FontAwesomeIcon
-          icon={faEnvelope}
-          className="h-4 w-4 shrink-0 translate-y-[0.5px] scale-110 md:h-5 md:w-5"
-          aria-hidden
-        />
+        <FontAwesomeIcon icon={faEnvelope} className="h-5 w-5 shrink-0" aria-hidden />
         <span className="whitespace-nowrap leading-none text-[clamp(0.95rem,0.88rem+0.25vw,1rem)]">{emailLabel}</span>
       </a>
     </CTAReveal>
