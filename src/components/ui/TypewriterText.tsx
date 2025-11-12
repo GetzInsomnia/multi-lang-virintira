@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
+import { useLocale } from "next-intl";
 
 type LegacyProps = {
   /** ข้อความเดี่ยวตามสไตล์ legacy */
@@ -60,14 +61,22 @@ export function TypewriterText(props: LegacyProps | CompatProps) {
     }
   }, [effectiveText, subIndex, speed]);
 
+  const locale = useLocale();
+  const isRTL = ["ar", "fa", "he"].includes(locale as string);
+
   return (
     <h2
+      dir={isRTL ? "rtl" : "ltr"}
       style={{ fontWeight: 400 }}
-      className={`text-lg lg:text-2xl text-[#A70909] leading-relaxed ${className}`}
+      className={`relative inline-block text-lg lg:text-2xl text-[#A70909] leading-relaxed ${className}`}
       aria-live="polite"
     >
-      {effectiveText.substring(0, subIndex)}
-      <span className="inline-block w-[1ch] animate-pulse">|</span>
+      <span className="block">{effectiveText.substring(0, subIndex)}</span>
+      <span
+        aria-hidden="true"
+        className="absolute inset-y-0 w-[0.05em] bg-current animate-pulse"
+        style={isRTL ? { left: 0 } : { right: 0 }}
+      />
     </h2>
   );
 }

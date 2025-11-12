@@ -67,8 +67,8 @@
   "layout": {
     "cta": {
       "call": "Call {phone}",
-      "chat": "Chat on LINE",
-      "consult": "Email our accountants",
+      "chat": "Chat op LINE",
+      "consult": "E-mail Virintira",
       "book": "Book a consultation",
       "trigger": "Gratis consult"
     },
@@ -79,6 +79,12 @@
         "actionHref": "/promotion"
       },
       "nav": [
+        {
+          "label": "Acties",
+          "href": "/promotion",
+          "highlight": true,
+          "icon": "promotion"
+        },
         {
           "label": "Services",
           "href": "#services"
@@ -92,18 +98,8 @@
           "href": "/resources"
         },
         {
-          "label": "Why us",
-          "href": "#why-us"
-        },
-        {
-          "label": "Process",
-          "href": "#process"
-        },
-        {
-          "label": "Promotion",
-          "href": "/promotion",
-          "highlight": true,
-          "icon": "promotion"
+          "label": "Contact",
+          "href": "/under-construction"
         }
       ],
       "megaMenu": {

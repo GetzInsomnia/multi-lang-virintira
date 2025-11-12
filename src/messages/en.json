@@ -67,8 +67,8 @@
   "layout": {
     "cta": {
       "call": "Call {phone}",
-      "chat": "Chat via LINE",
-      "consult": "Email our team",
+      "chat": "LINE chat",
+      "consult": "Email Virintira",
       "book": "Book a consultation",
       "trigger": "Free consult"
     },
@@ -79,6 +79,10 @@
           "href": "/promotion",
           "highlight": true,
           "icon": "promotion"
+        },
+        {
+          "label": "Services",
+          "href": "#services"
         },
         {
           "label": "Articles",

@@ -62,7 +62,12 @@ export default function LanguageSwitcher({
       return;
     }
 
-    router.push(basePath, { locale: normalizedLocale as Locale });
+    if (typeof window !== 'undefined') {
+      try {
+        sessionStorage.setItem('vir-scrollY', String(window.scrollY));
+      } catch {}
+    }
+    router.push(basePath, { locale: normalizedLocale as Locale, scroll: false });
     onOpenChange(false);
   };
 
