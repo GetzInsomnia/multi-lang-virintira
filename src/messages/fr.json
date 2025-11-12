@@ -80,7 +80,7 @@
       },
       "nav": [
         {
-          "label": "Offres",
+          "label": "Promos",
           "href": "/promotion",
           "highlight": true,
           "icon": "promotion"
@@ -94,7 +94,7 @@
           "href": "/blog/bookkeeping-matters"
         },
         {
-          "label": "Téléch.",
+          "label": "Télécharg.",
           "href": "/resources"
         },
         {

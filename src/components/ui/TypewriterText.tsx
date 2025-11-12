@@ -74,8 +74,8 @@ export function TypewriterText(props: LegacyProps | CompatProps) {
       <span className="block">{effectiveText.substring(0, subIndex)}</span>
       <span
         aria-hidden="true"
-        className="absolute inset-y-0 w-[0.05em] bg-current animate-pulse"
-        style={isRTL ? { left: 0 } : { right: 0 }}
+        className="pointer-events-none absolute top-0 h-[1em] w-[0.08em] translate-y-[0.1em] rounded-full bg-current motion-safe:animate-[pulse_1.2s_ease-in-out_infinite] motion-reduce:animate-none"
+        style={{ insetInlineEnd: "1ch" }}
       />
     </h2>
   );
