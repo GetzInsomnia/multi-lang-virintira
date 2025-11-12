@@ -67,7 +67,7 @@
   "layout": {
     "cta": {
       "call": "โทร {phone}",
-      "chat": "แชท LINE",
+      "chat": "แชทผ่าน LINE",
       "consult": "อีเมล Virintira",
       "book": "จองเวลาปรึกษา",
       "trigger": "ปรึกษาฟรี"

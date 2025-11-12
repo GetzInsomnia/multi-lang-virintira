@@ -19,6 +19,7 @@ export default function CTAReveal({
 }: CTARevealProps) {
   const [open, setOpen] = useState(false);
   const outerRef = useRef<HTMLDivElement>(null);
+  const groupRef = useRef<HTMLDivElement | null>(null);
   const triggerId = useId();
 
   useEffect(() => {
@@ -57,6 +58,15 @@ export default function CTAReveal({
     window.dispatchEvent(new Event(open ? 'cta:open' : 'cta:close'));
   }, [open, onExpandChange]);
 
+  useEffect(() => {
+    if (open && groupRef.current) {
+      const first = groupRef.current.querySelector<HTMLElement>(
+        'a,button,[tabindex]:not([tabindex="-1"])',
+      );
+      first?.focus?.();
+    }
+  }, [open]);
+
   return (
     <div ref={outerRef} className={className}>
       <div className="grid items-start justify-items-center">
@@ -64,9 +74,9 @@ export default function CTAReveal({
           type="button"
           onClick={() => setOpen(true)}
           className={[
-            'col-start-1 row-start-1 inline-flex min-w-[220px] items-center justify-center rounded-full',
+            'col-start-1 row-start-1 inline-flex min-w-[min(220px,calc(100vw-4rem))] items-center justify-center rounded-full',
             'bg-[#A70909] px-8 py-3 text-base font-semibold text-white',
-            'shadow-lg shadow-[#a70909]/30 transition-transform duration-300 ease-out',
+            'shadow-lg shadow-[#a70909]/30 transition-transform duration-300 ease-out motion-reduce:transform-none',
             'hover:-translate-y-[3px] hover:bg-[#8c0808]',
             'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#A70909] focus-visible:ring-offset-2 focus-visible:ring-offset-white',
             open ? 'pointer-events-none scale-95 opacity-0' : 'pointer-events-auto scale-100 opacity-100',
@@ -79,8 +89,9 @@ export default function CTAReveal({
 
         <div
           id={triggerId}
+          ref={groupRef}
           className={[
-            'col-start-1 row-start-1 flex items-center justify-center gap-4 transition-transform duration-300 ease-out',
+            'col-start-1 row-start-1 flex items-center justify-center gap-3 transition-transform duration-300 ease-out',
             groupClassName ?? '',
             open ? 'pointer-events-auto scale-100 opacity-100' : 'pointer-events-none scale-95 opacity-0',
           ].join(' ')}

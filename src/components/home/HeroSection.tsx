@@ -32,13 +32,15 @@ export function HeroSection({
   const typewriterText = Array.isArray(content.typewriter) && content.typewriter.length > 0
     ? content.typewriter[0]
     : '';
+  const locale = useLocale();
+  const isLongLatin = ['de', 'nl'].includes(locale);
 
   return (
     <section
       id="herosection"
       // minHeight ตาม legacy: 100dvh - header
       style={{ minHeight: 'calc(100dvh - var(--header-height))' }}
-      className="relative min-h-[calc(100dvh-var(--header-height))] flex items-center justify-center text-center px-6 bg-[#FFFEFE] snap-start overflow-hidden"
+      className="relative min-h-[calc(100dvh-var(--header-height))] flex items-center justify-center text-center px-safe bg-[#FFFEFE] snap-start overflow-hidden"
     >
       {/* Background image (เหมือน legacy) */}
       <div
@@ -47,22 +49,35 @@ export function HeroSection({
       />
 
       {/* Foreground content (โครง + motion เหมือน legacy) */}
-      <div className="relative z-10 mx-auto max-w-[min(90vw,48rem)] space-y-6">
+      <div className="relative z-10 mx-auto max-w-[min(94vw,48rem)] space-y-6">
         {/* H1: ใช้ clamp ให้ได้สเกลใกล้เคียง text-4xl→lg:text-6xl */}
         <motion.h1
-          className="text-[clamp(2.2rem,1.9rem+1.8vw,3.6rem)] font-bold leading-snug tracking-tight text-[#A70909] supports-[text-wrap:balance]:text-balance"
+          className={[
+            'font-bold leading-snug tracking-tight text-[#A70909]',
+            'text-[clamp(1.9rem,1.5rem+2.2vw,3.4rem)]',
+            'supports-[text-wrap:balance]:text-balance',
+            'max-[414px]:text-balance',
+          ].join(' ')}
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.6, ease: 'easeOut' }}
         >
-          {(content.title ?? '').split('\n').map((line, i) => (
-            <span
-              key={i}
-              className="block sm:inline-block sm:whitespace-nowrap max-[385px]:whitespace-normal leading-tight"
-            >
-              {line}
-            </span>
-          ))}
+          {(content.title ?? '').split('\n').map((line, i) => {
+            const base = 'leading-tight';
+            const desktopNoWrap = 'sm:inline-block sm:whitespace-nowrap';
+            const smallWrap = 'max-[480px]:whitespace-normal max-[480px]:text-center';
+            const longLatinExtras = isLongLatin
+              ? 'max-[640px]:hyphens-auto max-[414px]:break-words'
+              : '';
+            return (
+              <span
+                key={i}
+                className={['block', base, desktopNoWrap, smallWrap, longLatinExtras].join(' ').trim()}
+              >
+                {line}
+              </span>
+            );
+          })}
         </motion.h1>
 
         {/* Typewriter: พฤติกรรม/หน้าตาเหมือน legacy (ตัวคอมโพเนนต์กำหนดสี/น้ำหนัก/เคอร์เซอร์แล้ว)
@@ -157,26 +172,32 @@ function HeroCTAButtons({
       <a
         href={phoneHref}
         aria-label={phoneAriaLabel}
-        className="inline-flex min-w-[220px] items-center justify-center rounded-full bg-[#A70909] px-8 py-3 text-base font-semibold text-white shadow-lg shadow-[#a70909]/30 transition-transform duration-200 ease-out hover:-translate-y-1 will-change-transform hover:bg-[#8c0808] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#A70909] focus-visible:ring-offset-2 focus-visible:ring-offset-white gap-3"
+        className="inline-flex min-w-[min(220px,calc(100vw-4rem))] items-center justify-center rounded-full bg-[#A70909] px-8 py-3 text-base font-semibold text-white shadow-lg shadow-[#a70909]/30 transition-transform duration-200 ease-out hover:-translate-y-1 motion-reduce:transform-none will-change-transform hover:bg-[#8c0808] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#A70909] focus-visible:ring-offset-2 focus-visible:ring-offset-white gap-3"
       >
-        <FontAwesomeIcon icon={faPhone} className="h-5 w-5 shrink-0" aria-hidden />
+        <span className="grid h-6 w-6 place-items-center">
+          <FontAwesomeIcon icon={faPhone} className="h-4 w-4 shrink-0 scale-[1.45]" aria-hidden />
+        </span>
         <span className="whitespace-nowrap leading-none text-[clamp(0.95rem,0.88rem+0.25vw,1rem)]">{phoneText}</span>
       </a>
       <a
         href={COMPANY.socials.line}
         target="_blank"
         rel="noopener noreferrer"
-        className="inline-flex min-w-[220px] items-center justify-center rounded-full bg-[#06C755] px-8 py-3 text-base font-semibold text-white shadow-lg shadow-[#06c755]/20 transition-transform duration-200 ease-out hover:-translate-y-1 will-change-transform hover:brightness-110 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#06C755] focus-visible:ring-offset-2 focus-visible:ring-offset-white gap-3"
+        className="inline-flex min-w-[min(220px,calc(100vw-4rem))] items-center justify-center rounded-full bg-[#06C755] px-8 py-3 text-base font-semibold text-white shadow-lg shadow-[#06c755]/20 transition-transform duration-200 ease-out hover:-translate-y-1 motion-reduce:transform-none will-change-transform hover:brightness-110 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#06C755] focus-visible:ring-offset-2 focus-visible:ring-offset-white gap-3"
       >
-        <FontAwesomeIcon icon={faLine} className="h-5 w-5 shrink-0" aria-hidden />
+        <span className="grid h-6 w-6 place-items-center">
+          <FontAwesomeIcon icon={faLine} className="h-4 w-4 shrink-0 scale-[1.45]" aria-hidden />
+        </span>
         <span className="whitespace-nowrap leading-none text-[clamp(0.95rem,0.88rem+0.25vw,1rem)]">{chatLabel}</span>
       </a>
       {emailLabel ? (
         <a
           href={`mailto:${COMPANY.email}`}
-          className="inline-flex min-w-[220px] items-center justify-center rounded-full border border-[#A70909]/50 bg-white px-8 py-3 text-base font-semibold text-[#A70909] shadow-sm transition-transform duration-200 ease-out hover:-translate-y-1 will-change-transform hover:bg-[#fff1f1] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#A70909] focus-visible:ring-offset-2 focus-visible:ring-offset-white gap-3"
+          className="inline-flex min-w-[min(220px,calc(100vw-4rem))] items-center justify-center rounded-full border border-[#A70909]/50 bg-white px-8 py-3 text-base font-semibold text-[#A70909] shadow-sm transition-transform duration-200 ease-out hover:-translate-y-1 motion-reduce:transform-none will-change-transform hover:bg-[#fff1f1] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#A70909] focus-visible:ring-offset-2 focus-visible:ring-offset-white gap-3"
         >
-          <FontAwesomeIcon icon={faEnvelope} className="h-5 w-5 shrink-0" aria-hidden />
+          <span className="grid h-6 w-6 place-items-center">
+            <FontAwesomeIcon icon={faEnvelope} className="h-4 w-4 shrink-0 scale-[1.45]" aria-hidden />
+          </span>
           <span className="whitespace-nowrap leading-none text-[clamp(0.95rem,0.88rem+0.25vw,1rem)]">{emailLabel}</span>
         </a>
       ) : null}
