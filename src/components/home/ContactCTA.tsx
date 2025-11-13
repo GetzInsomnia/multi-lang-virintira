@@ -62,7 +62,11 @@ function ContactCTAButtons({ triggerLabel, chatLabel, emailLabel, callLabel }: {
         className="inline-flex min-w-[min(220px,calc(100vw-4rem))] items-center justify-center rounded-full bg-[#06C755] px-8 py-3 text-base font-semibold text-white shadow-lg shadow-[#06c755]/20 transition-transform duration-200 ease-out hover:-translate-y-1 motion-reduce:transform-none will-change-transform hover:brightness-110 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#06C755] focus-visible:ring-offset-2 focus-visible:ring-offset-white gap-3"
       >
         <span className="grid h-6 w-6 place-items-center">
-          <FontAwesomeIcon icon={faLine} className="h-4 w-4 shrink-0 scale-[1.45]" aria-hidden />
+          <FontAwesomeIcon
+            icon={faLine}
+            className="h-4 w-4 shrink-0 scale-[1.85] -translate-y-[0.5px]"
+            aria-hidden
+          />
         </span>
         <span className="whitespace-nowrap leading-none text-[clamp(0.95rem,0.88rem+0.25vw,1rem)]">{chatLabel}</span>
       </a>

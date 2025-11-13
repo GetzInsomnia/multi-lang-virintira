@@ -100,7 +100,9 @@ export default async function HomePage({ params }: PageParams) {
     primary: ensureString(heroRaw.primary),
     typewriter: ensureStringArray(heroRaw.typewriter),
     emailHeading: ensureString(heroRaw.emailHeading),
-    emailButton: ensureString(heroRaw.emailButton),
+    emailButton: ensureString(
+      (heroRaw.emailButton as string) || tLayout('cta.consult')
+    ),
   };
 
   const aboutRaw = (tHome.raw('about') ?? {}) as Record<string, unknown>;
