@@ -92,6 +92,11 @@ export default async function HomePage({ params }: PageParams) {
   const tBreadcrumbs = await getTranslations({ locale, namespace: 'breadcrumbs' });
   const tPromotion = await getTranslations({ locale, namespace: 'promotion' });
 
+  const phoneDisplay =
+    locale === 'th' ? COMPANY.phoneDisplayTh : COMPANY.phoneDisplayEn;
+  const callLabel = tLayout('cta.call', { phone: phoneDisplay });
+  const consultLabel = tLayout('cta.consult', { phone: phoneDisplay });
+
   const heroRaw = (tHome.raw('hero') ?? {}) as Record<string, unknown>;
   const hero: HeroContent = {
     title: ensureString(heroRaw.title),
@@ -100,9 +105,7 @@ export default async function HomePage({ params }: PageParams) {
     primary: ensureString(heroRaw.primary),
     typewriter: ensureStringArray(heroRaw.typewriter),
     emailHeading: ensureString(heroRaw.emailHeading),
-    emailButton: ensureString(
-      (heroRaw.emailButton as string) || tLayout('cta.consult')
-    ),
+    emailButton: ensureString(consultLabel),
   };
 
   const aboutRaw = (tHome.raw('about') ?? {}) as Record<string, unknown>;
@@ -145,10 +148,6 @@ export default async function HomePage({ params }: PageParams) {
 
   const chatLabel = tLayout('cta.chat');
   const triggerLabel = tLayout('cta.trigger');
-  const phoneDisplay =
-    locale === 'th' ? COMPANY.phoneDisplayTh : COMPANY.phoneDisplayEn;
-  const callLabel = tLayout('cta.call', { phone: phoneDisplay });
-  const consultLabel = tLayout('cta.consult', { phone: phoneDisplay });
 
   const breadcrumbJsonLd = buildBreadcrumbJsonLd([
     { name: tBreadcrumbs('home'), path: `/${locale}` },
