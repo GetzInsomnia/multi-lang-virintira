@@ -34,7 +34,7 @@ export function HeroSection({
     : '';
   const locale = useLocale();
   const isLongLatin = ['de', 'nl'].includes(locale);
-  const needsFullWidth = ['ta', 'ar', 'fa', 'he'].includes(locale);
+  const needsFullWidth = ['ta', 'ar', 'fa', 'he', 'de'].includes(locale);
 
   return (
     <section

@@ -68,16 +68,16 @@ export function TypewriterText(props: LegacyProps | CompatProps) {
     <h2
       dir={isRTL ? "rtl" : "ltr"}
       style={{ fontWeight: 400 }}
-      className={`inline-flex max-w-full items-baseline gap-[0.75ch] align-middle text-lg lg:text-2xl text-[#A70909] leading-relaxed ${className}`}
+      className={`inline-block max-w-full align-middle text-lg lg:text-2xl text-[#A70909] leading-relaxed ${className}`}
       aria-live="polite"
     >
-      <span className="whitespace-pre-wrap">
+      <span className="inline-flex items-baseline gap-[0.75ch] whitespace-pre-wrap">
         {effectiveText.substring(0, subIndex)}
+        <span
+          aria-hidden
+          className="pointer-events-none select-none inline-block h-[1.05em] w-[0.09em] translate-y-[0.08em] rounded-full bg-current motion-safe:animate-[pulse_1.2s_ease-in-out_infinite] motion-reduce:animate-none"
+        />
       </span>
-      <span
-        aria-hidden
-        className="pointer-events-none select-none inline-block h-[1.05em] w-[0.09em] translate-y-[0.08em] rounded-full bg-current motion-safe:animate-[pulse_1.2s_ease-in-out_infinite] motion-reduce:animate-none"
-      />
     </h2>
   );
 }
