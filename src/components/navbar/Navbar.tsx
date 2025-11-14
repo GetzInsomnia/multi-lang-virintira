@@ -36,43 +36,36 @@ function hasActiveMega(columns: MegaMenuColumn[], currentPath: string) {
   );
 }
 
-type NavEntry = { type: 'link'; item: NavItem } | { type: 'mega' };
+type NavEntry = { type: 'link'; item: NavItem } | { type: 'mega'; item: NavItem };
 
 type NavbarProps = { data: NavbarData };
 
 // สร้างข้อมูลสำหรับ MobileMenu (ชั้นซ้อนแบบ legacy)
-function buildMobileItems(nav: NavItem[], columns: MegaMenuColumn[], triggerLabel: string): MenuItem[] {
+function buildMobileItems(nav: NavItem[], columns: MegaMenuColumn[]): MenuItem[] {
   const items: MenuItem[] = [];
-  const normalizedTriggerLabel = triggerLabel.trim().toLowerCase();
-  const matchesMegaTrigger = (item: NavItem) => {
-    const label = item.label.trim().toLowerCase();
-    const href = item.href?.trim().toLowerCase();
-    return label === normalizedTriggerLabel || href === '/under-construction';
-  };
 
-  if (nav.length > 0) {
-    const first = nav[0];
-    if (!matchesMegaTrigger(first)) {
-      items.push({ label: first.label, href: first.href, highlight: first.highlight });
+  const megaMenuSections =
+    columns.length > 0
+      ? columns.map((col) => ({
+          label: col.title,
+          items: col.items.map((entry) => ({ label: entry.label, href: entry.href })),
+        }))
+      : null;
+
+  nav.forEach((item, index) => {
+    const isServices = Boolean(megaMenuSections) && index === 1;
+
+    if (isServices) {
+      items.push({
+        label: item.label,
+        items: megaMenuSections ?? undefined,
+        highlight: item.highlight,
+      });
+      return;
     }
-  }
 
-  if (columns.length > 0) {
-    items.push({
-      label: triggerLabel,
-      href: '/under-construction',
-      items: columns.map((col) => ({
-        label: col.title,
-        items: col.items.map((it) => ({ label: it.label, href: it.href })),
-      })),
-    });
-  }
-
-  for (let i = 1; i < nav.length; i += 1) {
-    const item = nav[i];
-    if (matchesMegaTrigger(item)) continue;
     items.push({ label: item.label, href: item.href, highlight: item.highlight });
-  }
+  });
 
   return items;
 }
@@ -113,13 +106,31 @@ export default function Navbar({ data }: NavbarProps) {
   const hasMegaMenu = megaColumns.length > 0;
 
   const navEntries = useMemo<NavEntry[]>(() => {
-    const entries: NavEntry[] = [];
-    if (data.nav.length > 0) entries.push({ type: 'link', item: data.nav[0] });
-    if (hasMegaMenu) entries.push({ type: 'mega' });
-    for (let index = 1; index < data.nav.length; index += 1) {
-      entries.push({ type: 'link', item: data.nav[index] });
-    }
-    return entries;
+    if (!data.nav.length) return [];
+
+    const servicesIndex = data.nav.findIndex((item) => {
+      const normalizedHref = item.href?.trim().toLowerCase();
+      return (
+        normalizedHref === '/services' ||
+        normalizedHref === '/under-construction' ||
+        normalizedHref === '#services'
+      );
+    });
+
+    const normalizedServicesIndex =
+      servicesIndex >= 0
+        ? servicesIndex
+        : hasMegaMenu && data.nav.length > 1
+          ? 1
+          : -1;
+
+    return data.nav.map((item, idx) => {
+      const isServices = hasMegaMenu && idx === normalizedServicesIndex;
+      if (isServices) {
+        return { type: 'mega', item };
+      }
+      return { type: 'link', item };
+    });
   }, [data.nav, hasMegaMenu]);
 
   const megaActive = useMemo(
@@ -370,8 +381,8 @@ export default function Navbar({ data }: NavbarProps) {
   }, [compactActions]);
 
   const mobileItems = useMemo(
-    () => buildMobileItems(data.nav, data.megaMenu.columns, data.megaMenu.triggerLabel),
-    [data.nav, data.megaMenu.columns, data.megaMenu.triggerLabel],
+    () => buildMobileItems(data.nav, data.megaMenu.columns),
+    [data.nav, data.megaMenu.columns],
   );
 
   const languageCodes = useMemo(() => {
@@ -450,6 +461,7 @@ export default function Navbar({ data }: NavbarProps) {
               if (entry.type === 'mega') {
                 if (!hasMegaMenu) return null;
                 const isOpen = megaOpen || megaActive;
+                const { item } = entry;
                 return (
                   <div
                     key={`mega-${index}`}
@@ -460,17 +472,14 @@ export default function Navbar({ data }: NavbarProps) {
                     onBlur={scheduleMegaClose}
                   >
                     <NavLink
-                      href="#"
-                      label={data.megaMenu.triggerLabel}
+                      href={item.href || '#'}
+                      label={item.label}
                       active={isOpen}
-                      onClick={(event) => {
-                        event.preventDefault();
-                        if (isOpen) setMegaOpen(false);
-                        else {
-                          setMegaOpen(true);
-                          setSearchOpen(false);
-                          setLanguageOpen(false);
-                        }
+                      flame={Boolean(item.highlight)}
+                      onClick={() => {
+                        setMegaOpen(false);
+                        setSearchOpen(false);
+                        setLanguageOpen(false);
                       }}
                       ariaExpanded={isOpen}
                       ariaControls="mega-menu-panel"
