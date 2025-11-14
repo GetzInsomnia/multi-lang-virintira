@@ -1,0 +1,27 @@
+.typewriterWrapper {
+  position: relative;
+}
+
+.typewriterWrapper::after {
+  content: "";
+  display: inline-block;
+  width: 0.09em;
+  height: 1.05em;
+  margin-inline-start: 0.75ch;
+  border-radius: 9999px;
+  background-color: currentColor;
+  transform: translateY(0.08em);
+  vertical-align: baseline;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .typewriterWrapper::after {
+    animation: pulse 1.2s ease-in-out infinite;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .typewriterWrapper::after {
+    animation: none;
+  }
+}

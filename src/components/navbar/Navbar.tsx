@@ -43,10 +43,18 @@ type NavbarProps = { data: NavbarData };
 // สร้างข้อมูลสำหรับ MobileMenu (ชั้นซ้อนแบบ legacy)
 function buildMobileItems(nav: NavItem[], columns: MegaMenuColumn[], triggerLabel: string): MenuItem[] {
   const items: MenuItem[] = [];
+  const normalizedTriggerLabel = triggerLabel.trim().toLowerCase();
+  const matchesMegaTrigger = (item: NavItem) => {
+    const label = item.label.trim().toLowerCase();
+    const href = item.href?.trim().toLowerCase();
+    return label === normalizedTriggerLabel || href === '/under-construction';
+  };
 
   if (nav.length > 0) {
     const first = nav[0];
-    items.push({ label: first.label, href: first.href, highlight: first.highlight });
+    if (!matchesMegaTrigger(first)) {
+      items.push({ label: first.label, href: first.href, highlight: first.highlight });
+    }
   }
 
   if (columns.length > 0) {
@@ -61,7 +69,9 @@ function buildMobileItems(nav: NavItem[], columns: MegaMenuColumn[], triggerLabe
   }
 
   for (let i = 1; i < nav.length; i += 1) {
-    items.push({ label: nav[i].label, href: nav[i].href, highlight: nav[i].highlight });
+    const item = nav[i];
+    if (matchesMegaTrigger(item)) continue;
+    items.push({ label: item.label, href: item.href, highlight: item.highlight });
   }
 
   return items;

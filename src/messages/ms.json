@@ -103,35 +103,178 @@
         }
       ],
       "megaMenu": {
-        "triggerLabel": "Servis",
+        "triggerLabel": "Services",
         "columns": [
           {
-            "title": "Accounting services",
+            "title": "Registrations",
             "items": [
               {
-                "label": "Bookkeeping",
-                "description": "Daily transaction posting, reconciliations, monthly reports.",
-                "href": "/services/bookkeeping"
+                "label": "Company Limited",
+                "href": "/under-construction"
               },
               {
-                "label": "Payroll & social security",
-                "description": "Salary processing, payslips, and compliance filings.",
-                "href": "#services"
+                "label": "Limited Partnership",
+                "href": "/under-construction"
+              },
+              {
+                "label": "Foundation",
+                "href": "/under-construction"
+              },
+              {
+                "label": "Association",
+                "href": "/under-construction"
+              },
+              {
+                "label": "Commercial Registration",
+                "href": "/under-construction"
+              },
+              {
+                "label": "Employer Registration",
+                "href": "/under-construction"
+              },
+              {
+                "label": "VAT Registration",
+                "href": "/under-construction"
               }
             ]
           },
           {
-            "title": "Business insights",
+            "title": "Corp Amendment",
             "items": [
               {
-                "label": "Guides & checklists",
-                "description": "Templates that keep your team audit ready.",
-                "href": "/resources"
+                "label": "Corporate Name",
+                "href": "/under-construction"
               },
               {
-                "label": "Latest article",
-                "description": "Why bookkeeping discipline accelerates growth.",
-                "href": "/blog/bookkeeping-matters"
+                "label": "Corporate Seal",
+                "href": "/under-construction"
+              },
+              {
+                "label": "Director Information",
+                "href": "/under-construction"
+              },
+              {
+                "label": "Signing Authority",
+                "href": "/under-construction"
+              },
+              {
+                "label": "Shareholders / Share Structure",
+                "href": "/under-construction"
+              },
+              {
+                "label": "Capital Increase / Decrease",
+                "href": "/under-construction"
+              },
+              {
+                "label": "Address / Branch",
+                "href": "/under-construction"
+              },
+              {
+                "label": "Corporate Objectives",
+                "href": "/under-construction"
+              },
+              {
+                "label": "Corporate Dissolution",
+                "href": "/under-construction"
+              }
+            ]
+          },
+          {
+            "title": "Accounting & audit",
+            "items": [
+              {
+                "label": "Corporate bookkeeping",
+                "href": "/under-construction"
+              },
+              {
+                "label": "Monthly tax filings",
+                "href": "/under-construction"
+              },
+              {
+                "label": "Annual financial statements",
+                "href": "/under-construction"
+              },
+              {
+                "label": "Personal accounting",
+                "href": "/under-construction"
+              },
+              {
+                "label": "Audit services",
+                "href": "/under-construction"
+              },
+              {
+                "label": "Tax planning",
+                "href": "/under-construction"
+              },
+              {
+                "label": "Foreign taxpayer ID",
+                "href": "/under-construction"
+              }
+            ]
+          },
+          {
+            "title": "Licensing",
+            "items": [
+              {
+                "label": "Tourism business licence",
+                "href": "/under-construction"
+              },
+              {
+                "label": "FDA licence",
+                "href": "/under-construction"
+              },
+              {
+                "label": "Visa / work permit",
+                "href": "/under-construction"
+              },
+              {
+                "label": "BOI Certificate",
+                "href": "/under-construction"
+              }
+            ]
+          },
+          {
+            "title": "Digital marketing",
+            "items": [
+              {
+                "label": "Website development",
+                "href": "/under-construction"
+              },
+              {
+                "label": "Facebook Page",
+                "href": "/under-construction"
+              },
+              {
+                "label": "LINE OA",
+                "href": "/under-construction"
+              },
+              {
+                "label": "TikTok",
+                "href": "/under-construction"
+              },
+              {
+                "label": "YouTube",
+                "href": "/under-construction"
+              },
+              {
+                "label": "Video production",
+                "href": "/under-construction"
+              },
+              {
+                "label": "Paid ads",
+                "href": "/under-construction"
+              },
+              {
+                "label": "AI solutions",
+                "href": "/under-construction"
+              },
+              {
+                "label": "Odoo ERP",
+                "href": "/under-construction"
+              },
+              {
+                "label": "Custom software",
+                "href": "/under-construction"
               }
             ]
           }
