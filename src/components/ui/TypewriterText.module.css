@@ -5,12 +5,12 @@
 .typewriterWrapper::after {
   content: "";
   display: inline-block;
-  width: 0.09em;
+  width: 0.07em;
   height: 1.05em;
-  margin-inline-start: 0.75ch;
+  margin-inline-start: 0.38ch;
   border-radius: 9999px;
   background-color: currentColor;
-  transform: translateY(0.08em);
+  transform: translate(0.15ch, 0.08em);
   vertical-align: baseline;
   opacity: 1;
 }

@@ -71,7 +71,15 @@ export function HeroSection({
               : 'sm:inline-block sm:whitespace-nowrap';
             const smallWrap = 'max-[480px]:whitespace-normal max-[480px]:text-center';
             const longLatinExtras = isLongLatin
-              ? 'max-[640px]:hyphens-auto max-[414px]:break-words'
+              ? [
+                  'max-[640px]:hyphens-auto',
+                  'max-[414px]:break-words',
+                  locale === 'de'
+                    ? 'max-[480px]:break-all max-[480px]:[overflow-wrap:anywhere]'
+                    : '',
+                ]
+                  .join(' ')
+                  .trim()
               : '';
             return (
               <span
@@ -171,12 +179,12 @@ function HeroCTAButtons({
     <CTAReveal
       triggerLabel={triggerLabel}
       className="flex justify-center"
-      groupClassName="flex-col sm:flex-row"
+      groupClassName="flex-col sm:flex-row sm:items-stretch w-full max-w-[min(26rem,100%)]"
     >
       <a
         href={phoneHref}
         aria-label={phoneAriaLabel}
-        className="inline-flex min-w-[min(220px,calc(100vw-4rem))] items-center justify-center rounded-full bg-[#A70909] px-8 py-3 text-base font-semibold text-white shadow-lg shadow-[#a70909]/30 transition-transform duration-200 ease-out hover:-translate-y-1 motion-reduce:transform-none will-change-transform hover:bg-[#8c0808] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#A70909] focus-visible:ring-offset-2 focus-visible:ring-offset-white gap-3"
+        className="inline-flex w-full sm:flex-1 min-w-[min(220px,calc(100vw-4rem))] items-center justify-center rounded-full bg-[#A70909] px-8 py-3 text-base font-semibold text-white shadow-lg shadow-[#a70909]/30 transition-transform duration-200 ease-out hover:-translate-y-1 motion-reduce:transform-none will-change-transform hover:bg-[#8c0808] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#A70909] focus-visible:ring-offset-2 focus-visible:ring-offset-white gap-3"
       >
         <span className="grid h-6 w-6 place-items-center">
           <FontAwesomeIcon icon={faPhone} className="h-4 w-4 shrink-0 scale-[1.45]" aria-hidden />
@@ -187,7 +195,7 @@ function HeroCTAButtons({
         href={COMPANY.socials.line}
         target="_blank"
         rel="noopener noreferrer"
-        className="inline-flex min-w-[min(220px,calc(100vw-4rem))] items-center justify-center rounded-full bg-[#06C755] px-8 py-3 text-base font-semibold text-white shadow-lg shadow-[#06c755]/20 transition-transform duration-200 ease-out hover:-translate-y-1 motion-reduce:transform-none will-change-transform hover:brightness-110 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#06C755] focus-visible:ring-offset-2 focus-visible:ring-offset-white gap-3"
+        className="inline-flex w-full sm:flex-1 min-w-[min(220px,calc(100vw-4rem))] items-center justify-center rounded-full bg-[#06C755] px-8 py-3 text-base font-semibold text-white shadow-lg shadow-[#06c755]/20 transition-transform duration-200 ease-out hover:-translate-y-1 motion-reduce:transform-none will-change-transform hover:brightness-110 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#06C755] focus-visible:ring-offset-2 focus-visible:ring-offset-white gap-3"
       >
         <span className="grid h-6 w-6 place-items-center">
           <FontAwesomeIcon
@@ -201,7 +209,7 @@ function HeroCTAButtons({
       {emailLabel ? (
         <a
           href={`mailto:${COMPANY.email}`}
-          className="inline-flex min-w-[min(220px,calc(100vw-4rem))] items-center justify-center rounded-full border border-[#A70909]/50 bg-white px-8 py-3 text-base font-semibold text-[#A70909] shadow-sm transition-transform duration-200 ease-out hover:-translate-y-1 motion-reduce:transform-none will-change-transform hover:bg-[#fff1f1] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#A70909] focus-visible:ring-offset-2 focus-visible:ring-offset-white gap-3"
+          className="inline-flex w-full sm:flex-1 min-w-[min(220px,calc(100vw-4rem))] items-center justify-center rounded-full border border-[#A70909]/50 bg-white px-8 py-3 text-base font-semibold text-[#A70909] shadow-sm transition-transform duration-200 ease-out hover:-translate-y-1 motion-reduce:transform-none will-change-transform hover:bg-[#fff1f1] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#A70909] focus-visible:ring-offset-2 focus-visible:ring-offset-white gap-3"
         >
           <span className="grid h-6 w-6 place-items-center">
             <FontAwesomeIcon icon={faEnvelope} className="h-4 w-4 shrink-0 scale-[1.45]" aria-hidden />
