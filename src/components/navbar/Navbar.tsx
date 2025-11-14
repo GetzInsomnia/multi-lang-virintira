@@ -127,7 +127,10 @@ export default function Navbar({ data }: NavbarProps) {
     return data.nav.map((item, idx) => {
       const isServices = hasMegaMenu && idx === normalizedServicesIndex;
       if (isServices) {
-        return { type: 'mega', item };
+        const servicesHref = !item.href || item.href.trim().startsWith('#')
+          ? '/services'
+          : item.href;
+        return { type: 'mega', item: { ...item, href: servicesHref } };
       }
       return { type: 'link', item };
     });
@@ -472,7 +475,7 @@ export default function Navbar({ data }: NavbarProps) {
                     onBlur={scheduleMegaClose}
                   >
                     <NavLink
-                      href={item.href || '#'}
+                      href={item.href || '/services'}
                       label={item.label}
                       active={isOpen}
                       flame={Boolean(item.highlight)}

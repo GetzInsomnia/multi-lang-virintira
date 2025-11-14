@@ -194,6 +194,8 @@ export default function MobileMenuView({
     setLanguageExpanded(false);
   };
 
+  const sharedLabelClasses = 'inline-flex items-center gap-2 text-base font-normal';
+
   return (
     <div
       className={[
@@ -248,9 +250,11 @@ export default function MobileMenuView({
                   <button
                     type="button"
                     onClick={() => onSelectSubMenu?.(item.items!, item.label)}
-                    className="w-full text-left text-black hover:text-[#A70909] transition-colors font-normal text-base"
+                    className="w-full text-left text-black hover:text-[#A70909] transition-colors"
                   >
-                    {item.label}
+                    <span className={sharedLabelClasses}>
+                      <span>{item.label}</span>
+                    </span>
                   </button>
                 </li>
               );
@@ -262,21 +266,19 @@ export default function MobileMenuView({
                   <Link
                     href={normalizeInternalHref(item.href)}
                     onClick={onClose}
-                    className="block text-black hover:text-[#A70909] transition-colors font-normal text-base"
+                    className="block text-black hover:text-[#A70909] transition-colors"
                     prefetch
                     role="menuitem"
                   >
-                    {item.highlight ? (
-                      <>
-                        {item.label}{' '}
+                    <span className={sharedLabelClasses}>
+                      <span>{item.label}</span>
+                      {item.highlight ? (
                         <FontAwesomeIcon
                           icon={faFire}
-                          className="inline-block animate-bounce text-[#A70909]"
+                          className="h-4 w-4 text-[#A70909] animate-bounce"
                         />
-                      </>
-                    ) : (
-                      item.label
-                    )}
+                      ) : null}
+                    </span>
                   </Link>
                 </li>
               );
@@ -284,7 +286,11 @@ export default function MobileMenuView({
 
             return (
               <li key={key}>
-                <span className="text-black font-medium text-base">{item.label}</span>
+                <span className="text-black">
+                  <span className={sharedLabelClasses}>
+                    <span>{item.label}</span>
+                  </span>
+                </span>
               </li>
             );
           })}
