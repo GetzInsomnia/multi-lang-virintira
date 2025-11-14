@@ -12,16 +12,27 @@
   background-color: currentColor;
   transform: translateY(0.08em);
   vertical-align: baseline;
+  opacity: 1;
 }
 
 @media (prefers-reduced-motion: no-preference) {
   .typewriterWrapper::after {
-    animation: pulse 1.2s ease-in-out infinite;
+    animation: typewriterCaretPulse 1.2s ease-in-out infinite;
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
   .typewriterWrapper::after {
     animation: none;
+  }
+}
+
+@keyframes typewriterCaretPulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
   }
 }
