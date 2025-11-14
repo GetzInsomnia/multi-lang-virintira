@@ -3,6 +3,8 @@
 import { useEffect, useMemo, useState } from "react";
 import { useLocale } from "next-intl";
 
+import styles from "./TypewriterText.module.css";
+
 type LegacyProps = {
   /** ข้อความเดี่ยวตามสไตล์ legacy */
   text: string;
@@ -71,12 +73,8 @@ export function TypewriterText(props: LegacyProps | CompatProps) {
       className={`inline-block max-w-full align-middle text-lg lg:text-2xl text-[#A70909] leading-relaxed ${className}`}
       aria-live="polite"
     >
-      <span className="inline-flex items-baseline gap-[0.75ch] whitespace-pre-wrap">
+      <span className={`typewriter-wrapper inline-block whitespace-pre-wrap ${styles.typewriterWrapper}`}>
         {effectiveText.substring(0, subIndex)}
-        <span
-          aria-hidden
-          className="pointer-events-none select-none inline-block h-[1.05em] w-[0.09em] translate-y-[0.08em] rounded-full bg-current motion-safe:animate-[pulse_1.2s_ease-in-out_infinite] motion-reduce:animate-none"
-        />
       </span>
     </h2>
   );
