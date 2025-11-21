@@ -1,17 +1,20 @@
 .typewriterWrapper {
   position: relative;
+  display: inline-block;
+  padding-inline-end: 0.45ch;
 }
 
 .typewriterWrapper::after {
   content: "";
-  display: inline-block;
-  width: 0.07em;
+  position: absolute;
+  inset-inline-end: 0;
+  inset-block-end: 0;
+  display: block;
+  width: 0.08em;
   height: 1.05em;
-  margin-inline-start: 0.38ch;
   border-radius: 9999px;
   background-color: currentColor;
-  transform: translate(0.15ch, 0.08em);
-  vertical-align: baseline;
+  transform: translate(0, 0.08em);
   opacity: 1;
 }
 

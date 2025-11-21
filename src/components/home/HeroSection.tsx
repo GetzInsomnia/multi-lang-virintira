@@ -75,7 +75,11 @@ export function HeroSection({
                   'max-[640px]:hyphens-auto',
                   'max-[414px]:break-words',
                   locale === 'de'
-                    ? 'max-[480px]:break-all max-[480px]:[overflow-wrap:anywhere]'
+                    ? [
+                        'max-[480px]:[word-break:break-word]',
+                        'max-[480px]:[overflow-wrap:anywhere]',
+                        'max-[360px]:break-all',
+                      ].join(' ')
                     : '',
                 ]
                   .join(' ')
@@ -175,11 +179,17 @@ function HeroCTAButtons({
   const phoneHref = isThai ? 'tel:0928825556' : 'tel:+66928825556';
   const phoneText = isThai ? '092 882 5556' : '+669 2882 5556';
 
+  const needsWideCtas = locale === 'ta';
+  const baseGroupClass = 'flex-col sm:flex-row sm:items-stretch w-full';
+  const groupClassName = needsWideCtas
+    ? `${baseGroupClass} max-w-[min(30rem,100%)]`
+    : `${baseGroupClass} max-w-[min(26rem,100%)]`;
+
   return (
     <CTAReveal
       triggerLabel={triggerLabel}
       className="flex justify-center"
-      groupClassName="flex-col sm:flex-row sm:items-stretch w-full max-w-[min(26rem,100%)]"
+      groupClassName={groupClassName}
     >
       <a
         href={phoneHref}
