@@ -1,20 +1,22 @@
 .typewriterWrapper {
+  /* Keep wrapper inline-block so width auto-fits the text */
   position: relative;
   display: inline-block;
-  padding-inline-end: 0.45ch;
+  padding-inline-end: 0; /* no reserved column that detaches caret */
 }
 
 .typewriterWrapper::after {
   content: "";
-  position: absolute;
-  inset-inline-end: 0;
-  inset-block-end: 0;
-  display: block;
+  /* Inline pseudo-element that follows the last glyph */
+  display: inline-block;
   width: 0.08em;
   height: 1.05em;
   border-radius: 9999px;
   background-color: currentColor;
-  transform: translate(0, 0.08em);
+  /* Create visual gap using transform, not margin, to avoid wrapping */
+  margin-inline-start: 0;
+  vertical-align: baseline;
+  transform: translateX(0.18em);
   opacity: 1;
 }
 
@@ -29,6 +31,7 @@
     animation: none;
   }
 }
+
 
 @keyframes typewriterCaretPulse {
   0%,
