@@ -181,8 +181,10 @@ function HeroCTAButtons({
 
   const needsWideCtas = locale === 'ta';
   const baseGroupClass = 'flex-col sm:flex-row sm:items-stretch w-full';
+  // TA gets a slightly wider max width on sm+ so each of the 3 buttons
+  // has more interior room while keeping equal widths.
   const groupClassName = needsWideCtas
-    ? `${baseGroupClass} max-w-[min(30rem,100%)]`
+    ? `${baseGroupClass} max-w-[min(33rem,100%)]`
     : `${baseGroupClass} max-w-[min(26rem,100%)]`;
 
   return (
