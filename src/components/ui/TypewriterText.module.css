@@ -20,6 +20,10 @@
   opacity: 1;
 }
 
+[dir="rtl"] .typewriterWrapper::after {
+  transform: translateX(-0.18em);
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .typewriterWrapper::after {
     animation: typewriterCaretPulse 1.2s ease-in-out infinite;
