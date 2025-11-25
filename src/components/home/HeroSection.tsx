@@ -184,7 +184,7 @@ function HeroCTAButtons({
   // TA gets a slightly wider max width on sm+ so each of the 3 buttons
   // has more interior room while keeping equal widths.
   const groupClassName = needsWideCtas
-    ? `${baseGroupClass} max-w-[min(33rem,100%)]`
+    ? `${baseGroupClass} max-w-[min(36rem,100%)]`
     : `${baseGroupClass} max-w-[min(26rem,100%)]`;
 
   return (
