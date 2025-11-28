@@ -69,7 +69,7 @@ export default function CTAReveal({
 
   return (
     <div ref={outerRef} className={className}>
-      <div className="grid items-start justify-items-center">
+      <div className="grid w-full items-start justify-items-center">
         <button
           type="button"
           onClick={() => setOpen(true)}
@@ -91,7 +91,7 @@ export default function CTAReveal({
           id={triggerId}
           ref={groupRef}
           className={[
-            'col-start-1 row-start-1 flex items-center justify-center gap-3 transition-transform duration-300 ease-out',
+            'col-start-1 row-start-1 flex w-full items-center justify-center gap-3 transition-transform duration-300 ease-out',
             groupClassName ?? '',
             open ? 'pointer-events-auto scale-100 opacity-100' : 'pointer-events-none scale-95 opacity-0',
           ].join(' ')}

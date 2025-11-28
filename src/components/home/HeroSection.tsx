@@ -181,16 +181,23 @@ function HeroCTAButtons({
 
   const needsWideCtas = locale === 'ta';
   const baseGroupClass = 'flex-col sm:flex-row sm:items-stretch w-full';
-  // TA gets a slightly wider max width on sm+ so each of the 3 buttons
-  // has more interior room while keeping equal widths.
+  // Hero content column already uses max-w-[min(94vw,48rem)], reuse that so TA CTA row
+  // can align with the hero width while keeping equal-width buttons.
+  const heroMaxWidth = 'max-w-[min(94vw,48rem)]';
+  const defaultGroupMaxWidth = 'max-w-[min(26rem,100%)]';
+
   const groupClassName = needsWideCtas
-    ? `${baseGroupClass} max-w-[min(36rem,100%)]`
-    : `${baseGroupClass} max-w-[min(26rem,100%)]`;
+    ? `${baseGroupClass} w-full ${heroMaxWidth}`
+    : `${baseGroupClass} ${defaultGroupMaxWidth}`;
 
   return (
     <CTAReveal
       triggerLabel={triggerLabel}
-      className="flex justify-center"
+      className={
+        needsWideCtas
+          ? `flex w-full justify-center ${heroMaxWidth}`
+          : 'flex justify-center'
+      }
       groupClassName={groupClassName}
     >
       <a
