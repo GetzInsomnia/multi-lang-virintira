@@ -104,11 +104,11 @@
             "title": "Registrations",
             "items": [
               {
-                "label": "Company Limited",
+                "label": "Company (Co., Ltd.)",
                 "href": "/under-construction"
               },
               {
-                "label": "Limited Partnership",
+                "label": "Limited partnership",
                 "href": "/under-construction"
               },
               {
@@ -120,81 +120,81 @@
                 "href": "/under-construction"
               },
               {
-                "label": "Commercial Registration",
+                "label": "Commercial (shop)",
                 "href": "/under-construction"
               },
               {
-                "label": "Employer Registration",
+                "label": "Employer (SSO)",
                 "href": "/under-construction"
               },
               {
-                "label": "VAT Registration",
+                "label": "VAT",
                 "href": "/under-construction"
               }
             ]
           },
           {
-            "title": "Corp Amendment",
+            "title": "Corporate changes",
             "items": [
               {
-                "label": "Corporate Name",
+                "label": "Company name",
                 "href": "/under-construction"
               },
               {
-                "label": "Corporate Seal",
+                "label": "Company seal / stamp",
                 "href": "/under-construction"
               },
               {
-                "label": "Director Information",
+                "label": "Directors",
                 "href": "/under-construction"
               },
               {
-                "label": "Signing Authority",
+                "label": "Signing authority",
                 "href": "/under-construction"
               },
               {
-                "label": "Shareholders / Share Structure",
+                "label": "Shareholders / shares",
                 "href": "/under-construction"
               },
               {
-                "label": "Capital Increase / Decrease",
+                "label": "Capital",
                 "href": "/under-construction"
               },
               {
-                "label": "Address / Branch",
+                "label": "Address / branches",
                 "href": "/under-construction"
               },
               {
-                "label": "Corporate Objectives",
+                "label": "Objectives",
                 "href": "/under-construction"
               },
               {
-                "label": "Corporate Dissolution",
+                "label": "Dissolution",
                 "href": "/under-construction"
               }
             ]
           },
           {
-            "title": "Accounting & audit",
+            "title": "Accounting & Audit",
             "items": [
               {
-                "label": "Corporate bookkeeping",
+                "label": "Company accounts",
                 "href": "/under-construction"
               },
               {
-                "label": "Monthly tax filings",
+                "label": "Monthly tax",
                 "href": "/under-construction"
               },
               {
-                "label": "Annual financial statements",
+                "label": "Annual accounts",
                 "href": "/under-construction"
               },
               {
-                "label": "Personal accounting",
+                "label": "Personal accounts",
                 "href": "/under-construction"
               },
               {
-                "label": "Audit services",
+                "label": "Audit",
                 "href": "/under-construction"
               },
               {
@@ -202,7 +202,7 @@
                 "href": "/under-construction"
               },
               {
-                "label": "Foreign taxpayer ID",
+                "label": "Foreign tax ID",
                 "href": "/under-construction"
               }
             ]
@@ -211,19 +211,24 @@
             "title": "Licensing",
             "items": [
               {
-                "label": "Tourism business licence",
+                "label": "Tourism licence",
                 "href": "/under-construction"
               },
               {
-                "label": "FDA licence",
+                "label": "Thai FDA",
                 "href": "/under-construction"
               },
               {
-                "label": "Visa / work permit",
+                "label": "Visa & work permit",
                 "href": "/under-construction"
               },
               {
-                "label": "BOI Certificate",
+                "label": "BOI promotion",
+                "href": "/under-construction"
+              }
+              ,
+              {
+                "label": "Foreign business (FBL/FBC)",
                 "href": "/under-construction"
               }
             ]
@@ -232,7 +237,7 @@
             "title": "Digital marketing",
             "items": [
               {
-                "label": "Website development",
+                "label": "Website build",
                 "href": "/under-construction"
               },
               {

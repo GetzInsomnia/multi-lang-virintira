@@ -103,145 +103,150 @@
         }
       ],
       "megaMenu": {
-        "triggerLabel": "Services",
+        "triggerLabel": "サービス",
         "columns": [
           {
-            "title": "Registrations",
+            "title": "法人設立",
             "items": [
               {
-                "label": "Company Limited",
+                "label": "株式会社 (Co., Ltd.)",
                 "href": "/under-construction"
               },
               {
-                "label": "Limited Partnership",
+                "label": "合資会社 (L.P.)",
                 "href": "/under-construction"
               },
               {
-                "label": "Foundation",
+                "label": "財団法人",
                 "href": "/under-construction"
               },
               {
-                "label": "Association",
+                "label": "組合・協会",
                 "href": "/under-construction"
               },
               {
-                "label": "Commercial Registration",
+                "label": "商業登記 (店舗)",
                 "href": "/under-construction"
               },
               {
-                "label": "Employer Registration",
+                "label": "社会保険登録 (SSO)",
                 "href": "/under-construction"
               },
               {
-                "label": "VAT Registration",
+                "label": "VAT登録",
                 "href": "/under-construction"
               }
             ]
           },
           {
-            "title": "Corp Amendment",
+            "title": "登記変更",
             "items": [
               {
-                "label": "Corporate Name",
+                "label": "商号変更",
                 "href": "/under-construction"
               },
               {
-                "label": "Corporate Seal",
+                "label": "社印・実印",
                 "href": "/under-construction"
               },
               {
-                "label": "Director Information",
+                "label": "役員変更",
                 "href": "/under-construction"
               },
               {
-                "label": "Signing Authority",
+                "label": "署名権限",
                 "href": "/under-construction"
               },
               {
-                "label": "Shareholders / Share Structure",
+                "label": "株主 / 株式",
                 "href": "/under-construction"
               },
               {
-                "label": "Capital Increase / Decrease",
+                "label": "資本金",
                 "href": "/under-construction"
               },
               {
-                "label": "Address / Branch",
+                "label": "住所 / 支店",
                 "href": "/under-construction"
               },
               {
-                "label": "Corporate Objectives",
+                "label": "事業目的",
                 "href": "/under-construction"
               },
               {
-                "label": "Corporate Dissolution",
+                "label": "解散・清算",
                 "href": "/under-construction"
               }
             ]
           },
           {
-            "title": "Accounting & audit",
+            "title": "会計・監査",
             "items": [
               {
-                "label": "Corporate bookkeeping",
+                "label": "法人会計",
                 "href": "/under-construction"
               },
               {
-                "label": "Monthly tax filings",
+                "label": "月次税務",
                 "href": "/under-construction"
               },
               {
-                "label": "Annual financial statements",
+                "label": "年次決算",
                 "href": "/under-construction"
               },
               {
-                "label": "Personal accounting",
+                "label": "個人会計",
                 "href": "/under-construction"
               },
               {
-                "label": "Audit services",
+                "label": "会計監査",
                 "href": "/under-construction"
               },
               {
-                "label": "Tax planning",
+                "label": "節税対策",
                 "href": "/under-construction"
               },
               {
-                "label": "Foreign taxpayer ID",
+                "label": "外国納税者番号",
                 "href": "/under-construction"
               }
             ]
           },
           {
-            "title": "Licensing",
+            "title": "許認可",
             "items": [
               {
-                "label": "Tourism business licence",
+                "label": "旅行業ライセンス",
                 "href": "/under-construction"
               },
               {
-                "label": "FDA licence",
+                "label": "タイFDA",
                 "href": "/under-construction"
               },
               {
-                "label": "Visa / work permit",
+                "label": "ビザ・WP申請",
                 "href": "/under-construction"
               },
               {
-                "label": "BOI Certificate",
+                "label": "BOI 申請代行",
+                "href": "/under-construction"
+              }
+              ,
+              {
+                "label": "外国人事業許可 (FBL/FBC)",
                 "href": "/under-construction"
               }
             ]
           },
           {
-            "title": "Digital marketing",
+            "title": "デジタル",
             "items": [
               {
-                "label": "Website development",
+                "label": "Web制作",
                 "href": "/under-construction"
               },
               {
-                "label": "Facebook Page",
+                "label": "Facebook運用",
                 "href": "/under-construction"
               },
               {
@@ -257,15 +262,15 @@
                 "href": "/under-construction"
               },
               {
-                "label": "Video production",
+                "label": "動画制作",
                 "href": "/under-construction"
               },
               {
-                "label": "Paid ads",
+                "label": "Web広告運用",
                 "href": "/under-construction"
               },
               {
-                "label": "AI solutions",
+                "label": "AIソリューション",
                 "href": "/under-construction"
               },
               {
@@ -273,7 +278,7 @@
                 "href": "/under-construction"
               },
               {
-                "label": "Custom software",
+                "label": "システム開発",
                 "href": "/under-construction"
               }
             ]

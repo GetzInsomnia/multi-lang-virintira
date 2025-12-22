@@ -103,141 +103,146 @@
         }
       ],
       "megaMenu": {
-        "triggerLabel": "Services",
+        "triggerLabel": "சேவைகள்",
         "columns": [
           {
-            "title": "Registrations",
+            "title": "பதிவுகள்",
             "items": [
               {
-                "label": "Company Limited",
+                "label": "கம்பெனி (Co., Ltd.)",
                 "href": "/under-construction"
               },
               {
-                "label": "Limited Partnership",
+                "label": "லிமிடெட் பார்ட்னர்ஷிப்",
                 "href": "/under-construction"
               },
               {
-                "label": "Foundation",
+                "label": "பவுண்டேஷன்",
                 "href": "/under-construction"
               },
               {
-                "label": "Association",
+                "label": "அசோசியேஷன்",
                 "href": "/under-construction"
               },
               {
-                "label": "Commercial Registration",
+                "label": "கமர்ஷியல் (Shop)",
                 "href": "/under-construction"
               },
               {
-                "label": "Employer Registration",
+                "label": "எம்ப்ளாயர் (SSO)",
                 "href": "/under-construction"
               },
               {
-                "label": "VAT Registration",
+                "label": "VAT பதிவு",
                 "href": "/under-construction"
               }
             ]
           },
           {
-            "title": "Corp Amendment",
+            "title": "மாற்றங்கள்",
             "items": [
               {
-                "label": "Corporate Name",
+                "label": "கம்பெனி பெயர்",
                 "href": "/under-construction"
               },
               {
-                "label": "Corporate Seal",
+                "label": "கம்பெனி சீல்",
                 "href": "/under-construction"
               },
               {
-                "label": "Director Information",
+                "label": "டைரக்டர்கள்",
                 "href": "/under-construction"
               },
               {
-                "label": "Signing Authority",
+                "label": "சைனிங் பவர்",
                 "href": "/under-construction"
               },
               {
-                "label": "Shareholders / Share Structure",
+                "label": "ஷேர்ஹோல்டர்ஸ்",
                 "href": "/under-construction"
               },
               {
-                "label": "Capital Increase / Decrease",
+                "label": "கேபிட்டல் (மூலதனம்)",
                 "href": "/under-construction"
               },
               {
-                "label": "Address / Branch",
+                "label": "முகவரி / கிளை",
                 "href": "/under-construction"
               },
               {
-                "label": "Corporate Objectives",
+                "label": "நோக்கங்கள்",
                 "href": "/under-construction"
               },
               {
-                "label": "Corporate Dissolution",
+                "label": "கலைப்பு",
                 "href": "/under-construction"
               }
             ]
           },
           {
-            "title": "Accounting & audit",
+            "title": "கணக்கு & ஆடிட்",
             "items": [
               {
-                "label": "Corporate bookkeeping",
+                "label": "கம்பெனி அக்கவுண்ட்ஸ்",
                 "href": "/under-construction"
               },
               {
-                "label": "Monthly tax filings",
+                "label": "மாதாந்திர வரி",
                 "href": "/under-construction"
               },
               {
-                "label": "Annual financial statements",
+                "label": "ஆண்டு அறிக்கை",
                 "href": "/under-construction"
               },
               {
-                "label": "Personal accounting",
+                "label": "பர்சனல் அக்கவுண்ட்ஸ்",
                 "href": "/under-construction"
               },
               {
-                "label": "Audit services",
+                "label": "ஆடிட்",
                 "href": "/under-construction"
               },
               {
-                "label": "Tax planning",
+                "label": "வரி திட்டமிடல்",
                 "href": "/under-construction"
               },
               {
-                "label": "Foreign taxpayer ID",
+                "label": "வெளிநாட்டு வரி எண்",
                 "href": "/under-construction"
               }
             ]
           },
           {
-            "title": "Licensing",
+            "title": "லைசென்ஸ்",
             "items": [
               {
-                "label": "Tourism business licence",
+                "label": "டூரிசம் லைசென்ஸ்",
                 "href": "/under-construction"
               },
               {
-                "label": "FDA licence",
+                "label": "தாய்லாந்து FDA",
                 "href": "/under-construction"
               },
               {
-                "label": "Visa / work permit",
+                "label": "விசா & வொர்க் பர்மிட்",
                 "href": "/under-construction"
               },
               {
-                "label": "BOI Certificate",
+                "label": "BOI சலுகை",
+                "href": "/under-construction"
+              }
+              ,
+              {
+                "label": "FBL/FBC லைசென்ஸ்",
                 "href": "/under-construction"
               }
             ]
           },
           {
-            "title": "Digital marketing",
+            "title": "டிஜிட்டல் மார்க்கெட்டிங்",
             "items": [
               {
-                "label": "Website development",
+                "label": "வெப்சைட் உருவாக்கம்",
                 "href": "/under-construction"
               },
               {
@@ -257,15 +262,15 @@
                 "href": "/under-construction"
               },
               {
-                "label": "Video production",
+                "label": "வீடியோ தயாரிப்பு",
                 "href": "/under-construction"
               },
               {
-                "label": "Paid ads",
+                "label": "விளம்பரங்கள்",
                 "href": "/under-construction"
               },
               {
-                "label": "AI solutions",
+                "label": "AI தீர்வுகள்",
                 "href": "/under-construction"
               },
               {
@@ -273,7 +278,7 @@
                 "href": "/under-construction"
               },
               {
-                "label": "Custom software",
+                "label": "சாப்ட்வேர் டெவலப்மெண்ட்",
                 "href": "/under-construction"
               }
             ]

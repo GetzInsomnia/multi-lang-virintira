@@ -103,145 +103,150 @@
         }
       ],
       "megaMenu": {
-        "triggerLabel": "Services",
+        "triggerLabel": "Perkhidmatan",
         "columns": [
           {
-            "title": "Registrations",
+            "title": "Pendaftaran",
             "items": [
               {
-                "label": "Company Limited",
+                "label": "Syarikat (Co., Ltd.)",
                 "href": "/under-construction"
               },
               {
-                "label": "Limited Partnership",
+                "label": "Perkongsian Terhad",
                 "href": "/under-construction"
               },
               {
-                "label": "Foundation",
+                "label": "Yayasan",
                 "href": "/under-construction"
               },
               {
-                "label": "Association",
+                "label": "Persatuan",
                 "href": "/under-construction"
               },
               {
-                "label": "Commercial Registration",
+                "label": "Daftar Perniagaan",
                 "href": "/under-construction"
               },
               {
-                "label": "Employer Registration",
+                "label": "Majikan (SSO)",
                 "href": "/under-construction"
               },
               {
-                "label": "VAT Registration",
+                "label": "Cukai (VAT)",
                 "href": "/under-construction"
               }
             ]
           },
           {
-            "title": "Corp Amendment",
+            "title": "Pindaan",
             "items": [
               {
-                "label": "Corporate Name",
+                "label": "Nama Syarikat",
                 "href": "/under-construction"
               },
               {
-                "label": "Corporate Seal",
+                "label": "Cop Syarikat",
                 "href": "/under-construction"
               },
               {
-                "label": "Director Information",
+                "label": "Pengarah",
                 "href": "/under-construction"
               },
               {
-                "label": "Signing Authority",
+                "label": "Kuasa Menandatangani",
                 "href": "/under-construction"
               },
               {
-                "label": "Shareholders / Share Structure",
+                "label": "Pemegang Saham",
                 "href": "/under-construction"
               },
               {
-                "label": "Capital Increase / Decrease",
+                "label": "Modal Berbayar",
                 "href": "/under-construction"
               },
               {
-                "label": "Address / Branch",
+                "label": "Alamat / Cawangan",
                 "href": "/under-construction"
               },
               {
-                "label": "Corporate Objectives",
+                "label": "Objektif",
                 "href": "/under-construction"
               },
               {
-                "label": "Corporate Dissolution",
+                "label": "Pembubaran",
                 "href": "/under-construction"
               }
             ]
           },
           {
-            "title": "Accounting & audit",
+            "title": "Perakaunan",
             "items": [
               {
-                "label": "Corporate bookkeeping",
+                "label": "Akaun Syarikat",
                 "href": "/under-construction"
               },
               {
-                "label": "Monthly tax filings",
+                "label": "Cukai Bulanan",
                 "href": "/under-construction"
               },
               {
-                "label": "Annual financial statements",
+                "label": "Akaun Tahunan",
                 "href": "/under-construction"
               },
               {
-                "label": "Personal accounting",
+                "label": "Akaun Individu",
                 "href": "/under-construction"
               },
               {
-                "label": "Audit services",
+                "label": "Audit",
                 "href": "/under-construction"
               },
               {
-                "label": "Tax planning",
+                "label": "Perancangan Cukai",
                 "href": "/under-construction"
               },
               {
-                "label": "Foreign taxpayer ID",
+                "label": "Nombor Cukai Asing",
                 "href": "/under-construction"
               }
             ]
           },
           {
-            "title": "Licensing",
+            "title": "Lesen",
             "items": [
               {
-                "label": "Tourism business licence",
+                "label": "Lesen Pelancongan",
                 "href": "/under-construction"
               },
               {
-                "label": "FDA licence",
+                "label": "Thai FDA",
                 "href": "/under-construction"
               },
               {
-                "label": "Visa / work permit",
+                "label": "Visa & Permit Kerja",
                 "href": "/under-construction"
               },
               {
-                "label": "BOI Certificate",
+                "label": "Insentif BOI",
+                "href": "/under-construction"
+              }
+              ,
+              {
+                "label": "Lesen Perniagaan Asing (FBL/FBC)",
                 "href": "/under-construction"
               }
             ]
           },
           {
-            "title": "Digital marketing",
+            "title": "Pemasaran Digital",
             "items": [
               {
-                "label": "Website development",
+                "label": "Bina Laman Web",
                 "href": "/under-construction"
               },
               {
-                "label": "Facebook Page",
+                "label": "Laman Facebook",
                 "href": "/under-construction"
               },
               {
@@ -257,15 +262,15 @@
                 "href": "/under-construction"
               },
               {
-                "label": "Video production",
+                "label": "Produksi Video",
                 "href": "/under-construction"
               },
               {
-                "label": "Paid ads",
+                "label": "Iklan Berbayar",
                 "href": "/under-construction"
               },
               {
-                "label": "AI solutions",
+                "label": "Solusi AI",
                 "href": "/under-construction"
               },
               {
@@ -273,7 +278,7 @@
                 "href": "/under-construction"
               },
               {
-                "label": "Custom software",
+                "label": "Perisian Tersuai",
                 "href": "/under-construction"
               }
             ]

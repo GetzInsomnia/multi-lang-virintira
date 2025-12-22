@@ -103,145 +103,150 @@
         }
       ],
       "megaMenu": {
-        "triggerLabel": "Services",
+        "triggerLabel": "שירותים",
         "columns": [
           {
-            "title": "Registrations",
+            "title": "רישום",
             "items": [
               {
-                "label": "Company Limited",
+                "label": "\u200Eחברה בע\"מ (Co., Ltd.)\u200E",
                 "href": "/under-construction"
               },
               {
-                "label": "Limited Partnership",
+                "label": "שותפות מוגבלת",
                 "href": "/under-construction"
               },
               {
-                "label": "Foundation",
+                "label": "\u200Eקרן (Foundation)\u200E",
                 "href": "/under-construction"
               },
               {
-                "label": "Association",
+                "label": "עמותה",
                 "href": "/under-construction"
               },
               {
-                "label": "Commercial Registration",
+                "label": "רישום עסק",
                 "href": "/under-construction"
               },
               {
-                "label": "Employer Registration",
+                "label": "\u200Eרישום מעסיק (SSO)\u200E",
                 "href": "/under-construction"
               },
               {
-                "label": "VAT Registration",
+                "label": "\u200Eמע\"מ (VAT)\u200E",
                 "href": "/under-construction"
               }
             ]
           },
           {
-            "title": "Corp Amendment",
+            "title": "\u200Eשינויים\u200E",
             "items": [
               {
-                "label": "Corporate Name",
+                "label": "שם החברה",
                 "href": "/under-construction"
               },
               {
-                "label": "Corporate Seal",
+                "label": "חותמת חברה",
                 "href": "/under-construction"
               },
               {
-                "label": "Director Information",
+                "label": "דירקטורים",
                 "href": "/under-construction"
               },
               {
-                "label": "Signing Authority",
+                "label": "זכויות חתימה",
                 "href": "/under-construction"
               },
               {
-                "label": "Shareholders / Share Structure",
+                "label": "בעלי מניות",
                 "href": "/under-construction"
               },
               {
-                "label": "Capital Increase / Decrease",
+                "label": "הון חברה",
                 "href": "/under-construction"
               },
               {
-                "label": "Address / Branch",
+                "label": "כתובת / סניפים",
                 "href": "/under-construction"
               },
               {
-                "label": "Corporate Objectives",
+                "label": "מטרות החברה",
                 "href": "/under-construction"
               },
               {
-                "label": "Corporate Dissolution",
+                "label": "פירוק מרצון",
                 "href": "/under-construction"
               }
             ]
           },
           {
-            "title": "Accounting & audit",
+            "title": "\u200Eראיית חשבון\u200E",
             "items": [
               {
-                "label": "Corporate bookkeeping",
+                "label": "הנהלת חשבונות",
                 "href": "/under-construction"
               },
               {
-                "label": "Monthly tax filings",
+                "label": "דיווח חודשי",
                 "href": "/under-construction"
               },
               {
-                "label": "Annual financial statements",
+                "label": "\u200Eחשבונות פרטיים\u200E",
                 "href": "/under-construction"
               },
               {
-                "label": "Personal accounting",
+                "label": "\u200Eדוחות שנתיים\u200E",
                 "href": "/under-construction"
               },
               {
-                "label": "Audit services",
+                "label": "ביקורת ספרים",
                 "href": "/under-construction"
               },
               {
-                "label": "Tax planning",
+                "label": "תכנון מס",
                 "href": "/under-construction"
               },
               {
-                "label": "Foreign taxpayer ID",
+                "label": "מספר מס זר",
                 "href": "/under-construction"
               }
             ]
           },
           {
-            "title": "Licensing",
+            "title": "רישיונות",
             "items": [
               {
-                "label": "Tourism business licence",
+                "label": "\u200Eרישיון תיירות\u200E",
                 "href": "/under-construction"
               },
               {
-                "label": "FDA licence",
+                "label": "\u200Eאישור FDA תאי\u200E",
                 "href": "/under-construction"
               },
               {
-                "label": "Visa / work permit",
+                "label": "ויזה והיתר עבודה",
                 "href": "/under-construction"
               },
               {
-                "label": "BOI Certificate",
+                "label": "\u200Eעידוד השקעות (BOI)\u200E",
+                "href": "/under-construction"
+              }
+              ,
+              {
+                "label": "\u200Eרישיון עסק זר (FBL/FBC)\u200E",
                 "href": "/under-construction"
               }
             ]
           },
           {
-            "title": "Digital marketing",
+            "title": "שיווק דיגיטלי",
             "items": [
               {
-                "label": "Website development",
+                "label": "\u200Eבניית אתרים\u200E",
                 "href": "/under-construction"
               },
               {
-                "label": "Facebook Page",
+                "label": "\u200Eעמוד פייסבוק\u200E",
                 "href": "/under-construction"
               },
               {
@@ -257,15 +262,15 @@
                 "href": "/under-construction"
               },
               {
-                "label": "Video production",
+                "label": "הפקת וידאו",
                 "href": "/under-construction"
               },
               {
-                "label": "Paid ads",
+                "label": "קידום ממומן",
                 "href": "/under-construction"
               },
               {
-                "label": "AI solutions",
+                "label": "\u200Eפתרונות AI\u200E",
                 "href": "/under-construction"
               },
               {
@@ -273,7 +278,7 @@
                 "href": "/under-construction"
               },
               {
-                "label": "Custom software",
+                "label": "פיתוח תוכנה",
                 "href": "/under-construction"
               }
             ]

@@ -103,145 +103,150 @@
         }
       ],
       "megaMenu": {
-        "triggerLabel": "Services",
+        "triggerLabel": "Servizi",
         "columns": [
           {
-            "title": "Registrations",
+            "title": "Costituzione",
             "items": [
               {
-                "label": "Company Limited",
+                "label": "Società (Co., Ltd.)",
                 "href": "/under-construction"
               },
               {
-                "label": "Limited Partnership",
+                "label": "Società in accomandita",
                 "href": "/under-construction"
               },
               {
-                "label": "Foundation",
+                "label": "Fondazione",
                 "href": "/under-construction"
               },
               {
-                "label": "Association",
+                "label": "Associazione",
                 "href": "/under-construction"
               },
               {
-                "label": "Commercial Registration",
+                "label": "Registro imprese",
                 "href": "/under-construction"
               },
               {
-                "label": "Employer Registration",
+                "label": "Datore di lavoro (SSO)",
                 "href": "/under-construction"
               },
               {
-                "label": "VAT Registration",
+                "label": "Partita IVA",
                 "href": "/under-construction"
               }
             ]
           },
           {
-            "title": "Corp Amendment",
+            "title": "Modifiche",
             "items": [
               {
-                "label": "Corporate Name",
+                "label": "Ragione sociale",
                 "href": "/under-construction"
               },
               {
-                "label": "Corporate Seal",
+                "label": "Timbro aziendale",
                 "href": "/under-construction"
               },
               {
-                "label": "Director Information",
+                "label": "Amministratori",
                 "href": "/under-construction"
               },
               {
-                "label": "Signing Authority",
+                "label": "Poteri di firma",
                 "href": "/under-construction"
               },
               {
-                "label": "Shareholders / Share Structure",
+                "label": "Soci / Quote",
                 "href": "/under-construction"
               },
               {
-                "label": "Capital Increase / Decrease",
+                "label": "Capitale sociale",
                 "href": "/under-construction"
               },
               {
-                "label": "Address / Branch",
+                "label": "Sede / Filiali",
                 "href": "/under-construction"
               },
               {
-                "label": "Corporate Objectives",
+                "label": "Oggetto sociale",
                 "href": "/under-construction"
               },
               {
-                "label": "Corporate Dissolution",
+                "label": "Liquidazione",
                 "href": "/under-construction"
               }
             ]
           },
           {
-            "title": "Accounting & audit",
+            "title": "Contabilità",
             "items": [
               {
-                "label": "Corporate bookkeeping",
+                "label": "Contabilità aziendale",
                 "href": "/under-construction"
               },
               {
-                "label": "Monthly tax filings",
+                "label": "Imposte mensili",
                 "href": "/under-construction"
               },
               {
-                "label": "Annual financial statements",
+                "label": "Bilancio annuale",
                 "href": "/under-construction"
               },
               {
-                "label": "Personal accounting",
+                "label": "Contabilità personale",
                 "href": "/under-construction"
               },
               {
-                "label": "Audit services",
+                "label": "Revisione legale",
                 "href": "/under-construction"
               },
               {
-                "label": "Tax planning",
+                "label": "Pianificazione fiscale",
                 "href": "/under-construction"
               },
               {
-                "label": "Foreign taxpayer ID",
+                "label": "Codice fiscale estero",
                 "href": "/under-construction"
               }
             ]
           },
           {
-            "title": "Licensing",
+            "title": "Licenze",
             "items": [
               {
-                "label": "Tourism business licence",
+                "label": "Licenza turistica",
                 "href": "/under-construction"
               },
               {
-                "label": "FDA licence",
+                "label": "Thai FDA",
                 "href": "/under-construction"
               },
               {
-                "label": "Visa / work permit",
+                "label": "Visto e Permesso",
                 "href": "/under-construction"
               },
               {
-                "label": "BOI Certificate",
+                "label": "Promozione BOI",
+                "href": "/under-construction"
+              }
+              ,
+              {
+                "label": "Licenza affari esteri (FBL/FBC)",
                 "href": "/under-construction"
               }
             ]
           },
           {
-            "title": "Digital marketing",
+            "title": "Digital Marketing",
             "items": [
               {
-                "label": "Website development",
+                "label": "Sviluppo siti web",
                 "href": "/under-construction"
               },
               {
-                "label": "Facebook Page",
+                "label": "Pagina Facebook",
                 "href": "/under-construction"
               },
               {
@@ -257,15 +262,15 @@
                 "href": "/under-construction"
               },
               {
-                "label": "Video production",
+                "label": "Produzione video",
                 "href": "/under-construction"
               },
               {
-                "label": "Paid ads",
+                "label": "Annunci a pagamento",
                 "href": "/under-construction"
               },
               {
-                "label": "AI solutions",
+                "label": "Soluzioni AI",
                 "href": "/under-construction"
               },
               {
@@ -273,7 +278,7 @@
                 "href": "/under-construction"
               },
               {
-                "label": "Custom software",
+                "label": "Software su misura",
                 "href": "/under-construction"
               }
             ]

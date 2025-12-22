@@ -103,145 +103,150 @@
         }
       ],
       "megaMenu": {
-        "triggerLabel": "Services",
+        "triggerLabel": "服務項目",
         "columns": [
           {
-            "title": "Registrations",
+            "title": "公司註冊",
             "items": [
               {
-                "label": "Company Limited",
+                "label": "有限公司",
                 "href": "/under-construction"
               },
               {
-                "label": "Limited Partnership",
+                "label": "有限合夥",
                 "href": "/under-construction"
               },
               {
-                "label": "Foundation",
+                "label": "基金會",
                 "href": "/under-construction"
               },
               {
-                "label": "Association",
+                "label": "協會",
                 "href": "/under-construction"
               },
               {
-                "label": "Commercial Registration",
+                "label": "商業登記 (店鋪)",
                 "href": "/under-construction"
               },
               {
-                "label": "Employer Registration",
+                "label": "雇主登記 (SSO)",
                 "href": "/under-construction"
               },
               {
-                "label": "VAT Registration",
+                "label": "增值稅 (VAT)",
                 "href": "/under-construction"
               }
             ]
           },
           {
-            "title": "Corp Amendment",
+            "title": "公司變更",
             "items": [
               {
-                "label": "Corporate Name",
+                "label": "公司名稱",
                 "href": "/under-construction"
               },
               {
-                "label": "Corporate Seal",
+                "label": "公司印章",
                 "href": "/under-construction"
               },
               {
-                "label": "Director Information",
+                "label": "董事資訊",
                 "href": "/under-construction"
               },
               {
-                "label": "Signing Authority",
+                "label": "簽署權限",
                 "href": "/under-construction"
               },
               {
-                "label": "Shareholders / Share Structure",
+                "label": "股東 / 股權",
                 "href": "/under-construction"
               },
               {
-                "label": "Capital Increase / Decrease",
+                "label": "註冊資本",
                 "href": "/under-construction"
               },
               {
-                "label": "Address / Branch",
+                "label": "地址 / 分支",
                 "href": "/under-construction"
               },
               {
-                "label": "Corporate Objectives",
+                "label": "營業項目",
                 "href": "/under-construction"
               },
               {
-                "label": "Corporate Dissolution",
+                "label": "公司註銷",
                 "href": "/under-construction"
               }
             ]
           },
           {
-            "title": "Accounting & audit",
+            "title": "會計審計",
             "items": [
               {
-                "label": "Corporate bookkeeping",
+                "label": "公司帳務",
                 "href": "/under-construction"
               },
               {
-                "label": "Monthly tax filings",
+                "label": "每月報稅",
                 "href": "/under-construction"
               },
               {
-                "label": "Annual financial statements",
+                "label": "年度財報",
                 "href": "/under-construction"
               },
               {
-                "label": "Personal accounting",
+                "label": "個人帳務",
                 "href": "/under-construction"
               },
               {
-                "label": "Audit services",
+                "label": "審計服務",
                 "href": "/under-construction"
               },
               {
-                "label": "Tax planning",
+                "label": "稅務規劃",
                 "href": "/under-construction"
               },
               {
-                "label": "Foreign taxpayer ID",
+                "label": "外國稅號",
                 "href": "/under-construction"
               }
             ]
           },
           {
-            "title": "Licensing",
+            "title": "許可證照",
             "items": [
               {
-                "label": "Tourism business licence",
+                "label": "旅遊執照",
                 "href": "/under-construction"
               },
               {
-                "label": "FDA licence",
+                "label": "泰國 FDA",
                 "href": "/under-construction"
               },
               {
-                "label": "Visa / work permit",
+                "label": "簽證 / 工作證",
                 "href": "/under-construction"
               },
               {
-                "label": "BOI Certificate",
+                "label": "BOI 投資優惠",
+                "href": "/under-construction"
+              }
+              ,
+              {
+                "label": "外商經營許可 (FBL / FBC)",
                 "href": "/under-construction"
               }
             ]
           },
           {
-            "title": "Digital marketing",
+            "title": "數位行銷",
             "items": [
               {
-                "label": "Website development",
+                "label": "網站架設",
                 "href": "/under-construction"
               },
               {
-                "label": "Facebook Page",
+                "label": "Facebook 粉專",
                 "href": "/under-construction"
               },
               {
@@ -257,15 +262,15 @@
                 "href": "/under-construction"
               },
               {
-                "label": "Video production",
+                "label": "影片製作",
                 "href": "/under-construction"
               },
               {
-                "label": "Paid ads",
+                "label": "付費廣告",
                 "href": "/under-construction"
               },
               {
-                "label": "AI solutions",
+                "label": "AI 解決方案",
                 "href": "/under-construction"
               },
               {
@@ -273,7 +278,7 @@
                 "href": "/under-construction"
               },
               {
-                "label": "Custom software",
+                "label": "客製化軟體",
                 "href": "/under-construction"
               }
             ]

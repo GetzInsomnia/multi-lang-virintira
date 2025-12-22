@@ -103,145 +103,150 @@
         }
       ],
       "megaMenu": {
-        "triggerLabel": "Services",
+        "triggerLabel": "الخدمات",
         "columns": [
           {
-            "title": "Registrations",
+            "title": "التسجيلات",
             "items": [
               {
-                "label": "Company Limited",
+                "label": "\u200Eشركة (Co., Ltd.)\u200E",
                 "href": "/under-construction"
               },
               {
-                "label": "Limited Partnership",
+                "label": "شراكة محدودة",
                 "href": "/under-construction"
               },
               {
-                "label": "Foundation",
+                "label": "مؤسسة",
                 "href": "/under-construction"
               },
               {
-                "label": "Association",
+                "label": "جمعية",
                 "href": "/under-construction"
               },
               {
-                "label": "Commercial Registration",
+                "label": "سجل تجاري",
                 "href": "/under-construction"
               },
               {
-                "label": "Employer Registration",
+                "label": "\u200Eصاحب العمل (SSO)\u200E",
                 "href": "/under-construction"
               },
               {
-                "label": "VAT Registration",
+                "label": "ضريبة القيمة المضافة",
                 "href": "/under-construction"
               }
             ]
           },
           {
-            "title": "Corp Amendment",
+            "title": "تعديلات الشركة",
             "items": [
               {
-                "label": "Corporate Name",
+                "label": "اسم الشركة",
                 "href": "/under-construction"
               },
               {
-                "label": "Corporate Seal",
+                "label": "ختم الشركة",
                 "href": "/under-construction"
               },
               {
-                "label": "Director Information",
+                "label": "المديرين",
                 "href": "/under-construction"
               },
               {
-                "label": "Signing Authority",
+                "label": "صلاحية التوقيع",
                 "href": "/under-construction"
               },
               {
-                "label": "Shareholders / Share Structure",
+                "label": "المساهمون / الأسهم",
                 "href": "/under-construction"
               },
               {
-                "label": "Capital Increase / Decrease",
+                "label": "رأس المال",
                 "href": "/under-construction"
               },
               {
-                "label": "Address / Branch",
+                "label": "العنوان / الفروع",
                 "href": "/under-construction"
               },
               {
-                "label": "Corporate Objectives",
+                "label": "أهداف الشركة",
                 "href": "/under-construction"
               },
               {
-                "label": "Corporate Dissolution",
+                "label": "تصفية الشركة",
                 "href": "/under-construction"
               }
             ]
           },
           {
-            "title": "Accounting & audit",
+            "title": "المحاسبة والتدقيق",
             "items": [
               {
-                "label": "Corporate bookkeeping",
+                "label": "حسابات الشركة",
                 "href": "/under-construction"
               },
               {
-                "label": "Monthly tax filings",
+                "label": "ضرائب شهرية",
                 "href": "/under-construction"
               },
               {
-                "label": "Annual financial statements",
+                "label": "حسابات سنوية",
                 "href": "/under-construction"
               },
               {
-                "label": "Personal accounting",
+                "label": "حسابات شخصية",
                 "href": "/under-construction"
               },
               {
-                "label": "Audit services",
+                "label": "تدقيق الحسابات",
                 "href": "/under-construction"
               },
               {
-                "label": "Tax planning",
+                "label": "تخطيط ضريبي",
                 "href": "/under-construction"
               },
               {
-                "label": "Foreign taxpayer ID",
+                "label": "رقم ضريبي أجنبي",
                 "href": "/under-construction"
               }
             ]
           },
           {
-            "title": "Licensing",
+            "title": "التراخيص",
             "items": [
               {
-                "label": "Tourism business licence",
+                "label": "رخصة سياحة",
                 "href": "/under-construction"
               },
               {
-                "label": "FDA licence",
+                "label": "\u200Eرخصة FDA\u200E",
                 "href": "/under-construction"
               },
               {
-                "label": "Visa / work permit",
+                "label": "فيزا وتصريح عمل",
                 "href": "/under-construction"
               },
               {
-                "label": "BOI Certificate",
+                "label": "\u200Eترويج BOI\u200E",
+                "href": "/under-construction"
+              }
+              ,
+              {
+                "label": "\u200Eرخصة أعمال أجنبية (FBL/FBC)\u200E",
                 "href": "/under-construction"
               }
             ]
           },
           {
-            "title": "Digital marketing",
+            "title": "التسويق الرقمي",
             "items": [
               {
-                "label": "Website development",
+                "label": "تصميم مواقع",
                 "href": "/under-construction"
               },
               {
-                "label": "Facebook Page",
+                "label": "صفحة فيسبوك",
                 "href": "/under-construction"
               },
               {
@@ -257,15 +262,15 @@
                 "href": "/under-construction"
               },
               {
-                "label": "Video production",
+                "label": "إنتاج فيديو",
                 "href": "/under-construction"
               },
               {
-                "label": "Paid ads",
+                "label": "إعلانات ممولة",
                 "href": "/under-construction"
               },
               {
-                "label": "AI solutions",
+                "label": "حلول الذكاء الاصطناعي",
                 "href": "/under-construction"
               },
               {
@@ -273,7 +278,7 @@
                 "href": "/under-construction"
               },
               {
-                "label": "Custom software",
+                "label": "برمجة خاصة",
                 "href": "/under-construction"
               }
             ]

@@ -103,145 +103,150 @@
         }
       ],
       "megaMenu": {
-        "triggerLabel": "Services",
+        "triggerLabel": "服务项目",
         "columns": [
           {
-            "title": "Registrations",
+            "title": "公司注册",
             "items": [
               {
-                "label": "Company Limited",
+                "label": "有限公司",
                 "href": "/under-construction"
               },
               {
-                "label": "Limited Partnership",
+                "label": "有限合伙",
                 "href": "/under-construction"
               },
               {
-                "label": "Foundation",
+                "label": "基金会",
                 "href": "/under-construction"
               },
               {
-                "label": "Association",
+                "label": "协会",
                 "href": "/under-construction"
               },
               {
-                "label": "Commercial Registration",
+                "label": "商业登记 (店铺)",
                 "href": "/under-construction"
               },
               {
-                "label": "Employer Registration",
+                "label": "雇主登记 (SSO)",
                 "href": "/under-construction"
               },
               {
-                "label": "VAT Registration",
+                "label": "增值税 (VAT)",
                 "href": "/under-construction"
               }
             ]
           },
           {
-            "title": "Corp Amendment",
+            "title": "公司变更",
             "items": [
               {
-                "label": "Corporate Name",
+                "label": "公司名称",
                 "href": "/under-construction"
               },
               {
-                "label": "Corporate Seal",
+                "label": "公司公章",
                 "href": "/under-construction"
               },
               {
-                "label": "Director Information",
+                "label": "董事信息",
                 "href": "/under-construction"
               },
               {
-                "label": "Signing Authority",
+                "label": "签字权限",
                 "href": "/under-construction"
               },
               {
-                "label": "Shareholders / Share Structure",
+                "label": "股东 / 股权",
                 "href": "/under-construction"
               },
               {
-                "label": "Capital Increase / Decrease",
+                "label": "注册资本",
                 "href": "/under-construction"
               },
               {
-                "label": "Address / Branch",
+                "label": "地址 / 分支",
                 "href": "/under-construction"
               },
               {
-                "label": "Corporate Objectives",
+                "label": "经营范围",
                 "href": "/under-construction"
               },
               {
-                "label": "Corporate Dissolution",
+                "label": "公司注销",
                 "href": "/under-construction"
               }
             ]
           },
           {
-            "title": "Accounting & audit",
+            "title": "会计审计",
             "items": [
               {
-                "label": "Corporate bookkeeping",
+                "label": "公司账务",
                 "href": "/under-construction"
               },
               {
-                "label": "Monthly tax filings",
+                "label": "每月报税",
                 "href": "/under-construction"
               },
               {
-                "label": "Annual financial statements",
+                "label": "年度财报",
                 "href": "/under-construction"
               },
               {
-                "label": "Personal accounting",
+                "label": "个人账务",
                 "href": "/under-construction"
               },
               {
-                "label": "Audit services",
+                "label": "审计服务",
                 "href": "/under-construction"
               },
               {
-                "label": "Tax planning",
+                "label": "税务筹划",
                 "href": "/under-construction"
               },
               {
-                "label": "Foreign taxpayer ID",
+                "label": "外国税号",
                 "href": "/under-construction"
               }
             ]
           },
           {
-            "title": "Licensing",
+            "title": "许可执照",
             "items": [
               {
-                "label": "Tourism business licence",
+                "label": "旅游执照",
                 "href": "/under-construction"
               },
               {
-                "label": "FDA licence",
+                "label": "泰国 FDA",
                 "href": "/under-construction"
               },
               {
-                "label": "Visa / work permit",
+                "label": "签证 / 工作证",
                 "href": "/under-construction"
               },
               {
-                "label": "BOI Certificate",
+                "label": "BOI 投资优惠",
+                "href": "/under-construction"
+              }
+              ,
+              {
+                "label": "外商经营许可 (FBL / FBC)",
                 "href": "/under-construction"
               }
             ]
           },
           {
-            "title": "Digital marketing",
+            "title": "数字营销",
             "items": [
               {
-                "label": "Website development",
+                "label": "网站建设",
                 "href": "/under-construction"
               },
               {
-                "label": "Facebook Page",
+                "label": "Facebook 专页",
                 "href": "/under-construction"
               },
               {
@@ -257,15 +262,15 @@
                 "href": "/under-construction"
               },
               {
-                "label": "Video production",
+                "label": "视频制作",
                 "href": "/under-construction"
               },
               {
-                "label": "Paid ads",
+                "label": "付费广告",
                 "href": "/under-construction"
               },
               {
-                "label": "AI solutions",
+                "label": "AI 解决方案",
                 "href": "/under-construction"
               },
               {
@@ -273,7 +278,7 @@
                 "href": "/under-construction"
               },
               {
-                "label": "Custom software",
+                "label": "定制软件",
                 "href": "/under-construction"
               }
             ]

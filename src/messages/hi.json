@@ -103,141 +103,146 @@
         }
       ],
       "megaMenu": {
-        "triggerLabel": "Services",
+        "triggerLabel": "सेवाएँ",
         "columns": [
           {
-            "title": "Registrations",
+            "title": "पंजीकरण",
             "items": [
               {
-                "label": "Company Limited",
+                "label": "कंपनी (Co., Ltd.)",
                 "href": "/under-construction"
               },
               {
-                "label": "Limited Partnership",
+                "label": "लिमिटेड पार्टनरशिप",
                 "href": "/under-construction"
               },
               {
-                "label": "Foundation",
+                "label": "फाउंडेशन",
                 "href": "/under-construction"
               },
               {
-                "label": "Association",
+                "label": "एसोसिएशन",
                 "href": "/under-construction"
               },
               {
-                "label": "Commercial Registration",
+                "label": "व्यावसायिक पंजीकरण",
                 "href": "/under-construction"
               },
               {
-                "label": "Employer Registration",
+                "label": "नियोक्ता (SSO)",
                 "href": "/under-construction"
               },
               {
-                "label": "VAT Registration",
+                "label": "VAT पंजीकरण",
                 "href": "/under-construction"
               }
             ]
           },
           {
-            "title": "Corp Amendment",
+            "title": "कंपनी बदलाव",
             "items": [
               {
-                "label": "Corporate Name",
+                "label": "कंपनी का नाम",
                 "href": "/under-construction"
               },
               {
-                "label": "Corporate Seal",
+                "label": "कंपनी की मुहर",
                 "href": "/under-construction"
               },
               {
-                "label": "Director Information",
+                "label": "निदेशक",
                 "href": "/under-construction"
               },
               {
-                "label": "Signing Authority",
+                "label": "हस्ताक्षर अधिकार",
                 "href": "/under-construction"
               },
               {
-                "label": "Shareholders / Share Structure",
+                "label": "शेयरधारक / शेयर",
                 "href": "/under-construction"
               },
               {
-                "label": "Capital Increase / Decrease",
+                "label": "पूंजी",
                 "href": "/under-construction"
               },
               {
-                "label": "Address / Branch",
+                "label": "पता / शाखाएँ",
                 "href": "/under-construction"
               },
               {
-                "label": "Corporate Objectives",
+                "label": "उद्देश्य",
                 "href": "/under-construction"
               },
               {
-                "label": "Corporate Dissolution",
+                "label": "समापन",
                 "href": "/under-construction"
               }
             ]
           },
           {
-            "title": "Accounting & audit",
+            "title": "लेखांकन & ऑडिट",
             "items": [
               {
-                "label": "Corporate bookkeeping",
+                "label": "कंपनी खाते",
                 "href": "/under-construction"
               },
               {
-                "label": "Monthly tax filings",
+                "label": "मासिक टैक्स",
                 "href": "/under-construction"
               },
               {
-                "label": "Annual financial statements",
+                "label": "वार्षिक खाते",
                 "href": "/under-construction"
               },
               {
-                "label": "Personal accounting",
+                "label": "व्यक्तिगत खाते",
                 "href": "/under-construction"
               },
               {
-                "label": "Audit services",
+                "label": "ऑडिट",
                 "href": "/under-construction"
               },
               {
-                "label": "Tax planning",
+                "label": "टैक्स प्लानिंग",
                 "href": "/under-construction"
               },
               {
-                "label": "Foreign taxpayer ID",
+                "label": "विदेशी टैक्स ID",
                 "href": "/under-construction"
               }
             ]
           },
           {
-            "title": "Licensing",
+            "title": "लाइसेंस",
             "items": [
               {
-                "label": "Tourism business licence",
+                "label": "पर्यटन लाइसेंस",
                 "href": "/under-construction"
               },
               {
-                "label": "FDA licence",
+                "label": "थाई FDA",
                 "href": "/under-construction"
               },
               {
-                "label": "Visa / work permit",
+                "label": "वीज़ा & वर्क परमिट",
                 "href": "/under-construction"
               },
               {
-                "label": "BOI Certificate",
+                "label": "BOI प्रोत्साहन",
+                "href": "/under-construction"
+              }
+              ,
+              {
+                "label": "विदेशी बिज़नेस (FBL/FBC)",
                 "href": "/under-construction"
               }
             ]
           },
           {
-            "title": "Digital marketing",
+            "title": "डिजिटल मार्केटिंग",
             "items": [
               {
-                "label": "Website development",
+                "label": "वेबसाइट निर्माण",
                 "href": "/under-construction"
               },
               {
@@ -257,15 +262,15 @@
                 "href": "/under-construction"
               },
               {
-                "label": "Video production",
+                "label": "वीडियो प्रोडक्शन",
                 "href": "/under-construction"
               },
               {
-                "label": "Paid ads",
+                "label": "पेड ऐड्स (Ads)",
                 "href": "/under-construction"
               },
               {
-                "label": "AI solutions",
+                "label": "AI समाधान",
                 "href": "/under-construction"
               },
               {
@@ -273,7 +278,7 @@
                 "href": "/under-construction"
               },
               {
-                "label": "Custom software",
+                "label": "कस्टम सॉफ़्टवेयर",
                 "href": "/under-construction"
               }
             ]
