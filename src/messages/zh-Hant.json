@@ -554,6 +554,50 @@
     }
   },
   "services": {
+    "categories": {
+      "registrations": {
+        "title": "Registrations",
+        "summary": "Entity setup and statutory filings."
+      },
+      "corporate-changes": {
+        "title": "Corporate changes",
+        "summary": "Update and maintain company records."
+      },
+      "accounting-audit": {
+        "title": "Accounting & Audit",
+        "summary": "Compliance, reporting, and assurance."
+      },
+      "licensing": {
+        "title": "Licensing",
+        "summary": "Business permits and sector approvals."
+      },
+      "digital-marketing": {
+        "title": "Digital marketing",
+        "summary": "Online visibility and growth."
+      }
+    },
+    "items": {
+      "registration": {
+        "title": "Company registration",
+        "summary": "Complete registration for limited companies and partnerships with expert guidance."
+      },
+      "edit-info": {
+        "title": "Corporate information updates",
+        "summary": "Accurate, timely updates to critical company information."
+      },
+      "monthly-bookkeeping": {
+        "title": "Monthly bookkeeping",
+        "summary": "Accurate bookkeeping and monthly tax filing with every document handled for you."
+      },
+      "close-financial": {
+        "title": "Financial statement closing",
+        "summary": "Certified auditors prepare and review your annual financial statements."
+      },
+      "tax-planning": {
+        "title": "Tax planning",
+        "summary": "Strategic tax planning that keeps your business compliant and efficient."
+      }
+    },
     "bookkeeping": {
       "hero": {
         "title": "Bookkeeping that scales with your ambition",

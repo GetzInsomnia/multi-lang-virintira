@@ -5,13 +5,14 @@ import { StructuredData } from '@/components/common/StructuredData';
 import { ScrollToHero } from '@/components/common/ScrollToHero';
 import { HeroSection, type HeroContent } from '@/components/home/HeroSection';
 import { AboutSection } from '@/components/home/AboutSection';
-import { PopularServices, type ServiceItem } from '@/components/home/PopularServices';
+import { PopularServices, type ServiceCardItem } from '@/components/home/PopularServices';
 import { WhyChooseUsSection } from '@/components/home/WhyChooseUsSection';
 import { HowItWorksSection, type ProcessStep } from '@/components/home/HowItWorksSection';
 import { PromotionSection } from '@/components/home/PromotionSection';
 import { ContactCTA } from '@/components/home/ContactCTA';
 import { COMPANY } from '@/data/company';
 import { absoluteUrl } from '@/config/site';
+import { buildPopularServicesForLocale } from '@/config/services';
 import { buildLocaleAlternates } from '@/lib/metadata';
 import { loadMessages, resolveLocale } from '@/i18n/loadMessages';
 import { buildBreadcrumbJsonLd, buildWebPageJsonLd } from '@/seo/jsonld';
@@ -28,14 +29,6 @@ const ensureStringArray = (value: unknown): string[] =>
     ? (value as unknown[])
         .map((item) => ensureString(item))
         .filter((item): item is string => item.length > 0)
-    : [];
-
-const ensureServiceItems = (value: unknown): ServiceItem[] =>
-  Array.isArray(value)
-    ? (value as Array<Record<string, unknown>>).map((item) => ({
-        title: ensureString(item?.title),
-        description: ensureString(item?.description),
-      }))
     : [];
 
 const ensureProcessSteps = (value: unknown): ProcessStep[] =>
@@ -91,6 +84,7 @@ export default async function HomePage({ params }: PageParams) {
   const tLayout = await getTranslations({ locale, namespace: 'layout' });
   const tBreadcrumbs = await getTranslations({ locale, namespace: 'breadcrumbs' });
   const tPromotion = await getTranslations({ locale, namespace: 'promotion' });
+  const tServices = await getTranslations({ locale, namespace: 'services' });
 
   const phoneDisplay =
     locale === 'th' ? COMPANY.phoneDisplayTh : COMPANY.phoneDisplayEn;
@@ -116,9 +110,9 @@ export default async function HomePage({ params }: PageParams) {
   };
 
   const servicesRaw = (tHome.raw('services') ?? {}) as Record<string, unknown>;
-  const services = {
+  const services: { heading: string; items: ServiceCardItem[] } = {
     heading: ensureString(servicesRaw.heading),
-    items: ensureServiceItems(servicesRaw.items),
+    items: buildPopularServicesForLocale(locale, tServices),
   };
 
   const highlightsRaw = (tHome.raw('highlights') ?? {}) as Record<string, unknown>;
