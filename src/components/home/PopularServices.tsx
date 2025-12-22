@@ -1,10 +1,18 @@
-export type ServiceItem = {
+export type ServiceCardItem = {
+  serviceSlug: string;
+  imagePath: string;
   title: string;
   description: string;
 };
 
-export function PopularServices({ heading, items }: { heading: string; items: ServiceItem[] }) {
-  const services: ServiceItem[] = Array.isArray(items) ? items : [];
+export function PopularServices({
+  heading,
+  items,
+}: {
+  heading: string;
+  items: ServiceCardItem[];
+}) {
+  const services: ServiceCardItem[] = Array.isArray(items) ? items : [];
 
   return (
     <section
@@ -18,12 +26,12 @@ export function PopularServices({ heading, items }: { heading: string; items: Se
             {heading}
           </h2>
         ) : null}
-        <div className="mt-12 grid auto-rows-[320px] gap-5 sm:auto-rows-[260px] sm:grid-cols-2 lg:auto-rows-[240px] lg:grid-cols-4">
+        <div className="mt-12 grid auto-rows-[340px] gap-5 sm:auto-rows-[300px] sm:grid-cols-2 lg:auto-rows-[260px] lg:grid-cols-4">
           {services.map((item, index) => {
             const isHeroCard = index === 0;
             return (
               <article
-                key={`${item.title}-${index}`}
+                key={`${item.serviceSlug}-${index}`}
                 className={`group relative flex h-full flex-col justify-end overflow-hidden rounded-3xl border border-[#a70909]/10 bg-white/90 p-6 shadow-[0_20px_60px_rgba(167,9,9,0.12)] transition-transform duration-300 ease-out hover:-translate-y-1 hover:shadow-[0_30px_80px_rgba(167,9,9,0.18)] ${
                   isHeroCard ? 'sm:col-span-2 lg:col-span-2 lg:row-span-2' : ''
                 }`}
@@ -31,9 +39,14 @@ export function PopularServices({ heading, items }: { heading: string; items: Se
                 <div className="pointer-events-none absolute inset-0 z-0 bg-gradient-to-br from-white/70 via-white to-[#fff5f5] transition-opacity duration-500 group-hover:opacity-80" aria-hidden="true" />
                 <div className="pointer-events-none absolute inset-0 z-[1] opacity-0 mix-blend-multiply transition-opacity duration-500 group-hover:opacity-60" style={{ background: 'radial-gradient(circle at 20% 20%, rgba(167,9,9,0.12), transparent 55%)' }} aria-hidden="true" />
                 <div className="relative z-10 flex flex-col">
-                  <span className="mb-4 inline-flex h-11 w-11 items-center justify-center rounded-full bg-[#A70909]/10 text-sm font-semibold text-[#A70909] shadow-inner">
-                    {index + 1}
-                  </span>
+                  <div className="mb-4 overflow-hidden rounded-2xl bg-[#f8eded]">
+                    <img
+                      src={item.imagePath}
+                      alt={item.title}
+                      className="h-36 w-full object-cover sm:h-40 lg:h-32"
+                      loading="lazy"
+                    />
+                  </div>
                   <h3 className="text-lg font-semibold text-[#A70909] transition-colors duration-300 group-hover:text-[#6b0606]">
                     {item.title}
                   </h3>
