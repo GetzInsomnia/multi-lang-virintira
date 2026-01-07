@@ -52,7 +52,6 @@ export function PopularServices({
                   </h3>
                   <p className="mt-3 text-sm leading-relaxed text-[#5d3f3f]">{item.description}</p>
                 </div>
-                <div className="pointer-events-none absolute inset-x-6 bottom-6 z-10 h-[3px] origin-center scale-x-0 rounded-full bg-[#A70909] transition-transform duration-300 group-hover:scale-x-100" aria-hidden="true" />
               </article>
             );
           })}

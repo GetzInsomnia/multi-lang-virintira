@@ -123,7 +123,7 @@ export function buildPopularServicesForLocale(
     .slice(0, 5);
 
   return popularItems.map((item) => {
-    const baseKey = `services.items.${item.serviceSlug}`;
+    const baseKey = `items.${item.serviceSlug}`;
     const title = tServices(`${baseKey}.title`);
     const summary = tServices(`${baseKey}.summary`);
 
