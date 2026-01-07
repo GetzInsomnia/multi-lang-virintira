@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 export type ServiceCardItem = {
   serviceSlug: string;
   imagePath: string;
@@ -17,7 +19,7 @@ export function PopularServices({
   return (
     <section
       id="services"
-      className="relative flex min-h-[calc(100dvh-var(--header-height))] items-center justify-center overflow-hidden bg-[#fffefe] px-4 py-16"
+      className="relative overflow-hidden bg-[#fffefe] px-4 py-16 sm:py-20"
     >
       <div className="pointer-events-none absolute inset-0 z-0 bg-[radial-gradient(circle_at_top,#ffe8e8_0%,#fffefe_55%,#fffefe_100%)]" aria-hidden="true" />
       <div className="relative z-10 mx-auto w-full max-w-6xl">
@@ -26,31 +28,33 @@ export function PopularServices({
             {heading}
           </h2>
         ) : null}
-        <div className="mt-12 grid auto-rows-[340px] gap-5 sm:auto-rows-[300px] sm:grid-cols-2 lg:auto-rows-[260px] lg:grid-cols-4">
+        <div className="mt-12 grid auto-rows-[320px] gap-5 sm:auto-rows-[280px] sm:grid-cols-2 lg:auto-rows-[240px] lg:grid-cols-4">
           {services.map((item, index) => {
             const isHeroCard = index === 0;
+            const imageSizes = isHeroCard
+              ? '(min-width: 1024px) 50vw, (min-width: 640px) 100vw, 100vw'
+              : '(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw';
             return (
               <article
                 key={`${item.serviceSlug}-${index}`}
-                className={`group relative flex h-full flex-col justify-end overflow-hidden rounded-3xl border border-[#a70909]/10 bg-white/90 p-6 shadow-[0_20px_60px_rgba(167,9,9,0.12)] transition-transform duration-300 ease-out hover:-translate-y-1 hover:shadow-[0_30px_80px_rgba(167,9,9,0.18)] ${
+                className={`group relative flex h-full overflow-hidden rounded-3xl border border-white/70 bg-white shadow-[0_20px_60px_rgba(167,9,9,0.12)] transition-transform duration-300 ease-out hover:-translate-y-1 hover:shadow-[0_30px_80px_rgba(167,9,9,0.18)] ${
                   isHeroCard ? 'sm:col-span-2 lg:col-span-2 lg:row-span-2' : ''
                 }`}
               >
-                <div className="pointer-events-none absolute inset-0 z-0 bg-gradient-to-br from-white/70 via-white to-[#fff5f5] transition-opacity duration-500 group-hover:opacity-80" aria-hidden="true" />
-                <div className="pointer-events-none absolute inset-0 z-[1] opacity-0 mix-blend-multiply transition-opacity duration-500 group-hover:opacity-60" style={{ background: 'radial-gradient(circle at 20% 20%, rgba(167,9,9,0.12), transparent 55%)' }} aria-hidden="true" />
-                <div className="relative z-10 flex flex-col">
-                  <div className="mb-4 overflow-hidden rounded-2xl bg-[#f8eded]">
-                    <img
-                      src={item.imagePath}
-                      alt={item.title}
-                      className="h-36 w-full object-cover sm:h-40 lg:h-32"
-                      loading="lazy"
-                    />
-                  </div>
-                  <h3 className="text-lg font-semibold text-[#A70909] transition-colors duration-300 group-hover:text-[#6b0606]">
+                <Image
+                  src={item.imagePath}
+                  alt={item.title}
+                  fill
+                  sizes={imageSizes}
+                  className="object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+                />
+                <div className="pointer-events-none absolute inset-0 z-[1] bg-gradient-to-t from-black/25 via-black/10 to-transparent opacity-70" aria-hidden="true" />
+                <div className="pointer-events-none absolute inset-0 z-[2] opacity-0 mix-blend-multiply transition-opacity duration-500 group-hover:opacity-60" style={{ background: 'radial-gradient(circle at 20% 20%, rgba(167,9,9,0.18), transparent 55%)' }} aria-hidden="true" />
+                <div className="absolute inset-x-0 bottom-0 z-10 border-t border-white/70 bg-white/85 px-5 py-4 backdrop-blur-md sm:px-6 sm:py-5">
+                  <h3 className="truncate text-lg font-semibold text-[#A70909] transition-colors duration-300 group-hover:text-[#6b0606]">
                     {item.title}
                   </h3>
-                  <p className="mt-3 text-sm leading-relaxed text-[#5d3f3f]">{item.description}</p>
+                  <p className="mt-2 truncate text-sm text-[#5d3f3f]">{item.description}</p>
                 </div>
               </article>
             );
