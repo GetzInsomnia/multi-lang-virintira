@@ -37,7 +37,7 @@ export function PopularServices({
             return (
               <article
                 key={`${item.serviceSlug}-${index}`}
-                className={`group relative flex h-full overflow-hidden rounded-3xl border border-white/70 bg-white shadow-[0_20px_60px_rgba(167,9,9,0.12)] transition-transform duration-300 ease-out hover:-translate-y-1 hover:shadow-[0_30px_80px_rgba(167,9,9,0.18)] ${
+                className={`group relative isolate flex h-full overflow-hidden rounded-2xl border border-white/70 bg-white shadow-[0_20px_60px_rgba(167,9,9,0.12)] ring-1 ring-black/5 transition-shadow duration-300 ease-out hover:shadow-[0_30px_80px_rgba(167,9,9,0.18)] ${
                   isHeroCard ? 'sm:col-span-2 lg:col-span-2 lg:row-span-2' : ''
                 }`}
               >
@@ -46,11 +46,11 @@ export function PopularServices({
                   alt={item.title}
                   fill
                   sizes={imageSizes}
-                  className="object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+                  className="transform-gpu rounded-2xl object-cover transition-transform duration-500 will-change-transform scale-[1.001] group-hover:scale-[1.03]"
                 />
-                <div className="pointer-events-none absolute inset-0 z-[1] bg-gradient-to-t from-black/25 via-black/10 to-transparent opacity-70" aria-hidden="true" />
-                <div className="pointer-events-none absolute inset-0 z-[2] opacity-0 mix-blend-multiply transition-opacity duration-500 group-hover:opacity-60" style={{ background: 'radial-gradient(circle at 20% 20%, rgba(167,9,9,0.18), transparent 55%)' }} aria-hidden="true" />
-                <div className="absolute inset-x-0 bottom-0 z-10 border-t border-white/70 bg-white/85 px-5 py-4 backdrop-blur-md sm:px-6 sm:py-5">
+                <div className="pointer-events-none absolute inset-0 z-[1] rounded-2xl bg-gradient-to-t from-black/25 via-black/10 to-transparent opacity-70" aria-hidden="true" />
+                <div className="pointer-events-none absolute inset-0 z-[2] rounded-2xl opacity-0 mix-blend-multiply transition-opacity duration-500 group-hover:opacity-60" style={{ background: 'radial-gradient(circle at 20% 20%, rgba(167,9,9,0.18), transparent 55%)' }} aria-hidden="true" />
+                <div className="absolute inset-x-0 bottom-0 z-10 rounded-b-2xl border-t border-white/70 bg-white/85 px-5 py-4 backdrop-blur-md sm:px-6 sm:py-5">
                   <h3 className="truncate text-lg font-semibold text-[#A70909] transition-colors duration-300 group-hover:text-[#6b0606]">
                     {item.title}
                   </h3>
