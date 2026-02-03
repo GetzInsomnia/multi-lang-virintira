@@ -37,24 +37,40 @@ export function PopularServices({
             return (
               <article
                 key={`${item.serviceSlug}-${index}`}
-                className={`group relative isolate flex h-full overflow-hidden rounded-2xl border border-white/70 bg-white shadow-[0_20px_60px_rgba(167,9,9,0.12)] ring-1 ring-black/5 transition-shadow duration-300 ease-out hover:shadow-[0_30px_80px_rgba(167,9,9,0.18)] ${
+                className={`group relative isolate flex h-full flex-col overflow-hidden rounded-2xl border border-[#f3dede] bg-white shadow-[0_20px_60px_rgba(167,9,9,0.12)] transition-shadow duration-300 ease-out hover:shadow-[0_30px_80px_rgba(167,9,9,0.18)] ${
                   isHeroCard ? 'sm:col-span-2 lg:col-span-2 lg:row-span-2' : ''
                 }`}
               >
-                <Image
-                  src={item.imagePath}
-                  alt={item.title}
-                  fill
-                  sizes={imageSizes}
-                  className="transform-gpu rounded-2xl object-cover transition-transform duration-500 will-change-transform scale-[1.001] group-hover:scale-[1.03]"
-                />
-                <div className="pointer-events-none absolute inset-0 z-[1] rounded-2xl bg-gradient-to-t from-black/25 via-black/10 to-transparent opacity-70" aria-hidden="true" />
-                <div className="pointer-events-none absolute inset-0 z-[2] rounded-2xl opacity-0 mix-blend-multiply transition-opacity duration-500 group-hover:opacity-60" style={{ background: 'radial-gradient(circle at 20% 20%, rgba(167,9,9,0.18), transparent 55%)' }} aria-hidden="true" />
-                <div className="absolute inset-x-0 bottom-0 z-10 rounded-b-2xl border-t border-white/70 bg-white/85 px-5 py-4 backdrop-blur-md sm:px-6 sm:py-5">
-                  <h3 className="truncate text-lg font-semibold text-[#A70909] transition-colors duration-300 group-hover:text-[#6b0606]">
+                <div
+                  className={`relative w-full overflow-hidden rounded-xl ${
+                    isHeroCard ? 'aspect-[4/3]' : 'aspect-[16/9]'
+                  }`}
+                >
+                  <Image
+                    src={item.imagePath}
+                    alt={item.title}
+                    fill
+                    sizes={imageSizes}
+                    className="transform-gpu object-cover object-center transition-transform duration-500 ease-out will-change-transform group-hover:scale-[1.04]"
+                  />
+                  <div className="pointer-events-none absolute inset-0 z-[1] rounded-[inherit] bg-gradient-to-t from-black/25 via-black/10 to-transparent opacity-70" aria-hidden="true" />
+                  <div
+                    className="pointer-events-none absolute inset-0 z-[2] rounded-[inherit] opacity-0 mix-blend-multiply transition-opacity duration-500 group-hover:opacity-60"
+                    style={{ background: 'radial-gradient(circle at 20% 20%, rgba(167,9,9,0.18), transparent 55%)' }}
+                    aria-hidden="true"
+                  />
+                </div>
+                <div className="flex flex-1 flex-col justify-center gap-2 bg-white px-5 py-4 sm:px-6 sm:py-5">
+                  <h3 className="line-clamp-1 text-lg font-semibold text-[#A70909] transition-colors duration-300 group-hover:text-[#6b0606]">
                     {item.title}
                   </h3>
-                  <p className="mt-2 truncate text-sm text-[#5d3f3f]">{item.description}</p>
+                  <p
+                    className={`text-sm text-[#5d3f3f] ${
+                      isHeroCard ? 'line-clamp-2' : 'line-clamp-1'
+                    }`}
+                  >
+                    {item.description}
+                  </p>
                 </div>
               </article>
             );
