@@ -153,233 +153,233 @@
         }
       ]
     },
-      "megaMenu": {
-        "triggerLabel": "服務項目",
-        "columns": [
-          {
-            "title": "公司註冊",
-            "items": [
-              {
-                "label": "有限公司",
-                "href": "/services/registrations/registration"
-              },
-              {
-                "label": "有限合夥",
-                "href": "/services/registrations/limited-partnership"
-              },
-              {
-                "label": "基金會",
-                "href": "/services/registrations/foundation"
-              },
-              {
-                "label": "協會",
-                "href": "/services/registrations/association"
-              },
-              {
-                "label": "商業登記 (店鋪)",
-                "href": "/services/registrations/commercial-shop"
-              },
-              {
-                "label": "雇主登記 (SSO)",
-                "href": "/services/registrations/employer-sso"
-              },
-              {
-                "label": "增值稅 (VAT)",
-                "href": "/services/registrations/vat-registration"
-              }
-            ]
-          },
-          {
-            "title": "公司變更",
-            "items": [
-              {
-                "label": "公司名稱",
-                "href": "/services/corporate-changes/company-name"
-              },
-              {
-                "label": "公司印章",
-                "href": "/services/corporate-changes/company-seal"
-              },
-              {
-                "label": "董事資訊",
-                "href": "/services/corporate-changes/directors"
-              },
-              {
-                "label": "簽署權限",
-                "href": "/services/corporate-changes/signing-authority"
-              },
-              {
-                "label": "股東 / 股權",
-                "href": "/services/corporate-changes/shareholders"
-              },
-              {
-                "label": "註冊資本",
-                "href": "/services/corporate-changes/capital"
-              },
-              {
-                "label": "地址 / 分支",
-                "href": "/services/corporate-changes/address"
-              },
-              {
-                "label": "營業項目",
-                "href": "/services/corporate-changes/objectives"
-              },
-              {
-                "label": "公司註銷",
-                "href": "/services/corporate-changes/dissolution"
-              }
-            ]
-          },
-          {
-            "title": "會計審計",
-            "items": [
-              {
-                "label": "公司帳務",
-                "href": "/services/accounting-audit/monthly-bookkeeping"
-              },
-              {
-                "label": "每月報稅",
-                "href": "/services/accounting-audit/monthly-tax"
-              },
-              {
-                "label": "年度財報",
-                "href": "/services/accounting-audit/close-financial"
-              },
-              {
-                "label": "個人帳務",
-                "href": "/services/accounting-audit/personal-accounts"
-              },
-              {
-                "label": "審計服務",
-                "href": "/services/accounting-audit/audit"
-              },
-              {
-                "label": "稅務規劃",
-                "href": "/services/accounting-audit/tax-planning"
-              },
-              {
-                "label": "外國稅號",
-                "href": "/services/accounting-audit/foreign-tax-id"
-              }
-            ]
-          },
-          {
-            "title": "許可證照",
-            "items": [
-              {
-                "label": "旅遊執照",
-                "href": "/services/licensing/tourism-licence"
-              },
-              {
-                "label": "泰國 FDA",
-                "href": "/services/licensing/thai-fda"
-              },
-              {
-                "label": "簽證 / 工作證",
-                "href": "/services/licensing/visa-work-permit"
-              },
-              {
-                "label": "BOI 投資優惠",
-                "href": "/services/licensing/boi-promotion"
-              },
-              {
-                "label": "外商經營許可 (FBL / FBC)",
-                "href": "/services/licensing/foreign-business"
-              }
-            ]
-          },
-          {
-            "title": "數位行銷",
-            "items": [
-              {
-                "label": "網站架設",
-                "href": "/services/digital-marketing/website-build"
-              },
-              {
-                "label": "Facebook 粉專",
-                "href": "/services/digital-marketing/facebook-page"
-              },
-              {
-                "label": "LINE OA",
-                "href": "/services/digital-marketing/line-oa"
-              },
-              {
-                "label": "TikTok",
-                "href": "/services/digital-marketing/tiktok"
-              },
-              {
-                "label": "YouTube",
-                "href": "/services/digital-marketing/youtube"
-              },
-              {
-                "label": "影片製作",
-                "href": "/services/digital-marketing/video-production"
-              },
-              {
-                "label": "付費廣告",
-                "href": "/services/digital-marketing/paid-ads"
-              },
-              {
-                "label": "AI 解決方案",
-                "href": "/services/digital-marketing/ai-solutions"
-              },
-              {
-                "label": "Odoo ERP",
-                "href": "/services/digital-marketing/odoo-erp"
-              },
-              {
-                "label": "客製化軟體",
-                "href": "/services/digital-marketing/custom-software"
-              }
-            ]
-          }
-        ]
-      },
-      "ctaPrimary": "Talk to an expert",
-      "ctaSecondary": "LINE OA",
-      "search": {
-        "placeholder": "Search accounting resources",
-        "mobilePlaceholder": "Search accounting resources",
-        "toggleLabel": "Toggle search",
-        "submitLabel": "Search"
-      },
-      "language": {
-        "label": "Language",
-        "dropdownLabel": "Select language",
-        "options": {
-          "th": "Thai",
-          "en": "English",
-          "fr": "French",
-          "de": "German",
-          "nl": "Dutch",
-          "it": "Italian",
-          "zh-Hant": "Chinese (Traditional)",
-          "zh-Hans": "Chinese (Simplified)",
-          "ja": "Japanese",
-          "ko": "Korean",
-          "ms": "Malay",
-          "ta": "Tamil",
-          "hi": "Hindi",
-          "ar": "Arabic",
-          "fa": "Persian",
-          "he": "Hebrew"
+    "megaMenu": {
+      "triggerLabel": "服務項目",
+      "columns": [
+        {
+          "title": "公司註冊",
+          "items": [
+            {
+              "label": "有限公司",
+              "href": "/services/registrations/registration"
+            },
+            {
+              "label": "有限合夥",
+              "href": "/services/registrations/limited-partnership"
+            },
+            {
+              "label": "基金會",
+              "href": "/services/registrations/foundation"
+            },
+            {
+              "label": "協會",
+              "href": "/services/registrations/association"
+            },
+            {
+              "label": "商業登記 (店鋪)",
+              "href": "/services/registrations/commercial-shop"
+            },
+            {
+              "label": "雇主登記 (SSO)",
+              "href": "/services/registrations/employer-sso"
+            },
+            {
+              "label": "增值稅 (VAT)",
+              "href": "/services/registrations/vat-registration"
+            }
+          ]
+        },
+        {
+          "title": "公司變更",
+          "items": [
+            {
+              "label": "公司名稱",
+              "href": "/services/corporate-changes/company-name"
+            },
+            {
+              "label": "公司印章",
+              "href": "/services/corporate-changes/company-seal"
+            },
+            {
+              "label": "董事資訊",
+              "href": "/services/corporate-changes/directors"
+            },
+            {
+              "label": "簽署權限",
+              "href": "/services/corporate-changes/signing-authority"
+            },
+            {
+              "label": "股東 / 股權",
+              "href": "/services/corporate-changes/shareholders"
+            },
+            {
+              "label": "註冊資本",
+              "href": "/services/corporate-changes/capital"
+            },
+            {
+              "label": "地址 / 分支",
+              "href": "/services/corporate-changes/address"
+            },
+            {
+              "label": "營業項目",
+              "href": "/services/corporate-changes/objectives"
+            },
+            {
+              "label": "公司註銷",
+              "href": "/services/corporate-changes/dissolution"
+            }
+          ]
+        },
+        {
+          "title": "會計審計",
+          "items": [
+            {
+              "label": "公司帳務",
+              "href": "/services/accounting-audit/monthly-bookkeeping"
+            },
+            {
+              "label": "每月報稅",
+              "href": "/services/accounting-audit/monthly-tax"
+            },
+            {
+              "label": "年度財報",
+              "href": "/services/accounting-audit/close-financial"
+            },
+            {
+              "label": "個人帳務",
+              "href": "/services/accounting-audit/personal-accounts"
+            },
+            {
+              "label": "審計服務",
+              "href": "/services/accounting-audit/audit"
+            },
+            {
+              "label": "稅務規劃",
+              "href": "/services/accounting-audit/tax-planning"
+            },
+            {
+              "label": "外國稅號",
+              "href": "/services/accounting-audit/foreign-tax-id"
+            }
+          ]
+        },
+        {
+          "title": "許可證照",
+          "items": [
+            {
+              "label": "旅遊執照",
+              "href": "/services/licensing/tourism-licence"
+            },
+            {
+              "label": "泰國 FDA",
+              "href": "/services/licensing/thai-fda"
+            },
+            {
+              "label": "簽證 / 工作證",
+              "href": "/services/licensing/visa-work-permit"
+            },
+            {
+              "label": "BOI 投資優惠",
+              "href": "/services/licensing/boi-promotion"
+            },
+            {
+              "label": "外商經營許可 (FBL / FBC)",
+              "href": "/services/licensing/foreign-business"
+            }
+          ]
+        },
+        {
+          "title": "數位行銷",
+          "items": [
+            {
+              "label": "網站架設",
+              "href": "/services/digital-marketing/website-build"
+            },
+            {
+              "label": "Facebook 粉專",
+              "href": "/services/digital-marketing/facebook-page"
+            },
+            {
+              "label": "LINE OA",
+              "href": "/services/digital-marketing/line-oa"
+            },
+            {
+              "label": "TikTok",
+              "href": "/services/digital-marketing/tiktok"
+            },
+            {
+              "label": "YouTube",
+              "href": "/services/digital-marketing/youtube"
+            },
+            {
+              "label": "影片製作",
+              "href": "/services/digital-marketing/video-production"
+            },
+            {
+              "label": "付費廣告",
+              "href": "/services/digital-marketing/paid-ads"
+            },
+            {
+              "label": "AI 解決方案",
+              "href": "/services/digital-marketing/ai-solutions"
+            },
+            {
+              "label": "Odoo ERP",
+              "href": "/services/digital-marketing/odoo-erp"
+            },
+            {
+              "label": "客製化軟體",
+              "href": "/services/digital-marketing/custom-software"
+            }
+          ]
         }
-      },
-      "actions": {
-        "phoneLabel": "Call us"
-      },
-      "social": {
-        "heading": "Contact us",
-        "toggleLabel": "Contact us",
-        "closeLabel": "Close contact panel",
-        "links": {
-          "call": "Call",
-          "line": "LINE",
-          "tiktok": "TikTok",
-          "facebook": "Facebook",
-          "email": "Email"
-        }
-      },
+      ]
+    },
+    "ctaPrimary": "Talk to an expert",
+    "ctaSecondary": "LINE OA",
+    "search": {
+      "placeholder": "Search accounting resources",
+      "mobilePlaceholder": "Search accounting resources",
+      "toggleLabel": "Toggle search",
+      "submitLabel": "Search"
+    },
+    "language": {
+      "label": "Language",
+      "dropdownLabel": "Select language",
+      "options": {
+        "th": "Thai",
+        "en": "English",
+        "fr": "French",
+        "de": "German",
+        "nl": "Dutch",
+        "it": "Italian",
+        "zh-Hant": "Chinese (Traditional)",
+        "zh-Hans": "Chinese (Simplified)",
+        "ja": "Japanese",
+        "ko": "Korean",
+        "ms": "Malay",
+        "ta": "Tamil",
+        "hi": "Hindi",
+        "ar": "Arabic",
+        "fa": "Persian",
+        "he": "Hebrew"
+      }
+    },
+    "actions": {
+      "phoneLabel": "Call us"
+    },
+    "social": {
+      "heading": "Contact us",
+      "toggleLabel": "Contact us",
+      "closeLabel": "Close contact panel",
+      "links": {
+        "call": "Call",
+        "line": "LINE",
+        "tiktok": "TikTok",
+        "facebook": "Facebook",
+        "email": "Email"
+      }
+    },
     "footer": {
       "tagline": "พาร์ตเนอร์บัญชีและธุรกิจครบวงจร",
       "description": "Virintira พร้อมดูแลตั้งแต่จดทะเบียน ทำบัญชี ไปจนถึงการตลาดออนไลน์ เพื่อให้ธุรกิจของคุณเดินหน้าได้อย่างมั่นใจและถูกต้องตามกฎหมายทุกขั้นตอน.",
@@ -535,8 +535,8 @@
   },
   "promotion": {
     "hero": {
-      "title": "明智擴展，節省更多。",
-      "intro": "解鎖旨在降低成本並加速您增長的基本業務解決方案的特惠費率。"
+      "title": "值得信賴的現代企業服務，與您一同成長。",
+      "intro": "享有專屬優惠：我們的服務與解決方案旨在協助降低成本，並高效推動您的業務成長。"
     },
     "offers": [
       {
@@ -558,7 +558,9 @@
         "note": "獲得專屬專家團隊的全程月度支持。"
       }
     ],
-    "cta": "領取您的優惠"
+    "cta": "查看所有優惠活動",
+    "complimentary": "免費：諮詢與初步評估",
+    "badge": "Limited Offer"
   },
   "resources": {
     "hero": {

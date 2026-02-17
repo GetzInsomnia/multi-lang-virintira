@@ -487,15 +487,17 @@
   },
   "promotion": {
     "hero": {
-      "title": "Skala Pintar, Lebih Jimat.",
-      "intro": "Nikmati kadar istimewa untuk penyelesaian perniagaan penting yang direka untuk mengurangkan kos dan mempercepatkan pertumbuhan anda."
+      "title": "Perkhidmatan perniagaan yang dipercayai dan moden—bersedia berkembang bersama anda.",
+      "intro": "Dapatkan tawaran eksklusif untuk perkhidmatan dan solusi kami, direka untuk mengurangkan kos dan mempercepat pertumbuhan anda dengan lebih berkesan."
     },
     "offers": [
       {
         "note": "Ideal for scaling teams planning fundraising or expansion."
       }
     ],
-    "cta": "Lihat lebih banyak promosi"
+    "cta": "Lihat Semua Promosi",
+    "complimentary": "Percuma: konsultasi dan penilaian awal",
+    "badge": "Limited Offer"
   },
   "resources": {
     "hero": {

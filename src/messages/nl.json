@@ -487,8 +487,8 @@
   },
   "promotion": {
     "hero": {
-      "title": "Slim schalen, meer besparen.",
-      "intro": "Profiteer van speciale tarieven voor essentiële zakelijke oplossingen die zijn ontworpen om kosten te verlagen en uw groei te versnellen."
+      "title": "Betrouwbare, moderne bedrijfsdiensten—klaar om met u mee te groeien.",
+      "intro": "Profiteer van exclusieve voordelen op onze diensten en oplossingen, ontworpen om kosten te verlagen en uw groei efficiënt te versnellen."
     },
     "offers": [
       {
@@ -510,7 +510,9 @@
         "note": "Ontvang maandelijkse end-to-end ondersteuning van een toegewijd expertteam."
       }
     ],
-    "cta": "Claim uw aanbod"
+    "cta": "Alle promoties bekijken",
+    "complimentary": "Gratis: adviesgesprek en eerste beoordeling",
+    "badge": "Limited Offer"
   },
   "resources": {
     "hero": {

@@ -488,15 +488,17 @@
   },
   "promotion": {
     "hero": {
-      "title": "Intelligent skalieren, mehr sparen.",
-      "intro": "Sichern Sie sich Vorzugspreise für wichtige Unternehmenslösungen, die Kosten senken und Ihr Wachstum beschleunigen."
+      "title": "Vertrauenswürdige, moderne Business-Services – bereit, mit Ihnen zu wachsen.",
+      "intro": "Sichern Sie sich exklusive Vorteile für unsere Services und Lösungen – entwickelt, um Kosten zu senken und Ihr Wachstum effizient voranzubringen."
     },
     "offers": [
       {
         "note": "Ideal for scaling teams planning fundraising or expansion."
       }
     ],
-    "cta": "Mehr Aktionen anzeigen"
+    "cta": "Alle Aktionen ansehen",
+    "complimentary": "Kostenlos: Beratung und Erstbewertung",
+    "badge": "Limited Offer"
   },
   "resources": {
     "hero": {

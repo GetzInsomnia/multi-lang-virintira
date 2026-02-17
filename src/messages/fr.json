@@ -488,8 +488,8 @@
   },
   "promotion": {
     "hero": {
-      "title": "Développez intelligemment, économisez plus.",
-      "intro": "Profitez de tarifs préférentiels sur des solutions essentielles conçues pour réduire vos coûts et accélérer votre croissance."
+      "title": "Des services d’entreprise fiables et modernes, prêts à grandir avec vous.",
+      "intro": "Profitez d’avantages exclusifs sur nos services et solutions, conçus pour réduire les coûts et accélérer votre croissance efficacement."
     },
     "offers": [
       {
@@ -511,7 +511,9 @@
         "note": "Bénéficiez d'un support mensuel complet d'une équipe d'experts dédiée."
       }
     ],
-    "cta": "Voir plus de promotions"
+    "cta": "Voir toutes les promotions",
+    "complimentary": "Gratuit : conseil et évaluation initiale",
+    "badge": "Limited Offer"
   },
   "resources": {
     "hero": {

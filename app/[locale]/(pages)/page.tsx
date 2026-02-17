@@ -105,10 +105,13 @@ export default async function HomePage({ params }: PageParams) {
 
       <HowItWorksSection heading={process.heading} steps={process.steps} />
       <PromotionSection
+        locale={locale}
         heading={promotion.heading}
         description={promotion.description}
         ctaLabel={promotion.ctaLabel}
         ctaHref={promotion.ctaHref}
+        badge={promotion.badge}
+        complimentary={promotion.complimentary}
       />
       <ContactCTA
         heading={cta.heading}

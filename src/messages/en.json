@@ -482,8 +482,8 @@
   },
   "promotion": {
     "hero": {
-      "title": "Scale Smart, Save More.",
-      "intro": "Unlock special rates on essential business solutions designed to reduce costs and accelerate your growth."
+      "title": "Trusted, modern business—\nservices ready to grow with you.",
+      "intro": "Unlock exclusive offers on our services and solutions, designed to reduce costs and drive your growth efficiently."
     },
     "offers": [
       {
@@ -505,7 +505,9 @@
         "note": "Receive end-to-end monthly support from a dedicated expert team."
       }
     ],
-    "cta": "Claim Your Offer"
+    "cta": "View All Promotions",
+    "complimentary": "Free consultation and initial assessment included",
+    "badge": "Limited Offer"
   },
   "resources": {
     "hero": {

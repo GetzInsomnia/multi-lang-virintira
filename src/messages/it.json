@@ -487,8 +487,8 @@
   },
   "promotion": {
     "hero": {
-      "title": "Cresci con intelligenza, risparmia di più.",
-      "intro": "Sblocca tariffe speciali su soluzioni aziendali essenziali progettate per ridurre i costi e accelerare la tua crescita."
+      "title": "Servizi aziendali affidabili e moderni, pronti a crescere con te.",
+      "intro": "Accedi a vantaggi esclusivi sui nostri servizi e soluzioni, pensati per ridurre i costi e sostenere la tua crescita in modo efficiente."
     },
     "offers": [
       {
@@ -510,7 +510,9 @@
         "note": "Ricevi supporto mensile end-to-end da un team di esperti dedicato."
       }
     ],
-    "cta": "Richiedi la tua offerta"
+    "cta": "Vedi tutte le promozioni",
+    "complimentary": "Gratis: consulenza e valutazione iniziale",
+    "badge": "Limited Offer"
   },
   "resources": {
     "hero": {

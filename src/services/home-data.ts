@@ -44,6 +44,8 @@ export type HomeData = {
         description: string;
         ctaLabel: string;
         ctaHref: string;
+        badge: string;
+        complimentary: string;
     };
     labels: {
         call: string;
@@ -120,6 +122,8 @@ export async function getHomeData(locale: string): Promise<HomeData> {
         description: ensureString(tPromotion.raw('hero.intro')),
         ctaLabel: ensureString(tPromotion.raw('cta')),
         ctaHref: '/promotion',
+        badge: ensureString(tPromotion.raw('badge')),
+        complimentary: ensureString(tPromotion.raw('complimentary')),
     };
 
     return {
