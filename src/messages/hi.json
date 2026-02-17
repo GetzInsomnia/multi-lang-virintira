@@ -69,7 +69,9 @@
       "call": "Call {phone}",
       "chat": "LINE चैट",
       "consult": "ईमेल Virintira",
-      "book": "Book a consultation",
+      "book": "परामर्श बुक करें",
+      "explore_category": "सेवाएं देखें",
+      "view_details": "विवरण देखें",
       "trigger": "निःशुल्क परामर्श"
     },
     "header": {
@@ -87,7 +89,7 @@
         },
         {
           "label": "सेवाएँ",
-          "href": "#services"
+          "href": "/services"
         },
         {
           "label": "लेख",
@@ -99,7 +101,7 @@
         },
         {
           "label": "संपर्क",
-          "href": "/under-construction"
+          "href": "/contact"
         }
       ],
       "megaMenu": {
@@ -110,31 +112,31 @@
             "items": [
               {
                 "label": "कंपनी (Co., Ltd.)",
-                "href": "/under-construction"
+                "href": "/services/registrations/registration"
               },
               {
                 "label": "लिमिटेड पार्टनरशिप",
-                "href": "/under-construction"
+                "href": "/services/registrations/limited-partnership"
               },
               {
                 "label": "फाउंडेशन",
-                "href": "/under-construction"
+                "href": "/services/registrations/foundation"
               },
               {
                 "label": "एसोसिएशन",
-                "href": "/under-construction"
+                "href": "/services/registrations/association"
               },
               {
                 "label": "व्यावसायिक पंजीकरण",
-                "href": "/under-construction"
+                "href": "/services/registrations/commercial-shop"
               },
               {
                 "label": "नियोक्ता (SSO)",
-                "href": "/under-construction"
+                "href": "/services/registrations/employer-sso"
               },
               {
                 "label": "VAT पंजीकरण",
-                "href": "/under-construction"
+                "href": "/services/registrations/vat-registration"
               }
             ]
           },
@@ -143,39 +145,39 @@
             "items": [
               {
                 "label": "कंपनी का नाम",
-                "href": "/under-construction"
+                "href": "/services/corporate-changes/company-name"
               },
               {
                 "label": "कंपनी की मुहर",
-                "href": "/under-construction"
+                "href": "/services/corporate-changes/company-seal"
               },
               {
                 "label": "निदेशक",
-                "href": "/under-construction"
+                "href": "/services/corporate-changes/directors"
               },
               {
                 "label": "हस्ताक्षर अधिकार",
-                "href": "/under-construction"
+                "href": "/services/corporate-changes/signing-authority"
               },
               {
                 "label": "शेयरधारक / शेयर",
-                "href": "/under-construction"
+                "href": "/services/corporate-changes/shareholders"
               },
               {
                 "label": "पूंजी",
-                "href": "/under-construction"
+                "href": "/services/corporate-changes/capital"
               },
               {
                 "label": "पता / शाखाएँ",
-                "href": "/under-construction"
+                "href": "/services/corporate-changes/address"
               },
               {
                 "label": "उद्देश्य",
-                "href": "/under-construction"
+                "href": "/services/corporate-changes/objectives"
               },
               {
                 "label": "समापन",
-                "href": "/under-construction"
+                "href": "/services/corporate-changes/dissolution"
               }
             ]
           },
@@ -184,31 +186,31 @@
             "items": [
               {
                 "label": "कंपनी खाते",
-                "href": "/under-construction"
+                "href": "/services/accounting-audit/monthly-bookkeeping"
               },
               {
                 "label": "मासिक टैक्स",
-                "href": "/under-construction"
+                "href": "/services/accounting-audit/monthly-tax"
               },
               {
                 "label": "वार्षिक खाते",
-                "href": "/under-construction"
+                "href": "/services/accounting-audit/close-financial"
               },
               {
                 "label": "व्यक्तिगत खाते",
-                "href": "/under-construction"
+                "href": "/services/accounting-audit/personal-accounts"
               },
               {
                 "label": "ऑडिट",
-                "href": "/under-construction"
+                "href": "/services/accounting-audit/audit"
               },
               {
                 "label": "टैक्स प्लानिंग",
-                "href": "/under-construction"
+                "href": "/services/accounting-audit/tax-planning"
               },
               {
                 "label": "विदेशी टैक्स ID",
-                "href": "/under-construction"
+                "href": "/services/accounting-audit/foreign-tax-id"
               }
             ]
           },
@@ -217,24 +219,23 @@
             "items": [
               {
                 "label": "पर्यटन लाइसेंस",
-                "href": "/under-construction"
+                "href": "/services/licensing/tourism-licence"
               },
               {
                 "label": "थाई FDA",
-                "href": "/under-construction"
+                "href": "/services/licensing/thai-fda"
               },
               {
                 "label": "वीज़ा & वर्क परमिट",
-                "href": "/under-construction"
+                "href": "/services/licensing/visa-work-permit"
               },
               {
                 "label": "BOI प्रोत्साहन",
-                "href": "/under-construction"
-              }
-              ,
+                "href": "/services/licensing/boi-promotion"
+              },
               {
                 "label": "विदेशी बिज़नेस (FBL/FBC)",
-                "href": "/under-construction"
+                "href": "/services/licensing/foreign-business"
               }
             ]
           },
@@ -243,43 +244,43 @@
             "items": [
               {
                 "label": "वेबसाइट निर्माण",
-                "href": "/under-construction"
+                "href": "/services/digital-marketing/website-build"
               },
               {
                 "label": "Facebook Page",
-                "href": "/under-construction"
+                "href": "/services/digital-marketing/facebook-page"
               },
               {
                 "label": "LINE OA",
-                "href": "/under-construction"
+                "href": "/services/digital-marketing/line-oa"
               },
               {
                 "label": "TikTok",
-                "href": "/under-construction"
+                "href": "/services/digital-marketing/tiktok"
               },
               {
                 "label": "YouTube",
-                "href": "/under-construction"
+                "href": "/services/digital-marketing/youtube"
               },
               {
                 "label": "वीडियो प्रोडक्शन",
-                "href": "/under-construction"
+                "href": "/services/digital-marketing/video-production"
               },
               {
                 "label": "पेड ऐड्स (Ads)",
-                "href": "/under-construction"
+                "href": "/services/digital-marketing/paid-ads"
               },
               {
                 "label": "AI समाधान",
-                "href": "/under-construction"
+                "href": "/services/digital-marketing/ai-solutions"
               },
               {
                 "label": "Odoo ERP",
-                "href": "/under-construction"
+                "href": "/services/digital-marketing/odoo-erp"
               },
               {
                 "label": "कस्टम सॉफ़्टवेयर",
-                "href": "/under-construction"
+                "href": "/services/digital-marketing/custom-software"
               }
             ]
           }
@@ -346,7 +347,7 @@
       },
       "quickLinks": [
         {
-          "label": "โปรโมชั่น",
+          "label": "प्रमोशन",
           "href": "/promotion"
         },
         {
@@ -358,28 +359,28 @@
           "href": "/resources"
         },
         {
-          "label": "ติดต่อเรา",
-          "href": "/under-construction"
+          "label": "संपर्क",
+          "href": "/contact"
         },
         {
-          "label": "จดทะเบียน",
-          "href": "/under-construction"
+          "label": "पंजीकरण",
+          "href": "/services/registrations"
         },
         {
-          "label": "แก้ไขข้อมูลนิติบุคคล",
-          "href": "/under-construction"
+          "label": "कंपनी बदलाव",
+          "href": "/services/corporate-changes"
         },
         {
-          "label": "บัญชีและตรวจสอบ",
-          "href": "/under-construction"
+          "label": "लेखांकन & ऑडिट",
+          "href": "/services/accounting-audit"
         },
         {
-          "label": "ขอใบอนุญาต",
-          "href": "/under-construction"
+          "label": "लाइसेंस",
+          "href": "/services/licensing"
         },
         {
-          "label": "การตลาดออนไลน์",
-          "href": "/under-construction"
+          "label": "डिजिटल मार्केटिंग",
+          "href": "/services/digital-marketing"
         }
       ],
       "legal": "Copyright © {year} Virintira Co., Ltd. All rights reserved. | {poweredBy}"
@@ -391,7 +392,9 @@
     "resources": "Resources",
     "services": "Services",
     "blog": "Blog",
-    "howTo": "How-to"
+    "howTo": "How-to",
+    "otherServices": "अन्य सेवाएँ",
+    "contactDirectly": "हमसे सीधे संपर्क करें"
   },
   "home": {
     "hero": {
@@ -406,12 +409,15 @@
       "emailButton": "Email Virintira"
     },
     "about": {
-      "heading": "Why founders choose Virintira",
+      "heading": "Virintira — केवल एक लेखा फर्म नहीं, बल्कि आपका पूर्ण व्यवसाय भागीदार",
       "paragraphs": [
-        "Our bilingual accountants combine local compliance mastery with proactive advisory. Whether you are scaling ecommerce, hospitality, or professional services, we translate complex regulations into clear action steps.",
-        "With 10+ years serving SMEs, we design bookkeeping rhythms, dashboard reporting, and payroll processes that let your leadership focus on growth instead of paperwork."
+        "10 से अधिक वर्षों के अनुभव के साथ, Virintira आपके संचालन के हर हिस्से का समर्थन करता है - कंपनी गठन और मासिक बहीखाता पद्धति से लेकर लाइसेंसिंग, कर नियोजन और डिजिटल मार्केटिंग तक।",
+        "हम जानते हैं कि आप अपने व्यवसाय को बढ़ाने पर ध्यान केंद्रित करना चाहते हैं, इसलिए हम स्पष्टता और गति के साथ बैक ऑफिस का ध्यान रखते हैं।",
+        "आप हम पर भरोसा कर सकते हैं। हम व्यवसाय विकास विभाग के साथ पूरी तरह से पंजीकृत हैं और कभी भी परियोजनाओं को अधूरा नहीं छोड़ते हैं।",
+        "हमारी ऑल-इन-वन, पारदर्शी सेवा का मतलब है कि हम विकास के हर चरण में आपके साथ खड़े हैं क्योंकि हर ग्राहक हमारे लिए महत्वपूर्ण है।"
       ],
-      "link": "Email our accountants"
+      "link": "Virintira के बारे में",
+      "viewLicense": "हमारा कॉर्पोरेट पंजीकरण देखें"
     },
     "services": {
       "heading": "Popular services",
@@ -443,34 +449,34 @@
       ]
     },
     "highlights": {
-      "heading": "Why choose Virintira",
+      "heading": "Virintira को क्यों चुनें",
       "items": [
-        "Dedicated account manager fluent in Thai and English",
-        "Secure cloud accounting stack with daily reconciliations",
-        "Industry-specific workflows tailored to your operations",
-        "Transparent pricing with flexible add-ons",
-        "Certified CPAs and tax advisors",
-        "Support across 16 languages for multinational teams"
+        "वन-स्टॉप सेवा",
+        "10+ वर्षों का अनुभव",
+        "तेज, पारदर्शी, समयनिष्ठ",
+        "निःशुल्क परामर्श",
+        "100% कानूनी और अनुपालन",
+        "जिम्मेदार और विश्वसनीय"
       ]
     },
     "process": {
-      "heading": "How it works",
+      "heading": "हमारी सेवा प्रक्रिया",
       "steps": [
         {
-          "title": "Discovery",
-          "description": "Understand your entity structure, systems, and compliance obligations."
+          "title": "अपनी सेवा चुनें",
+          "description": "वह सेवा चुनें जिसकी आपको आवश्यकता है या व्यक्तिगत परामर्श का अनुरोध करें।"
         },
         {
-          "title": "Onboarding",
-          "description": "Connect accounting tools, gather historical data, and align reporting formats."
+          "title": "चर्चा करें और योजना बनाएं",
+          "description": "विवरण और कार्यक्षेत्र की समीक्षा करने के लिए हमारी टीम से जुड़ें।"
         },
         {
-          "title": "Execution",
-          "description": "Our team posts transactions, prepares payroll, and manages tax filings."
+          "title": "निष्पादन और कागजी कार्रवाई",
+          "description": "हम हर कदम को संभालते हैं, आपको पूरे समय अपडेट रखते हैं।"
         },
         {
-          "title": "Insights",
-          "description": "Monthly meetings to review performance, forecast cash flow, and plan ahead."
+          "title": "सुचारू समापन",
+          "description": "यदि आवश्यक हो तो अतिरिक्त मार्गदर्शन के साथ समय पर परिणाम प्राप्त करें।"
         }
       ]
     },
@@ -481,39 +487,30 @@
   },
   "promotion": {
     "hero": {
-      "title": "Special offers for new clients",
-      "intro": "Secure preferential rates when you entrust Virintira with your finance operations before the end of this quarter."
+      "title": "समझदारी से बढ़ाएं, ज़्यादा बचाएं।",
+      "intro": "लागत कम करने और आपके विकास को तेज़ करने के लिए डिज़ाइन किए गए आवश्यक व्यावसायिक समाधानों पर विशेष दरों का लाभ उठाएं।"
     },
     "offers": [
       {
-        "name": "Startup launch bundle",
+        "name": "नए ग्राहकों के लिए विशेष 🔥",
         "bullets": [
-          "Company incorporation paperwork and tax registration",
-          "Cloud bookkeeping setup with chart of accounts",
-          "First three months of bookkeeping included"
+          "5,200 THB मूल्य का नि:शुल्क सरकारी कंपनी पंजीकरण शुल्क",
+          "1,100 THB मूल्य का नि:शुल्क प्रमाणित प्रतिलिपि बंडल",
+          "7,900 THB से अधिक मूल्य के बोनस लाभ"
         ],
-        "note": "Perfect for founders preparing to invoice customers and hire the first team members."
+        "note": "हर लाभ का तुरंत आनंद लेने के लिए आज ही Virintira के साथ साइन अप करें।"
       },
       {
-        "name": "Payroll peace of mind",
+        "name": "बहीखाता ग्राहकों के लिए विशेष 💡",
         "bullets": [
-          "Monthly payroll processing for up to 25 employees",
-          "Social security and Withholding Tax submissions",
-          "Employee onboarding checklist"
+          "3,500 THB मूल्य की नि:शुल्क बहीखाता सेवा",
+          "बिना किसी अतिरिक्त लागत के असीमित व्यावसायिक परामर्श सत्र",
+          "आपके व्यवसाय के लिए डिज़ाइन की गई व्यक्तिगत कर योजना"
         ],
-        "note": "Keeps your people paid accurately while staying fully compliant."
-      },
-      {
-        "name": "CFO insight sprint",
-        "bullets": [
-          "Financial health review and risk assessment",
-          "Cash-flow forecasting workshop",
-          "Investor-ready dashboard build-out"
-        ],
-        "note": "Ideal for scaling teams planning fundraising or expansion."
+        "note": "एक समर्पित विशेषज्ञ टीम से एंड-टू-एंड मासिक सहायता प्राप्त करें।"
       }
     ],
-    "cta": "Schedule consultation"
+    "cta": "अपना ऑफ़र दावा करें"
   },
   "resources": {
     "hero": {
@@ -556,46 +553,191 @@
   "services": {
     "categories": {
       "registrations": {
-        "title": "Registrations",
+        "title": "पंजीकरण",
         "summary": "Entity setup and statutory filings."
       },
       "corporate-changes": {
-        "title": "Corporate changes",
+        "title": "कंपनी बदलाव",
         "summary": "Update and maintain company records."
       },
       "accounting-audit": {
-        "title": "Accounting & Audit",
+        "title": "लेखांकन & ऑडिट",
         "summary": "Compliance, reporting, and assurance."
       },
       "licensing": {
-        "title": "Licensing",
+        "title": "लाइसेंस",
         "summary": "Business permits and sector approvals."
       },
       "digital-marketing": {
-        "title": "Digital marketing",
+        "title": "डिजिटल मार्केटिंग",
         "summary": "Online visibility and growth."
+      },
+      "other": {
+        "title": "अन्य सेवाएँ",
+        "summary": ""
       }
+    },
+    "other": {
+      "title": "अन्य सेवाएँ",
+      "summary": "क्या आपको वह सेवा नहीं मिल रही जिसकी आपको आवश्यकता है? हमसे सीधे संपर्क करें, शायद हम एक विशेष मामले के रूप में आपकी मदद कर सकें।",
+      "cta": "अभी पूछताछ करें!"
     },
     "items": {
       "registration": {
-        "title": "Company registration",
-        "summary": "Complete registration for limited companies and partnerships with expert guidance."
+        "title": "कंपनी (Co., Ltd.)",
+        "summary": "विशेषज्ञ मार्गदर्शन के साथ लिमिटेड कंपनियों और भागीदारी का पूर्ण पंजीकरण।"
+      },
+      "limited-partnership": {
+        "title": "लिमिटेड पार्टनरशिप",
+        "summary": "लिमिटेड पार्टनरशिप पंजीकरण सेवाएँ।"
+      },
+      "foundation": {
+        "title": "फाउंडेशन",
+        "summary": "फाउंडेशन पंजीकरण और स्थापना।"
+      },
+      "association": {
+        "title": "एसोसिएशन",
+        "summary": "एसोसिएशन पंजीकरण सेवाएँ।"
+      },
+      "commercial-shop": {
+        "title": "व्यावसायिक पंजीकरण",
+        "summary": "दुकानों के लिए व्यावसायिक पंजीकरण।"
+      },
+      "employer-sso": {
+        "title": "नियोक्ता (SSO)",
+        "summary": "नियोक्ता और सामाजिक सुरक्षा पंजीकरण।"
+      },
+      "vat-registration": {
+        "title": "VAT पंजीकरण",
+        "summary": "मूल्य वर्धित कर (VAT) पंजीकरण सेवाएँ।"
       },
       "edit-info": {
-        "title": "Corporate information updates",
-        "summary": "Accurate, timely updates to critical company information."
+        "title": "कॉर्पोरेट जानकारी अपडेट",
+        "summary": "महत्वपूर्ण कंपनी जानकारी के लिए सटीक और समय पर अपडेट।"
+      },
+      "company-name": {
+        "title": "कंपनी का नाम",
+        "summary": "कंपनी का नाम बदलने की सेवाएँ।"
+      },
+      "company-seal": {
+        "title": "कंपनी की मुहर",
+        "summary": "नई कंपनी की मुहर का पंजीकरण।"
+      },
+      "directors": {
+        "title": "निदेशक",
+        "summary": "निदेशकों या अधिकार में बदलाव।"
+      },
+      "signing-authority": {
+        "title": "हस्ताक्षर अधिकार",
+        "summary": "अधिकृत हस्ताक्षरकर्ताओं का अपडेट।"
+      },
+      "shareholders": {
+        "title": "शेयरधारक / शेयर",
+        "summary": "शेयरधारक सूची (BOJ.5) अपडेट करें।"
+      },
+      "capital": {
+        "title": "पूंजी",
+        "summary": "पंजीकृत पूंजी में वृद्धि या कमी।"
+      },
+      "address": {
+        "title": "पता / शाखाएँ",
+        "summary": "प्रधान कार्यालय या शाखाओं का स्थानांतरण।"
+      },
+      "objectives": {
+        "title": "उद्देश्य",
+        "summary": "व्यावसायिक उद्देश्यों में संशोधन।"
+      },
+      "dissolution": {
+        "title": "समापन",
+        "summary": "कंपनी का विघटन और परिसमापन सेवाएँ।"
       },
       "monthly-bookkeeping": {
-        "title": "Monthly bookkeeping",
-        "summary": "Accurate bookkeeping and monthly tax filing with every document handled for you."
+        "title": "मासिक बहीखाता",
+        "summary": "आपके लिए हर दस्तावेज़ को संभालने के साथ सटीक बहीखाता और मासिक कर फाइलिंग।"
+      },
+      "monthly-tax": {
+        "title": "मासिक टैक्स",
+        "summary": "मासिक और वार्षिक कर फाइलिंग।"
       },
       "close-financial": {
-        "title": "Financial statement closing",
-        "summary": "Certified auditors prepare and review your annual financial statements."
+        "title": "वित्तीय विवरण समापन",
+        "summary": "प्रमाणित ऑडिटर आपके वार्षिक वित्तीय विवरण तैयार और समीक्षा करते हैं।"
+      },
+      "personal-accounts": {
+        "title": "व्यक्तिगत खाते",
+        "summary": "व्यक्तिगत लेखा और कर फाइलिंग।"
+      },
+      "audit": {
+        "title": "ऑडिट",
+        "summary": "CPA और वैधानिक ऑडिट सेवाएँ।"
       },
       "tax-planning": {
-        "title": "Tax planning",
-        "summary": "Strategic tax planning that keeps your business compliant and efficient."
+        "title": "टैक्स प्लानिंग",
+        "summary": "रणनीतिक कर नियोजन जो आपके व्यवसाय को अनुपालन और कुशल रखता है।"
+      },
+      "foreign-tax-id": {
+        "title": "विदेशी टैक्स ID",
+        "summary": "विदेशियों के लिए टैक्स आईडी आवेदन।"
+      },
+      "tourism-licence": {
+        "title": "पर्यटन लाइसेंस",
+        "summary": "TAT पर्यटन लाइसेंस आवेदन।"
+      },
+      "thai-fda": {
+        "title": "थाई FDA",
+        "summary": "खाद्य और औषधि FDA पंजीकरण।"
+      },
+      "visa-work-permit": {
+        "title": "वीज़ा & वर्क परमिट",
+        "summary": "विदेशी वीज़ा और वर्क परमिट सेवाएँ।"
+      },
+      "boi-promotion": {
+        "title": "BOI प्रोत्साहन",
+        "summary": "BOI निवेश प्रोत्साहन आवेदन।"
+      },
+      "foreign-business": {
+        "title": "विदेशी बिज़नेस (FBL/FBC)",
+        "summary": "विदेशी व्यापार लाइसेंस आवेदन।"
+      },
+      "website-build": {
+        "title": "वेबसाइट निर्माण",
+        "summary": "वेबसाइट विकास और ई-कॉमर्स।"
+      },
+      "facebook-page": {
+        "title": "Facebook Page",
+        "summary": "फेसबुक पेज प्रबंधन और सामग्री।"
+      },
+      "line-oa": {
+        "title": "LINE OA",
+        "summary": "LINE आधिकारिक खाता सेटअप।"
+      },
+      "tiktok": {
+        "title": "TikTok",
+        "summary": "TikTok विपणन और सामग्री निर्माण।"
+      },
+      "youtube": {
+        "title": "YouTube",
+        "summary": "YouTube वीडियो उत्पादन और प्रचार।"
+      },
+      "video-production": {
+        "title": "वीडियो प्रोडक्शन",
+        "summary": "पेशेवर वीडियो शूट और संपादन।"
+      },
+      "paid-ads": {
+        "title": "पेड ऐड्स (Ads)",
+        "summary": "फेसबुक, गूगल और टिकटॉक विज्ञापन।"
+      },
+      "ai-solutions": {
+        "title": "AI समाधान",
+        "summary": "AI परामर्श और व्यावसायिक समाधान।"
+      },
+      "odoo-erp": {
+        "title": "Odoo ERP",
+        "summary": "Odoo ERP कार्यान्वयन और समर्थन।"
+      },
+      "custom-software": {
+        "title": "कस्टम सॉफ़्टवेयर",
+        "summary": "कस्टम सॉफ्टवेयर विकास सेवाएँ।"
       }
     },
     "bookkeeping": {
@@ -752,6 +894,10 @@
           }
         ]
       }
+    },
+    "hero": {
+      "title": "सेवाएं",
+      "description": "हमारी मुख्य सेवाएँ 5 श्रेणियों में आती हैं।"
     }
   },
   "blog": {
@@ -848,5 +994,82 @@
     "title": "Page not found",
     "description": "The page you are looking for may have been moved or no longer exists.",
     "back": "Back to homepage"
+  },
+  "contact": {
+    "close": "बंद करें",
+    "form": {
+      "heading": "संदेश भेजें",
+      "subheading": "अपनी पूछताछ नीचे जमा करें। हम 24 घंटे के भीतर संपर्क करेंगे।",
+      "directMessage": "Send us a direct message",
+      "directMessageDesc": "Submit your inquiry below. Our team will review your request and get back to you via email or phone within 24 hours.",
+      "name": "पूरा नाम",
+      "phone": "फ़ोन नंबर",
+      "email": "ईमेल",
+      "socialId": "सोशल आईडी",
+      "socialIdPlaceholder": "आईडी दर्ज करें",
+      "service": "सेवा",
+      "servicePlaceholder": "सेवा चुनें",
+      "message": "अतिरिक्त संदेश",
+      "messagePlaceholder": "हमें और बताएं...",
+      "submit": "संदेश भेजें",
+      "sending": "भेजा जा रहा है...",
+      "successTitle": "संदेश भेजा गया!",
+      "successMessage": "धन्यवाद। हमें आपका संदेश प्राप्त हो गया है।",
+      "sendAnother": "दसरा संदेश भेजें",
+      "serviceOther": "अन्य",
+      "socialPlatforms": {
+        "line": "Line",
+        "whatsapp": "WhatsApp",
+        "wechat": "WeChat",
+        "other": "अन्य"
+      },
+      "nameHelper": "केवल अक्षर और स्थान",
+      "phoneHelper": "केवल नंबर और + - चिह्न",
+      "emailHelper": "उदाहरण: name@company.com",
+      "errorGeneric": "कुछ गलत हो गया। कृपया पुन: प्रयास करें।",
+      "errorRateLimit": "बहुत सारे अनुरोध। कृपया 3 मिनट प्रतीक्षा करें।",
+      "namePlaceholder": "राहुल कुमार"
+    },
+    "channels": {
+      "line": {
+        "label": "LINE चैट",
+        "subLabel": "सबसे तेज़ प्रतिक्रिया",
+        "action": "जोड़ें"
+      },
+      "whatsapp": {
+        "label": "WhatsApp",
+        "subLabel": "अंतर्राष्ट्रीय ग्राहक",
+        "action": "संदेश"
+      },
+      "phone": {
+        "label": "हमें कॉल करें",
+        "subLabel": "सोम-शुक्र",
+        "action": "कॉल करें"
+      },
+      "email": {
+        "label": "ईमेल",
+        "subLabel": "दस्तावेज़ भेजें",
+        "action": "भेजें"
+      },
+      "facebook": {
+        "label": "Facebook",
+        "subLabel": "समाचार",
+        "action": "फॉलो करें"
+      },
+      "tiktok": {
+        "label": "TikTok",
+        "subLabel": "बिजनेस टिप्स",
+        "action": "देखें"
+      }
+    },
+    "hero": {
+      "title": "क्या आप अपना <highlight>व्यवसाय शुरू</highlight> करने के लिए तैयार हैं?",
+      "subtitle": "हमारे विशेषज्ञों से तुरंत बात करने के लिए अपना पसंदीदा चैनल चुनें।"
+    },
+    "formSection": {
+      "heading": "क्या आप चाहेंगे कि हम आपसे संपर्क करें?",
+      "subheading": "खुशी से! बस नीचे अपना विवरण भरें।"
+    },
+    "title": "संपर्क"
   }
 }

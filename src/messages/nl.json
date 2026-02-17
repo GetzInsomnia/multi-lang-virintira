@@ -70,6 +70,8 @@
       "chat": "Chat op LINE",
       "consult": "E-mail Virintira",
       "book": "Book a consultation",
+      "explore_category": "Diensten bekijken",
+      "view_details": "Bekijk details",
       "trigger": "Gratis consult"
     },
     "header": {
@@ -87,7 +89,7 @@
         },
         {
           "label": "Services",
-          "href": "#services"
+          "href": "/services"
         },
         {
           "label": "Artikelen",
@@ -99,7 +101,7 @@
         },
         {
           "label": "Contact",
-          "href": "/under-construction"
+          "href": "/contact"
         }
       ],
       "megaMenu": {
@@ -110,31 +112,31 @@
             "items": [
               {
                 "label": "BV (Co., Ltd.)",
-                "href": "/under-construction"
+                "href": "/services/registrations/registration"
               },
               {
                 "label": "Commanditaire venn.",
-                "href": "/under-construction"
+                "href": "/services/registrations/limited-partnership"
               },
               {
                 "label": "Stichting",
-                "href": "/under-construction"
+                "href": "/services/registrations/foundation"
               },
               {
                 "label": "Vereniging",
-                "href": "/under-construction"
+                "href": "/services/registrations/association"
               },
               {
                 "label": "Handelsregister",
-                "href": "/under-construction"
+                "href": "/services/registrations/commercial-shop"
               },
               {
                 "label": "Werkgevers (SSO)",
-                "href": "/under-construction"
+                "href": "/services/registrations/employer-sso"
               },
               {
                 "label": "Btw-registratie",
-                "href": "/under-construction"
+                "href": "/services/registrations/vat-registration"
               }
             ]
           },
@@ -143,39 +145,39 @@
             "items": [
               {
                 "label": "Bedrijfsnaam",
-                "href": "/under-construction"
+                "href": "/services/corporate-changes/company-name"
               },
               {
                 "label": "Bedrijfsstempel",
-                "href": "/under-construction"
+                "href": "/services/corporate-changes/company-seal"
               },
               {
                 "label": "Bestuurders",
-                "href": "/under-construction"
+                "href": "/services/corporate-changes/directors"
               },
               {
                 "label": "Tekenbevoegdheid",
-                "href": "/under-construction"
+                "href": "/services/corporate-changes/signing-authority"
               },
               {
                 "label": "Aandeelhouders",
-                "href": "/under-construction"
+                "href": "/services/corporate-changes/shareholders"
               },
               {
                 "label": "Aandelenkapitaal",
-                "href": "/under-construction"
+                "href": "/services/corporate-changes/capital"
               },
               {
                 "label": "Adres / Filialen",
-                "href": "/under-construction"
+                "href": "/services/corporate-changes/address"
               },
               {
                 "label": "Bedrijfsdoelen",
-                "href": "/under-construction"
+                "href": "/services/corporate-changes/objectives"
               },
               {
                 "label": "Ontbinding",
-                "href": "/under-construction"
+                "href": "/services/corporate-changes/dissolution"
               }
             ]
           },
@@ -184,31 +186,31 @@
             "items": [
               {
                 "label": "Bedrijfsadministratie",
-                "href": "/under-construction"
+                "href": "/services/accounting-audit/monthly-bookkeeping"
               },
               {
                 "label": "Maandelijkse belasting",
-                "href": "/under-construction"
+                "href": "/services/accounting-audit/monthly-tax"
               },
               {
                 "label": "Jaarrekening",
-                "href": "/under-construction"
+                "href": "/services/accounting-audit/close-financial"
               },
               {
                 "label": "Privéboekhouding",
-                "href": "/under-construction"
+                "href": "/services/accounting-audit/personal-accounts"
               },
               {
                 "label": "Audit & Controle",
-                "href": "/under-construction"
+                "href": "/services/accounting-audit/audit"
               },
               {
                 "label": "Belastingplanning",
-                "href": "/under-construction"
+                "href": "/services/accounting-audit/tax-planning"
               },
               {
                 "label": "Buitenlands tax-nr.",
-                "href": "/under-construction"
+                "href": "/services/accounting-audit/foreign-tax-id"
               }
             ]
           },
@@ -217,24 +219,23 @@
             "items": [
               {
                 "label": "Toerismevergunning",
-                "href": "/under-construction"
+                "href": "/services/licensing/tourism-licence"
               },
               {
                 "label": "Thaise FDA",
-                "href": "/under-construction"
+                "href": "/services/licensing/thai-fda"
               },
               {
                 "label": "Visum & Werkvergunning",
-                "href": "/under-construction"
+                "href": "/services/licensing/visa-work-permit"
               },
               {
                 "label": "BOI-promotie",
-                "href": "/under-construction"
-              }
-              ,
+                "href": "/services/licensing/boi-promotion"
+              },
               {
                 "label": "Buitenlandse licentie (FBL/FBC)",
-                "href": "/under-construction"
+                "href": "/services/licensing/foreign-business"
               }
             ]
           },
@@ -243,43 +244,43 @@
             "items": [
               {
                 "label": "Website bouwen",
-                "href": "/under-construction"
+                "href": "/services/digital-marketing/website-build"
               },
               {
                 "label": "Facebook Page",
-                "href": "/under-construction"
+                "href": "/services/digital-marketing/facebook-page"
               },
               {
                 "label": "LINE OA",
-                "href": "/under-construction"
+                "href": "/services/digital-marketing/line-oa"
               },
               {
                 "label": "TikTok",
-                "href": "/under-construction"
+                "href": "/services/digital-marketing/tiktok"
               },
               {
                 "label": "YouTube",
-                "href": "/under-construction"
+                "href": "/services/digital-marketing/youtube"
               },
               {
                 "label": "Videoproductie",
-                "href": "/under-construction"
+                "href": "/services/digital-marketing/video-production"
               },
               {
                 "label": "Betaalde advertenties",
-                "href": "/under-construction"
+                "href": "/services/digital-marketing/paid-ads"
               },
               {
                 "label": "AI-oplossingen",
-                "href": "/under-construction"
+                "href": "/services/digital-marketing/ai-solutions"
               },
               {
                 "label": "Odoo ERP",
-                "href": "/under-construction"
+                "href": "/services/digital-marketing/odoo-erp"
               },
               {
                 "label": "Maatwerksoftware",
-                "href": "/under-construction"
+                "href": "/services/digital-marketing/custom-software"
               }
             ]
           }
@@ -346,7 +347,7 @@
       },
       "quickLinks": [
         {
-          "label": "โปรโมชั่น",
+          "label": "Promoties",
           "href": "/promotion"
         },
         {
@@ -358,28 +359,28 @@
           "href": "/resources"
         },
         {
-          "label": "ติดต่อเรา",
-          "href": "/under-construction"
+          "label": "Contact",
+          "href": "/contact"
         },
         {
-          "label": "จดทะเบียน",
-          "href": "/under-construction"
+          "label": "Oprichtingen",
+          "href": "/services/registrations"
         },
         {
-          "label": "แก้ไขข้อมูลนิติบุคคล",
-          "href": "/under-construction"
+          "label": "Wijzigingen",
+          "href": "/services/corporate-changes"
         },
         {
-          "label": "บัญชีและตรวจสอบ",
-          "href": "/under-construction"
+          "label": "Boekhouding",
+          "href": "/services/accounting-audit"
         },
         {
-          "label": "ขอใบอนุญาต",
-          "href": "/under-construction"
+          "label": "Vergunningen",
+          "href": "/services/licensing"
         },
         {
-          "label": "การตลาดออนไลน์",
-          "href": "/under-construction"
+          "label": "Digital Marketing",
+          "href": "/services/digital-marketing"
         }
       ],
       "legal": "Copyright © {year} Virintira Co., Ltd. All rights reserved. | {poweredBy}"
@@ -391,7 +392,9 @@
     "resources": "Resources",
     "services": "Services",
     "blog": "Blog",
-    "howTo": "How-to"
+    "howTo": "How-to",
+    "otherServices": "Andere Diensten",
+    "contactDirectly": "Neem direct contact op"
   },
   "home": {
     "hero": {
@@ -406,12 +409,15 @@
       "emailButton": "Email Virintira"
     },
     "about": {
-      "heading": "Why founders choose Virintira",
+      "heading": "Virintira — Niet zomaar een accountantskantoor, maar uw complete zakenpartner",
       "paragraphs": [
-        "Our bilingual accountants combine local compliance mastery with proactive advisory. Whether you are scaling ecommerce, hospitality, or professional services, we translate complex regulations into clear action steps.",
-        "With 10+ years serving SMEs, we design bookkeeping rhythms, dashboard reporting, and payroll processes that let your leadership focus on growth instead of paperwork."
+        "Met meer dan 10 jaar ervaring ondersteunt Virintira elk onderdeel van uw activiteiten – van bedrijfsoprichting en maandelijkse boekhouding tot vergunningen, belastingplanning en digitale marketing.",
+        "We weten dat u zich wilt concentreren op de groei van uw bedrijf, dus wij zorgen voor de backoffice met duidelijkheid en snelheid.",
+        "U kunt op ons rekenen. Wij zijn volledig geregistreerd bij het Department of Business Development en laten projecten nooit onafgemaakt achter.",
+        "Onze alles-in-één, transparante service betekent dat we u bij elke stap van uw groei bijstaan, omdat elke klant belangrijk voor ons is."
       ],
-      "link": "Email our accountants"
+      "link": "Over Virintira",
+      "viewLicense": "Bekijk onze bedrijfsregistratie"
     },
     "services": {
       "heading": "Popular services",
@@ -443,34 +449,34 @@
       ]
     },
     "highlights": {
-      "heading": "Why choose Virintira",
+      "heading": "Waarom kiezen voor Virintira",
       "items": [
-        "Dedicated account manager fluent in Thai and English",
-        "Secure cloud accounting stack with daily reconciliations",
-        "Industry-specific workflows tailored to your operations",
-        "Transparent pricing with flexible add-ons",
-        "Certified CPAs and tax advisors",
-        "Support across 16 languages for multinational teams"
+        "Alles-in-één Service",
+        "10+ Jaar Ervaring",
+        "Snel, Transparant, Punctueel",
+        "Gratis Consult",
+        "100% Legaal & Compliant",
+        "Verantwoordelijk & Betrouwbaar"
       ]
     },
     "process": {
-      "heading": "How it works",
+      "heading": "Ons serviceproces",
       "steps": [
         {
-          "title": "Discovery",
-          "description": "Understand your entity structure, systems, and compliance obligations."
+          "title": "Kies uw service",
+          "description": "Selecteer de service die u nodig hebt of vraag een persoonlijk consult aan."
         },
         {
-          "title": "Onboarding",
-          "description": "Connect accounting tools, gather historical data, and align reporting formats."
+          "title": "Bespreek en plan",
+          "description": "Neem contact op met ons team om details en omvang te bespreken."
         },
         {
-          "title": "Execution",
-          "description": "Our team posts transactions, prepares payroll, and manages tax filings."
+          "title": "Uitvoering en papierwerk",
+          "description": "Wij regelen elke stap en houden u overal van op de hoogte."
         },
         {
-          "title": "Insights",
-          "description": "Monthly meetings to review performance, forecast cash flow, and plan ahead."
+          "title": "Soepele afronding",
+          "description": "Ontvang resultaten op tijd met extra begeleiding indien nodig."
         }
       ]
     },
@@ -481,39 +487,30 @@
   },
   "promotion": {
     "hero": {
-      "title": "Special offers for new clients",
-      "intro": "Secure preferential rates when you entrust Virintira with your finance operations before the end of this quarter."
+      "title": "Slim schalen, meer besparen.",
+      "intro": "Profiteer van speciale tarieven voor essentiële zakelijke oplossingen die zijn ontworpen om kosten te verlagen en uw groei te versnellen."
     },
     "offers": [
       {
-        "name": "Startup launch bundle",
+        "name": "Exclusief voor nieuwe klanten 🔥",
         "bullets": [
-          "Company incorporation paperwork and tax registration",
-          "Cloud bookkeeping setup with chart of accounts",
-          "First three months of bookkeeping included"
+          "Gratis overheidsregistratiekosten t.w.v. 5.200 THB",
+          "Gratis bundel gewaarmerkte kopieën t.w.v. 1.100 THB",
+          "Bonusvoordelen t.w.v. meer dan 7.900 THB"
         ],
-        "note": "Perfect for founders preparing to invoice customers and hire the first team members."
+        "note": "Meld u vandaag nog aan bij Virintira om direct van elk voordeel te genieten."
       },
       {
-        "name": "Payroll peace of mind",
+        "name": "Exclusief voor boekhoudklanten 💡",
         "bullets": [
-          "Monthly payroll processing for up to 25 employees",
-          "Social security and Withholding Tax submissions",
-          "Employee onboarding checklist"
+          "Gratis boekhoudservice t.w.v. 3.500 THB",
+          "Onbeperkte zakelijke adviessessies zonder extra kosten",
+          "Gepersonaliseerde belastingplanning voor uw bedrijf"
         ],
-        "note": "Keeps your people paid accurately while staying fully compliant."
-      },
-      {
-        "name": "CFO insight sprint",
-        "bullets": [
-          "Financial health review and risk assessment",
-          "Cash-flow forecasting workshop",
-          "Investor-ready dashboard build-out"
-        ],
-        "note": "Ideal for scaling teams planning fundraising or expansion."
+        "note": "Ontvang maandelijkse end-to-end ondersteuning van een toegewijd expertteam."
       }
     ],
-    "cta": "Schedule consultation"
+    "cta": "Claim uw aanbod"
   },
   "resources": {
     "hero": {
@@ -556,46 +553,191 @@
   "services": {
     "categories": {
       "registrations": {
-        "title": "Registrations",
+        "title": "Oprichtingen",
         "summary": "Entity setup and statutory filings."
       },
       "corporate-changes": {
-        "title": "Corporate changes",
+        "title": "Wijzigingen",
         "summary": "Update and maintain company records."
       },
       "accounting-audit": {
-        "title": "Accounting & Audit",
+        "title": "Boekhouding",
         "summary": "Compliance, reporting, and assurance."
       },
       "licensing": {
-        "title": "Licensing",
+        "title": "Vergunningen",
         "summary": "Business permits and sector approvals."
       },
       "digital-marketing": {
-        "title": "Digital marketing",
+        "title": "Digital Marketing",
         "summary": "Online visibility and growth."
+      },
+      "other": {
+        "title": "Andere diensten",
+        "summary": ""
       }
+    },
+    "other": {
+      "title": "Andere Diensten",
+      "summary": "Kunt u de service niet vinden die u nodig hebt? Neem contact met ons op, misschien kunnen we u als speciaal geval helpen.",
+      "cta": "Vraag nu aan!"
     },
     "items": {
       "registration": {
-        "title": "Company registration",
-        "summary": "Complete registration for limited companies and partnerships with expert guidance."
+        "title": "BV (Co., Ltd.)",
+        "summary": "Complete registratieservice voor BV's en partnerschappen."
+      },
+      "limited-partnership": {
+        "title": "Commanditaire venn.",
+        "summary": "Registratie commanditaire vennootschap."
+      },
+      "foundation": {
+        "title": "Stichting",
+        "summary": "Oprichting van stichtingen."
+      },
+      "association": {
+        "title": "Vereniging",
+        "summary": "Registratie van verenigingen."
+      },
+      "commercial-shop": {
+        "title": "Handelsregister",
+        "summary": "Commerciële winkelregistratie."
+      },
+      "employer-sso": {
+        "title": "Werkgevers (SSO)",
+        "summary": "Werkgevers- en sociale zekerheidsregistratie."
+      },
+      "vat-registration": {
+        "title": "Btw-registratie",
+        "summary": "Registratie voor btw (VAT)."
       },
       "edit-info": {
-        "title": "Corporate information updates",
-        "summary": "Accurate, timely updates to critical company information."
+        "title": "Bedrijfsinformatie wijzigen",
+        "summary": "Snelle en nauwkeurige updates van bedrijfsinformatie."
+      },
+      "company-name": {
+        "title": "Bedrijfsnaam",
+        "summary": "Wijzigen van de bedrijfsnaam."
+      },
+      "company-seal": {
+        "title": "Bedrijfsstempel",
+        "summary": "Registratie van een nieuwe bedrijfsstempel."
+      },
+      "directors": {
+        "title": "Bestuurders",
+        "summary": "Wijzigen van bestuurders of bevoegdheden."
+      },
+      "signing-authority": {
+        "title": "Tekenbevoegdheid",
+        "summary": "Updaten van tekenbevoegden."
+      },
+      "shareholders": {
+        "title": "Aandeelhouders",
+        "summary": "Updaten aandeelhoudersregister (BOJ.5)."
+      },
+      "capital": {
+        "title": "Aandelenkapitaal",
+        "summary": "Verhogen of verlagen van aandelenkapitaal."
+      },
+      "address": {
+        "title": "Adres / Filialen",
+        "summary": "Verhuizing hoofdkantoor of filialen."
+      },
+      "objectives": {
+        "title": "Bedrijfsdoelen",
+        "summary": "Wijzigen van bedrijfsdoelen."
+      },
+      "dissolution": {
+        "title": "Ontbinding",
+        "summary": "Ontbinding en liquidatie van bedrijven."
       },
       "monthly-bookkeeping": {
-        "title": "Monthly bookkeeping",
-        "summary": "Accurate bookkeeping and monthly tax filing with every document handled for you."
+        "title": "Bedrijfsadministratie",
+        "summary": "Volledige boekhouding en maandelijkse belastingaangiften."
+      },
+      "monthly-tax": {
+        "title": "Maandelijkse belasting",
+        "summary": "Maandelijkse en halfjaarlijkse belastingaangifte."
       },
       "close-financial": {
-        "title": "Financial statement closing",
-        "summary": "Certified auditors prepare and review your annual financial statements."
+        "title": "Jaarrekening",
+        "summary": "Opstellen en controleren van jaarrekeningen door erkende accountants."
+      },
+      "personal-accounts": {
+        "title": "Privéboekhouding",
+        "summary": "Persoonlijke boekhouding en belastingaangifte."
+      },
+      "audit": {
+        "title": "Audit & Controle",
+        "summary": "Statutaire audits en CPA-diensten."
       },
       "tax-planning": {
-        "title": "Tax planning",
-        "summary": "Strategic tax planning that keeps your business compliant and efficient."
+        "title": "Belastingplanning",
+        "summary": "Strategische belastingplanning voor uw onderneming."
+      },
+      "foreign-tax-id": {
+        "title": "Buitenlands tax-nr.",
+        "summary": "Aanvraag belasting-ID voor buitenlanders."
+      },
+      "tourism-licence": {
+        "title": "Toerismevergunning",
+        "summary": "Aanvraag TAT-toerismevergunning."
+      },
+      "thai-fda": {
+        "title": "Thaise FDA",
+        "summary": "FDA-registratie voor voedsel en medicijnen."
+      },
+      "visa-work-permit": {
+        "title": "Visum & Werkvergunning",
+        "summary": "Visum en werkvergunning voor buitenlanders."
+      },
+      "boi-promotion": {
+        "title": "BOI-promotie",
+        "summary": "Aanvraag BOI-investeringsvoordelen."
+      },
+      "foreign-business": {
+        "title": "Buitenlandse licentie",
+        "summary": "Aanvraag buitenlandse bedrijfslicentie (FBL)."
+      },
+      "website-build": {
+        "title": "Website bouwen",
+        "summary": "Website-ontwikkeling en e-commerce."
+      },
+      "facebook-page": {
+        "title": "Facebook Page",
+        "summary": "Beheer en content voor Facebook-pagina's."
+      },
+      "line-oa": {
+        "title": "LINE OA",
+        "summary": "Opzetten van LINE Official Account."
+      },
+      "tiktok": {
+        "title": "TikTok",
+        "summary": "TikTok marketing en content creatie."
+      },
+      "youtube": {
+        "title": "YouTube",
+        "summary": "Videoproductie en YouTube-promotie."
+      },
+      "video-production": {
+        "title": "Videoproductie",
+        "summary": "Professionele video-opnames en montage."
+      },
+      "paid-ads": {
+        "title": "Betaalde advertenties",
+        "summary": "Facebook, Google en TikTok advertenties."
+      },
+      "ai-solutions": {
+        "title": "AI-oplossingen",
+        "summary": "AI-consultancy en bedrijfsoplossingen."
+      },
+      "odoo-erp": {
+        "title": "Odoo ERP",
+        "summary": "Implementatie en ondersteuning van Odoo ERP."
+      },
+      "custom-software": {
+        "title": "Maatwerksoftware",
+        "summary": "Ontwikkeling van software op maat."
       }
     },
     "bookkeeping": {
@@ -752,6 +894,10 @@
           }
         ]
       }
+    },
+    "hero": {
+      "title": "Diensten",
+      "description": "Onze kerndiensten vallen in 5 categorieën."
     }
   },
   "blog": {
@@ -848,5 +994,82 @@
     "title": "Page not found",
     "description": "The page you are looking for may have been moved or no longer exists.",
     "back": "Back to homepage"
+  },
+  "contact": {
+    "close": "Sluiten",
+    "form": {
+      "heading": "Stuur ons een direct bericht",
+      "subheading": "Dien uw aanvraag hieronder in. Ons team neemt binnen 24 uur contact met u op.",
+      "directMessage": "Send us a direct message",
+      "directMessageDesc": "Submit your inquiry below. Our team will review your request and get back to you via email or phone within 24 hours.",
+      "name": "Volledige naam",
+      "phone": "Telefoonnummer",
+      "email": "E-mail",
+      "socialId": "Social ID",
+      "socialIdPlaceholder": "Voer ID in",
+      "service": "Gewenste dienst",
+      "servicePlaceholder": "Selecteer een dienst",
+      "message": "Aanvullend bericht",
+      "messagePlaceholder": "Vertel ons meer over uw bedrijf...",
+      "submit": "Bericht versturen",
+      "sending": "Verzenden...",
+      "successTitle": "Bericht verzonden!",
+      "successMessage": "Bedankt. We hebben uw bericht ontvangen en nemen snel contact op.",
+      "sendAnother": "Nog een bericht sturen",
+      "serviceOther": "Anders",
+      "socialPlatforms": {
+        "line": "Line",
+        "whatsapp": "WhatsApp",
+        "wechat": "WeChat",
+        "other": "Anders"
+      },
+      "nameHelper": "Alleen letters en spaties",
+      "phoneHelper": "Alleen cijfers en + - tekens",
+      "emailHelper": "Voorbeeld: naam@bedrijf.com",
+      "errorGeneric": "Er is iets misgegaan. Probeer het opnieuw.",
+      "errorRateLimit": "Te veel verzoeken. Wacht 3 minuten.",
+      "namePlaceholder": "Jan Jansen"
+    },
+    "channels": {
+      "line": {
+        "label": "LINE Chat",
+        "subLabel": "Snelste antwoord",
+        "action": "Toevoegen"
+      },
+      "whatsapp": {
+        "label": "WhatsApp",
+        "subLabel": "Internationale klanten",
+        "action": "Bericht"
+      },
+      "phone": {
+        "label": "Bel ons",
+        "subLabel": "Ma-Vr, 09:00 - 18:00",
+        "action": "Bellen"
+      },
+      "email": {
+        "label": "E-mail",
+        "subLabel": "Docs & Offertes",
+        "action": "Sturen"
+      },
+      "facebook": {
+        "label": "Facebook",
+        "subLabel": "Nieuws & Updates",
+        "action": "Volgen"
+      },
+      "tiktok": {
+        "label": "TikTok",
+        "subLabel": "Dagelijkse tips",
+        "action": "Bekijken"
+      }
+    },
+    "hero": {
+      "title": "Klaar om uw <highlight>bedrijf te starten</highlight>?",
+      "subtitle": "Kies uw kanaal om direct met onze experts te spreken."
+    },
+    "formSection": {
+      "heading": "Wilt u liever dat wij contact opnemen?",
+      "subheading": "Met plezier! Vul uw gegevens hieronder in."
+    },
+    "title": "Contact"
   }
 }

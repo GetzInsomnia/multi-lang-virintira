@@ -3,6 +3,7 @@
 import { useEffect, useState } from 'react';
 import {
   FaLine,
+  FaWhatsapp,
   FaTiktok,
   FaFacebookF,
   FaPhoneAlt,
@@ -92,6 +93,21 @@ export default function SocialFloating({ menuOpen = false }: { menuOpen?: boolea
             aria-label="Virintira on LINE"
           >
             <FaLine className="w-7 h-7 text-white lg:w-7 lg:h-7 xl:w-8 xl:h-8" />
+          </a>
+
+          {/* WhatsApp */}
+          <a
+            href="https://wa.me/66928825556"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={[
+              'rounded-full shadow-md',
+              'bg-[#25D366] hover:bg-[#20bd5a] active:bg-[#1da850]',
+              'p-1.5 lg:p-1 xl:p-1.5',
+            ].join(' ')}
+            aria-label="Virintira on WhatsApp"
+          >
+            <FaWhatsapp className="w-7 h-7 text-white lg:w-7 lg:h-7 xl:w-8 xl:h-8" />
           </a>
 
           {/* TikTok */}

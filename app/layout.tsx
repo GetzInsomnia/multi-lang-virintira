@@ -18,12 +18,10 @@ export default async function RootLayout({
   const requestedLocale = await getLocale().catch(() => 'en');
   const locale = (requestedLocale in fonts ? requestedLocale : 'en') as SupportedLocale;
   const font = fonts[locale] ?? fonts.en;
-  const dir = ['ar', 'fa', 'he'].includes(locale) ? 'rtl' : 'ltr';
-
   const htmlClassName = [font.className, fontVariableClassName].filter(Boolean).join(' ');
 
   return (
-    <html lang={locale} dir={dir} className={htmlClassName} suppressHydrationWarning>
+    <html lang={locale} dir="ltr" className={htmlClassName} suppressHydrationWarning>
       <body>{children}</body>
     </html>
   );

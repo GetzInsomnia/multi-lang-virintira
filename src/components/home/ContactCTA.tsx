@@ -1,84 +1,82 @@
 'use client';
 
 import { COMPANY } from '@/data/company';
-import CTAReveal from '@/components/common/CTAReveal';
+import { ConsultationButtons } from '@/components/common/ConsultationButtons';
 import { useLocale } from 'next-intl';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faLine } from '@fortawesome/free-brands-svg-icons';
-import { faPhone, faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import { motion, LayoutGroup } from 'framer-motion';
 
-export function ContactCTA({ heading, description, callLabel, chatLabel, emailLabel, triggerLabel }: { heading: string; description: string; callLabel: string; chatLabel: string; emailLabel: string; triggerLabel: string }) {
+export function ContactCTA({
+  heading,
+  description,
+  callLabel,
+  chatLabel,
+  whatsappLabel,
+  emailLabel,
+  triggerLabel
+}: {
+  heading: string;
+  description: string;
+  callLabel: string;
+  chatLabel: string;
+  whatsappLabel: string;
+  emailLabel: string;
+  triggerLabel: string
+}) {
   return (
     <section
       id="contact"
-      className="relative flex min-h-[calc(100dvh-var(--header-height))] items-center justify-center overflow-hidden bg-[#fff0f0] px-safe py-24"
+      className="relative flex min-h-[calc(100dvh-var(--header-height))] items-center justify-center overflow-hidden bg-[#A70909] px-safe py-24"
     >
-      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(167,9,9,0.12)_0%,rgba(255,240,240,0)_60%)]" aria-hidden="true" />
-      <div className="relative z-10 mx-auto w-full max-w-5xl">
-        <div className="flex flex-col items-center gap-6 rounded-[42px] border border-[#A70909]/20 bg-white/95 px-10 py-14 text-center shadow-[0_40px_120px_rgba(167,9,9,0.18)]">
-          {heading ? (
-            <h2 className="text-[clamp(2.1rem,1.5rem+1.8vw,3.1rem)] font-bold text-[#A70909]">
-              {heading}
-            </h2>
-          ) : null}
-          {description ? (
-            <p className="max-w-3xl text-[clamp(1rem,0.95rem+0.35vw,1.2rem)] leading-relaxed text-[#5d3f3f]">
-              {description}
-            </p>
-          ) : null}
-          <ContactCTAButtons triggerLabel={triggerLabel} chatLabel={chatLabel} emailLabel={emailLabel} callLabel={callLabel} />
-        </div>
+      {/* Premium Dark Gradient & Pattern */}
+      <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(to_bottom_right,#A70909,#5d0505)]" />
+
+      {/* 
+        Connector Cap (Round 9 Fix): 
+        Forces the top edge to be SOLID Flat #A70909 to match the Promotion section above.
+        The base gradient (to_bottom_right) causes the right side to be darker, creating a seam.
+        This transition fixes it.
+      */}
+      <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-[#A70909] via-[#A70909] to-transparent z-0 pointer-events-none" />
+
+      <div className="absolute inset-0 z-0 opacity-20"
+        style={{ backgroundImage: 'radial-gradient(rgba(255,255,255,0.1) 1px, transparent 1px)', backgroundSize: '32px 32px' }}
+        aria-hidden="true"
+      />
+
+      <div className="relative z-10 mx-auto w-full max-w-5xl text-center">
+        {/* LayoutGroup ensures shared layout animations between components */}
+        <LayoutGroup>
+          <motion.div
+            layout
+            className="flex flex-col items-center gap-10 px-4"
+            transition={{ type: "spring", stiffness: 300, damping: 30 }}
+          >
+            <motion.div layout className="space-y-6">
+              {heading ? (
+                <motion.h2 layout="position" className="text-[clamp(2.5rem,2rem+2.5vw,4rem)] font-bold text-white leading-tight drop-shadow-md">
+                  {heading}
+                </motion.h2>
+              ) : null}
+              {description ? (
+                <motion.p layout="position" className="max-w-2xl mx-auto text-[clamp(1.1rem,1rem+0.5vw,1.3rem)] leading-relaxed text-white/80 font-medium">
+                  {description}
+                </motion.p>
+              ) : null}
+            </motion.div>
+
+            <motion.div layout className="w-full">
+              <ConsultationButtons
+                triggerLabel={triggerLabel}
+                chatLabel={chatLabel}
+                whatsappLabel={whatsappLabel}
+                emailLabel={emailLabel}
+                phoneAriaLabel={callLabel}
+                variant="on-red"
+              />
+            </motion.div>
+          </motion.div>
+        </LayoutGroup>
       </div>
     </section>
-  );
-}
-
-function ContactCTAButtons({ triggerLabel, chatLabel, emailLabel, callLabel }: { triggerLabel: string; chatLabel: string; emailLabel: string; callLabel: string }) {
-  const locale = useLocale();
-  const isThai = locale === 'th';
-  const phoneHref = isThai ? 'tel:0928825556' : 'tel:+66928825556';
-  const phoneText = isThai ? '092 882 5556' : '+669 2882 5556';
-
-  return (
-    <CTAReveal
-      triggerLabel={triggerLabel}
-      className="flex justify-center"
-      groupClassName="flex-col pt-2 sm:flex-row sm:justify-center"
-    >
-      <a
-        href={phoneHref}
-        aria-label={callLabel}
-        className="inline-flex min-w-[min(220px,calc(100vw-4rem))] items-center justify-center rounded-full border border-[#A70909]/50 bg-white px-8 py-3 text-base font-semibold text-[#A70909] shadow-sm transition-transform duration-200 ease-out hover:-translate-y-1 motion-reduce:transform-none will-change-transform hover:bg-[#fff1f1] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#A70909] focus-visible:ring-offset-2 focus-visible:ring-offset-white gap-3"
-      >
-        <span className="grid h-6 w-6 place-items-center">
-          <FontAwesomeIcon icon={faPhone} className="h-4 w-4 shrink-0 scale-[1.45]" aria-hidden />
-        </span>
-        <span className="whitespace-nowrap leading-none text-[clamp(0.95rem,0.88rem+0.25vw,1rem)]">{phoneText}</span>
-      </a>
-      <a
-        href={COMPANY.socials.line}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="inline-flex min-w-[min(220px,calc(100vw-4rem))] items-center justify-center rounded-full bg-[#06C755] px-8 py-3 text-base font-semibold text-white shadow-lg shadow-[#06c755]/20 transition-transform duration-200 ease-out hover:-translate-y-1 motion-reduce:transform-none will-change-transform hover:brightness-110 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#06C755] focus-visible:ring-offset-2 focus-visible:ring-offset-white gap-3"
-      >
-        <span className="grid h-6 w-6 place-items-center">
-          <FontAwesomeIcon
-            icon={faLine}
-            className="h-4 w-4 shrink-0 scale-[1.85] -translate-y-[0.5px]"
-            aria-hidden
-          />
-        </span>
-        <span className="whitespace-nowrap leading-none text-[clamp(0.95rem,0.88rem+0.25vw,1rem)]">{chatLabel}</span>
-      </a>
-      <a
-        href={`mailto:${COMPANY.email}`}
-        className="inline-flex min-w-[min(220px,calc(100vw-4rem))] items-center justify-center rounded-full bg-[#A70909] px-8 py-3 text-base font-semibold text-white shadow-lg shadow-[#a70909]/30 transition-transform duration-200 ease-out hover:-translate-y-1 motion-reduce:transform-none will-change-transform hover:bg-[#8c0808] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#A70909] focus-visible:ring-offset-2 focus-visible:ring-offset-white gap-3"
-      >
-        <span className="grid h-6 w-6 place-items-center">
-          <FontAwesomeIcon icon={faEnvelope} className="h-4 w-4 shrink-0 scale-[1.45]" aria-hidden />
-        </span>
-        <span className="whitespace-nowrap leading-none text-[clamp(0.95rem,0.88rem+0.25vw,1rem)]">{emailLabel}</span>
-      </a>
-    </CTAReveal>
   );
 }

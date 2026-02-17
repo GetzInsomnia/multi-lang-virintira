@@ -69,7 +69,9 @@
       "call": "Call {phone}",
       "chat": "LINEで相談",
       "consult": "メール（Virintira）",
-      "book": "Book a consultation",
+      "book": "相談を予約する",
+      "explore_category": "サービスを見る",
+      "view_details": "詳細を見る",
       "trigger": "無料相談"
     },
     "header": {
@@ -87,7 +89,7 @@
         },
         {
           "label": "サービス",
-          "href": "#services"
+          "href": "/services"
         },
         {
           "label": "記事",
@@ -99,9 +101,30 @@
         },
         {
           "label": "お問い合わせ",
-          "href": "/under-construction"
+          "href": "/contact"
         }
       ],
+      "process": {
+        "heading": "サービスの流れ",
+        "steps": [
+          {
+            "title": "サービス選択",
+            "description": "ご興味のあるサービスを選択、またはご相談ください"
+          },
+          {
+            "title": "ヒアリング・計画",
+            "description": "詳細や範囲についてチームと話し合います"
+          },
+          {
+            "title": "実務・書類作成",
+            "description": "すべての手続きを代行し、進捗を随時報告します"
+          },
+          {
+            "title": "完了・納品",
+            "description": "正確かつ期限内に納品し、追加のアドバイスも提供します"
+          }
+        ]
+      },
       "megaMenu": {
         "triggerLabel": "サービス",
         "columns": [
@@ -110,31 +133,31 @@
             "items": [
               {
                 "label": "株式会社 (Co., Ltd.)",
-                "href": "/under-construction"
+                "href": "/services/registrations/registration"
               },
               {
                 "label": "合資会社 (L.P.)",
-                "href": "/under-construction"
+                "href": "/services/registrations/registration"
               },
               {
                 "label": "財団法人",
-                "href": "/under-construction"
+                "href": "/services/registrations/foundation"
               },
               {
                 "label": "組合・協会",
-                "href": "/under-construction"
+                "href": "/services/registrations/association"
               },
               {
                 "label": "商業登記 (店舗)",
-                "href": "/under-construction"
+                "href": "/services/registrations/commercial-shop"
               },
               {
                 "label": "社会保険登録 (SSO)",
-                "href": "/under-construction"
+                "href": "/services/registrations/employer-sso"
               },
               {
                 "label": "VAT登録",
-                "href": "/under-construction"
+                "href": "/services/registrations/vat-registration"
               }
             ]
           },
@@ -143,39 +166,39 @@
             "items": [
               {
                 "label": "商号変更",
-                "href": "/under-construction"
+                "href": "/services/corporate-changes/company-name"
               },
               {
                 "label": "社印・実印",
-                "href": "/under-construction"
+                "href": "/services/corporate-changes/company-seal"
               },
               {
                 "label": "役員変更",
-                "href": "/under-construction"
+                "href": "/services/corporate-changes/directors"
               },
               {
                 "label": "署名権限",
-                "href": "/under-construction"
+                "href": "/services/corporate-changes/signing-authority"
               },
               {
                 "label": "株主 / 株式",
-                "href": "/under-construction"
+                "href": "/services/corporate-changes/shareholders"
               },
               {
                 "label": "資本金",
-                "href": "/under-construction"
+                "href": "/services/corporate-changes/capital"
               },
               {
                 "label": "住所 / 支店",
-                "href": "/under-construction"
+                "href": "/services/corporate-changes/address"
               },
               {
                 "label": "事業目的",
-                "href": "/under-construction"
+                "href": "/services/corporate-changes/objectives"
               },
               {
                 "label": "解散・清算",
-                "href": "/under-construction"
+                "href": "/services/corporate-changes/dissolution"
               }
             ]
           },
@@ -184,31 +207,31 @@
             "items": [
               {
                 "label": "法人会計",
-                "href": "/under-construction"
+                "href": "/services/accounting-audit/monthly-bookkeeping"
               },
               {
                 "label": "月次税務",
-                "href": "/under-construction"
+                "href": "/services/accounting-audit/monthly-tax"
               },
               {
                 "label": "年次決算",
-                "href": "/under-construction"
+                "href": "/services/accounting-audit/close-financial"
               },
               {
                 "label": "個人会計",
-                "href": "/under-construction"
+                "href": "/services/accounting-audit/personal-accounts"
               },
               {
                 "label": "会計監査",
-                "href": "/under-construction"
+                "href": "/services/accounting-audit/audit"
               },
               {
                 "label": "節税対策",
-                "href": "/under-construction"
+                "href": "/services/accounting-audit/tax-planning"
               },
               {
                 "label": "外国納税者番号",
-                "href": "/under-construction"
+                "href": "/services/accounting-audit/foreign-tax-id"
               }
             ]
           },
@@ -217,24 +240,23 @@
             "items": [
               {
                 "label": "旅行業ライセンス",
-                "href": "/under-construction"
+                "href": "/services/licensing/tourism-licence"
               },
               {
                 "label": "タイFDA",
-                "href": "/under-construction"
+                "href": "/services/licensing/thai-fda"
               },
               {
                 "label": "ビザ・WP申請",
-                "href": "/under-construction"
+                "href": "/services/licensing/visa-work-permit"
               },
               {
                 "label": "BOI 申請代行",
-                "href": "/under-construction"
-              }
-              ,
+                "href": "/services/licensing/boi-promotion"
+              },
               {
                 "label": "外国人事業許可 (FBL/FBC)",
-                "href": "/under-construction"
+                "href": "/services/licensing/foreign-business"
               }
             ]
           },
@@ -243,43 +265,43 @@
             "items": [
               {
                 "label": "Web制作",
-                "href": "/under-construction"
+                "href": "/services/digital-marketing/website-build"
               },
               {
                 "label": "Facebook運用",
-                "href": "/under-construction"
+                "href": "/services/digital-marketing/facebook-page"
               },
               {
                 "label": "LINE OA",
-                "href": "/under-construction"
+                "href": "/services/digital-marketing/line-oa"
               },
               {
                 "label": "TikTok",
-                "href": "/under-construction"
+                "href": "/services/digital-marketing/tiktok"
               },
               {
                 "label": "YouTube",
-                "href": "/under-construction"
+                "href": "/services/digital-marketing/youtube"
               },
               {
                 "label": "動画制作",
-                "href": "/under-construction"
+                "href": "/services/digital-marketing/video-production"
               },
               {
                 "label": "Web広告運用",
-                "href": "/under-construction"
+                "href": "/services/digital-marketing/paid-ads"
               },
               {
                 "label": "AIソリューション",
-                "href": "/under-construction"
+                "href": "/services/digital-marketing/ai-solutions"
               },
               {
                 "label": "Odoo ERP",
-                "href": "/under-construction"
+                "href": "/services/digital-marketing/odoo-erp"
               },
               {
                 "label": "システム開発",
-                "href": "/under-construction"
+                "href": "/services/digital-marketing/custom-software"
               }
             ]
           }
@@ -346,7 +368,7 @@
       },
       "quickLinks": [
         {
-          "label": "โปรโมชั่น",
+          "label": "プロモーション",
           "href": "/promotion"
         },
         {
@@ -358,28 +380,28 @@
           "href": "/resources"
         },
         {
-          "label": "ติดต่อเรา",
-          "href": "/under-construction"
+          "label": "お問い合わせ",
+          "href": "/contact"
         },
         {
-          "label": "จดทะเบียน",
-          "href": "/under-construction"
+          "label": "法人設立",
+          "href": "/services/registrations"
         },
         {
-          "label": "แก้ไขข้อมูลนิติบุคคล",
-          "href": "/under-construction"
+          "label": "登記変更",
+          "href": "/services/corporate-changes"
         },
         {
-          "label": "บัญชีและตรวจสอบ",
-          "href": "/under-construction"
+          "label": "会計・監査",
+          "href": "/services/accounting-audit"
         },
         {
-          "label": "ขอใบอนุญาต",
-          "href": "/under-construction"
+          "label": "許認可",
+          "href": "/services/licensing"
         },
         {
-          "label": "การตลาดออนไลน์",
-          "href": "/under-construction"
+          "label": "デジタル",
+          "href": "/services/digital-marketing"
         }
       ],
       "legal": "Copyright © {year} Virintira Co., Ltd. All rights reserved. | {poweredBy}"
@@ -389,8 +411,10 @@
     "home": "Home",
     "promotion": "Promotions",
     "resources": "Resources",
-    "services": "Services",
-    "blog": "Blog",
+    "services": "サービス",
+    "otherServices": "その他のサービス",
+    "contactDirectly": "直接お問い合わせください",
+    "blog": "ブログ",
     "howTo": "How-to"
   },
   "home": {
@@ -406,12 +430,15 @@
       "emailButton": "Email Virintira"
     },
     "about": {
-      "heading": "Why founders choose Virintira",
+      "heading": "Virintira — 単なる会計事務所ではなく、あなたの総合的なビジネスパートナーです",
       "paragraphs": [
-        "Our bilingual accountants combine local compliance mastery with proactive advisory. Whether you are scaling ecommerce, hospitality, or professional services, we translate complex regulations into clear action steps.",
-        "With 10+ years serving SMEs, we design bookkeeping rhythms, dashboard reporting, and payroll processes that let your leadership focus on growth instead of paperwork."
+        "10年以上の経験を持つVirintiraは、会社設立や毎月の記帳からライセンス取得、税務計画、デジタルマーケティングまで、お客様の事業のあらゆる部分をサポートします。",
+        "お客様がビジネスの成長に集中したいと考えていることを私たちは理解しています。そのため、バックオフィス業務は私たちが明確かつ迅速に処理します。",
+        "私たちにお任せください。私たちは事業開発局に完全に登録されており、プロジェクトを途中で放棄することは決してありません。",
+        "私たちのオールインワンで透明性の高いサービスは、お客様の成長のあらゆる段階で寄り添うことを意味します。すべてのお客様が私たちにとって重要だからです。"
       ],
-      "link": "Email our accountants"
+      "link": "Virintiraについて",
+      "viewLicense": "会社登記を見る"
     },
     "services": {
       "heading": "Popular services",
@@ -443,14 +470,14 @@
       ]
     },
     "highlights": {
-      "heading": "Why choose Virintira",
+      "heading": "Virintiraを選ぶ理由",
       "items": [
-        "Dedicated account manager fluent in Thai and English",
-        "Secure cloud accounting stack with daily reconciliations",
-        "Industry-specific workflows tailored to your operations",
-        "Transparent pricing with flexible add-ons",
-        "Certified CPAs and tax advisors",
-        "Support across 16 languages for multinational teams"
+        "ワンストップサービス",
+        "10年以上の経験",
+        "迅速・透明・時間厳守",
+        "無料相談",
+        "100%合法・遵守",
+        "責任感と信頼"
       ]
     },
     "process": {
@@ -481,39 +508,30 @@
   },
   "promotion": {
     "hero": {
-      "title": "Special offers for new clients",
-      "intro": "Secure preferential rates when you entrust Virintira with your finance operations before the end of this quarter."
+      "title": "スマートに拡大、もっと節約。",
+      "intro": "コスト削減と成長加速のために設計された必須ビジネスソリューションを特別価格でご利用いただけます。"
     },
     "offers": [
       {
-        "name": "Startup launch bundle",
+        "name": "新規のお客様限定 🔥",
         "bullets": [
-          "Company incorporation paperwork and tax registration",
-          "Cloud bookkeeping setup with chart of accounts",
-          "First three months of bookkeeping included"
+          "会社設立の政府登録費用（5,200 THB相当）が無料",
+          "認証謄本バンドル（1,100 THB相当）が無料",
+          "総額7,900 THB以上の特典ボーナス"
         ],
-        "note": "Perfect for founders preparing to invoice customers and hire the first team members."
+        "note": "今すぐVirintiraに登録して、すべての特典を即座にご利用ください。"
       },
       {
-        "name": "Payroll peace of mind",
+        "name": "記帳代行のお客様限定 💡",
         "bullets": [
-          "Monthly payroll processing for up to 25 employees",
-          "Social security and Withholding Tax submissions",
-          "Employee onboarding checklist"
+          "記帳代行サービス（3,500 THB相当）が無料",
+          "追加費用なしの無制限ビジネスコンサルティング",
+          "貴社のビジネスに合わせたパーソナライズされた税務計画"
         ],
-        "note": "Keeps your people paid accurately while staying fully compliant."
-      },
-      {
-        "name": "CFO insight sprint",
-        "bullets": [
-          "Financial health review and risk assessment",
-          "Cash-flow forecasting workshop",
-          "Investor-ready dashboard build-out"
-        ],
-        "note": "Ideal for scaling teams planning fundraising or expansion."
+        "note": "専任のエキスパートチームによる月次ポートを受けられます。"
       }
     ],
-    "cta": "Schedule consultation"
+    "cta": "特典を受け取る"
   },
   "resources": {
     "hero": {
@@ -556,46 +574,191 @@
   "services": {
     "categories": {
       "registrations": {
-        "title": "Registrations",
-        "summary": "Entity setup and statutory filings."
+        "title": "法人設立",
+        "summary": "会社設立および登記手続き"
       },
       "corporate-changes": {
-        "title": "Corporate changes",
-        "summary": "Update and maintain company records."
+        "title": "登記変更",
+        "summary": "会社情報の更新・維持"
       },
       "accounting-audit": {
-        "title": "Accounting & Audit",
-        "summary": "Compliance, reporting, and assurance."
+        "title": "会計・監査",
+        "summary": "経理、決算、監査対応"
       },
       "licensing": {
-        "title": "Licensing",
-        "summary": "Business permits and sector approvals."
+        "title": "許認可",
+        "summary": "事業ライセンスおよび認可取得"
       },
       "digital-marketing": {
-        "title": "Digital marketing",
-        "summary": "Online visibility and growth."
+        "title": "デジタル",
+        "summary": "オンラインでの認知獲得と成長"
+      },
+      "other": {
+        "title": "その他のサービス",
+        "summary": ""
       }
+    },
+    "other": {
+      "title": "その他のサービス",
+      "summary": "お探しのサービスが見つかりませんか？直接お問い合わせください。特別なケースとして対応できるかもしれません。",
+      "cta": "今すぐお問い合わせ！"
     },
     "items": {
       "registration": {
-        "title": "Company registration",
+        "title": "株式会社 (Co., Ltd.)",
         "summary": "Complete registration for limited companies and partnerships with expert guidance."
+      },
+      "limited-partnership": {
+        "title": "合資会社 (L.P.)",
+        "summary": "合資会社の設立・登録。"
+      },
+      "foundation": {
+        "title": "財団法人",
+        "summary": "財団法人の設立。"
+      },
+      "association": {
+        "title": "組合・協会",
+        "summary": "組合・協会の設立。"
+      },
+      "commercial-shop": {
+        "title": "商業登記 (店舗)",
+        "summary": "店舗の商業登記。"
+      },
+      "employer-sso": {
+        "title": "社会保険登録 (SSO)",
+        "summary": "雇用主登録および社会保険手続き。"
+      },
+      "vat-registration": {
+        "title": "VAT登録",
+        "summary": "付加価値税 (VAT) の登録。"
       },
       "edit-info": {
         "title": "Corporate information updates",
         "summary": "Accurate, timely updates to critical company information."
       },
+      "company-name": {
+        "title": "商号変更",
+        "summary": "会社名の変更手続き。"
+      },
+      "company-seal": {
+        "title": "社印・実印",
+        "summary": "新しい社印の登録。"
+      },
+      "directors": {
+        "title": "役員変更",
+        "summary": "取締役の変更・権限変更。"
+      },
+      "signing-authority": {
+        "title": "署名権限",
+        "summary": "署名権限者の変更。"
+      },
+      "shareholders": {
+        "title": "株主 / 株式",
+        "summary": "株主名簿の更新 (BOJ.5)。"
+      },
+      "capital": {
+        "title": "資本金",
+        "summary": "増資または減資の手続き。"
+      },
+      "address": {
+        "title": "住所 / 支店",
+        "summary": "本店移転または支店設置。"
+      },
+      "objectives": {
+        "title": "事業目的",
+        "summary": "事業目的の変更。"
+      },
+      "dissolution": {
+        "title": "解散・清算",
+        "summary": "会社の解散および清算手続き。"
+      },
       "monthly-bookkeeping": {
         "title": "Monthly bookkeeping",
         "summary": "Accurate bookkeeping and monthly tax filing with every document handled for you."
+      },
+      "monthly-tax": {
+        "title": "月次税務",
+        "summary": "月次税務申告の作成と提出。"
       },
       "close-financial": {
         "title": "Financial statement closing",
         "summary": "Certified auditors prepare and review your annual financial statements."
       },
+      "personal-accounts": {
+        "title": "個人会計",
+        "summary": "個人の会計および税務申告。"
+      },
+      "audit": {
+        "title": "会計監査",
+        "summary": "公認会計士 (CPA) による法定監査。"
+      },
+      "foreign-tax-id": {
+        "title": "外国納税者番号",
+        "summary": "外国人のための納税者番号取得。"
+      },
       "tax-planning": {
         "title": "Tax planning",
         "summary": "Strategic tax planning that keeps your business compliant and efficient."
+      },
+      "tourism-licence": {
+        "title": "旅行業ライセンス",
+        "summary": "TAT 旅行業ライセンス申請。"
+      },
+      "thai-fda": {
+        "title": "タイFDA",
+        "summary": "食品および医薬品の FDA 登録。"
+      },
+      "visa-work-permit": {
+        "title": "ビザ・WP申請",
+        "summary": "外国人向けビザおよび労働許可証。"
+      },
+      "boi-promotion": {
+        "title": "BOI 申請代行",
+        "summary": "BOI (投資委員会) 奨励申請。"
+      },
+      "foreign-business": {
+        "title": "外国人事業許可 (FBL/FBC)",
+        "summary": "外国人事業許可 (FBL) の申請。"
+      },
+      "website-build": {
+        "title": "Web制作",
+        "summary": "コーポレートサイトおよびECサイト制作。"
+      },
+      "facebook-page": {
+        "title": "Facebook運用",
+        "summary": "Facebook ページの管理およびコンテンツ。"
+      },
+      "line-oa": {
+        "title": "LINE OA",
+        "summary": "LINE 公式アカウントの設定と管理。"
+      },
+      "tiktok": {
+        "title": "TikTok",
+        "summary": "TikTok マーケティングおよびコンテンツ。"
+      },
+      "youtube": {
+        "title": "YouTube",
+        "summary": "YouTube 動画制作およびマーケティング。"
+      },
+      "video-production": {
+        "title": "動画制作",
+        "summary": "プロフェッショナルな動画制作サービス。"
+      },
+      "paid-ads": {
+        "title": "Web広告運用",
+        "summary": "FB, Google, TikTok 広告管理。"
+      },
+      "ai-solutions": {
+        "title": "AIソリューション",
+        "summary": "ビジネス向け AI 導入およびコンサルティング。"
+      },
+      "odoo-erp": {
+        "title": "Odoo ERP",
+        "summary": "Odoo ERP の導入およびサポート。"
+      },
+      "custom-software": {
+        "title": "システム開発",
+        "summary": "お客様のニーズに合わせたシステム開発。"
       }
     },
     "bookkeeping": {
@@ -752,6 +915,10 @@
           }
         ]
       }
+    },
+    "hero": {
+      "title": "サービス",
+      "description": "当社の主要サービスは5つのカテゴリーに分かれています。"
     }
   },
   "blog": {
@@ -848,5 +1015,82 @@
     "title": "Page not found",
     "description": "The page you are looking for may have been moved or no longer exists.",
     "back": "Back to homepage"
+  },
+  "contact": {
+    "close": "閉じる",
+    "form": {
+      "heading": "メッセージを送る",
+      "subheading": "以下にご記入ください。24時間以内にご連絡いたします。",
+      "directMessage": "Send us a direct message",
+      "directMessageDesc": "Submit your inquiry below. Our team will review your request and get back to you via email or phone within 24 hours.",
+      "name": "氏名",
+      "phone": "電話番号",
+      "email": "メールアドレス",
+      "socialId": "ソーシャルID",
+      "socialIdPlaceholder": "IDを入力",
+      "service": "興味のあるサービス",
+      "servicePlaceholder": "サービスを選択",
+      "message": "メッセージ",
+      "messagePlaceholder": "詳細をお書きください...",
+      "submit": "送信する",
+      "sending": "送信中...",
+      "successTitle": "送信完了！",
+      "successMessage": "ありがとうございます。メッセージを受け取りました。",
+      "sendAnother": "別のメッセージを送る",
+      "serviceOther": "その他",
+      "socialPlatforms": {
+        "line": "Line",
+        "whatsapp": "WhatsApp",
+        "wechat": "WeChat",
+        "other": "その他"
+      },
+      "nameHelper": "文字とスペースのみ",
+      "phoneHelper": "数字と + - 記号のみ",
+      "emailHelper": "例：name@company.com",
+      "errorGeneric": "エラーが発生しました。もう一度お試しください。",
+      "errorRateLimit": "リクエストが多すぎます。3分待ってください。",
+      "namePlaceholder": "山田 太郎"
+    },
+    "channels": {
+      "line": {
+        "label": "LINEチャット",
+        "subLabel": "最速レスポンス",
+        "action": "友達追加"
+      },
+      "whatsapp": {
+        "label": "WhatsApp",
+        "subLabel": "海外のお客様",
+        "action": "送信"
+      },
+      "phone": {
+        "label": "電話する",
+        "subLabel": "月-金, 09:00 - 18:00",
+        "action": "発信"
+      },
+      "email": {
+        "label": "メール",
+        "subLabel": "資料・見積もり",
+        "action": "送信"
+      },
+      "facebook": {
+        "label": "Facebook",
+        "subLabel": "ニュース",
+        "action": "フォロー"
+      },
+      "tiktok": {
+        "label": "TikTok",
+        "subLabel": "ビジネスのヒント",
+        "action": "見る"
+      }
+    },
+    "hero": {
+      "title": "<highlight>ビジネスを始める</highlight>準備はできましたか？",
+      "subtitle": "ご都合の良い方法で、今すぐ専門家にご相談ください。"
+    },
+    "formSection": {
+      "heading": "こちらから連絡をご希望ですか？",
+      "subheading": "喜んで！以下のフォームにご記入ください。"
+    },
+    "title": "お問い合わせ"
   }
 }

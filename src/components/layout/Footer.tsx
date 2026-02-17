@@ -9,7 +9,7 @@ import { COMPANY, getLocalizedAddress } from '@/data/company';
 import { Link } from '@/i18n/routing';
 import { normalizeInternalHref } from '@/lib/links';
 
-import { FaPhoneAlt, FaLine, FaTiktok, FaFacebookF, FaEnvelope } from 'react-icons/fa';
+import { FaPhoneAlt, FaLine, FaWhatsapp, FaTiktok, FaFacebookF, FaEnvelope } from 'react-icons/fa';
 
 export type FooterLink = { label: string; href: string };
 
@@ -50,7 +50,7 @@ function renderFooterLink(link: FooterLink, extraClassName = '') {
     return <a className={className} href={href}>{link.label}</a>;
   }
   return (
-    <Link className={className} href={normalizeInternalHref(href)} prefetch>
+    <Link className={className} href={normalizeInternalHref(href)} prefetch={false}>
       {link.label}
     </Link>
   );
@@ -88,7 +88,7 @@ export default function Footer({ data }: { data: FooterData }) {
 
   const poweredByNode = (
     <a href="https://techbiz-solution.com/" target="_blank" rel="noopener noreferrer"
-       className="text-inherit hover:text-[#A70909] hover:no-underline transition-colors">
+      className="inline-block mt-2 sm:mt-0 text-inherit hover:text-[#A70909] hover:no-underline transition-colors">
       Powered by Techbiz Solution Co., Ltd.
     </a>
   );
@@ -98,13 +98,13 @@ export default function Footer({ data }: { data: FooterData }) {
 
   const handleLogoClick = () => {
     if (typeof window === 'undefined') return;
-    if (pathname === '/') {
+    if (pathname === '/' || pathname === `/${locale}`) {
       window.location.hash = HERO_SECTION_ID;
       const target = document.getElementById(HERO_SECTION_ID);
       if (target) target.scrollIntoView({ behavior: 'smooth' });
       else window.scrollTo({ top: 0, behavior: 'smooth' });
     } else {
-      window.location.href = `/#${HERO_SECTION_ID}`;
+      window.location.href = `/${locale}#${HERO_SECTION_ID}`;
     }
   };
 
@@ -161,19 +161,22 @@ export default function Footer({ data }: { data: FooterData }) {
   // แถวเดียวแนวนอน (ใช้สำหรับ <1024)
   const SocialIconsRow = () => (
     <div className="flex items-center justify-center gap-4 sm:gap-5 md:gap-6">
-      <a href={`tel:${COMPANY.phone}`} className="text-white bg-[#A70909] rounded-full w-11 h-11 p-2.5 flex items-center justify-center shadow-md hover:opacity-80" aria-label="Call Virintira">
+      <a href={`tel:${COMPANY.phone}`} className="text-white bg-[#A70909] rounded-full w-11 h-11 p-2.5 flex items-center justify-center shadow-md transition-transform duration-200 hover:-translate-y-1" aria-label="Call Virintira">
         <FaPhoneAlt className="w-5 h-5" />
       </a>
-      <a href={COMPANY.socials.line} target="_blank" rel="noopener noreferrer" className="bg-[#06C755] rounded-full w-11 h-11 p-1 flex items-center justify-center shadow-md hover:opacity-80" aria-label="Virintira on LINE">
+      <a href={COMPANY.socials.line} target="_blank" rel="noopener noreferrer" className="bg-[#06C755] rounded-full w-11 h-11 p-1 flex items-center justify-center shadow-md transition-transform duration-200 hover:-translate-y-1" aria-label="Virintira on LINE">
         <FaLine className="w-8 h-8 text-white" />
       </a>
-      <a href={COMPANY.socials.tiktok} target="_blank" rel="noopener noreferrer" className="bg-black rounded-full w-11 h-11 p-2.5 flex items-center justify-center shadow-md hover:opacity-80" aria-label="Virintira on TikTok">
+      <a href={COMPANY.socials.whatsapp} target="_blank" rel="noopener noreferrer" className="bg-[#25D366] rounded-full w-11 h-11 p-1 flex items-center justify-center shadow-md transition-transform duration-200 hover:-translate-y-1" aria-label="Virintira on WhatsApp">
+        <FaWhatsapp className="w-8 h-8 text-white" />
+      </a>
+      <a href={COMPANY.socials.tiktok} target="_blank" rel="noopener noreferrer" className="bg-black rounded-full w-11 h-11 p-2.5 flex items-center justify-center shadow-md transition-transform duration-200 hover:-translate-y-1" aria-label="Virintira on TikTok">
         <FaTiktok className="w-5 h-5 text-white" />
       </a>
-      <a href={COMPANY.socials.facebook} target="_blank" rel="noopener noreferrer" className="bg-[#1877F2] rounded-full w-11 h-11 p-2.5 flex items-center justify-center shadow-md hover:opacity-80" aria-label="Virintira on Facebook">
+      <a href={COMPANY.socials.facebook} target="_blank" rel="noopener noreferrer" className="bg-[#1877F2] rounded-full w-11 h-11 p-2.5 flex items-center justify-center shadow-md transition-transform duration-200 hover:-translate-y-1" aria-label="Virintira on Facebook">
         <FaFacebookF className="w-5 h-5 text-white" />
       </a>
-      <a href={`mailto:${COMPANY.email}`} className="text-white bg-[#A70909] rounded-full w-11 h-11 p-2.5 flex items-center justify-center shadow-md hover:opacity-80" aria-label="Email Virintira">
+      <a href={`mailto:${COMPANY.email}`} className="text-white bg-[#A70909] rounded-full w-11 h-11 p-2.5 flex items-center justify-center shadow-md transition-transform duration-200 hover:-translate-y-1" aria-label="Email Virintira">
         <FaEnvelope className="w-5 h-5" />
       </a>
     </div>
@@ -183,21 +186,24 @@ export default function Footer({ data }: { data: FooterData }) {
   const SocialIconsCols = () => (
     <div className="flex gap-6">
       <div className="flex flex-col gap-2">
-        <a href={`tel:${COMPANY.phone}`} className="text-white bg-[#A70909] rounded-full w-11 h-11 p-2.5 flex items-center justify-center shadow-md hover:opacity-80" aria-label="Call Virintira">
+        <a href={`tel:${COMPANY.phone}`} className="text-white bg-[#A70909] rounded-full w-11 h-11 p-2.5 flex items-center justify-center shadow-md transition-transform duration-200 hover:-translate-y-1" aria-label="Call Virintira">
           <FaPhoneAlt className="w-5 h-5" />
         </a>
-        <a href={COMPANY.socials.tiktok} target="_blank" rel="noopener noreferrer" className="bg-black rounded-full w-11 h-11 p-2.5 flex items-center justify-center shadow-md hover:opacity-80" aria-label="Virintira on TikTok">
+        <a href={COMPANY.socials.tiktok} target="_blank" rel="noopener noreferrer" className="bg-black rounded-full w-11 h-11 p-2.5 flex items-center justify-center shadow-md transition-transform duration-200 hover:-translate-y-1" aria-label="Virintira on TikTok">
           <FaTiktok className="w-5 h-5 text-white" />
         </a>
-        <a href={`mailto:${COMPANY.email}`} className="text-white bg-[#A70909] rounded-full w-11 h-11 p-2.5 flex items-center justify-center shadow-md hover:opacity-80" aria-label="Email Virintira">
+        <a href={`mailto:${COMPANY.email}`} className="text-white bg-[#A70909] rounded-full w-11 h-11 p-2.5 flex items-center justify-center shadow-md transition-transform duration-200 hover:-translate-y-1" aria-label="Email Virintira">
           <FaEnvelope className="w-5 h-5" />
         </a>
       </div>
       <div className="flex flex-col gap-2">
-        <a href={COMPANY.socials.line} target="_blank" rel="noopener noreferrer" className="bg-[#06C755] rounded-full w-11 h-11 p-1 flex items-center justify-center shadow-md hover:opacity-80" aria-label="Virintira on LINE">
+        <a href={COMPANY.socials.line} target="_blank" rel="noopener noreferrer" className="bg-[#06C755] rounded-full w-11 h-11 p-1 flex items-center justify-center shadow-md transition-transform duration-200 hover:-translate-y-1" aria-label="Virintira on LINE">
           <FaLine className="w-8 h-8 text-white" />
         </a>
-        <a href={COMPANY.socials.facebook} target="_blank" rel="noopener noreferrer" className="bg-[#1877F2] rounded-full w-11 h-11 p-2.5 flex items-center justify-center shadow-md hover:opacity-80" aria-label="Virintira on Facebook">
+        <a href={COMPANY.socials.whatsapp} target="_blank" rel="noopener noreferrer" className="bg-[#25D366] rounded-full w-11 h-11 p-1 flex items-center justify-center shadow-md transition-transform duration-200 hover:-translate-y-1" aria-label="Virintira on WhatsApp">
+          <FaWhatsapp className="w-8 h-8 text-white" />
+        </a>
+        <a href={COMPANY.socials.facebook} target="_blank" rel="noopener noreferrer" className="bg-[#1877F2] rounded-full w-11 h-11 p-2.5 flex items-center justify-center shadow-md transition-transform duration-200 hover:-translate-y-1" aria-label="Virintira on Facebook">
           <FaFacebookF className="w-5 h-5 text-white" />
         </a>
       </div>
@@ -205,16 +211,16 @@ export default function Footer({ data }: { data: FooterData }) {
   );
 
   const LogoBlock = () => (
-    <button
-      type="button"
-      className="min-w-0 flex flex-col items-center justify-center text-center h-full cursor-pointer"
-      onClick={handleLogoClick}
+    <Link
+      href="/"
+      className="min-w-0 flex flex-col items-center justify-center text-center h-full cursor-pointer hover:opacity-80 transition-opacity"
+      prefetch={false}
     >
       <Image src="/logo.png" alt={`${COMPANY.brand} logo`} width={120} height={120} />
       <span className="mt-3 font-bold text-[#A70909] text-[clamp(22px,1.8vw,28px)] lg:text-2xl">
         {COMPANY.brandMark ?? COMPANY.brand}
       </span>
-    </button>
+    </Link>
   );
 
   return (

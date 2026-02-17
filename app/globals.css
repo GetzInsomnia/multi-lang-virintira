@@ -74,12 +74,7 @@
   font-family: var(--font-he), system-ui, sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
+
 
 /* Box model baseline (ปล่อยไว้นอก layer ได้) */
 * {
@@ -134,9 +129,11 @@
 }
 
 /* behavior / motion */
+/* behavior / motion */
 html {
   scroll-behavior: smooth;
 }
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
@@ -147,6 +144,7 @@ html {
 html[dir='rtl'] body {
   text-align: right;
 }
+
 html[dir='rtl'] a,
 html[dir='rtl'] p,
 html[dir='rtl'] h1,
@@ -159,6 +157,7 @@ html[dir='rtl'] h3 {
 .text-shadow-white {
   text-shadow: 0 2px 6px rgba(255, 255, 255, 0.5);
 }
+
 .no-image-fade {
   animation: none !important;
   transition: none !important;

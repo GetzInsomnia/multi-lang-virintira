@@ -18,9 +18,6 @@ const MESSAGE_LOADERS: Record<Locale, Loader> = {
   ms: () => import("@/messages/ms.json"),
   ta: () => import("@/messages/ta.json"),
   hi: () => import("@/messages/hi.json"),
-  ar: () => import("@/messages/ar.json"),
-  fa: () => import("@/messages/fa.json"),
-  he: () => import("@/messages/he.json"),
 };
 
 function isPlainObject(value: unknown): value is Record<string, unknown> {

@@ -69,7 +69,9 @@
       "call": "Call {phone}",
       "chat": "LINE 諮詢",
       "consult": "電郵 Virintira",
-      "book": "Book a consultation",
+      "book": "預約諮詢",
+      "explore_category": "查看服務",
+      "view_details": "查看詳情",
       "trigger": "免費諮詢"
     },
     "header": {
@@ -87,7 +89,7 @@
         },
         {
           "label": "服務",
-          "href": "#services"
+          "href": "/services"
         },
         {
           "label": "文章",
@@ -99,9 +101,58 @@
         },
         {
           "label": "聯絡我們",
-          "href": "/under-construction"
+          "href": "/contact"
+        }
+      ]
+    },
+    "promotion": {
+      "hero": {
+        "title": "明智擴展，節省更多。",
+        "intro": "解鎖旨在降低成本並加速您增長的基本業務解決方案的特惠費率。"
+      },
+      "offers": [
+        {
+          "name": "新客戶專享 🔥",
+          "bullets": [
+            "免除價值 5,200 泰銖的政府公司註冊費",
+            "免費提供價值 1,100 泰銖的認證副本包",
+            "價值超過 7,900 泰銖的額外福利"
+          ],
+          "note": "立即註冊 Virintira，立享所有福利。"
+        },
+        {
+          "name": "記帳客戶專享 💡",
+          "bullets": [
+            "免費提供價值 3,500 泰銖的記帳服務",
+            "無限次商業咨詢會議，無額外費用",
+            "為您企業量身定制的稅務規劃"
+          ],
+          "note": "獲得專屬專家團隊的全程月度支持。"
         }
       ],
+      "cta": "領取您的優惠"
+    },
+    "process": {
+      "heading": "服務流程",
+      "steps": [
+        {
+          "title": "選擇服務",
+          "description": "選擇您感興趣的服務或諮詢詳情"
+        },
+        {
+          "title": "溝通與規劃",
+          "description": "聯繫我們討論細節或開始服務"
+        },
+        {
+          "title": "執行與文件準備",
+          "description": "我們處理每一個步驟，並隨時向您匯報進度"
+        },
+        {
+          "title": "順利完成",
+          "description": "按時交付，準確無誤，並提供額外建議"
+        }
+      ]
+    },
       "megaMenu": {
         "triggerLabel": "服務項目",
         "columns": [
@@ -110,31 +161,31 @@
             "items": [
               {
                 "label": "有限公司",
-                "href": "/under-construction"
+                "href": "/services/registrations/registration"
               },
               {
                 "label": "有限合夥",
-                "href": "/under-construction"
+                "href": "/services/registrations/limited-partnership"
               },
               {
                 "label": "基金會",
-                "href": "/under-construction"
+                "href": "/services/registrations/foundation"
               },
               {
                 "label": "協會",
-                "href": "/under-construction"
+                "href": "/services/registrations/association"
               },
               {
                 "label": "商業登記 (店鋪)",
-                "href": "/under-construction"
+                "href": "/services/registrations/commercial-shop"
               },
               {
                 "label": "雇主登記 (SSO)",
-                "href": "/under-construction"
+                "href": "/services/registrations/employer-sso"
               },
               {
                 "label": "增值稅 (VAT)",
-                "href": "/under-construction"
+                "href": "/services/registrations/vat-registration"
               }
             ]
           },
@@ -143,39 +194,39 @@
             "items": [
               {
                 "label": "公司名稱",
-                "href": "/under-construction"
+                "href": "/services/corporate-changes/company-name"
               },
               {
                 "label": "公司印章",
-                "href": "/under-construction"
+                "href": "/services/corporate-changes/company-seal"
               },
               {
                 "label": "董事資訊",
-                "href": "/under-construction"
+                "href": "/services/corporate-changes/directors"
               },
               {
                 "label": "簽署權限",
-                "href": "/under-construction"
+                "href": "/services/corporate-changes/signing-authority"
               },
               {
                 "label": "股東 / 股權",
-                "href": "/under-construction"
+                "href": "/services/corporate-changes/shareholders"
               },
               {
                 "label": "註冊資本",
-                "href": "/under-construction"
+                "href": "/services/corporate-changes/capital"
               },
               {
                 "label": "地址 / 分支",
-                "href": "/under-construction"
+                "href": "/services/corporate-changes/address"
               },
               {
                 "label": "營業項目",
-                "href": "/under-construction"
+                "href": "/services/corporate-changes/objectives"
               },
               {
                 "label": "公司註銷",
-                "href": "/under-construction"
+                "href": "/services/corporate-changes/dissolution"
               }
             ]
           },
@@ -184,31 +235,31 @@
             "items": [
               {
                 "label": "公司帳務",
-                "href": "/under-construction"
+                "href": "/services/accounting-audit/monthly-bookkeeping"
               },
               {
                 "label": "每月報稅",
-                "href": "/under-construction"
+                "href": "/services/accounting-audit/monthly-tax"
               },
               {
                 "label": "年度財報",
-                "href": "/under-construction"
+                "href": "/services/accounting-audit/close-financial"
               },
               {
                 "label": "個人帳務",
-                "href": "/under-construction"
+                "href": "/services/accounting-audit/personal-accounts"
               },
               {
                 "label": "審計服務",
-                "href": "/under-construction"
+                "href": "/services/accounting-audit/audit"
               },
               {
                 "label": "稅務規劃",
-                "href": "/under-construction"
+                "href": "/services/accounting-audit/tax-planning"
               },
               {
                 "label": "外國稅號",
-                "href": "/under-construction"
+                "href": "/services/accounting-audit/foreign-tax-id"
               }
             ]
           },
@@ -217,24 +268,23 @@
             "items": [
               {
                 "label": "旅遊執照",
-                "href": "/under-construction"
+                "href": "/services/licensing/tourism-licence"
               },
               {
                 "label": "泰國 FDA",
-                "href": "/under-construction"
+                "href": "/services/licensing/thai-fda"
               },
               {
                 "label": "簽證 / 工作證",
-                "href": "/under-construction"
+                "href": "/services/licensing/visa-work-permit"
               },
               {
                 "label": "BOI 投資優惠",
-                "href": "/under-construction"
-              }
-              ,
+                "href": "/services/licensing/boi-promotion"
+              },
               {
                 "label": "外商經營許可 (FBL / FBC)",
-                "href": "/under-construction"
+                "href": "/services/licensing/foreign-business"
               }
             ]
           },
@@ -243,43 +293,43 @@
             "items": [
               {
                 "label": "網站架設",
-                "href": "/under-construction"
+                "href": "/services/digital-marketing/website-build"
               },
               {
                 "label": "Facebook 粉專",
-                "href": "/under-construction"
+                "href": "/services/digital-marketing/facebook-page"
               },
               {
                 "label": "LINE OA",
-                "href": "/under-construction"
+                "href": "/services/digital-marketing/line-oa"
               },
               {
                 "label": "TikTok",
-                "href": "/under-construction"
+                "href": "/services/digital-marketing/tiktok"
               },
               {
                 "label": "YouTube",
-                "href": "/under-construction"
+                "href": "/services/digital-marketing/youtube"
               },
               {
                 "label": "影片製作",
-                "href": "/under-construction"
+                "href": "/services/digital-marketing/video-production"
               },
               {
                 "label": "付費廣告",
-                "href": "/under-construction"
+                "href": "/services/digital-marketing/paid-ads"
               },
               {
                 "label": "AI 解決方案",
-                "href": "/under-construction"
+                "href": "/services/digital-marketing/ai-solutions"
               },
               {
                 "label": "Odoo ERP",
-                "href": "/under-construction"
+                "href": "/services/digital-marketing/odoo-erp"
               },
               {
                 "label": "客製化軟體",
-                "href": "/under-construction"
+                "href": "/services/digital-marketing/custom-software"
               }
             ]
           }
@@ -329,8 +379,7 @@
           "facebook": "Facebook",
           "email": "Email"
         }
-      }
-    },
+      },
     "footer": {
       "tagline": "พาร์ตเนอร์บัญชีและธุรกิจครบวงจร",
       "description": "Virintira พร้อมดูแลตั้งแต่จดทะเบียน ทำบัญชี ไปจนถึงการตลาดออนไลน์ เพื่อให้ธุรกิจของคุณเดินหน้าได้อย่างมั่นใจและถูกต้องตามกฎหมายทุกขั้นตอน.",
@@ -346,7 +395,7 @@
       },
       "quickLinks": [
         {
-          "label": "โปรโมชั่น",
+          "label": "優惠",
           "href": "/promotion"
         },
         {
@@ -358,40 +407,42 @@
           "href": "/resources"
         },
         {
-          "label": "ติดต่อเรา",
-          "href": "/under-construction"
+          "label": "聯絡我們",
+          "href": "/contact"
         },
         {
-          "label": "จดทะเบียน",
-          "href": "/under-construction"
+          "label": "公司註冊",
+          "href": "/services/registrations"
         },
         {
-          "label": "แก้ไขข้อมูลนิติบุคคล",
-          "href": "/under-construction"
+          "label": "公司變更",
+          "href": "/services/corporate-changes"
         },
         {
-          "label": "บัญชีและตรวจสอบ",
-          "href": "/under-construction"
+          "label": "會計審計",
+          "href": "/services/accounting-audit"
         },
         {
-          "label": "ขอใบอนุญาต",
-          "href": "/under-construction"
+          "label": "許可證照",
+          "href": "/services/licensing"
         },
         {
-          "label": "การตลาดออนไลน์",
-          "href": "/under-construction"
+          "label": "數位行銷",
+          "href": "/services/digital-marketing"
         }
       ],
       "legal": "Copyright © {year} Virintira Co., Ltd. All rights reserved. | {poweredBy}"
     }
   },
   "breadcrumbs": {
-    "home": "Home",
-    "promotion": "Promotions",
-    "resources": "Resources",
-    "services": "Services",
-    "blog": "Blog",
-    "howTo": "How-to"
+    "home": "首頁",
+    "promotion": "優惠",
+    "resources": "資源",
+    "services": "服務",
+    "blog": "部落格",
+    "howTo": "指南",
+    "otherServices": "其他服務",
+    "contactDirectly": "直接聯繫我們"
   },
   "home": {
     "hero": {
@@ -406,12 +457,15 @@
       "emailButton": "Email Virintira"
     },
     "about": {
-      "heading": "Why founders choose Virintira",
+      "heading": "Virintira — 不僅是一家會計師事務所，更是您的全方位商業合作夥伴",
       "paragraphs": [
-        "Our bilingual accountants combine local compliance mastery with proactive advisory. Whether you are scaling ecommerce, hospitality, or professional services, we translate complex regulations into clear action steps.",
-        "With 10+ years serving SMEs, we design bookkeeping rhythms, dashboard reporting, and payroll processes that let your leadership focus on growth instead of paperwork."
+        "憑藉超過 10 年的經驗，Virintira 支持您運營的每一個環節——從公司註冊和每月簿記，到許可證申請、稅務規劃及數字營銷。",
+        "我們知道您希望專注於業務增長，因此我們將以清晰和高效的方式為您處理後台事務。",
+        "您可以信賴我們。我們已在商業發展部完全註冊，絕不會半途而廢。",
+        "我們為您提供一站式、透明的服務，這意味著我們將陪伴您成長的每一個階段，因為每一位客户對我們來說都至關重要。"
       ],
-      "link": "Email our accountants"
+      "link": "關於 Virintira",
+      "viewLicense": "查看執照"
     },
     "services": {
       "heading": "Popular services",
@@ -443,14 +497,14 @@
       ]
     },
     "highlights": {
-      "heading": "Why choose Virintira",
+      "heading": "為什麼選擇 Virintira",
       "items": [
-        "Dedicated account manager fluent in Thai and English",
-        "Secure cloud accounting stack with daily reconciliations",
-        "Industry-specific workflows tailored to your operations",
-        "Transparent pricing with flexible add-ons",
-        "Certified CPAs and tax advisors",
-        "Support across 16 languages for multinational teams"
+        "一站式服務",
+        "10年以上經驗",
+        "快速、透明、準時",
+        "免費諮詢",
+        "100% 合法合規",
+        "負責且可靠"
       ]
     },
     "process": {
@@ -481,39 +535,30 @@
   },
   "promotion": {
     "hero": {
-      "title": "Special offers for new clients",
-      "intro": "Secure preferential rates when you entrust Virintira with your finance operations before the end of this quarter."
+      "title": "明智擴展，節省更多。",
+      "intro": "解鎖旨在降低成本並加速您增長的基本業務解決方案的特惠費率。"
     },
     "offers": [
       {
-        "name": "Startup launch bundle",
+        "name": "新客戶專享 🔥",
         "bullets": [
-          "Company incorporation paperwork and tax registration",
-          "Cloud bookkeeping setup with chart of accounts",
-          "First three months of bookkeeping included"
+          "免除價值 5,200 泰銖的政府公司註冊費",
+          "免費提供價值 1,100 泰銖的認證副本包",
+          "價值超過 7,900 泰銖的額外福利"
         ],
-        "note": "Perfect for founders preparing to invoice customers and hire the first team members."
+        "note": "立即註冊 Virintira，立享所有福利。"
       },
       {
-        "name": "Payroll peace of mind",
+        "name": "記帳客戶專享 💡",
         "bullets": [
-          "Monthly payroll processing for up to 25 employees",
-          "Social security and Withholding Tax submissions",
-          "Employee onboarding checklist"
+          "免費提供價值 3,500 泰銖的記帳服務",
+          "無限次商業咨詢會議，無額外費用",
+          "為您企業量身定制的稅務規劃"
         ],
-        "note": "Keeps your people paid accurately while staying fully compliant."
-      },
-      {
-        "name": "CFO insight sprint",
-        "bullets": [
-          "Financial health review and risk assessment",
-          "Cash-flow forecasting workshop",
-          "Investor-ready dashboard build-out"
-        ],
-        "note": "Ideal for scaling teams planning fundraising or expansion."
+        "note": "獲得專屬專家團隊的全程月度支持。"
       }
     ],
-    "cta": "Schedule consultation"
+    "cta": "領取您的優惠"
   },
   "resources": {
     "hero": {
@@ -556,46 +601,191 @@
   "services": {
     "categories": {
       "registrations": {
-        "title": "Registrations",
+        "title": "公司註冊",
         "summary": "Entity setup and statutory filings."
       },
       "corporate-changes": {
-        "title": "Corporate changes",
+        "title": "公司變更",
         "summary": "Update and maintain company records."
       },
       "accounting-audit": {
-        "title": "Accounting & Audit",
+        "title": "會計審計",
         "summary": "Compliance, reporting, and assurance."
       },
       "licensing": {
-        "title": "Licensing",
+        "title": "許可證照",
         "summary": "Business permits and sector approvals."
       },
       "digital-marketing": {
-        "title": "Digital marketing",
+        "title": "數位行銷",
         "summary": "Online visibility and growth."
+      },
+      "other": {
+        "title": "其他服務",
+        "summary": ""
       }
+    },
+    "other": {
+      "title": "其他服務",
+      "summary": "找不到您需要的服務嗎？請聯繫我們，我們或許能為您提供特別協助。",
+      "cta": "立即洽詢！"
     },
     "items": {
       "registration": {
-        "title": "Company registration",
-        "summary": "Complete registration for limited companies and partnerships with expert guidance."
+        "title": "有限公司",
+        "summary": "完善的公司和合夥註冊服務，提供專業指導。"
+      },
+      "limited-partnership": {
+        "title": "有限合夥",
+        "summary": "有限合夥人註冊服務。"
+      },
+      "foundation": {
+        "title": "基金會",
+        "summary": "建立和註冊基金會。"
+      },
+      "association": {
+        "title": "協會",
+        "summary": "協會和組織註冊。"
+      },
+      "commercial-shop": {
+        "title": "商業登記 (店鋪)",
+        "summary": "商業店鋪註冊服務。"
+      },
+      "employer-sso": {
+        "title": "雇主登記 (SSO)",
+        "summary": "雇主和社會保障局 (SSO) 註冊。"
+      },
+      "vat-registration": {
+        "title": "增值稅 (VAT)",
+        "summary": "增值稅 (VAT) 註冊服務。"
       },
       "edit-info": {
-        "title": "Corporate information updates",
-        "summary": "Accurate, timely updates to critical company information."
+        "title": "公司資訊變更",
+        "summary": "準確、即時地更新重要的公司資訊。"
+      },
+      "company-name": {
+        "title": "公司名稱",
+        "summary": "公司更名服務。"
+      },
+      "company-seal": {
+        "title": "公司印章",
+        "summary": "新公司印章註冊。"
+      },
+      "directors": {
+        "title": "董事資訊",
+        "summary": "更改董事或授權簽字人。"
+      },
+      "signing-authority": {
+        "title": "簽署權限",
+        "summary": "更新授權簽字條件。"
+      },
+      "shareholders": {
+        "title": "股東 / 股權",
+        "summary": "更新股東名冊 (BOJ.5)。"
+      },
+      "capital": {
+        "title": "註冊資本",
+        "summary": "增加或減少註冊資本。"
+      },
+      "address": {
+        "title": "地址 / 分支",
+        "summary": "總部或分公司搬遷。"
+      },
+      "objectives": {
+        "title": "營業項目",
+        "summary": "修改公司業務目標。"
+      },
+      "dissolution": {
+        "title": "公司註銷",
+        "summary": "公司解散和註銷服務。"
       },
       "monthly-bookkeeping": {
-        "title": "Monthly bookkeeping",
-        "summary": "Accurate bookkeeping and monthly tax filing with every document handled for you."
+        "title": "公司帳務",
+        "summary": "準確的記帳和每月稅務申報，為您處理所有文件。"
+      },
+      "monthly-tax": {
+        "title": "每月報稅",
+        "summary": "每月和半年稅務申報服務。"
       },
       "close-financial": {
-        "title": "Financial statement closing",
-        "summary": "Certified auditors prepare and review your annual financial statements."
+        "title": "年度財報",
+        "summary": "由認證審計師編制和審查您的年度財務報表。"
+      },
+      "personal-accounts": {
+        "title": "個人帳務",
+        "summary": "個人記帳和稅務申報。"
+      },
+      "audit": {
+        "title": "審計服務",
+        "summary": "法定審計和會計師 (CPA) 服務。"
       },
       "tax-planning": {
-        "title": "Tax planning",
-        "summary": "Strategic tax planning that keeps your business compliant and efficient."
+        "title": "稅務規劃",
+        "summary": "戰略性稅務規劃，保持您的業務合規且高效。"
+      },
+      "foreign-tax-id": {
+        "title": "外國稅號",
+        "summary": "外國人稅務 ID 申請。"
+      },
+      "tourism-licence": {
+        "title": "旅游執照",
+        "summary": "申請 TAT 旅游經營許可證。"
+      },
+      "thai-fda": {
+        "title": "泰國 FDA",
+        "summary": "食品和藥品的泰國 FDA 註冊。"
+      },
+      "visa-work-permit": {
+        "title": "簽證 / 工作證",
+        "summary": "外國人簽證和工作證服務。"
+      },
+      "boi-promotion": {
+        "title": "BOI 投資優惠",
+        "summary": "申請 BOI 投資促進優惠。"
+      },
+      "foreign-business": {
+        "title": "外商經營許可 (FBL / FBC)",
+        "summary": "外國商業執照 (FBL) 申請服務。"
+      },
+      "website-build": {
+        "title": "網站架設",
+        "summary": "網站開發和電子商務解決方案。"
+      },
+      "facebook-page": {
+        "title": "Facebook 粉專",
+        "summary": "Facebook 粉絲專頁管理和內容創作。"
+      },
+      "line-oa": {
+        "title": "LINE OA",
+        "summary": "LINE 官方帳號 (OA) 設置和管理。"
+      },
+      "tiktok": {
+        "title": "TikTok",
+        "summary": "TikTok 行銷和短影音內容。"
+      },
+      "youtube": {
+        "title": "YouTube",
+        "summary": "YouTube 影片製作和頻道推廣。"
+      },
+      "video-production": {
+        "title": "影片製作",
+        "summary": "專業影片拍攝和剪輯服務。"
+      },
+      "paid-ads": {
+        "title": "付費廣告",
+        "summary": "Facebook、Google 和 TikTok 廣告投放。"
+      },
+      "ai-solutions": {
+        "title": "AI 解決方案",
+        "summary": "人工智能諮詢和業務自動化。"
+      },
+      "odoo-erp": {
+        "title": "Odoo ERP",
+        "summary": "Odoo ERP 系統實施和支援。"
+      },
+      "custom-software": {
+        "title": "客製化軟體",
+        "summary": "客製化軟體開發服務。"
       }
     },
     "bookkeeping": {
@@ -752,6 +942,10 @@
           }
         ]
       }
+    },
+    "hero": {
+      "title": "服務",
+      "description": "我們的核心服務分為 5 類。"
     }
   },
   "blog": {
@@ -848,5 +1042,82 @@
     "title": "Page not found",
     "description": "The page you are looking for may have been moved or no longer exists.",
     "back": "Back to homepage"
+  },
+  "contact": {
+    "close": "關閉",
+    "form": {
+      "heading": "給我們發送直接訊息",
+      "subheading": "在下面提交您的詢問。我們的團隊將在 24 小時內回覆。",
+      "directMessage": "Send us a direct message",
+      "directMessageDesc": "Submit your inquiry below. Our team will review your request and get back to you via email or phone within 24 hours.",
+      "name": "全名",
+      "phone": "電話號碼",
+      "email": "電子郵件",
+      "socialId": "社交 ID",
+      "socialIdPlaceholder": "輸入 ID",
+      "service": "感興趣的服務",
+      "servicePlaceholder": "選擇服務",
+      "message": "附加訊息",
+      "messagePlaceholder": "告訴我們更多關於您的業務...",
+      "submit": "發送訊息",
+      "sending": "正在發送...",
+      "successTitle": "訊息已發送！",
+      "successMessage": "謝謝。我們已收到您的訊息，將儘快回覆。",
+      "sendAnother": "發送另一條訊息",
+      "serviceOther": "其他",
+      "socialPlatforms": {
+        "line": "Line",
+        "whatsapp": "WhatsApp",
+        "wechat": "WeChat",
+        "other": "其他"
+      },
+      "nameHelper": "僅限字母和空格",
+      "phoneHelper": "僅限數字和 + - 符號",
+      "emailHelper": "例如：name@company.com",
+      "errorGeneric": "發生錯誤。請重試。",
+      "errorRateLimit": "請求過多。請等待 3 分鐘。",
+      "namePlaceholder": "王小明"
+    },
+    "channels": {
+      "line": {
+        "label": "LINE 聊天",
+        "subLabel": "回覆最快",
+        "action": "加好友"
+      },
+      "whatsapp": {
+        "label": "WhatsApp",
+        "subLabel": "國際客戶",
+        "action": "發送訊息"
+      },
+      "phone": {
+        "label": "致電我們",
+        "subLabel": "週一至週五, 09:00 - 18:00",
+        "action": "立即致電"
+      },
+      "email": {
+        "label": "電子郵件",
+        "subLabel": "文件和報價",
+        "action": "發送"
+      },
+      "facebook": {
+        "label": "Facebook",
+        "subLabel": "新聞和更新",
+        "action": "追蹤"
+      },
+      "tiktok": {
+        "label": "TikTok",
+        "subLabel": "每日商業提示",
+        "action": "觀看"
+      }
+    },
+    "hero": {
+      "title": "準備好 <highlight>開展您的事業</highlight> 了嗎？",
+      "subtitle": "選擇您方便的管道，立即與我們的專家交談。"
+    },
+    "formSection": {
+      "heading": "您希望我們主動聯繫您嗎？",
+      "subheading": "沒問題！請在下方填寫您的詳細資訊。"
+    },
+    "title": "聯絡我們"
   }
 }

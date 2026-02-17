@@ -22,9 +22,6 @@ export const DEFAULT_LOCALES = [
   'ms',
   'ta',
   'hi',
-  'ar',
-  'fa',
-  'he',
 ] as const;
 
 type LanguageSwitcherProps = {
@@ -65,8 +62,9 @@ export default function LanguageSwitcher({
     if (typeof window !== 'undefined') {
       try {
         sessionStorage.setItem('vir-scrollY', String(window.scrollY));
-      } catch {}
+      } catch { }
     }
+
     router.push(basePath, { locale: normalizedLocale as Locale, scroll: false });
     onOpenChange(false);
   };
@@ -135,7 +133,7 @@ export default function LanguageSwitcher({
           <div className="relative max-h-[35vh] overflow-hidden">
             <div className="pointer-events-none absolute inset-x-0 top-0 h-4 bg-gradient-to-b from-white to-transparent" />
 
-            <ul className="max-h-[35vh] overflow-auto pr-1 scrollbar-hide space-y-1">
+            <ul className="max-h-[35vh] overflow-auto pr-1 scrollbar-hide space-y-1 overscroll-contain">
               {codes.map((code) => {
                 const normalized = code.toLowerCase();
                 const isActive = normalized === currentLocale.toLowerCase();

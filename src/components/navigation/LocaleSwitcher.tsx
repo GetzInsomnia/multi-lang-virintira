@@ -1,57 +1,87 @@
-"use client";
+'use client';
 
-import { useTransition } from 'react';
-import { useLocale } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
+import { usePathname, useRouter, useSearchParams } from 'next/navigation';
+import { useTransition, useState, useEffect } from 'react';
 import { i18n, type Locale } from '@/i18n/config';
-import { usePathname, useRouter } from '@/i18n/routing';
-import { normalizeInternalHref } from '@/lib/links';
-
-const localeLabels: Record<string, string> = {
-  th: 'ไทย',
-  en: 'English',
-  fr: 'Français',
-  de: 'Deutsch',
-  nl: 'Nederlands',
-  it: 'Italiano',
-  'zh-Hant': '繁體中文',
-  'zh-Hans': '简体中文',
-  ja: '日本語',
-  ko: '한국어',
-  ms: 'Bahasa Melayu',
-  ta: 'தமிழ்',
-  hi: 'हिन्दी',
-  ar: 'العربية',
-  fa: 'فارسی',
-  he: 'עברית',
-};
 
 export function LocaleSwitcher() {
+  const t = useTranslations('layout');
   const locale = useLocale();
   const router = useRouter();
-  const pathname = usePathname();
   const [isPending, startTransition] = useTransition();
+  const pathname = usePathname();
+  const searchParams = useSearchParams();
+  const [hash, setHash] = useState('');
+
+  // Capture hash on mount
+  useEffect(() => {
+    setHash(window.location.hash);
+  }, []);
+
+  // Update hash when it changes
+  useEffect(() => {
+    const handleHashChange = () => setHash(window.location.hash);
+    window.addEventListener('hashchange', handleHashChange);
+    return () => window.removeEventListener('hashchange', handleHashChange);
+  }, []);
+
+  function onSelectChange(event: React.ChangeEvent<HTMLSelectElement>) {
+    const nextLocale = event.target.value as Locale;
+    startTransition(() => {
+      // Reconstruct the path with the new locale
+      const segments = pathname.split('/');
+      // The first segment is empty string because pathname starts with /
+      // The second segment is the locale if it exists in i18n config
+      const hasLocalePrefix = i18n.locales.includes(segments[1] as any);
+
+      let newPath: string;
+      if (hasLocalePrefix) {
+        segments[1] = nextLocale;
+        newPath = segments.join('/');
+      } else {
+        newPath = `/${nextLocale}${pathname}`;
+      }
+
+      // Append query params
+      const params = searchParams.toString();
+      if (params) {
+        newPath += `?${params}`;
+      }
+
+      // Append hash
+      if (hash) {
+        newPath += hash;
+      }
+
+      router.replace(newPath, { scroll: false });
+    });
+  }
 
   return (
-    <div className="relative inline-block">
+    <label className="relative inline-flex items-center">
+      <span className="sr-only">{t('header.language')}</span>
       <select
-        className="rounded-full border border-[#A70909]/30 bg-white px-4 py-2 text-sm font-medium text-[#A70909] shadow-sm focus:outline-none focus:ring-2 focus:ring-[#A70909]"
-        value={locale}
-        onChange={(event) => {
-          const nextLocale = event.target.value as Locale;
-          startTransition(() => {
-            const basePath = normalizeInternalHref(pathname) || '/';
-            router.replace(basePath, { locale: nextLocale });
-          });
-        }}
+        defaultValue={locale}
+        className="form-select block w-full rounded-md border-gray-300 bg-transparent py-1 pl-2 pr-7 text-sm font-medium text-gray-700 bg-none focus:border-[#A70909] focus:outline-none focus:ring-[#A70909] disabled:opacity-50"
+        onChange={onSelectChange}
         disabled={isPending}
-        aria-label="Select language"
       >
-        {i18n.locales.map((code) => (
-          <option key={code} value={code}>
-            {localeLabels[code] ?? code}
-          </option>
-        ))}
+        <option value="th">ภาษาไทย</option>
+        <option value="en">English (US)</option>
+        <option value="zh-Hans">简体中文</option>
+        <option value="zh-Hant">繁體中文</option>
+        <option value="ja">日本語</option>
+        <option value="ko">한국어</option>
+        <option value="fr">Français</option>
+        <option value="de">Deutsch</option>
+        <option value="it">Italiano</option>
+        <option value="nl">Nederlands</option>
+        <option value="ms">Bahasa Melayu</option>
+        <option value="ta">தமிழ்</option>
+        <option value="hi">हिन्दी</option>
+        {/* RTL languages removed */}
       </select>
-    </div>
+    </label>
   );
 }

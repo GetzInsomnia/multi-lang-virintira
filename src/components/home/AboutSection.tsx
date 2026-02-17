@@ -1,70 +1,208 @@
-"use client";
+'use client';
 
-import { useLocale } from 'next-intl';
+import { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import Image from 'next/image';
+import { FiZoomIn, FiZoomOut, FiX } from 'react-icons/fi';
+import BorderRevealButton from '../BorderRevealButton';
+import { COMPANY } from '@/data/company';
 
-import { COMPANY, getLocalizedAddress } from '@/data/company';
-
-export function AboutSection({ heading, paragraphs, linkLabel }: { heading: string; paragraphs: string[]; linkLabel: string }) {
+export function AboutSection({ heading, paragraphs, linkLabel, viewLicenseLabel, closeLabel }: { heading: string; paragraphs: string[]; linkLabel: string; viewLicenseLabel: string; closeLabel: string }) {
+  const [isOpen, setIsOpen] = useState(false);
+  const [scale, setScale] = useState(1);
   const details: string[] = Array.isArray(paragraphs) ? paragraphs : [];
 
-  const highlight = details[0] ?? heading;
-  const locale = useLocale();
-  const address = getLocalizedAddress(locale);
+  // Scroll Lock & Esc Key Listener
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = 'hidden';
+      const handleEsc = (e: KeyboardEvent) => {
+        if (e.key === 'Escape') setIsOpen(false);
+      };
+      window.addEventListener('keydown', handleEsc);
+      return () => {
+        document.body.style.overflow = '';
+        window.removeEventListener('keydown', handleEsc);
+      };
+    } else {
+      setScale(1); // Reset zoom on close
+    }
+  }, [isOpen]);
+
+  const handleZoomIn = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    setScale((prev) => Math.min(prev + 0.5, 3));
+  };
+
+  const handleZoomOut = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    setScale((prev) => Math.max(prev - 0.5, 1));
+  };
 
   return (
     <section
       id="about"
-      className="relative flex min-h-[calc(100dvh-var(--header-height))] items-center justify-center overflow-hidden bg-[#fffeff] px-4 py-24"
+      className="relative flex min-h-[calc(100dvh-var(--header-height))] snap-start items-center justify-center bg-[#FFFEFE] px-4 py-24 lg:py-12"
+      style={{ minHeight: 'calc(100dvh - var(--header-height))' }}
     >
-      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(255,210,210,0.45),transparent_55%),radial-gradient(circle_at_bottom_right,rgba(167,9,9,0.25),transparent_60%)]" aria-hidden="true" />
-      <div className="relative z-10 mx-auto grid w-full max-w-6xl gap-16 lg:grid-cols-[1.2fr_1fr] lg:items-start">
-        <div className="space-y-8">
-          {heading ? (
-            <h2 className="text-[clamp(2rem,1.4rem+1.6vw,3rem)] font-bold text-[#A70909]">
+      <div className="mx-auto mt-6 flex w-full max-w-7xl flex-col items-center justify-center gap-12 lg:flex-row lg:gap-20">
+        {/* Left (Text Content) */}
+        <motion.div
+          className="w-full px-2 lg:w-1/2"
+          initial={{ opacity: 0, x: -40 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+        >
+          {heading && (
+            <blockquote
+              className="mb-6 border-l-4 border-[#A70909] pl-4 text-xl font-semibold leading-relaxed text-[#A70909] lg:text-3xl"
+              style={{ textWrap: 'balance' }}
+            >
               {heading}
-            </h2>
-          ) : null}
-          {highlight ? (
-            <blockquote className="rounded-3xl border border-[#A70909]/20 bg-white/80 p-6 text-[clamp(1.1rem,1rem+0.5vw,1.45rem)] font-semibold leading-relaxed text-[#A70909] shadow-[0_20px_60px_rgba(167,9,9,0.12)]">
-              {highlight}
             </blockquote>
-          ) : null}
-          <div className="space-y-5 text-[clamp(0.95rem,0.9rem+0.3vw,1.1rem)] leading-relaxed text-[#5d3f3f]">
-            {(highlight ? details.slice(1) : details).map((paragraph, index) => (
+          )}
+
+          <div className="space-y-6 text-base leading-relaxed text-gray-800 lg:text-lg">
+            {details.map((paragraph, index) => (
               <p key={index} className="indent-6">
                 {paragraph}
               </p>
             ))}
           </div>
-          <a
-            href={`mailto:${COMPANY.email}`}
-            className="inline-flex w-fit items-center justify-center rounded-full border border-[#A70909]/40 bg-white px-6 py-2 text-sm font-semibold text-[#A70909] shadow-sm transition-transform duration-300 ease-out hover:-translate-y-1 hover:border-[#A70909] hover:bg-[#fff1f1] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#A70909] focus-visible:ring-offset-2 focus-visible:ring-offset-white"
-          >
-            {linkLabel}
-          </a>
-        </div>
-        <aside className="mx-auto w-full max-w-sm">
-          <div className="overflow-hidden rounded-[30px] border border-[#A70909]/15 bg-white/95 p-8 text-[#5d3f3f] shadow-[0_30px_90px_rgba(167,9,9,0.12)]">
-            <h3 className="text-lg font-semibold text-[#A70909]">{COMPANY.legalNameTh}</h3>
-            <dl className="mt-6 space-y-3 text-sm leading-relaxed">
-              <div>
-                <dt className="font-semibold text-[#A70909]">Tax ID</dt>
-                <dd>{COMPANY.taxId}</dd>
-              </div>
-              <div>
-                <dt className="font-semibold text-[#A70909]">Address</dt>
-                <dd>{address.streetAddress}</dd>
-                <dd>
-                  {address.subDistrict} {address.district} {address.province} {address.postalCode}
-                </dd>
-              </div>
-              <div>
-                <dt className="font-semibold text-[#A70909]">Email</dt>
-                <dd>{COMPANY.email}</dd>
-              </div>
-            </dl>
+
+          <div className="flex justify-center pt-10">
+            <motion.div
+              animate={{ y: [0, -2, 0] }}
+              transition={{ repeat: Infinity, duration: 2.4, ease: 'easeInOut' }}
+            >
+              <BorderRevealButton
+                href={`mailto:${COMPANY.email}`}
+                section="Homepage"
+                item="About"
+              >
+                <span className="text-sm lg:text-base">{linkLabel}</span>
+              </BorderRevealButton>
+            </motion.div>
           </div>
-        </aside>
+        </motion.div>
+
+        {/* Right (Image) */}
+        <motion.div
+          className="flex w-full justify-center px-2 lg:w-1/2"
+          initial={{ opacity: 0, x: 40 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+        >
+          {/* 
+            Image Wrapper
+            - Added 'z-0' to create a local stacking context. 
+            - This ensures the negative z-index shadow (-z-10) stays relative to THIS element, 
+              preventing it from falling behind the section background.
+          */}
+          <div
+            className="group relative cursor-pointer w-full max-w-[600px] z-0"
+            onClick={() => setIsOpen(true)}
+          >
+            {/* Rainbow Glow Pseudo-element (Behind) */}
+            <div className="absolute inset-0 -z-10 rounded-[16px] bg-gradient-to-r from-red-600 via-yellow-500 via-green-600 via-blue-700 to-purple-800 opacity-70 blur-lg transition-opacity duration-500 group-hover:opacity-100" />
+
+            {/* Inner Frame (Clips the zoomed image) */}
+            <div className="relative overflow-hidden rounded-xl ring-1 ring-black/5 transition-transform duration-500 group-hover:scale-[1.01]">
+              <div className="absolute inset-0 z-10 bg-black/0 transition-colors duration-300 group-hover:bg-black/5 pointer-events-none" />
+
+              <Image
+                src="/about/company-license.webp"
+                alt="Virintira Company License"
+                width={600}
+                height={800}
+                className="h-auto w-full object-cover scale-110 relative z-0"
+              />
+
+              <div className="absolute inset-0 z-20 flex items-center justify-center opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                <span className="rounded-full bg-white/90 px-5 py-2.5 text-sm font-bold text-[#A70909] shadow-md backdrop-blur-sm transition-transform hover:scale-105 hover:shadow-2xl">
+                  <FiZoomIn className="inline-block mr-2 text-lg" /> {viewLicenseLabel}
+                </span>
+              </div>
+            </div>
+          </div>
+        </motion.div>
+
+        {/* Lightbox Modal */}
+        <AnimatePresence>
+          {isOpen && (
+            <motion.div
+              className="fixed inset-0 z-[100] flex flex-col items-center justify-center bg-black/95 backdrop-blur-md p-4"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              onClick={() => setIsOpen(false)}
+            >
+              <div className="relative flex h-full w-full max-w-7xl flex-col items-center justify-center">
+                {/* Image Container */}
+                <div className="relative flex flex-1 items-center justify-center w-full overflow-hidden">
+                  <motion.img
+                    src="/about/company-license.webp"
+                    alt="Virintira Company License Fullscreen"
+                    className="max-h-[80vh] w-auto rounded object-contain shadow-2xl"
+                    initial={{ scale: 0.8, opacity: 0 }}
+                    animate={{ scale: scale, x: scale === 1 ? 0 : undefined, y: scale === 1 ? 0 : undefined, opacity: 1 }}
+                    exit={{ scale: 0.8, opacity: 0 }}
+                    transition={{ duration: 0.3 }}
+                    drag={scale > 1}
+                    dragConstraints={{ left: -scale * 300, right: scale * 300, top: -scale * 300, bottom: scale * 300 }}
+                    dragElastic={0.1}
+                    onClick={(e) => e.stopPropagation()}
+                    style={{ cursor: scale > 1 ? 'grab' : 'default' }}
+                    whileTap={{ cursor: scale > 1 ? 'grabbing' : 'default' }}
+                  />
+                </div>
+
+                {/* Controls Bar (Below Image) - Hidden on Mobile/Tablet */}
+                <div className="mt-6 hidden md:flex items-center gap-3" onClick={(e) => e.stopPropagation()}>
+                  {/* Zoom Controls - Compact */}
+                  <div className="flex items-center gap-2 rounded-full bg-white/90 px-3 py-1.5 shadow-2xl backdrop-blur-sm">
+                    <button
+                      onClick={handleZoomOut}
+                      className="flex h-7 w-7 items-center justify-center rounded-full bg-gray-100 text-gray-800 hover:bg-gray-200 disabled:opacity-30 disabled:cursor-not-allowed transition-all active:scale-95"
+                      disabled={scale <= 1}
+                      aria-label="Zoom Out"
+                    >
+                      <FiZoomOut size={14} />
+                    </button>
+
+                    <div className="flex min-w-[2rem] justify-center text-xs font-bold text-gray-900 select-none">
+                      {Math.round(scale * 100)}%
+                    </div>
+
+                    <button
+                      onClick={handleZoomIn}
+                      className="flex h-7 w-7 items-center justify-center rounded-full bg-gray-900 text-white hover:bg-gray-800 disabled:opacity-50 disabled:cursor-not-allowed transition-all active:scale-95"
+                      disabled={scale >= 3}
+                      aria-label="Zoom In"
+                    >
+                      <FiZoomIn size={14} />
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              {/* Close Button (Top Right) - Responsive */}
+              <button
+                className="absolute right-4 top-4 z-[101] group flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-3 py-2 text-sm font-medium text-white backdrop-blur-md transition-colors hover:bg-white/90 hover:text-[#A70909] hover:border-[#A70909] shadow-xl md:right-8 md:top-8 md:px-4 md:py-2"
+                onClick={() => setIsOpen(false)}
+                aria-label="Close"
+              >
+                <span className="hidden sm:inline">{closeLabel}</span>
+                <FiX className="h-5 w-5 transition-transform group-hover:rotate-90" />
+              </button>
+
+              {/* Close Button (Top Right) */}
+
+            </motion.div>
+          )}
+        </AnimatePresence>
       </div>
     </section>
   );

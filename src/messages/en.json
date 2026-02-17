@@ -68,8 +68,11 @@
     "cta": {
       "call": "Call {phone}",
       "chat": "LINE chat",
+      "whatsapp": "WhatsApp",
       "consult": "Email Virintira",
       "book": "Book a consultation",
+      "explore_category": "Explore Services",
+      "view_details": "View Details",
       "trigger": "Free consult"
     },
     "header": {
@@ -82,7 +85,7 @@
         },
         {
           "label": "Services",
-          "href": "#services"
+          "href": "/services"
         },
         {
           "label": "Articles",
@@ -94,7 +97,7 @@
         },
         {
           "label": "Contact us",
-          "href": "/under-construction"
+          "href": "/contact"
         }
       ],
       "megaMenu": {
@@ -105,31 +108,31 @@
             "items": [
               {
                 "label": "Company (Co., Ltd.)",
-                "href": "/under-construction"
+                "href": "/services/registrations/registration"
               },
               {
                 "label": "Limited partnership",
-                "href": "/under-construction"
+                "href": "/services/registrations/limited-partnership"
               },
               {
                 "label": "Foundation",
-                "href": "/under-construction"
+                "href": "/services/registrations/foundation"
               },
               {
                 "label": "Association",
-                "href": "/under-construction"
+                "href": "/services/registrations/association"
               },
               {
                 "label": "Commercial (shop)",
-                "href": "/under-construction"
+                "href": "/services/registrations/commercial-shop"
               },
               {
                 "label": "Employer (SSO)",
-                "href": "/under-construction"
+                "href": "/services/registrations/employer-sso"
               },
               {
                 "label": "VAT",
-                "href": "/under-construction"
+                "href": "/services/registrations/vat-registration"
               }
             ]
           },
@@ -138,39 +141,39 @@
             "items": [
               {
                 "label": "Company name",
-                "href": "/under-construction"
+                "href": "/services/corporate-changes/company-name"
               },
               {
                 "label": "Company seal / stamp",
-                "href": "/under-construction"
+                "href": "/services/corporate-changes/company-seal"
               },
               {
                 "label": "Directors",
-                "href": "/under-construction"
+                "href": "/services/corporate-changes/directors"
               },
               {
                 "label": "Signing authority",
-                "href": "/under-construction"
+                "href": "/services/corporate-changes/signing-authority"
               },
               {
                 "label": "Shareholders / shares",
-                "href": "/under-construction"
+                "href": "/services/corporate-changes/shareholders"
               },
               {
                 "label": "Capital",
-                "href": "/under-construction"
+                "href": "/services/corporate-changes/capital"
               },
               {
                 "label": "Address / branches",
-                "href": "/under-construction"
+                "href": "/services/corporate-changes/address"
               },
               {
                 "label": "Objectives",
-                "href": "/under-construction"
+                "href": "/services/corporate-changes/objectives"
               },
               {
                 "label": "Dissolution",
-                "href": "/under-construction"
+                "href": "/services/corporate-changes/dissolution"
               }
             ]
           },
@@ -179,31 +182,31 @@
             "items": [
               {
                 "label": "Company accounts",
-                "href": "/under-construction"
+                "href": "/services/accounting-audit/monthly-bookkeeping"
               },
               {
                 "label": "Monthly tax",
-                "href": "/under-construction"
+                "href": "/services/accounting-audit/monthly-tax"
               },
               {
                 "label": "Annual accounts",
-                "href": "/under-construction"
+                "href": "/services/accounting-audit/close-financial"
               },
               {
                 "label": "Personal accounts",
-                "href": "/under-construction"
+                "href": "/services/accounting-audit/personal-accounts"
               },
               {
                 "label": "Audit",
-                "href": "/under-construction"
+                "href": "/services/accounting-audit/audit"
               },
               {
                 "label": "Tax planning",
-                "href": "/under-construction"
+                "href": "/services/accounting-audit/tax-planning"
               },
               {
                 "label": "Foreign tax ID",
-                "href": "/under-construction"
+                "href": "/services/accounting-audit/foreign-tax-id"
               }
             ]
           },
@@ -212,24 +215,23 @@
             "items": [
               {
                 "label": "Tourism licence",
-                "href": "/under-construction"
+                "href": "/services/licensing/tourism-licence"
               },
               {
                 "label": "Thai FDA",
-                "href": "/under-construction"
+                "href": "/services/licensing/thai-fda"
               },
               {
                 "label": "Visa & work permit",
-                "href": "/under-construction"
+                "href": "/services/licensing/visa-work-permit"
               },
               {
                 "label": "BOI promotion",
-                "href": "/under-construction"
-              }
-              ,
+                "href": "/services/licensing/boi-promotion"
+              },
               {
                 "label": "Foreign business (FBL/FBC)",
-                "href": "/under-construction"
+                "href": "/services/licensing/foreign-business"
               }
             ]
           },
@@ -238,43 +240,43 @@
             "items": [
               {
                 "label": "Website build",
-                "href": "/under-construction"
+                "href": "/services/digital-marketing/website-build"
               },
               {
                 "label": "Facebook Page",
-                "href": "/under-construction"
+                "href": "/services/digital-marketing/facebook-page"
               },
               {
                 "label": "LINE OA",
-                "href": "/under-construction"
+                "href": "/services/digital-marketing/line-oa"
               },
               {
                 "label": "TikTok",
-                "href": "/under-construction"
+                "href": "/services/digital-marketing/tiktok"
               },
               {
                 "label": "YouTube",
-                "href": "/under-construction"
+                "href": "/services/digital-marketing/youtube"
               },
               {
                 "label": "Video production",
-                "href": "/under-construction"
+                "href": "/services/digital-marketing/video-production"
               },
               {
                 "label": "Paid ads",
-                "href": "/under-construction"
+                "href": "/services/digital-marketing/paid-ads"
               },
               {
                 "label": "AI solutions",
-                "href": "/under-construction"
+                "href": "/services/digital-marketing/ai-solutions"
               },
               {
                 "label": "Odoo ERP",
-                "href": "/under-construction"
+                "href": "/services/digital-marketing/odoo-erp"
               },
               {
                 "label": "Custom software",
-                "href": "/under-construction"
+                "href": "/services/digital-marketing/custom-software"
               }
             ]
           }
@@ -353,28 +355,28 @@
           "href": "/resources"
         },
         {
-          "label": "ติดต่อเรา",
-          "href": "/under-construction"
+          "label": "Contact us",
+          "href": "/contact"
         },
         {
-          "label": "จดทะเบียน",
-          "href": "/under-construction"
+          "label": "Registrations",
+          "href": "/services/registrations"
         },
         {
-          "label": "แก้ไขข้อมูลนิติบุคคล",
-          "href": "/under-construction"
+          "label": "Corporate changes",
+          "href": "/services/corporate-changes"
         },
         {
-          "label": "บัญชีและตรวจสอบ",
-          "href": "/under-construction"
+          "label": "Accounting & Audit",
+          "href": "/services/accounting-audit"
         },
         {
-          "label": "ขอใบอนุญาต",
-          "href": "/under-construction"
+          "label": "Licensing",
+          "href": "/services/licensing"
         },
         {
-          "label": "การตลาดออนไลน์",
-          "href": "/under-construction"
+          "label": "Digital marketing",
+          "href": "/services/digital-marketing"
         }
       ],
       "legal": "Copyright © {year} Virintira Co., Ltd. All rights reserved. | {poweredBy}"
@@ -385,6 +387,8 @@
     "promotion": "Promotions",
     "resources": "Resources",
     "services": "Services",
+    "otherServices": "Other Services",
+    "contactDirectly": "Contact us directly",
     "blog": "Blog",
     "howTo": "How-to"
   },
@@ -401,16 +405,20 @@
       "emailButton": "Email Virintira"
     },
     "about": {
-      "heading": "Virintira is more than an accounting firm",
+      "heading": "Virintira — Not just an accounting firm, but your complete business partner",
       "paragraphs": [
         "With over 10 years of experience, Virintira supports every part of your operations—from company formation and monthly bookkeeping to licensing, tax planning, and digital marketing.",
         "We know you want to stay focused on growing your business, so we take care of the back office with clarity and speed.",
         "You can rely on us. We are fully registered with the Department of Business Development and never leave projects unfinished.",
         "Our all-in-one, transparent service means we stand beside you at every stage of growth because every client is important to us."
       ],
-      "link": "About Virintira"
+      "link": "About Virintira",
+      "viewLicense": "View our corporate registration"
     },
     "services": {
+      "hero": {
+        "description": "Explore our comprehensive range of services designed to help your business grow."
+      },
       "heading": "Popular services",
       "items": [
         {
@@ -438,44 +446,44 @@
     "highlights": {
       "heading": "Why work with Virintira",
       "items": [
-        "Everything handled in one place",
-        "Experts with 10+ years of experience",
-        "Fast, transparent, on-time delivery",
-        "Unlimited free consultations",
-        "100% legal and compliant",
-        "Accountable partners who never leave your project"
+        "One-stop Service",
+        "10+ Years Experience",
+        "Fast, Transparent, Punctual",
+        "Free Consultations",
+        "100% Legal & Compliant",
+        "Responsible & Reliable"
       ]
     },
     "process": {
-      "heading": "How our service works",
+      "heading": "Our Process",
       "steps": [
         {
-          "title": "Choose your service",
-          "description": "Pick the service you need or request personalised advice."
+          "title": "Select Service",
+          "description": "Choose the service you prefer or request a consultation."
         },
         {
-          "title": "Discuss and plan",
-          "description": "Connect with our team to review details and scope."
+          "title": "Discuss & Plan",
+          "description": "Contact us to discuss details or start the service."
         },
         {
-          "title": "Execution and paperwork",
-          "description": "We handle every step, keeping you updated throughout."
+          "title": "Execution & Documentation",
+          "description": "We handle every step and keep you updated at every stage."
         },
         {
-          "title": "Smooth completion",
-          "description": "Receive results on time with additional guidance as needed."
+          "title": "Smooth Completion",
+          "description": "On-time delivery, accurate results, and further advice."
         }
       ]
     },
     "cta": {
-      "heading": "Ready to have Virintira as your accounting partner?",
-      "description": "Talk with our team for a free consultation, pricing estimate, and a service plan tailored to your business."
+      "heading": "Let's Handle Your Accounts.",
+      "description": "Talk with our team for a free consultation, pricing estimate, and a service plan tailored to your business. No commitment required • Free Initial Consult."
     }
   },
   "promotion": {
     "hero": {
-      "title": "Special promotions from Virintira",
-      "intro": "Reduce startup costs and unlock complimentary services for new bookkeeping clients."
+      "title": "Scale Smart, Save More.",
+      "intro": "Unlock special rates on essential business solutions designed to reduce costs and accelerate your growth."
     },
     "offers": [
       {
@@ -497,7 +505,7 @@
         "note": "Receive end-to-end monthly support from a dedicated expert team."
       }
     ],
-    "cta": "Call our team"
+    "cta": "Claim Your Offer"
   },
   "resources": {
     "hero": {
@@ -558,20 +566,153 @@
       "digital-marketing": {
         "title": "Digital marketing",
         "summary": "Online visibility and growth."
+      },
+      "other": {
+        "title": "Other Services",
+        "summary": ""
       }
+    },
+    "other": {
+      "title": "Other Services",
+      "summary": "Can't find the service you need? Contact us, perhaps we can help you as a special case.",
+      "cta": "Inquire Now!"
     },
     "items": {
       "registration": {
-        "title": "Company registration",
-        "summary": "Complete registration for limited companies and partnerships with expert guidance."
+        "title": "Company Registration",
+        "summary": "Complete registration for limited companies and partnerships with expert guidance.",
+        "hero": {
+          "title": "Start your Thai Company correctly",
+          "subtitle": "Trusted by 500+ founders",
+          "description": "We handle the Department of Business Development, Tax Registration, and Social Security so you can focus on your business.",
+          "cta": "Get a Quote",
+          "image": "/images/services/registration-hero.webp"
+        },
+        "features": {
+          "title": "Everything you need to trade legally",
+          "items": [
+            {
+              "title": "Company Name Reservation",
+              "description": "We check and reserve your name with the DBD instantly."
+            },
+            {
+              "title": "MoA & Articles of Association",
+              "description": "Drafting all statutory meeting notes and bylaws."
+            },
+            {
+              "title": "VAT & Tax Registration",
+              "description": "Getting your Tax ID and VAT certificate (P.P.20)."
+            },
+            {
+              "title": "Bank Account Opening",
+              "description": "Assistance with board resolutions to open your corporate bank account."
+            }
+          ]
+        },
+        "process": {
+          "title": "Registration Process",
+          "steps": [
+            {
+              "title": "Consultation",
+              "description": "We clarify your business objectives and shareholders."
+            },
+            {
+              "title": "Name Reservation",
+              "description": "Locking in your company name (1-3 days)."
+            },
+            {
+              "title": "Filing & Signing",
+              "description": "Directors sign the application. We submit to DBD."
+            },
+            {
+              "title": "Company Formed",
+              "description": "Receive your Affidavit and Company Certificate."
+            }
+          ]
+        },
+        "faq": {
+          "title": "Common Questions",
+          "items": [
+            {
+              "question": "How long does it take?",
+              "answer": "Typically 3-5 business days after name reservation."
+            },
+            {
+              "question": "Do I need a Thai shareholder?",
+              "answer": "Yes, unless you have BOI promotion or FBL."
+            }
+          ]
+        }
       },
       "edit-info": {
         "title": "Corporate information updates",
         "summary": "Accurate, timely updates to critical company information."
       },
       "monthly-bookkeeping": {
-        "title": "Monthly bookkeeping",
-        "summary": "Accurate bookkeeping and monthly tax filing with every document handled for you."
+        "title": "Monthly Bookkeeping",
+        "summary": "Accurate, timely, and compliant bookkeeping services for Thai companies.",
+        "hero": {
+          "title": "Stress-free Accounting & Tax Filing",
+          "subtitle": "Starting from 2,500 THB/month",
+          "description": "Expert accountants handling your Withholding Tax, VAT, and Social Security. We ensure you never miss a deadline.",
+          "cta": "See Packages",
+          "image": "/images/services/accounting-hero.webp"
+        },
+        "features": {
+          "title": "What's included?",
+          "items": [
+            {
+              "title": "Transaction Recording",
+              "description": "Daily recording of invoice, receipt, and expense."
+            },
+            {
+              "title": "Tax Filing (P.P.30, P.N.D.3/53)",
+              "description": "Monthly submission to Revenue Department."
+            },
+            {
+              "title": "Social Security",
+              "description": "Monthly SSO submission for employees."
+            },
+            {
+              "title": "Monthly Reports",
+              "description": "Profit & Loss and Balance Sheet in English/Thai."
+            }
+          ]
+        },
+        "process": {
+          "title": "How it works",
+          "steps": [
+            {
+              "title": "Send Documents",
+              "description": "Send us photos/scans via LINE or Email."
+            },
+            {
+              "title": "We Process",
+              "description": "Our team records and verifies everything."
+            },
+            {
+              "title": "Review & Confirm",
+              "description": "You confirm tax amounts before filing."
+            },
+            {
+              "title": "Filing & Report",
+              "description": "We file taxes and send you the monthly report."
+            }
+          ]
+        },
+        "faq": {
+          "title": "FAQs",
+          "items": [
+            {
+              "question": "Can you handle English documents?",
+              "answer": "Yes, our team is fluent in English and Thai."
+            },
+            {
+              "question": "Is software included?",
+              "answer": "Yes, we use cloud accounting software accessible 24/7."
+            }
+          ]
+        }
       },
       "close-financial": {
         "title": "Financial statement closing",
@@ -580,6 +721,142 @@
       "tax-planning": {
         "title": "Tax planning",
         "summary": "Strategic tax planning that keeps your business compliant and efficient."
+      },
+      "limited-partnership": {
+        "title": "Limited Partnership",
+        "summary": "Registration and compliance for limited partnerships."
+      },
+      "foundation": {
+        "title": "Foundation",
+        "summary": "Establishment of charitable or private foundations."
+      },
+      "association": {
+        "title": "Association",
+        "summary": "Registration of trade or non-profit associations."
+      },
+      "commercial-shop": {
+        "title": "Commercial Registration",
+        "summary": "Registration for sole proprietorships and shop owners."
+      },
+      "employer-sso": {
+        "title": "Employer (SSO)",
+        "summary": "Social Security Fund registration for employers."
+      },
+      "vat-registration": {
+        "title": "VAT Registration",
+        "summary": "Register for Value Added Tax (VAT) in Thailand."
+      },
+      "company-name": {
+        "title": "Company Name Change",
+        "summary": "Legal process to change your corporate name."
+      },
+      "company-seal": {
+        "title": "Company Seal Change",
+        "summary": "Update your registered company seal."
+      },
+      "directors": {
+        "title": "Change of Directors",
+        "summary": "Add or remove company directors."
+      },
+      "signing-authority": {
+        "title": "Signing Authority",
+        "summary": "Update authorized signatories and conditions."
+      },
+      "shareholders": {
+        "title": "Shareholder Change",
+        "summary": "Transfer of shares and updating shareholder list (BOJ.5)."
+      },
+      "capital": {
+        "title": "Capital Change",
+        "summary": "Increase or decrease registered capital."
+      },
+      "address": {
+        "title": "Address Change",
+        "summary": "Relocate your company's registered address."
+      },
+      "objectives": {
+        "title": "Business Objectives",
+        "summary": "Update business objectives (Vat. Obj.)."
+      },
+      "dissolution": {
+        "title": "Dissolution",
+        "summary": "Legal closing and liquidation of the company."
+      },
+      "monthly-tax": {
+        "title": "Monthly Tax Filing",
+        "summary": "Recurring tax compliance services."
+      },
+      "personal-accounts": {
+        "title": "Personal Bookkeeping",
+        "summary": "Accounting for individuals and freelancers."
+      },
+      "audit": {
+        "title": "Audit Service",
+        "summary": "Statutory financial audit by CPA."
+      },
+      "foreign-tax-id": {
+        "title": "Foreign Tax ID",
+        "summary": "Tax ID card for foreign entities."
+      },
+      "tourism-licence": {
+        "title": "Tourism License",
+        "summary": "TAT license application and renewal."
+      },
+      "thai-fda": {
+        "title": "Thai FDA",
+        "summary": "Product registration with the Thai Food and Drug Administration."
+      },
+      "visa-work-permit": {
+        "title": "Visa & Work Permit",
+        "summary": "Business visa and work permit processing."
+      },
+      "boi-promotion": {
+        "title": "BOI Promotion",
+        "summary": "Application for Board of Investment incentives."
+      },
+      "foreign-business": {
+        "title": "Foreign Business License",
+        "summary": "FBL/FBC application for foreign-owned companies."
+      },
+      "website-build": {
+        "title": "Website Development",
+        "summary": "Professional corporate website design and build."
+      },
+      "facebook-page": {
+        "title": "Facebook Page Setup",
+        "summary": "Business page creation and optimization."
+      },
+      "line-oa": {
+        "title": "LINE Official Account",
+        "summary": "LINE OA setup and menu configuration."
+      },
+      "tiktok": {
+        "title": "TikTok Marketing",
+        "summary": "TikTok business account setup."
+      },
+      "youtube": {
+        "title": "YouTube Channel",
+        "summary": "Corporate YouTube channel setup."
+      },
+      "video-production": {
+        "title": "Video Production",
+        "summary": "Short-form video content creation."
+      },
+      "paid-ads": {
+        "title": "Paid Advertising",
+        "summary": "Ads management on FB, Google, TikTok."
+      },
+      "ai-solutions": {
+        "title": "AI Solutions",
+        "summary": "AI integration for business efficiency."
+      },
+      "odoo-erp": {
+        "title": "Odoo ERP",
+        "summary": "Odoo ERP implementation and support."
+      },
+      "custom-software": {
+        "title": "Custom Software",
+        "summary": "Tailored software development for your needs."
       }
     },
     "bookkeeping": {
@@ -736,6 +1013,10 @@
           }
         ]
       }
+    },
+    "hero": {
+      "title": "Services",
+      "description": "Our core services fall into 5 categories."
     }
   },
   "blog": {
@@ -832,5 +1113,82 @@
     "title": "Page not found",
     "description": "The page you are looking for may have been moved or no longer exists.",
     "back": "Back to homepage"
+  },
+  "contact": {
+    "title": "Contact us",
+    "close": "Close",
+    "form": {
+      "heading": "Send us a direct message",
+      "subheading": "Submit your inquiry below. Our team will review your request and get back to you via email or phone within 24 hours.",
+      "directMessage": "Send us a direct message",
+      "directMessageDesc": "Submit your inquiry below. Our team will review your request and get back to you via email or phone within 24 hours.",
+      "name": "Full Name",
+      "phone": "Phone Number",
+      "email": "Email",
+      "socialId": "Social ID",
+      "socialIdPlaceholder": "Enter ID (e.g., Line, WeChat)",
+      "service": "Service of Interest",
+      "servicePlaceholder": "Select a service",
+      "message": "Additional Message",
+      "messagePlaceholder": "Tell us more about your business...",
+      "submit": "Send Message",
+      "sending": "Sending...",
+      "successTitle": "Message Sent!",
+      "successMessage": "Thank you. We have received your message and will get back to you shortly.",
+      "sendAnother": "Send Another Message",
+      "serviceOther": "Other",
+      "socialPlatforms": {
+        "line": "Line",
+        "whatsapp": "WhatsApp",
+        "wechat": "WeChat",
+        "other": "Other"
+      },
+      "nameHelper": "Letters and spaces only",
+      "phoneHelper": "Numbers and + - marks only",
+      "emailHelper": "Example: name@company.com",
+      "errorGeneric": "Something went wrong. Please try again.",
+      "errorRateLimit": "Too many requests. Please wait 3 minutes.",
+      "namePlaceholder": "John Doe"
+    },
+    "channels": {
+      "line": {
+        "label": "LINE Chat",
+        "subLabel": "Fastest response (TH/EN)",
+        "action": "Add Friend"
+      },
+      "whatsapp": {
+        "label": "WhatsApp",
+        "subLabel": "For international clients",
+        "action": "Message"
+      },
+      "phone": {
+        "label": "Call us",
+        "subLabel": "Mon-Fri, 09:00 - 18:00",
+        "action": "Call Now"
+      },
+      "email": {
+        "label": "Email",
+        "subLabel": "Send docs & RFQs",
+        "action": "Send Email"
+      },
+      "facebook": {
+        "label": "Facebook",
+        "subLabel": "News & Updates",
+        "action": "Follow"
+      },
+      "tiktok": {
+        "label": "TikTok",
+        "subLabel": "Daily Business Tips",
+        "action": "Watch"
+      }
+    },
+    "hero": {
+      "title": "Ready to <highlight>start your business</highlight> right now?",
+      "subtitle": "Choose your preferred channel to speak with our experts right away."
+    },
+    "formSection": {
+      "heading": "Would you prefer us to contact you back?",
+      "subheading": "With pleasure! Just share your details below."
+    }
   }
 }

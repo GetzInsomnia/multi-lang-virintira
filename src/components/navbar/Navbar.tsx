@@ -18,6 +18,11 @@ import SocialFloating from './SocialFloating';
 import type { MegaMenuColumn, NavItem, NavbarData } from './types';
 import type { MenuItem } from './MobileMenuView';
 import type { Locale } from '@/i18n/config';
+import { useUI } from '@/context/UIContext';
+import {
+  MOBILE_MENU_TRANSITION_DURATION_CLASS,
+  MOBILE_MENU_TRANSITION_EASING_CLASS,
+} from '@/components/navbar/mobileMenuTransition';
 
 // Minimum spacing (in px) to keep between the desktop nav and surrounding controls.
 const SAFE_GAP_PX = 30;
@@ -47,9 +52,9 @@ function buildMobileItems(nav: NavItem[], columns: MegaMenuColumn[]): MenuItem[]
   const megaMenuSections =
     columns.length > 0
       ? columns.map((col) => ({
-          label: col.title,
-          items: col.items.map((entry) => ({ label: entry.label, href: entry.href })),
-        }))
+        label: col.title,
+        items: col.items.map((entry) => ({ label: entry.label, href: entry.href })),
+      }))
       : null;
 
   nav.forEach((item, index) => {
@@ -71,6 +76,7 @@ function buildMobileItems(nav: NavItem[], columns: MegaMenuColumn[]): MenuItem[]
 }
 
 export default function Navbar({ data }: NavbarProps) {
+  const { isContactDrawerOpen } = useUI();
   const locale = useLocale();
   const t = useTranslations('layout.header');
   const pathname = usePathname() || '/';
@@ -228,12 +234,33 @@ export default function Navbar({ data }: NavbarProps) {
 
       const combinedWidth = logoRect.width + navWidth + actionsRect.width + SAFE_GAP_PX;
       const overflowDetected = combinedWidth > containerWidth;
+
+      // Hysteresis buffer: Require significantly more space to EXIT mobile mode.
+      // This prevents flickering at the boundary where removing the hamburger button
+      // (which shrinks actionsRect) would immediately cause the nav to "fit" again.
+      const HYSTERESIS_PX = 20;
+
       const shouldForce = overflowDetected || leftGap < SAFE_GAP_PX || rightGap < SAFE_GAP_PX;
 
       setForceMobile((prev) => {
         if (shouldForce && !prev && megaOpen) {
           setMegaOpen(false);
         }
+
+        // If currently forced mobile, require extra space (hysteresis) to switch back.
+        if (prev && !shouldForce) {
+          // Check if we are really safe to switch back
+          const safeGap = SAFE_GAP_PX + HYSTERESIS_PX;
+          if (leftGap < safeGap || rightGap < safeGap) {
+            return true; // Keep forcing mobile
+          }
+        }
+
+        // Safety: If navWidth calculation was 0 (e.g. hidden), do not switch out of mobile mode violently.
+        if (prev && navWidth <= 0) {
+          return true;
+        }
+
         if (prev === shouldForce) return prev;
         return shouldForce;
       });
@@ -429,7 +456,7 @@ export default function Navbar({ data }: NavbarProps) {
       if (typeof window !== 'undefined') {
         try {
           sessionStorage.setItem('vir-scrollY', String(window.scrollY));
-        } catch {}
+        } catch { }
       }
 
       router.push(basePath, { locale: normalizedLocale as Locale, scroll: false });
@@ -439,108 +466,120 @@ export default function Navbar({ data }: NavbarProps) {
   );
 
   return (
-    <header className="sticky top-0 z-50 bg-white shadow-sm" style={{ '--header-height': '72px' } as CSSProperties}>
+    <>
       <SocialFloating {...({ menuOpen: mobileOpen } as any)} />
 
-      <div ref={containerRef} className="relative mx-auto max-w-[1280px] px-4">
-        <div className="flex h-[var(--header-height)] items-center justify-between">
-          <Link
-            ref={logoRef}
-            href={normalizeInternalHref('/')}
-            className="flex items-center gap-3"
-            prefetch
-          >
-            <Image src="/logo.png" alt="ViRINTIRA" width={44} height={44} priority />
-            <span className="text-[22px] font-extrabold tracking-[0.02em] text-[#A70909]">ViRINTIRA</span>
-          </Link>
 
-          {/* Keep desktop nav styles intact; only append md:hidden when forced mobile is active. */}
-          <nav
-            ref={navRef}
-            className={`hidden items-center gap-5 md:flex overflow-visible${forceMobile ? ' md:hidden' : ''}`}
-            aria-label="Primary navigation"
-          >
-            {navEntries.map((entry, index) => {
-              if (entry.type === 'mega') {
-                if (!hasMegaMenu) return null;
-                const isOpen = megaOpen || megaActive;
+      <header
+        className={`sticky top-0 z-[61] bg-white/80 backdrop-blur-md border-b border-gray-100 shadow-sm transition-transform ${MOBILE_MENU_TRANSITION_DURATION_CLASS} ${MOBILE_MENU_TRANSITION_EASING_CLASS} supports-[backdrop-filter]:bg-white/60 ${isContactDrawerOpen ? '-translate-x-full' : 'translate-x-0'
+          }`}
+        style={{ '--header-height': '72px', paddingRight: 'var(--removed-body-scroll-bar-size, 0px)' } as CSSProperties}
+      >
+        <div ref={containerRef} className="relative mx-auto max-w-[1280px] px-4">
+          <div className="flex h-[var(--header-height)] items-center justify-between">
+            <Link
+              ref={logoRef}
+              href={normalizeInternalHref('/')}
+              className="flex items-center gap-3"
+              prefetch
+            >
+              <Image src="/logo.png" alt="ViRINTIRA" width={44} height={44} priority />
+              <span className="text-[22px] font-extrabold tracking-[0.02em] text-[#A70909]">ViRINTIRA</span>
+            </Link>
+
+            {/* 
+              Desktop Nav:
+              - Use absolute positioning + transform to ensure it's mathematically centered within the max-w container.
+              - Standard justify-between pushes it off-center because Logo width != Actions width.
+            */}
+            <nav
+              ref={navRef}
+              className={`hidden md:flex items-center gap-5 absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 overflow-visible${forceMobile ? ' !hidden' : ''}`}
+              aria-label="Primary navigation"
+            >
+              {navEntries.map((entry, index) => {
+                if (entry.type === 'mega') {
+                  if (!hasMegaMenu) return null;
+                  const isOpen = megaOpen || megaActive;
+                  const { item } = entry;
+                  return (
+                    <div
+                      key={`mega-${index}`}
+                      className="relative"
+                      onMouseEnter={scheduleMegaOpen}
+                      onMouseLeave={scheduleMegaClose}
+                      onFocus={scheduleMegaOpen}
+                      onBlur={scheduleMegaClose}
+                    >
+                      <NavLink
+                        href={item.href || '/services'}
+                        label={item.label}
+                        active={isOpen}
+                        flame={Boolean(item.highlight)}
+                        onClick={() => {
+                          // Do NOT close mega menu on click; let hover state persist to avoid flicker.
+                          // The menu will close naturally when the user moves the mouse away.
+                          setSearchOpen(false);
+                          setLanguageOpen(false);
+                        }}
+                        ariaExpanded={isOpen}
+                        ariaControls="mega-menu-panel"
+                        role="button"
+                      />
+                    </div>
+                  );
+                }
+
                 const { item } = entry;
+                const active = isInternalMatch(currentPath, item.href);
                 return (
-                  <div
-                    key={`mega-${index}`}
-                    className="relative"
-                    onMouseEnter={scheduleMegaOpen}
-                    onMouseLeave={scheduleMegaClose}
-                    onFocus={scheduleMegaOpen}
-                    onBlur={scheduleMegaClose}
-                  >
-                    <NavLink
-                      href={item.href || '/services'}
-                      label={item.label}
-                      active={isOpen}
-                      flame={Boolean(item.highlight)}
-                      onClick={() => {
-                        setMegaOpen(false);
-                        setSearchOpen(false);
-                        setLanguageOpen(false);
-                      }}
-                      ariaExpanded={isOpen}
-                      ariaControls="mega-menu-panel"
-                      role="button"
-                    />
-                  </div>
+                  <NavLink
+                    key={`${item.label}-${index}`}
+                    href={item.href || '#'}
+                    label={item.label}
+                    flame={Boolean(item.highlight)}
+                    active={active}
+                    onMouseEnter={() => setMegaOpen(false)}
+                  />
                 );
-              }
+              })}
+            </nav>
 
-              const { item } = entry;
-              const active = isInternalMatch(currentPath, item.href);
-              return (
-                <NavLink
-                  key={`${item.label}-${index}`}
-                  href={item.href || '#'}
-                  label={item.label}
-                  flame={Boolean(item.highlight)}
-                  active={active}
-                  onMouseEnter={() => setMegaOpen(false)}
-                />
-              );
-            })}
-          </nav>
-
-          <div ref={actionsRef} className="flex items-center gap-4">
-            <SearchToggle
-              open={searchOpen}
-              onOpenChange={onSearchOpenChange}
-              placeholder={t('search.placeholder')}
-              submitLabel={t('search.submitLabel')}
-              compactHidden={compactActions}
-            />
-            <LanguageSwitcher
-              open={languageOpen}
-              onOpenChange={onLanguageOpenChange}
-              currentLocale={locale}
-              compactHidden={compactActions}
-            />
-            {/* Surface the hamburger on desktop only when space is constrained (no breakpoint changes). */}
-            <div className={forceMobile ? 'md:block' : 'md:hidden'}>
-              {/* กัน bubble คลิกแรกไม่ให้กลายเป็น outside-click */}
-              <span ref={openerRef} className="inline-flex" onMouseDown={(e) => e.stopPropagation()}>
-                <HamburgerButton isOpen={mobileOpen} onClick={handleMobileToggle} />
-              </span>
+            <div ref={actionsRef} className="flex items-center gap-4">
+              <SearchToggle
+                open={searchOpen}
+                onOpenChange={onSearchOpenChange}
+                placeholder={t('search.placeholder')}
+                submitLabel={t('search.submitLabel')}
+                compactHidden={compactActions}
+              />
+              <LanguageSwitcher
+                open={languageOpen}
+                onOpenChange={onLanguageOpenChange}
+                currentLocale={locale}
+                compactHidden={compactActions}
+              />
+              {/* Surface the hamburger on desktop only when space is constrained (no breakpoint changes). */}
+              <div className={forceMobile ? 'md:block' : 'md:hidden'}>
+                {/* กัน bubble คลิกแรกไม่ให้กลายเป็น outside-click */}
+                <span ref={openerRef} className="inline-flex" onMouseDown={(e) => e.stopPropagation()}>
+                  <HamburgerButton isOpen={mobileOpen} onClick={handleMobileToggle} />
+                </span>
+              </div>
             </div>
           </div>
-        </div>
 
-        {hasMegaMenu ? (
-          <MegaMenu
-            open={megaOpen}
-            columns={megaColumns}
-            onMouseEnter={(e) => { void e; cancelMegaClose(); setMegaOpen(true); }}
-            onMouseLeave={(e) => { void e; scheduleMegaClose(); }}
-            onLinkClick={() => setMegaOpen(false)}
-          />
-        ) : null}
-      </div>
+          {hasMegaMenu ? (
+            <MegaMenu
+              open={megaOpen}
+              columns={megaColumns}
+              onMouseEnter={(e) => { void e; cancelMegaClose(); setMegaOpen(true); }}
+              onMouseLeave={(e) => { void e; scheduleMegaClose(); }}
+              onLinkClick={() => setMegaOpen(false)}
+            />
+          ) : null}
+        </div>
+      </header>
 
       <MobileMenu
         isOpen={mobileOpen}
@@ -556,6 +595,6 @@ export default function Navbar({ data }: NavbarProps) {
         languageLabel="Language"
         searchLabel={t('search.submitLabel')}
       />
-    </header>
+    </>
   );
 }

@@ -31,6 +31,7 @@ export const COMPANY = {
   socials: {
     facebook: 'https://www.facebook.com/AccountbyVirintira',
     line: 'https://lin.ee/LNIp36f',
+    whatsapp: 'https://wa.me/66928825556',
     tiktok: 'https://www.tiktok.com/@virintiraa',
   },
   businessHours: [

@@ -1,43 +1,24 @@
 import type { Metadata } from 'next';
-import { getTranslations } from 'next-intl/server';
 
 import { StructuredData } from '@/components/common/StructuredData';
 import { ScrollToHero } from '@/components/common/ScrollToHero';
-import { HeroSection, type HeroContent } from '@/components/home/HeroSection';
+import { HeroSection } from '@/components/home/HeroSection';
 import { AboutSection } from '@/components/home/AboutSection';
-import { PopularServices, type ServiceCardItem } from '@/components/home/PopularServices';
+import { PopularServices } from '@/components/home/PopularServices';
 import { WhyChooseUsSection } from '@/components/home/WhyChooseUsSection';
-import { HowItWorksSection, type ProcessStep } from '@/components/home/HowItWorksSection';
+import { HowItWorksSection } from '@/components/home/HowItWorksSection';
 import { PromotionSection } from '@/components/home/PromotionSection';
 import { ContactCTA } from '@/components/home/ContactCTA';
 import { COMPANY } from '@/data/company';
 import { absoluteUrl } from '@/config/site';
-import { buildPopularServicesForLocale } from '@/config/services';
 import { buildLocaleAlternates } from '@/lib/metadata';
 import { loadMessages, resolveLocale } from '@/i18n/loadMessages';
 import { buildBreadcrumbJsonLd, buildWebPageJsonLd } from '@/seo/jsonld';
+import { getHomeData } from '@/services/home-data';
 
 interface PageParams {
   params: { locale: string };
 }
-
-const ensureString = (value: unknown): string =>
-  typeof value === 'string' ? value : value != null ? String(value) : '';
-
-const ensureStringArray = (value: unknown): string[] =>
-  Array.isArray(value)
-    ? (value as unknown[])
-        .map((item) => ensureString(item))
-        .filter((item): item is string => item.length > 0)
-    : [];
-
-const ensureProcessSteps = (value: unknown): ProcessStep[] =>
-  Array.isArray(value)
-    ? (value as Array<Record<string, unknown>>).map((item) => ({
-        title: ensureString(item?.title),
-        description: ensureString(item?.description),
-      }))
-    : [];
 
 export async function generateMetadata({ params }: PageParams): Promise<Metadata> {
   const locale = resolveLocale(params.locale);
@@ -80,71 +61,19 @@ export async function generateMetadata({ params }: PageParams): Promise<Metadata
 
 export default async function HomePage({ params }: PageParams) {
   const { locale } = params;
-  const tHome = await getTranslations({ locale, namespace: 'home' });
-  const tLayout = await getTranslations({ locale, namespace: 'layout' });
-  const tBreadcrumbs = await getTranslations({ locale, namespace: 'breadcrumbs' });
-  const tPromotion = await getTranslations({ locale, namespace: 'promotion' });
-  const tServices = await getTranslations({ locale, namespace: 'services' });
-
-  const phoneDisplay =
-    locale === 'th' ? COMPANY.phoneDisplayTh : COMPANY.phoneDisplayEn;
-  const callLabel = tLayout('cta.call', { phone: phoneDisplay });
-  const consultLabel = tLayout('cta.consult', { phone: phoneDisplay });
-
-  const heroRaw = (tHome.raw('hero') ?? {}) as Record<string, unknown>;
-  const hero: HeroContent = {
-    title: ensureString(heroRaw.title),
-    subtitle: ensureString(heroRaw.subtitle),
-    description: ensureString(heroRaw.description),
-    primary: ensureString(heroRaw.primary),
-    typewriter: ensureStringArray(heroRaw.typewriter),
-    emailHeading: ensureString(heroRaw.emailHeading),
-    emailButton: ensureString(consultLabel),
-  };
-
-  const aboutRaw = (tHome.raw('about') ?? {}) as Record<string, unknown>;
-  const about = {
-    heading: ensureString(aboutRaw.heading),
-    paragraphs: ensureStringArray(aboutRaw.paragraphs),
-    link: ensureString(aboutRaw.link),
-  };
-
-  const servicesRaw = (tHome.raw('services') ?? {}) as Record<string, unknown>;
-  const services: { heading: string; items: ServiceCardItem[] } = {
-    heading: ensureString(servicesRaw.heading),
-    items: buildPopularServicesForLocale(locale, tServices),
-  };
-
-  const highlightsRaw = (tHome.raw('highlights') ?? {}) as Record<string, unknown>;
-  const highlights = {
-    heading: ensureString(highlightsRaw.heading),
-    items: ensureStringArray(highlightsRaw.items),
-  };
-
-  const processRaw = (tHome.raw('process') ?? {}) as Record<string, unknown>;
-  const process = {
-    heading: ensureString(processRaw.heading),
-    steps: ensureProcessSteps(processRaw.steps),
-  };
-
-  const ctaRaw = (tHome.raw('cta') ?? {}) as Record<string, unknown>;
-  const cta = {
-    heading: ensureString(ctaRaw.heading),
-    description: ensureString(ctaRaw.description),
-  };
-
-  const promotion = {
-    heading: ensureString(tPromotion.raw('hero.title')),
-    description: ensureString(tPromotion.raw('hero.intro')),
-    ctaLabel: ensureString(tPromotion.raw('cta')),
-    ctaHref: '/promotion',
-  };
-
-  const chatLabel = tLayout('cta.chat');
-  const triggerLabel = tLayout('cta.trigger');
+  const data = await getHomeData(locale);
+  const {
+    hero,
+    about,
+    services,
+    process,
+    cta,
+    promotion,
+    labels,
+  } = data;
 
   const breadcrumbJsonLd = buildBreadcrumbJsonLd([
-    { name: tBreadcrumbs('home'), path: `/${locale}` },
+    { name: labels.breadcrumbs, path: `/${locale}` },
   ]);
   const webPageJsonLd = buildWebPageJsonLd({
     locale,
@@ -158,9 +87,22 @@ export default async function HomePage({ params }: PageParams) {
       <ScrollToHero />
       <StructuredData id="jsonld-home" data={webPageJsonLd} />
       <StructuredData id="jsonld-breadcrumb" data={breadcrumbJsonLd} />
-      <HeroSection content={hero} chatLabel={chatLabel} triggerLabel={triggerLabel} />
+      <HeroSection
+        content={hero}
+        chatLabel={labels.chat}
+        whatsappLabel={labels.whatsapp}
+        triggerLabel={labels.trigger}
+      />
       <PopularServices heading={services.heading} items={services.items} />
-      <WhyChooseUsSection heading={highlights.heading} points={highlights.items} />
+      <AboutSection
+        heading={about.heading}
+        paragraphs={about.paragraphs}
+        linkLabel={about.link}
+        viewLicenseLabel={about.viewLicense}
+        closeLabel={labels.close}
+      />
+      <WhyChooseUsSection />
+
       <HowItWorksSection heading={process.heading} steps={process.steps} />
       <PromotionSection
         heading={promotion.heading}
@@ -168,14 +110,14 @@ export default async function HomePage({ params }: PageParams) {
         ctaLabel={promotion.ctaLabel}
         ctaHref={promotion.ctaHref}
       />
-      <AboutSection heading={about.heading} paragraphs={about.paragraphs} linkLabel={about.link} />
       <ContactCTA
         heading={cta.heading}
         description={cta.description}
-        callLabel={callLabel}
-        chatLabel={chatLabel}
-        emailLabel={consultLabel}
-        triggerLabel={triggerLabel}
+        callLabel={labels.call}
+        chatLabel={labels.chat}
+        whatsappLabel={labels.whatsapp}
+        emailLabel={labels.consult}
+        triggerLabel={labels.trigger}
       />
     </div>
   );

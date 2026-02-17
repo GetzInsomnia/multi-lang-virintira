@@ -33,6 +33,13 @@ const legacyKeyframes = {
     '50%': { transform: 'rotateY(180deg)' },
     '100%': { transform: 'rotateY(360deg)' },
   },
+  shimmer: {
+    '100%': { transform: 'translateX(100%)' },
+  },
+  'shimmer-gradient': {
+    '0%': { backgroundPosition: '200% 0' },
+    '100%': { backgroundPosition: '-200% 0' },
+  },
 };
 
 const legacyAnimations = {
@@ -42,6 +49,8 @@ const legacyAnimations = {
   float: 'float 3s ease-in-out infinite',
   pulseSlow: 'pulseSlow 2s ease-in-out infinite',
   flipY: 'flipY 6s linear infinite',
+  shimmer: 'shimmer 2s infinite',
+  'shimmer-gradient': 'shimmer-gradient 3s linear infinite',
 };
 
 /** @type {import('tailwindcss').Config} */

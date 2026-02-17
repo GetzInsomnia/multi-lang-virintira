@@ -69,8 +69,10 @@
       "call": "Call {phone}",
       "chat": "Chat di LINE",
       "consult": "E-mel Virintira",
-      "book": "Book a consultation",
-      "trigger": "Konsultasi percuma"
+      "book": "Tempah rundingan",
+      "explore_category": "Lihat Perkhidmatan",
+      "view_details": "Lihat Butiran",
+      "trigger": "Rundingan percuma"
     },
     "header": {
       "announcement": {
@@ -87,7 +89,7 @@
         },
         {
           "label": "Servis",
-          "href": "#services"
+          "href": "/services"
         },
         {
           "label": "Artikel",
@@ -99,7 +101,7 @@
         },
         {
           "label": "Hubungi",
-          "href": "/under-construction"
+          "href": "/contact"
         }
       ],
       "megaMenu": {
@@ -110,31 +112,31 @@
             "items": [
               {
                 "label": "Syarikat (Co., Ltd.)",
-                "href": "/under-construction"
+                "href": "/services/registrations/registration"
               },
               {
                 "label": "Perkongsian Terhad",
-                "href": "/under-construction"
+                "href": "/services/registrations/limited-partnership"
               },
               {
                 "label": "Yayasan",
-                "href": "/under-construction"
+                "href": "/services/registrations/foundation"
               },
               {
                 "label": "Persatuan",
-                "href": "/under-construction"
+                "href": "/services/registrations/association"
               },
               {
                 "label": "Daftar Perniagaan",
-                "href": "/under-construction"
+                "href": "/services/registrations/commercial-shop"
               },
               {
                 "label": "Majikan (SSO)",
-                "href": "/under-construction"
+                "href": "/services/registrations/employer-sso"
               },
               {
                 "label": "Cukai (VAT)",
-                "href": "/under-construction"
+                "href": "/services/registrations/vat-registration"
               }
             ]
           },
@@ -143,39 +145,39 @@
             "items": [
               {
                 "label": "Nama Syarikat",
-                "href": "/under-construction"
+                "href": "/services/corporate-changes/company-name"
               },
               {
                 "label": "Cop Syarikat",
-                "href": "/under-construction"
+                "href": "/services/corporate-changes/company-seal"
               },
               {
                 "label": "Pengarah",
-                "href": "/under-construction"
+                "href": "/services/corporate-changes/directors"
               },
               {
                 "label": "Kuasa Menandatangani",
-                "href": "/under-construction"
+                "href": "/services/corporate-changes/signing-authority"
               },
               {
                 "label": "Pemegang Saham",
-                "href": "/under-construction"
+                "href": "/services/corporate-changes/shareholders"
               },
               {
                 "label": "Modal Berbayar",
-                "href": "/under-construction"
+                "href": "/services/corporate-changes/capital"
               },
               {
                 "label": "Alamat / Cawangan",
-                "href": "/under-construction"
+                "href": "/services/corporate-changes/address"
               },
               {
                 "label": "Objektif",
-                "href": "/under-construction"
+                "href": "/services/corporate-changes/objectives"
               },
               {
                 "label": "Pembubaran",
-                "href": "/under-construction"
+                "href": "/services/corporate-changes/dissolution"
               }
             ]
           },
@@ -184,31 +186,31 @@
             "items": [
               {
                 "label": "Akaun Syarikat",
-                "href": "/under-construction"
+                "href": "/services/accounting-audit/monthly-bookkeeping"
               },
               {
                 "label": "Cukai Bulanan",
-                "href": "/under-construction"
+                "href": "/services/accounting-audit/monthly-tax"
               },
               {
                 "label": "Akaun Tahunan",
-                "href": "/under-construction"
+                "href": "/services/accounting-audit/close-financial"
               },
               {
                 "label": "Akaun Individu",
-                "href": "/under-construction"
+                "href": "/services/accounting-audit/personal-accounts"
               },
               {
                 "label": "Audit",
-                "href": "/under-construction"
+                "href": "/services/accounting-audit/audit"
               },
               {
                 "label": "Perancangan Cukai",
-                "href": "/under-construction"
+                "href": "/services/accounting-audit/tax-planning"
               },
               {
                 "label": "Nombor Cukai Asing",
-                "href": "/under-construction"
+                "href": "/services/accounting-audit/foreign-tax-id"
               }
             ]
           },
@@ -217,24 +219,23 @@
             "items": [
               {
                 "label": "Lesen Pelancongan",
-                "href": "/under-construction"
+                "href": "/services/licensing/tourism-licence"
               },
               {
                 "label": "Thai FDA",
-                "href": "/under-construction"
+                "href": "/services/licensing/thai-fda"
               },
               {
                 "label": "Visa & Permit Kerja",
-                "href": "/under-construction"
+                "href": "/services/licensing/visa-work-permit"
               },
               {
                 "label": "Insentif BOI",
-                "href": "/under-construction"
-              }
-              ,
+                "href": "/services/licensing/boi-promotion"
+              },
               {
                 "label": "Lesen Perniagaan Asing (FBL/FBC)",
-                "href": "/under-construction"
+                "href": "/services/licensing/foreign-business"
               }
             ]
           },
@@ -243,43 +244,43 @@
             "items": [
               {
                 "label": "Bina Laman Web",
-                "href": "/under-construction"
+                "href": "/services/digital-marketing/website-build"
               },
               {
                 "label": "Laman Facebook",
-                "href": "/under-construction"
+                "href": "/services/digital-marketing/facebook-page"
               },
               {
                 "label": "LINE OA",
-                "href": "/under-construction"
+                "href": "/services/digital-marketing/line-oa"
               },
               {
                 "label": "TikTok",
-                "href": "/under-construction"
+                "href": "/services/digital-marketing/tiktok"
               },
               {
                 "label": "YouTube",
-                "href": "/under-construction"
+                "href": "/services/digital-marketing/youtube"
               },
               {
                 "label": "Produksi Video",
-                "href": "/under-construction"
+                "href": "/services/digital-marketing/video-production"
               },
               {
                 "label": "Iklan Berbayar",
-                "href": "/under-construction"
+                "href": "/services/digital-marketing/paid-ads"
               },
               {
                 "label": "Solusi AI",
-                "href": "/under-construction"
+                "href": "/services/digital-marketing/ai-solutions"
               },
               {
                 "label": "Odoo ERP",
-                "href": "/under-construction"
+                "href": "/services/digital-marketing/odoo-erp"
               },
               {
                 "label": "Perisian Tersuai",
-                "href": "/under-construction"
+                "href": "/services/digital-marketing/custom-software"
               }
             ]
           }
@@ -346,7 +347,7 @@
       },
       "quickLinks": [
         {
-          "label": "โปรโมชั่น",
+          "label": "Promosi",
           "href": "/promotion"
         },
         {
@@ -358,28 +359,28 @@
           "href": "/resources"
         },
         {
-          "label": "ติดต่อเรา",
-          "href": "/under-construction"
+          "label": "Hubungi",
+          "href": "/contact"
         },
         {
-          "label": "จดทะเบียน",
-          "href": "/under-construction"
+          "label": "Pendaftaran",
+          "href": "/services/registrations"
         },
         {
-          "label": "แก้ไขข้อมูลนิติบุคคล",
-          "href": "/under-construction"
+          "label": "Pindaan",
+          "href": "/services/corporate-changes"
         },
         {
-          "label": "บัญชีและตรวจสอบ",
-          "href": "/under-construction"
+          "label": "Perakaunan",
+          "href": "/services/accounting-audit"
         },
         {
-          "label": "ขอใบอนุญาต",
-          "href": "/under-construction"
+          "label": "Lesen",
+          "href": "/services/licensing"
         },
         {
-          "label": "การตลาดออนไลน์",
-          "href": "/under-construction"
+          "label": "Pemasaran Digital",
+          "href": "/services/digital-marketing"
         }
       ],
       "legal": "Copyright © {year} Virintira Co., Ltd. All rights reserved. | {poweredBy}"
@@ -391,7 +392,9 @@
     "resources": "Resources",
     "services": "Services",
     "blog": "Blog",
-    "howTo": "How-to"
+    "howTo": "How-to",
+    "otherServices": "Perkhidmatan Lain",
+    "contactDirectly": "Hubungi kami terus"
   },
   "home": {
     "hero": {
@@ -406,12 +409,15 @@
       "emailButton": "Email Virintira"
     },
     "about": {
-      "heading": "Why founders choose Virintira",
+      "heading": "Virintira — Bukan sekadar firma perakaunan, tetapi rakan kongsi perniagaan lengkap anda",
       "paragraphs": [
-        "Our bilingual accountants combine local compliance mastery with proactive advisory. Whether you are scaling ecommerce, hospitality, or professional services, we translate complex regulations into clear action steps.",
-        "With 10+ years serving SMEs, we design bookkeeping rhythms, dashboard reporting, and payroll processes that let your leadership focus on growth instead of paperwork."
+        "Dengan pengalaman lebih 10 tahun, Virintira menyokong setiap bahagian operasi anda — daripada penubuhan syarikat dan simpan kira bulanan hingga pelesengan, perancangan cukai dan pemasaran digital.",
+        "Kami tahu anda mahu menumpukan perhatian kepada pertumbuhan perniagaan anda, jadi kami menguruskan pejabat belakang dengan jelas dan pantas.",
+        "Anda boleh bergantung kepada kami. Kami berdaftar sepenuhnya dengan Jabatan Pembangunan Perniagaan dan tidak pernah membiarkan projek tidak selesai.",
+        "Perkhidmatan semua-dalam-satu dan telus kami bermakna kami berdiri di samping anda pada setiap peringkat pertumbuhan kerana setiap pelanggan adalah penting bagi kami."
       ],
-      "link": "Email our accountants"
+      "link": "Mengenai Virintira",
+      "viewLicense": "Lihat pendaftaran korporat kami"
     },
     "services": {
       "heading": "Popular services",
@@ -443,34 +449,34 @@
       ]
     },
     "highlights": {
-      "heading": "Why choose Virintira",
+      "heading": "Mengapa pilih Virintira",
       "items": [
-        "Dedicated account manager fluent in Thai and English",
-        "Secure cloud accounting stack with daily reconciliations",
-        "Industry-specific workflows tailored to your operations",
-        "Transparent pricing with flexible add-ons",
-        "Certified CPAs and tax advisors",
-        "Support across 16 languages for multinational teams"
+        "Perkhidmatan Sehenti",
+        "Pengalaman 10+ Tahun",
+        "Pantas, Telus, Menepati Masa",
+        "Rundingan Percuma",
+        "100% Sah & Patuh",
+        "Bertanggungjawab & Andal"
       ]
     },
     "process": {
-      "heading": "How it works",
+      "heading": "Proses perkhidmatan kami",
       "steps": [
         {
-          "title": "Discovery",
-          "description": "Understand your entity structure, systems, and compliance obligations."
+          "title": "Pilih perkhidmatan anda",
+          "description": "Pilih perkhidmatan yang anda perlukan atau minta konsultasi peribadi."
         },
         {
-          "title": "Onboarding",
-          "description": "Connect accounting tools, gather historical data, and align reporting formats."
+          "title": "Bincang dan rancang",
+          "description": "Hubungi pasukan kami untuk menyemak butiran dan skope."
         },
         {
-          "title": "Execution",
-          "description": "Our team posts transactions, prepares payroll, and manages tax filings."
+          "title": "Pelaksanaan dan kertas kerja",
+          "description": "Kami menguruskan setiap langkah, memastikan anda sentiasa dimaklumkan."
         },
         {
-          "title": "Insights",
-          "description": "Monthly meetings to review performance, forecast cash flow, and plan ahead."
+          "title": "Penyelesaian lancar",
+          "description": "Terima keputusan tepat pada masanya dengan panduan tambahan jika diperlukan."
         }
       ]
     },
@@ -481,39 +487,15 @@
   },
   "promotion": {
     "hero": {
-      "title": "Special offers for new clients",
-      "intro": "Secure preferential rates when you entrust Virintira with your finance operations before the end of this quarter."
+      "title": "Skala Pintar, Lebih Jimat.",
+      "intro": "Nikmati kadar istimewa untuk penyelesaian perniagaan penting yang direka untuk mengurangkan kos dan mempercepatkan pertumbuhan anda."
     },
     "offers": [
       {
-        "name": "Startup launch bundle",
-        "bullets": [
-          "Company incorporation paperwork and tax registration",
-          "Cloud bookkeeping setup with chart of accounts",
-          "First three months of bookkeeping included"
-        ],
-        "note": "Perfect for founders preparing to invoice customers and hire the first team members."
-      },
-      {
-        "name": "Payroll peace of mind",
-        "bullets": [
-          "Monthly payroll processing for up to 25 employees",
-          "Social security and Withholding Tax submissions",
-          "Employee onboarding checklist"
-        ],
-        "note": "Keeps your people paid accurately while staying fully compliant."
-      },
-      {
-        "name": "CFO insight sprint",
-        "bullets": [
-          "Financial health review and risk assessment",
-          "Cash-flow forecasting workshop",
-          "Investor-ready dashboard build-out"
-        ],
         "note": "Ideal for scaling teams planning fundraising or expansion."
       }
     ],
-    "cta": "Schedule consultation"
+    "cta": "Lihat lebih banyak promosi"
   },
   "resources": {
     "hero": {
@@ -556,46 +538,191 @@
   "services": {
     "categories": {
       "registrations": {
-        "title": "Registrations",
+        "title": "Pendaftaran",
         "summary": "Entity setup and statutory filings."
       },
       "corporate-changes": {
-        "title": "Corporate changes",
+        "title": "Pindaan",
         "summary": "Update and maintain company records."
       },
       "accounting-audit": {
-        "title": "Accounting & Audit",
+        "title": "Perakaunan",
         "summary": "Compliance, reporting, and assurance."
       },
       "licensing": {
-        "title": "Licensing",
+        "title": "Lesen",
         "summary": "Business permits and sector approvals."
       },
       "digital-marketing": {
-        "title": "Digital marketing",
+        "title": "Pemasaran Digital",
         "summary": "Online visibility and growth."
+      },
+      "other": {
+        "title": "Perkhidmatan Lain",
+        "summary": ""
       }
+    },
+    "other": {
+      "title": "Perkhidmatan Lain",
+      "summary": "Tidak dapat mencari perkhidmatan yang anda perlukan? Hubungi kami terus, mungkin kami boleh membantu anda sebagai kes istimewa.",
+      "cta": "Tanya Sekarang!"
     },
     "items": {
       "registration": {
-        "title": "Company registration",
-        "summary": "Complete registration for limited companies and partnerships with expert guidance."
+        "title": "Syarikat (Co., Ltd.)",
+        "summary": "Pendaftaran syarikat dan perkongsian lengkap."
+      },
+      "limited-partnership": {
+        "title": "Perkongsian Terhad",
+        "summary": "Pendaftaran perkongsian terhad."
+      },
+      "foundation": {
+        "title": "Yayasan",
+        "summary": "Penubuhan yayasan."
+      },
+      "association": {
+        "title": "Persatuan",
+        "summary": "Pendaftaran persatuan."
+      },
+      "commercial-shop": {
+        "title": "Daftar Perniagaan",
+        "summary": "Pendaftaran kedai komersial."
+      },
+      "employer-sso": {
+        "title": "Majikan (SSO)",
+        "summary": "Pendaftaran majikan dan keselamatan sosial."
+      },
+      "vat-registration": {
+        "title": "Cukai (VAT)",
+        "summary": "Pendaftaran cukai nilai tambah (VAT)."
       },
       "edit-info": {
-        "title": "Corporate information updates",
-        "summary": "Accurate, timely updates to critical company information."
+        "title": "Pindaan Maklumat",
+        "summary": "Kemas kini maklumat korporat yang penting."
+      },
+      "company-name": {
+        "title": "Nama Syarikat",
+        "summary": "Perkhidmatan pertukaran nama syarikat."
+      },
+      "company-seal": {
+        "title": "Cop Syarikat",
+        "summary": "Pendaftaran cop syarikat baharu."
+      },
+      "directors": {
+        "title": "Pengarah",
+        "summary": "Pertukaran pengarah atau kuasa."
+      },
+      "signing-authority": {
+        "title": "Kuasa Menandatangani",
+        "summary": "Kemas kini penandatangan sah."
+      },
+      "shareholders": {
+        "title": "Pemegang Saham",
+        "summary": "Kemas kini daftar pemegang saham (BOJ.5)."
+      },
+      "capital": {
+        "title": "Modal Berbayar",
+        "summary": "Peningkatan atau pengurangan modal berbayar."
+      },
+      "address": {
+        "title": "Alamat / Cawangan",
+        "summary": "Pindah ibu pejabat atau cawangan."
+      },
+      "objectives": {
+        "title": "Objektif",
+        "summary": "Pindaan objektif perniagaan."
+      },
+      "dissolution": {
+        "title": "Pembubaran",
+        "summary": "Perkhidmatan pembubaran syarikat."
       },
       "monthly-bookkeeping": {
-        "title": "Monthly bookkeeping",
-        "summary": "Accurate bookkeeping and monthly tax filing with every document handled for you."
+        "title": "Akaun Syarikat",
+        "summary": "Perkhidmatan simpan kira dan cukai bulanan yang tepat."
+      },
+      "monthly-tax": {
+        "title": "Cukai Bulanan",
+        "summary": "Pemfailan cukai bulanan."
       },
       "close-financial": {
-        "title": "Financial statement closing",
-        "summary": "Certified auditors prepare and review your annual financial statements."
+        "title": "Akaun Tahunan",
+        "summary": "Penyata kewangan tahunan oleh akauntan bertauliah."
+      },
+      "personal-accounts": {
+        "title": "Akaun Individu",
+        "summary": "Akaun peribadi dan pemfailan cukai."
+      },
+      "audit": {
+        "title": "Audit",
+        "summary": "Perkhidmatan audit berkanun dan CPA."
       },
       "tax-planning": {
-        "title": "Tax planning",
-        "summary": "Strategic tax planning that keeps your business compliant and efficient."
+        "title": "Perancangan Cukai",
+        "summary": "Strategi cukai untuk kecekapan perniagaan."
+      },
+      "foreign-tax-id": {
+        "title": "Nombor Cukai Asing",
+        "summary": "Permohonan ID Cukai untuk warga asing."
+      },
+      "tourism-licence": {
+        "title": "Lesen Pelancongan",
+        "summary": "Permohonan lesen pelancongan TAT."
+      },
+      "thai-fda": {
+        "title": "Thai FDA",
+        "summary": "Pendaftaran FDA untuk makanan dan ubat."
+      },
+      "visa-work-permit": {
+        "title": "Visa & Permit Kerja",
+        "summary": "Perkhidmatan visa dan permit kerja untuk warga asing."
+      },
+      "boi-promotion": {
+        "title": "Insentif BOI",
+        "summary": "Permohonan insentif pelaburan BOI."
+      },
+      "foreign-business": {
+        "title": "Lesen Perniagaan Asing",
+        "summary": "Permohonan lesen perniagaan asing (FBL)."
+      },
+      "website-build": {
+        "title": "Bina Laman Web",
+        "summary": "Pembangunan laman web dan e-dagang."
+      },
+      "facebook-page": {
+        "title": "Laman Facebook",
+        "summary": "Pengurusan laman Facebook dan kandungan."
+      },
+      "line-oa": {
+        "title": "LINE OA",
+        "summary": "Penyediaan Akaun Rasmi LINE."
+      },
+      "tiktok": {
+        "title": "TikTok",
+        "summary": "Pemasaran dan penciptaan kandungan TikTok."
+      },
+      "youtube": {
+        "title": "YouTube",
+        "summary": "Produksi video dan promosi YouTube."
+      },
+      "video-production": {
+        "title": "Produksi Video",
+        "summary": "Penggambaran dan penyuntingan video profesional."
+      },
+      "paid-ads": {
+        "title": "Iklan Berbayar",
+        "summary": "Iklan Facebook, Google, dan TikTok."
+      },
+      "ai-solutions": {
+        "title": "Solusi AI",
+        "summary": "Perundingan AI dan solusi perniagaan."
+      },
+      "odoo-erp": {
+        "title": "Odoo ERP",
+        "summary": "Implementasi dan sokongan Odoo ERP."
+      },
+      "custom-software": {
+        "title": "Perisian Tersuai",
+        "summary": "Perkhidmatan pembangunan perisian tersuai."
       }
     },
     "bookkeeping": {
@@ -752,6 +879,10 @@
           }
         ]
       }
+    },
+    "hero": {
+      "title": "Perkhidmatan",
+      "description": "Perkhidmatan teras kami terbahagi kepada 5 kategori."
     }
   },
   "blog": {
@@ -848,5 +979,82 @@
     "title": "Page not found",
     "description": "The page you are looking for may have been moved or no longer exists.",
     "back": "Back to homepage"
+  },
+  "contact": {
+    "close": "Tutup",
+    "form": {
+      "heading": "Hantar mesej",
+      "subheading": "Hantar pertanyaan anda di bawah. Pasukan kami akan menghubungi anda dalam masa 24 jam.",
+      "directMessage": "Send us a direct message",
+      "directMessageDesc": "Submit your inquiry below. Our team will review your request and get back to you via email or phone within 24 hours.",
+      "name": "Nama Penuh",
+      "phone": "Nombor Telefon",
+      "email": "E-mel",
+      "socialId": "ID Sosial",
+      "socialIdPlaceholder": "Masukkan ID",
+      "service": "Perkhidmatan",
+      "servicePlaceholder": "Pilih perkhidmatan",
+      "message": "Mesej Tambahan",
+      "messagePlaceholder": "Beritahu kami lebih lanjut...",
+      "submit": "Hantar Mesej",
+      "sending": "Sedang menghantar...",
+      "successTitle": "Mesej Dihantar!",
+      "successMessage": "Terima kasih. Kami telah menerima mesej anda.",
+      "sendAnother": "Hantar Mesej Lain",
+      "serviceOther": "Lain-lain",
+      "socialPlatforms": {
+        "line": "Line",
+        "whatsapp": "WhatsApp",
+        "wechat": "WeChat",
+        "other": "Lain-lain"
+      },
+      "nameHelper": "Huruf dan jarak sahaja",
+      "phoneHelper": "Nombor dan tanda + - sahaja",
+      "emailHelper": "Contoh: nama@syarikat.com",
+      "errorGeneric": "Sesuatu telah berlaku. Sila cuba lagi.",
+      "errorRateLimit": "Terlalu banyak permintaan. Sila tunggu 3 minit.",
+      "namePlaceholder": "Ali Bin Abu"
+    },
+    "channels": {
+      "line": {
+        "label": "Chat LINE",
+        "subLabel": "Respon terpantas",
+        "action": "Tambah"
+      },
+      "whatsapp": {
+        "label": "WhatsApp",
+        "subLabel": "Pelanggan antarabangsa",
+        "action": "Mesej"
+      },
+      "phone": {
+        "label": "Hubungi kami",
+        "subLabel": "Isnin-Jumaat, 09:00 - 18:00",
+        "action": "Hubungi"
+      },
+      "email": {
+        "label": "E-mel",
+        "subLabel": "Dokumen & Sebut Harga",
+        "action": "Hantar"
+      },
+      "facebook": {
+        "label": "Facebook",
+        "subLabel": "Berita & Kemas Kini",
+        "action": "Ikut"
+      },
+      "tiktok": {
+        "label": "TikTok",
+        "subLabel": "Tips Bisnes Harian",
+        "action": "Tonton"
+      }
+    },
+    "hero": {
+      "title": "Bersedia untuk <highlight>memulakan perniagaan</highlight> anda?",
+      "subtitle": "Pilih saluran pilihan anda untuk bercakap dengan pakar kami dengan segera."
+    },
+    "formSection": {
+      "heading": "Adakah anda mahu kami menghubungi anda?",
+      "subheading": "Dengan besar hati! Isikan butiran anda di bawah."
+    },
+    "title": "Hubungi"
   }
 }

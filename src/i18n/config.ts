@@ -13,10 +13,7 @@ export const i18n = {
     'ko',
     'ms',
     'ta',
-    'hi',
-    'ar',
-    'fa',
-    'he'
+    'hi'
   ] as const,
 };
 
