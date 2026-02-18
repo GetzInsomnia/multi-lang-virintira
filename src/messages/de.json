@@ -493,7 +493,22 @@
     },
     "offers": [
       {
-        "note": "Ideal for scaling teams planning fundraising or expansion."
+        "name": "Exclusive for new clients 🔥",
+        "bullets": [
+          "Free government company registration fees valued at 5,200 THB",
+          "Free certified copy bundle valued at 1,100 THB",
+          "Bonus perks worth over 7,900 THB"
+        ],
+        "note": "Sign up with Virintira today to enjoy every benefit immediately."
+      },
+      {
+        "name": "Exclusive for bookkeeping clients 💡",
+        "bullets": [
+          "Free bookkeeping service valued at 3,500 THB",
+          "Unlimited business consulting sessions at no extra cost",
+          "Personalised tax planning designed for your business"
+        ],
+        "note": "Receive end-to-end monthly support from a dedicated expert team."
       }
     ],
     "cta": "Alle Aktionen ansehen",
