@@ -410,12 +410,12 @@
       "emailButton": "Email Virintira"
     },
     "about": {
-      "heading": "Virintira — Nicht nur eine Buchhaltungsfirma, sondern Ihr kompletter Geschäftspartner",
+      "heading": "Virintira — mehr als ein Steuer- und Buchhaltungsbüro: Ihr verlässlicher Business-Partner.",
       "paragraphs": [
-        "Mit über 10 Jahren Erfahrung unterstützt Virintira jeden Bereich Ihres Unternehmens – von der Firmengründung und monatlichen Buchhaltung bis hin zu Lizenzierung, Steuerplanung und digitalem Marketing.",
-        "Wir wissen, dass Sie sich auf das Wachstum Ihres Unternehmens konzentrieren möchten, daher kümmern wir uns mit Klarheit und Schnelligkeit um das Backoffice.",
-        "Sie können sich auf uns verlassen. Wir sind vollständig beim Department of Business Development registriert und lassen Projekte niemals unvollendet.",
-        "Unser umfassender, transparenter Service bedeutet, dass wir Ihnen in jeder Phase des Wachstums zur Seite stehen, denn jeder Kunde ist uns wichtig."
+        "Mit über 10 Jahren Erfahrung unterstützt Sie unser Team ganzheitlich – von der Unternehmensgründung, Registrierungen und Genehmigungen bis hin zur laufenden Buchhaltung, Steuererklärungen und einer strukturierten Wachstumsplanung.",
+        "Damit Sie sich mit Vertrauen auf Ihr Wachstum konzentrieren können, übernehmen wir Ihre Backoffice-Aufgaben – sorgfältig und korrekt.",
+        "In jedem Schritt kommunizieren wir klar, arbeiten nachvollziehbar und handeln in Übereinstimmung mit dem thailändischen Recht.",
+        "Schnell, aufmerksam und gewissenhaft begleiten wir Sie in jeder Wachstumsphase – denn „Ihr Erfolg ist unser Ziel.“"
       ],
       "link": "Über Virintira",
       "viewLicense": "Unsere Firmenregistrierung ansehen"
@@ -424,28 +424,24 @@
       "heading": "Popular services",
       "items": [
         {
-          "title": "Monthly bookkeeping",
-          "description": "Transaction recording, reconciliations, and IFRS-compliant statements."
+          "title": "Unternehmensgründung",
+          "description": "Komplette Registrierung für GmbHs und Personengesellschaften mit fachkundiger Begleitung."
         },
         {
-          "title": "Payroll outsourcing",
-          "description": "Payslips, social security, and Withholding Tax filings prepared accurately."
+          "title": "Aktualisierung von Unternehmensdaten",
+          "description": "Genaue und zeitnahe Updates wichtiger Unternehmensinformationen."
         },
         {
-          "title": "Tax & compliance",
-          "description": "VAT, corporate income tax, and BOI documentation handled end-to-end."
+          "title": "Monatliche Buchhaltung",
+          "description": "Transaktionserfassung, Abstimmungen und IFRS-konforme Abschlüsse."
         },
         {
-          "title": "Company secretary",
-          "description": "Board resolutions, share registers, and regulatory submissions on schedule."
+          "title": "Jahresabschluss",
+          "description": "Effiziente Erstellung und Abschluss der Jahresabschlüsse für das DBD und das Finanzamt."
         },
         {
-          "title": "Virtual CFO",
-          "description": "Forecasting, budgeting, and investor-ready reporting in Thai or English."
-        },
-        {
-          "title": "Startup launch",
-          "description": "Entity setup, bank integrations, and digital invoicing that scales with you."
+          "title": "Steuerplanung",
+          "description": "Strategische Steuergestaltung und Beratung für optimierte Geschäftsabläufe."
         }
       ]
     },
@@ -482,8 +478,8 @@
       ]
     },
     "cta": {
-      "heading": "Ready for stress-free accounting?",
-      "description": "Book a consultation with Virintira and receive a tailored action plan for your finance operations in under 48 hours."
+      "heading": "Der Einstieg mit dem Virintira-Team ist ganz einfach.",
+      "description": "Sichern Sie sich eine kostenlose Beratung, um Kosten einzuschätzen und den passenden Service für Ihr Unternehmen zu finden."
     }
   },
   "promotion": {
@@ -587,8 +583,8 @@
     },
     "items": {
       "registration": {
-        "title": "GmbH (Co., Ltd.)",
-        "summary": "Complete registration for limited companies and partnerships with expert guidance."
+        "title": "Unternehmensgründung",
+        "summary": "Komplette Registrierung für GmbHs und Personengesellschaften mit fachkundiger Begleitung."
       },
       "limited-partnership": {
         "title": "Kommanditgesellschaft",
@@ -615,8 +611,8 @@
         "summary": "Umsatzsteuerregistrierung (MwSt.)."
       },
       "edit-info": {
-        "title": "Corporate information updates",
-        "summary": "Accurate, timely updates to critical company information."
+        "title": "Aktualisierung von Unternehmensdaten",
+        "summary": "Genaue und zeitnahe Updates wichtiger Unternehmensinformationen."
       },
       "company-name": {
         "title": "Firmenname",
@@ -655,16 +651,16 @@
         "summary": "Auflösung und Liquidation der Firma."
       },
       "monthly-bookkeeping": {
-        "title": "Monthly bookkeeping",
-        "summary": "Accurate bookkeeping and monthly tax filing with every document handled for you."
+        "title": "Monatliche Buchhaltung",
+        "summary": "Transaktionserfassung, Abstimmungen und IFRS-konforme Abschlüsse."
       },
       "monthly-tax": {
         "title": "Monatssteuern",
         "summary": "Erstellung und Einreichung monatlicher Steuern."
       },
       "close-financial": {
-        "title": "Financial statement closing",
-        "summary": "Certified auditors prepare and review your annual financial statements."
+        "title": "Jahresabschluss",
+        "summary": "Effiziente Erstellung und Abschluss der Jahresabschlüsse für das DBD und das Finanzamt."
       },
       "personal-accounts": {
         "title": "Private Buchhaltung",
@@ -679,8 +675,8 @@
         "summary": "Steuer-ID für Ausländer."
       },
       "tax-planning": {
-        "title": "Tax planning",
-        "summary": "Strategic tax planning that keeps your business compliant and efficient."
+        "title": "Steuerplanung",
+        "summary": "Strategische Steuergestaltung und Beratung für optimierte Geschäftsabläufe."
       },
       "tourism-licence": {
         "title": "Tourismuslizenz",
@@ -1074,5 +1070,16 @@
       "subheading": "Sehr gerne! Füllen Sie einfach das Formular aus."
     },
     "title": "Kontakt"
+  },
+  "aboutUs": {
+    "breadcrumb": "Über uns",
+    "hero": {
+      "title": "Wachsen Sie in Thailand mit Vertrauen.",
+      "subtitle": "Virintira verbindet Buchhaltungs und Steuerkompetenz mit moderner Technologie, um ganzheitliche Services zu bieten transparent und\u00A0verlässlich."
+    },
+    "cta": {
+      "heading": "Gehen Sie den nächsten Schritt mit Vertrauen mit Virintira.",
+      "description": "Wir übernehmen Ihre Unterlagen und Backoffice-Aufgaben, damit Sie sich ganz auf Ihre Unternehmensziele konzentrieren können."
+    }
   }
 }

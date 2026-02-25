@@ -65,7 +65,9 @@ export function HowItWorksSection({ heading, steps: propSteps }: HowItWorksSecti
     }
   ]
 
-  const containerRef = useRef(null)
+  const containerRef = useRef<HTMLElement>(null)
+  const stepRefs = useRef<(HTMLDivElement | null)[]>([])
+  const [stepHeights, setStepHeights] = useState<number[]>([])
   const isInView = useInView(containerRef, { once: true, amount: 0.3 })
 
   useEffect(() => {
@@ -81,6 +83,25 @@ export function HowItWorksSection({ heading, steps: propSteps }: HowItWorksSecti
 
     return () => clearTimeout(startTimer)
   }, [isInView])
+
+  // Track the actual rendered pixel height of each step row dynamically
+  useEffect(() => {
+    const updateHeights = () => {
+      const heights = stepRefs.current.map(ref => ref?.offsetHeight || 0)
+      setStepHeights(heights)
+    }
+
+    // Initial measurement
+    updateHeights()
+
+    // Re-measure on resize or layout shifts (like font-loading)
+    const observer = new ResizeObserver(updateHeights)
+    stepRefs.current.forEach(ref => {
+      if (ref) observer.observe(ref)
+    })
+
+    return () => observer.disconnect()
+  }, [])
 
   useEffect(() => {
     if (!hasStartedHighlight) return
@@ -104,8 +125,7 @@ export function HowItWorksSection({ heading, steps: propSteps }: HowItWorksSecti
   return (
     <section
       ref={containerRef}
-      className="relative min-h-[calc(100dvh-var(--header-height))] snap-start bg-[#fff4f4] flex flex-col justify-start pt-24 pb-20 md:pt-32 md:pb-32 overflow-hidden"
-      style={{ minHeight: 'calc(100dvh - var(--header-height))' }}
+      className="relative min-h-[calc(100dvh-var(--header-height))] md:min-h-0 xl:min-h-[calc(100dvh-var(--header-height))] snap-start bg-[#fff4f4] flex flex-col justify-center py-20 md:py-28 lg:py-32 overflow-hidden"
     >
       <div className="max-w-7xl mx-auto w-full flex flex-col items-center relative z-10">
         <h2 className="text-center text-3xl md:text-4xl lg:text-5xl font-bold text-[#A70909] mb-16 md:mb-24">
@@ -113,22 +133,52 @@ export function HowItWorksSection({ heading, steps: propSteps }: HowItWorksSecti
         </h2>
 
         {/* 
-            MOBILE LAYOUT (Grid 2 Cols: Timeline | Content) 
+            MOBILE & TABLET LAYOUT (Grid 2 Cols: Timeline | Content) 
             Guarantees alignment of line and icon.
         */}
-        <div className="relative mb-20 w-full px-4 md:px-8 lg:hidden">
-          <div className="grid grid-cols-[5rem_1fr] auto-rows-auto">
+        <div className="relative w-full px-4 md:px-8 lg:hidden flex justify-center">
+          <div className="flex flex-col w-full max-w-lg">
             {steps.map((step, index) => {
               // Direct "isActive" calculation, no isVisible toggle to prevent flickering
               const isActive = hasStartedHighlight && mobileIndex === index;
               const isLast = index === steps.length - 1;
 
               return (
-                <div key={`mobile-step-${index}`} className="contents group">
+                <div
+                  key={`mobile-step-${index}`}
+                  className="group relative flex w-full"
+                  ref={(el) => { stepRefs.current[index] = el; }}
+                >
                   {/* Column 1: Timeline (Icon + Line) */}
-                  <div className="relative flex flex-col items-center">
+                  <div className="relative w-20 md:w-24 shrink-0 flex flex-col items-center">
+                    {/* Continuous Connecting Line Background */}
+                    <div
+                      className="absolute w-1 bg-[#A70909]/10 z-0"
+                      style={{
+                        top: index === 0 ? '50%' : '0%',
+                        bottom: isLast ? '50%' : '0%',
+                      }}
+                    />
+
+                    {/* Traveling Beam (Shoots from current icon to next icon) */}
+                    {!isLast && isActive && stepHeights[index] && (
+                      <motion.div
+                        className="absolute w-1 bg-gradient-to-b from-[#A70909] to-transparent opacity-80 z-10"
+                        initial={{ top: '50%', height: 0, opacity: 0 }}
+                        animate={{
+                          top: ['50%', '50%'],
+                          height: [0, stepHeights[index]], // Dynamically stretch exactly to the center of the next node
+                          opacity: [0, 1, 1, 0]
+                        }}
+                        transition={{ duration: 2.5, ease: "linear" }}
+                      />
+                    )}
+
+                    {/* Spacer to push Icon to center vertically relative to the entire row */}
+                    <div className="flex-1" />
+
                     {/* Icon Container (Fixed Size) */}
-                    <div className="relative z-20 flex-none h-20 w-20">
+                    <div className="relative z-20 flex-none h-16 w-16 my-8 md:my-10">
                       <div
                         className={`
                                             w-full h-full rounded-full bg-white flex items-center justify-center border border-gray-100 relative transition-transform duration-500
@@ -155,28 +205,13 @@ export function HowItWorksSection({ heading, steps: propSteps }: HowItWorksSecti
                       </AnimatePresence>
                     </div>
 
-                    {/* Connecting Line (Stretches to bottom of cell) */}
-                    {!isLast && (
-                      <div className="w-1 bg-[#A70909]/10 flex-grow relative my-2 z-0">
-                        {/* Traveling Beam - FADES OUT before reaching end */}
-                        {isActive && (
-                          <motion.div
-                            className="absolute top-0 left-0 right-0 h-24 bg-gradient-to-b from-[#A70909] to-transparent opacity-80"
-                            initial={{ top: '0%', opacity: 0 }}
-                            animate={{
-                              top: ['0%', '100%'],   // Travel FULL height
-                              opacity: [1, 1]        // Stay visible until switch
-                            }}
-                            transition={{ duration: 2.5, ease: "linear" }} // Sync exactly with interval
-                          />
-                        )}
-                      </div>
-                    )}
+                    {/* Spacer to push Icon to center vertically relative to the entire row */}
+                    <div className="flex-1" />
                   </div>
 
                   {/* Column 2: Content (with bottom padding for spacing) */}
                   <motion.div
-                    className="pb-12 pl-4"
+                    className="flex-1 py-8 pl-4 flex flex-col justify-center"
                     initial={{ opacity: 0, x: 20 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true }}
@@ -210,7 +245,7 @@ export function HowItWorksSection({ heading, steps: propSteps }: HowItWorksSecti
             DESKTOP LAYOUT (Horizontal) 
             Re-engineered to match Mobile Physics (Traveling Beam + Pulsing Ring)
         */}
-        <div className="relative mb-20 w-full px-8 hidden lg:block">
+        <div className="relative w-full px-8 hidden lg:block">
           {/* Connector Track - Background Only */}
           <div className="absolute top-12 left-0 right-0 h-1 -translate-y-1/2 z-0">
             {[0, 1, 2].map(i => (

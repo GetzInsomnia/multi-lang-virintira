@@ -16,7 +16,7 @@ export default function BorderRevealButton({ href, children, className = '' }: B
     return (
         <Link
             href={href}
-            className={`group relative inline-flex items-center justify-center overflow-hidden rounded-full border-2 border-[#A70909] bg-white px-8 py-3 font-bold text-[#A70909] transition-all duration-300 hover:border-[#A70909] hover:shadow-lg ${className}`}
+            className={`group relative inline-flex items-center justify-center overflow-hidden rounded-full border-2 border-[#A70909] bg-white px-8 py-3.5 text-base font-bold text-[#A70909] transition-all duration-300 hover:border-[#A70909] hover:shadow-lg ${className}`}
         >
             {/* Fill Animation (Left to Right) - Negative inset to prevent sub-pixel white line */}
             <span className="absolute -inset-[1px] w-[calc(100%+2px)] translate-x-[-101%] bg-[#A70909] transition-transform duration-[400ms] ease-out group-hover:translate-x-0"></span>

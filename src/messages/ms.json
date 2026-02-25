@@ -409,12 +409,12 @@
       "emailButton": "Email Virintira"
     },
     "about": {
-      "heading": "Virintira — Bukan sekadar firma perakaunan, tetapi rakan kongsi perniagaan lengkap anda",
+      "heading": "Virintira — bukan sekadar firma akaun, tetapi rakan perniagaan yang anda boleh percayai.",
       "paragraphs": [
-        "Dengan pengalaman lebih 10 tahun, Virintira menyokong setiap bahagian operasi anda — daripada penubuhan syarikat dan simpan kira bulanan hingga pelesengan, perancangan cukai dan pemasaran digital.",
-        "Kami tahu anda mahu menumpukan perhatian kepada pertumbuhan perniagaan anda, jadi kami menguruskan pejabat belakang dengan jelas dan pantas.",
-        "Anda boleh bergantung kepada kami. Kami berdaftar sepenuhnya dengan Jabatan Pembangunan Perniagaan dan tidak pernah membiarkan projek tidak selesai.",
-        "Perkhidmatan semua-dalam-satu dan telus kami bermakna kami berdiri di samping anda pada setiap peringkat pertumbuhan kerana setiap pelanggan adalah penting bagi kami."
+        "Dengan pasukan berpengalaman lebih 10 tahun, kami menyediakan sokongan perniagaan menyeluruh — daripada pendaftaran syarikat, urusan pendaftaran dan permit, hingga perakaunan bulanan, penghantaran cukai, serta perancangan pertumbuhan yang tersusun.",
+        "Agar anda boleh fokus membangunkan perniagaan dengan yakin, kami mengurus kerja back office dengan kemas dan tepat.",
+        "Pada setiap peringkat, kami berkomunikasi dengan jelas, kerja kami boleh disemak, dan kami beroperasi mengikut undang-undang Thailand.",
+        "Dengan perkhidmatan yang pantas, prihatin dan teliti, kami sentiasa di sisi anda dalam setiap fasa pertumbuhan — kerana “kejayaan anda ialah matlamat kami”."
       ],
       "link": "Mengenai Virintira",
       "viewLicense": "Lihat pendaftaran korporat kami"
@@ -423,28 +423,24 @@
       "heading": "Popular services",
       "items": [
         {
-          "title": "Monthly bookkeeping",
-          "description": "Transaction recording, reconciliations, and IFRS-compliant statements."
+          "title": "Pendaftaran Syarikat",
+          "description": "Lengkapkan pendaftaran untuk syarikat berhad dan perkongsian dengan bimbingan pakar."
         },
         {
-          "title": "Payroll outsourcing",
-          "description": "Payslips, social security, and Withholding Tax filings prepared accurately."
+          "title": "Kemas kini rekod korporat",
+          "description": "Perubahan yang tepat dan tepat pada masanya kepada maklumat penting syarikat."
         },
         {
-          "title": "Tax & compliance",
-          "description": "VAT, corporate income tax, and BOI documentation handled end-to-end."
+          "title": "Simpan Kira Bulanan",
+          "description": "Perekodan transaksi, penyesuaian, dan penyata patuh IFRS."
         },
         {
-          "title": "Company secretary",
-          "description": "Board resolutions, share registers, and regulatory submissions on schedule."
+          "title": "Penutupan penyata kewangan",
+          "description": "Akaun tahunan disediakan dan ditutup dengan cekap untuk DBD dan Jabatan Hasil."
         },
         {
-          "title": "Virtual CFO",
-          "description": "Forecasting, budgeting, and investor-ready reporting in Thai or English."
-        },
-        {
-          "title": "Startup launch",
-          "description": "Entity setup, bank integrations, and digital invoicing that scales with you."
+          "title": "Perancangan Cukai",
+          "description": "Penstrukturan cukai strategik dan nasihat untuk operasi perniagaan yang dioptimumkan."
         }
       ]
     },
@@ -481,8 +477,8 @@
       ]
     },
     "cta": {
-      "heading": "Ready for stress-free accounting?",
-      "description": "Book a consultation with Virintira and receive a tailored action plan for your finance operations in under 48 hours."
+      "heading": "Mudah sahaja untuk mula berbincang dengan pasukan Virintira.",
+      "description": "Dapatkan konsultasi percuma untuk membantu anggar kos dan tentukan perkhidmatan yang paling sesuai untuk perniagaan anda."
     }
   },
   "promotion": {
@@ -571,8 +567,8 @@
     },
     "items": {
       "registration": {
-        "title": "Syarikat (Co., Ltd.)",
-        "summary": "Pendaftaran syarikat dan perkongsian lengkap."
+        "title": "Pendaftaran Syarikat",
+        "summary": "Lengkapkan pendaftaran untuk syarikat berhad dan perkongsian dengan bimbingan pakar."
       },
       "limited-partnership": {
         "title": "Perkongsian Terhad",
@@ -599,8 +595,8 @@
         "summary": "Pendaftaran cukai nilai tambah (VAT)."
       },
       "edit-info": {
-        "title": "Pindaan Maklumat",
-        "summary": "Kemas kini maklumat korporat yang penting."
+        "title": "Kemas kini rekod korporat",
+        "summary": "Perubahan yang tepat dan tepat pada masanya kepada maklumat penting syarikat."
       },
       "company-name": {
         "title": "Nama Syarikat",
@@ -639,16 +635,16 @@
         "summary": "Perkhidmatan pembubaran syarikat."
       },
       "monthly-bookkeeping": {
-        "title": "Akaun Syarikat",
-        "summary": "Perkhidmatan simpan kira dan cukai bulanan yang tepat."
+        "title": "Simpan Kira Bulanan",
+        "summary": "Perekodan transaksi, penyesuaian, dan penyata patuh IFRS."
       },
       "monthly-tax": {
         "title": "Cukai Bulanan",
         "summary": "Pemfailan cukai bulanan."
       },
       "close-financial": {
-        "title": "Akaun Tahunan",
-        "summary": "Penyata kewangan tahunan oleh akauntan bertauliah."
+        "title": "Penutupan penyata kewangan",
+        "summary": "Akaun tahunan disediakan dan ditutup dengan cekap untuk DBD dan Jabatan Hasil."
       },
       "personal-accounts": {
         "title": "Akaun Individu",
@@ -660,7 +656,7 @@
       },
       "tax-planning": {
         "title": "Perancangan Cukai",
-        "summary": "Strategi cukai untuk kecekapan perniagaan."
+        "summary": "Penstrukturan cukai strategik dan nasihat untuk operasi perniagaan yang dioptimumkan."
       },
       "foreign-tax-id": {
         "title": "Nombor Cukai Asing",
@@ -1058,5 +1054,16 @@
       "subheading": "Dengan besar hati! Isikan butiran anda di bawah."
     },
     "title": "Hubungi"
+  },
+  "aboutUs": {
+    "breadcrumb": "Tentang Kami",
+    "hero": {
+      "title": "Kembangkan perniagaan anda di Thailand dengan yakin.",
+      "subtitle": "Virintira menggabungkan kepakaran perakaunan dengan teknologi moden untuk memberikan perkhidmatan menyeluruh yang telus dan boleh dipercayai."
+    },
+    "cta": {
+      "heading": "Melangkah ke hadapan dengan yakin bersama Virintira.",
+      "description": "Biarkan pasukan kami mengurus dokumen dan kerja back office, supaya anda boleh fokus sepenuhnya pada matlamat perniagaan anda."
+    }
   }
 }

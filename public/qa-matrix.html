@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Typography QA Matrix</title>
+    <style>
+        body { 
+            background: #222; 
+            margin: 0; 
+            padding: 40px; 
+            font-family: system-ui, sans-serif; 
+        }
+        h1 { color: #fff; text-align: center; margin-bottom: 40px; }
+        .section {
+            margin-bottom: 80px;
+        }
+        .section-title {
+            color: #fff;
+            border-bottom: 2px solid #555;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+        .grid { 
+            display: flex; 
+            flex-wrap: wrap; 
+            gap: 40px; 
+            justify-content: center;
+        }
+        .device { 
+            display: flex; 
+            flex-direction: column; 
+            align-items: center; 
+            color: #ccc; 
+        }
+        .device h3 {
+            margin: 0 0 10px 0;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        iframe.mobile { width: 320px; height: 800px; border: none; background: #fff; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
+        iframe.tablet { width: 768px; height: 1024px; border: none; background: #fff; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
+        iframe.desktop { width: 1024px; height: 800px; border: none; background: #fff; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
+        
+        /* Auto scroll iframes down to CTA a bit and Hero */
+    </style>
+</head>
+<body>
+    <h1>Virintira About Us Typography Matrix</h1>
+    
+    <div class="section" id="mobile-section">
+        <h2 class="section-title">Mobile iPhone SE (320px)</h2>
+        <div class="grid" id="mobile-grid"></div>
+    </div>
+
+    <div class="section" id="tablet-section">
+        <h2 class="section-title">Tablet Portrait (768px)</h2>
+        <div class="grid" id="tablet-grid"></div>
+    </div>
+
+    <div class="section" id="desktop-section">
+        <h2 class="section-title">Desktop (1024px)</h2>
+        <div class="grid" id="desktop-grid"></div>
+    </div>
+
+    <script>
+        const langs = ['en', 'th', 'zh-Hant', 'zh-Hans', 'ja', 'ko', 'vi', 'id', 'ms', 'fil', 'hi', 'de', 'fr'];
+        
+        const mGrid = document.getElementById('mobile-grid');
+        const tGrid = document.getElementById('tablet-grid');
+        const dGrid = document.getElementById('desktop-grid');
+
+        // Render Mobile
+        langs.forEach(lang => {
+            const div = document.createElement('div');
+            div.className = 'device';
+            div.innerHTML = `<h3>${lang}</h3><iframe class="mobile" src="/${lang}/about"></iframe>`;
+            mGrid.appendChild(div);
+        });
+
+        // Render Tablet (just pick top languages for speed)
+        const topLangs = ['zh-Hant', 'ja', 'th', 'en'];
+        topLangs.forEach(lang => {
+            const div = document.createElement('div');
+            div.className = 'device';
+            div.innerHTML = `<h3>${lang}</h3><iframe class="tablet" src="/${lang}/about"></iframe>`;
+            tGrid.appendChild(div);
+        });
+
+        // Render Desktop (just pick top languages for speed)
+        topLangs.forEach(lang => {
+            const div = document.createElement('div');
+            div.className = 'device';
+            div.innerHTML = `<h3>${lang}</h3><iframe class="desktop" src="/${lang}/about"></iframe>`;
+            dGrid.appendChild(div);
+        });
+    </script>
+</body>
+</html>

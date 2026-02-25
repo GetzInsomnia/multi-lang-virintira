@@ -457,12 +457,12 @@
       "emailButton": "Email Virintira"
     },
     "about": {
-      "heading": "Virintira — 不僅是一家會計師事務所，更是您的全方位商業合作夥伴",
+      "heading": "Virintira —— 不只是會計事務所，更是您值得信賴的商業夥伴。",
       "paragraphs": [
-        "憑藉超過 10 年的經驗，Virintira 支持您運營的每一個環節——從公司註冊和每月簿記，到許可證申請、稅務規劃及數字營銷。",
-        "我們知道您希望專注於業務增長，因此我們將以清晰和高效的方式為您處理後台事務。",
-        "您可以信賴我們。我們已在商業發展部完全註冊，絕不會半途而廢。",
-        "我們為您提供一站式、透明的服務，這意味著我們將陪伴您成長的每一個階段，因為每一位客户對我們來說都至關重要。"
+        "我們的團隊擁有 10 年以上經驗，提供一站式企業支援：從公司註冊、各類登記與許可申請，到月度記帳、稅務申報，以及系統化的成長規劃。",
+        "為了讓您能安心專注於事業發展，我們會把後勤作業處理得完善、正確、到位。",
+        "每個環節皆清楚溝通、流程可查核，並依泰國法律規範合規執行。",
+        "以快速、用心、嚴謹的服務，我們陪伴您走過每個成長階段——「您的成功，就是我們的目標。」"
       ],
       "link": "關於 Virintira",
       "viewLicense": "查看執照"
@@ -471,28 +471,24 @@
       "heading": "Popular services",
       "items": [
         {
-          "title": "Monthly bookkeeping",
-          "description": "Transaction recording, reconciliations, and IFRS-compliant statements."
+          "title": "公司註冊",
+          "description": "在專家指導下完成有限公司和合夥企業的註冊。"
         },
         {
-          "title": "Payroll outsourcing",
-          "description": "Payslips, social security, and Withholding Tax filings prepared accurately."
+          "title": "公司資訊變更",
+          "description": "準確、及時地更新關鍵公司資訊。"
         },
         {
-          "title": "Tax & compliance",
-          "description": "VAT, corporate income tax, and BOI documentation handled end-to-end."
+          "title": "月度記帳",
+          "description": "交易記錄、對帳和符合 IFRS 的財務報表。"
         },
         {
-          "title": "Company secretary",
-          "description": "Board resolutions, share registers, and regulatory submissions on schedule."
+          "title": "財務報表結算",
+          "description": "高效編製年度帳目，提交給商業發展局和稅務局。"
         },
         {
-          "title": "Virtual CFO",
-          "description": "Forecasting, budgeting, and investor-ready reporting in Thai or English."
-        },
-        {
-          "title": "Startup launch",
-          "description": "Entity setup, bank integrations, and digital invoicing that scales with you."
+          "title": "稅務籌劃",
+          "description": "戰略性稅務結構和諮詢，以優化業務運營。"
         }
       ]
     },
@@ -529,8 +525,8 @@
       ]
     },
     "cta": {
-      "heading": "Ready for stress-free accounting?",
-      "description": "Book a consultation with Virintira and receive a tailored action plan for your finance operations in under 48 hours."
+      "heading": "與 Virintira 團隊開始聊聊很簡單。",
+      "description": "預約免費諮詢，協助您評估費用，並找出最適合您企業的服務。"
     }
   },
   "promotion": {
@@ -634,8 +630,8 @@
     },
     "items": {
       "registration": {
-        "title": "有限公司",
-        "summary": "完善的公司和合夥註冊服務，提供專業指導。"
+        "title": "公司註冊",
+        "summary": "在專家指導下完成有限公司和合夥企業的註冊。"
       },
       "limited-partnership": {
         "title": "有限合夥",
@@ -663,7 +659,7 @@
       },
       "edit-info": {
         "title": "公司資訊變更",
-        "summary": "準確、即時地更新重要的公司資訊。"
+        "summary": "準確、及時地更新關鍵公司資訊。"
       },
       "company-name": {
         "title": "公司名稱",
@@ -702,16 +698,16 @@
         "summary": "公司解散和註銷服務。"
       },
       "monthly-bookkeeping": {
-        "title": "公司帳務",
-        "summary": "準確的記帳和每月稅務申報，為您處理所有文件。"
+        "title": "月度記帳",
+        "summary": "交易記錄、對帳和符合 IFRS 的財務報表。"
       },
       "monthly-tax": {
         "title": "每月報稅",
         "summary": "每月和半年稅務申報服務。"
       },
       "close-financial": {
-        "title": "年度財報",
-        "summary": "由認證審計師編制和審查您的年度財務報表。"
+        "title": "財務報表結算",
+        "summary": "高效編製年度帳目，提交給商業發展局和稅務局。"
       },
       "personal-accounts": {
         "title": "個人帳務",
@@ -722,8 +718,8 @@
         "summary": "法定審計和會計師 (CPA) 服務。"
       },
       "tax-planning": {
-        "title": "稅務規劃",
-        "summary": "戰略性稅務規劃，保持您的業務合規且高效。"
+        "title": "稅務籌劃",
+        "summary": "戰略性稅務結構和諮詢，以優化業務運營。"
       },
       "foreign-tax-id": {
         "title": "外國稅號",
@@ -1121,5 +1117,16 @@
       "subheading": "沒問題！請在下方填寫您的詳細資訊。"
     },
     "title": "聯絡我們"
+  },
+  "aboutUs": {
+    "breadcrumb": "關於我們",
+    "hero": {
+      "title": "<nw>在泰國</nw><nw>安心發展，</nw><br></br><nw>穩健成長。</nw>",
+      "subtitle": "Virintira <nw>結合會計專業</nw>與<nw>現代技術，</nw><br></br><nw>提供</nw><nw>一站式服務，</nw><br></br><nw>透明可靠，</nw><nw>值得信賴。</nw>"
+    },
+    "cta": {
+      "heading": "與 Virintira 一起，<br></br><nw>自信邁向下一步。</nw>",
+      "description": "讓我們為您處理文件與<nw>後勤作業，</nw><br></br>您可以全力專注於<nw>企業目標。</nw>"
+    }
   }
 }

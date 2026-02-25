@@ -1,9 +1,10 @@
 'use client';
 
 import { COMPANY } from '@/data/company';
-import { ConsultationButtons } from '@/components/common/ConsultationButtons';
+// Removed Link import as we use window events now
 import { useLocale } from 'next-intl';
 import { motion, LayoutGroup } from 'framer-motion';
+import { useUI } from '@/context/UIContext';
 
 export function ContactCTA({
   heading,
@@ -22,24 +23,23 @@ export function ContactCTA({
   emailLabel: string;
   triggerLabel: string
 }) {
+  const { openContactDrawer } = useUI();
+
   return (
     <section
       id="contact"
-      className="relative flex min-h-[calc(100dvh-var(--header-height))] items-center justify-center overflow-hidden bg-[#A70909] px-safe py-24"
+      className="relative flex min-h-[calc(100dvh-var(--header-height))] md:min-h-[550px] xl:min-h-[calc(100dvh-var(--header-height))] items-center justify-center overflow-hidden bg-[#A70909] px-safe py-24 md:py-32 lg:py-36 xl:py-24"
     >
-      {/* Premium Dark Gradient & Pattern */}
-      <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(to_bottom_right,#A70909,#5d0505)]" />
+      {/* Premium Dark Gradient */}
+      <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(to_bottom,#A70909_0%,#A70909_15%,#5d0505_100%)] z-0" />
 
-      {/* 
-        Connector Cap (Round 9 Fix): 
-        Forces the top edge to be SOLID Flat #A70909 to match the Promotion section above.
-        The base gradient (to_bottom_right) causes the right side to be darker, creating a seam.
-        This transition fixes it.
-      */}
-      <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-[#A70909] via-[#A70909] to-transparent z-0 pointer-events-none" />
-
+      {/* Decorative Dots Pattern (Masked at top to transition smoothly) */}
       <div className="absolute inset-0 z-0 opacity-20"
-        style={{ backgroundImage: 'radial-gradient(rgba(255,255,255,0.1) 1px, transparent 1px)', backgroundSize: '32px 32px' }}
+        style={{
+          backgroundImage: 'radial-gradient(rgba(255,255,255,0.1) 1px, transparent 1px)',
+          backgroundSize: '32px 32px',
+          maskImage: 'linear-gradient(to bottom, transparent 0%, transparent 10%, black 25%)'
+        }}
         aria-hidden="true"
       />
 
@@ -64,16 +64,15 @@ export function ContactCTA({
               ) : null}
             </motion.div>
 
-            <motion.div layout className="w-full">
-              <ConsultationButtons
-                triggerLabel={triggerLabel}
-                chatLabel={chatLabel}
-                whatsappLabel={whatsappLabel}
-                emailLabel={emailLabel}
-                phoneAriaLabel={callLabel}
-                variant="on-red"
-              />
-            </motion.div>
+            <div className="flex justify-center pt-8">
+              <button
+                type="button"
+                onClick={openContactDrawer}
+                className="inline-flex items-center justify-center rounded-full bg-white px-8 py-3.5 text-base font-bold text-[#A70909] shadow-xl shadow-black/10 transition-all duration-300 ease-out hover:scale-105 hover:bg-[#f9f9f9] hover:shadow-2xl focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-white/50 motion-reduce:transition-none motion-reduce:hover:transform-none"
+              >
+                {triggerLabel}
+              </button>
+            </div>
           </motion.div>
         </LayoutGroup>
       </div>

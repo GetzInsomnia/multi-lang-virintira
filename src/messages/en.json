@@ -12,6 +12,16 @@
         "multilingual"
       ]
     },
+    "aboutUs": {
+      "title": "About Virintira | Your Reliable Thai Business Partner",
+      "description": "Learn about Virintira's mission, story, and core values. We provide transparent, high-speed corporate compliance and accounting in Thailand.",
+      "keywords": [
+        "About Virintira",
+        "Thai accounting firm",
+        "business registration Thailand",
+        "corporate compliance"
+      ]
+    },
     "promotion": {
       "title": "Virintira Promotions",
       "description": "Seasonal bookkeeping bundles and startup packages crafted for growing Thai businesses.",
@@ -405,12 +415,12 @@
       "emailButton": "Email Virintira"
     },
     "about": {
-      "heading": "Virintira — Not just an accounting firm, but your complete business partner",
+      "heading": "Virintira — more than an accounting firm, your trusted business partner.",
       "paragraphs": [
-        "With over 10 years of experience, Virintira supports every part of your operations—from company formation and monthly bookkeeping to licensing, tax planning, and digital marketing.",
-        "We know you want to stay focused on growing your business, so we take care of the back office with clarity and speed.",
-        "You can rely on us. We are fully registered with the Department of Business Development and never leave projects unfinished.",
-        "Our all-in-one, transparent service means we stand beside you at every stage of growth because every client is important to us."
+        "With a team bringing over 10 years of experience, we provide end-to-end business support—from company registration, filings and permits, to monthly accounting, tax submissions, and structured growth planning.",
+        "So you can stay focused on growing your business with confidence, we take care of the back-office work—accurately and professionally.",
+        "At every step, we communicate clearly, keep everything transparent and verifiable, and operate in full compliance with Thai law.",
+        "With fast, attentive, and thorough service, we stand by you through every stage of growth—because “your success is our goal.”"
       ],
       "link": "About Virintira",
       "viewLicense": "View our corporate registration"
@@ -422,24 +432,24 @@
       "heading": "Popular services",
       "items": [
         {
-          "title": "Company registration",
+          "title": "Company Registration",
           "description": "Complete registration for limited companies and partnerships with expert guidance."
         },
         {
-          "title": "Corporate record updates",
-          "description": "Accurate, timely changes to critical company information."
+          "title": "Corporate information updates",
+          "description": "Accurate, timely updates to critical company information."
         },
         {
-          "title": "Monthly bookkeeping",
-          "description": "Accurate bookkeeping and tax filing with every document handled for you."
+          "title": "Monthly Bookkeeping",
+          "description": "Transaction recording, reconciliations, and IFRS-compliant statements."
         },
         {
           "title": "Financial statement closing",
-          "description": "Certified auditors prepare and review your annual statements."
+          "description": "Annual accounts prepared and closed efficiently for DBD and Revenue Department."
         },
         {
           "title": "Tax planning",
-          "description": "Strategic tax planning that keeps your business compliant and efficient."
+          "description": "Strategic tax structuring and advisory for optimized business operations."
         }
       ]
     },
@@ -476,13 +486,13 @@
       ]
     },
     "cta": {
-      "heading": "Let's Handle Your Accounts.",
-      "description": "Talk with our team for a free consultation, pricing estimate, and a service plan tailored to your business. No commitment required • Free Initial Consult."
+      "heading": "Getting started with the Virintira team is easy.",
+      "description": "Enjoy a free consultation to estimate costs and find the service that fits your business best."
     }
   },
   "promotion": {
     "hero": {
-      "title": "Trusted, modern business—\nservices ready to grow with you.",
+      "title": "Trusted, modern business\nservices ready to grow with you.",
       "intro": "Unlock exclusive offers on our services and solutions, designed to reduce costs and drive your growth efficiently."
     },
     "offers": [
@@ -652,7 +662,7 @@
       },
       "monthly-bookkeeping": {
         "title": "Monthly Bookkeeping",
-        "summary": "Accurate, timely, and compliant bookkeeping services for Thai companies.",
+        "summary": "Transaction recording, reconciliations, and IFRS-compliant statements.",
         "hero": {
           "title": "Stress-free Accounting & Tax Filing",
           "subtitle": "Starting from 2,500 THB/month",
@@ -718,11 +728,11 @@
       },
       "close-financial": {
         "title": "Financial statement closing",
-        "summary": "Certified auditors prepare and review your annual financial statements."
+        "summary": "Annual accounts prepared and closed efficiently for DBD and Revenue Department."
       },
       "tax-planning": {
         "title": "Tax planning",
-        "summary": "Strategic tax planning that keeps your business compliant and efficient."
+        "summary": "Strategic tax structuring and advisory for optimized business operations."
       },
       "limited-partnership": {
         "title": "Limited Partnership",
@@ -1191,6 +1201,45 @@
     "formSection": {
       "heading": "Would you prefer us to contact you back?",
       "subheading": "With pleasure! Just share your details below."
+    }
+  },
+  "aboutUs": {
+    "breadcrumb": "About Us",
+    "hero": {
+      "title": "Grow with confidence in Thailand.",
+      "subtitle": "Virintira combines accounting expertise with modern technology to deliver end-to-end services that are transparent and trustworthy."
+    },
+    "mission": {
+      "heading": "Our Mission",
+      "description": "To provide foreign and local entrepreneurs with seamless, compliant, and highly efficient back-office support, enabling them to focus entirely on scaling their businesses."
+    },
+    "story": {
+      "heading": "Our Story",
+      "paragraphs": [
+        "Founded on the principle of absolute transparency, Virintira started with a simple goal: making Thai corporate compliance easy to understand.",
+        "Today, we serve hundreds of companies—from emerging startups to established multinational corporations—delivering tailored financial strategies and rock-solid accounting."
+      ]
+    },
+    "values": {
+      "heading": "Our Core Values",
+      "items": {
+        "transparency": {
+          "title": "Transparency First",
+          "description": "No hidden fees, no opaque processes. We believe in clear communication at every stage."
+        },
+        "speed": {
+          "title": "Uncompromising Speed",
+          "description": "Time is money. Our digital-first approach ensures rapid turnarounds for all filings and reports."
+        },
+        "reliability": {
+          "title": "Rock-Solid Reliability",
+          "description": "Fully certified by the DBD, we've never left a project unfinished. Your business is safe with us."
+        }
+      }
+    },
+    "cta": {
+      "heading": "Take the next step with confidence together with Virintira.",
+      "description": "Let our team handle your paperwork and back-office tasks, so you can focus fully on your business goals."
     }
   }
 }

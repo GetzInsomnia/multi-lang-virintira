@@ -69,7 +69,8 @@ export function TypewriterText(props: LegacyProps | CompatProps) {
   return (
     <h2
       dir={isRTL ? "rtl" : "ltr"}
-      style={{ fontWeight: 400 }}
+      // Enforce 'keep-all' specifically for Japanese to prevent orphan text natively without destroying Chinese sentences.
+      style={locale === 'ja' ? { fontWeight: 400, wordBreak: 'keep-all' } : { fontWeight: 400 }}
       className={`inline-block max-w-full align-middle text-lg lg:text-2xl text-[#A70909] leading-relaxed ${className}`}
       aria-live="polite"
     >

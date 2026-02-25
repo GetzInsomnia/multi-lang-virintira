@@ -409,12 +409,12 @@
       "emailButton": "Email Virintira"
     },
     "about": {
-      "heading": "Virintira — Niet zomaar een accountantskantoor, maar uw complete zakenpartner",
+      "heading": "Virintira — meer dan een accountantskantoor: uw betrouwbare businesspartner.",
       "paragraphs": [
-        "Met meer dan 10 jaar ervaring ondersteunt Virintira elk onderdeel van uw activiteiten – van bedrijfsoprichting en maandelijkse boekhouding tot vergunningen, belastingplanning en digitale marketing.",
-        "We weten dat u zich wilt concentreren op de groei van uw bedrijf, dus wij zorgen voor de backoffice met duidelijkheid en snelheid.",
-        "U kunt op ons rekenen. Wij zijn volledig geregistreerd bij het Department of Business Development en laten projecten nooit onafgemaakt achter.",
-        "Onze alles-in-één, transparante service betekent dat we u bij elke stap van uw groei bijstaan, omdat elke klant belangrijk voor ons is."
+        "Met een team met meer dan 10 jaar ervaring bieden we volledige ondersteuning: van bedrijfsregistratie, formaliteiten en vergunningen tot maandelijkse boekhouding, belastingaangiften en gestructureerde groeiplanning.",
+        "Zodat u zich met vertrouwen kunt richten op de groei van uw bedrijf, nemen wij het backofficewerk uit handen — zorgvuldig en correct.",
+        "In elke stap communiceren we helder, werken we controleerbaar en handelen we volledig volgens de Thaise wetgeving.",
+        "Met snelle, betrokken en grondige service staan we naast u in elke groeifase — want “uw succes is ons doel”."
       ],
       "link": "Over Virintira",
       "viewLicense": "Bekijk onze bedrijfsregistratie"
@@ -423,28 +423,24 @@
       "heading": "Popular services",
       "items": [
         {
-          "title": "Monthly bookkeeping",
-          "description": "Transaction recording, reconciliations, and IFRS-compliant statements."
+          "title": "Bedrijfsregistratie",
+          "description": "Volledige registratie voor naamloze vennootschappen en partnerschappen met deskundige begeleiding."
         },
         {
-          "title": "Payroll outsourcing",
-          "description": "Payslips, social security, and Withholding Tax filings prepared accurately."
+          "title": "Updates van bedrijfsinformatie",
+          "description": "Nauwkeurige, tijdige updates van kritieke bedrijfsinformatie."
         },
         {
-          "title": "Tax & compliance",
-          "description": "VAT, corporate income tax, and BOI documentation handled end-to-end."
+          "title": "Maandelijkse boekhouding",
+          "description": "Transactieregistratie, afstemmingen en IFRS-conforme overzichten."
         },
         {
-          "title": "Company secretary",
-          "description": "Board resolutions, share registers, and regulatory submissions on schedule."
+          "title": "Afsluiting financiële overzichten",
+          "description": "Jaarrekeningen efficiënt opgesteld en afgesloten voor het DBD en de belastingdienst."
         },
         {
-          "title": "Virtual CFO",
-          "description": "Forecasting, budgeting, and investor-ready reporting in Thai or English."
-        },
-        {
-          "title": "Startup launch",
-          "description": "Entity setup, bank integrations, and digital invoicing that scales with you."
+          "title": "Fiscale planning",
+          "description": "Strategische fiscale structurering en advies voor geoptimaliseerde bedrijfsvoering."
         }
       ]
     },
@@ -481,8 +477,8 @@
       ]
     },
     "cta": {
-      "heading": "Ready for stress-free accounting?",
-      "description": "Book a consultation with Virintira and receive a tailored action plan for your finance operations in under 48 hours."
+      "heading": "Met het Virintira-team in gesprek gaan is heel eenvoudig.",
+      "description": "Vraag een gratis consult aan om de kosten te beoordelen en te bepalen welke service het beste bij jouw bedrijf past."
     }
   },
   "promotion": {
@@ -586,8 +582,8 @@
     },
     "items": {
       "registration": {
-        "title": "BV (Co., Ltd.)",
-        "summary": "Complete registratieservice voor BV's en partnerschappen."
+        "title": "Bedrijfsregistratie",
+        "summary": "Volledige registratie voor naamloze vennootschappen en partnerschappen met deskundige begeleiding."
       },
       "limited-partnership": {
         "title": "Commanditaire venn.",
@@ -614,8 +610,8 @@
         "summary": "Registratie voor btw (VAT)."
       },
       "edit-info": {
-        "title": "Bedrijfsinformatie wijzigen",
-        "summary": "Snelle en nauwkeurige updates van bedrijfsinformatie."
+        "title": "Updates van bedrijfsinformatie",
+        "summary": "Nauwkeurige, tijdige updates van kritieke bedrijfsinformatie."
       },
       "company-name": {
         "title": "Bedrijfsnaam",
@@ -654,16 +650,16 @@
         "summary": "Ontbinding en liquidatie van bedrijven."
       },
       "monthly-bookkeeping": {
-        "title": "Bedrijfsadministratie",
-        "summary": "Volledige boekhouding en maandelijkse belastingaangiften."
+        "title": "Maandelijkse boekhouding",
+        "summary": "Transactieregistratie, afstemmingen en IFRS-conforme overzichten."
       },
       "monthly-tax": {
         "title": "Maandelijkse belasting",
         "summary": "Maandelijkse en halfjaarlijkse belastingaangifte."
       },
       "close-financial": {
-        "title": "Jaarrekening",
-        "summary": "Opstellen en controleren van jaarrekeningen door erkende accountants."
+        "title": "Afsluiting financiële overzichten",
+        "summary": "Jaarrekeningen efficiënt opgesteld en afgesloten voor het DBD en de belastingdienst."
       },
       "personal-accounts": {
         "title": "Privéboekhouding",
@@ -674,8 +670,8 @@
         "summary": "Statutaire audits en CPA-diensten."
       },
       "tax-planning": {
-        "title": "Belastingplanning",
-        "summary": "Strategische belastingplanning voor uw onderneming."
+        "title": "Fiscale planning",
+        "summary": "Strategische fiscale structurering en advies voor geoptimaliseerde bedrijfsvoering."
       },
       "foreign-tax-id": {
         "title": "Buitenlands tax-nr.",
@@ -1073,5 +1069,16 @@
       "subheading": "Met plezier! Vul uw gegevens hieronder in."
     },
     "title": "Contact"
+  },
+  "aboutUs": {
+    "breadcrumb": "Over ons",
+    "hero": {
+      "title": "Groei in Thailand met vertrouwen.",
+      "subtitle": "Virintira combineert boekhoudkundige expertise met moderne technologie om end-to-end diensten te leveren die transparant en betrouwbaar zijn."
+    },
+    "cta": {
+      "heading": "Zet de volgende stap met vertrouwen samen met Virintira.",
+      "description": "Laat ons team het papierwerk en backofficewerk verzorgen, zodat jij je volledig kunt richten op je bedrijfsdoelen."
+    }
   }
 }

@@ -409,12 +409,12 @@
       "emailButton": "Email Virintira"
     },
     "about": {
-      "heading": "Virintira — Non solo uno studio contabile, ma il tuo partner commerciale completo",
+      "heading": "Virintira — non solo uno studio contabile: il tuo partner di fiducia per il business.",
       "paragraphs": [
-        "Con oltre 10 anni di esperienza, Virintira supporta ogni aspetto delle vostre operazioni: dalla costituzione societaria e la contabilità mensile alle licenze, alla pianificazione fiscale e al marketing digitale.",
-        "Sappiamo che volete concentrarvi sulla crescita della vostra azienda, quindi ci occupiamo noi del back office con chiarezza e velocità.",
-        "Potete contare su di noi. Siamo regolarmente registrati presso il Dipartimento per lo Sviluppo Aziendale e non lasciamo mai progetti incompiuti.",
-        "Il nostro servizio completo e trasparente significa che siamo al vostro fianco in ogni fase della crescita, perché ogni cliente è importante per noi."
+        "Con un team con oltre 10 anni di esperienza, offriamo un supporto completo: dalla costituzione dell’azienda, pratiche e permessi, alla contabilità mensile, adempimenti fiscali e pianificazione per una crescita strutturata.",
+        "Per permetterti di concentrarti sulla crescita della tua attività con tranquillità, ci occupiamo noi del back office — con precisione e professionalità.",
+        "In ogni fase comunichiamo in modo chiaro, lavoriamo in modo verificabile e operiamo nel pieno rispetto della normativa thailandese.",
+        "Con un servizio rapido, attento e accurato, ti accompagniamo in ogni fase della crescita — perché “il tuo successo è il nostro obiettivo”."
       ],
       "link": "Informazioni su Virintira",
       "viewLicense": "Visualizza la nostra registrazione aziendale"
@@ -423,28 +423,24 @@
       "heading": "Popular services",
       "items": [
         {
-          "title": "Monthly bookkeeping",
-          "description": "Transaction recording, reconciliations, and IFRS-compliant statements."
+          "title": "Registrazione aziendale",
+          "description": "Registrazione completa per società a responsabilità limitata e partnership con la guida di esperti."
         },
         {
-          "title": "Payroll outsourcing",
-          "description": "Payslips, social security, and Withholding Tax filings prepared accurately."
+          "title": "Aggiornamenti delle informazioni aziendali",
+          "description": "Aggiornamenti accurati e tempestivi alle informazioni critiche dell'azienda."
         },
         {
-          "title": "Tax & compliance",
-          "description": "VAT, corporate income tax, and BOI documentation handled end-to-end."
+          "title": "Contabilità mensile",
+          "description": "Registrazione delle transazioni, riconciliazioni e dichiarazioni conformes agli IFRS."
         },
         {
-          "title": "Company secretary",
-          "description": "Board resolutions, share registers, and regulatory submissions on schedule."
+          "title": "Chiusura del bilancio",
+          "description": "Conti annuali preparati e chiusi in modo efficiente per il DBD e il dipartimento delle entrate."
         },
         {
-          "title": "Virtual CFO",
-          "description": "Forecasting, budgeting, and investor-ready reporting in Thai or English."
-        },
-        {
-          "title": "Startup launch",
-          "description": "Entity setup, bank integrations, and digital invoicing that scales with you."
+          "title": "Pianificazione fiscale",
+          "description": "Strutturazione fiscale strategica e consulenza per operazioni aziendali ottimizzate."
         }
       ]
     },
@@ -481,8 +477,8 @@
       ]
     },
     "cta": {
-      "heading": "Ready for stress-free accounting?",
-      "description": "Book a consultation with Virintira and receive a tailored action plan for your finance operations in under 48 hours."
+      "heading": "Iniziare a parlare con il team Virintira è semplice.",
+      "description": "Richiedi una consulenza gratuita per stimare i costi e trovare il servizio più adatto alla tua attività."
     }
   },
   "promotion": {
@@ -586,8 +582,8 @@
     },
     "items": {
       "registration": {
-        "title": "Società (Co., Ltd.)",
-        "summary": "Registrazione completa per società a responsabilità limitata e partnership con guida esperta."
+        "title": "Registrazione aziendale",
+        "summary": "Registrazione completa per società a responsabilità limitata e partnership con la guida di esperti."
       },
       "limited-partnership": {
         "title": "Società in accomandita",
@@ -614,8 +610,8 @@
         "summary": "Servizi di registrazione IVA."
       },
       "edit-info": {
-        "title": "Aggiornamenti aziendali",
-        "summary": "Aggiornamenti precisi e tempestivi delle informazioni aziendali critiche."
+        "title": "Aggiornamenti delle informazioni aziendali",
+        "summary": "Aggiornamenti accurati e tempestivi alle informazioni critiche dell'azienda."
       },
       "company-name": {
         "title": "Ragione sociale",
@@ -654,16 +650,16 @@
         "summary": "Servizi di scioglimento e liquidazione aziendale."
       },
       "monthly-bookkeeping": {
-        "title": "Contabilità aziendale",
-        "summary": "Contabilità accurata e dichiarazioni fiscali mensili gestite per te."
+        "title": "Contabilità mensile",
+        "summary": "Registrazione delle transazioni, riconciliazioni e dichiarazioni conformes agli IFRS."
       },
       "monthly-tax": {
         "title": "Imposte mensili",
         "summary": "Dichiarazioni fiscali mensili e annuali."
       },
       "close-financial": {
-        "title": "Bilancio annuale",
-        "summary": "I revisori certificati preparano e revisionano i tuoi bilanci annuali."
+        "title": "Chiusura del bilancio",
+        "summary": "Conti annuali preparati e chiusi in modo efficiente per il DBD e il dipartimento delle entrate."
       },
       "personal-accounts": {
         "title": "Contabilità personale",
@@ -675,7 +671,7 @@
       },
       "tax-planning": {
         "title": "Pianificazione fiscale",
-        "summary": "Pianificazione fiscale strategica per conformità ed efficienza."
+        "summary": "Strutturazione fiscale strategica e consulenza per operazioni aziendali ottimizzate."
       },
       "foreign-tax-id": {
         "title": "Codice fiscale estero",
@@ -1073,5 +1069,16 @@
       "subheading": "Con piacere! Inserisci i tuoi dettagli qui sotto."
     },
     "title": "Contatti"
+  },
+  "aboutUs": {
+    "breadcrumb": "Chi siamo",
+    "hero": {
+      "title": "Cresci in Thailandia con fiducia.",
+      "subtitle": "Virintira unisce competenze contabili e tecnologia moderna per offrire servizi completi, trasparenti e affidabili."
+    },
+    "cta": {
+      "heading": "Fai il prossimo passo con fiducia insieme a Virintira.",
+      "description": "Lascia a noi pratiche e back office, così potrai concentrarti completamente sui tuoi obiettivi di business."
+    }
   }
 }

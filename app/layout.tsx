@@ -22,7 +22,7 @@ export default async function RootLayout({
 
   return (
     <html lang={locale} dir="ltr" className={htmlClassName} suppressHydrationWarning>
-      <body>{children}</body>
+      <body className="overflow-x-clip">{children}</body>
     </html>
   );
 }

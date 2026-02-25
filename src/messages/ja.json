@@ -430,12 +430,12 @@
       "emailButton": "Email Virintira"
     },
     "about": {
-      "heading": "Virintira — 単なる会計事務所ではなく、あなたの総合的なビジネスパートナーです",
+      "heading": "Virintira — 会計事務所にとどまらない、信頼できるビジネスパートナー。",
       "paragraphs": [
-        "10年以上の経験を持つVirintiraは、会社設立や毎月の記帳からライセンス取得、税務計画、デジタルマーケティングまで、お客様の事業のあらゆる部分をサポートします。",
-        "お客様がビジネスの成長に集中したいと考えていることを私たちは理解しています。そのため、バックオフィス業務は私たちが明確かつ迅速に処理します。",
-        "私たちにお任せください。私たちは事業開発局に完全に登録されており、プロジェクトを途中で放棄することは決してありません。",
-        "私たちのオールインワンで透明性の高いサービスは、お客様の成長のあらゆる段階で寄り添うことを意味します。すべてのお客様が私たちにとって重要だからです。"
+        "10年以上の経験を持つチームが、会社設立・各種登録や許認可申請から、月次会計、税務申告、そして成長に向けた体系的な計画まで一貫してサポートします。",
+        "お客様が安心して事業成長に集中できるよう、バックオフィス業務は正確かつ丁寧に私たちが支えます。",
+        "すべての工程で分かりやすくご案内し、内容は確認可能。タイ法令に準拠して適切に対応します。",
+        "迅速で、きめ細かく、誠実なサービスで、成長のあらゆる段階に寄り添います。—「お客様の成功が、私たちの目標です。」"
       ],
       "link": "Virintiraについて",
       "viewLicense": "会社登記を見る"
@@ -444,28 +444,24 @@
       "heading": "Popular services",
       "items": [
         {
-          "title": "Monthly bookkeeping",
-          "description": "Transaction recording, reconciliations, and IFRS-compliant statements."
+          "title": "会社設立",
+          "description": "専門家の指導のもと、株式会社および合資会社の登録を完了します。"
         },
         {
-          "title": "Payroll outsourcing",
-          "description": "Payslips, social security, and Withholding Tax filings prepared accurately."
+          "title": "法人情報の更新",
+          "description": "会社の重要情報を正確かつ迅速に更新します。"
         },
         {
-          "title": "Tax & compliance",
-          "description": "VAT, corporate income tax, and BOI documentation handled end-to-end."
+          "title": "月次記帳",
+          "description": "取引の記録、照合、およびIFRS準拠の財務諸表の作成。"
         },
         {
-          "title": "Company secretary",
-          "description": "Board resolutions, share registers, and regulatory submissions on schedule."
+          "title": "決算報告書の作成",
+          "description": "事業開発局および歳入局へ効率的に年次決算書を作成し提出します。"
         },
         {
-          "title": "Virtual CFO",
-          "description": "Forecasting, budgeting, and investor-ready reporting in Thai or English."
-        },
-        {
-          "title": "Startup launch",
-          "description": "Entity setup, bank integrations, and digital invoicing that scales with you."
+          "title": "税務プランニング",
+          "description": "最適化された事業運営のための戦略的な税務構造とアドバイザリー。"
         }
       ]
     },
@@ -502,8 +498,8 @@
       ]
     },
     "cta": {
-      "heading": "Ready for stress-free accounting?",
-      "description": "Book a consultation with Virintira and receive a tailored action plan for your finance operations in under 48 hours."
+      "heading": "Virintiraチームとのご相談は、かんたんに始められます。",
+      "description": "無料相談で費用の目安を確認し、貴社に最適なサービスを一緒に見つけましょう。"
     }
   },
   "promotion": {
@@ -607,8 +603,8 @@
     },
     "items": {
       "registration": {
-        "title": "株式会社 (Co., Ltd.)",
-        "summary": "Complete registration for limited companies and partnerships with expert guidance."
+        "title": "会社設立",
+        "summary": "専門家の指導のもと、株式会社および合資会社の登録を完了します。"
       },
       "limited-partnership": {
         "title": "合資会社 (L.P.)",
@@ -635,8 +631,8 @@
         "summary": "付加価値税 (VAT) の登録。"
       },
       "edit-info": {
-        "title": "Corporate information updates",
-        "summary": "Accurate, timely updates to critical company information."
+        "title": "法人情報の更新",
+        "summary": "会社の重要情報を正確かつ迅速に更新します。"
       },
       "company-name": {
         "title": "商号変更",
@@ -675,16 +671,16 @@
         "summary": "会社の解散および清算手続き。"
       },
       "monthly-bookkeeping": {
-        "title": "Monthly bookkeeping",
-        "summary": "Accurate bookkeeping and monthly tax filing with every document handled for you."
+        "title": "月次記帳",
+        "summary": "取引の記録、照合、およびIFRS準拠の財務諸表の作成。"
       },
       "monthly-tax": {
         "title": "月次税務",
         "summary": "月次税務申告の作成と提出。"
       },
       "close-financial": {
-        "title": "Financial statement closing",
-        "summary": "Certified auditors prepare and review your annual financial statements."
+        "title": "決算報告書の作成",
+        "summary": "事業開発局および歳入局へ効率的に年次決算書を作成し提出します。"
       },
       "personal-accounts": {
         "title": "個人会計",
@@ -699,8 +695,8 @@
         "summary": "外国人のための納税者番号取得。"
       },
       "tax-planning": {
-        "title": "Tax planning",
-        "summary": "Strategic tax planning that keeps your business compliant and efficient."
+        "title": "税務プランニング",
+        "summary": "最適化された事業運営のための戦略的な税務構造とアドバイザリー。"
       },
       "tourism-licence": {
         "title": "旅行業ライセンス",
@@ -1094,5 +1090,16 @@
       "subheading": "喜んで！以下のフォームにご記入ください。"
     },
     "title": "お問い合わせ"
+  },
+  "aboutUs": {
+    "breadcrumb": "私たちについて",
+    "hero": {
+      "title": "<nw>タイでの</nw><nw>事業成長を、</nw><br></br>安心して。",
+      "subtitle": "Virintiraは<nw>会計の専門性と</nw><nw>最新テクノロジーを</nw>組み合わせ、<br></br><nw>透明性が高く</nw><nw>信頼できる</nw><nw>一貫したサービスを</nw>提供します。"
+    },
+    "cta": {
+      "heading": "Virintiraとともに、<br></br>次の一歩を<nw>自信をもって。</nw>",
+      "description": "<nw>書類対応や</nw><nw>バックオフィス業務は</nw><br></br><nw>私たちが担い、</nw>貴社は<nw>事業目標に</nw><nw>集中できます。</nw>"
+    }
   }
 }

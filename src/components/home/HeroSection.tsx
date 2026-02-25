@@ -87,7 +87,8 @@ export function HeroSection({
               'text-[clamp(1.9rem,1.5rem+2.2vw,3.4rem)]',
               'supports-[text-wrap:balance]:text-balance',
               'max-[414px]:text-balance',
-              needsFullWidth ? 'sm:text-balance' : '',
+              'sm:text-balance', // Unconditionally balance text on Tablet instead of one long unreadable ribbon
+
             ].join(' ')}
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -97,7 +98,7 @@ export function HeroSection({
               const base = 'leading-tight';
               const desktopNoWrap = needsFullWidth
                 ? 'sm:block'
-                : 'sm:inline-block sm:whitespace-nowrap';
+                : 'lg:inline-block lg:whitespace-nowrap'; // Only lock to a single line on very wide screens (lg), freeing Tablet (sm) to text-balance
               const smallWrap = 'max-[480px]:whitespace-normal max-[480px]:text-center';
               const longLatinExtras = isLongLatin
                 ? [
@@ -143,7 +144,7 @@ export function HeroSection({
           {content.subtitle ? (
             <motion.p
               layout
-              className="text-[clamp(1.05rem,0.98rem+0.4vw,1.35rem)] font-semibold text-[#8a1b1b]"
+              className="text-[clamp(1.05rem,0.98rem+0.4vw,1.35rem)] font-semibold text-[#8a1b1b] break-keep"
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4, delay: 0.45, ease: 'easeOut' }}
@@ -155,12 +156,21 @@ export function HeroSection({
           {content.description ? (
             <motion.p
               layout
-              className="text-[clamp(0.95rem,0.9rem+0.3vw,1.15rem)] leading-relaxed text-[#5d3f3f]"
+              className="mx-auto max-w-[280px] sm:max-w-none text-[clamp(0.95rem,0.9rem+0.3vw,1.15rem)] leading-relaxed text-[#5d3f3f] break-keep"
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4, delay: 0.5, ease: 'easeOut' }}
             >
-              {content.description}
+              {content.description.split('、').map((part, i, arr) => (
+                <span key={i}>
+                  {part}
+                  {i < arr.length - 1 && (
+                    <>
+                      、<br className="sm:hidden" />
+                    </>
+                  )}
+                </span>
+              ))}
             </motion.p>
           ) : null}
 
@@ -217,15 +227,12 @@ function HeroCTAButtons({
   const isThai = locale === 'th';
   const phoneHref = isThai ? 'tel:0928825556' : 'tel:+66928825556';
   const phoneText = isThai ? '092 882 5556' : '+669 2882 5556';
-
   const needsWideCtas = locale === 'ta';
-  // Use grid layout for better control over button widths
-  // Standardized width: w-fit with lax max-w to allow natural expansion
-  // This allows Tamil/German to be wide while keeping English compact.
-  // For Tamil (needsWideCtas), we use single column on mobile/tablet and 2 columns on large screens
-  const baseGroupClass = needsWideCtas
-    ? 'grid grid-cols-1 lg:grid-cols-2 w-fit mx-auto max-w-[95vw]'
-    : 'grid grid-cols-1 sm:grid-cols-2 w-fit mx-auto max-w-[95vw]';
+
+  // Use standard grid layout. Let CSS Grid natively handle centering and responsive columns.
+  // Gap-3 is baked in here so we don't have to force Flex gaps down in the CTAReveal container.
+  // Using w-fit ensures the grid boundary strictly hugs the buttons and doesn't stretch indiscriminately.
+  const baseGroupClass = 'grid grid-cols-1 sm:grid-cols-2 w-fit mx-auto max-w-[95vw] gap-3 place-items-center';
 
   // Hero content uses max-w-[min(94vw,48rem)]. 
   const heroMaxWidth = needsWideCtas ? 'max-w-[min(94vw,64rem)]' : 'max-w-[min(94vw,48rem)]';
@@ -233,8 +240,8 @@ function HeroCTAButtons({
   // For CTA group, we ALWAYS use the unconstrained width to ensure no truncation
   const groupClassName = baseGroupClass;
 
-  // Standard button layout class for grid items
-  const btnLayoutClass = 'w-full sm:flex-1 sm:w-[calc(50%-0.6rem)] sm:flex-none min-w-[min(220px,calc(100vw-4rem))]';
+  // w-full makes the button expand to fill the intrinsic grid column width uniformly.
+  const btnLayoutClass = 'w-full min-w-[min(220px,calc(100vw-4rem))]';
 
   const commonBtnClass = `inline-flex ${btnLayoutClass} items-center justify-center rounded-full px-8 py-3 text-base font-semibold transition-transform duration-200 ease-out hover:-translate-y-1 motion-reduce:transform-none will-change-transform focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-white gap-3`;
 

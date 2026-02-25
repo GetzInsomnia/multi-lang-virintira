@@ -458,12 +458,12 @@
       "emailButton": "Email Virintira"
     },
     "about": {
-      "heading": "Virintira — 不仅是一家会计师事务所，更是您的全方位商业合作伙伴",
+      "heading": "Virintira —— 不止是会计事务所，更是您值得信赖的商业伙伴。",
       "paragraphs": [
-        "凭借超过 10 年的经验，Virintira 支持您运营的每一个环节——从公司注册和每月簿记，到许可证申请、税务规划及数字营销。",
-        "我们知道您希望专注于业务增长，因此我们将以清晰和高效的方式为您处理后台事务。",
-        "您可以信赖我们。我们已在商业发展部完全注册，绝不会半途而废。",
-        "我们为您提供一站式、透明的服务，这意味着我们将陪伴您成长的每一个阶段，因为每一位客户对我们来说都至关重要。"
+        "我们的团队拥有 10 年以上经验，提供一站式企业支持：从公司注册、各类备案与许可申请，到月度记账、税务申报，以及系统化的增长规划。",
+        "为了让您能够安心专注于业务发展，我们将后端事务处理得规范、准确、到位。",
+        "每一个环节我们都清晰沟通、过程可核查，并严格遵守泰国法律法规开展业务。",
+        "以快速、用心、严谨的服务，我们陪伴您走过每一个成长阶段——“您的成功，就是我们的目标。”"
       ],
       "link": "关于 Virintira",
       "viewLicense": "查看执照"
@@ -472,28 +472,24 @@
       "heading": "Popular services",
       "items": [
         {
-          "title": "Monthly bookkeeping",
-          "description": "Transaction recording, reconciliations, and IFRS-compliant statements."
+          "title": "公司注册",
+          "description": "在专家指导下完成有限公司和合伙企业的注册。"
         },
         {
-          "title": "Payroll outsourcing",
-          "description": "Payslips, social security, and Withholding Tax filings prepared accurately."
+          "title": "公司信息变更",
+          "description": "准确、及时地更新关键公司信息。"
         },
         {
-          "title": "Tax & compliance",
-          "description": "VAT, corporate income tax, and BOI documentation handled end-to-end."
+          "title": "月度记账",
+          "description": "交易记录、对账和符合 IFRS 的财务报表。"
         },
         {
-          "title": "Company secretary",
-          "description": "Board resolutions, share registers, and regulatory submissions on schedule."
+          "title": "财务报表结算",
+          "description": "高效编制年度账目，提交给商业发展局和税务局。"
         },
         {
-          "title": "Virtual CFO",
-          "description": "Forecasting, budgeting, and investor-ready reporting in Thai or English."
-        },
-        {
-          "title": "Startup launch",
-          "description": "Entity setup, bank integrations, and digital invoicing that scales with you."
+          "title": "税务筹划",
+          "description": "战略性税务结构和咨询，以优化业务运营。"
         }
       ]
     },
@@ -530,8 +526,8 @@
       ]
     },
     "cta": {
-      "heading": "Ready for stress-free accounting?",
-      "description": "Book a consultation with Virintira and receive a tailored action plan for your finance operations in under 48 hours."
+      "heading": "与 Virintira 团队开始沟通很简单。",
+      "description": "预约免费咨询，帮助您评估费用，并找到最适合您企业的服务。"
     }
   },
   "promotion": {
@@ -635,8 +631,8 @@
     },
     "items": {
       "registration": {
-        "title": "有限公司",
-        "summary": "Complete registration for limited companies and partnerships with expert guidance."
+        "title": "公司注册",
+        "summary": "在专家指导下完成有限公司和合伙企业的注册。"
       },
       "limited-partnership": {
         "title": "有限合伙",
@@ -663,8 +659,8 @@
         "summary": "增值税 (VAT) 登记。"
       },
       "edit-info": {
-        "title": "Corporate information updates",
-        "summary": "Accurate, timely updates to critical company information."
+        "title": "公司信息变更",
+        "summary": "准确、及时地更新关键公司信息。"
       },
       "company-name": {
         "title": "公司名称",
@@ -703,16 +699,16 @@
         "summary": "公司解散及清算服务。"
       },
       "monthly-bookkeeping": {
-        "title": "Monthly bookkeeping",
-        "summary": "Accurate bookkeeping and monthly tax filing with every document handled for you."
+        "title": "月度记账",
+        "summary": "交易记录、对账和符合 IFRS 的财务报表。"
       },
       "monthly-tax": {
         "title": "每月报税",
         "summary": "月度和年度税务申报及处理。"
       },
       "close-financial": {
-        "title": "Financial statement closing",
-        "summary": "Certified auditors prepare and review your annual financial statements."
+        "title": "财务报表结算",
+        "summary": "高效编制年度账目，提交给商业发展局和税务局。"
       },
       "personal-accounts": {
         "title": "个人账务",
@@ -727,8 +723,8 @@
         "summary": "外国人税号申请服务。"
       },
       "tax-planning": {
-        "title": "Tax planning",
-        "summary": "Strategic tax planning that keeps your business compliant and efficient."
+        "title": "税务筹划",
+        "summary": "战略性税务结构和咨询，以优化业务运营。"
       },
       "tourism-licence": {
         "title": "旅游执照",
@@ -1122,5 +1118,16 @@
       "subheading": "没问题！请在下方填写您的详细信息。"
     },
     "title": "联系我们"
+  },
+  "aboutUs": {
+    "breadcrumb": "关于我们",
+    "hero": {
+      "title": "<nw>在泰国</nw><nw>安心发展，</nw><br></br><nw>稳步成长。</nw>",
+      "subtitle": "Virintira <nw>融合会计专业</nw>与<nw>现代技术，</nw><br></br><nw>提供</nw><nw>一站式服务，</nw><br></br><nw>透明可靠，</nw><nw>值得信赖。</nw>"
+    },
+    "cta": {
+      "heading": "与 Virintira 一起，<br></br><nw>自信迈向下一步。</nw>",
+      "description": "让我们为您处理资料与<nw>后勤事务，</nw><br></br>您可以全力专注于<nw>企业目标。</nw>"
+    }
   }
 }
