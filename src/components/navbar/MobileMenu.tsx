@@ -156,7 +156,7 @@ export default function MobileMenu({
         ref={backdropRef}
         aria-hidden
         className={[
-          'fixed inset-0 z-40 bg-black/40 transition-opacity duration-300 ease-out',
+          'fixed inset-0 z-[70] bg-black/40 transition-opacity duration-300 ease-out',
           show ? 'opacity-100' : 'opacity-0 pointer-events-none',
         ].join(' ')}
         onMouseDown={(e) => e.stopPropagation()}
@@ -167,7 +167,7 @@ export default function MobileMenu({
       <div
         ref={panelRef}
         className={[
-          'fixed top-0 right-0 z-50 h-full w-4/5 max-w-xs bg-white shadow-lg',
+          'fixed top-0 right-0 z-[80] h-full w-4/5 max-w-xs bg-white shadow-lg',
           'transform transition-transform',
           'opacity-100',
           MOBILE_MENU_TRANSITION_DURATION_CLASS,

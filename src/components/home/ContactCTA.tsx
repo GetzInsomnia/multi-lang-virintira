@@ -2,7 +2,7 @@
 
 import { COMPANY } from '@/data/company';
 // Removed Link import as we use window events now
-import { useLocale } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 import { motion, LayoutGroup } from 'framer-motion';
 import { useUI } from '@/context/UIContext';
 
@@ -24,6 +24,9 @@ export function ContactCTA({
   triggerLabel: string
 }) {
   const { openContactDrawer } = useUI();
+  const locale = useLocale();
+  const tHome = useTranslations('home');
+  const isCJK = ['ja', 'ko', 'zh-Hans', 'zh-Hant'].includes(locale);
 
   return (
     <section
@@ -53,8 +56,16 @@ export function ContactCTA({
           >
             <motion.div layout className="space-y-6">
               {heading ? (
-                <motion.h2 layout="position" className="text-[clamp(2.5rem,2rem+2.5vw,4rem)] font-bold text-white leading-tight drop-shadow-md">
-                  {heading}
+                <motion.h2 layout="position" className={[
+                  "font-bold text-white leading-tight drop-shadow-md",
+                  isCJK
+                    ? 'w-fit mx-auto text-center text-[clamp(2rem,1.5rem+3vw,4rem)]'
+                    : 'text-[clamp(2.5rem,2rem+2.5vw,4rem)]'
+                ].join(' ').trim()}>
+                  {isCJK ? tHome.rich('cta.heading', {
+                    nw: (chunks) => <span className="whitespace-nowrap inline-block">{chunks}</span>,
+                    br: () => <br className="sm:hidden mt-[3px]" />
+                  }) : heading}
                 </motion.h2>
               ) : null}
               {description ? (

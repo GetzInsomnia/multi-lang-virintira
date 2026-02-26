@@ -1,7 +1,7 @@
 {
   "metadata": {
     "home": {
-      "title": "Virintira | พันธมิตรด้านบัญชีหลายภาษา",
+      "title": "Virintira | สำนักงานบัญชี และบริหารธุรกิจครบวงจร",
       "description": "สำนักงานบัญชีไทยที่เชื่อถือได้ พร้อมให้บริการทำบัญชี เงินเดือน และภาษี กว่า 16 ภาษา",
       "keywords": [
         "Virintira",
@@ -87,217 +87,31 @@
       "trigger": "ปรึกษาฟรี"
     },
     "header": {
-      "nav": [
-        {
-          "label": "โปรโมชั่น",
-          "href": "/promotion",
-          "highlight": true,
-          "icon": "promotion"
+      "nav": {
+        "promotion": {
+          "label": "โปรโมชั่น"
         },
-        {
-          "label": "บริการ",
-          "href": "/services"
+        "services": {
+          "label": "บริการ"
         },
-        {
-          "label": "บทความ",
-          "href": "/blog/bookkeeping-matters"
+        "blog": {
+          "label": "บทความ"
         },
-        {
-          "label": "ดาวน์โหลด",
-          "href": "/resources"
+        "resources": {
+          "label": "ดาวน์โหลด"
         },
-        {
-          "label": "ติดต่อเรา",
-          "href": "/contact"
+        "contact": {
+          "label": "ติดต่อเรา"
         }
-      ],
+      },
       "megaMenu": {
-        "triggerLabel": "บริการ",
-        "columns": [
-          {
-            "title": "จดทะเบียน",
-            "items": [
-              {
-                "label": "บริษัทจำกัด",
-                "href": "/services/registrations/registration"
-              },
-              {
-                "label": "ห้างหุ้นส่วนจำกัด",
-                "href": "/services/registrations/registration"
-              },
-              {
-                "label": "มูลนิธิ",
-                "href": "/services/registrations/foundation"
-              },
-              {
-                "label": "สมาคม",
-                "href": "/services/registrations/association"
-              },
-              {
-                "label": "ทะเบียนพาณิชย์ร้านค้า",
-                "href": "/services/registrations/commercial-shop"
-              },
-              {
-                "label": "ขึ้นทะเบียนนายจ้าง",
-                "href": "/services/registrations/employer-sso"
-              },
-              {
-                "label": "ภาษีมูลค่าเพิ่ม",
-                "href": "/services/registrations/vat-registration"
-              }
-            ]
-          },
-          {
-            "title": "แก้ไขข้อมูลนิติบุคคล",
-            "items": [
-              {
-                "label": "ชื่อนิติบุคคล",
-                "href": "/services/corporate-changes/company-name"
-              },
-              {
-                "label": "ตรายาง",
-                "href": "/services/corporate-changes/company-seal"
-              },
-              {
-                "label": "ข้อมูลกรรมการ",
-                "href": "/services/corporate-changes/directors"
-              },
-              {
-                "label": "อำนาจลงนาม",
-                "href": "/services/corporate-changes/signing-authority"
-              },
-              {
-                "label": "ผู้ถือหุ้น / สัดส่วนหุ้น",
-                "href": "/services/corporate-changes/shareholders"
-              },
-              {
-                "label": "เพิ่ม/ลดทุน",
-                "href": "/services/corporate-changes/capital"
-              },
-              {
-                "label": "ที่ตั้ง / สาขา",
-                "href": "/services/corporate-changes/address"
-              },
-              {
-                "label": "วัตถุประสงค์",
-                "href": "/services/corporate-changes/objectives"
-              },
-              {
-                "label": "เลิกกิจการ",
-                "href": "/services/corporate-changes/dissolution"
-              }
-            ]
-          },
-          {
-            "title": "บัญชีและตรวจสอบ",
-            "items": [
-              {
-                "label": "บัญชีนิติบุคคล",
-                "href": "/services/accounting-audit/monthly-bookkeeping"
-              },
-              {
-                "label": "ภาษีรายเดือน",
-                "href": "/services/accounting-audit/monthly-tax"
-              },
-              {
-                "label": "งบประจำปี",
-                "href": "/services/accounting-audit/close-financial"
-              },
-              {
-                "label": "บัญชีบุคคลธรรมดา",
-                "href": "/services/accounting-audit/personal-accounts"
-              },
-              {
-                "label": "ตรวจสอบบัญชี",
-                "href": "/services/accounting-audit/audit"
-              },
-              {
-                "label": "วางแผนภาษี",
-                "href": "/services/accounting-audit/tax-planning"
-              },
-              {
-                "label": "ขอเลขผู้เสียภาษีชาวต่างชาติ",
-                "href": "/services/accounting-audit/foreign-tax-id"
-              }
-            ]
-          },
-          {
-            "title": "ขอใบอนุญาต",
-            "items": [
-              {
-                "label": "ประกอบกิจการท่องเที่ยว",
-                "href": "/services/licensing/tourism-licence"
-              },
-              {
-                "label": "อ.ย.",
-                "href": "/services/licensing/thai-fda"
-              },
-              {
-                "label": "วีซ่า / ใบอนุญาตทำงาน",
-                "href": "/services/licensing/visa-work-permit"
-              },
-              {
-                "label": "บัตรส่งเสริมการลงทุน (BOI)",
-                "href": "/services/licensing/boi-promotion"
-              },
-              {
-                "label": "ใบอนุญาตประกอบธุรกิจของชาวต่างชาติ (FBL/FBC)",
-                "href": "/services/licensing/foreign-business"
-              }
-            ]
-          },
-          {
-            "title": "การตลาดออนไลน์",
-            "items": [
-              {
-                "label": "ทำเว็บไซต์",
-                "href": "/services/digital-marketing/website-build"
-              },
-              {
-                "label": "FaceBook Page",
-                "href": "/services/digital-marketing/facebook-page"
-              },
-              {
-                "label": "Line OA",
-                "href": "/services/digital-marketing/line-oa"
-              },
-              {
-                "label": "TikTok",
-                "href": "/services/digital-marketing/tiktok"
-              },
-              {
-                "label": "YouTube",
-                "href": "/services/digital-marketing/youtube"
-              },
-              {
-                "label": "Video Production",
-                "href": "/services/digital-marketing/video-production"
-              },
-              {
-                "label": "ยิงแอด",
-                "href": "/services/digital-marketing/paid-ads"
-              },
-              {
-                "label": "ระบบ Ai",
-                "href": "/services/digital-marketing/ai-solutions"
-              },
-              {
-                "label": "Odoo ERP",
-                "href": "/services/digital-marketing/odoo-erp"
-              },
-              {
-                "label": "เขียนโปรแกรมต่างๆ",
-                "href": "/services/digital-marketing/custom-software"
-              }
-            ]
-          }
-        ]
+        "triggerLabel": "บริการ"
       },
       "ctaPrimary": "ขอคำปรึกษาฟรี",
       "ctaSecondary": "LINE OA",
       "search": {
-        "placeholder": "ค้นหาแหล่งความรู้บัญชี",
-        "mobilePlaceholder": "ค้นหาแหล่งความรู้บัญชี",
+        "placeholder": "ค้นหาบริการ หรือบทความ",
+        "mobilePlaceholder": "ค้นหาบริการ หรือบทความ",
         "toggleLabel": "เปิดหรือปิดการค้นหา",
         "submitLabel": "ค้นหา"
       },
@@ -352,44 +166,35 @@
         "applyLicense": "ขอใบอนุญาต",
         "marketing": "การตลาดออนไลน์"
       },
-      "quickLinks": [
-        {
-          "label": "โปรโมชั่น",
-          "href": "/promotion"
+      "quickLinks": {
+        "services": {
+          "label": "โปรโมชั่น"
         },
-        {
-          "label": "บทความ",
-          "href": "/blog/bookkeeping-matters"
+        "promotion": {
+          "label": "บทความ"
         },
-        {
-          "label": "ดาวน์โหลด",
-          "href": "/resources"
+        "about": {
+          "label": "ดาวน์โหลด"
         },
-        {
-          "label": "ติดต่อเรา",
-          "href": "/contact"
+        "careers": {
+          "label": "ติดต่อเรา"
         },
-        {
-          "label": "จดทะเบียน",
-          "href": "/services/registrations"
+        "contact": {
+          "label": "จดทะเบียน"
         },
-        {
-          "label": "แก้ไขข้อมูลนิติบุคคล",
-          "href": "/services/corporate-changes"
+        "item5": {
+          "label": "แก้ไขข้อมูลนิติบุคคล"
         },
-        {
-          "label": "บัญชีและตรวจสอบ",
-          "href": "/services/accounting-audit"
+        "item6": {
+          "label": "บัญชีและตรวจสอบ"
         },
-        {
-          "label": "ขอใบอนุญาต",
-          "href": "/services/licensing"
+        "item7": {
+          "label": "ขอใบอนุญาต"
         },
-        {
-          "label": "การตลาดออนไลน์",
-          "href": "/services/digital-marketing"
+        "item8": {
+          "label": "การตลาดออนไลน์"
         }
-      ],
+      },
       "legal": "Copyright © {year} Virintira Co., Ltd. All rights reserved. | {poweredBy}"
     }
   },
@@ -449,7 +254,10 @@
           "title": "วางแผนภาษี",
           "description": "วางแผนภาษีให้ธุรกิจอย่างคุ้มค่า ลดความเสี่ยงและเพิ่มประสิทธิภาพ"
         }
-      ]
+      ],
+      "hero": {
+        "description": "Explore our comprehensive range of services designed to help your business grow."
+      }
     },
     "highlights": {
       "heading": "ทำไมต้องเลือก Virintira",
@@ -524,26 +332,23 @@
     },
     "documents": {
       "heading": "Downloadable resources",
-      "items": [
-        {
+      "items": {
+        "monthly-close": {
           "title": "Monthly close checklist",
           "description": "A step-by-step framework to close your books accurately every month.",
-          "actionLabel": "Download PDF",
-          "actionHref": "https://www.virintira.com/resources/monthly-close.pdf"
+          "actionLabel": "Download PDF"
         },
-        {
+        "payroll-calendar": {
           "title": "Payroll compliance calendar",
           "description": "Important Thai payroll and social security deadlines in one sheet.",
-          "actionLabel": "View calendar",
-          "actionHref": "https://www.virintira.com/resources/payroll-calendar.pdf"
+          "actionLabel": "View calendar"
         },
-        {
+        "cashflow-template": {
           "title": "Cash flow tracker",
           "description": "Google Sheets template for monitoring inflows, outflows, and runway.",
-          "actionLabel": "Open template",
-          "actionHref": "https://www.virintira.com/resources/cashflow-template"
+          "actionLabel": "Open template"
         }
-      ]
+      }
     },
     "contact": {
       "heading": "Need something custom?",
@@ -625,7 +430,7 @@
         },
         "process": {
           "title": "ขั้นตอนง่ายๆ ในการจดทะเบียน",
-          "items": [
+          "steps": [
             {
               "title": "จองชื่อ",
               "description": "ช่วยตรวจสอบและจองชื่อบริษัทที่ท่านต้องการ"
@@ -656,159 +461,303 @@
               "answer": "จำเป็น ต้องมีคนไทยถือหุ้นเกิน 51% ยกเว้นได้รับ BOI"
             }
           ]
-        }
+        },
+        "description": ""
       },
       "limited-partnership": {
         "title": "ห้างหุ้นส่วนจำกัด",
-        "summary": "บริการจดทะเบียนห้างหุ้นส่วนจำกัด ครบวงจร"
+        "summary": "บริการจดทะเบียนห้างหุ้นส่วนจำกัด ครบวงจร",
+        "description": "",
+        "features": []
       },
       "foundation": {
         "title": "มูลนิธิ",
-        "summary": "บริการจดทะเบียนจัดตั้งมูลนิธิ"
+        "summary": "บริการจดทะเบียนจัดตั้งมูลนิธิ",
+        "description": "",
+        "features": []
       },
       "association": {
         "title": "สมาคม",
-        "summary": "บริการจดทะเบียนจัดตั้งสมาคม"
+        "summary": "บริการจดทะเบียนจัดตั้งสมาคม",
+        "description": "",
+        "features": []
       },
       "commercial-shop": {
         "title": "ทะเบียนพาณิชย์ร้านค้า",
-        "summary": "บริการจดทะเบียนพาณิชย์สำหรับร้านค้า"
+        "summary": "บริการจดทะเบียนพาณิชย์สำหรับร้านค้า",
+        "description": "",
+        "features": []
       },
       "employer-sso": {
         "title": "ขึ้นทะเบียนนายจ้าง",
-        "summary": "บริการขึ้นทะเบียนนายจ้างและประกันสังคม"
+        "summary": "บริการขึ้นทะเบียนนายจ้างและประกันสังคม",
+        "description": "",
+        "features": []
       },
       "vat-registration": {
         "title": "ภาษีมูลค่าเพิ่ม",
-        "summary": "บริการจดทะเบียนภาษีมูลค่าเพิ่ม (VAT)"
+        "summary": "บริการจดทะเบียนภาษีมูลค่าเพิ่ม (VAT)",
+        "description": "",
+        "features": []
       },
       "edit-info": {
         "title": "แก้ไขข้อมูลนิติบุคคล",
-        "summary": "เปลี่ยนแปลงข้อมูลสำคัญของบริษัทอย่างถูกต้องและรวดเร็ว"
+        "summary": "เปลี่ยนแปลงข้อมูลสำคัญของบริษัทอย่างถูกต้องและรวดเร็ว",
+        "description": "",
+        "features": []
       },
       "company-name": {
-        "title": "เปลี่ยนชื่อนิติบุคคล",
-        "summary": "บริการเปลี่ยนแปลงชื่อบริษัท/ห้างหุ้นส่วน"
+        "title": "ชื่อนิติบุคคล",
+        "summary": "บริการเปลี่ยนแปลงชื่อบริษัท/ห้างหุ้นส่วน",
+        "description": "",
+        "features": []
       },
       "company-seal": {
-        "title": "เปลี่ยนตรายาง",
-        "summary": "บริการจดทะเบียนเปลี่ยนแปลงตรายางสำคัญ"
+        "title": "ตรายาง",
+        "summary": "บริการจดทะเบียนเปลี่ยนแปลงตรายางสำคัญ",
+        "description": "",
+        "features": []
       },
       "directors": {
-        "title": "เปลี่ยนแปลงกรรมการ",
-        "summary": "บริการเปลี่ยนแปลงรายชื่อหรืออำนาจกรรมการ"
+        "title": "ข้อมูลกรรมการ",
+        "summary": "บริการเปลี่ยนแปลงรายชื่อหรืออำนาจกรรมการ",
+        "description": "",
+        "features": []
       },
       "signing-authority": {
-        "title": "แก้ไขอำนาจลงนาม",
-        "summary": "บริการแก้ไขอำนาจลงนามกรรมการ"
+        "title": "อำนาจลงนาม",
+        "summary": "บริการแก้ไขอำนาจลงนามกรรมการ",
+        "description": "",
+        "features": []
       },
       "shareholders": {
-        "title": "บัญชีรายชื่อผู้ถือหุ้น",
-        "summary": "บริการคัด/เปลี่ยนแปลงบัญชีรายชื่อผู้ถือหุ้น (บอจ.5)"
+        "title": "ผู้ถือหุ้น / สัดส่วนหุ้น",
+        "summary": "บริการคัด/เปลี่ยนแปลงบัญชีรายชื่อผู้ถือหุ้น (บอจ.5)",
+        "description": "",
+        "features": []
       },
       "capital": {
-        "title": "เพิ่มทุน/ลดทุน",
-        "summary": "บริการจดทะเบียนเพิ่มทุนหรือลดทุนจดทะเบียน"
+        "title": "เพิ่ม/ลดทุน",
+        "summary": "บริการจดทะเบียนเพิ่มทุนหรือลดทุนจดทะเบียน",
+        "description": "",
+        "features": []
       },
       "address": {
-        "title": "ย้ายที่ตั้ง",
-        "summary": "บริการจดทะเบียนย้ายที่ตั้งสำนักงานใหญ่/สาขา"
+        "title": "ที่ตั้ง / สาขา",
+        "summary": "บริการจดทะเบียนย้ายที่ตั้งสำนักงานใหญ่/สาขา",
+        "description": "",
+        "features": []
       },
       "objectives": {
-        "title": "แก้ไขวัตถุประสงค์",
-        "summary": "บริการแก้ไขเพิ่มเติมวัตถุประสงค์บริษัท"
+        "title": "วัตถุประสงค์",
+        "summary": "บริการแก้ไขเพิ่มเติมวัตถุประสงค์บริษัท",
+        "description": "",
+        "features": []
       },
       "dissolution": {
-        "title": "เลิกกิจการและชำระบัญชี",
-        "summary": "บริการจดทะเบียนเลิกกิจการและชำระบัญชีครบวงจร"
+        "title": "เลิกกิจการ",
+        "summary": "บริการจดทะเบียนเลิกกิจการและชำระบัญชีครบวงจร",
+        "description": "",
+        "features": []
       },
       "monthly-bookkeeping": {
-        "title": "ทำบัญชีรายเดือน",
-        "summary": "ทำบัญชีและยื่นภาษีอย่างถูกต้อง ดูแลครบทุกเอกสารสำคัญ"
+        "title": "บัญชีนิติบุคคล",
+        "summary": "ทำบัญชีและยื่นภาษีอย่างถูกต้อง ดูแลครบทุกเอกสารสำคัญ",
+        "hero": {
+          "title": "Stress-free Accounting & Tax Filing",
+          "subtitle": "Starting from 2,500 THB/month",
+          "description": "Expert accountants handling your Withholding Tax, VAT, and Social Security. We ensure you never miss a deadline.",
+          "cta": "See Packages",
+          "image": "/images/services/accounting-hero.webp"
+        },
+        "features": {
+          "title": "What's included?",
+          "items": [
+            {
+              "title": "Transaction Recording",
+              "description": "Daily recording of invoice, receipt, and expense."
+            },
+            {
+              "title": "Tax Filing (P.P.30, P.N.D.3/53)",
+              "description": "Monthly submission to Revenue Department."
+            },
+            {
+              "title": "Social Security",
+              "description": "Monthly SSO submission for employees."
+            },
+            {
+              "title": "Monthly Reports",
+              "description": "Profit & Loss and Balance Sheet in English/Thai."
+            }
+          ]
+        },
+        "process": {
+          "title": "How it works",
+          "steps": [
+            {
+              "title": "Send Documents",
+              "description": "Send us photos/scans via LINE or Email."
+            },
+            {
+              "title": "We Process",
+              "description": "Our team records and verifies everything."
+            },
+            {
+              "title": "Review & Confirm",
+              "description": "You confirm tax amounts before filing."
+            },
+            {
+              "title": "Filing & Report",
+              "description": "We file taxes and send you the monthly report."
+            }
+          ]
+        },
+        "faq": {
+          "title": "FAQs",
+          "items": [
+            {
+              "question": "Can you handle English documents?",
+              "answer": "Yes, our team is fluent in English and Thai."
+            },
+            {
+              "question": "Is software included?",
+              "answer": "Yes, we use cloud accounting software accessible 24/7."
+            }
+          ]
+        },
+        "description": ""
       },
       "monthly-tax": {
         "title": "ภาษีรายเดือน",
-        "summary": "บริการจัดทำและนำส่งภาษีรายเดือนทุกประเภท"
+        "summary": "บริการจัดทำและนำส่งภาษีรายเดือนทุกประเภท",
+        "description": "",
+        "features": []
       },
       "close-financial": {
-        "title": "ปิดงบการเงิน",
-        "summary": "บริการปิดงบโดยผู้สอบบัญชีรับอนุญาต ตรวจสอบครบถ้วนมั่นใจได้"
+        "title": "งบประจำปี",
+        "summary": "บริการปิดงบโดยผู้สอบบัญชีรับอนุญาต ตรวจสอบครบถ้วนมั่นใจได้",
+        "description": "",
+        "features": []
       },
       "personal-accounts": {
         "title": "บัญชีบุคคลธรรมดา",
-        "summary": "บริการทำบัญชีและภาษีสำหรับบุคคลธรรมดา"
+        "summary": "บริการทำบัญชีและภาษีสำหรับบุคคลธรรมดา",
+        "description": "",
+        "features": []
       },
       "audit": {
         "title": "ตรวจสอบบัญชี",
-        "summary": "บริการตรวจสอบบัญชีโดยผู้สอบบัญชีรับอนุญาต (CPA)"
+        "summary": "บริการตรวจสอบบัญชีโดยผู้สอบบัญชีรับอนุญาต (CPA)",
+        "description": "",
+        "features": []
       },
       "foreign-tax-id": {
-        "title": "เลขผู้เสียภาษีชาวต่างชาติ",
-        "summary": "บริการขอเลขประจำตัวผู้เสียภาษีสำหรับชาวต่างชาติ"
+        "title": "ขอเลขผู้เสียภาษีชาวต่างชาติ",
+        "summary": "บริการขอเลขประจำตัวผู้เสียภาษีสำหรับชาวต่างชาติ",
+        "description": "",
+        "features": []
       },
       "tax-planning": {
         "title": "วางแผนภาษี",
-        "summary": "วางแผนภาษีให้ธุรกิจอย่างคุ้มค่า ลดความเสี่ยงและเพิ่มประสิทธิภาพ"
+        "summary": "วางแผนภาษีให้ธุรกิจอย่างคุ้มค่า ลดความเสี่ยงและเพิ่มประสิทธิภาพ",
+        "description": "",
+        "features": []
       },
       "tourism-licence": {
-        "title": "ใบอนุญาตประกอบธุรกิจนำเที่ยว",
-        "summary": "บริการขอใบอนุญาตประกอบธุรกิจนำเที่ยว (ททท.)"
+        "title": "ประกอบกิจการท่องเที่ยว",
+        "summary": "บริการขอใบอนุญาตประกอบธุรกิจนำเที่ยว (ททท.)",
+        "description": "",
+        "features": []
       },
       "thai-fda": {
-        "title": "จดทะเบียน อย.",
-        "summary": "บริการขอขึ้นทะเบียน อย. อาหารและยา"
+        "title": "อ.ย.",
+        "summary": "บริการขอขึ้นทะเบียน อย. อาหารและยา",
+        "description": "",
+        "features": []
       },
       "visa-work-permit": {
-        "title": "Visa & Work Permit",
-        "summary": "บริการขอวีซ่าและใบอนุญาตทำงานสำหรับชาวต่างชาติ"
+        "title": "วีซ่า / ใบอนุญาตทำงาน",
+        "summary": "บริการขอวีซ่าและใบอนุญาตทำงานสำหรับชาวต่างชาติ",
+        "description": "",
+        "features": []
       },
       "boi-promotion": {
         "title": "บัตรส่งเสริมการลงทุน (BOI)",
-        "summary": "บริการขอรับการส่งเสริมการลงทุน BOI"
+        "summary": "บริการขอรับการส่งเสริมการลงทุน BOI",
+        "description": "",
+        "features": []
       },
       "foreign-business": {
-        "title": "ใบอนุญาตประกอบธุรกิจต่างด้าว",
-        "summary": "บริการขอใบอนุญาตประกอบธุรกิจของคนต่างด้าว (FBL)"
+        "title": "ใบอนุญาตประกอบธุรกิจของชาวต่างชาติ (FBL/FBC)",
+        "summary": "บริการขอใบอนุญาตประกอบธุรกิจของคนต่างด้าว (FBL)",
+        "description": "",
+        "features": []
       },
       "website-build": {
-        "title": "รับทำเว็บไซต์",
-        "summary": "บริการออกแบบและจัดทำเว็บไซต์ Corporate/E-commerce"
+        "title": "ทำเว็บไซต์",
+        "summary": "บริการออกแบบและจัดทำเว็บไซต์ Corporate/E-commerce",
+        "description": "",
+        "features": []
       },
       "facebook-page": {
-        "title": "ดูแล Facebook Page",
-        "summary": "บริการดูแลและบริหารจัดการ Facebook Page"
+        "title": "FaceBook Page",
+        "summary": "บริการดูแลและบริหารจัดการ Facebook Page",
+        "description": "",
+        "features": []
       },
       "line-oa": {
-        "title": "ดูแล LINE OA",
-        "summary": "บริการดูแลและตั้งค่าระบบ LINE Official Account"
+        "title": "Line OA",
+        "summary": "บริการดูแลและตั้งค่าระบบ LINE Official Account",
+        "description": "",
+        "features": []
       },
       "tiktok": {
-        "title": "การตลาด TikTok",
-        "summary": "บริการทำการตลาดและผลิตคอนเทนต์บน TikTok"
+        "title": "TikTok",
+        "summary": "บริการทำการตลาดและผลิตคอนเทนต์บน TikTok",
+        "description": "",
+        "features": []
       },
       "youtube": {
-        "title": "การตลาด YouTube",
-        "summary": "บริการผลิตวิดีโอและทำการตลาดบน YouTube"
+        "title": "YouTube",
+        "summary": "บริการผลิตวิดีโอและทำการตลาดบน YouTube",
+        "description": "",
+        "features": []
       },
       "video-production": {
-        "title": "รับถ่ายทำ/ตัดต่อวิดีโอ",
-        "summary": "บริการผลิตสื่อวิดีโอพรีเซนเทชันและโฆษณา"
+        "title": "Video Production",
+        "summary": "บริการผลิตสื่อวิดีโอพรีเซนเทชันและโฆษณา",
+        "description": "",
+        "features": []
       },
       "paid-ads": {
-        "title": "ยิงแอดโฆษณา",
-        "summary": "บริการยิงโฆษณา Facebook, Google, TikTok Ads"
+        "title": "ยิงแอด",
+        "summary": "บริการยิงโฆษณา Facebook, Google, TikTok Ads",
+        "description": "",
+        "features": []
       },
       "ai-solutions": {
-        "title": "AI Solutions",
-        "summary": "บริการที่ปรึกษานำ AI มาประยุกต์ใช้ในธุรกิจ"
+        "title": "ระบบ Ai",
+        "summary": "บริการที่ปรึกษานำ AI มาประยุกต์ใช้ในธุรกิจ",
+        "description": "",
+        "features": []
       },
       "odoo-erp": {
-        "title": "ระบบ Odoo ERP",
-        "summary": "บริการวางระบบ Odoo ERP สำหรับบริหารธุรกิจ"
+        "title": "Odoo ERP",
+        "summary": "บริการวางระบบ Odoo ERP สำหรับบริหารธุรกิจ",
+        "description": "",
+        "features": []
       },
       "custom-software": {
-        "title": "พัฒนาซอฟต์แวร์",
-        "summary": "บริการเขียนโปรแกรมและพัฒนาซอฟต์แวร์ตามความต้องการ"
+        "title": "เขียนโปรแกรมต่างๆ",
+        "summary": "บริการเขียนโปรแกรมและพัฒนาซอฟต์แวร์ตามความต้องการ",
+        "description": "",
+        "features": []
+      },
+      "company-limited": {
+        "title": "บริษัทจำกัด",
+        "summary": "",
+        "description": "",
+        "features": []
       }
     },
     "bookkeeping": {
@@ -1175,7 +1124,7 @@
     },
     "cta": {
       "heading": "ก้าวต่อไปอย่างมั่นใจไปกับ Virintira",
-      "description": "ให้ทีมของเราดูแลงานเอกสารและงานห\u2060ลั\u2060ง\u2060บ้\u2060า\u2060น เพื่อให้คุณโฟกัสกับเป้าหมายธุรกิจได้เต็มที่"
+      "description": "ให้ทีมของเราดูแลงานเอกสารและงานห⁠ลั⁠ง⁠บ้⁠า⁠น เพื่อให้คุณโฟกัสกับเป้าหมายธุรกิจได้เต็มที่"
     }
   }
 }

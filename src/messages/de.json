@@ -1,7 +1,7 @@
 {
   "metadata": {
     "home": {
-      "title": "Virintira | Multilingual Accounting Partner",
+      "title": "Virintira | Buchhaltung & Unternehmensdienstleistungen",
       "description": "Trusted Thai accounting firm delivering bookkeeping, payroll, and compliance in 16 languages.",
       "keywords": [
         "Virintira",
@@ -10,6 +10,16 @@
         "payroll",
         "tax filing",
         "multilingual"
+      ]
+    },
+    "aboutUs": {
+      "title": "About Virintira | Your Reliable Thai Business Partner",
+      "description": "Learn about Virintira's mission, story, and core values. We provide transparent, high-speed corporate compliance and accounting in Thailand.",
+      "keywords": [
+        "About Virintira",
+        "Thai accounting firm",
+        "business registration Thailand",
+        "corporate compliance"
       ]
     },
     "promotion": {
@@ -76,222 +86,31 @@
       "trigger": "Kostenlose Beratung"
     },
     "header": {
-      "announcement": {
-        "message": "Certified accountants helping entrepreneurs thrive across Thailand.",
-        "actionLabel": "Book consultation",
-        "actionHref": "/promotion"
-      },
-      "nav": [
-        {
-          "label": "Aktionen",
-          "href": "/promotion",
-          "highlight": true,
-          "icon": "promotion"
+      "nav": {
+        "promotion": {
+          "label": "Aktionen"
         },
-        {
-          "label": "Services",
-          "href": "/services"
+        "services": {
+          "label": "Services"
         },
-        {
-          "label": "Artikel",
-          "href": "/blog/bookkeeping-matters"
+        "blog": {
+          "label": "Artikel"
         },
-        {
-          "label": "Downloads",
-          "href": "/resources"
+        "resources": {
+          "label": "Downloads"
         },
-        {
-          "label": "Kontakt",
-          "href": "/contact"
+        "contact": {
+          "label": "Kontakt"
         }
-      ],
+      },
       "megaMenu": {
-        "triggerLabel": "Leistungen",
-        "columns": [
-          {
-            "title": "Gründungen",
-            "items": [
-              {
-                "label": "GmbH (Co., Ltd.)",
-                "href": "/services/registrations/registration"
-              },
-              {
-                "label": "Kommanditgesellschaft",
-                "href": "/services/registrations/registration"
-              },
-              {
-                "label": "Stiftung",
-                "href": "/services/registrations/foundation"
-              },
-              {
-                "label": "Verein",
-                "href": "/services/registrations/association"
-              },
-              {
-                "label": "Handelsregister",
-                "href": "/services/registrations/commercial-shop"
-              },
-              {
-                "label": "Arbeitgeber (SSO)",
-                "href": "/services/registrations/employer-sso"
-              },
-              {
-                "label": "Umsatzsteuer (VAT)",
-                "href": "/services/registrations/vat-registration"
-              }
-            ]
-          },
-          {
-            "title": "Änderungen",
-            "items": [
-              {
-                "label": "Firmenname",
-                "href": "/services/corporate-changes/company-name"
-              },
-              {
-                "label": "Firmenstempel",
-                "href": "/services/corporate-changes/company-seal"
-              },
-              {
-                "label": "Geschäftsführer",
-                "href": "/services/corporate-changes/directors"
-              },
-              {
-                "label": "Zeichnungsrecht",
-                "href": "/services/corporate-changes/signing-authority"
-              },
-              {
-                "label": "Aktionäre / Anteile",
-                "href": "/services/corporate-changes/shareholders"
-              },
-              {
-                "label": "Stammkapital",
-                "href": "/services/corporate-changes/capital"
-              },
-              {
-                "label": "Adresse / Filialen",
-                "href": "/services/corporate-changes/address"
-              },
-              {
-                "label": "Geschäftszweck",
-                "href": "/services/corporate-changes/objectives"
-              },
-              {
-                "label": "Liquidation",
-                "href": "/services/corporate-changes/dissolution"
-              }
-            ]
-          },
-          {
-            "title": "Buchhaltung & Audit",
-            "items": [
-              {
-                "label": "Finanzbuchhaltung",
-                "href": "/services/accounting-audit/monthly-bookkeeping"
-              },
-              {
-                "label": "Monatssteuern",
-                "href": "/services/accounting-audit/monthly-tax"
-              },
-              {
-                "label": "Jahresabschluss",
-                "href": "/services/accounting-audit/close-financial"
-              },
-              {
-                "label": "Private Buchhaltung",
-                "href": "/services/accounting-audit/personal-accounts"
-              },
-              {
-                "label": "Wirtschaftsprüfung",
-                "href": "/services/accounting-audit/audit"
-              },
-              {
-                "label": "Steuerplanung",
-                "href": "/services/accounting-audit/tax-planning"
-              },
-              {
-                "label": "Ausl. Steuernummer",
-                "href": "/services/accounting-audit/foreign-tax-id"
-              }
-            ]
-          },
-          {
-            "title": "Lizenzen",
-            "items": [
-              {
-                "label": "Tourismuslizenz",
-                "href": "/services/licensing/tourism-licence"
-              },
-              {
-                "label": "Thai FDA",
-                "href": "/services/licensing/thai-fda"
-              },
-              {
-                "label": "Visum & Work Permit",
-                "href": "/services/licensing/visa-work-permit"
-              },
-              {
-                "label": "BOI-Förderung",
-                "href": "/services/licensing/boi-promotion"
-              },
-              {
-                "label": "Fremdgeschäftslizenz (FBL/FBC)",
-                "href": "/services/licensing/foreign-business"
-              }
-            ]
-          },
-          {
-            "title": "Digital Marketing",
-            "items": [
-              {
-                "label": "Webentwicklung",
-                "href": "/services/digital-marketing/website-build"
-              },
-              {
-                "label": "Facebook-Seite",
-                "href": "/services/digital-marketing/facebook-page"
-              },
-              {
-                "label": "LINE OA",
-                "href": "/services/digital-marketing/line-oa"
-              },
-              {
-                "label": "TikTok",
-                "href": "/services/digital-marketing/tiktok"
-              },
-              {
-                "label": "YouTube",
-                "href": "/services/digital-marketing/youtube"
-              },
-              {
-                "label": "Videoproduktion",
-                "href": "/services/digital-marketing/video-production"
-              },
-              {
-                "label": "Bezahlte Werbung",
-                "href": "/services/digital-marketing/paid-ads"
-              },
-              {
-                "label": "KI-Lösungen",
-                "href": "/services/digital-marketing/ai-solutions"
-              },
-              {
-                "label": "Odoo ERP",
-                "href": "/services/digital-marketing/odoo-erp"
-              },
-              {
-                "label": "Individualsoftware",
-                "href": "/services/digital-marketing/custom-software"
-              }
-            ]
-          }
-        ]
+        "triggerLabel": "Leistungen"
       },
       "ctaPrimary": "Talk to an expert",
       "ctaSecondary": "LINE OA",
       "search": {
-        "placeholder": "Search accounting resources",
-        "mobilePlaceholder": "Search accounting resources",
+        "placeholder": "Dienste oder Artikel suchen",
+        "mobilePlaceholder": "Dienste oder Artikel suchen",
         "toggleLabel": "Toggle search",
         "submitLabel": "Search"
       },
@@ -346,44 +165,35 @@
         "applyLicense": "ขอใบอนุญาต",
         "marketing": "การตลาดออนไลน์"
       },
-      "quickLinks": [
-        {
-          "label": "Angebote",
-          "href": "/promotion"
+      "quickLinks": {
+        "services": {
+          "label": "Angebote"
         },
-        {
-          "label": "Artikel",
-          "href": "/blog/bookkeeping-matters"
+        "promotion": {
+          "label": "Artikel"
         },
-        {
-          "label": "Downloads",
-          "href": "/resources"
+        "about": {
+          "label": "Downloads"
         },
-        {
-          "label": "Kontakt",
-          "href": "/contact"
+        "careers": {
+          "label": "Kontakt"
         },
-        {
-          "label": "Gründungen",
-          "href": "/services/registrations"
+        "contact": {
+          "label": "Gründungen"
         },
-        {
-          "label": "Änderungen",
-          "href": "/services/corporate-changes"
+        "item5": {
+          "label": "Änderungen"
         },
-        {
-          "label": "Buchhaltung & Audit",
-          "href": "/services/accounting-audit"
+        "item6": {
+          "label": "Buchhaltung & Audit"
         },
-        {
-          "label": "Lizenzen",
-          "href": "/services/licensing"
+        "item7": {
+          "label": "Lizenzen"
         },
-        {
-          "label": "Digital Marketing",
-          "href": "/services/digital-marketing"
+        "item8": {
+          "label": "Digital Marketing"
         }
-      ],
+      },
       "legal": "Copyright © {year} Virintira Co., Ltd. All rights reserved. | {poweredBy}"
     }
   },
@@ -421,7 +231,7 @@
       "viewLicense": "Unsere Firmenregistrierung ansehen"
     },
     "services": {
-      "heading": "Popular services",
+      "heading": "Beliebte Dienstleistungen",
       "items": [
         {
           "title": "Unternehmensgründung",
@@ -443,7 +253,10 @@
           "title": "Steuerplanung",
           "description": "Strategische Steuergestaltung und Beratung für optimierte Geschäftsabläufe."
         }
-      ]
+      ],
+      "hero": {
+        "description": "Explore our comprehensive range of services designed to help your business grow."
+      }
     },
     "highlights": {
       "heading": "Warum Virintira wählen",
@@ -518,26 +331,23 @@
     },
     "documents": {
       "heading": "Downloadable resources",
-      "items": [
-        {
+      "items": {
+        "monthly-close": {
           "title": "Monthly close checklist",
           "description": "A step-by-step framework to close your books accurately every month.",
-          "actionLabel": "Download PDF",
-          "actionHref": "https://www.virintira.com/resources/monthly-close.pdf"
+          "actionLabel": "Download PDF"
         },
-        {
+        "payroll-calendar": {
           "title": "Payroll compliance calendar",
           "description": "Important Thai payroll and social security deadlines in one sheet.",
-          "actionLabel": "View calendar",
-          "actionHref": "https://www.virintira.com/resources/payroll-calendar.pdf"
+          "actionLabel": "View calendar"
         },
-        {
+        "cashflow-template": {
           "title": "Cash flow tracker",
           "description": "Google Sheets template for monitoring inflows, outflows, and runway.",
-          "actionLabel": "Open template",
-          "actionHref": "https://www.virintira.com/resources/cashflow-template"
+          "actionLabel": "Open template"
         }
-      ]
+      }
     },
     "contact": {
       "heading": "Need something custom?",
@@ -550,6 +360,10 @@
     }
   },
   "services": {
+    "hero": {
+      "description": "Unsere Kerndienstleistungen fallen in 5 Kategorien.",
+      "title": "Dienstleistungen"
+    },
     "categories": {
       "registrations": {
         "title": "Gründungen",
@@ -583,160 +397,360 @@
     },
     "items": {
       "registration": {
-        "title": "Unternehmensgründung",
-        "summary": "Komplette Registrierung für GmbHs und Personengesellschaften mit fachkundiger Begleitung."
+        "title": "Kommanditgesellschaft",
+        "summary": "Komplette Registrierung für GmbHs und Personengesellschaften mit fachkundiger Begleitung.",
+        "hero": {
+          "title": "Start your Thai Company correctly",
+          "subtitle": "Trusted by 500+ founders",
+          "description": "We handle the Department of Business Development, Tax Registration, and Social Security so you can focus on your business.",
+          "cta": "Get a Quote",
+          "image": "/images/services/registration-hero.webp"
+        },
+        "features": {
+          "title": "Everything you need to trade legally",
+          "items": [
+            {
+              "title": "Company Name Reservation",
+              "description": "We check and reserve your name with the DBD instantly."
+            },
+            {
+              "title": "MoA & Articles of Association",
+              "description": "Drafting all statutory meeting notes and bylaws."
+            },
+            {
+              "title": "VAT & Tax Registration",
+              "description": "Getting your Tax ID and VAT certificate (P.P.20)."
+            },
+            {
+              "title": "Bank Account Opening",
+              "description": "Assistance with board resolutions to open your corporate bank account."
+            }
+          ]
+        },
+        "process": {
+          "title": "Registration Process",
+          "steps": [
+            {
+              "title": "Consultation",
+              "description": "We clarify your business objectives and shareholders."
+            },
+            {
+              "title": "Name Reservation",
+              "description": "Locking in your company name (1-3 days)."
+            },
+            {
+              "title": "Filing & Signing",
+              "description": "Directors sign the application. We submit to DBD."
+            },
+            {
+              "title": "Company Formed",
+              "description": "Receive your Affidavit and Company Certificate."
+            }
+          ]
+        },
+        "faq": {
+          "title": "Common Questions",
+          "items": [
+            {
+              "question": "How long does it take?",
+              "answer": "Typically 3-5 business days after name reservation."
+            },
+            {
+              "question": "Do I need a Thai shareholder?",
+              "answer": "Yes, unless you have BOI promotion or FBL."
+            }
+          ]
+        },
+        "description": ""
       },
       "limited-partnership": {
         "title": "Kommanditgesellschaft",
-        "summary": "Gründung und Verwaltung einer KG."
+        "summary": "Gründung und Verwaltung einer KG.",
+        "description": "",
+        "features": []
       },
       "foundation": {
         "title": "Stiftung",
-        "summary": "Gründung einer Stiftung."
+        "summary": "Gründung einer Stiftung.",
+        "description": "",
+        "features": []
       },
       "association": {
         "title": "Verein",
-        "summary": "Gründung eines Vereins."
+        "summary": "Gründung eines Vereins.",
+        "description": "",
+        "features": []
       },
       "commercial-shop": {
         "title": "Handelsregister",
-        "summary": "Eintragung ins Handelsregister."
+        "summary": "Eintragung ins Handelsregister.",
+        "description": "",
+        "features": []
       },
       "employer-sso": {
         "title": "Arbeitgeber (SSO)",
-        "summary": "Arbeitgeberanmeldung und Sozialversicherung."
+        "summary": "Arbeitgeberanmeldung und Sozialversicherung.",
+        "description": "",
+        "features": []
       },
       "vat-registration": {
         "title": "Umsatzsteuer (VAT)",
-        "summary": "Umsatzsteuerregistrierung (MwSt.)."
+        "summary": "Umsatzsteuerregistrierung (MwSt.).",
+        "description": "",
+        "features": []
       },
       "edit-info": {
         "title": "Aktualisierung von Unternehmensdaten",
-        "summary": "Genaue und zeitnahe Updates wichtiger Unternehmensinformationen."
+        "summary": "Genaue und zeitnahe Updates wichtiger Unternehmensinformationen.",
+        "description": "",
+        "features": []
       },
       "company-name": {
         "title": "Firmenname",
-        "summary": "Änderung des Firmennamens."
+        "summary": "Änderung des Firmennamens.",
+        "description": "",
+        "features": []
       },
       "company-seal": {
         "title": "Firmenstempel",
-        "summary": "Registrierung eines neuen Firmenstempels."
+        "summary": "Registrierung eines neuen Firmenstempels.",
+        "description": "",
+        "features": []
       },
       "directors": {
         "title": "Geschäftsführer",
-        "summary": "Änderung der Geschäftsführer."
+        "summary": "Änderung der Geschäftsführer.",
+        "description": "",
+        "features": []
       },
       "signing-authority": {
         "title": "Zeichnungsrecht",
-        "summary": "Änderung der Zeichnungsberechtigung."
+        "summary": "Änderung der Zeichnungsberechtigung.",
+        "description": "",
+        "features": []
       },
       "shareholders": {
         "title": "Aktionäre / Anteile",
-        "summary": "Aktualisierung der Aktionärsliste (BOJ.5)."
+        "summary": "Aktualisierung der Aktionärsliste (BOJ.5).",
+        "description": "",
+        "features": []
       },
       "capital": {
         "title": "Stammkapital",
-        "summary": "Kapitalerhöhung oder -herabsetzung."
+        "summary": "Kapitalerhöhung oder -herabsetzung.",
+        "description": "",
+        "features": []
       },
       "address": {
         "title": "Adresse / Filialen",
-        "summary": "Sitzverlegung oder neue Filialen."
+        "summary": "Sitzverlegung oder neue Filialen.",
+        "description": "",
+        "features": []
       },
       "objectives": {
         "title": "Geschäftszweck",
-        "summary": "Änderung des Geschäftszwecks."
+        "summary": "Änderung des Geschäftszwecks.",
+        "description": "",
+        "features": []
       },
       "dissolution": {
         "title": "Liquidation",
-        "summary": "Auflösung und Liquidation der Firma."
+        "summary": "Auflösung und Liquidation der Firma.",
+        "description": "",
+        "features": []
       },
       "monthly-bookkeeping": {
-        "title": "Monatliche Buchhaltung",
-        "summary": "Transaktionserfassung, Abstimmungen und IFRS-konforme Abschlüsse."
+        "title": "Finanzbuchhaltung",
+        "summary": "Transaktionserfassung, Abstimmungen und IFRS-konforme Abschlüsse.",
+        "hero": {
+          "title": "Stress-free Accounting & Tax Filing",
+          "subtitle": "Starting from 2,500 THB/month",
+          "description": "Expert accountants handling your Withholding Tax, VAT, and Social Security. We ensure you never miss a deadline.",
+          "cta": "See Packages",
+          "image": "/images/services/accounting-hero.webp"
+        },
+        "features": {
+          "title": "What's included?",
+          "items": [
+            {
+              "title": "Transaction Recording",
+              "description": "Daily recording of invoice, receipt, and expense."
+            },
+            {
+              "title": "Tax Filing (P.P.30, P.N.D.3/53)",
+              "description": "Monthly submission to Revenue Department."
+            },
+            {
+              "title": "Social Security",
+              "description": "Monthly SSO submission for employees."
+            },
+            {
+              "title": "Monthly Reports",
+              "description": "Profit & Loss and Balance Sheet in English/Thai."
+            }
+          ]
+        },
+        "process": {
+          "title": "How it works",
+          "steps": [
+            {
+              "title": "Send Documents",
+              "description": "Send us photos/scans via LINE or Email."
+            },
+            {
+              "title": "We Process",
+              "description": "Our team records and verifies everything."
+            },
+            {
+              "title": "Review & Confirm",
+              "description": "You confirm tax amounts before filing."
+            },
+            {
+              "title": "Filing & Report",
+              "description": "We file taxes and send you the monthly report."
+            }
+          ]
+        },
+        "faq": {
+          "title": "FAQs",
+          "items": [
+            {
+              "question": "Can you handle English documents?",
+              "answer": "Yes, our team is fluent in English and Thai."
+            },
+            {
+              "question": "Is software included?",
+              "answer": "Yes, we use cloud accounting software accessible 24/7."
+            }
+          ]
+        },
+        "description": ""
       },
       "monthly-tax": {
         "title": "Monatssteuern",
-        "summary": "Erstellung und Einreichung monatlicher Steuern."
+        "summary": "Erstellung und Einreichung monatlicher Steuern.",
+        "description": "",
+        "features": []
       },
       "close-financial": {
         "title": "Jahresabschluss",
-        "summary": "Effiziente Erstellung und Abschluss der Jahresabschlüsse für das DBD und das Finanzamt."
+        "summary": "Effiziente Erstellung und Abschluss der Jahresabschlüsse für das DBD und das Finanzamt.",
+        "description": "",
+        "features": []
       },
       "personal-accounts": {
         "title": "Private Buchhaltung",
-        "summary": "Buchhaltung und Steuern für Privatpersonen."
+        "summary": "Buchhaltung und Steuern für Privatpersonen.",
+        "description": "",
+        "features": []
       },
       "audit": {
         "title": "Wirtschaftsprüfung",
-        "summary": "Gesetzliche Prüfung durch CPA."
+        "summary": "Gesetzliche Prüfung durch CPA.",
+        "description": "",
+        "features": []
       },
       "foreign-tax-id": {
         "title": "Ausl. Steuernummer",
-        "summary": "Steuer-ID für Ausländer."
+        "summary": "Steuer-ID für Ausländer.",
+        "description": "",
+        "features": []
       },
       "tax-planning": {
         "title": "Steuerplanung",
-        "summary": "Strategische Steuergestaltung und Beratung für optimierte Geschäftsabläufe."
+        "summary": "Strategische Steuergestaltung und Beratung für optimierte Geschäftsabläufe.",
+        "description": "",
+        "features": []
       },
       "tourism-licence": {
         "title": "Tourismuslizenz",
-        "summary": "TAT Tourismuslizenz-Antrag."
+        "summary": "TAT Tourismuslizenz-Antrag.",
+        "description": "",
+        "features": []
       },
       "thai-fda": {
         "title": "Thai FDA",
-        "summary": "Thai FDA Registrierung für Lebensmittel/Medikamente."
+        "summary": "Thai FDA Registrierung für Lebensmittel/Medikamente.",
+        "description": "",
+        "features": []
       },
       "visa-work-permit": {
         "title": "Visum & Work Permit",
-        "summary": "Visum und Arbeitsgenehmigung für Ausländer."
+        "summary": "Visum und Arbeitsgenehmigung für Ausländer.",
+        "description": "",
+        "features": []
       },
       "boi-promotion": {
         "title": "BOI-Förderung",
-        "summary": "Antrag auf BOI-Investitionsförderung."
+        "summary": "Antrag auf BOI-Investitionsförderung.",
+        "description": "",
+        "features": []
       },
       "foreign-business": {
         "title": "Fremdgeschäftslizenz (FBL/FBC)",
-        "summary": "FBL-Antrag für ausländische Unternehmen."
+        "summary": "FBL-Antrag für ausländische Unternehmen.",
+        "description": "",
+        "features": []
       },
       "website-build": {
         "title": "Webentwicklung",
-        "summary": "Corporate- und E-Commerce-Websites."
+        "summary": "Corporate- und E-Commerce-Websites.",
+        "description": "",
+        "features": []
       },
       "facebook-page": {
         "title": "Facebook-Seite",
-        "summary": "Facebook-Seitenverwaltung und Content."
+        "summary": "Facebook-Seitenverwaltung und Content.",
+        "description": "",
+        "features": []
       },
       "line-oa": {
         "title": "LINE OA",
-        "summary": "Einrichtung und Verwaltung von LINE OA."
+        "summary": "Einrichtung und Verwaltung von LINE OA.",
+        "description": "",
+        "features": []
       },
       "tiktok": {
         "title": "TikTok",
-        "summary": "TikTok-Marketing und Content-Erstellung."
+        "summary": "TikTok-Marketing und Content-Erstellung.",
+        "description": "",
+        "features": []
       },
       "youtube": {
         "title": "YouTube",
-        "summary": "YouTube-Videoproduktion und Marketing."
+        "summary": "YouTube-Videoproduktion und Marketing.",
+        "description": "",
+        "features": []
       },
       "video-production": {
         "title": "Videoproduktion",
-        "summary": "Professionelle Videoproduktion."
+        "summary": "Professionelle Videoproduktion.",
+        "description": "",
+        "features": []
       },
       "paid-ads": {
         "title": "Bezahlte Werbung",
-        "summary": "Anzeigenmanagement für FB, Google, TikTok."
+        "summary": "Anzeigenmanagement für FB, Google, TikTok.",
+        "description": "",
+        "features": []
       },
       "ai-solutions": {
         "title": "KI-Lösungen",
-        "summary": "KI-Unternehmenslösungen und Beratung."
+        "summary": "KI-Unternehmenslösungen und Beratung.",
+        "description": "",
+        "features": []
       },
       "odoo-erp": {
         "title": "Odoo ERP",
-        "summary": "Odoo ERP Implementierung und Support."
+        "summary": "Odoo ERP Implementierung und Support.",
+        "description": "",
+        "features": []
       },
       "custom-software": {
         "title": "Individualsoftware",
-        "summary": "Maßgeschneiderte Softwareentwicklung."
+        "summary": "Maßgeschneiderte Softwareentwicklung.",
+        "description": "",
+        "features": []
       }
     },
     "bookkeeping": {
@@ -893,10 +907,6 @@
           }
         ]
       }
-    },
-    "hero": {
-      "title": "Dienstleistungen",
-      "description": "Unsere Kerndienstleistungen fallen in 5 Kategorien."
     }
   },
   "blog": {
@@ -995,6 +1005,7 @@
     "back": "Back to homepage"
   },
   "contact": {
+    "title": "Kontakt",
     "close": "Schließen",
     "form": {
       "heading": "Senden Sie uns eine Direktnachricht",
@@ -1068,14 +1079,41 @@
     "formSection": {
       "heading": "Möchten Sie lieber zurückgerufen werden?",
       "subheading": "Sehr gerne! Füllen Sie einfach das Formular aus."
-    },
-    "title": "Kontakt"
+    }
   },
   "aboutUs": {
     "breadcrumb": "Über uns",
     "hero": {
       "title": "Wachsen Sie in Thailand mit Vertrauen.",
-      "subtitle": "Virintira verbindet Buchhaltungs und Steuerkompetenz mit moderner Technologie, um ganzheitliche Services zu bieten transparent und\u00A0verlässlich."
+      "subtitle": "Virintira verbindet Buchhaltungs und Steuerkompetenz mit moderner Technologie, um ganzheitliche Services zu bieten transparent und verlässlich."
+    },
+    "mission": {
+      "heading": "Our Mission",
+      "description": "To provide foreign and local entrepreneurs with seamless, compliant, and highly efficient back-office support, enabling them to focus entirely on scaling their businesses."
+    },
+    "story": {
+      "heading": "Our Story",
+      "paragraphs": [
+        "Founded on the principle of absolute transparency, Virintira started with a simple goal: making Thai corporate compliance easy to understand.",
+        "Today, we serve hundreds of companies—from emerging startups to established multinational corporations—delivering tailored financial strategies and rock-solid accounting."
+      ]
+    },
+    "values": {
+      "heading": "Our Core Values",
+      "items": {
+        "transparency": {
+          "title": "Transparency First",
+          "description": "No hidden fees, no opaque processes. We believe in clear communication at every stage."
+        },
+        "speed": {
+          "title": "Uncompromising Speed",
+          "description": "Time is money. Our digital-first approach ensures rapid turnarounds for all filings and reports."
+        },
+        "reliability": {
+          "title": "Rock-Solid Reliability",
+          "description": "Fully certified by the DBD, we've never left a project unfinished. Your business is safe with us."
+        }
+      }
     },
     "cta": {
       "heading": "Gehen Sie den nächsten Schritt mit Vertrauen mit Virintira.",

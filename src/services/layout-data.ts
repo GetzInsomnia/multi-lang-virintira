@@ -1,5 +1,7 @@
 import { type AbstractIntlMessages } from 'next-intl';
 import { loadMessages, type Messages } from '@/i18n/loadMessages';
+import { servicesConfig } from '@/config/services';
+import { MAIN_NAV, FOOTER_QUICK_LINKS } from '@/config/navigation';
 import { ensureString } from '@/lib/data-sanitizers';
 import type {
     MegaMenuColumn,
@@ -37,9 +39,8 @@ function normalizeSubMenu(sections: unknown): SubMenuSection[] | undefined {
 function sanitizeNavbarData(messages: Messages): NavbarData {
     const layout = ((messages ?? {}) as Record<string, unknown>).layout as Record<string, unknown> | undefined;
     const raw = (layout?.header ?? {}) as Record<string, unknown>;
-    const nav = Array.isArray(raw.nav) ? raw.nav : [];
+    const navData = (raw.nav ?? {}) as Record<string, { label?: string }>;
     const megaMenu = (raw.megaMenu ?? {}) as Record<string, unknown>;
-    const columns = Array.isArray(megaMenu.columns) ? megaMenu.columns : [];
 
     return {
         announcement: raw.announcement
@@ -49,47 +50,28 @@ function sanitizeNavbarData(messages: Messages): NavbarData {
                 actionHref: ensureString((raw.announcement as Record<string, unknown>).actionHref) || '/',
             }
             : undefined,
-        nav: (nav as NavItem[]).map((item) => {
-            const entry = item as Record<string, unknown>;
-            const href = ensureString(entry.href);
-            const subMenu = normalizeSubMenu(entry.subMenu);
-            return {
-                label: ensureString(entry.label),
-                href: href || undefined,
-                description: ensureString(entry.description),
-                highlight: Boolean(entry.highlight),
-                icon: ensureString(entry.icon),
-                subMenu,
-            };
-        }),
+        nav: MAIN_NAV.map((item) => ({
+            label: ensureString(navData[item.id]?.label) || item.id,
+            href: item.href,
+            highlight: Boolean((item as any).highlight),
+            icon: ensureString((item as any).icon),
+        })),
         megaMenu: {
             triggerLabel: ensureString(megaMenu.triggerLabel),
             columns: (() => {
-                const normalizedColumns: MegaMenuColumn[] = [];
-                for (const column of columns as MegaMenuColumn[]) {
-                    const col = column as Record<string, unknown>;
-                    const items = Array.isArray(col.items) ? col.items : [];
-                    const normalizedItems = items
-                        .map((item) => {
-                            const row = item as Record<string, unknown>;
-                            const href = ensureString(row.href);
-                            if (!href) return undefined;
-                            return {
-                                label: ensureString(row.label),
-                                description: ensureString(row.description),
-                                href,
-                                icon: ensureString(row.icon),
-                            };
-                        })
-                        .filter((entry): entry is NonNullable<typeof entry> => Boolean(entry));
-                    if (!normalizedItems.length) continue;
-                    normalizedColumns.push({
-                        title: ensureString(col.title),
-                        subtitle: ensureString(col.subtitle),
-                        items: normalizedItems,
-                    });
-                }
-                return normalizedColumns;
+                const servicesData = (messages.services ?? {}) as Record<string, unknown>;
+                const catDict = (servicesData.categories ?? {}) as Record<string, { title?: string }>;
+                const itemDict = (servicesData.items ?? {}) as Record<string, { title?: string }>;
+
+                return servicesConfig.categories.slice(0, 5).map(cat => {
+                    return {
+                        title: ensureString(catDict[cat.categorySlug]?.title) || cat.categorySlug,
+                        items: cat.items.map(itm => ({
+                            label: ensureString(itemDict[itm.serviceSlug]?.title) || itm.serviceSlug,
+                            href: `/services/${cat.categorySlug}/${itm.serviceSlug}`
+                        }))
+                    };
+                });
             })(),
         },
         ctaPrimary: ensureString(raw.ctaPrimary),
@@ -101,7 +83,7 @@ function sanitizeFooterData(messages: Messages): FooterData {
     const layout = ((messages ?? {}) as Record<string, unknown>).layout as Record<string, unknown> | undefined;
     const raw = (layout?.footer ?? {}) as Record<string, unknown>;
     const contact = (raw.contact ?? {}) as Record<string, unknown>;
-    const quickLinks = Array.isArray(raw.quickLinks) ? raw.quickLinks : [];
+    const quickLinks = (raw.quickLinks ?? {}) as Record<string, { label?: string }>;
 
     return {
         tagline: ensureString(raw.tagline),
@@ -111,9 +93,9 @@ function sanitizeFooterData(messages: Messages): FooterData {
             email: ensureString(contact.email),
             line: ensureString(contact.line),
         },
-        quickLinks: (quickLinks as FooterLink[]).map((link) => ({
-            label: ensureString(link?.label),
-            href: ensureString(link?.href, '#') || '#',
+        quickLinks: FOOTER_QUICK_LINKS.map((link) => ({
+            label: ensureString(quickLinks[link.id]?.label) || link.id,
+            href: link.href,
         })),
         legal: ensureString(raw.legal),
     };

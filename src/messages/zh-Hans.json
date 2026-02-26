@@ -1,7 +1,7 @@
 {
   "metadata": {
     "home": {
-      "title": "Virintira | Multilingual Accounting Partner",
+      "title": "Virintira | 会计与企业管理服务",
       "description": "Trusted Thai accounting firm delivering bookkeeping, payroll, and compliance in 16 languages.",
       "keywords": [
         "Virintira",
@@ -10,6 +10,16 @@
         "payroll",
         "tax filing",
         "multilingual"
+      ]
+    },
+    "aboutUs": {
+      "title": "About Virintira | Your Reliable Thai Business Partner",
+      "description": "Learn about Virintira's mission, story, and core values. We provide transparent, high-speed corporate compliance and accounting in Thailand.",
+      "keywords": [
+        "About Virintira",
+        "Thai accounting firm",
+        "business registration Thailand",
+        "corporate compliance"
       ]
     },
     "promotion": {
@@ -76,243 +86,31 @@
       "trigger": "免费咨询"
     },
     "header": {
-      "announcement": {
-        "message": "Certified accountants helping entrepreneurs thrive across Thailand.",
-        "actionLabel": "Book consultation",
-        "actionHref": "/promotion"
-      },
-      "nav": [
-        {
-          "label": "优惠",
-          "href": "/promotion",
-          "highlight": true,
-          "icon": "promotion"
+      "nav": {
+        "promotion": {
+          "label": "优惠"
         },
-        {
-          "label": "服务",
-          "href": "/services"
+        "services": {
+          "label": "服务"
         },
-        {
-          "label": "文章",
-          "href": "/blog/bookkeeping-matters"
+        "blog": {
+          "label": "文章"
         },
-        {
-          "label": "下载",
-          "href": "/resources"
+        "resources": {
+          "label": "下载"
         },
-        {
-          "label": "联系我们",
-          "href": "/contact"
+        "contact": {
+          "label": "联系我们"
         }
-      ],
-      "process": {
-        "heading": "服务流程",
-        "steps": [
-          {
-            "title": "选择服务",
-            "description": "选择您感兴趣的服务或咨询详情"
-          },
-          {
-            "title": "沟通与规划",
-            "description": "联系我们讨论细节或开始服务"
-          },
-          {
-            "title": "执行与文件准备",
-            "description": "我们处理每一个步骤，并随时向您汇报进度"
-          },
-          {
-            "title": "顺利完成",
-            "description": "按时交付，准确无误，并提供额外建议"
-          }
-        ]
       },
       "megaMenu": {
-        "triggerLabel": "服务项目",
-        "columns": [
-          {
-            "title": "公司注册",
-            "items": [
-              {
-                "label": "有限公司",
-                "href": "/services/registrations/registration"
-              },
-              {
-                "label": "有限合伙",
-                "href": "/services/registrations/registration"
-              },
-              {
-                "label": "基金会",
-                "href": "/services/registrations/foundation"
-              },
-              {
-                "label": "协会",
-                "href": "/services/registrations/association"
-              },
-              {
-                "label": "商业登记 (店铺)",
-                "href": "/services/registrations/commercial-shop"
-              },
-              {
-                "label": "雇主登记 (SSO)",
-                "href": "/services/registrations/employer-sso"
-              },
-              {
-                "label": "增值税 (VAT)",
-                "href": "/services/registrations/vat-registration"
-              }
-            ]
-          },
-          {
-            "title": "公司变更",
-            "items": [
-              {
-                "label": "公司名称",
-                "href": "/services/corporate-changes/company-name"
-              },
-              {
-                "label": "公司公章",
-                "href": "/services/corporate-changes/company-seal"
-              },
-              {
-                "label": "董事信息",
-                "href": "/services/corporate-changes/directors"
-              },
-              {
-                "label": "签字权限",
-                "href": "/services/corporate-changes/signing-authority"
-              },
-              {
-                "label": "股东 / 股权",
-                "href": "/services/corporate-changes/shareholders"
-              },
-              {
-                "label": "注册资本",
-                "href": "/services/corporate-changes/capital"
-              },
-              {
-                "label": "地址 / 分支",
-                "href": "/services/corporate-changes/address"
-              },
-              {
-                "label": "经营范围",
-                "href": "/services/corporate-changes/objectives"
-              },
-              {
-                "label": "公司注销",
-                "href": "/services/corporate-changes/dissolution"
-              }
-            ]
-          },
-          {
-            "title": "会计审计",
-            "items": [
-              {
-                "label": "公司账务",
-                "href": "/services/accounting-audit/monthly-bookkeeping"
-              },
-              {
-                "label": "每月报税",
-                "href": "/services/accounting-audit/monthly-tax"
-              },
-              {
-                "label": "年度财报",
-                "href": "/services/accounting-audit/close-financial"
-              },
-              {
-                "label": "个人账务",
-                "href": "/services/accounting-audit/personal-accounts"
-              },
-              {
-                "label": "审计服务",
-                "href": "/services/accounting-audit/audit"
-              },
-              {
-                "label": "税务筹划",
-                "href": "/services/accounting-audit/tax-planning"
-              },
-              {
-                "label": "外国税号",
-                "href": "/services/accounting-audit/foreign-tax-id"
-              }
-            ]
-          },
-          {
-            "title": "许可执照",
-            "items": [
-              {
-                "label": "旅游执照",
-                "href": "/services/licensing/tourism-licence"
-              },
-              {
-                "label": "泰国 FDA",
-                "href": "/services/licensing/thai-fda"
-              },
-              {
-                "label": "签证 / 工作证",
-                "href": "/services/licensing/visa-work-permit"
-              },
-              {
-                "label": "BOI 投资优惠",
-                "href": "/services/licensing/boi-promotion"
-              },
-              {
-                "label": "外商经营许可 (FBL / FBC)",
-                "href": "/services/licensing/foreign-business"
-              }
-            ]
-          },
-          {
-            "title": "数字营销",
-            "items": [
-              {
-                "label": "网站建设",
-                "href": "/services/digital-marketing/website-build"
-              },
-              {
-                "label": "Facebook 专页",
-                "href": "/services/digital-marketing/facebook-page"
-              },
-              {
-                "label": "LINE OA",
-                "href": "/services/digital-marketing/line-oa"
-              },
-              {
-                "label": "TikTok",
-                "href": "/services/digital-marketing/tiktok"
-              },
-              {
-                "label": "YouTube",
-                "href": "/services/digital-marketing/youtube"
-              },
-              {
-                "label": "视频制作",
-                "href": "/services/digital-marketing/video-production"
-              },
-              {
-                "label": "付费广告",
-                "href": "/services/digital-marketing/paid-ads"
-              },
-              {
-                "label": "AI 解决方案",
-                "href": "/services/digital-marketing/ai-solutions"
-              },
-              {
-                "label": "Odoo ERP",
-                "href": "/services/digital-marketing/odoo-erp"
-              },
-              {
-                "label": "定制软件",
-                "href": "/services/digital-marketing/custom-software"
-              }
-            ]
-          }
-        ]
+        "triggerLabel": "服务项目"
       },
       "ctaPrimary": "Talk to an expert",
       "ctaSecondary": "LINE OA",
       "search": {
-        "placeholder": "Search accounting resources",
-        "mobilePlaceholder": "Search accounting resources",
+        "placeholder": "搜索服务或文章",
+        "mobilePlaceholder": "搜索服务或文章",
         "toggleLabel": "Toggle search",
         "submitLabel": "Search"
       },
@@ -336,33 +134,6 @@
           "ar": "Arabic",
           "fa": "Persian",
           "he": "Hebrew"
-        },
-        "promotion": {
-          "hero": {
-            "title": "明智扩展，节省更多。",
-            "intro": "解锁旨在降低成本并加速您增长的基本业务解决方案的特惠费率。"
-          },
-          "offers": [
-            {
-              "name": "新客户专享 🔥",
-              "bullets": [
-                "免除价值 5,200 泰铢政府公司注册费",
-                "免费提供价值 1,100 泰铢的认证副本包",
-                "价值超过 7,900 泰铢的额外福利"
-              ],
-              "note": "立即注册 Virintira，立享所有福利。"
-            },
-            {
-              "name": "记账客户专享 💡",
-              "bullets": [
-                "免费提供价值 3,500 泰铢的记账服务",
-                "无限次商业咨询会议，无额外费用",
-                "为您企业量身定制的税务规划"
-              ],
-              "note": "获得专属专家团队的全程月度支持。"
-            }
-          ],
-          "cta": "领取您的优惠"
         }
       },
       "actions": {
@@ -394,44 +165,35 @@
         "applyLicense": "ขอใบอนุญาต",
         "marketing": "การตลาดออนไลน์"
       },
-      "quickLinks": [
-        {
-          "label": "促销活动",
-          "href": "/promotion"
+      "quickLinks": {
+        "services": {
+          "label": "促销活动"
         },
-        {
-          "label": "文章",
-          "href": "/blog/bookkeeping-matters"
+        "promotion": {
+          "label": "文章"
         },
-        {
-          "label": "下载",
-          "href": "/resources"
+        "about": {
+          "label": "下载"
         },
-        {
-          "label": "联系我们",
-          "href": "/contact"
+        "careers": {
+          "label": "联系我们"
         },
-        {
-          "label": "公司注册",
-          "href": "/services/registrations"
+        "contact": {
+          "label": "公司注册"
         },
-        {
-          "label": "公司变更",
-          "href": "/services/corporate-changes"
+        "item5": {
+          "label": "公司变更"
         },
-        {
-          "label": "会计审计",
-          "href": "/services/accounting-audit"
+        "item6": {
+          "label": "会计审计"
         },
-        {
-          "label": "许可执照",
-          "href": "/services/licensing"
+        "item7": {
+          "label": "许可执照"
         },
-        {
-          "label": "数字营销",
-          "href": "/services/digital-marketing"
+        "item8": {
+          "label": "数字营销"
         }
-      ],
+      },
       "legal": "Copyright © {year} Virintira Co., Ltd. All rights reserved. | {poweredBy}"
     }
   },
@@ -447,18 +209,18 @@
   },
   "home": {
     "hero": {
-      "title": "全方位会计服务与\n商务管理",
+      "title": "<nw>全方位会计服务与</nw><br></br><nw>商务管理</nw>",
       "subtitle": "",
       "description": "",
       "primary": "Call now",
       "typewriter": [
-        "快速、简单、一站式商务服务"
+        "<nw>快速、简单、</nw><nw>一站式商务服务</nw>"
       ],
       "emailHeading": "",
       "emailButton": "Email Virintira"
     },
     "about": {
-      "heading": "Virintira —— 不止是会计事务所，更是您值得信赖的商业伙伴。",
+      "heading": "Virintira —— <nw>不只是会计事务所，</nw><nw>更是您值得信赖的</nw><nw>商业伙伴。</nw>",
       "paragraphs": [
         "我们的团队拥有 10 年以上经验，提供一站式企业支持：从公司注册、各类备案与许可申请，到月度记账、税务申报，以及系统化的增长规划。",
         "为了让您能够安心专注于业务发展，我们将后端事务处理得规范、准确、到位。",
@@ -469,7 +231,7 @@
       "viewLicense": "查看执照"
     },
     "services": {
-      "heading": "Popular services",
+      "heading": "热门服务",
       "items": [
         {
           "title": "公司注册",
@@ -491,7 +253,10 @@
           "title": "税务筹划",
           "description": "战略性税务结构和咨询，以优化业务运营。"
         }
-      ]
+      ],
+      "hero": {
+        "description": "Explore our comprehensive range of services designed to help your business grow."
+      }
     },
     "highlights": {
       "heading": "为什么选择 Virintira",
@@ -526,13 +291,13 @@
       ]
     },
     "cta": {
-      "heading": "与 Virintira 团队开始沟通很简单。",
+      "heading": "<nw>与 Virintira 团队咨询</nw><nw>随时轻松起步。</nw>",
       "description": "预约免费咨询，帮助您评估费用，并找到最适合您企业的服务。"
     }
   },
   "promotion": {
     "hero": {
-      "title": "值得信赖的现代企业服务，与您共同成长。",
+      "title": "<nw>可靠、现代的</nw><nw>商务服务。</nw><br></br><nw>与您一同</nw><nw>稳健成长。</nw>",
       "intro": "领取我们的专属优惠：服务与解决方案专为降低成本、提升效率并推动业务增长而打造。"
     },
     "offers": [
@@ -566,26 +331,23 @@
     },
     "documents": {
       "heading": "Downloadable resources",
-      "items": [
-        {
+      "items": {
+        "monthly-close": {
           "title": "Monthly close checklist",
           "description": "A step-by-step framework to close your books accurately every month.",
-          "actionLabel": "Download PDF",
-          "actionHref": "https://www.virintira.com/resources/monthly-close.pdf"
+          "actionLabel": "Download PDF"
         },
-        {
+        "payroll-calendar": {
           "title": "Payroll compliance calendar",
           "description": "Important Thai payroll and social security deadlines in one sheet.",
-          "actionLabel": "View calendar",
-          "actionHref": "https://www.virintira.com/resources/payroll-calendar.pdf"
+          "actionLabel": "View calendar"
         },
-        {
+        "cashflow-template": {
           "title": "Cash flow tracker",
           "description": "Google Sheets template for monitoring inflows, outflows, and runway.",
-          "actionLabel": "Open template",
-          "actionHref": "https://www.virintira.com/resources/cashflow-template"
+          "actionLabel": "Open template"
         }
-      ]
+      }
     },
     "contact": {
       "heading": "Need something custom?",
@@ -598,6 +360,10 @@
     }
   },
   "services": {
+    "hero": {
+      "description": "我们的核心服务分为 5 类。",
+      "title": "服务"
+    },
     "categories": {
       "registrations": {
         "title": "公司注册",
@@ -631,160 +397,360 @@
     },
     "items": {
       "registration": {
-        "title": "公司注册",
-        "summary": "在专家指导下完成有限公司和合伙企业的注册。"
+        "title": "有限合伙",
+        "summary": "在专家指导下完成有限公司和合伙企业的注册。",
+        "hero": {
+          "title": "Start your Thai Company correctly",
+          "subtitle": "Trusted by 500+ founders",
+          "description": "We handle the Department of Business Development, Tax Registration, and Social Security so you can focus on your business.",
+          "cta": "Get a Quote",
+          "image": "/images/services/registration-hero.webp"
+        },
+        "features": {
+          "title": "Everything you need to trade legally",
+          "items": [
+            {
+              "title": "Company Name Reservation",
+              "description": "We check and reserve your name with the DBD instantly."
+            },
+            {
+              "title": "MoA & Articles of Association",
+              "description": "Drafting all statutory meeting notes and bylaws."
+            },
+            {
+              "title": "VAT & Tax Registration",
+              "description": "Getting your Tax ID and VAT certificate (P.P.20)."
+            },
+            {
+              "title": "Bank Account Opening",
+              "description": "Assistance with board resolutions to open your corporate bank account."
+            }
+          ]
+        },
+        "process": {
+          "title": "Registration Process",
+          "steps": [
+            {
+              "title": "Consultation",
+              "description": "We clarify your business objectives and shareholders."
+            },
+            {
+              "title": "Name Reservation",
+              "description": "Locking in your company name (1-3 days)."
+            },
+            {
+              "title": "Filing & Signing",
+              "description": "Directors sign the application. We submit to DBD."
+            },
+            {
+              "title": "Company Formed",
+              "description": "Receive your Affidavit and Company Certificate."
+            }
+          ]
+        },
+        "faq": {
+          "title": "Common Questions",
+          "items": [
+            {
+              "question": "How long does it take?",
+              "answer": "Typically 3-5 business days after name reservation."
+            },
+            {
+              "question": "Do I need a Thai shareholder?",
+              "answer": "Yes, unless you have BOI promotion or FBL."
+            }
+          ]
+        },
+        "description": ""
       },
       "limited-partnership": {
         "title": "有限合伙",
-        "summary": "有限合伙企业注册。"
+        "summary": "有限合伙企业注册。",
+        "description": "",
+        "features": []
       },
       "foundation": {
         "title": "基金会",
-        "summary": "基金会设立。"
+        "summary": "基金会设立。",
+        "description": "",
+        "features": []
       },
       "association": {
         "title": "协会",
-        "summary": "协会及非盈利组织注册。"
+        "summary": "协会及非盈利组织注册。",
+        "description": "",
+        "features": []
       },
       "commercial-shop": {
         "title": "商业登记 (店铺)",
-        "summary": "店铺商业登记。"
+        "summary": "店铺商业登记。",
+        "description": "",
+        "features": []
       },
       "employer-sso": {
         "title": "雇主登记 (SSO)",
-        "summary": "雇主及社保登记。"
+        "summary": "雇主及社保登记。",
+        "description": "",
+        "features": []
       },
       "vat-registration": {
         "title": "增值税 (VAT)",
-        "summary": "增值税 (VAT) 登记。"
+        "summary": "增值税 (VAT) 登记。",
+        "description": "",
+        "features": []
       },
       "edit-info": {
         "title": "公司信息变更",
-        "summary": "准确、及时地更新关键公司信息。"
+        "summary": "准确、及时地更新关键公司信息。",
+        "description": "",
+        "features": []
       },
       "company-name": {
         "title": "公司名称",
-        "summary": "更改公司名称。"
+        "summary": "更改公司名称。",
+        "description": "",
+        "features": []
       },
       "company-seal": {
         "title": "公司公章",
-        "summary": "新公章登记。"
+        "summary": "新公章登记。",
+        "description": "",
+        "features": []
       },
       "directors": {
         "title": "董事信息",
-        "summary": "更改董事或权限。"
+        "summary": "更改董事或权限。",
+        "description": "",
+        "features": []
       },
       "signing-authority": {
         "title": "签字权限",
-        "summary": "更新签字授权人。"
+        "summary": "更新签字授权人。",
+        "description": "",
+        "features": []
       },
       "shareholders": {
         "title": "股东 / 股权",
-        "summary": "更新股东名册 (BOJ.5)。"
+        "summary": "更新股东名册 (BOJ.5)。",
+        "description": "",
+        "features": []
       },
       "capital": {
         "title": "注册资本",
-        "summary": "增加或减少注册资本。"
+        "summary": "增加或减少注册资本。",
+        "description": "",
+        "features": []
       },
       "address": {
         "title": "地址 / 分支",
-        "summary": "搬迁总部或设立分支机构。"
+        "summary": "搬迁总部或设立分支机构。",
+        "description": "",
+        "features": []
       },
       "objectives": {
         "title": "经营范围",
-        "summary": "修改公司经营范围。"
+        "summary": "修改公司经营范围。",
+        "description": "",
+        "features": []
       },
       "dissolution": {
         "title": "公司注销",
-        "summary": "公司解散及清算服务。"
+        "summary": "公司解散及清算服务。",
+        "description": "",
+        "features": []
       },
       "monthly-bookkeeping": {
-        "title": "月度记账",
-        "summary": "交易记录、对账和符合 IFRS 的财务报表。"
+        "title": "公司账务",
+        "summary": "交易记录、对账和符合 IFRS 的财务报表。",
+        "hero": {
+          "title": "Stress-free Accounting & Tax Filing",
+          "subtitle": "Starting from 2,500 THB/month",
+          "description": "Expert accountants handling your Withholding Tax, VAT, and Social Security. We ensure you never miss a deadline.",
+          "cta": "See Packages",
+          "image": "/images/services/accounting-hero.webp"
+        },
+        "features": {
+          "title": "What's included?",
+          "items": [
+            {
+              "title": "Transaction Recording",
+              "description": "Daily recording of invoice, receipt, and expense."
+            },
+            {
+              "title": "Tax Filing (P.P.30, P.N.D.3/53)",
+              "description": "Monthly submission to Revenue Department."
+            },
+            {
+              "title": "Social Security",
+              "description": "Monthly SSO submission for employees."
+            },
+            {
+              "title": "Monthly Reports",
+              "description": "Profit & Loss and Balance Sheet in English/Thai."
+            }
+          ]
+        },
+        "process": {
+          "title": "How it works",
+          "steps": [
+            {
+              "title": "Send Documents",
+              "description": "Send us photos/scans via LINE or Email."
+            },
+            {
+              "title": "We Process",
+              "description": "Our team records and verifies everything."
+            },
+            {
+              "title": "Review & Confirm",
+              "description": "You confirm tax amounts before filing."
+            },
+            {
+              "title": "Filing & Report",
+              "description": "We file taxes and send you the monthly report."
+            }
+          ]
+        },
+        "faq": {
+          "title": "FAQs",
+          "items": [
+            {
+              "question": "Can you handle English documents?",
+              "answer": "Yes, our team is fluent in English and Thai."
+            },
+            {
+              "question": "Is software included?",
+              "answer": "Yes, we use cloud accounting software accessible 24/7."
+            }
+          ]
+        },
+        "description": ""
       },
       "monthly-tax": {
         "title": "每月报税",
-        "summary": "月度和年度税务申报及处理。"
+        "summary": "月度和年度税务申报及处理。",
+        "description": "",
+        "features": []
       },
       "close-financial": {
-        "title": "财务报表结算",
-        "summary": "高效编制年度账目，提交给商业发展局和税务局。"
+        "title": "年度财报",
+        "summary": "高效编制年度账目，提交给商业发展局和税务局。",
+        "description": "",
+        "features": []
       },
       "personal-accounts": {
         "title": "个人账务",
-        "summary": "个人记账及税务申报。"
+        "summary": "个人记账及税务申报。",
+        "description": "",
+        "features": []
       },
       "audit": {
         "title": "审计服务",
-        "summary": "注册会计师 (CPA) 法定审计。"
+        "summary": "注册会计师 (CPA) 法定审计。",
+        "description": "",
+        "features": []
       },
       "foreign-tax-id": {
         "title": "外国税号",
-        "summary": "外国人税号申请服务。"
+        "summary": "外国人税号申请服务。",
+        "description": "",
+        "features": []
       },
       "tax-planning": {
         "title": "税务筹划",
-        "summary": "战略性税务结构和咨询，以优化业务运营。"
+        "summary": "战略性税务结构和咨询，以优化业务运营。",
+        "description": "",
+        "features": []
       },
       "tourism-licence": {
         "title": "旅游执照",
-        "summary": "TAT 旅游执照申请。"
+        "summary": "TAT 旅游执照申请。",
+        "description": "",
+        "features": []
       },
       "thai-fda": {
         "title": "泰国 FDA",
-        "summary": "食品及药品 FDA 注册。"
+        "summary": "食品及药品 FDA 注册。",
+        "description": "",
+        "features": []
       },
       "visa-work-permit": {
         "title": "签证 / 工作证",
-        "summary": "外国人签证及工作证服务。"
+        "summary": "外国人签证及工作证服务。",
+        "description": "",
+        "features": []
       },
       "boi-promotion": {
         "title": "BOI 投资优惠",
-        "summary": "BOI 投资促进申请。"
+        "summary": "BOI 投资促进申请。",
+        "description": "",
+        "features": []
       },
       "foreign-business": {
         "title": "外商经营许可 (FBL / FBC)",
-        "summary": "外商经营许可证申请服务。"
+        "summary": "外商经营许可证申请服务。",
+        "description": "",
+        "features": []
       },
       "website-build": {
         "title": "网站建设",
-        "summary": "企业官网及电商网站开发。"
+        "summary": "企业官网及电商网站开发。",
+        "description": "",
+        "features": []
       },
       "facebook-page": {
         "title": "Facebook 专页",
-        "summary": "Facebook 专页托管及内容运营。"
+        "summary": "Facebook 专页托管及内容运营。",
+        "description": "",
+        "features": []
       },
       "line-oa": {
         "title": "LINE OA",
-        "summary": "LINE 官方账号设立及管理。"
+        "summary": "LINE 官方账号设立及管理。",
+        "description": "",
+        "features": []
       },
       "tiktok": {
         "title": "TikTok",
-        "summary": "TikTok 营销及短视频内容创作。"
+        "summary": "TikTok 营销及短视频内容创作。",
+        "description": "",
+        "features": []
       },
       "youtube": {
         "title": "YouTube",
-        "summary": "YouTube 视频制作及推广。"
+        "summary": "YouTube 视频制作及推广。",
+        "description": "",
+        "features": []
       },
       "video-production": {
         "title": "视频制作",
-        "summary": "专业商业视频拍摄与制作。"
+        "summary": "专业商业视频拍摄与制作。",
+        "description": "",
+        "features": []
       },
       "paid-ads": {
         "title": "付费广告",
-        "summary": "Facebook, Google, TikTok 广告投放管理。"
+        "summary": "Facebook, Google, TikTok 广告投放管理。",
+        "description": "",
+        "features": []
       },
       "ai-solutions": {
         "title": "AI 解决方案",
-        "summary": "AI 商业解决方案及咨询。"
+        "summary": "AI 商业解决方案及咨询。",
+        "description": "",
+        "features": []
       },
       "odoo-erp": {
         "title": "Odoo ERP",
-        "summary": "Odoo ERP 实施及技术支持。"
+        "summary": "Odoo ERP 实施及技术支持。",
+        "description": "",
+        "features": []
       },
       "custom-software": {
         "title": "定制软件",
-        "summary": "定制化软件及应用程序开发。"
+        "summary": "定制化软件及应用程序开发。",
+        "description": "",
+        "features": []
       }
     },
     "bookkeeping": {
@@ -941,10 +907,6 @@
           }
         ]
       }
-    },
-    "hero": {
-      "title": "服务",
-      "description": "我们的核心服务分为 5 类。"
     }
   },
   "blog": {
@@ -1043,6 +1005,7 @@
     "back": "Back to homepage"
   },
   "contact": {
+    "title": "联系我们",
     "close": "关闭",
     "form": {
       "heading": "给我们发送直接信息",
@@ -1116,14 +1079,41 @@
     "formSection": {
       "heading": "您希望我们主动联系您吗？",
       "subheading": "没问题！请在下方填写您的详细信息。"
-    },
-    "title": "联系我们"
+    }
   },
   "aboutUs": {
     "breadcrumb": "关于我们",
     "hero": {
       "title": "<nw>在泰国</nw><nw>安心发展，</nw><br></br><nw>稳步成长。</nw>",
       "subtitle": "Virintira <nw>融合会计专业</nw>与<nw>现代技术，</nw><br></br><nw>提供</nw><nw>一站式服务，</nw><br></br><nw>透明可靠，</nw><nw>值得信赖。</nw>"
+    },
+    "mission": {
+      "heading": "Our Mission",
+      "description": "To provide foreign and local entrepreneurs with seamless, compliant, and highly efficient back-office support, enabling them to focus entirely on scaling their businesses."
+    },
+    "story": {
+      "heading": "Our Story",
+      "paragraphs": [
+        "Founded on the principle of absolute transparency, Virintira started with a simple goal: making Thai corporate compliance easy to understand.",
+        "Today, we serve hundreds of companies—from emerging startups to established multinational corporations—delivering tailored financial strategies and rock-solid accounting."
+      ]
+    },
+    "values": {
+      "heading": "Our Core Values",
+      "items": {
+        "transparency": {
+          "title": "Transparency First",
+          "description": "No hidden fees, no opaque processes. We believe in clear communication at every stage."
+        },
+        "speed": {
+          "title": "Uncompromising Speed",
+          "description": "Time is money. Our digital-first approach ensures rapid turnarounds for all filings and reports."
+        },
+        "reliability": {
+          "title": "Rock-Solid Reliability",
+          "description": "Fully certified by the DBD, we've never left a project unfinished. Your business is safe with us."
+        }
+      }
     },
     "cta": {
       "heading": "与 Virintira 一起，<br></br><nw>自信迈向下一步。</nw>",

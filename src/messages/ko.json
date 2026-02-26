@@ -1,7 +1,7 @@
 {
   "metadata": {
     "home": {
-      "title": "Virintira | Multilingual Accounting Partner",
+      "title": "Virintira | 회계 및 비즈니스 관리 서비스",
       "description": "Trusted Thai accounting firm delivering bookkeeping, payroll, and compliance in 16 languages.",
       "keywords": [
         "Virintira",
@@ -10,6 +10,16 @@
         "payroll",
         "tax filing",
         "multilingual"
+      ]
+    },
+    "aboutUs": {
+      "title": "About Virintira | Your Reliable Thai Business Partner",
+      "description": "Learn about Virintira's mission, story, and core values. We provide transparent, high-speed corporate compliance and accounting in Thailand.",
+      "keywords": [
+        "About Virintira",
+        "Thai accounting firm",
+        "business registration Thailand",
+        "corporate compliance"
       ]
     },
     "promotion": {
@@ -68,6 +78,7 @@
     "cta": {
       "call": "Call {phone}",
       "chat": "LINE 채팅",
+      "whatsapp": "WhatsApp",
       "consult": "이메일 Virintira",
       "book": "상담 예약",
       "explore_category": "서비스 보기",
@@ -75,222 +86,31 @@
       "trigger": "무료 상담"
     },
     "header": {
-      "announcement": {
-        "message": "Certified accountants helping entrepreneurs thrive across Thailand.",
-        "actionLabel": "Book consultation",
-        "actionHref": "/promotion"
-      },
-      "nav": [
-        {
-          "label": "프로모션",
-          "href": "/promotion",
-          "highlight": true,
-          "icon": "promotion"
+      "nav": {
+        "promotion": {
+          "label": "프로모션"
         },
-        {
-          "label": "서비스",
-          "href": "/services"
+        "services": {
+          "label": "서비스"
         },
-        {
-          "label": "기사",
-          "href": "/blog/bookkeeping-matters"
+        "blog": {
+          "label": "기사"
         },
-        {
-          "label": "다운로드",
-          "href": "/resources"
+        "resources": {
+          "label": "다운로드"
         },
-        {
-          "label": "문의",
-          "href": "/contact"
+        "contact": {
+          "label": "문의"
         }
-      ],
+      },
       "megaMenu": {
-        "triggerLabel": "서비스",
-        "columns": [
-          {
-            "title": "법인 설립",
-            "items": [
-              {
-                "label": "주식회사 (Co., Ltd.)",
-                "href": "/services/registrations/registration"
-              },
-              {
-                "label": "합자회사 (L.P.)",
-                "href": "/services/registrations/limited-partnership"
-              },
-              {
-                "label": "재단법인",
-                "href": "/services/registrations/foundation"
-              },
-              {
-                "label": "협회",
-                "href": "/services/registrations/association"
-              },
-              {
-                "label": "사업자 등록 (매장)",
-                "href": "/services/registrations/commercial-shop"
-              },
-              {
-                "label": "고용주 등록 (SSO)",
-                "href": "/services/registrations/employer-sso"
-              },
-              {
-                "label": "부가세 (VAT)",
-                "href": "/services/registrations/vat-registration"
-              }
-            ]
-          },
-          {
-            "title": "법인 변경",
-            "items": [
-              {
-                "label": "법인명 변경",
-                "href": "/services/corporate-changes/company-name"
-              },
-              {
-                "label": "법인 인감",
-                "href": "/services/corporate-changes/company-seal"
-              },
-              {
-                "label": "이사 변경",
-                "href": "/services/corporate-changes/directors"
-              },
-              {
-                "label": "서명 권한",
-                "href": "/services/corporate-changes/signing-authority"
-              },
-              {
-                "label": "주주 / 지분",
-                "href": "/services/corporate-changes/shareholders"
-              },
-              {
-                "label": "자본금 증자/감자",
-                "href": "/services/corporate-changes/capital"
-              },
-              {
-                "label": "주소 / 지점",
-                "href": "/services/corporate-changes/address"
-              },
-              {
-                "label": "사업 목적",
-                "href": "/services/corporate-changes/objectives"
-              },
-              {
-                "label": "법인 청산",
-                "href": "/services/corporate-changes/dissolution"
-              }
-            ]
-          },
-          {
-            "title": "회계 및 감사",
-            "items": [
-              {
-                "label": "법인 기장",
-                "href": "/services/accounting-audit/monthly-bookkeeping"
-              },
-              {
-                "label": "월별 세무",
-                "href": "/services/accounting-audit/monthly-tax"
-              },
-              {
-                "label": "연간 결산",
-                "href": "/services/accounting-audit/close-financial"
-              },
-              {
-                "label": "개인 회계",
-                "href": "/services/accounting-audit/personal-accounts"
-              },
-              {
-                "label": "회계 감사",
-                "href": "/services/accounting-audit/audit"
-              },
-              {
-                "label": "절세 플랜",
-                "href": "/services/accounting-audit/tax-planning"
-              },
-              {
-                "label": "외국인 납세번호",
-                "href": "/services/accounting-audit/foreign-tax-id"
-              }
-            ]
-          },
-          {
-            "title": "라이선스",
-            "items": [
-              {
-                "label": "여행업 면허",
-                "href": "/services/licensing/tourism-licence"
-              },
-              {
-                "label": "태국 FDA",
-                "href": "/services/licensing/thai-fda"
-              },
-              {
-                "label": "비자 / 워크퍼밋",
-                "href": "/services/licensing/visa-work-permit"
-              },
-              {
-                "label": "BOI 승인",
-                "href": "/services/licensing/boi-promotion"
-              },
-              {
-                "label": "외국인 사업허가 (FBL/FBC)",
-                "href": "/services/licensing/foreign-business"
-              }
-            ]
-          },
-          {
-            "title": "디지털 마케팅",
-            "items": [
-              {
-                "label": "웹사이트 제작",
-                "href": "/services/digital-marketing/website-build"
-              },
-              {
-                "label": "페이스북 페이지",
-                "href": "/services/digital-marketing/facebook-page"
-              },
-              {
-                "label": "LINE OA",
-                "href": "/services/digital-marketing/line-oa"
-              },
-              {
-                "label": "TikTok",
-                "href": "/services/digital-marketing/tiktok"
-              },
-              {
-                "label": "YouTube",
-                "href": "/services/digital-marketing/youtube"
-              },
-              {
-                "label": "영상 제작",
-                "href": "/services/digital-marketing/video-production"
-              },
-              {
-                "label": "유료 광고 집행",
-                "href": "/services/digital-marketing/paid-ads"
-              },
-              {
-                "label": "AI 솔루션",
-                "href": "/services/digital-marketing/ai-solutions"
-              },
-              {
-                "label": "Odoo ERP",
-                "href": "/services/digital-marketing/odoo-erp"
-              },
-              {
-                "label": "소프트웨어 개발",
-                "href": "/services/digital-marketing/custom-software"
-              }
-            ]
-          }
-        ]
+        "triggerLabel": "서비스"
       },
       "ctaPrimary": "Talk to an expert",
       "ctaSecondary": "LINE OA",
       "search": {
-        "placeholder": "Search accounting resources",
-        "mobilePlaceholder": "Search accounting resources",
+        "placeholder": "서비스 또는 기사 검색",
+        "mobilePlaceholder": "서비스 또는 기사 검색",
         "toggleLabel": "Toggle search",
         "submitLabel": "Search"
       },
@@ -345,44 +165,35 @@
         "applyLicense": "ขอใบอนุญาต",
         "marketing": "การตลาดออนไลน์"
       },
-      "quickLinks": [
-        {
-          "label": "프로모션",
-          "href": "/promotion"
+      "quickLinks": {
+        "services": {
+          "label": "프로모션"
         },
-        {
-          "label": "기사",
-          "href": "/blog/bookkeeping-matters"
+        "promotion": {
+          "label": "기사"
         },
-        {
-          "label": "다운로드",
-          "href": "/resources"
+        "about": {
+          "label": "다운로드"
         },
-        {
-          "label": "문의",
-          "href": "/contact"
+        "careers": {
+          "label": "문의"
         },
-        {
-          "label": "법인 설립",
-          "href": "/services/registrations"
+        "contact": {
+          "label": "법인 설립"
         },
-        {
-          "label": "법인 변경",
-          "href": "/services/corporate-changes"
+        "item5": {
+          "label": "법인 변경"
         },
-        {
-          "label": "회계 및 감사",
-          "href": "/services/accounting-audit"
+        "item6": {
+          "label": "회계 및 감사"
         },
-        {
-          "label": "라이선스",
-          "href": "/services/licensing"
+        "item7": {
+          "label": "라이선스"
         },
-        {
-          "label": "디지털 마케팅",
-          "href": "/services/digital-marketing"
+        "item8": {
+          "label": "디지털 마케팅"
         }
-      ],
+      },
       "legal": "Copyright © {year} Virintira Co., Ltd. All rights reserved. | {poweredBy}"
     }
   },
@@ -391,10 +202,10 @@
     "promotion": "Promotions",
     "resources": "Resources",
     "services": "Services",
-    "blog": "Blog",
-    "howTo": "How-to",
     "otherServices": "기타 서비스",
-    "contactDirectly": "직접 문의하기"
+    "contactDirectly": "직접 문의하기",
+    "blog": "Blog",
+    "howTo": "How-to"
   },
   "home": {
     "hero": {
@@ -420,7 +231,7 @@
       "viewLicense": "사업자 등록증 보기"
     },
     "services": {
-      "heading": "Popular services",
+      "heading": "인기 서비스",
       "items": [
         {
           "title": "회사 설립",
@@ -442,7 +253,10 @@
           "title": "세무 계획",
           "description": "최적화된 비즈니스 운영을 위한 전략적 세무 구조 및 자문."
         }
-      ]
+      ],
+      "hero": {
+        "description": "Explore our comprehensive range of services designed to help your business grow."
+      }
     },
     "highlights": {
       "heading": "Virintira를 선택해야 하는 이유",
@@ -517,26 +331,23 @@
     },
     "documents": {
       "heading": "Downloadable resources",
-      "items": [
-        {
+      "items": {
+        "monthly-close": {
           "title": "Monthly close checklist",
           "description": "A step-by-step framework to close your books accurately every month.",
-          "actionLabel": "Download PDF",
-          "actionHref": "https://www.virintira.com/resources/monthly-close.pdf"
+          "actionLabel": "Download PDF"
         },
-        {
+        "payroll-calendar": {
           "title": "Payroll compliance calendar",
           "description": "Important Thai payroll and social security deadlines in one sheet.",
-          "actionLabel": "View calendar",
-          "actionHref": "https://www.virintira.com/resources/payroll-calendar.pdf"
+          "actionLabel": "View calendar"
         },
-        {
+        "cashflow-template": {
           "title": "Cash flow tracker",
           "description": "Google Sheets template for monitoring inflows, outflows, and runway.",
-          "actionLabel": "Open template",
-          "actionHref": "https://www.virintira.com/resources/cashflow-template"
+          "actionLabel": "Open template"
         }
-      ]
+      }
     },
     "contact": {
       "heading": "Need something custom?",
@@ -549,6 +360,10 @@
     }
   },
   "services": {
+    "hero": {
+      "description": "당사의 핵심 서비스는 5가지 카테고리로 나뉩니다.",
+      "title": "서비스"
+    },
     "categories": {
       "registrations": {
         "title": "법인 설립",
@@ -582,160 +397,360 @@
     },
     "items": {
       "registration": {
-        "title": "회사 설립",
-        "summary": "전문가의 지도 아래 유한회사 및 파트너십 등록을 완료합니다."
+        "title": "주식회사 (Co., Ltd.)",
+        "summary": "전문가의 지도 아래 유한회사 및 파트너십 등록을 완료합니다.",
+        "hero": {
+          "title": "Start your Thai Company correctly",
+          "subtitle": "Trusted by 500+ founders",
+          "description": "We handle the Department of Business Development, Tax Registration, and Social Security so you can focus on your business.",
+          "cta": "Get a Quote",
+          "image": "/images/services/registration-hero.webp"
+        },
+        "features": {
+          "title": "Everything you need to trade legally",
+          "items": [
+            {
+              "title": "Company Name Reservation",
+              "description": "We check and reserve your name with the DBD instantly."
+            },
+            {
+              "title": "MoA & Articles of Association",
+              "description": "Drafting all statutory meeting notes and bylaws."
+            },
+            {
+              "title": "VAT & Tax Registration",
+              "description": "Getting your Tax ID and VAT certificate (P.P.20)."
+            },
+            {
+              "title": "Bank Account Opening",
+              "description": "Assistance with board resolutions to open your corporate bank account."
+            }
+          ]
+        },
+        "process": {
+          "title": "Registration Process",
+          "steps": [
+            {
+              "title": "Consultation",
+              "description": "We clarify your business objectives and shareholders."
+            },
+            {
+              "title": "Name Reservation",
+              "description": "Locking in your company name (1-3 days)."
+            },
+            {
+              "title": "Filing & Signing",
+              "description": "Directors sign the application. We submit to DBD."
+            },
+            {
+              "title": "Company Formed",
+              "description": "Receive your Affidavit and Company Certificate."
+            }
+          ]
+        },
+        "faq": {
+          "title": "Common Questions",
+          "items": [
+            {
+              "question": "How long does it take?",
+              "answer": "Typically 3-5 business days after name reservation."
+            },
+            {
+              "question": "Do I need a Thai shareholder?",
+              "answer": "Yes, unless you have BOI promotion or FBL."
+            }
+          ]
+        },
+        "description": ""
       },
       "limited-partnership": {
         "title": "합자회사 (L.P.)",
-        "summary": "합자회사 등록 서비스."
+        "summary": "합자회사 등록 서비스.",
+        "description": "",
+        "features": []
       },
       "foundation": {
         "title": "재단법인",
-        "summary": "재단법인 설립 및 등록."
+        "summary": "재단법인 설립 및 등록.",
+        "description": "",
+        "features": []
       },
       "association": {
         "title": "협회",
-        "summary": "협회 등록 서비스."
+        "summary": "협회 등록 서비스.",
+        "description": "",
+        "features": []
       },
       "commercial-shop": {
         "title": "사업자 등록 (매장)",
-        "summary": "상업용 매장 등록 서비스."
+        "summary": "상업용 매장 등록 서비스.",
+        "description": "",
+        "features": []
       },
       "employer-sso": {
         "title": "고용주 등록 (SSO)",
-        "summary": "고용주 및 사회보장 등록."
+        "summary": "고용주 및 사회보장 등록.",
+        "description": "",
+        "features": []
       },
       "vat-registration": {
         "title": "부가세 (VAT)",
-        "summary": "부가가치세(VAT) 등록 서비스."
+        "summary": "부가가치세(VAT) 등록 서비스.",
+        "description": "",
+        "features": []
       },
       "edit-info": {
         "title": "법인 정보 업데이트",
-        "summary": "중요한 회사 정보를 정확하고 신속하게 변경합니다."
+        "summary": "중요한 회사 정보를 정확하고 신속하게 변경합니다.",
+        "description": "",
+        "features": []
       },
       "company-name": {
         "title": "법인명 변경",
-        "summary": "회사 이름 변경 서비스."
+        "summary": "회사 이름 변경 서비스.",
+        "description": "",
+        "features": []
       },
       "company-seal": {
         "title": "법인 인감",
-        "summary": "새로운 법인 인감 등록."
+        "summary": "새로운 법인 인감 등록.",
+        "description": "",
+        "features": []
       },
       "directors": {
         "title": "이사 변경",
-        "summary": "이사 또는 권한 변경."
+        "summary": "이사 또는 권한 변경.",
+        "description": "",
+        "features": []
       },
       "signing-authority": {
         "title": "서명 권한",
-        "summary": "서명 권한자 업데이트."
+        "summary": "서명 권한자 업데이트.",
+        "description": "",
+        "features": []
       },
       "shareholders": {
         "title": "주주 / 지분",
-        "summary": "주주 명부(BOJ.5) 업데이트."
+        "summary": "주주 명부(BOJ.5) 업데이트.",
+        "description": "",
+        "features": []
       },
       "capital": {
         "title": "자본금 증자/감자",
-        "summary": "등록 자본금 증자 또는 감자."
+        "summary": "등록 자본금 증자 또는 감자.",
+        "description": "",
+        "features": []
       },
       "address": {
         "title": "주소 / 지점",
-        "summary": "본사 또는 지점 이전."
+        "summary": "본사 또는 지점 이전.",
+        "description": "",
+        "features": []
       },
       "objectives": {
         "title": "사업 목적",
-        "summary": "사업 목적 변경."
+        "summary": "사업 목적 변경.",
+        "description": "",
+        "features": []
       },
       "dissolution": {
         "title": "법인 청산",
-        "summary": "회사 해산 및 청산 서비스."
+        "summary": "회사 해산 및 청산 서비스.",
+        "description": "",
+        "features": []
       },
       "monthly-bookkeeping": {
-        "title": "월간 기장",
-        "summary": "거래 기록, 대조, 그리고 IFRS 준수 재무 제표 작성."
+        "title": "법인 기장",
+        "summary": "거래 기록, 대조, 그리고 IFRS 준수 재무 제표 작성.",
+        "hero": {
+          "title": "Stress-free Accounting & Tax Filing",
+          "subtitle": "Starting from 2,500 THB/month",
+          "description": "Expert accountants handling your Withholding Tax, VAT, and Social Security. We ensure you never miss a deadline.",
+          "cta": "See Packages",
+          "image": "/images/services/accounting-hero.webp"
+        },
+        "features": {
+          "title": "What's included?",
+          "items": [
+            {
+              "title": "Transaction Recording",
+              "description": "Daily recording of invoice, receipt, and expense."
+            },
+            {
+              "title": "Tax Filing (P.P.30, P.N.D.3/53)",
+              "description": "Monthly submission to Revenue Department."
+            },
+            {
+              "title": "Social Security",
+              "description": "Monthly SSO submission for employees."
+            },
+            {
+              "title": "Monthly Reports",
+              "description": "Profit & Loss and Balance Sheet in English/Thai."
+            }
+          ]
+        },
+        "process": {
+          "title": "How it works",
+          "steps": [
+            {
+              "title": "Send Documents",
+              "description": "Send us photos/scans via LINE or Email."
+            },
+            {
+              "title": "We Process",
+              "description": "Our team records and verifies everything."
+            },
+            {
+              "title": "Review & Confirm",
+              "description": "You confirm tax amounts before filing."
+            },
+            {
+              "title": "Filing & Report",
+              "description": "We file taxes and send you the monthly report."
+            }
+          ]
+        },
+        "faq": {
+          "title": "FAQs",
+          "items": [
+            {
+              "question": "Can you handle English documents?",
+              "answer": "Yes, our team is fluent in English and Thai."
+            },
+            {
+              "question": "Is software included?",
+              "answer": "Yes, we use cloud accounting software accessible 24/7."
+            }
+          ]
+        },
+        "description": ""
       },
       "monthly-tax": {
         "title": "월별 세무",
-        "summary": "월별 및 연간 세금 신고."
+        "summary": "월별 및 연간 세금 신고.",
+        "description": "",
+        "features": []
       },
       "close-financial": {
-        "title": "재무제표 결산",
-        "summary": "DBD 및 국세청에 연간 계정을 효율적으로 준비하고 결산합니다."
+        "title": "연간 결산",
+        "summary": "DBD 및 국세청에 연간 계정을 효율적으로 준비하고 결산합니다.",
+        "description": "",
+        "features": []
       },
       "personal-accounts": {
         "title": "개인 회계",
-        "summary": "개인 회계 및 세금 신고."
+        "summary": "개인 회계 및 세금 신고.",
+        "description": "",
+        "features": []
       },
       "audit": {
         "title": "회계 감사",
-        "summary": "CPA 및 법정 감사 서비스."
-      },
-      "tax-planning": {
-        "title": "세무 계획",
-        "summary": "최적화된 비즈니스 운영을 위한 전략적 세무 구조 및 자문."
+        "summary": "CPA 및 법정 감사 서비스.",
+        "description": "",
+        "features": []
       },
       "foreign-tax-id": {
         "title": "외국인 납세번호",
-        "summary": "외국인용 세금 ID 신청."
+        "summary": "외국인용 세금 ID 신청.",
+        "description": "",
+        "features": []
+      },
+      "tax-planning": {
+        "title": "절세 플랜",
+        "summary": "최적화된 비즈니스 운영을 위한 전략적 세무 구조 및 자문.",
+        "description": "",
+        "features": []
       },
       "tourism-licence": {
         "title": "여행업 면허",
-        "summary": "TAT 여행업 면허 신청."
+        "summary": "TAT 여행업 면허 신청.",
+        "description": "",
+        "features": []
       },
       "thai-fda": {
         "title": "태국 FDA",
-        "summary": "식품 및 의약품 FDA 등록."
+        "summary": "식품 및 의약품 FDA 등록.",
+        "description": "",
+        "features": []
       },
       "visa-work-permit": {
         "title": "비자 / 워크퍼밋",
-        "summary": "외국인 비자 및 워크퍼밋 서비스."
+        "summary": "외국인 비자 및 워크퍼밋 서비스.",
+        "description": "",
+        "features": []
       },
       "boi-promotion": {
         "title": "BOI 승인",
-        "summary": "BOI 투자 혜택 신청."
+        "summary": "BOI 투자 혜택 신청.",
+        "description": "",
+        "features": []
       },
       "foreign-business": {
         "title": "외국인 사업허가 (FBL/FBC)",
-        "summary": "외국인 사업 허가 라이선스 신청."
+        "summary": "외국인 사업 허가 라이선스 신청.",
+        "description": "",
+        "features": []
       },
       "website-build": {
         "title": "웹사이트 제작",
-        "summary": "웹사이트 개발 및 전자상거래."
+        "summary": "웹사이트 개발 및 전자상거래.",
+        "description": "",
+        "features": []
       },
       "facebook-page": {
         "title": "페이스북 페이지",
-        "summary": "페이스북 페이지 관리 및 콘텐츠."
+        "summary": "페이스북 페이지 관리 및 콘텐츠.",
+        "description": "",
+        "features": []
       },
       "line-oa": {
         "title": "LINE OA",
-        "summary": "LINE 공식 계정 설정."
+        "summary": "LINE 공식 계정 설정.",
+        "description": "",
+        "features": []
       },
       "tiktok": {
         "title": "TikTok",
-        "summary": "TikTok 마케팅 및 콘텐츠 제작."
+        "summary": "TikTok 마케팅 및 콘텐츠 제작.",
+        "description": "",
+        "features": []
       },
       "youtube": {
         "title": "YouTube",
-        "summary": "YouTube 영상 제작 및 홍보."
+        "summary": "YouTube 영상 제작 및 홍보.",
+        "description": "",
+        "features": []
       },
       "video-production": {
         "title": "영상 제작",
-        "summary": "전문 영상 촬영 및 편집."
+        "summary": "전문 영상 촬영 및 편집.",
+        "description": "",
+        "features": []
       },
       "paid-ads": {
         "title": "유료 광고 집행",
-        "summary": "페이스북, 구글, 틱톡 광고."
+        "summary": "페이스북, 구글, 틱톡 광고.",
+        "description": "",
+        "features": []
       },
       "ai-solutions": {
         "title": "AI 솔루션",
-        "summary": "AI 컨설팅 및 비즈니스 솔루션."
+        "summary": "AI 컨설팅 및 비즈니스 솔루션.",
+        "description": "",
+        "features": []
       },
       "odoo-erp": {
         "title": "Odoo ERP",
-        "summary": "Odoo ERP 구현 및 지원."
+        "summary": "Odoo ERP 구현 및 지원.",
+        "description": "",
+        "features": []
       },
       "custom-software": {
         "title": "소프트웨어 개발",
-        "summary": "맞춤형 소프트웨어 개발 서비스."
+        "summary": "맞춤형 소프트웨어 개발 서비스.",
+        "description": "",
+        "features": []
       }
     },
     "bookkeeping": {
@@ -892,10 +907,6 @@
           }
         ]
       }
-    },
-    "hero": {
-      "title": "서비스",
-      "description": "당사의 핵심 서비스는 5가지 카테고리로 나뉩니다."
     }
   },
   "blog": {
@@ -994,6 +1005,7 @@
     "back": "Back to homepage"
   },
   "contact": {
+    "title": "문의",
     "close": "닫기",
     "form": {
       "heading": "메시지 보내기",
@@ -1067,14 +1079,41 @@
     "formSection": {
       "heading": "저희가 연락드리길 원하시나요?",
       "subheading": "기꺼이 도와드리겠습니다! 아래 양식을 작성해 주세요."
-    },
-    "title": "문의"
+    }
   },
   "aboutUs": {
     "breadcrumb": "회사 소개",
     "hero": {
       "title": "태국에서의 성장을 더 자신 있게.",
       "subtitle": "Virintira는 회계 전문성과 최신 기술을 결합해, 투명하고 신뢰할 수 있는 원스톱 서비스를 제공합니다."
+    },
+    "mission": {
+      "heading": "Our Mission",
+      "description": "To provide foreign and local entrepreneurs with seamless, compliant, and highly efficient back-office support, enabling them to focus entirely on scaling their businesses."
+    },
+    "story": {
+      "heading": "Our Story",
+      "paragraphs": [
+        "Founded on the principle of absolute transparency, Virintira started with a simple goal: making Thai corporate compliance easy to understand.",
+        "Today, we serve hundreds of companies—from emerging startups to established multinational corporations—delivering tailored financial strategies and rock-solid accounting."
+      ]
+    },
+    "values": {
+      "heading": "Our Core Values",
+      "items": {
+        "transparency": {
+          "title": "Transparency First",
+          "description": "No hidden fees, no opaque processes. We believe in clear communication at every stage."
+        },
+        "speed": {
+          "title": "Uncompromising Speed",
+          "description": "Time is money. Our digital-first approach ensures rapid turnarounds for all filings and reports."
+        },
+        "reliability": {
+          "title": "Rock-Solid Reliability",
+          "description": "Fully certified by the DBD, we've never left a project unfinished. Your business is safe with us."
+        }
+      }
     },
     "cta": {
       "heading": "Virintira와 함께, 더 자신 있게 다음 단계로.",

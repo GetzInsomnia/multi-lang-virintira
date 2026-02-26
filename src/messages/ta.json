@@ -1,7 +1,7 @@
 {
   "metadata": {
     "home": {
-      "title": "Virintira | Multilingual Accounting Partner",
+      "title": "Virintira | கணக்கியல் மற்றும் வணிக மேலாண்மை சேவைகள்",
       "description": "Trusted Thai accounting firm delivering bookkeeping, payroll, and compliance in 16 languages.",
       "keywords": [
         "Virintira",
@@ -10,6 +10,16 @@
         "payroll",
         "tax filing",
         "multilingual"
+      ]
+    },
+    "aboutUs": {
+      "title": "About Virintira | Your Reliable Thai Business Partner",
+      "description": "Learn about Virintira's mission, story, and core values. We provide transparent, high-speed corporate compliance and accounting in Thailand.",
+      "keywords": [
+        "About Virintira",
+        "Thai accounting firm",
+        "business registration Thailand",
+        "corporate compliance"
       ]
     },
     "promotion": {
@@ -68,6 +78,7 @@
     "cta": {
       "call": "Call {phone}",
       "chat": "LINE உரையாடல்",
+      "whatsapp": "WhatsApp",
       "consult": "மின்னஞ்சல் Virintira",
       "book": "ஆலோசனை பதிவு செய்",
       "explore_category": "சேவைகளைப் பார்க்கவும்",
@@ -75,222 +86,31 @@
       "trigger": "இலவச ஆலோசனை"
     },
     "header": {
-      "announcement": {
-        "message": "Certified accountants helping entrepreneurs thrive across Thailand.",
-        "actionLabel": "Book consultation",
-        "actionHref": "/promotion"
-      },
-      "nav": [
-        {
-          "label": "சலுகைகள்",
-          "href": "/promotion",
-          "highlight": true,
-          "icon": "promotion"
+      "nav": {
+        "promotion": {
+          "label": "சலுகைகள்"
         },
-        {
-          "label": "சேவைகள்",
-          "href": "/services"
+        "services": {
+          "label": "சேவைகள்"
         },
-        {
-          "label": "கட்டுரைகள்",
-          "href": "/blog/bookkeeping-matters"
+        "blog": {
+          "label": "கட்டுரைகள்"
         },
-        {
-          "label": "பதிவிறக்க",
-          "href": "/resources"
+        "resources": {
+          "label": "பதிவிறக்க"
         },
-        {
-          "label": "தொடர்பு",
-          "href": "/contact"
+        "contact": {
+          "label": "தொடர்பு"
         }
-      ],
+      },
       "megaMenu": {
-        "triggerLabel": "சேவைகள்",
-        "columns": [
-          {
-            "title": "பதிவுகள்",
-            "items": [
-              {
-                "label": "கம்பெனி (Co., Ltd.)",
-                "href": "/services/registrations/registration"
-              },
-              {
-                "label": "லிமிடெட் பார்ட்னர்ஷிப்",
-                "href": "/services/registrations/limited-partnership"
-              },
-              {
-                "label": "பவுண்டேஷன்",
-                "href": "/services/registrations/foundation"
-              },
-              {
-                "label": "அசோசியேஷன்",
-                "href": "/services/registrations/association"
-              },
-              {
-                "label": "கமர்ஷியல் (Shop)",
-                "href": "/services/registrations/commercial-shop"
-              },
-              {
-                "label": "எம்ப்ளாயர் (SSO)",
-                "href": "/services/registrations/employer-sso"
-              },
-              {
-                "label": "VAT பதிவு",
-                "href": "/services/registrations/vat-registration"
-              }
-            ]
-          },
-          {
-            "title": "மாற்றங்கள்",
-            "items": [
-              {
-                "label": "கம்பெனி பெயர்",
-                "href": "/services/corporate-changes/company-name"
-              },
-              {
-                "label": "கம்பெனி சீல்",
-                "href": "/services/corporate-changes/company-seal"
-              },
-              {
-                "label": "டைரக்டர்கள்",
-                "href": "/services/corporate-changes/directors"
-              },
-              {
-                "label": "சைனிங் பவர்",
-                "href": "/services/corporate-changes/signing-authority"
-              },
-              {
-                "label": "ஷேர்ஹோல்டர்ஸ்",
-                "href": "/services/corporate-changes/shareholders"
-              },
-              {
-                "label": "கேபிட்டல் (மூலதனம்)",
-                "href": "/services/corporate-changes/capital"
-              },
-              {
-                "label": "முகவரி / கிளை",
-                "href": "/services/corporate-changes/address"
-              },
-              {
-                "label": "நோக்கங்கள்",
-                "href": "/services/corporate-changes/objectives"
-              },
-              {
-                "label": "கலைப்பு",
-                "href": "/services/corporate-changes/dissolution"
-              }
-            ]
-          },
-          {
-            "title": "கணக்கு & ஆடிட்",
-            "items": [
-              {
-                "label": "கம்பெனி அக்கவுண்ட்ஸ்",
-                "href": "/services/accounting-audit/monthly-bookkeeping"
-              },
-              {
-                "label": "மாதாந்திர வரி",
-                "href": "/services/accounting-audit/monthly-tax"
-              },
-              {
-                "label": "ஆண்டு அறிக்கை",
-                "href": "/services/accounting-audit/close-financial"
-              },
-              {
-                "label": "பர்சனல் அக்கவுண்ட்ஸ்",
-                "href": "/services/accounting-audit/personal-accounts"
-              },
-              {
-                "label": "ஆடிட்",
-                "href": "/services/accounting-audit/audit"
-              },
-              {
-                "label": "வரி திட்டமிடல்",
-                "href": "/services/accounting-audit/tax-planning"
-              },
-              {
-                "label": "வெளிநாட்டு வரி எண்",
-                "href": "/services/accounting-audit/foreign-tax-id"
-              }
-            ]
-          },
-          {
-            "title": "லைசென்ஸ்",
-            "items": [
-              {
-                "label": "டூரிசம் லைசென்ஸ்",
-                "href": "/services/licensing/tourism-licence"
-              },
-              {
-                "label": "தாய்லாந்து FDA",
-                "href": "/services/licensing/thai-fda"
-              },
-              {
-                "label": "விசா & வொர்க் பர்மிட்",
-                "href": "/services/licensing/visa-work-permit"
-              },
-              {
-                "label": "BOI சலுகை",
-                "href": "/services/licensing/boi-promotion"
-              },
-              {
-                "label": "FBL/FBC லைசென்ஸ்",
-                "href": "/services/licensing/foreign-business"
-              }
-            ]
-          },
-          {
-            "title": "டிஜிட்டல் மார்க்கெட்டிங்",
-            "items": [
-              {
-                "label": "வெப்சைட் உருவாக்கம்",
-                "href": "/services/digital-marketing/website-build"
-              },
-              {
-                "label": "Facebook Page",
-                "href": "/services/digital-marketing/facebook-page"
-              },
-              {
-                "label": "LINE OA",
-                "href": "/services/digital-marketing/line-oa"
-              },
-              {
-                "label": "TikTok",
-                "href": "/services/digital-marketing/tiktok"
-              },
-              {
-                "label": "YouTube",
-                "href": "/services/digital-marketing/youtube"
-              },
-              {
-                "label": "வீடியோ தயாரிப்பு",
-                "href": "/services/digital-marketing/video-production"
-              },
-              {
-                "label": "விளம்பரங்கள்",
-                "href": "/services/digital-marketing/paid-ads"
-              },
-              {
-                "label": "AI தீர்வுகள்",
-                "href": "/services/digital-marketing/ai-solutions"
-              },
-              {
-                "label": "Odoo ERP",
-                "href": "/services/digital-marketing/odoo-erp"
-              },
-              {
-                "label": "சாப்ட்வேர் டெவலப்மெண்ட்",
-                "href": "/services/digital-marketing/custom-software"
-              }
-            ]
-          }
-        ]
+        "triggerLabel": "சேவைகள்"
       },
       "ctaPrimary": "Talk to an expert",
       "ctaSecondary": "LINE OA",
       "search": {
-        "placeholder": "Search accounting resources",
-        "mobilePlaceholder": "Search accounting resources",
+        "placeholder": "சேவைகள் அல்லது கட்டுரைகளைத் தேடுங்கள்",
+        "mobilePlaceholder": "சேவைகள் அல்லது கட்டுரைகளைத் தேடுங்கள்",
         "toggleLabel": "Toggle search",
         "submitLabel": "Search"
       },
@@ -345,44 +165,35 @@
         "applyLicense": "ขอใบอนุญาต",
         "marketing": "การตลาดออนไลน์"
       },
-      "quickLinks": [
-        {
-          "label": "சலுகைகள்",
-          "href": "/promotion"
+      "quickLinks": {
+        "services": {
+          "label": "சலுகைகள்"
         },
-        {
-          "label": "கட்டுரைகள்",
-          "href": "/blog/bookkeeping-matters"
+        "promotion": {
+          "label": "கட்டுரைகள்"
         },
-        {
-          "label": "பதிவிறக்கங்கள்",
-          "href": "/resources"
+        "about": {
+          "label": "பதிவிறக்கங்கள்"
         },
-        {
-          "label": "தொடர்பு",
-          "href": "/contact"
+        "careers": {
+          "label": "தொடர்பு"
         },
-        {
-          "label": "பதிவுகள்",
-          "href": "/services/registrations"
+        "contact": {
+          "label": "பதிவுகள்"
         },
-        {
-          "label": "மாற்றங்கள்",
-          "href": "/services/corporate-changes"
+        "item5": {
+          "label": "மாற்றங்கள்"
         },
-        {
-          "label": "கணக்கு & ஆடிட்",
-          "href": "/services/accounting-audit"
+        "item6": {
+          "label": "கணக்கு & ஆடிட்"
         },
-        {
-          "label": "லைசென்ஸ்",
-          "href": "/services/licensing"
+        "item7": {
+          "label": "லைசென்ஸ்"
         },
-        {
-          "label": "டிஜிட்டல் மார்க்கெட்டிங்",
-          "href": "/services/digital-marketing"
+        "item8": {
+          "label": "டிஜிட்டல் மார்க்கெட்டிங்"
         }
-      ],
+      },
       "legal": "Copyright © {year} Virintira Co., Ltd. All rights reserved. | {poweredBy}"
     }
   },
@@ -391,10 +202,10 @@
     "promotion": "சலுகைகள்",
     "resources": "வளங்கள்",
     "services": "சேவைகள்",
-    "blog": "வலைப்பதிவு",
-    "howTo": "வழிகாட்டிகள்",
     "otherServices": "பிற சேவைகள்",
-    "contactDirectly": "எங்களை நேரடியாகத் தொடர்பு கொள்ளுங்கள்"
+    "contactDirectly": "எங்களை நேரடியாகத் தொடர்பு கொள்ளுங்கள்",
+    "blog": "வலைப்பதிவு",
+    "howTo": "வழிகாட்டிகள்"
   },
   "home": {
     "hero": {
@@ -420,7 +231,7 @@
       "viewLicense": "எங்கள் பெருநிறுவன பதிவைப் பார்க்கவும்"
     },
     "services": {
-      "heading": "Popular services",
+      "heading": "பிரபலமான சேவைகள்",
       "items": [
         {
           "title": "நிறுவன பதிவு",
@@ -442,7 +253,10 @@
           "title": "வரி திட்டமிடல்",
           "description": "உகந்த வணிக செயல்பாடுகளுக்கான மூலோபாய வரி கட்டமைப்பு மற்றும் ஆலோசனை."
         }
-      ]
+      ],
+      "hero": {
+        "description": "Explore our comprehensive range of services designed to help your business grow."
+      }
     },
     "highlights": {
       "heading": "Virintira-வை ஏன் தேர்வு செய்ய வேண்டும்",
@@ -517,26 +331,23 @@
     },
     "documents": {
       "heading": "Downloadable resources",
-      "items": [
-        {
+      "items": {
+        "monthly-close": {
           "title": "Monthly close checklist",
           "description": "A step-by-step framework to close your books accurately every month.",
-          "actionLabel": "Download PDF",
-          "actionHref": "https://www.virintira.com/resources/monthly-close.pdf"
+          "actionLabel": "Download PDF"
         },
-        {
+        "payroll-calendar": {
           "title": "Payroll compliance calendar",
           "description": "Important Thai payroll and social security deadlines in one sheet.",
-          "actionLabel": "View calendar",
-          "actionHref": "https://www.virintira.com/resources/payroll-calendar.pdf"
+          "actionLabel": "View calendar"
         },
-        {
+        "cashflow-template": {
           "title": "Cash flow tracker",
           "description": "Google Sheets template for monitoring inflows, outflows, and runway.",
-          "actionLabel": "Open template",
-          "actionHref": "https://www.virintira.com/resources/cashflow-template"
+          "actionLabel": "Open template"
         }
-      ]
+      }
     },
     "contact": {
       "heading": "Need something custom?",
@@ -549,6 +360,10 @@
     }
   },
   "services": {
+    "hero": {
+      "description": "எங்கள் முக்கிய சேவைகள் 5 வகைகளாகப் பிரிக்கப்பட்டுள்ளன.",
+      "title": "சேவைகள்"
+    },
     "categories": {
       "registrations": {
         "title": "பதிவுகள்",
@@ -582,160 +397,360 @@
     },
     "items": {
       "registration": {
-        "title": "நிறுவன பதிவு",
-        "summary": "நிபுணர் வழிகாட்டுதலுடன் வரையறுக்கப்பட்ட நிறுவனங்கள் மற்றும் கூட்டாண்மைகளுக்கான முழுமையான பதிவு."
+        "title": "கம்பெனி (Co., Ltd.)",
+        "summary": "நிபுணர் வழிகாட்டுதலுடன் வரையறுக்கப்பட்ட நிறுவனங்கள் மற்றும் கூட்டாண்மைகளுக்கான முழுமையான பதிவு.",
+        "hero": {
+          "title": "Start your Thai Company correctly",
+          "subtitle": "Trusted by 500+ founders",
+          "description": "We handle the Department of Business Development, Tax Registration, and Social Security so you can focus on your business.",
+          "cta": "Get a Quote",
+          "image": "/images/services/registration-hero.webp"
+        },
+        "features": {
+          "title": "Everything you need to trade legally",
+          "items": [
+            {
+              "title": "Company Name Reservation",
+              "description": "We check and reserve your name with the DBD instantly."
+            },
+            {
+              "title": "MoA & Articles of Association",
+              "description": "Drafting all statutory meeting notes and bylaws."
+            },
+            {
+              "title": "VAT & Tax Registration",
+              "description": "Getting your Tax ID and VAT certificate (P.P.20)."
+            },
+            {
+              "title": "Bank Account Opening",
+              "description": "Assistance with board resolutions to open your corporate bank account."
+            }
+          ]
+        },
+        "process": {
+          "title": "Registration Process",
+          "steps": [
+            {
+              "title": "Consultation",
+              "description": "We clarify your business objectives and shareholders."
+            },
+            {
+              "title": "Name Reservation",
+              "description": "Locking in your company name (1-3 days)."
+            },
+            {
+              "title": "Filing & Signing",
+              "description": "Directors sign the application. We submit to DBD."
+            },
+            {
+              "title": "Company Formed",
+              "description": "Receive your Affidavit and Company Certificate."
+            }
+          ]
+        },
+        "faq": {
+          "title": "Common Questions",
+          "items": [
+            {
+              "question": "How long does it take?",
+              "answer": "Typically 3-5 business days after name reservation."
+            },
+            {
+              "question": "Do I need a Thai shareholder?",
+              "answer": "Yes, unless you have BOI promotion or FBL."
+            }
+          ]
+        },
+        "description": ""
       },
       "limited-partnership": {
         "title": "லிமிடெட் பார்ட்னர்ஷிப்",
-        "summary": "வரையறுக்கப்பட்ட கூட்டாண்மை பதிவு."
+        "summary": "வரையறுக்கப்பட்ட கூட்டாண்மை பதிவு.",
+        "description": "",
+        "features": []
       },
       "foundation": {
         "title": "பவுண்டேஷன்",
-        "summary": "அறக்கட்டளை நிறுவுதல்."
+        "summary": "அறக்கட்டளை நிறுவுதல்.",
+        "description": "",
+        "features": []
       },
       "association": {
         "title": "அசோசியேஷன்",
-        "summary": "சங்கம் பதிவு செய்தல்."
+        "summary": "சங்கம் பதிவு செய்தல்.",
+        "description": "",
+        "features": []
       },
       "commercial-shop": {
         "title": "கமர்ஷியல் (Shop)",
-        "summary": "வணிக கடை பதிவு."
+        "summary": "வணிக கடை பதிவு.",
+        "description": "",
+        "features": []
       },
       "employer-sso": {
         "title": "எம்ப்ளாயர் (SSO)",
-        "summary": "வேலை வழங்குநர் மற்றும் சமூக பாதுகாப்பு பதிவு."
+        "summary": "வேலை வழங்குநர் மற்றும் சமூக பாதுகாப்பு பதிவு.",
+        "description": "",
+        "features": []
       },
       "vat-registration": {
         "title": "VAT பதிவு",
-        "summary": "மதிப்பு கூட்டு வரி பதிவு சேவை."
+        "summary": "மதிப்பு கூட்டு வரி பதிவு சேவை.",
+        "description": "",
+        "features": []
       },
       "edit-info": {
         "title": "நிறுவன தகவல் புதுப்பிப்புகள்",
-        "summary": "முக்கியமான நிறுவன தகவல்களுக்கு துல்லியமான, சரியான நேர புதுப்பிப்புகள்."
+        "summary": "முக்கியமான நிறுவன தகவல்களுக்கு துல்லியமான, சரியான நேர புதுப்பிப்புகள்.",
+        "description": "",
+        "features": []
       },
       "company-name": {
         "title": "கம்பெனி பெயர்",
-        "summary": "கம்பெனி பெயர் மாற்றம் சேவை."
+        "summary": "கம்பெனி பெயர் மாற்றம் சேவை.",
+        "description": "",
+        "features": []
       },
       "company-seal": {
         "title": "கம்பெனி சீல்",
-        "summary": "புதிய கம்பெனி முத்திரை பதிவு."
+        "summary": "புதிய கம்பெனி முத்திரை பதிவு.",
+        "description": "",
+        "features": []
       },
       "directors": {
         "title": "டைரக்டர்கள்",
-        "summary": "இயக்குநர் அல்லது அதிகாரம் மாற்றம்."
+        "summary": "இயக்குநர் அல்லது அதிகாரம் மாற்றம்.",
+        "description": "",
+        "features": []
       },
       "signing-authority": {
         "title": "சைனிங் பவர்",
-        "summary": "கையொப்பமிடும் அதிகாரம் புதுப்பித்தல்."
+        "summary": "கையொப்பமிடும் அதிகாரம் புதுப்பித்தல்.",
+        "description": "",
+        "features": []
       },
       "shareholders": {
         "title": "ஷேர்ஹோல்டர்ஸ்",
-        "summary": "பங்குதாரர் பட்டியல் (BOJ.5) புதுப்பித்தல்."
+        "summary": "பங்குதாரர் பட்டியல் (BOJ.5) புதுப்பித்தல்.",
+        "description": "",
+        "features": []
       },
       "capital": {
         "title": "கேபிட்டல் (மூலதனம்)",
-        "summary": "மூலதனம் அதிகரிப்பு அல்லது குறைப்பு."
+        "summary": "மூலதனம் அதிகரிப்பு அல்லது குறைப்பு.",
+        "description": "",
+        "features": []
       },
       "address": {
         "title": "முகவரி / கிளை",
-        "summary": "தலைமையகம் அல்லது கிளை இடமாற்றம்."
+        "summary": "தலைமையகம் அல்லது கிளை இடமாற்றம்.",
+        "description": "",
+        "features": []
       },
       "objectives": {
         "title": "நோக்கங்கள்",
-        "summary": "வணிக நோக்கங்களை மாற்றுதல்."
+        "summary": "வணிக நோக்கங்களை மாற்றுதல்.",
+        "description": "",
+        "features": []
       },
       "dissolution": {
         "title": "கலைப்பு",
-        "summary": "கம்பெனி கலைப்பு மற்றும் மூடுதல்."
+        "summary": "கம்பெனி கலைப்பு மற்றும் மூடுதல்.",
+        "description": "",
+        "features": []
       },
       "monthly-bookkeeping": {
-        "title": "மாதாந்திர கணக்குப்பதிவு",
-        "summary": "பரிவர்த்தனை பதிவு, சமரசங்கள் மற்றும் IFRS-இணக்க அறிக்கைகள்."
+        "title": "கம்பெனி அக்கவுண்ட்ஸ்",
+        "summary": "பரிவர்த்தனை பதிவு, சமரசங்கள் மற்றும் IFRS-இணக்க அறிக்கைகள்.",
+        "hero": {
+          "title": "Stress-free Accounting & Tax Filing",
+          "subtitle": "Starting from 2,500 THB/month",
+          "description": "Expert accountants handling your Withholding Tax, VAT, and Social Security. We ensure you never miss a deadline.",
+          "cta": "See Packages",
+          "image": "/images/services/accounting-hero.webp"
+        },
+        "features": {
+          "title": "What's included?",
+          "items": [
+            {
+              "title": "Transaction Recording",
+              "description": "Daily recording of invoice, receipt, and expense."
+            },
+            {
+              "title": "Tax Filing (P.P.30, P.N.D.3/53)",
+              "description": "Monthly submission to Revenue Department."
+            },
+            {
+              "title": "Social Security",
+              "description": "Monthly SSO submission for employees."
+            },
+            {
+              "title": "Monthly Reports",
+              "description": "Profit & Loss and Balance Sheet in English/Thai."
+            }
+          ]
+        },
+        "process": {
+          "title": "How it works",
+          "steps": [
+            {
+              "title": "Send Documents",
+              "description": "Send us photos/scans via LINE or Email."
+            },
+            {
+              "title": "We Process",
+              "description": "Our team records and verifies everything."
+            },
+            {
+              "title": "Review & Confirm",
+              "description": "You confirm tax amounts before filing."
+            },
+            {
+              "title": "Filing & Report",
+              "description": "We file taxes and send you the monthly report."
+            }
+          ]
+        },
+        "faq": {
+          "title": "FAQs",
+          "items": [
+            {
+              "question": "Can you handle English documents?",
+              "answer": "Yes, our team is fluent in English and Thai."
+            },
+            {
+              "question": "Is software included?",
+              "answer": "Yes, we use cloud accounting software accessible 24/7."
+            }
+          ]
+        },
+        "description": ""
       },
       "monthly-tax": {
         "title": "மாதாந்திர வரி",
-        "summary": "மாதாந்திர வரி தாக்கல் சேவை."
+        "summary": "மாதாந்திர வரி தாக்கல் சேவை.",
+        "description": "",
+        "features": []
       },
       "close-financial": {
-        "title": "நிதி அறிக்கை முடித்தல்",
-        "summary": "DBD மற்றும் வருவாய் துறைக்கு திறமையாக தயாரிக்கப்பட்டு முடிக்கப்பட்ட ஆண்டு கணக்குகள்."
+        "title": "ஆண்டு அறிக்கை",
+        "summary": "DBD மற்றும் வருவாய் துறைக்கு திறமையாக தயாரிக்கப்பட்டு முடிக்கப்பட்ட ஆண்டு கணக்குகள்.",
+        "description": "",
+        "features": []
       },
       "personal-accounts": {
         "title": "பர்சனல் அக்கவுண்ட்ஸ்",
-        "summary": "தனிநபர் கணக்கு மற்றும் வரி சேவை."
+        "summary": "தனிநபர் கணக்கு மற்றும் வரி சேவை.",
+        "description": "",
+        "features": []
       },
       "audit": {
         "title": "ஆடிட்",
-        "summary": "சட்டப்பூர்வ தணிக்கை மற்றும் CPA சேவைகள்."
-      },
-      "tax-planning": {
-        "title": "வரி திட்டமிடல்",
-        "summary": "உகந்த வணிக செயல்பாடுகளுக்கான மூலோபாய வரி கட்டமைப்பு மற்றும் ஆலோசனை."
+        "summary": "சட்டப்பூர்வ தணிக்கை மற்றும் CPA சேவைகள்.",
+        "description": "",
+        "features": []
       },
       "foreign-tax-id": {
         "title": "வெளிநாட்டு வரி எண்",
-        "summary": "வெளிநாட்டினருக்கான வரி எண் விண்ணப்பம்."
+        "summary": "வெளிநாட்டினருக்கான வரி எண் விண்ணப்பம்.",
+        "description": "",
+        "features": []
+      },
+      "tax-planning": {
+        "title": "வரி திட்டமிடல்",
+        "summary": "உகந்த வணிக செயல்பாடுகளுக்கான மூலோபாய வரி கட்டமைப்பு மற்றும் ஆலோசனை.",
+        "description": "",
+        "features": []
       },
       "tourism-licence": {
         "title": "டூரிசம் லைசென்ஸ்",
-        "summary": "TAT சுற்றுலா உரிமம் விண்ணப்பம்."
+        "summary": "TAT சுற்றுலா உரிமம் விண்ணப்பம்.",
+        "description": "",
+        "features": []
       },
       "thai-fda": {
         "title": "தாய்லாந்து FDA",
-        "summary": "உணவு மற்றும் மருந்து FDA பதிவு."
+        "summary": "உணவு மற்றும் மருந்து FDA பதிவு.",
+        "description": "",
+        "features": []
       },
       "visa-work-permit": {
         "title": "விசா & வொர்க் பர்மிட்",
-        "summary": "விசா மற்றும் பணி அனுமதி சேவை."
+        "summary": "விசா மற்றும் பணி அனுமதி சேவை.",
+        "description": "",
+        "features": []
       },
       "boi-promotion": {
         "title": "BOI சலுகை",
-        "summary": "BOI முதலீட்டு சலுகை விண்ணப்பம்."
+        "summary": "BOI முதலீட்டு சலுகை விண்ணப்பம்.",
+        "description": "",
+        "features": []
       },
       "foreign-business": {
         "title": "FBL/FBC லைசென்ஸ்",
-        "summary": "வெளிநாட்டு வணிக உரிமம் விண்ணப்பம்."
+        "summary": "வெளிநாட்டு வணிக உரிமம் விண்ணப்பம்.",
+        "description": "",
+        "features": []
       },
       "website-build": {
         "title": "வெப்சைட் உருவாக்கம்",
-        "summary": "இணையதளம் மற்றும் இ-காமர்ஸ் மேம்பாடு."
+        "summary": "இணையதளம் மற்றும் இ-காமர்ஸ் மேம்பாடு.",
+        "description": "",
+        "features": []
       },
       "facebook-page": {
         "title": "Facebook Page",
-        "summary": "Facebook பக்க நிர்வாகம் மற்றும் உள்ளடக்கம்."
+        "summary": "Facebook பக்க நிர்வாகம் மற்றும் உள்ளடக்கம்.",
+        "description": "",
+        "features": []
       },
       "line-oa": {
         "title": "LINE OA",
-        "summary": "LINE அதிகாரப்பூர்வ கணக்கு அமைத்தல்."
+        "summary": "LINE அதிகாரப்பூர்வ கணக்கு அமைத்தல்.",
+        "description": "",
+        "features": []
       },
       "tiktok": {
         "title": "TikTok",
-        "summary": "TikTok மார்க்கெட்டிங் மற்றும் வீடியோக்கள்."
+        "summary": "TikTok மார்க்கெட்டிங் மற்றும் வீடியோக்கள்.",
+        "description": "",
+        "features": []
       },
       "youtube": {
         "title": "YouTube",
-        "summary": "YouTube வீடியோ தயாரிப்பு மற்றும் விளம்பரம்."
+        "summary": "YouTube வீடியோ தயாரிப்பு மற்றும் விளம்பரம்.",
+        "description": "",
+        "features": []
       },
       "video-production": {
         "title": "வீடியோ தயாரிப்பு",
-        "summary": "தொழில்முறை வீடியோ படப்பிடிப்பு மற்றும் எடிட்டிங்."
+        "summary": "தொழில்முறை வீடியோ படப்பிடிப்பு மற்றும் எடிட்டிங்.",
+        "description": "",
+        "features": []
       },
       "paid-ads": {
         "title": "விளம்பரங்கள்",
-        "summary": "Facebook, Google மற்றும் TikTok விளம்பரங்கள்."
+        "summary": "Facebook, Google மற்றும் TikTok விளம்பரங்கள்.",
+        "description": "",
+        "features": []
       },
       "ai-solutions": {
         "title": "AI தீர்வுகள்",
-        "summary": "AI ஆலோசனை மற்றும் வணிக தீர்வுகள்."
+        "summary": "AI ஆலோசனை மற்றும் வணிக தீர்வுகள்.",
+        "description": "",
+        "features": []
       },
       "odoo-erp": {
         "title": "Odoo ERP",
-        "summary": "Odoo ERP செயல்படுத்தல் மற்றும் ஆதரவு."
+        "summary": "Odoo ERP செயல்படுத்தல் மற்றும் ஆதரவு.",
+        "description": "",
+        "features": []
       },
       "custom-software": {
         "title": "சாப்ட்வேர் டெவலப்மெண்ட்",
-        "summary": "தனிப்பயன் மென்பொருள் மேம்பாட்டு சேவைகள்."
+        "summary": "தனிப்பயன் மென்பொருள் மேம்பாட்டு சேவைகள்.",
+        "description": "",
+        "features": []
       }
     },
     "bookkeeping": {
@@ -892,10 +907,6 @@
           }
         ]
       }
-    },
-    "hero": {
-      "title": "சேவைகள்",
-      "description": "எங்கள் முக்கிய சேவைகள் 5 வகைகளாகப் பிரிக்கப்பட்டுள்ளன."
     }
   },
   "blog": {
@@ -994,6 +1005,7 @@
     "back": "Back to homepage"
   },
   "contact": {
+    "title": "தொடர்பு",
     "close": "மூடு",
     "form": {
       "heading": "செய்தி அனுப்பவும்",
@@ -1067,14 +1079,41 @@
     "formSection": {
       "heading": "நாங்கள் உங்களைத் தொடர்புகொள்ள விரும்புகிறீர்களா?",
       "subheading": "மகிழ்ச்சியுடன்! உங்கள் விவரங்களை கீழே நிரப்பவும்."
-    },
-    "title": "தொடர்பு"
+    }
   },
   "aboutUs": {
     "breadcrumb": "எங்களைப் பற்றி",
     "hero": {
       "title": "தாய்லாந்தில் நம்பிக்கையுடன் வளருங்கள்.",
       "subtitle": "Virintira கணக்கியல் நிபுணத்துவத்தையும் நவீன தொழில்நுட்பத்தையும் இணைத்து, முழுமையான சேவைகளை வெளிப்படையாகவும் நம்பகமாகவும் வழங்குகிறது."
+    },
+    "mission": {
+      "heading": "Our Mission",
+      "description": "To provide foreign and local entrepreneurs with seamless, compliant, and highly efficient back-office support, enabling them to focus entirely on scaling their businesses."
+    },
+    "story": {
+      "heading": "Our Story",
+      "paragraphs": [
+        "Founded on the principle of absolute transparency, Virintira started with a simple goal: making Thai corporate compliance easy to understand.",
+        "Today, we serve hundreds of companies—from emerging startups to established multinational corporations—delivering tailored financial strategies and rock-solid accounting."
+      ]
+    },
+    "values": {
+      "heading": "Our Core Values",
+      "items": {
+        "transparency": {
+          "title": "Transparency First",
+          "description": "No hidden fees, no opaque processes. We believe in clear communication at every stage."
+        },
+        "speed": {
+          "title": "Uncompromising Speed",
+          "description": "Time is money. Our digital-first approach ensures rapid turnarounds for all filings and reports."
+        },
+        "reliability": {
+          "title": "Rock-Solid Reliability",
+          "description": "Fully certified by the DBD, we've never left a project unfinished. Your business is safe with us."
+        }
+      }
     },
     "cta": {
       "heading": "Virintira உடன், நம்பிக்கையுடன் அடுத்த படிக்குச் செல்லுங்கள்.",

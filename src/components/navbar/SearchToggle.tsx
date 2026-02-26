@@ -35,18 +35,26 @@ export default function SearchToggle({
     onOpenChange(false);
   }, [onOpenChange]);
 
-  // ปิดเมื่อคลิกนอก (delay 1 tick กันทับคลิกเปิด)
+  // ปิดเมื่อคลิกนอกพร้อมบล็อกการคลิกทะลุลงปุ่มด้านล่าง (Capture Phase)
   useEffect(() => {
     if (!open) return;
-    const onDocDown = (e: MouseEvent) => {
+    const onDocClick = (e: MouseEvent | TouchEvent) => {
       const t = e.target as Node | null;
       if (shellRef.current?.contains(t) || buttonRef.current?.contains(t)) return;
+
+      e.stopPropagation();
+      e.preventDefault();
       close();
     };
-    const id = setTimeout(() => document.addEventListener('mousedown', onDocDown), 0);
+
+    // ใช้ Capture Phase เพื่อดักจับและฆ่า Event ก่อนที่มันจะเดินทางไปถึงปุ่มบนหน้าเว็บ
+    const id = setTimeout(() => {
+      document.addEventListener('click', onDocClick, { capture: true });
+    }, 0);
+
     return () => {
       clearTimeout(id);
-      document.removeEventListener('mousedown', onDocDown);
+      document.removeEventListener('click', onDocClick, { capture: true });
     };
   }, [open, close]);
 
@@ -90,6 +98,7 @@ export default function SearchToggle({
 
   return (
     <div className="relative h-full" aria-hidden={shouldHideTrigger ? true : undefined}>
+
       {/* ปุ่มแว่นขยาย */}
       {!shouldHideTrigger && (
         <button
@@ -113,12 +122,12 @@ export default function SearchToggle({
         </button>
       )}
 
-      {/* ชั้นนอกสุด: จัดวาง + กึ่งกลางด้วย flex (overlay stays mounted regardless of compaction) */}
+      {/* ชั้นนอกสุด: จัดวาง + กึ่งกลางด้วย flex */}
       <div
         className={[
-          'fixed inset-x-0 z-40 pointer-events-none flex justify-center',
+          'fixed inset-x-0 z-40 pointer-events-none flex justify-center px-4 md:px-0',
         ].join(' ')}
-        style={{ top: 'var(--header-height)' }}
+        style={{ top: 'calc(var(--header-height) + 1px)' }}
       >
         {/* ชั้นกลาง: คุม opacity + pointer-events */}
         <div
@@ -139,8 +148,7 @@ export default function SearchToggle({
               open ? 'translate-y-0' : '-translate-y-2',
             ].join(' ')}
           >
-            {/* ชั้นคอนเทนต์: เงา + พื้นหลัง + padding */}
-            <div className="rounded-md bg-white px-4 py-2 shadow-md w-full border-t border-gray-200">
+            <div className="rounded-b-2xl bg-white px-4 py-2 shadow-md w-full border border-gray-200">
               <form
                 action={action}
                 method="get"
@@ -155,7 +163,7 @@ export default function SearchToggle({
                   placeholder={placeholder}
                   autoFocus={open}
                   enterKeyHint="search"
-                  className="w-full bg-transparent outline-none text-sm text-[#2A2A2A] placeholder:text-[#6B7280] pr-2"
+                  className="w-full bg-transparent outline-none text-xs sm:text-sm text-ellipsis overflow-hidden whitespace-nowrap text-[#2A2A2A] placeholder:text-[#6B7280] pr-2"
                 />
                 <button
                   type="submit"

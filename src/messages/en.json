@@ -1,7 +1,7 @@
 {
   "metadata": {
     "home": {
-      "title": "Virintira | Multilingual Accounting Partner",
+      "title": "Virintira | Accounting & Business Management Services",
       "description": "Trusted Thai accounting firm delivering bookkeeping, payroll, and compliance in 16 languages.",
       "keywords": [
         "Virintira",
@@ -86,217 +86,31 @@
       "trigger": "Free consult"
     },
     "header": {
-      "nav": [
-        {
-          "label": "Promotions",
-          "href": "/promotion",
-          "highlight": true,
-          "icon": "promotion"
+      "nav": {
+        "promotion": {
+          "label": "Promotions"
         },
-        {
-          "label": "Services",
-          "href": "/services"
+        "services": {
+          "label": "Services"
         },
-        {
-          "label": "Articles",
-          "href": "/blog/bookkeeping-matters"
+        "blog": {
+          "label": "Articles"
         },
-        {
-          "label": "Downloads",
-          "href": "/resources"
+        "resources": {
+          "label": "Downloads"
         },
-        {
-          "label": "Contact us",
-          "href": "/contact"
+        "contact": {
+          "label": "Contact us"
         }
-      ],
+      },
       "megaMenu": {
-        "triggerLabel": "Services",
-        "columns": [
-          {
-            "title": "Registrations",
-            "items": [
-              {
-                "label": "Company (Co., Ltd.)",
-                "href": "/services/registrations/registration"
-              },
-              {
-                "label": "Limited partnership",
-                "href": "/services/registrations/limited-partnership"
-              },
-              {
-                "label": "Foundation",
-                "href": "/services/registrations/foundation"
-              },
-              {
-                "label": "Association",
-                "href": "/services/registrations/association"
-              },
-              {
-                "label": "Commercial (shop)",
-                "href": "/services/registrations/commercial-shop"
-              },
-              {
-                "label": "Employer (SSO)",
-                "href": "/services/registrations/employer-sso"
-              },
-              {
-                "label": "VAT",
-                "href": "/services/registrations/vat-registration"
-              }
-            ]
-          },
-          {
-            "title": "Corporate changes",
-            "items": [
-              {
-                "label": "Company name",
-                "href": "/services/corporate-changes/company-name"
-              },
-              {
-                "label": "Company seal / stamp",
-                "href": "/services/corporate-changes/company-seal"
-              },
-              {
-                "label": "Directors",
-                "href": "/services/corporate-changes/directors"
-              },
-              {
-                "label": "Signing authority",
-                "href": "/services/corporate-changes/signing-authority"
-              },
-              {
-                "label": "Shareholders / shares",
-                "href": "/services/corporate-changes/shareholders"
-              },
-              {
-                "label": "Capital",
-                "href": "/services/corporate-changes/capital"
-              },
-              {
-                "label": "Address / branches",
-                "href": "/services/corporate-changes/address"
-              },
-              {
-                "label": "Objectives",
-                "href": "/services/corporate-changes/objectives"
-              },
-              {
-                "label": "Dissolution",
-                "href": "/services/corporate-changes/dissolution"
-              }
-            ]
-          },
-          {
-            "title": "Accounting & Audit",
-            "items": [
-              {
-                "label": "Company accounts",
-                "href": "/services/accounting-audit/monthly-bookkeeping"
-              },
-              {
-                "label": "Monthly tax",
-                "href": "/services/accounting-audit/monthly-tax"
-              },
-              {
-                "label": "Annual accounts",
-                "href": "/services/accounting-audit/close-financial"
-              },
-              {
-                "label": "Personal accounts",
-                "href": "/services/accounting-audit/personal-accounts"
-              },
-              {
-                "label": "Audit",
-                "href": "/services/accounting-audit/audit"
-              },
-              {
-                "label": "Tax planning",
-                "href": "/services/accounting-audit/tax-planning"
-              },
-              {
-                "label": "Foreign tax ID",
-                "href": "/services/accounting-audit/foreign-tax-id"
-              }
-            ]
-          },
-          {
-            "title": "Licensing",
-            "items": [
-              {
-                "label": "Tourism licence",
-                "href": "/services/licensing/tourism-licence"
-              },
-              {
-                "label": "Thai FDA",
-                "href": "/services/licensing/thai-fda"
-              },
-              {
-                "label": "Visa & work permit",
-                "href": "/services/licensing/visa-work-permit"
-              },
-              {
-                "label": "BOI promotion",
-                "href": "/services/licensing/boi-promotion"
-              },
-              {
-                "label": "Foreign business (FBL/FBC)",
-                "href": "/services/licensing/foreign-business"
-              }
-            ]
-          },
-          {
-            "title": "Digital marketing",
-            "items": [
-              {
-                "label": "Website build",
-                "href": "/services/digital-marketing/website-build"
-              },
-              {
-                "label": "Facebook Page",
-                "href": "/services/digital-marketing/facebook-page"
-              },
-              {
-                "label": "LINE OA",
-                "href": "/services/digital-marketing/line-oa"
-              },
-              {
-                "label": "TikTok",
-                "href": "/services/digital-marketing/tiktok"
-              },
-              {
-                "label": "YouTube",
-                "href": "/services/digital-marketing/youtube"
-              },
-              {
-                "label": "Video production",
-                "href": "/services/digital-marketing/video-production"
-              },
-              {
-                "label": "Paid ads",
-                "href": "/services/digital-marketing/paid-ads"
-              },
-              {
-                "label": "AI solutions",
-                "href": "/services/digital-marketing/ai-solutions"
-              },
-              {
-                "label": "Odoo ERP",
-                "href": "/services/digital-marketing/odoo-erp"
-              },
-              {
-                "label": "Custom software",
-                "href": "/services/digital-marketing/custom-software"
-              }
-            ]
-          }
-        ]
+        "triggerLabel": "Services"
       },
       "ctaPrimary": "Request consultation",
       "ctaSecondary": "LINE OA",
       "search": {
-        "placeholder": "Search accounting resources",
-        "mobilePlaceholder": "Search accounting resources",
+        "placeholder": "Search for services or articles",
+        "mobilePlaceholder": "Search for services or articles",
         "toggleLabel": "Toggle search",
         "submitLabel": "Search"
       },
@@ -351,44 +165,35 @@
         "applyLicense": "ขอใบอนุญาต",
         "marketing": "การตลาดออนไลน์"
       },
-      "quickLinks": [
-        {
-          "label": "โปรโมชั่น",
-          "href": "/promotion"
+      "quickLinks": {
+        "services": {
+          "label": "โปรโมชั่น"
         },
-        {
-          "label": "Articles",
-          "href": "/blog/bookkeeping-matters"
+        "promotion": {
+          "label": "Articles"
         },
-        {
-          "label": "Downloads",
-          "href": "/resources"
+        "about": {
+          "label": "Downloads"
         },
-        {
-          "label": "Contact us",
-          "href": "/contact"
+        "careers": {
+          "label": "Contact us"
         },
-        {
-          "label": "Registrations",
-          "href": "/services/registrations"
+        "contact": {
+          "label": "Registrations"
         },
-        {
-          "label": "Corporate changes",
-          "href": "/services/corporate-changes"
+        "item5": {
+          "label": "Corporate changes"
         },
-        {
-          "label": "Accounting & Audit",
-          "href": "/services/accounting-audit"
+        "item6": {
+          "label": "Accounting & Audit"
         },
-        {
-          "label": "Licensing",
-          "href": "/services/licensing"
+        "item7": {
+          "label": "Licensing"
         },
-        {
-          "label": "Digital marketing",
-          "href": "/services/digital-marketing"
+        "item8": {
+          "label": "Digital marketing"
         }
-      ],
+      },
       "legal": "Copyright © {year} Virintira Co., Ltd. All rights reserved. | {poweredBy}"
     }
   },
@@ -426,9 +231,6 @@
       "viewLicense": "View our corporate registration"
     },
     "services": {
-      "hero": {
-        "description": "Explore our comprehensive range of services designed to help your business grow."
-      },
       "heading": "Popular services",
       "items": [
         {
@@ -451,7 +253,10 @@
           "title": "Tax planning",
           "description": "Strategic tax structuring and advisory for optimized business operations."
         }
-      ]
+      ],
+      "hero": {
+        "description": "Explore our comprehensive range of services designed to help your business grow."
+      }
     },
     "highlights": {
       "heading": "Why work with Virintira",
@@ -526,26 +331,23 @@
     },
     "documents": {
       "heading": "Downloadable resources",
-      "items": [
-        {
+      "items": {
+        "monthly-close": {
           "title": "Monthly close checklist",
           "description": "A step-by-step framework to close your books accurately every month.",
-          "actionLabel": "Download PDF",
-          "actionHref": "https://www.virintira.com/resources/monthly-close.pdf"
+          "actionLabel": "Download PDF"
         },
-        {
+        "payroll-calendar": {
           "title": "Payroll compliance calendar",
           "description": "Important Thai payroll and social security deadlines in one sheet.",
-          "actionLabel": "View calendar",
-          "actionHref": "https://www.virintira.com/resources/payroll-calendar.pdf"
+          "actionLabel": "View calendar"
         },
-        {
+        "cashflow-template": {
           "title": "Cash flow tracker",
           "description": "Google Sheets template for monitoring inflows, outflows, and runway.",
-          "actionLabel": "Open template",
-          "actionHref": "https://www.virintira.com/resources/cashflow-template"
+          "actionLabel": "Open template"
         }
-      ]
+      }
     },
     "contact": {
       "heading": "Need something custom?",
@@ -558,6 +360,10 @@
     }
   },
   "services": {
+    "hero": {
+      "description": "Our core services fall into 5 categories.",
+      "title": "Services"
+    },
     "categories": {
       "registrations": {
         "title": "Registrations",
@@ -591,7 +397,7 @@
     },
     "items": {
       "registration": {
-        "title": "Company Registration",
+        "title": "Company (Co., Ltd.)",
         "summary": "Complete registration for limited companies and partnerships with expert guidance.",
         "hero": {
           "title": "Start your Thai Company correctly",
@@ -654,14 +460,107 @@
               "answer": "Yes, unless you have BOI promotion or FBL."
             }
           ]
-        }
+        },
+        "description": ""
+      },
+      "limited-partnership": {
+        "title": "Limited partnership",
+        "summary": "Registration and compliance for limited partnerships.",
+        "description": "",
+        "features": []
+      },
+      "foundation": {
+        "title": "Foundation",
+        "summary": "Establishment of charitable or private foundations.",
+        "description": "",
+        "features": []
+      },
+      "association": {
+        "title": "Association",
+        "summary": "Registration of trade or non-profit associations.",
+        "description": "",
+        "features": []
+      },
+      "commercial-shop": {
+        "title": "Commercial (shop)",
+        "summary": "Registration for sole proprietorships and shop owners.",
+        "description": "",
+        "features": []
+      },
+      "employer-sso": {
+        "title": "Employer (SSO)",
+        "summary": "Social Security Fund registration for employers.",
+        "description": "",
+        "features": []
+      },
+      "vat-registration": {
+        "title": "VAT",
+        "summary": "Register for Value Added Tax (VAT) in Thailand.",
+        "description": "",
+        "features": []
       },
       "edit-info": {
         "title": "Corporate information updates",
-        "summary": "Accurate, timely updates to critical company information."
+        "summary": "Accurate, timely updates to critical company information.",
+        "description": "",
+        "features": []
+      },
+      "company-name": {
+        "title": "Company name",
+        "summary": "Legal process to change your corporate name.",
+        "description": "",
+        "features": []
+      },
+      "company-seal": {
+        "title": "Company seal / stamp",
+        "summary": "Update your registered company seal.",
+        "description": "",
+        "features": []
+      },
+      "directors": {
+        "title": "Directors",
+        "summary": "Add or remove company directors.",
+        "description": "",
+        "features": []
+      },
+      "signing-authority": {
+        "title": "Signing authority",
+        "summary": "Update authorized signatories and conditions.",
+        "description": "",
+        "features": []
+      },
+      "shareholders": {
+        "title": "Shareholders / shares",
+        "summary": "Transfer of shares and updating shareholder list (BOJ.5).",
+        "description": "",
+        "features": []
+      },
+      "capital": {
+        "title": "Capital",
+        "summary": "Increase or decrease registered capital.",
+        "description": "",
+        "features": []
+      },
+      "address": {
+        "title": "Address / branches",
+        "summary": "Relocate your company's registered address.",
+        "description": "",
+        "features": []
+      },
+      "objectives": {
+        "title": "Objectives",
+        "summary": "Update business objectives (Vat. Obj.).",
+        "description": "",
+        "features": []
+      },
+      "dissolution": {
+        "title": "Dissolution",
+        "summary": "Legal closing and liquidation of the company.",
+        "description": "",
+        "features": []
       },
       "monthly-bookkeeping": {
-        "title": "Monthly Bookkeeping",
+        "title": "Company accounts",
         "summary": "Transaction recording, reconciliations, and IFRS-compliant statements.",
         "hero": {
           "title": "Stress-free Accounting & Tax Filing",
@@ -724,151 +623,134 @@
               "answer": "Yes, we use cloud accounting software accessible 24/7."
             }
           ]
-        }
+        },
+        "description": ""
+      },
+      "monthly-tax": {
+        "title": "Monthly tax",
+        "summary": "Recurring tax compliance services.",
+        "description": "",
+        "features": []
       },
       "close-financial": {
-        "title": "Financial statement closing",
-        "summary": "Annual accounts prepared and closed efficiently for DBD and Revenue Department."
+        "title": "Annual accounts",
+        "summary": "Annual accounts prepared and closed efficiently for DBD and Revenue Department.",
+        "description": "",
+        "features": []
+      },
+      "personal-accounts": {
+        "title": "Personal accounts",
+        "summary": "Accounting for individuals and freelancers.",
+        "description": "",
+        "features": []
+      },
+      "audit": {
+        "title": "Audit",
+        "summary": "Statutory financial audit by CPA.",
+        "description": "",
+        "features": []
+      },
+      "foreign-tax-id": {
+        "title": "Foreign tax ID",
+        "summary": "Tax ID card for foreign entities.",
+        "description": "",
+        "features": []
       },
       "tax-planning": {
         "title": "Tax planning",
-        "summary": "Strategic tax structuring and advisory for optimized business operations."
-      },
-      "limited-partnership": {
-        "title": "Limited Partnership",
-        "summary": "Registration and compliance for limited partnerships."
-      },
-      "foundation": {
-        "title": "Foundation",
-        "summary": "Establishment of charitable or private foundations."
-      },
-      "association": {
-        "title": "Association",
-        "summary": "Registration of trade or non-profit associations."
-      },
-      "commercial-shop": {
-        "title": "Commercial Registration",
-        "summary": "Registration for sole proprietorships and shop owners."
-      },
-      "employer-sso": {
-        "title": "Employer (SSO)",
-        "summary": "Social Security Fund registration for employers."
-      },
-      "vat-registration": {
-        "title": "VAT Registration",
-        "summary": "Register for Value Added Tax (VAT) in Thailand."
-      },
-      "company-name": {
-        "title": "Company Name Change",
-        "summary": "Legal process to change your corporate name."
-      },
-      "company-seal": {
-        "title": "Company Seal Change",
-        "summary": "Update your registered company seal."
-      },
-      "directors": {
-        "title": "Change of Directors",
-        "summary": "Add or remove company directors."
-      },
-      "signing-authority": {
-        "title": "Signing Authority",
-        "summary": "Update authorized signatories and conditions."
-      },
-      "shareholders": {
-        "title": "Shareholder Change",
-        "summary": "Transfer of shares and updating shareholder list (BOJ.5)."
-      },
-      "capital": {
-        "title": "Capital Change",
-        "summary": "Increase or decrease registered capital."
-      },
-      "address": {
-        "title": "Address Change",
-        "summary": "Relocate your company's registered address."
-      },
-      "objectives": {
-        "title": "Business Objectives",
-        "summary": "Update business objectives (Vat. Obj.)."
-      },
-      "dissolution": {
-        "title": "Dissolution",
-        "summary": "Legal closing and liquidation of the company."
-      },
-      "monthly-tax": {
-        "title": "Monthly Tax Filing",
-        "summary": "Recurring tax compliance services."
-      },
-      "personal-accounts": {
-        "title": "Personal Bookkeeping",
-        "summary": "Accounting for individuals and freelancers."
-      },
-      "audit": {
-        "title": "Audit Service",
-        "summary": "Statutory financial audit by CPA."
-      },
-      "foreign-tax-id": {
-        "title": "Foreign Tax ID",
-        "summary": "Tax ID card for foreign entities."
+        "summary": "Strategic tax structuring and advisory for optimized business operations.",
+        "description": "",
+        "features": []
       },
       "tourism-licence": {
-        "title": "Tourism License",
-        "summary": "TAT license application and renewal."
+        "title": "Tourism licence",
+        "summary": "TAT license application and renewal.",
+        "description": "",
+        "features": []
       },
       "thai-fda": {
         "title": "Thai FDA",
-        "summary": "Product registration with the Thai Food and Drug Administration."
+        "summary": "Product registration with the Thai Food and Drug Administration.",
+        "description": "",
+        "features": []
       },
       "visa-work-permit": {
-        "title": "Visa & Work Permit",
-        "summary": "Business visa and work permit processing."
+        "title": "Visa & work permit",
+        "summary": "Business visa and work permit processing.",
+        "description": "",
+        "features": []
       },
       "boi-promotion": {
-        "title": "BOI Promotion",
-        "summary": "Application for Board of Investment incentives."
+        "title": "BOI promotion",
+        "summary": "Application for Board of Investment incentives.",
+        "description": "",
+        "features": []
       },
       "foreign-business": {
-        "title": "Foreign Business License",
-        "summary": "FBL/FBC application for foreign-owned companies."
+        "title": "Foreign business (FBL/FBC)",
+        "summary": "FBL/FBC application for foreign-owned companies.",
+        "description": "",
+        "features": []
       },
       "website-build": {
-        "title": "Website Development",
-        "summary": "Professional corporate website design and build."
+        "title": "Website build",
+        "summary": "Professional corporate website design and build.",
+        "description": "",
+        "features": []
       },
       "facebook-page": {
-        "title": "Facebook Page Setup",
-        "summary": "Business page creation and optimization."
+        "title": "Facebook Page",
+        "summary": "Business page creation and optimization.",
+        "description": "",
+        "features": []
       },
       "line-oa": {
-        "title": "LINE Official Account",
-        "summary": "LINE OA setup and menu configuration."
+        "title": "LINE OA",
+        "summary": "LINE OA setup and menu configuration.",
+        "description": "",
+        "features": []
       },
       "tiktok": {
-        "title": "TikTok Marketing",
-        "summary": "TikTok business account setup."
+        "title": "TikTok",
+        "summary": "TikTok business account setup.",
+        "description": "",
+        "features": []
       },
       "youtube": {
-        "title": "YouTube Channel",
-        "summary": "Corporate YouTube channel setup."
+        "title": "YouTube",
+        "summary": "Corporate YouTube channel setup.",
+        "description": "",
+        "features": []
       },
       "video-production": {
-        "title": "Video Production",
-        "summary": "Short-form video content creation."
+        "title": "Video production",
+        "summary": "Short-form video content creation.",
+        "description": "",
+        "features": []
       },
       "paid-ads": {
-        "title": "Paid Advertising",
-        "summary": "Ads management on FB, Google, TikTok."
+        "title": "Paid ads",
+        "summary": "Ads management on FB, Google, TikTok.",
+        "description": "",
+        "features": []
       },
       "ai-solutions": {
-        "title": "AI Solutions",
-        "summary": "AI integration for business efficiency."
+        "title": "AI solutions",
+        "summary": "AI integration for business efficiency.",
+        "description": "",
+        "features": []
       },
       "odoo-erp": {
         "title": "Odoo ERP",
-        "summary": "Odoo ERP implementation and support."
+        "summary": "Odoo ERP implementation and support.",
+        "description": "",
+        "features": []
       },
       "custom-software": {
-        "title": "Custom Software",
-        "summary": "Tailored software development for your needs."
+        "title": "Custom software",
+        "summary": "Tailored software development for your needs.",
+        "description": "",
+        "features": []
       }
     },
     "bookkeeping": {
@@ -1025,10 +907,6 @@
           }
         ]
       }
-    },
-    "hero": {
-      "title": "Services",
-      "description": "Our core services fall into 5 categories."
     }
   },
   "blog": {

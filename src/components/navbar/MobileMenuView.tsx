@@ -250,7 +250,7 @@ export default function MobileMenuView({
                   <button
                     type="button"
                     onClick={() => onSelectSubMenu?.(item.items!, item.label)}
-                    className="w-full text-left text-black hover:text-[#A70909] transition-colors"
+                    className="w-full text-left text-black active:text-[#A70909] lg:hover:text-[#A70909] transition-colors"
                   >
                     <span className={sharedLabelClasses}>
                       <span>{item.label}</span>
@@ -266,7 +266,7 @@ export default function MobileMenuView({
                   <Link
                     href={normalizeInternalHref(item.href)}
                     onClick={onClose}
-                    className="block text-black hover:text-[#A70909] transition-colors"
+                    className="block text-black active:text-[#A70909] lg:hover:text-[#A70909] transition-colors"
                     prefetch
                     role="menuitem"
                   >
@@ -310,7 +310,7 @@ export default function MobileMenuView({
               }}
               data-drawer-active={searchActivated ? 'true' : undefined}
               aria-pressed={searchActivated}
-              className="relative flex w-full items-center gap-3 rounded-md border border-transparent px-3 py-2 text-left text-base font-medium text-[#A70909] transition-colors hover:border-[#F5B5B5] hover:bg-[#FDEAEA]"
+              className="relative flex w-full items-center gap-3 rounded-md border border-transparent px-3 py-2 text-left text-base font-medium text-[#A70909] transition-colors active:bg-[#FDEAEA] lg:hover:border-[#F5B5B5] lg:hover:bg-[#FDEAEA]"
               ref={searchButtonRef}
             >
               <FontAwesomeIcon icon={faSearch} className="h-4 w-4" />
@@ -329,7 +329,7 @@ export default function MobileMenuView({
                   aria-controls={languageListId}
                   data-open={languageExpanded ? 'true' : 'false'}
                   data-drawer-active={languageExpanded ? 'true' : undefined}
-                  className="relative flex w-full items-center justify-between rounded-md border border-transparent px-3 py-2 text-left text-base font-medium text-[#A70909] transition-colors hover:border-[#F5B5B5] hover:bg-[#FDEAEA]"
+                  className="relative flex w-full items-center justify-between rounded-md border border-transparent px-3 py-2 text-left text-base font-medium text-[#A70909] transition-colors active:bg-[#FDEAEA] lg:hover:border-[#F5B5B5] lg:hover:bg-[#FDEAEA]"
                 >
                   {/* Red stripe pseudo-element removed to keep compact styling consistent. */}
                   <span className="flex items-center gap-3">
@@ -365,7 +365,7 @@ export default function MobileMenuView({
                               'flex w-full items-center justify-between px-4 py-2 text-sm transition-colors',
                               isActive
                                 ? 'bg-[#FDEAEA] text-[#A70909]'
-                                : 'text-[#2A2A2A] hover:bg-[#FDEAEA]',
+                                : 'text-[#2A2A2A] active:bg-[#FDEAEA] lg:hover:bg-[#FDEAEA]',
                             ].join(' ')}
                           >
                             <span>{normalized.toUpperCase()}</span>

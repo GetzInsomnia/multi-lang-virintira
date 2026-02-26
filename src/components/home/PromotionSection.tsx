@@ -6,6 +6,7 @@ import { ChevronRight } from "lucide-react";
 import Link from "next/link";
 import React, { useRef, useLayoutEffect } from "react";
 import { motion } from "framer-motion";
+import { useTranslations } from "next-intl";
 
 // Helper to normalize internal hrefs by ensuring they start with '/'
 function normalizeInternalHref(href: string) {
@@ -59,6 +60,8 @@ export function PromotionSection({
   badge: string;
   complimentary: string;
 }) {
+  const tPromotion = useTranslations('promotion');
+  const isCJK = ['ja', 'ko', 'zh-Hans', 'zh-Hant'].includes(locale);
   const styles = getTypographyStyles(locale);
 
   // Fix #5 (Round 5): JS-Based Micro-Centering
@@ -138,7 +141,7 @@ export function PromotionSection({
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 1.0, ease: "easeInOut" }}
-          className="group relative overflow-hidden rounded-[42px] border border-white/60 bg-white/[0.98] shadow-[0_30px_80px_rgba(167,9,9,0.08)] backdrop-blur-xl transition-all duration-500 hover:shadow-[0_40px_100px_rgba(167,9,9,0.12)] hover:bg-white"
+          className="group relative overflow-hidden rounded-[42px] border border-white/60 bg-white/[0.98] shadow-[0_30px_80px_rgba(167,9,9,0.08)] backdrop-blur-xl transition-colors transition-shadow duration-500 hover:shadow-[0_40px_100px_rgba(167,9,9,0.12)] hover:bg-white"
         >
 
           {/* Visual Depth: Abstract 3D/Blur Elements behind Glass */}
@@ -207,10 +210,18 @@ export function PromotionSection({
                 <h2
                   // Fix #1 (Round 3): Relaxed line-height (leading-snug/tight) for better readability.
                   // Fix #2 (Round 3): Added 'mx-auto' and 'w-full' to ensure centering on tablet when text wraps or max-w kicks in.
-                  className="mx-auto w-full text-3xl sm:text-4xl lg:text-[clamp(2.5rem,2rem+2.5vw,5rem)] font-extrabold leading-snug sm:leading-tight lg:leading-tight text-[#2d1f1f] drop-shadow-sm whitespace-pre-line text-center"
+                  className={[
+                    "mx-auto font-extrabold leading-snug sm:leading-tight lg:leading-tight text-[#2d1f1f] drop-shadow-sm whitespace-pre-line text-center",
+                    isCJK
+                      ? 'w-fit text-3xl sm:text-[2rem] lg:text-[clamp(2.5rem,2rem+2.5vw,4rem)]'
+                      : 'w-full text-3xl sm:text-4xl lg:text-[clamp(2.5rem,2rem+2.5vw,5rem)]'
+                  ].join(' ').trim()}
                   style={styles.heading}
                 >
-                  {heading}
+                  {isCJK ? tPromotion.rich('hero.title', {
+                    nw: (chunks) => <span className="whitespace-nowrap inline-block">{chunks}</span>,
+                    br: () => <br className="sm:hidden mt-[3px]" />
+                  }) : heading}
                 </h2>
               ) : null}
 

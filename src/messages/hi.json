@@ -1,7 +1,7 @@
 {
   "metadata": {
     "home": {
-      "title": "Virintira | Multilingual Accounting Partner",
+      "title": "Virintira | लेखा एवं व्यवसाय प्रबंधन सेवाएँ",
       "description": "Trusted Thai accounting firm delivering bookkeeping, payroll, and compliance in 16 languages.",
       "keywords": [
         "Virintira",
@@ -10,6 +10,16 @@
         "payroll",
         "tax filing",
         "multilingual"
+      ]
+    },
+    "aboutUs": {
+      "title": "About Virintira | Your Reliable Thai Business Partner",
+      "description": "Learn about Virintira's mission, story, and core values. We provide transparent, high-speed corporate compliance and accounting in Thailand.",
+      "keywords": [
+        "About Virintira",
+        "Thai accounting firm",
+        "business registration Thailand",
+        "corporate compliance"
       ]
     },
     "promotion": {
@@ -68,6 +78,7 @@
     "cta": {
       "call": "Call {phone}",
       "chat": "LINE चैट",
+      "whatsapp": "WhatsApp",
       "consult": "ईमेल Virintira",
       "book": "परामर्श बुक करें",
       "explore_category": "सेवाएं देखें",
@@ -75,222 +86,31 @@
       "trigger": "निःशुल्क परामर्श"
     },
     "header": {
-      "announcement": {
-        "message": "Certified accountants helping entrepreneurs thrive across Thailand.",
-        "actionLabel": "Book consultation",
-        "actionHref": "/promotion"
-      },
-      "nav": [
-        {
-          "label": "प्रमोशन",
-          "href": "/promotion",
-          "highlight": true,
-          "icon": "promotion"
+      "nav": {
+        "promotion": {
+          "label": "प्रमोशन"
         },
-        {
-          "label": "सेवाएँ",
-          "href": "/services"
+        "services": {
+          "label": "सेवाएँ"
         },
-        {
-          "label": "लेख",
-          "href": "/blog/bookkeeping-matters"
+        "blog": {
+          "label": "लेख"
         },
-        {
-          "label": "डाउनलोड",
-          "href": "/resources"
+        "resources": {
+          "label": "डाउनलोड"
         },
-        {
-          "label": "संपर्क",
-          "href": "/contact"
+        "contact": {
+          "label": "संपर्क"
         }
-      ],
+      },
       "megaMenu": {
-        "triggerLabel": "सेवाएँ",
-        "columns": [
-          {
-            "title": "पंजीकरण",
-            "items": [
-              {
-                "label": "कंपनी (Co., Ltd.)",
-                "href": "/services/registrations/registration"
-              },
-              {
-                "label": "लिमिटेड पार्टनरशिप",
-                "href": "/services/registrations/limited-partnership"
-              },
-              {
-                "label": "फाउंडेशन",
-                "href": "/services/registrations/foundation"
-              },
-              {
-                "label": "एसोसिएशन",
-                "href": "/services/registrations/association"
-              },
-              {
-                "label": "व्यावसायिक पंजीकरण",
-                "href": "/services/registrations/commercial-shop"
-              },
-              {
-                "label": "नियोक्ता (SSO)",
-                "href": "/services/registrations/employer-sso"
-              },
-              {
-                "label": "VAT पंजीकरण",
-                "href": "/services/registrations/vat-registration"
-              }
-            ]
-          },
-          {
-            "title": "कंपनी बदलाव",
-            "items": [
-              {
-                "label": "कंपनी का नाम",
-                "href": "/services/corporate-changes/company-name"
-              },
-              {
-                "label": "कंपनी की मुहर",
-                "href": "/services/corporate-changes/company-seal"
-              },
-              {
-                "label": "निदेशक",
-                "href": "/services/corporate-changes/directors"
-              },
-              {
-                "label": "हस्ताक्षर अधिकार",
-                "href": "/services/corporate-changes/signing-authority"
-              },
-              {
-                "label": "शेयरधारक / शेयर",
-                "href": "/services/corporate-changes/shareholders"
-              },
-              {
-                "label": "पूंजी",
-                "href": "/services/corporate-changes/capital"
-              },
-              {
-                "label": "पता / शाखाएँ",
-                "href": "/services/corporate-changes/address"
-              },
-              {
-                "label": "उद्देश्य",
-                "href": "/services/corporate-changes/objectives"
-              },
-              {
-                "label": "समापन",
-                "href": "/services/corporate-changes/dissolution"
-              }
-            ]
-          },
-          {
-            "title": "लेखांकन & ऑडिट",
-            "items": [
-              {
-                "label": "कंपनी खाते",
-                "href": "/services/accounting-audit/monthly-bookkeeping"
-              },
-              {
-                "label": "मासिक टैक्स",
-                "href": "/services/accounting-audit/monthly-tax"
-              },
-              {
-                "label": "वार्षिक खाते",
-                "href": "/services/accounting-audit/close-financial"
-              },
-              {
-                "label": "व्यक्तिगत खाते",
-                "href": "/services/accounting-audit/personal-accounts"
-              },
-              {
-                "label": "ऑडिट",
-                "href": "/services/accounting-audit/audit"
-              },
-              {
-                "label": "टैक्स प्लानिंग",
-                "href": "/services/accounting-audit/tax-planning"
-              },
-              {
-                "label": "विदेशी टैक्स ID",
-                "href": "/services/accounting-audit/foreign-tax-id"
-              }
-            ]
-          },
-          {
-            "title": "लाइसेंस",
-            "items": [
-              {
-                "label": "पर्यटन लाइसेंस",
-                "href": "/services/licensing/tourism-licence"
-              },
-              {
-                "label": "थाई FDA",
-                "href": "/services/licensing/thai-fda"
-              },
-              {
-                "label": "वीज़ा & वर्क परमिट",
-                "href": "/services/licensing/visa-work-permit"
-              },
-              {
-                "label": "BOI प्रोत्साहन",
-                "href": "/services/licensing/boi-promotion"
-              },
-              {
-                "label": "विदेशी बिज़नेस (FBL/FBC)",
-                "href": "/services/licensing/foreign-business"
-              }
-            ]
-          },
-          {
-            "title": "डिजिटल मार्केटिंग",
-            "items": [
-              {
-                "label": "वेबसाइट निर्माण",
-                "href": "/services/digital-marketing/website-build"
-              },
-              {
-                "label": "Facebook Page",
-                "href": "/services/digital-marketing/facebook-page"
-              },
-              {
-                "label": "LINE OA",
-                "href": "/services/digital-marketing/line-oa"
-              },
-              {
-                "label": "TikTok",
-                "href": "/services/digital-marketing/tiktok"
-              },
-              {
-                "label": "YouTube",
-                "href": "/services/digital-marketing/youtube"
-              },
-              {
-                "label": "वीडियो प्रोडक्शन",
-                "href": "/services/digital-marketing/video-production"
-              },
-              {
-                "label": "पेड ऐड्स (Ads)",
-                "href": "/services/digital-marketing/paid-ads"
-              },
-              {
-                "label": "AI समाधान",
-                "href": "/services/digital-marketing/ai-solutions"
-              },
-              {
-                "label": "Odoo ERP",
-                "href": "/services/digital-marketing/odoo-erp"
-              },
-              {
-                "label": "कस्टम सॉफ़्टवेयर",
-                "href": "/services/digital-marketing/custom-software"
-              }
-            ]
-          }
-        ]
+        "triggerLabel": "सेवाएँ"
       },
       "ctaPrimary": "Talk to an expert",
       "ctaSecondary": "LINE OA",
       "search": {
-        "placeholder": "Search accounting resources",
-        "mobilePlaceholder": "Search accounting resources",
+        "placeholder": "सेवाओं या लेखों की खोज करें",
+        "mobilePlaceholder": "सेवाओं या लेखों की खोज करें",
         "toggleLabel": "Toggle search",
         "submitLabel": "Search"
       },
@@ -345,44 +165,35 @@
         "applyLicense": "ขอใบอนุญาต",
         "marketing": "การตลาดออนไลน์"
       },
-      "quickLinks": [
-        {
-          "label": "प्रमोशन",
-          "href": "/promotion"
+      "quickLinks": {
+        "services": {
+          "label": "प्रमोशन"
         },
-        {
-          "label": "लेख",
-          "href": "/blog/bookkeeping-matters"
+        "promotion": {
+          "label": "लेख"
         },
-        {
-          "label": "डाउनलोड",
-          "href": "/resources"
+        "about": {
+          "label": "डाउनलोड"
         },
-        {
-          "label": "संपर्क",
-          "href": "/contact"
+        "careers": {
+          "label": "संपर्क"
         },
-        {
-          "label": "पंजीकरण",
-          "href": "/services/registrations"
+        "contact": {
+          "label": "पंजीकरण"
         },
-        {
-          "label": "कंपनी बदलाव",
-          "href": "/services/corporate-changes"
+        "item5": {
+          "label": "कंपनी बदलाव"
         },
-        {
-          "label": "लेखांकन & ऑडिट",
-          "href": "/services/accounting-audit"
+        "item6": {
+          "label": "लेखांकन & ऑडिट"
         },
-        {
-          "label": "लाइसेंस",
-          "href": "/services/licensing"
+        "item7": {
+          "label": "लाइसेंस"
         },
-        {
-          "label": "डिजिटल मार्केटिंग",
-          "href": "/services/digital-marketing"
+        "item8": {
+          "label": "डिजिटल मार्केटिंग"
         }
-      ],
+      },
       "legal": "Copyright © {year} Virintira Co., Ltd. All rights reserved. | {poweredBy}"
     }
   },
@@ -391,10 +202,10 @@
     "promotion": "Promotions",
     "resources": "Resources",
     "services": "Services",
-    "blog": "Blog",
-    "howTo": "How-to",
     "otherServices": "अन्य सेवाएँ",
-    "contactDirectly": "हमसे सीधे संपर्क करें"
+    "contactDirectly": "हमसे सीधे संपर्क करें",
+    "blog": "Blog",
+    "howTo": "How-to"
   },
   "home": {
     "hero": {
@@ -420,7 +231,7 @@
       "viewLicense": "हमारा कॉर्पोरेट पंजीकरण देखें"
     },
     "services": {
-      "heading": "Popular services",
+      "heading": "लोकप्रिय सेवाएँ",
       "items": [
         {
           "title": "कंपनी पंजीकरण",
@@ -442,7 +253,10 @@
           "title": "कर योजना",
           "description": "अनुकूलित व्यावसायिक संचालन के लिए रणनीतिक कर संरचना और सलाह।"
         }
-      ]
+      ],
+      "hero": {
+        "description": "Explore our comprehensive range of services designed to help your business grow."
+      }
     },
     "highlights": {
       "heading": "Virintira को क्यों चुनें",
@@ -517,26 +331,23 @@
     },
     "documents": {
       "heading": "Downloadable resources",
-      "items": [
-        {
+      "items": {
+        "monthly-close": {
           "title": "Monthly close checklist",
           "description": "A step-by-step framework to close your books accurately every month.",
-          "actionLabel": "Download PDF",
-          "actionHref": "https://www.virintira.com/resources/monthly-close.pdf"
+          "actionLabel": "Download PDF"
         },
-        {
+        "payroll-calendar": {
           "title": "Payroll compliance calendar",
           "description": "Important Thai payroll and social security deadlines in one sheet.",
-          "actionLabel": "View calendar",
-          "actionHref": "https://www.virintira.com/resources/payroll-calendar.pdf"
+          "actionLabel": "View calendar"
         },
-        {
+        "cashflow-template": {
           "title": "Cash flow tracker",
           "description": "Google Sheets template for monitoring inflows, outflows, and runway.",
-          "actionLabel": "Open template",
-          "actionHref": "https://www.virintira.com/resources/cashflow-template"
+          "actionLabel": "Open template"
         }
-      ]
+      }
     },
     "contact": {
       "heading": "Need something custom?",
@@ -549,6 +360,10 @@
     }
   },
   "services": {
+    "hero": {
+      "description": "हमारी मुख्य सेवाएँ 5 श्रेणियों में आती हैं।",
+      "title": "सेवाएं"
+    },
     "categories": {
       "registrations": {
         "title": "पंजीकरण",
@@ -582,160 +397,360 @@
     },
     "items": {
       "registration": {
-        "title": "कंपनी पंजीकरण",
-        "summary": "विशेषज्ञ मार्गदर्शन के साथ सीमित कंपनियों और साझेदारी के लिए पूर्ण पंजीकरण।"
+        "title": "कंपनी (Co., Ltd.)",
+        "summary": "विशेषज्ञ मार्गदर्शन के साथ सीमित कंपनियों और साझेदारी के लिए पूर्ण पंजीकरण।",
+        "hero": {
+          "title": "Start your Thai Company correctly",
+          "subtitle": "Trusted by 500+ founders",
+          "description": "We handle the Department of Business Development, Tax Registration, and Social Security so you can focus on your business.",
+          "cta": "Get a Quote",
+          "image": "/images/services/registration-hero.webp"
+        },
+        "features": {
+          "title": "Everything you need to trade legally",
+          "items": [
+            {
+              "title": "Company Name Reservation",
+              "description": "We check and reserve your name with the DBD instantly."
+            },
+            {
+              "title": "MoA & Articles of Association",
+              "description": "Drafting all statutory meeting notes and bylaws."
+            },
+            {
+              "title": "VAT & Tax Registration",
+              "description": "Getting your Tax ID and VAT certificate (P.P.20)."
+            },
+            {
+              "title": "Bank Account Opening",
+              "description": "Assistance with board resolutions to open your corporate bank account."
+            }
+          ]
+        },
+        "process": {
+          "title": "Registration Process",
+          "steps": [
+            {
+              "title": "Consultation",
+              "description": "We clarify your business objectives and shareholders."
+            },
+            {
+              "title": "Name Reservation",
+              "description": "Locking in your company name (1-3 days)."
+            },
+            {
+              "title": "Filing & Signing",
+              "description": "Directors sign the application. We submit to DBD."
+            },
+            {
+              "title": "Company Formed",
+              "description": "Receive your Affidavit and Company Certificate."
+            }
+          ]
+        },
+        "faq": {
+          "title": "Common Questions",
+          "items": [
+            {
+              "question": "How long does it take?",
+              "answer": "Typically 3-5 business days after name reservation."
+            },
+            {
+              "question": "Do I need a Thai shareholder?",
+              "answer": "Yes, unless you have BOI promotion or FBL."
+            }
+          ]
+        },
+        "description": ""
       },
       "limited-partnership": {
         "title": "लिमिटेड पार्टनरशिप",
-        "summary": "लिमिटेड पार्टनरशिप पंजीकरण सेवाएँ।"
+        "summary": "लिमिटेड पार्टनरशिप पंजीकरण सेवाएँ।",
+        "description": "",
+        "features": []
       },
       "foundation": {
         "title": "फाउंडेशन",
-        "summary": "फाउंडेशन पंजीकरण और स्थापना।"
+        "summary": "फाउंडेशन पंजीकरण और स्थापना।",
+        "description": "",
+        "features": []
       },
       "association": {
         "title": "एसोसिएशन",
-        "summary": "एसोसिएशन पंजीकरण सेवाएँ।"
+        "summary": "एसोसिएशन पंजीकरण सेवाएँ।",
+        "description": "",
+        "features": []
       },
       "commercial-shop": {
         "title": "व्यावसायिक पंजीकरण",
-        "summary": "दुकानों के लिए व्यावसायिक पंजीकरण।"
+        "summary": "दुकानों के लिए व्यावसायिक पंजीकरण।",
+        "description": "",
+        "features": []
       },
       "employer-sso": {
         "title": "नियोक्ता (SSO)",
-        "summary": "नियोक्ता और सामाजिक सुरक्षा पंजीकरण।"
+        "summary": "नियोक्ता और सामाजिक सुरक्षा पंजीकरण।",
+        "description": "",
+        "features": []
       },
       "vat-registration": {
         "title": "VAT पंजीकरण",
-        "summary": "मूल्य वर्धित कर (VAT) पंजीकरण सेवाएँ।"
+        "summary": "मूल्य वर्धित कर (VAT) पंजीकरण सेवाएँ।",
+        "description": "",
+        "features": []
       },
       "edit-info": {
         "title": "कॉर्पोरेट जानकारी अपडेट",
-        "summary": "महत्वपूर्ण कंपनी जानकारी के लिए सटीक और समय पर अपडेट।"
+        "summary": "महत्वपूर्ण कंपनी जानकारी के लिए सटीक और समय पर अपडेट।",
+        "description": "",
+        "features": []
       },
       "company-name": {
         "title": "कंपनी का नाम",
-        "summary": "कंपनी का नाम बदलने की सेवाएँ।"
+        "summary": "कंपनी का नाम बदलने की सेवाएँ।",
+        "description": "",
+        "features": []
       },
       "company-seal": {
         "title": "कंपनी की मुहर",
-        "summary": "नई कंपनी की मुहर का पंजीकरण।"
+        "summary": "नई कंपनी की मुहर का पंजीकरण।",
+        "description": "",
+        "features": []
       },
       "directors": {
         "title": "निदेशक",
-        "summary": "निदेशकों या अधिकार में बदलाव।"
+        "summary": "निदेशकों या अधिकार में बदलाव।",
+        "description": "",
+        "features": []
       },
       "signing-authority": {
         "title": "हस्ताक्षर अधिकार",
-        "summary": "अधिकृत हस्ताक्षरकर्ताओं का अपडेट।"
+        "summary": "अधिकृत हस्ताक्षरकर्ताओं का अपडेट।",
+        "description": "",
+        "features": []
       },
       "shareholders": {
         "title": "शेयरधारक / शेयर",
-        "summary": "शेयरधारक सूची (BOJ.5) अपडेट करें।"
+        "summary": "शेयरधारक सूची (BOJ.5) अपडेट करें।",
+        "description": "",
+        "features": []
       },
       "capital": {
         "title": "पूंजी",
-        "summary": "पंजीकृत पूंजी में वृद्धि या कमी।"
+        "summary": "पंजीकृत पूंजी में वृद्धि या कमी।",
+        "description": "",
+        "features": []
       },
       "address": {
         "title": "पता / शाखाएँ",
-        "summary": "प्रधान कार्यालय या शाखाओं का स्थानांतरण।"
+        "summary": "प्रधान कार्यालय या शाखाओं का स्थानांतरण।",
+        "description": "",
+        "features": []
       },
       "objectives": {
         "title": "उद्देश्य",
-        "summary": "व्यावसायिक उद्देश्यों में संशोधन।"
+        "summary": "व्यावसायिक उद्देश्यों में संशोधन।",
+        "description": "",
+        "features": []
       },
       "dissolution": {
         "title": "समापन",
-        "summary": "कंपनी का विघटन और परिसमापन सेवाएँ।"
+        "summary": "कंपनी का विघटन और परिसमापन सेवाएँ।",
+        "description": "",
+        "features": []
       },
       "monthly-bookkeeping": {
-        "title": "मासिक बहीखाता",
-        "summary": "लेनदेन रिकॉर्डिंग, समाधान और IFRS-अनुपालन विवरण।"
+        "title": "कंपनी खाते",
+        "summary": "लेनदेन रिकॉर्डिंग, समाधान और IFRS-अनुपालन विवरण।",
+        "hero": {
+          "title": "Stress-free Accounting & Tax Filing",
+          "subtitle": "Starting from 2,500 THB/month",
+          "description": "Expert accountants handling your Withholding Tax, VAT, and Social Security. We ensure you never miss a deadline.",
+          "cta": "See Packages",
+          "image": "/images/services/accounting-hero.webp"
+        },
+        "features": {
+          "title": "What's included?",
+          "items": [
+            {
+              "title": "Transaction Recording",
+              "description": "Daily recording of invoice, receipt, and expense."
+            },
+            {
+              "title": "Tax Filing (P.P.30, P.N.D.3/53)",
+              "description": "Monthly submission to Revenue Department."
+            },
+            {
+              "title": "Social Security",
+              "description": "Monthly SSO submission for employees."
+            },
+            {
+              "title": "Monthly Reports",
+              "description": "Profit & Loss and Balance Sheet in English/Thai."
+            }
+          ]
+        },
+        "process": {
+          "title": "How it works",
+          "steps": [
+            {
+              "title": "Send Documents",
+              "description": "Send us photos/scans via LINE or Email."
+            },
+            {
+              "title": "We Process",
+              "description": "Our team records and verifies everything."
+            },
+            {
+              "title": "Review & Confirm",
+              "description": "You confirm tax amounts before filing."
+            },
+            {
+              "title": "Filing & Report",
+              "description": "We file taxes and send you the monthly report."
+            }
+          ]
+        },
+        "faq": {
+          "title": "FAQs",
+          "items": [
+            {
+              "question": "Can you handle English documents?",
+              "answer": "Yes, our team is fluent in English and Thai."
+            },
+            {
+              "question": "Is software included?",
+              "answer": "Yes, we use cloud accounting software accessible 24/7."
+            }
+          ]
+        },
+        "description": ""
       },
       "monthly-tax": {
         "title": "मासिक टैक्स",
-        "summary": "मासिक और वार्षिक कर फाइलिंग।"
+        "summary": "मासिक और वार्षिक कर फाइलिंग।",
+        "description": "",
+        "features": []
       },
       "close-financial": {
-        "title": "वित्तीय विवरण समापन",
-        "summary": "DBD और राजस्व विभाग के लिए कुशलतापूर्वक तैयार और बंद किए गए वार्षिक खाते।"
+        "title": "वार्षिक खाते",
+        "summary": "DBD और राजस्व विभाग के लिए कुशलतापूर्वक तैयार और बंद किए गए वार्षिक खाते।",
+        "description": "",
+        "features": []
       },
       "personal-accounts": {
         "title": "व्यक्तिगत खाते",
-        "summary": "व्यक्तिगत लेखा और कर फाइलिंग।"
+        "summary": "व्यक्तिगत लेखा और कर फाइलिंग।",
+        "description": "",
+        "features": []
       },
       "audit": {
         "title": "ऑडिट",
-        "summary": "CPA और वैधानिक ऑडिट सेवाएँ।"
-      },
-      "tax-planning": {
-        "title": "कर योजना",
-        "summary": "अनुकूलित व्यावसायिक संचालन के लिए रणनीतिक कर संरचना और सलाह।"
+        "summary": "CPA और वैधानिक ऑडिट सेवाएँ।",
+        "description": "",
+        "features": []
       },
       "foreign-tax-id": {
         "title": "विदेशी टैक्स ID",
-        "summary": "विदेशियों के लिए टैक्स आईडी आवेदन।"
+        "summary": "विदेशियों के लिए टैक्स आईडी आवेदन।",
+        "description": "",
+        "features": []
+      },
+      "tax-planning": {
+        "title": "टैक्स प्लानिंग",
+        "summary": "अनुकूलित व्यावसायिक संचालन के लिए रणनीतिक कर संरचना और सलाह।",
+        "description": "",
+        "features": []
       },
       "tourism-licence": {
         "title": "पर्यटन लाइसेंस",
-        "summary": "TAT पर्यटन लाइसेंस आवेदन।"
+        "summary": "TAT पर्यटन लाइसेंस आवेदन।",
+        "description": "",
+        "features": []
       },
       "thai-fda": {
         "title": "थाई FDA",
-        "summary": "खाद्य और औषधि FDA पंजीकरण।"
+        "summary": "खाद्य और औषधि FDA पंजीकरण।",
+        "description": "",
+        "features": []
       },
       "visa-work-permit": {
         "title": "वीज़ा & वर्क परमिट",
-        "summary": "विदेशी वीज़ा और वर्क परमिट सेवाएँ।"
+        "summary": "विदेशी वीज़ा और वर्क परमिट सेवाएँ।",
+        "description": "",
+        "features": []
       },
       "boi-promotion": {
         "title": "BOI प्रोत्साहन",
-        "summary": "BOI निवेश प्रोत्साहन आवेदन।"
+        "summary": "BOI निवेश प्रोत्साहन आवेदन।",
+        "description": "",
+        "features": []
       },
       "foreign-business": {
         "title": "विदेशी बिज़नेस (FBL/FBC)",
-        "summary": "विदेशी व्यापार लाइसेंस आवेदन।"
+        "summary": "विदेशी व्यापार लाइसेंस आवेदन।",
+        "description": "",
+        "features": []
       },
       "website-build": {
         "title": "वेबसाइट निर्माण",
-        "summary": "वेबसाइट विकास और ई-कॉमर्स।"
+        "summary": "वेबसाइट विकास और ई-कॉमर्स।",
+        "description": "",
+        "features": []
       },
       "facebook-page": {
         "title": "Facebook Page",
-        "summary": "फेसबुक पेज प्रबंधन और सामग्री।"
+        "summary": "फेसबुक पेज प्रबंधन और सामग्री।",
+        "description": "",
+        "features": []
       },
       "line-oa": {
         "title": "LINE OA",
-        "summary": "LINE आधिकारिक खाता सेटअप।"
+        "summary": "LINE आधिकारिक खाता सेटअप।",
+        "description": "",
+        "features": []
       },
       "tiktok": {
         "title": "TikTok",
-        "summary": "TikTok विपणन और सामग्री निर्माण।"
+        "summary": "TikTok विपणन और सामग्री निर्माण।",
+        "description": "",
+        "features": []
       },
       "youtube": {
         "title": "YouTube",
-        "summary": "YouTube वीडियो उत्पादन और प्रचार।"
+        "summary": "YouTube वीडियो उत्पादन और प्रचार।",
+        "description": "",
+        "features": []
       },
       "video-production": {
         "title": "वीडियो प्रोडक्शन",
-        "summary": "पेशेवर वीडियो शूट और संपादन।"
+        "summary": "पेशेवर वीडियो शूट और संपादन।",
+        "description": "",
+        "features": []
       },
       "paid-ads": {
         "title": "पेड ऐड्स (Ads)",
-        "summary": "फेसबुक, गूगल और टिकटॉक विज्ञापन।"
+        "summary": "फेसबुक, गूगल और टिकटॉक विज्ञापन।",
+        "description": "",
+        "features": []
       },
       "ai-solutions": {
         "title": "AI समाधान",
-        "summary": "AI परामर्श और व्यावसायिक समाधान।"
+        "summary": "AI परामर्श और व्यावसायिक समाधान।",
+        "description": "",
+        "features": []
       },
       "odoo-erp": {
         "title": "Odoo ERP",
-        "summary": "Odoo ERP कार्यान्वयन और समर्थन।"
+        "summary": "Odoo ERP कार्यान्वयन और समर्थन।",
+        "description": "",
+        "features": []
       },
       "custom-software": {
         "title": "कस्टम सॉफ़्टवेयर",
-        "summary": "कस्टम सॉफ्टवेयर विकास सेवाएँ।"
+        "summary": "कस्टम सॉफ्टवेयर विकास सेवाएँ।",
+        "description": "",
+        "features": []
       }
     },
     "bookkeeping": {
@@ -892,10 +907,6 @@
           }
         ]
       }
-    },
-    "hero": {
-      "title": "सेवाएं",
-      "description": "हमारी मुख्य सेवाएँ 5 श्रेणियों में आती हैं।"
     }
   },
   "blog": {
@@ -994,6 +1005,7 @@
     "back": "Back to homepage"
   },
   "contact": {
+    "title": "संपर्क",
     "close": "बंद करें",
     "form": {
       "heading": "संदेश भेजें",
@@ -1067,14 +1079,41 @@
     "formSection": {
       "heading": "क्या आप चाहेंगे कि हम आपसे संपर्क करें?",
       "subheading": "खुशी से! बस नीचे अपना विवरण भरें。"
-    },
-    "title": "संपर्क"
+    }
   },
   "aboutUs": {
     "breadcrumb": "हमारे बारे में",
     "hero": {
       "title": "थाईलैंड में आत्मविश्वास के साथ आगे बढ़ें।",
       "subtitle": "Virintira अकाउंटिंग विशेषज्ञता और आधुनिक तकनीक को जोड़कर पारदर्शी, भरोसेमंद और एंड-टू-एंड सेवाएँ प्रदान करता है।"
+    },
+    "mission": {
+      "heading": "Our Mission",
+      "description": "To provide foreign and local entrepreneurs with seamless, compliant, and highly efficient back-office support, enabling them to focus entirely on scaling their businesses."
+    },
+    "story": {
+      "heading": "Our Story",
+      "paragraphs": [
+        "Founded on the principle of absolute transparency, Virintira started with a simple goal: making Thai corporate compliance easy to understand.",
+        "Today, we serve hundreds of companies—from emerging startups to established multinational corporations—delivering tailored financial strategies and rock-solid accounting."
+      ]
+    },
+    "values": {
+      "heading": "Our Core Values",
+      "items": {
+        "transparency": {
+          "title": "Transparency First",
+          "description": "No hidden fees, no opaque processes. We believe in clear communication at every stage."
+        },
+        "speed": {
+          "title": "Uncompromising Speed",
+          "description": "Time is money. Our digital-first approach ensures rapid turnarounds for all filings and reports."
+        },
+        "reliability": {
+          "title": "Rock-Solid Reliability",
+          "description": "Fully certified by the DBD, we've never left a project unfinished. Your business is safe with us."
+        }
+      }
     },
     "cta": {
       "heading": "Virintira के साथ, आत्मविश्वास से अगला कदम बढ़ाएँ।",

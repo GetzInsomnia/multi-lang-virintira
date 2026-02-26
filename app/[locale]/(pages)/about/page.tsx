@@ -74,11 +74,11 @@ export default async function AboutUsPage({ params }: PageParams) {
     const jaTypography = locale === 'ja' ? 'sm:break-keep' : '';
 
     const headerTypography = isCJK
-        ? `text-balance break-words [overflow-wrap:anywhere] [line-break:strict] ${jaTypography} w-full mx-auto`
+        ? `break-words [overflow-wrap:anywhere] [line-break:strict] ${jaTypography} w-fit mx-auto text-center`
         : 'text-balance break-words [overflow-wrap:anywhere]';
 
     const bodyTypography = isCJK
-        ? `text-balance break-words [overflow-wrap:anywhere] [line-break:strict] ${jaTypography} w-full mx-auto`
+        ? `break-words [overflow-wrap:anywhere] [line-break:strict] ${jaTypography} w-fit mx-auto text-center`
         : 'text-balance break-words [overflow-wrap:anywhere]';
 
     // Fallbacks in case the nested structure is complex

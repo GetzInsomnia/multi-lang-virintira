@@ -1,7 +1,7 @@
 {
   "metadata": {
     "home": {
-      "title": "Virintira | Multilingual Accounting Partner",
+      "title": "Virintira | Boekhouding en Bedrijfsdiensten",
       "description": "Trusted Thai accounting firm delivering bookkeeping, payroll, and compliance in 16 languages.",
       "keywords": [
         "Virintira",
@@ -10,6 +10,16 @@
         "payroll",
         "tax filing",
         "multilingual"
+      ]
+    },
+    "aboutUs": {
+      "title": "About Virintira | Your Reliable Thai Business Partner",
+      "description": "Learn about Virintira's mission, story, and core values. We provide transparent, high-speed corporate compliance and accounting in Thailand.",
+      "keywords": [
+        "About Virintira",
+        "Thai accounting firm",
+        "business registration Thailand",
+        "corporate compliance"
       ]
     },
     "promotion": {
@@ -68,6 +78,7 @@
     "cta": {
       "call": "Call {phone}",
       "chat": "Chat op LINE",
+      "whatsapp": "WhatsApp",
       "consult": "E-mail Virintira",
       "book": "Book a consultation",
       "explore_category": "Diensten bekijken",
@@ -75,222 +86,31 @@
       "trigger": "Gratis consult"
     },
     "header": {
-      "announcement": {
-        "message": "Certified accountants helping entrepreneurs thrive across Thailand.",
-        "actionLabel": "Book consultation",
-        "actionHref": "/promotion"
-      },
-      "nav": [
-        {
-          "label": "Acties",
-          "href": "/promotion",
-          "highlight": true,
-          "icon": "promotion"
+      "nav": {
+        "promotion": {
+          "label": "Acties"
         },
-        {
-          "label": "Services",
-          "href": "/services"
+        "services": {
+          "label": "Services"
         },
-        {
-          "label": "Artikelen",
-          "href": "/blog/bookkeeping-matters"
+        "blog": {
+          "label": "Artikelen"
         },
-        {
-          "label": "Downloads",
-          "href": "/resources"
+        "resources": {
+          "label": "Downloads"
         },
-        {
-          "label": "Contact",
-          "href": "/contact"
+        "contact": {
+          "label": "Contact"
         }
-      ],
+      },
       "megaMenu": {
-        "triggerLabel": "Diensten",
-        "columns": [
-          {
-            "title": "Oprichtingen",
-            "items": [
-              {
-                "label": "BV (Co., Ltd.)",
-                "href": "/services/registrations/registration"
-              },
-              {
-                "label": "Commanditaire venn.",
-                "href": "/services/registrations/limited-partnership"
-              },
-              {
-                "label": "Stichting",
-                "href": "/services/registrations/foundation"
-              },
-              {
-                "label": "Vereniging",
-                "href": "/services/registrations/association"
-              },
-              {
-                "label": "Handelsregister",
-                "href": "/services/registrations/commercial-shop"
-              },
-              {
-                "label": "Werkgevers (SSO)",
-                "href": "/services/registrations/employer-sso"
-              },
-              {
-                "label": "Btw-registratie",
-                "href": "/services/registrations/vat-registration"
-              }
-            ]
-          },
-          {
-            "title": "Wijzigingen",
-            "items": [
-              {
-                "label": "Bedrijfsnaam",
-                "href": "/services/corporate-changes/company-name"
-              },
-              {
-                "label": "Bedrijfsstempel",
-                "href": "/services/corporate-changes/company-seal"
-              },
-              {
-                "label": "Bestuurders",
-                "href": "/services/corporate-changes/directors"
-              },
-              {
-                "label": "Tekenbevoegdheid",
-                "href": "/services/corporate-changes/signing-authority"
-              },
-              {
-                "label": "Aandeelhouders",
-                "href": "/services/corporate-changes/shareholders"
-              },
-              {
-                "label": "Aandelenkapitaal",
-                "href": "/services/corporate-changes/capital"
-              },
-              {
-                "label": "Adres / Filialen",
-                "href": "/services/corporate-changes/address"
-              },
-              {
-                "label": "Bedrijfsdoelen",
-                "href": "/services/corporate-changes/objectives"
-              },
-              {
-                "label": "Ontbinding",
-                "href": "/services/corporate-changes/dissolution"
-              }
-            ]
-          },
-          {
-            "title": "Boekhouding",
-            "items": [
-              {
-                "label": "Bedrijfsadministratie",
-                "href": "/services/accounting-audit/monthly-bookkeeping"
-              },
-              {
-                "label": "Maandelijkse belasting",
-                "href": "/services/accounting-audit/monthly-tax"
-              },
-              {
-                "label": "Jaarrekening",
-                "href": "/services/accounting-audit/close-financial"
-              },
-              {
-                "label": "Privéboekhouding",
-                "href": "/services/accounting-audit/personal-accounts"
-              },
-              {
-                "label": "Audit & Controle",
-                "href": "/services/accounting-audit/audit"
-              },
-              {
-                "label": "Belastingplanning",
-                "href": "/services/accounting-audit/tax-planning"
-              },
-              {
-                "label": "Buitenlands tax-nr.",
-                "href": "/services/accounting-audit/foreign-tax-id"
-              }
-            ]
-          },
-          {
-            "title": "Vergunningen",
-            "items": [
-              {
-                "label": "Toerismevergunning",
-                "href": "/services/licensing/tourism-licence"
-              },
-              {
-                "label": "Thaise FDA",
-                "href": "/services/licensing/thai-fda"
-              },
-              {
-                "label": "Visum & Werkvergunning",
-                "href": "/services/licensing/visa-work-permit"
-              },
-              {
-                "label": "BOI-promotie",
-                "href": "/services/licensing/boi-promotion"
-              },
-              {
-                "label": "Buitenlandse licentie (FBL/FBC)",
-                "href": "/services/licensing/foreign-business"
-              }
-            ]
-          },
-          {
-            "title": "Digital Marketing",
-            "items": [
-              {
-                "label": "Website bouwen",
-                "href": "/services/digital-marketing/website-build"
-              },
-              {
-                "label": "Facebook Page",
-                "href": "/services/digital-marketing/facebook-page"
-              },
-              {
-                "label": "LINE OA",
-                "href": "/services/digital-marketing/line-oa"
-              },
-              {
-                "label": "TikTok",
-                "href": "/services/digital-marketing/tiktok"
-              },
-              {
-                "label": "YouTube",
-                "href": "/services/digital-marketing/youtube"
-              },
-              {
-                "label": "Videoproductie",
-                "href": "/services/digital-marketing/video-production"
-              },
-              {
-                "label": "Betaalde advertenties",
-                "href": "/services/digital-marketing/paid-ads"
-              },
-              {
-                "label": "AI-oplossingen",
-                "href": "/services/digital-marketing/ai-solutions"
-              },
-              {
-                "label": "Odoo ERP",
-                "href": "/services/digital-marketing/odoo-erp"
-              },
-              {
-                "label": "Maatwerksoftware",
-                "href": "/services/digital-marketing/custom-software"
-              }
-            ]
-          }
-        ]
+        "triggerLabel": "Diensten"
       },
       "ctaPrimary": "Talk to an expert",
       "ctaSecondary": "LINE OA",
       "search": {
-        "placeholder": "Search accounting resources",
-        "mobilePlaceholder": "Search accounting resources",
+        "placeholder": "Zoeken naar diensten of artikelen",
+        "mobilePlaceholder": "Zoeken naar diensten of artikelen",
         "toggleLabel": "Toggle search",
         "submitLabel": "Search"
       },
@@ -345,44 +165,35 @@
         "applyLicense": "ขอใบอนุญาต",
         "marketing": "การตลาดออนไลน์"
       },
-      "quickLinks": [
-        {
-          "label": "Promoties",
-          "href": "/promotion"
+      "quickLinks": {
+        "services": {
+          "label": "Promoties"
         },
-        {
-          "label": "Artikelen",
-          "href": "/blog/bookkeeping-matters"
+        "promotion": {
+          "label": "Artikelen"
         },
-        {
-          "label": "Downloads",
-          "href": "/resources"
+        "about": {
+          "label": "Downloads"
         },
-        {
-          "label": "Contact",
-          "href": "/contact"
+        "careers": {
+          "label": "Contact"
         },
-        {
-          "label": "Oprichtingen",
-          "href": "/services/registrations"
+        "contact": {
+          "label": "Oprichtingen"
         },
-        {
-          "label": "Wijzigingen",
-          "href": "/services/corporate-changes"
+        "item5": {
+          "label": "Wijzigingen"
         },
-        {
-          "label": "Boekhouding",
-          "href": "/services/accounting-audit"
+        "item6": {
+          "label": "Boekhouding"
         },
-        {
-          "label": "Vergunningen",
-          "href": "/services/licensing"
+        "item7": {
+          "label": "Vergunningen"
         },
-        {
-          "label": "Digital Marketing",
-          "href": "/services/digital-marketing"
+        "item8": {
+          "label": "Digital Marketing"
         }
-      ],
+      },
       "legal": "Copyright © {year} Virintira Co., Ltd. All rights reserved. | {poweredBy}"
     }
   },
@@ -391,10 +202,10 @@
     "promotion": "Promotions",
     "resources": "Resources",
     "services": "Services",
-    "blog": "Blog",
-    "howTo": "How-to",
     "otherServices": "Andere Diensten",
-    "contactDirectly": "Neem direct contact op"
+    "contactDirectly": "Neem direct contact op",
+    "blog": "Blog",
+    "howTo": "How-to"
   },
   "home": {
     "hero": {
@@ -420,7 +231,7 @@
       "viewLicense": "Bekijk onze bedrijfsregistratie"
     },
     "services": {
-      "heading": "Popular services",
+      "heading": "Populaire diensten",
       "items": [
         {
           "title": "Bedrijfsregistratie",
@@ -442,7 +253,10 @@
           "title": "Fiscale planning",
           "description": "Strategische fiscale structurering en advies voor geoptimaliseerde bedrijfsvoering."
         }
-      ]
+      ],
+      "hero": {
+        "description": "Explore our comprehensive range of services designed to help your business grow."
+      }
     },
     "highlights": {
       "heading": "Waarom kiezen voor Virintira",
@@ -517,26 +331,23 @@
     },
     "documents": {
       "heading": "Downloadable resources",
-      "items": [
-        {
+      "items": {
+        "monthly-close": {
           "title": "Monthly close checklist",
           "description": "A step-by-step framework to close your books accurately every month.",
-          "actionLabel": "Download PDF",
-          "actionHref": "https://www.virintira.com/resources/monthly-close.pdf"
+          "actionLabel": "Download PDF"
         },
-        {
+        "payroll-calendar": {
           "title": "Payroll compliance calendar",
           "description": "Important Thai payroll and social security deadlines in one sheet.",
-          "actionLabel": "View calendar",
-          "actionHref": "https://www.virintira.com/resources/payroll-calendar.pdf"
+          "actionLabel": "View calendar"
         },
-        {
+        "cashflow-template": {
           "title": "Cash flow tracker",
           "description": "Google Sheets template for monitoring inflows, outflows, and runway.",
-          "actionLabel": "Open template",
-          "actionHref": "https://www.virintira.com/resources/cashflow-template"
+          "actionLabel": "Open template"
         }
-      ]
+      }
     },
     "contact": {
       "heading": "Need something custom?",
@@ -549,6 +360,10 @@
     }
   },
   "services": {
+    "hero": {
+      "description": "Onze kerndiensten vallen in 5 categorieën.",
+      "title": "Diensten"
+    },
     "categories": {
       "registrations": {
         "title": "Oprichtingen",
@@ -582,160 +397,360 @@
     },
     "items": {
       "registration": {
-        "title": "Bedrijfsregistratie",
-        "summary": "Volledige registratie voor naamloze vennootschappen en partnerschappen met deskundige begeleiding."
+        "title": "BV (Co., Ltd.)",
+        "summary": "Volledige registratie voor naamloze vennootschappen en partnerschappen met deskundige begeleiding.",
+        "hero": {
+          "title": "Start your Thai Company correctly",
+          "subtitle": "Trusted by 500+ founders",
+          "description": "We handle the Department of Business Development, Tax Registration, and Social Security so you can focus on your business.",
+          "cta": "Get a Quote",
+          "image": "/images/services/registration-hero.webp"
+        },
+        "features": {
+          "title": "Everything you need to trade legally",
+          "items": [
+            {
+              "title": "Company Name Reservation",
+              "description": "We check and reserve your name with the DBD instantly."
+            },
+            {
+              "title": "MoA & Articles of Association",
+              "description": "Drafting all statutory meeting notes and bylaws."
+            },
+            {
+              "title": "VAT & Tax Registration",
+              "description": "Getting your Tax ID and VAT certificate (P.P.20)."
+            },
+            {
+              "title": "Bank Account Opening",
+              "description": "Assistance with board resolutions to open your corporate bank account."
+            }
+          ]
+        },
+        "process": {
+          "title": "Registration Process",
+          "steps": [
+            {
+              "title": "Consultation",
+              "description": "We clarify your business objectives and shareholders."
+            },
+            {
+              "title": "Name Reservation",
+              "description": "Locking in your company name (1-3 days)."
+            },
+            {
+              "title": "Filing & Signing",
+              "description": "Directors sign the application. We submit to DBD."
+            },
+            {
+              "title": "Company Formed",
+              "description": "Receive your Affidavit and Company Certificate."
+            }
+          ]
+        },
+        "faq": {
+          "title": "Common Questions",
+          "items": [
+            {
+              "question": "How long does it take?",
+              "answer": "Typically 3-5 business days after name reservation."
+            },
+            {
+              "question": "Do I need a Thai shareholder?",
+              "answer": "Yes, unless you have BOI promotion or FBL."
+            }
+          ]
+        },
+        "description": ""
       },
       "limited-partnership": {
         "title": "Commanditaire venn.",
-        "summary": "Registratie commanditaire vennootschap."
+        "summary": "Registratie commanditaire vennootschap.",
+        "description": "",
+        "features": []
       },
       "foundation": {
         "title": "Stichting",
-        "summary": "Oprichting van stichtingen."
+        "summary": "Oprichting van stichtingen.",
+        "description": "",
+        "features": []
       },
       "association": {
         "title": "Vereniging",
-        "summary": "Registratie van verenigingen."
+        "summary": "Registratie van verenigingen.",
+        "description": "",
+        "features": []
       },
       "commercial-shop": {
         "title": "Handelsregister",
-        "summary": "Commerciële winkelregistratie."
+        "summary": "Commerciële winkelregistratie.",
+        "description": "",
+        "features": []
       },
       "employer-sso": {
         "title": "Werkgevers (SSO)",
-        "summary": "Werkgevers- en sociale zekerheidsregistratie."
+        "summary": "Werkgevers- en sociale zekerheidsregistratie.",
+        "description": "",
+        "features": []
       },
       "vat-registration": {
         "title": "Btw-registratie",
-        "summary": "Registratie voor btw (VAT)."
+        "summary": "Registratie voor btw (VAT).",
+        "description": "",
+        "features": []
       },
       "edit-info": {
         "title": "Updates van bedrijfsinformatie",
-        "summary": "Nauwkeurige, tijdige updates van kritieke bedrijfsinformatie."
+        "summary": "Nauwkeurige, tijdige updates van kritieke bedrijfsinformatie.",
+        "description": "",
+        "features": []
       },
       "company-name": {
         "title": "Bedrijfsnaam",
-        "summary": "Wijzigen van de bedrijfsnaam."
+        "summary": "Wijzigen van de bedrijfsnaam.",
+        "description": "",
+        "features": []
       },
       "company-seal": {
         "title": "Bedrijfsstempel",
-        "summary": "Registratie van een nieuwe bedrijfsstempel."
+        "summary": "Registratie van een nieuwe bedrijfsstempel.",
+        "description": "",
+        "features": []
       },
       "directors": {
         "title": "Bestuurders",
-        "summary": "Wijzigen van bestuurders of bevoegdheden."
+        "summary": "Wijzigen van bestuurders of bevoegdheden.",
+        "description": "",
+        "features": []
       },
       "signing-authority": {
         "title": "Tekenbevoegdheid",
-        "summary": "Updaten van tekenbevoegden."
+        "summary": "Updaten van tekenbevoegden.",
+        "description": "",
+        "features": []
       },
       "shareholders": {
         "title": "Aandeelhouders",
-        "summary": "Updaten aandeelhoudersregister (BOJ.5)."
+        "summary": "Updaten aandeelhoudersregister (BOJ.5).",
+        "description": "",
+        "features": []
       },
       "capital": {
         "title": "Aandelenkapitaal",
-        "summary": "Verhogen of verlagen van aandelenkapitaal."
+        "summary": "Verhogen of verlagen van aandelenkapitaal.",
+        "description": "",
+        "features": []
       },
       "address": {
         "title": "Adres / Filialen",
-        "summary": "Verhuizing hoofdkantoor of filialen."
+        "summary": "Verhuizing hoofdkantoor of filialen.",
+        "description": "",
+        "features": []
       },
       "objectives": {
         "title": "Bedrijfsdoelen",
-        "summary": "Wijzigen van bedrijfsdoelen."
+        "summary": "Wijzigen van bedrijfsdoelen.",
+        "description": "",
+        "features": []
       },
       "dissolution": {
         "title": "Ontbinding",
-        "summary": "Ontbinding en liquidatie van bedrijven."
+        "summary": "Ontbinding en liquidatie van bedrijven.",
+        "description": "",
+        "features": []
       },
       "monthly-bookkeeping": {
-        "title": "Maandelijkse boekhouding",
-        "summary": "Transactieregistratie, afstemmingen en IFRS-conforme overzichten."
+        "title": "Bedrijfsadministratie",
+        "summary": "Transactieregistratie, afstemmingen en IFRS-conforme overzichten.",
+        "hero": {
+          "title": "Stress-free Accounting & Tax Filing",
+          "subtitle": "Starting from 2,500 THB/month",
+          "description": "Expert accountants handling your Withholding Tax, VAT, and Social Security. We ensure you never miss a deadline.",
+          "cta": "See Packages",
+          "image": "/images/services/accounting-hero.webp"
+        },
+        "features": {
+          "title": "What's included?",
+          "items": [
+            {
+              "title": "Transaction Recording",
+              "description": "Daily recording of invoice, receipt, and expense."
+            },
+            {
+              "title": "Tax Filing (P.P.30, P.N.D.3/53)",
+              "description": "Monthly submission to Revenue Department."
+            },
+            {
+              "title": "Social Security",
+              "description": "Monthly SSO submission for employees."
+            },
+            {
+              "title": "Monthly Reports",
+              "description": "Profit & Loss and Balance Sheet in English/Thai."
+            }
+          ]
+        },
+        "process": {
+          "title": "How it works",
+          "steps": [
+            {
+              "title": "Send Documents",
+              "description": "Send us photos/scans via LINE or Email."
+            },
+            {
+              "title": "We Process",
+              "description": "Our team records and verifies everything."
+            },
+            {
+              "title": "Review & Confirm",
+              "description": "You confirm tax amounts before filing."
+            },
+            {
+              "title": "Filing & Report",
+              "description": "We file taxes and send you the monthly report."
+            }
+          ]
+        },
+        "faq": {
+          "title": "FAQs",
+          "items": [
+            {
+              "question": "Can you handle English documents?",
+              "answer": "Yes, our team is fluent in English and Thai."
+            },
+            {
+              "question": "Is software included?",
+              "answer": "Yes, we use cloud accounting software accessible 24/7."
+            }
+          ]
+        },
+        "description": ""
       },
       "monthly-tax": {
         "title": "Maandelijkse belasting",
-        "summary": "Maandelijkse en halfjaarlijkse belastingaangifte."
+        "summary": "Maandelijkse en halfjaarlijkse belastingaangifte.",
+        "description": "",
+        "features": []
       },
       "close-financial": {
-        "title": "Afsluiting financiële overzichten",
-        "summary": "Jaarrekeningen efficiënt opgesteld en afgesloten voor het DBD en de belastingdienst."
+        "title": "Jaarrekening",
+        "summary": "Jaarrekeningen efficiënt opgesteld en afgesloten voor het DBD en de belastingdienst.",
+        "description": "",
+        "features": []
       },
       "personal-accounts": {
         "title": "Privéboekhouding",
-        "summary": "Persoonlijke boekhouding en belastingaangifte."
+        "summary": "Persoonlijke boekhouding en belastingaangifte.",
+        "description": "",
+        "features": []
       },
       "audit": {
         "title": "Audit & Controle",
-        "summary": "Statutaire audits en CPA-diensten."
-      },
-      "tax-planning": {
-        "title": "Fiscale planning",
-        "summary": "Strategische fiscale structurering en advies voor geoptimaliseerde bedrijfsvoering."
+        "summary": "Statutaire audits en CPA-diensten.",
+        "description": "",
+        "features": []
       },
       "foreign-tax-id": {
         "title": "Buitenlands tax-nr.",
-        "summary": "Aanvraag belasting-ID voor buitenlanders."
+        "summary": "Aanvraag belasting-ID voor buitenlanders.",
+        "description": "",
+        "features": []
+      },
+      "tax-planning": {
+        "title": "Belastingplanning",
+        "summary": "Strategische fiscale structurering en advies voor geoptimaliseerde bedrijfsvoering.",
+        "description": "",
+        "features": []
       },
       "tourism-licence": {
         "title": "Toerismevergunning",
-        "summary": "Aanvraag TAT-toerismevergunning."
+        "summary": "Aanvraag TAT-toerismevergunning.",
+        "description": "",
+        "features": []
       },
       "thai-fda": {
         "title": "Thaise FDA",
-        "summary": "FDA-registratie voor voedsel en medicijnen."
+        "summary": "FDA-registratie voor voedsel en medicijnen.",
+        "description": "",
+        "features": []
       },
       "visa-work-permit": {
         "title": "Visum & Werkvergunning",
-        "summary": "Visum en werkvergunning voor buitenlanders."
+        "summary": "Visum en werkvergunning voor buitenlanders.",
+        "description": "",
+        "features": []
       },
       "boi-promotion": {
         "title": "BOI-promotie",
-        "summary": "Aanvraag BOI-investeringsvoordelen."
+        "summary": "Aanvraag BOI-investeringsvoordelen.",
+        "description": "",
+        "features": []
       },
       "foreign-business": {
-        "title": "Buitenlandse licentie",
-        "summary": "Aanvraag buitenlandse bedrijfslicentie (FBL)."
+        "title": "Buitenlandse licentie (FBL/FBC)",
+        "summary": "Aanvraag buitenlandse bedrijfslicentie (FBL).",
+        "description": "",
+        "features": []
       },
       "website-build": {
         "title": "Website bouwen",
-        "summary": "Website-ontwikkeling en e-commerce."
+        "summary": "Website-ontwikkeling en e-commerce.",
+        "description": "",
+        "features": []
       },
       "facebook-page": {
         "title": "Facebook Page",
-        "summary": "Beheer en content voor Facebook-pagina's."
+        "summary": "Beheer en content voor Facebook-pagina's.",
+        "description": "",
+        "features": []
       },
       "line-oa": {
         "title": "LINE OA",
-        "summary": "Opzetten van LINE Official Account."
+        "summary": "Opzetten van LINE Official Account.",
+        "description": "",
+        "features": []
       },
       "tiktok": {
         "title": "TikTok",
-        "summary": "TikTok marketing en content creatie."
+        "summary": "TikTok marketing en content creatie.",
+        "description": "",
+        "features": []
       },
       "youtube": {
         "title": "YouTube",
-        "summary": "Videoproductie en YouTube-promotie."
+        "summary": "Videoproductie en YouTube-promotie.",
+        "description": "",
+        "features": []
       },
       "video-production": {
         "title": "Videoproductie",
-        "summary": "Professionele video-opnames en montage."
+        "summary": "Professionele video-opnames en montage.",
+        "description": "",
+        "features": []
       },
       "paid-ads": {
         "title": "Betaalde advertenties",
-        "summary": "Facebook, Google en TikTok advertenties."
+        "summary": "Facebook, Google en TikTok advertenties.",
+        "description": "",
+        "features": []
       },
       "ai-solutions": {
         "title": "AI-oplossingen",
-        "summary": "AI-consultancy en bedrijfsoplossingen."
+        "summary": "AI-consultancy en bedrijfsoplossingen.",
+        "description": "",
+        "features": []
       },
       "odoo-erp": {
         "title": "Odoo ERP",
-        "summary": "Implementatie en ondersteuning van Odoo ERP."
+        "summary": "Implementatie en ondersteuning van Odoo ERP.",
+        "description": "",
+        "features": []
       },
       "custom-software": {
         "title": "Maatwerksoftware",
-        "summary": "Ontwikkeling van software op maat."
+        "summary": "Ontwikkeling van software op maat.",
+        "description": "",
+        "features": []
       }
     },
     "bookkeeping": {
@@ -892,10 +907,6 @@
           }
         ]
       }
-    },
-    "hero": {
-      "title": "Diensten",
-      "description": "Onze kerndiensten vallen in 5 categorieën."
     }
   },
   "blog": {
@@ -994,6 +1005,7 @@
     "back": "Back to homepage"
   },
   "contact": {
+    "title": "Contact",
     "close": "Sluiten",
     "form": {
       "heading": "Stuur ons een direct bericht",
@@ -1067,14 +1079,41 @@
     "formSection": {
       "heading": "Wilt u liever dat wij contact opnemen?",
       "subheading": "Met plezier! Vul uw gegevens hieronder in."
-    },
-    "title": "Contact"
+    }
   },
   "aboutUs": {
     "breadcrumb": "Over ons",
     "hero": {
       "title": "Groei in Thailand met vertrouwen.",
       "subtitle": "Virintira combineert boekhoudkundige expertise met moderne technologie om end-to-end diensten te leveren die transparant en betrouwbaar zijn."
+    },
+    "mission": {
+      "heading": "Our Mission",
+      "description": "To provide foreign and local entrepreneurs with seamless, compliant, and highly efficient back-office support, enabling them to focus entirely on scaling their businesses."
+    },
+    "story": {
+      "heading": "Our Story",
+      "paragraphs": [
+        "Founded on the principle of absolute transparency, Virintira started with a simple goal: making Thai corporate compliance easy to understand.",
+        "Today, we serve hundreds of companies—from emerging startups to established multinational corporations—delivering tailored financial strategies and rock-solid accounting."
+      ]
+    },
+    "values": {
+      "heading": "Our Core Values",
+      "items": {
+        "transparency": {
+          "title": "Transparency First",
+          "description": "No hidden fees, no opaque processes. We believe in clear communication at every stage."
+        },
+        "speed": {
+          "title": "Uncompromising Speed",
+          "description": "Time is money. Our digital-first approach ensures rapid turnarounds for all filings and reports."
+        },
+        "reliability": {
+          "title": "Rock-Solid Reliability",
+          "description": "Fully certified by the DBD, we've never left a project unfinished. Your business is safe with us."
+        }
+      }
     },
     "cta": {
       "heading": "Zet de volgende stap met vertrouwen samen met Virintira.",

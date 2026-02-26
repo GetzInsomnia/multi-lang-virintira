@@ -51,8 +51,8 @@ This document serves as the "Constitution" for the Virintira project. All code m
 
 ### 3.3 International Typography (CJK & Agglutinative)
 - **CJK Line Breaks (JA, ZH):** Never rely solely on generic `text-balance` or `break-keep` CSS as Chromium lacks the cultural dictionary to identify Japanese/Chinese compound words.
-  - **Standard:** Use `next-intl`'s Rich Text formatting (`t.rich()`) to natively bind semantic concepts. 
-  - Wrap unbreakable phrases in JSON with XML chunks (e.g., `<nw>一站式服務</nw>`) and map `<nw>` to `<span className="whitespace-nowrap inline-block">` in React. This explicitly forces Webkit to flow text *around*, not *through*, native semantic boundaries.
+  - **Headings & CTAs (Strict Logic):** Use `next-intl`'s Rich Text formatting (`t.rich()`) to natively bind semantic concepts. Wrap unbreakable phrases in JSON with XML chunks (e.g., `<nw>一站式服務</nw>`) and map `<nw>` to `<span className="whitespace-nowrap inline-block">` in React. This explicitly forces Webkit to flow text *around*, not *through*, native semantic boundaries.
+  - **Body Text (Fluid Logic):** DO NOT use `<nw>` or `word-break: keep-all` on long paragraphs (`<p>`). Rely entirely on the browser's default line-breaking engine (which implements *Kinsoku Shori* / 禁則処理). Forcing `<nw>` on body text produces severely jagged margins ("ragged-right") and causes viewport overflow. Native CJK readers expect and are accustomed to character-level wrapping in paragraph blocks.
   - **SEO Protection:** Always strictly sanitize JSON-LD metadata strings using a `stripTags()` regex over `t.raw()` to prevent XML bleed into the backend layer.
 - **Long-Word Languages (Tamil/German):** Ensure `h1` and `h2` elements utilize fluid `text-[clamp(...)]` constraints with minimums low enough (e.g., `1.7rem` instead of `2.5rem`) to prevent massive agglutinative words (like *`நம்பிக்கையுடன்`*) from forcefully wrapping and breaking mobile (320px) viewport barriers.
 

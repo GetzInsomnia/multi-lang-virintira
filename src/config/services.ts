@@ -7,14 +7,13 @@ export const CATEGORY_SLUGS = [
 ] as const;
 
 export const SERVICE_SLUGS = [
-  'registration',
+  'company-limited',
   'limited-partnership',
   'foundation',
   'association',
   'commercial-shop',
   'employer-sso',
   'vat-registration',
-  'edit-info',
   'company-name',
   'company-seal',
   'directors',
@@ -78,7 +77,7 @@ export const servicesConfig: ServicesConfig = {
       imagePath: '/services/registration.webp',
       items: [
         {
-          serviceSlug: 'registration',
+          serviceSlug: 'company-limited',
           categorySlug: 'registrations',
           isPopular: true,
           imagePath: '/services/registration.webp',
@@ -98,21 +97,20 @@ export const servicesConfig: ServicesConfig = {
       imagePath: '/services/edit-info.webp',
       items: [
         {
-          serviceSlug: 'edit-info',
+          serviceSlug: 'company-name',
           categorySlug: 'corporate-changes',
           isPopular: true,
           imagePath: '/services/edit-info.webp',
           order: 1,
         },
-        { serviceSlug: 'company-name', categorySlug: 'corporate-changes', isPopular: false, imagePath: '', order: 2 },
-        { serviceSlug: 'company-seal', categorySlug: 'corporate-changes', isPopular: false, imagePath: '', order: 3 },
-        { serviceSlug: 'directors', categorySlug: 'corporate-changes', isPopular: false, imagePath: '', order: 4 },
-        { serviceSlug: 'signing-authority', categorySlug: 'corporate-changes', isPopular: false, imagePath: '', order: 5 },
-        { serviceSlug: 'shareholders', categorySlug: 'corporate-changes', isPopular: false, imagePath: '', order: 6 },
-        { serviceSlug: 'capital', categorySlug: 'corporate-changes', isPopular: false, imagePath: '', order: 7 },
-        { serviceSlug: 'address', categorySlug: 'corporate-changes', isPopular: false, imagePath: '', order: 8 },
-        { serviceSlug: 'objectives', categorySlug: 'corporate-changes', isPopular: false, imagePath: '', order: 9 },
-        { serviceSlug: 'dissolution', categorySlug: 'corporate-changes', isPopular: false, imagePath: '', order: 10 },
+        { serviceSlug: 'company-seal', categorySlug: 'corporate-changes', isPopular: false, imagePath: '', order: 2 },
+        { serviceSlug: 'directors', categorySlug: 'corporate-changes', isPopular: false, imagePath: '', order: 3 },
+        { serviceSlug: 'signing-authority', categorySlug: 'corporate-changes', isPopular: false, imagePath: '', order: 4 },
+        { serviceSlug: 'shareholders', categorySlug: 'corporate-changes', isPopular: false, imagePath: '', order: 5 },
+        { serviceSlug: 'capital', categorySlug: 'corporate-changes', isPopular: false, imagePath: '', order: 6 },
+        { serviceSlug: 'address', categorySlug: 'corporate-changes', isPopular: false, imagePath: '', order: 7 },
+        { serviceSlug: 'objectives', categorySlug: 'corporate-changes', isPopular: false, imagePath: '', order: 8 },
+        { serviceSlug: 'dissolution', categorySlug: 'corporate-changes', isPopular: false, imagePath: '', order: 9 },
       ],
     },
     {
@@ -208,8 +206,8 @@ export function buildPopularServicesForLocale(
       serviceSlug: item.serviceSlug,
       categorySlug: item.categorySlug,
       imagePath: item.imagePath ?? '',
-      title,
-      description: summary,
+      title: String(title),
+      description: String(summary),
     };
   });
 }

@@ -6,10 +6,11 @@ import { COMPANY } from '@/data/company';
 import { motion, LayoutGroup } from 'framer-motion';
 import { TypewriterText } from '@/components/common/TypewriterText'; // ← ใช้เวอร์ชันที่คุณเพิ่งปรับให้เหมือน legacy (พิมพ์เดินหน้า, font-normal)
 import CTAReveal from '@/components/common/CTAReveal';
-import { useLocale } from 'next-intl';
+import { useTranslations, useLocale } from 'next-intl';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPhone, faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { faLine, faWhatsapp } from '@fortawesome/free-brands-svg-icons';
+import React from 'react';
 
 export type HeroContent = {
   title: string;
@@ -36,9 +37,16 @@ export function HeroSection({
   const typewriterText = Array.isArray(content.typewriter) && content.typewriter.length > 0
     ? content.typewriter[0]
     : '';
+
   const locale = useLocale();
+  const tHome = useTranslations('home');
   const isLongLatin = ['de', 'nl'].includes(locale);
   const needsFullWidth = ['ta', 'ar', 'fa', 'he', 'de'].includes(locale);
+  const isCJK = ['ja', 'ko', 'zh-Hans', 'zh-Hant'].includes(locale);
+
+  // Typewriter takes string slices, so we must strip any semantic XML tags from its prop
+  const stripTags = (str: string) => typeof str === 'string' ? str.replace(/<[^>]*>?/gm, '') : '';
+  const cleanTypewriterText = stripTags(typewriterText);
 
   return (
     <section
@@ -85,50 +93,55 @@ export function HeroSection({
             className={[
               'font-bold leading-snug tracking-tight text-[#A70909]',
               'text-[clamp(1.9rem,1.5rem+2.2vw,3.4rem)]',
-              'supports-[text-wrap:balance]:text-balance',
-              'max-[414px]:text-balance',
-              'sm:text-balance', // Unconditionally balance text on Tablet instead of one long unreadable ribbon
-
-            ].join(' ')}
+              isCJK ? 'w-fit mx-auto text-center' : 'sm:text-balance supports-[text-wrap:balance]:text-balance max-[414px]:text-balance',
+            ].join(' ').trim()}
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6, ease: 'easeOut' }}
           >
-            {(content.title ?? '').split('\n').map((line, i) => {
-              const base = 'leading-tight';
-              const desktopNoWrap = needsFullWidth
-                ? 'sm:block'
-                : 'lg:inline-block lg:whitespace-nowrap'; // Only lock to a single line on very wide screens (lg), freeing Tablet (sm) to text-balance
-              const smallWrap = 'max-[480px]:whitespace-normal max-[480px]:text-center';
-              const longLatinExtras = isLongLatin
-                ? [
-                  'max-[640px]:hyphens-auto',
-                  'max-[414px]:break-words',
-                  locale === 'de'
-                    ? [
-                      'max-[480px]:[word-break:break-word]',
-                      'max-[480px]:[overflow-wrap:anywhere]',
-                      'max-[360px]:break-all',
-                    ].join(' ')
-                    : '',
-                ]
-                  .join(' ')
-                  .trim()
-                : '';
-              return (
-                <span
-                  key={i}
-                  className={['block', base, desktopNoWrap, smallWrap, longLatinExtras].join(' ').trim()}
-                >
-                  {line}
-                </span>
-              );
-            })}
+            {isCJK ? (
+              <span className="block max-[480px]:whitespace-normal max-[480px]:text-center">
+                {tHome.rich('hero.title', {
+                  nw: (chunks) => <span className="whitespace-nowrap inline-block">{chunks}</span>,
+                  br: () => <br className="sm:hidden mt-[3px]" />
+                })}
+              </span>
+            ) : (
+              (content.title ?? '').split('\n').map((line, i) => {
+                const base = 'leading-tight';
+                const desktopNoWrap = needsFullWidth
+                  ? 'sm:block'
+                  : 'lg:inline-block lg:whitespace-nowrap'; // Only lock to a single line on very wide screens (lg), freeing Tablet (sm) to text-balance
+                const smallWrap = 'max-[480px]:whitespace-normal max-[480px]:text-center';
+                const longLatinExtras = isLongLatin
+                  ? [
+                    'max-[640px]:hyphens-auto',
+                    'max-[414px]:break-words',
+                    locale === 'de'
+                      ? [
+                        'max-[480px]:[word-break:break-word]',
+                        'max-[480px]:[overflow-wrap:anywhere]',
+                        'max-[360px]:break-all',
+                      ].join(' ')
+                      : '',
+                  ]
+                    .join(' ')
+                    .trim()
+                  : '';
+                return (
+                  <React.Fragment key={i}>
+                    <span className={['block', base, desktopNoWrap, smallWrap, longLatinExtras].join(' ').trim()}>
+                      {line}
+                    </span>
+                  </React.Fragment>
+                );
+              })
+            )}
           </motion.h1>
 
           {/* Typewriter: พฤติกรรม/หน้าตาเหมือน legacy (ตัวคอมโพเนนต์กำหนดสี/น้ำหนัก/เคอร์เซอร์แล้ว)
             ใช้ motion เหมือนเดิม */}
-          {typewriterText ? (
+          {cleanTypewriterText ? (
             <motion.div
               layout
               initial={{ opacity: 0, y: 10 }}
@@ -136,7 +149,7 @@ export function HeroSection({
               transition={{ duration: 0.5, delay: 0.2 }}
             >
               {/* ตัว TypewriterText (เวอร์ชันที่ปรับแล้ว) จะเรนเดอร์เป็น <h2 class="text-lg lg:text-2xl font-normal text-[#A70909] ..."> */}
-              <TypewriterText text={typewriterText} />
+              <TypewriterText text={cleanTypewriterText} />
             </motion.div>
           ) : null}
 

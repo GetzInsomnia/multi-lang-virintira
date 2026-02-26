@@ -6,8 +6,12 @@ import Image from 'next/image';
 import { FiZoomIn, FiZoomOut, FiX } from 'react-icons/fi';
 import BorderRevealButton from '../BorderRevealButton';
 import { COMPANY } from '@/data/company';
+import { useTranslations, useLocale } from 'next-intl';
 
 export function AboutSection({ heading, paragraphs, linkLabel, viewLicenseLabel, closeLabel }: { heading: string; paragraphs: string[]; linkLabel: string; viewLicenseLabel: string; closeLabel: string }) {
+  const locale = useLocale();
+  const tHome = useTranslations('home');
+  const isCJK = ['ja', 'ko', 'zh-Hans', 'zh-Hant'].includes(locale);
   const [isOpen, setIsOpen] = useState(false);
   const [scale, setScale] = useState(1);
   const details: string[] = Array.isArray(paragraphs) ? paragraphs : [];
@@ -56,10 +60,13 @@ export function AboutSection({ heading, paragraphs, linkLabel, viewLicenseLabel,
         >
           {heading && (
             <blockquote
-              className="mb-6 border-l-4 border-[#A70909] pl-4 text-xl font-semibold leading-relaxed text-[#A70909] lg:text-3xl"
-              style={{ textWrap: 'balance' }}
+              className={['mb-6 border-l-4 border-[#A70909] pl-4 text-xl font-semibold leading-relaxed text-[#A70909] lg:text-3xl', isCJK ? 'w-fit' : ''].join(' ').trim()}
+              style={{ textWrap: isCJK ? 'wrap' : 'balance' }}
             >
-              {heading}
+              {isCJK ? tHome.rich('about.heading', {
+                nw: (chunks) => <span className="whitespace-nowrap inline-block">{chunks}</span>,
+                br: () => <br className="sm:hidden mt-[3px]" />
+              }) : heading}
             </blockquote>
           )}
 
@@ -124,8 +131,9 @@ export function AboutSection({ heading, paragraphs, linkLabel, viewLicenseLabel,
 
               {/* View License Tag - Always visible on mobile & tablet, hover on desktop */}
               <div className="absolute inset-0 z-20 flex items-center justify-center opacity-100 xl:opacity-0 transition-opacity duration-300 xl:group-hover:opacity-100 xl:group-focus:opacity-100">
-                <span className="rounded-full bg-white/95 px-5 py-2.5 text-sm font-bold text-[#A70909] shadow-lg backdrop-blur-sm transition-transform hover:scale-105 hover:shadow-2xl">
-                  <FiZoomIn className="inline-block mr-2 text-lg" /> {viewLicenseLabel}
+                <span className="flex items-center justify-center gap-2 rounded-full bg-white/95 px-4 sm:px-5 py-2.5 text-[0.8rem] sm:text-sm font-bold text-[#A70909] shadow-lg backdrop-blur-sm transition-transform hover:scale-105 hover:shadow-2xl max-w-[90%] text-center leading-tight">
+                  <FiZoomIn className="text-lg shrink-0" />
+                  <span>{viewLicenseLabel}</span>
                 </span>
               </div>
             </div>
