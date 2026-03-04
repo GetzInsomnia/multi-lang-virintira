@@ -407,7 +407,7 @@
     "items": {
       "company-limited": {
         "title": "株式会社",
-        "summary": "専門家の指導のもと、株式会社および合資会社の登録を完了します。",
+        "summary": "総合的な株式会社設立登録。書類作成から法的手続きまで全てサポートし、安心してビジネスを始められます。",
         "hero": {
           "title": "Start your Thai Company correctly",
           "subtitle": "Trusted by 500+ founders",
@@ -474,37 +474,37 @@
       },
       "limited-partnership": {
         "title": "合資会社",
-        "summary": "合資会社の設立・登録。",
+        "summary": "迅速かつ法令を遵守した合資会社（LP）の登録サービス。基本的なビジネス構造に関するコンサルティングも提供します。",
         "description": "",
         "features": []
       },
       "foundation": {
         "title": "財団法人",
-        "summary": "財団法人の設立。",
+        "summary": "財団設立の許可申請。複雑な手続きをサポートし、政府の規制に完全に準拠した目的（定款）の作成を行います。",
         "description": "",
         "features": []
       },
       "association": {
         "title": "社団法人",
-        "summary": "組合・協会の設立。",
+        "summary": "あらゆる種類の協会設立登録。スムーズな活動運営を確実にするため、厳密な書類と会則を作成します。",
         "description": "",
         "features": []
       },
       "commercial-shop": {
         "title": "商業登記（店舗）",
-        "summary": "店舗の商業登記。",
+        "summary": "ビジネスの信頼性を構築し、将来の取引をサポートするための商業登記（個人事業主/店舗）。",
         "description": "",
         "features": []
       },
       "employer-sso": {
         "title": "雇用者登録（SSO）",
-        "summary": "雇用主登録および社会保険手続き。",
+        "summary": "社会保険制度への雇用主および従業員の登録。労働法に準拠した煩雑な書類作成を代行します。",
         "description": "",
         "features": []
       },
       "vat-registration": {
         "title": "VAT（付加価値税）登録",
-        "summary": "付加価値税 (VAT) の登録。",
+        "summary": "適切な税制への加入のための付加価値税（VAT）登録サービス。リスク軽減と綿密な税務計画のコンサルティングも提供します。",
         "description": "",
         "features": []
       },

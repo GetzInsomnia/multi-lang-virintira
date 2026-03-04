@@ -407,7 +407,7 @@
     "items": {
       "company-limited": {
         "title": "S.r.l.",
-        "summary": "Registrazione completa per società a responsabilità limitata e partnership con la guida di esperti.",
+        "summary": "Registrazione aziendale completa. Gestiamo tutti i documenti e le procedure legali per farti avviare la tua attività con sicurezza.",
         "hero": {
           "title": "Start your Thai Company correctly",
           "subtitle": "Trusted by 500+ founders",
@@ -474,37 +474,37 @@
       },
       "limited-partnership": {
         "title": "Società in Accomandita",
-        "summary": "Servizi di registrazione per società in accomandita.",
+        "summary": "Registrazione rapida e conforme della società in accomandita (LP). Offriamo anche consulenza preliminare sulla struttura aziendale.",
         "description": "",
         "features": []
       },
       "foundation": {
         "title": "Fondazione",
-        "summary": "Setup e registrazione di fondazioni.",
+        "summary": "Licenza di costituzione della fondazione. Gestiamo procedure complesse e redigiamo gli obiettivi in perfetta conformità con le normative governative.",
         "description": "",
         "features": []
       },
       "association": {
         "title": "Associazione",
-        "summary": "Servizi di registrazione per associazioni.",
+        "summary": "Registrazione per tutti i tipi di associazioni. Prepariamo documenti rigorosi e statuti per garantire il regolare svolgimento delle attività.",
         "description": "",
         "features": []
       },
       "commercial-shop": {
         "title": "Registro Imprese (Shop)",
-        "summary": "Registrazione commerciale per negozi.",
+        "summary": "Registrazione commerciale (privati/negozi) per costruire la credibilità aziendale e supportare le transazioni future.",
         "description": "",
         "features": []
       },
       "employer-sso": {
         "title": "Datore di Lavoro (SSO)",
-        "summary": "Registrazione del datore di lavoro e dei dipendenti nel sistema di sicurezza sociale. Gestiamo le complesse pratiche burocratiche nel rispetto delle leggi sul lavoro.",
+        "summary": "Iscrizione del datore di lavoro e dei dipendenti al sistema di previdenza sociale. Gestiamo le pratiche burocratiche complesse nel rispetto delle leggi sul lavoro.",
         "description": "",
         "features": []
       },
       "vat-registration": {
         "title": "Registrazione Partita IVA",
-        "summary": "Servizi di registrazione IVA.",
+        "summary": "Registrazione IVA per entrare correttamente nel sistema fiscale, includendo consulenza sulla riduzione dei rischi e una pianificazione fiscale meticolosa.",
         "description": "",
         "features": []
       },

@@ -172,7 +172,7 @@ export default async function AboutUsPage({ params }: PageParams) {
                     <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-16 gap-y-16 lg:mx-0 lg:max-w-none lg:grid-cols-12 lg:items-center">
                         <SlideIn direction="left" className="lg:col-span-5 relative">
                             <div className="relative p-8 sm:p-12 text-center">
-                                <span className="absolute top-0 left-0 text-9xl text-[#A70909]/10 font-serif leading-none select-none">"</span>
+                                <span className="absolute top-0 left-0 text-9xl text-[#A70909]/10 font-serif leading-none select-none">&quot;</span>
                                 <h2 className="relative z-10 text-4xl sm:text-5xl lg:text-6xl italic font-bold tracking-tight text-gray-900 text-balance mt-4">
                                     {tAbout('story.heading')}
                                 </h2>

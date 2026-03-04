@@ -407,7 +407,7 @@
     "items": {
       "company-limited": {
         "title": "有限公司",
-        "summary": "在专家指导下完成有限公司和合伙企业的注册。",
+        "summary": "全方位的有限公司注册服务。我们负责处理所有文件和法律程序，让您充满信心地开启业务。",
         "hero": {
           "title": "Start your Thai Company correctly",
           "subtitle": "Trusted by 500+ founders",
@@ -474,37 +474,37 @@
       },
       "limited-partnership": {
         "title": "有限合伙",
-        "summary": "有限合伙企业注册。",
+        "summary": "快速且合规的有限合伙（LP）注册服务，并提供初步的商业架构咨询。",
         "description": "",
         "features": []
       },
       "foundation": {
         "title": "基金会",
-        "summary": "基金会设立。",
+        "summary": "基金会设立许可申请。我们协助处理复杂的程序并起草宗旨，确保完全符合政府法规。",
         "description": "",
         "features": []
       },
       "association": {
         "title": "协会",
-        "summary": "协会及非盈利组织注册。",
+        "summary": "各类协会注册服务。我们准备严谨的文件和章程，以确保您的各项活动顺利进行。",
         "description": "",
         "features": []
       },
       "commercial-shop": {
         "title": "商业登记（店铺）",
-        "summary": "店铺商业登记。",
+        "summary": "商业登记（个人/店铺），旨在建立商业信誉并为未来的交易提供支持。",
         "description": "",
         "features": []
       },
       "employer-sso": {
         "title": "雇主登记 (SSO)",
-        "summary": "雇主及社保登记。",
+        "summary": "将雇主和员工注册入社会保障系统。我们负责处理符合劳动法的繁琐文件工作。",
         "description": "",
         "features": []
       },
       "vat-registration": {
         "title": "增值税 (VAT)",
-        "summary": "增值税 (VAT) 登记。",
+        "summary": "增值税注册服务，助您顺利进入税务系统，并提供降低风险和严谨税务规划的建议。",
         "description": "",
         "features": []
       },
