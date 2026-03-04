@@ -27,13 +27,16 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: PageProps) {
-    const { locale, slug } = params;
+    const { locale, category, slug } = params;
     const tServices = await getTranslations({ locale, namespace: 'services' });
-    const title = tServices(`items.${slug}.title`);
+    const tMeta = await getTranslations({ locale, namespace: 'metadata.services.item' });
+
+    const categoryTitle = tServices(`categories.${category}.title`);
+    const serviceTitle = tServices(`items.${slug}.title`);
     const summary = tServices(`items.${slug}.summary`);
 
     return {
-        title: `${title} | Virintira`,
+        title: tMeta('titleFormat', { category: categoryTitle, item: serviceTitle }),
         description: summary,
     };
 }

@@ -13,7 +13,7 @@
       ]
     },
     "aboutUs": {
-      "title": "About Virintira | Your Reliable Thai Business Partner",
+      "title": "À propos de Virintira | Avancez en toute confiance avec nous",
       "description": "Learn about Virintira's mission, story, and core values. We provide transparent, high-speed corporate compliance and accounting in Thailand.",
       "keywords": [
         "About Virintira",
@@ -41,6 +41,15 @@
       ]
     },
     "services": {
+      "index": {
+        "title": "Virintira | Toutes nos catégories de services"
+      },
+      "category": {
+        "titleFormat": "Virintira | Services de {category}"
+      },
+      "item": {
+        "titleFormat": "Virintira | {item} - Services de {category}"
+      },
       "bookkeeping": {
         "title": "Bookkeeping Service | Virintira",
         "description": "Full-service bookkeeping, monthly reporting, and bilingual support for Thai SMEs.",
@@ -367,23 +376,23 @@
     "categories": {
       "registrations": {
         "title": "Immatriculations",
-        "summary": "Création de société et formalités légales."
+        "summary": "Enregistrement d'entreprises, d'organisations et déclarations obligatoires."
       },
       "corporate-changes": {
         "title": "Modifications",
-        "summary": "Mise à jour des dossiers d'entreprise."
+        "summary": "Modification d'extraits Kbis et des informations de l'entreprise."
       },
       "accounting-audit": {
         "title": "Comptabilité & Audit",
-        "summary": "Conformité, rapports et assurance."
+        "summary": "L'ensemble des services comptables et fiscaux."
       },
       "licensing": {
         "title": "Licences",
-        "summary": "Permis d'affaires et approbations sectorielles."
+        "summary": "Diverses licences et permis nécessaires à l'exploitation d'une entreprise."
       },
       "digital-marketing": {
         "title": "Marketing Digital",
-        "summary": "Online visibility and growth."
+        "summary": "Réseaux sociaux, sites web, IA et programmation."
       },
       "other": {
         "title": "Autres services",
@@ -396,9 +405,9 @@
       "cta": "Demander maintenant !"
     },
     "items": {
-      "registration": {
-        "title": "Société en commandite",
-        "summary": "Enregistrement complet pour les sociétés à responsabilité limitée et les partenariats avec des conseils d'experts.",
+      "company-limited": {
+        "title": "SARL",
+        "summary": "Enregistrement complet de société. Nous gérons tous les documents et démarches juridiques pour que vous puissiez démarrer votre entreprise en toute confiance.",
         "hero": {
           "title": "Start your Thai Company correctly",
           "subtitle": "Trusted by 500+ founders",
@@ -464,38 +473,38 @@
         "description": ""
       },
       "limited-partnership": {
-        "title": "Société en commandite",
-        "summary": "Création de société en commandite.",
+        "title": "Société en Commandite",
+        "summary": "Enregistrement rapide et conforme de société en commandite (LP). Nous fournissons également des conseils préliminaires sur la structure de l'entreprise.",
         "description": "",
         "features": []
       },
       "foundation": {
         "title": "Fondation",
-        "summary": "Création de fondation.",
+        "summary": "Licence d'établissement de fondation. Nous naviguons à travers des procédures complexes et rédigeons des objectifs conformes aux réglementations gouvernementales.",
         "description": "",
         "features": []
       },
       "association": {
         "title": "Association",
-        "summary": "Création d'association.",
+        "summary": "Enregistrement pour tous types d'associations. Nous préparons des documents et des statuts rigoureux pour assurer le bon déroulement de vos activités.",
         "description": "",
         "features": []
       },
       "commercial-shop": {
-        "title": "Registre du commerce",
-        "summary": "Inscription au registre du commerce.",
+        "title": "Registre du Commerce",
+        "summary": "Enregistrement commercial (particuliers/boutiques) pour renforcer la crédibilité de l'entreprise et faciliter les transactions futures.",
         "description": "",
         "features": []
       },
       "employer-sso": {
-        "title": "Employeur (Sécu/SSO)",
-        "summary": "Inscription employeur et sécurité sociale.",
+        "title": "Employeur (SSO)",
+        "summary": "Inscription de l'employeur et des employés au système de sécurité sociale. Nous gérons les formalités administratives complexes conformément au droit du travail.",
         "description": "",
         "features": []
       },
       "vat-registration": {
-        "title": "TVA (VAT)",
-        "summary": "Inscription à la TVA.",
+        "title": "Immatriculation TVA",
+        "summary": "Enregistrement à la TVA pour intégrer correctement le système fiscal, incluant des conseils sur la réduction des risques et une planification fiscale rigoureuse.",
         "description": "",
         "features": []
       },
@@ -1088,15 +1097,15 @@
       "subtitle": "Virintira allie expertise comptable et technologies modernes pour offrir des services de bout en bout, transparents et dignes de confiance."
     },
     "mission": {
-      "heading": "Our Mission",
-      "description": "To provide foreign and local entrepreneurs with seamless, compliant, and highly efficient back-office support, enabling them to focus entirely on scaling their businesses."
+      "p1": "Notre mission est d'être un cabinet qui fournit plus que des services comptables et fiscaux généraux. Nous sommes un « cabinet complet de gestion d'entreprise et de technologie » qui soutient les entrepreneurs dans chaque dimension de leurs opérations commerciales.",
+      "p2": "Nous opérons sur les principes de précision, de transparence et en plaçant les meilleurs intérêts de nos clients au premier plan. Nous nous efforçons d'être à la fois un partenaire de réflexion de confiance qui comprend la nature de votre entreprise et un allié commercial fiable à long terme.",
+      "heading": "Notre Mission"
     },
     "story": {
-      "heading": "Our Story",
-      "paragraphs": [
-        "Founded on the principle of absolute transparency, Virintira started with a simple goal: making Thai corporate compliance easy to understand.",
-        "Today, we serve hundreds of companies—from emerging startups to established multinational corporations—delivering tailored financial strategies and rock-solid accounting."
-      ]
+      "p1": "Notre équipe possède plus de 10 ans d'expérience dans le conseil et la gestion d'entreprise, couvrant l'enregistrement des sociétés, les licences, la comptabilité, la fiscalité, la clôture financière et le droit des affaires pertinent en Thaïlande.",
+      "p2": "En travaillant aux côtés de divers types d'entrepreneurs, nous avons constaté qu'un problème majeur auquel beaucoup sont confrontés est de ne pas recevoir d'informations complètes ou d'explications claires pour la planification et la prise de décision. Une mauvaise compréhension des détails juridiques ou des conditions des agences gouvernementales peut entraîner des conséquences graves, telles que la révocation de licences, des amendes ou des charges fiscales inutiles.",
+      "p3": "VIRINTIRA a donc été fondée avec l'intention d'être un consultant qui « dit la vérité ». Nous sommes prêts à exposer toutes les options, en expliquant franchement les avantages, les inconvénients et les risques, vous donnant ainsi les moyens d'avancer et de choisir vous-même ce qui est le mieux pour votre entreprise.",
+      "heading": "Notre Histoire"
     },
     "values": {
       "heading": "Our Core Values",
@@ -1118,6 +1127,25 @@
     "cta": {
       "heading": "Avancez avec confiance aux côtés de Virintira.",
       "description": "Confiez-nous vos démarches et votre back-office, afin de vous concentrer pleinement sur vos objectifs d’entreprise."
+    },
+    "coreValues": {
+      "card1": "Intégrité et Transparence: Nous fournissons des informations complètes sur toutes les options, ne cachons rien et ne persuadons pas les clients d'utiliser des services inutiles.",
+      "card2": "Expertise Globale: Nos services couvrent la comptabilité, la fiscalité, le droit des affaires et la technologie pour élever parfaitement votre entreprise.",
+      "card3": "Responsabilité Professionnelle: Nous assumons l'entière responsabilité des tâches assignées, n'abandonnons jamais les projets et livrons le travail à temps (sauf en cas de retards causés par les procédures des agences gouvernementales).",
+      "card4": "Ouverture et Sincérité: Nous travaillons avec cœur, en priorisant les avantages de nos clients, sur la base du respect mutuel et de la stricte adhésion aux normes professionnelles.",
+      "heading": "Nos Valeurs Fondamentales"
+    },
+    "policies": {
+      "subHeader": "Afin de maintenir les normes et l'efficacité les plus élevées dans nos services, nous avons des directives et des politiques claires comme suit :",
+      "card1": "Évaluation et Consultation: Lorsque les clients nous contactent concernant un service, nous explons en détail ce qui doit être préparé, les méthodes de travail, la portée des travaux, les étapes, le calendrier et les frais. Cela donne aux clients une vue d'ensemble complète pour faciliter la planification.",
+      "card2": "Paiement des Frais de Service: Pour assurer une allocation des ressources et des opérations fluides, nos services exigent un paiement intégral avant le début des travaux. (Pour certains services nécessitant plus d'un mois, le paiement peut être divisé en 2-3 versements selon les conditions convenues.)",
+      "card3": "Politique de Non-remboursement: Notre modèle de service impliquant un conseil approfondi et un travail professionnel — exigeant que l'entreprise alloue immédiatement du temps, des ressources et du personnel expert dès qu'un accord est conclu — l'entreprise se réserve le droit d'appliquer strictement une politique de non-remboursement dans tous les cas.",
+      "heading": "Nos Politiques de Service"
+    },
+    "ethics": {
+      "p1": "Chez VIRINTIRA, nous pensons que notre crédibilité, nos performances et notre succès ne se mesurent pas par des photos de travail, des photos de clients ou la présentation de listes de clients dans les médias publics.",
+      "p2": "Nous avons une politique stricte contre la publication d'informations, de portefeuilles ou d'avis de clients, car nous considérons votre vie privée et la confidentialité de votre entreprise comme étant de la plus haute importance. Notre succès repose sur la confiance du bouche-à-oreille accordée par nos clients et sur des résultats de travail 100% conformes à la loi.",
+      "heading": "Éthique et Confidentialité"
     }
   }
 }

@@ -13,7 +13,7 @@
       ]
     },
     "aboutUs": {
-      "title": "About Virintira | Your Reliable Thai Business Partner",
+      "title": "Über Virintira | Gehen Sie mit uns selbstbewusst voran",
       "description": "Learn about Virintira's mission, story, and core values. We provide transparent, high-speed corporate compliance and accounting in Thailand.",
       "keywords": [
         "About Virintira",
@@ -41,6 +41,15 @@
       ]
     },
     "services": {
+      "index": {
+        "title": "Virintira | Alle unsere Servicekategorien"
+      },
+      "category": {
+        "titleFormat": "Virintira | {category} Dienstleistungen"
+      },
+      "item": {
+        "titleFormat": "Virintira | {item} - {category} Dienstleistungen"
+      },
       "bookkeeping": {
         "title": "Bookkeeping Service | Virintira",
         "description": "Full-service bookkeeping, monthly reporting, and bilingual support for Thai SMEs.",
@@ -367,23 +376,23 @@
     "categories": {
       "registrations": {
         "title": "Gründungen",
-        "summary": "Firmengründung und gesetzliche Anmeldungen."
+        "summary": "Registrierung von Unternehmen, Organisationen und gesetzlichen Meldungen."
       },
       "corporate-changes": {
         "title": "Änderungen",
-        "summary": "Aktualisierung von Firmendaten."
+        "summary": "Änderungen von Firmenauszügen und diversen Unternehmensdaten."
       },
       "accounting-audit": {
         "title": "Buchhaltung & Audit",
-        "summary": "Compliance, Berichterstattung und Prüfung."
+        "summary": "Alle buchhalterischen und steuerlichen Dienstleistungen."
       },
       "licensing": {
         "title": "Lizenzen",
-        "summary": "Gewerbeerlaubnisse und Genehmigungen."
+        "summary": "Verschiedene Lizenzen und Genehmigungen für den Geschäftsbetrieb."
       },
       "digital-marketing": {
         "title": "Digital Marketing",
-        "summary": "Online visibility and growth."
+        "summary": "Social Media, Websites, KI und Programmierung."
       },
       "other": {
         "title": "Sonstige Dienstleistungen",
@@ -396,9 +405,9 @@
       "cta": "Jetzt anfragen!"
     },
     "items": {
-      "registration": {
-        "title": "Kommanditgesellschaft",
-        "summary": "Komplette Registrierung für GmbHs und Personengesellschaften mit fachkundiger Begleitung.",
+      "company-limited": {
+        "title": "GmbH",
+        "summary": "Umfassende Unternehmensregistrierung. Wir kümmern uns um alle Dokumente und rechtlichen Schritte, damit Sie Ihr Geschäft zuversichtlich starten können.",
         "hero": {
           "title": "Start your Thai Company correctly",
           "subtitle": "Trusted by 500+ founders",
@@ -465,37 +474,37 @@
       },
       "limited-partnership": {
         "title": "Kommanditgesellschaft",
-        "summary": "Gründung und Verwaltung einer KG.",
+        "summary": "Schnelle und rechtskonforme Registrierung von Kommanditgesellschaften (LP). Wir bieten zudem erste Beratungen zur Unternehmensstruktur.",
         "description": "",
         "features": []
       },
       "foundation": {
         "title": "Stiftung",
-        "summary": "Gründung einer Stiftung.",
+        "summary": "Lizenzierung zur Stiftungsgründung. Wir navigieren durch komplexe Verfahren und entwerfen Ziele, die den behördlichen Vorschriften genau entsprechen.",
         "description": "",
         "features": []
       },
       "association": {
         "title": "Verein",
-        "summary": "Gründung eines Vereins.",
+        "summary": "Registrierung für alle Arten von Verbänden. Wir erstellen strikte Dokumente und Statuten, um einen reibungslosen Ablauf der Aktivitäten zu gewährleisten.",
         "description": "",
         "features": []
       },
       "commercial-shop": {
-        "title": "Handelsregister",
-        "summary": "Eintragung ins Handelsregister.",
+        "title": "Handelsregister (Shop)",
+        "summary": "Gewerbeanmeldung (Privatpersonen/Geschäfte) zum Aufbau geschäftlicher Glaubwürdigkeit und zur Unterstützung zukünftiger Transaktionen.",
         "description": "",
         "features": []
       },
       "employer-sso": {
         "title": "Arbeitgeber (SSO)",
-        "summary": "Arbeitgeberanmeldung und Sozialversicherung.",
+        "summary": "Registrierung von Arbeitgebern und Arbeitnehmern im Sozialversicherungssystem. Wir erledigen komplexe Formalitäten in Übereinstimmung mit dem Arbeitsrecht.",
         "description": "",
         "features": []
       },
       "vat-registration": {
-        "title": "Umsatzsteuer (VAT)",
-        "summary": "Umsatzsteuerregistrierung (MwSt.).",
+        "title": "USt-Registrierung",
+        "summary": "Mehrwertsteuer-Registrierung für den korrekten Eintritt ins Steuersystem, inklusive Beratung zur Risikominimierung und sorgfältigen Steuerplanung.",
         "description": "",
         "features": []
       },
@@ -1088,15 +1097,15 @@
       "subtitle": "Virintira verbindet Buchhaltungs und Steuerkompetenz mit moderner Technologie, um ganzheitliche Services zu bieten transparent und verlässlich."
     },
     "mission": {
-      "heading": "Our Mission",
-      "description": "To provide foreign and local entrepreneurs with seamless, compliant, and highly efficient back-office support, enabling them to focus entirely on scaling their businesses."
+      "p1": "Unsere Mission ist es, ein Unternehmen zu sein, das mehr als nur allgemeine Buchhaltungs- und Steuerdienstleistungen anbietet. Wir sind ein „umfassendes Unternehmensmanagement- und Technologieunternehmen“, das Unternehmer in jeder Dimension ihrer Geschäftstätigkeit unterstützt.",
+      "p2": "Wir handeln nach den Prinzipien der Genauigkeit, Transparenz und der Priorisierung der besten Interessen unserer Kunden. Wir streben danach, sowohl ein vertrauenswürdiger Denkpartner zu sein, der die Natur Ihres Unternehmens versteht, als auch ein verlässlicher langfristiger Geschäftspartner.",
+      "heading": "Unsere Mission"
     },
     "story": {
-      "heading": "Our Story",
-      "paragraphs": [
-        "Founded on the principle of absolute transparency, Virintira started with a simple goal: making Thai corporate compliance easy to understand.",
-        "Today, we serve hundreds of companies—from emerging startups to established multinational corporations—delivering tailored financial strategies and rock-solid accounting."
-      ]
+      "p1": "Unser Team verfügt über mehr als 10 Jahre Erfahrung in der Unternehmensberatung und im Management und deckt Unternehmensregistrierungen, Lizenzierungen, Buchhaltung, Steuern, Jahresabschlüsse und relevante Wirtschaftsgesetze in Thailand ab.",
+      "p2": "In der Zusammenarbeit mit verschiedenen Arten von Unternehmern haben wir festgestellt, dass ein Hauptproblem vieler darin besteht, keine vollständigen Informationen oder direkten Erklärungen für Planungen und Entscheidungen zu erhalten. Ein Missverständnis rechtlicher Details oder behördlicher Auflagen kann zu schwerwiegenden Folgen wie dem Entzug von Lizenzen, Geldstrafen oder unnötigen Steuerbelastungen führen.",
+      "p3": "VIRINTIRA wurde daher mit der Absicht gegründet, ein Berater zu sein, der „die Wahrheit spricht“. Wir sind bereit, alle Optionen darzulegen und Vor- und Nachteile sowie Risiken offen zu erklären, damit Sie selbst die beste Wahl für Ihr Unternehmen treffen können.",
+      "heading": "Unsere Geschichte"
     },
     "values": {
       "heading": "Our Core Values",
@@ -1118,6 +1127,25 @@
     "cta": {
       "heading": "Gehen Sie den nächsten Schritt mit Vertrauen mit Virintira.",
       "description": "Wir übernehmen Ihre Unterlagen und Backoffice-Aufgaben, damit Sie sich ganz auf Ihre Unternehmensziele konzentrieren können."
+    },
+    "coreValues": {
+      "card1": "Integrität und Transparenz: Wir bieten vollständige Informationen zu allen Optionen, verheimlichen nichts und überreden Kunden nicht zu unnötigen Dienstleistungen.",
+      "card2": "Umfassende Expertise: Unsere Dienstleistungen decken Buchhaltung, Steuern, Wirtschaftsrecht und Technologie ab, um Ihr Unternehmen perfekt zu fördern.",
+      "card3": "Professionelle Verantwortung: Wir übernehmen die Verantwortung für zugewiesene Aufgaben, brechen Projekte nie ab und liefern die Arbeit pünktlich (außer bei Verzögerungen durch Behörden).",
+      "card4": "Offenheit und Aufrichtigkeit: Wir arbeiten mit Herz und priorisieren die Vorteile unserer Kunden, basierend auf gegenseitigem Respekt und der strikten Einhaltung professioneller Standards.",
+      "heading": "Unsere Kernwerte"
+    },
+    "policies": {
+      "subHeader": "Um höchste Standards und Effizienz in unseren Dienstleistungen aufrechtzuerhalten, haben wir folgende klare Richtlinien:",
+      "card1": "Bewertung und Beratung: Wenn Kunden uns bezüglich einer Dienstleistung kontaktieren, erklären wir detailliert, was vorbereitet werden muss, sowie Arbeitsmethoden, Umfang, Schritte, Zeitplan und Gebühren. Dies gibt Kunden einen kompletten Überblick, um die Zielplanung zu erleichtern.",
+      "card2": "Zahlung der Servicegebühren: Um eine reibungslose Ressourcenallokation und Abläufe zu gewährleisten, erfordern unsere Dienstleistungen eine vollständige Zahlung vor Beginn der Arbeiten. (Bei bestimmten Dienstleistungen, die mehr als 1 Monat dauern, kann die Zahlung nach vereinbarten Bedingungen in 2-3 Raten aufgeteilt werden.)",
+      "card3": "Keine Rückerstattungspolitik: Da unser Servicemodell tiefgehende Beratung und professionelle Arbeit umfasst – was erfordert, dass das Unternehmen sofort nach Vertragsabschluss Zeit, Ressourcen und Fachpersonal zuweist – behält sich das Unternehmen das Recht vor, in allen Fällen an einer strikten Nicht-Rückerstattungspolitik festzuhalten.",
+      "heading": "Unsere Service-Richtlinien"
+    },
+    "ethics": {
+      "p1": "Bei VIRINTIRA glauben wir, dass unsere Glaubwürdigkeit, Leistung und unser Erfolg nicht an Arbeitsfotos, Kundenfotos oder der Präsentation von Kundenlisten in öffentlichen Medien gemessen werden.",
+      "p2": "Wir verfolgen eine strikte Richtlinie gegen die Veröffentlichung von Kundeninformationen, Portfolios oder Bewertungen, da wir Ihre Privatsphäre und Geschäftsgeheimnisse als von höchster Wichtigkeit erachten. Unser Erfolg baut auf dem durch Mundpropaganda geschenkten Vertrauen unserer Kunden und 100% rechtskonformen Arbeitsergebnissen auf.",
+      "heading": "Ethik und Datenschutz"
     }
   }
 }

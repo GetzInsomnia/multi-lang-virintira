@@ -13,7 +13,7 @@
       ]
     },
     "aboutUs": {
-      "title": "About Virintira | Your Reliable Thai Business Partner",
+      "title": "關於 Virintira | 與我們一起充滿自信地邁向未來",
       "description": "Learn about Virintira's mission, story, and core values. We provide transparent, high-speed corporate compliance and accounting in Thailand.",
       "keywords": [
         "About Virintira",
@@ -41,6 +41,15 @@
       ]
     },
     "services": {
+      "index": {
+        "title": "Virintira | 我們所有的服務類別"
+      },
+      "category": {
+        "titleFormat": "Virintira | {category}服務"
+      },
+      "item": {
+        "titleFormat": "Virintira | {item} - {category}服務"
+      },
       "bookkeeping": {
         "title": "Bookkeeping Service | Virintira",
         "description": "Full-service bookkeeping, monthly reporting, and bilingual support for Thai SMEs.",
@@ -367,23 +376,23 @@
     "categories": {
       "registrations": {
         "title": "公司註冊",
-        "summary": "Entity setup and statutory filings."
+        "summary": "企業、組織註冊及各項法定登記。"
       },
       "corporate-changes": {
         "title": "公司變更",
-        "summary": "Update and maintain company records."
+        "summary": "修改公司證明及各項企業資訊。"
       },
       "accounting-audit": {
         "title": "會計審計",
-        "summary": "Compliance, reporting, and assurance."
+        "summary": "所有會計與稅務相關服務。"
       },
       "licensing": {
         "title": "許可證照",
-        "summary": "Business permits and sector approvals."
+        "summary": "經營業務所需的各種執照與許可證。"
       },
       "digital-marketing": {
         "title": "數位行銷",
-        "summary": "Online visibility and growth."
+        "summary": "社群媒體、網站、AI 及程式開發。"
       },
       "other": {
         "title": "其他服務",
@@ -396,9 +405,9 @@
       "cta": "立即洽詢！"
     },
     "items": {
-      "registration": {
+      "company-limited": {
         "title": "有限公司",
-        "summary": "在專家指導下完成有限公司和合夥企業的註冊。",
+        "summary": "全方位的有限公司註冊服務。我們負責處理所有文件和法律程序，讓您充滿信心地開啟業務。",
         "hero": {
           "title": "Start your Thai Company correctly",
           "subtitle": "Trusted by 500+ founders",
@@ -465,37 +474,37 @@
       },
       "limited-partnership": {
         "title": "有限合夥",
-        "summary": "有限合夥人註冊服務。",
+        "summary": "快速且合規的有限合夥（LP）註冊服務，並提供初步的商業架構諮詢。",
         "description": "",
         "features": []
       },
       "foundation": {
         "title": "基金會",
-        "summary": "建立和註冊基金會。",
+        "summary": "基金會設立許可申請。我們協助處理複雜的程序並起草宗旨，確保完全符合政府法規。",
         "description": "",
         "features": []
       },
       "association": {
         "title": "協會",
-        "summary": "協會和組織註冊。",
+        "summary": "各類協會註冊服務。我們準備嚴謹的文件和章程，以確保您的各項活動順利進行。",
         "description": "",
         "features": []
       },
       "commercial-shop": {
-        "title": "商業登記 (店鋪)",
-        "summary": "商業店鋪註冊服務。",
+        "title": "商業登記（店鋪）",
+        "summary": "商業登記（個人/店鋪），旨在建立商業信譽並為未來的交易提供支持。",
         "description": "",
         "features": []
       },
       "employer-sso": {
         "title": "雇主登記 (SSO)",
-        "summary": "雇主和社會保障局 (SSO) 註冊。",
+        "summary": "將雇主和員工註冊入社會保障系統。我們負責處理符合勞動法的繁瑣文件工作。",
         "description": "",
         "features": []
       },
       "vat-registration": {
         "title": "增值稅 (VAT)",
-        "summary": "增值稅 (VAT) 註冊服務。",
+        "summary": "增值稅註冊服務，助您順利進入稅務系統，並提供降低風險和嚴謹稅務規劃的建議。",
         "description": "",
         "features": []
       },
@@ -1088,15 +1097,15 @@
       "subtitle": "Virintira <nw>結合會計專業</nw>與<nw>現代技術，</nw><br></br><nw>提供</nw><nw>一站式服務，</nw><br></br><nw>透明可靠，</nw><nw>值得信賴。</nw>"
     },
     "mission": {
-      "heading": "Our Mission",
-      "description": "To provide foreign and local entrepreneurs with seamless, compliant, and highly efficient back-office support, enabling them to focus entirely on scaling their businesses."
+      "p1": "我們的使命是成為一家提供超越一般會計和稅務服務的機構，我們是一家“綜合性商業管理與科技服務機構”，在企業運營的各個維度為企業家提供支持。",
+      "p2": "我們的運營基於準確、透明以及將客戶的最大利益放在首位的原則。我們致力於成為既了解您業務本質的戰略夥伴，又是您值得長期信賴的商業盟友。",
+      "heading": "我們的使命"
     },
     "story": {
-      "heading": "Our Story",
-      "paragraphs": [
-        "Founded on the principle of absolute transparency, Virintira started with a simple goal: making Thai corporate compliance easy to understand.",
-        "Today, we serve hundreds of companies—from emerging startups to established multinational corporations—delivering tailored financial strategies and rock-solid accounting."
-      ]
+      "p1": "我們的團隊在商業諮詢和管理領域擁有10年以上的經驗，涵蓋企業註冊、各類許可證申請、會計、稅務、財務決算以及泰國相關的商業法律。",
+      "p2": "在與各類企業家並肩工作的過程中，我們發現許多人面臨的一個主要問題是：未能獲得完整的信息或坦誠的解釋，以便用於規劃和決策。對法律細節或政府機構條件的不了解，可能會導致嚴重的後果，如被吊銷許可證、罰款或產生不必要的稅務負擔。",
+      "p3": "因此，VIRINTIRA 的成立旨在成為一位“說真話”的顧問。我們準備好展示所有選擇，坦誠地解釋優點、缺點和風險，讓您能夠繼續前行，並親自為您的企業做出最合適的選擇。",
+      "heading": "我們的故事"
     },
     "values": {
       "heading": "Our Core Values",
@@ -1118,6 +1127,25 @@
     "cta": {
       "heading": "與 Virintira 一起，<br></br><nw>自信邁向下一步。</nw>",
       "description": "讓我們為您處理文件與<nw>後勤作業，</nw><br></br>您可以全力專注於<nw>企業目標。</nw>"
+    },
+    "coreValues": {
+      "card1": "誠信與透明: 我們提供所有選擇的完整信息，不隱瞞，也不誘導客戶使用不必要的服務。",
+      "card2": "全面專業知識: 我們的服務涵蓋會計、稅務、商業法律和技術，以完美提升您的業務。",
+      "card3": "專業責任感: 我們對分配的任務負責，絕不放棄項目，並按時交付工作（政府機構程序導致的延遲除外）。",
+      "card4": "開放與真誠: 我們用心工作，將客戶的利益放在首位，基於相互尊重並嚴格遵守職業標準。",
+      "heading": "核心價值觀"
+    },
+    "policies": {
+      "subHeader": "為了在我們的服務中保持最高標準和效率，我們制定了以下明確的指導方針和政策：",
+      "card1": "評估與諮詢: 當客戶聯繫我們諮詢相關服務時，我們將詳細解釋客戶需要準備的內容、工作方法、工作範圍、步驟、時間表和服務費用。這為客戶提供了一個完整的概述，使規劃目標變得更加容易。",
+      "card2": "服務費支付: 為了確保資源分配和運營的順利進行，我們的服務要求在工作開始前全額付款。（對於需要1個月以上運營週期的某些服務，可根據商定的條款和費率分2-3次分期付款。）",
+      "card3": "不退款政策: 由於我們的服務模式是深度諮詢和專業工作，公司在達成協議後需要立即分配時間、資源和專家人員來準備運營，因此公司保留在任何情況下均不退還服務費的權利。",
+      "heading": "服務政策"
+    },
+    "ethics": {
+      "p1": "在 VIRINTIRA，我們認為我們的信譽、業績和成功不是通過工作照片、客戶照片或在公共媒體上展示客戶名單來衡量的。",
+      "p2": "我們嚴格禁止發布客戶信息、作品集或評論，因為我們認為您的隱私和商業機密是必須得到最高保護的。我們的成功建立在客戶口耳相傳的信任和100%合法合規的工作成果之上。",
+      "heading": "道德與隱私"
     }
   }
 }

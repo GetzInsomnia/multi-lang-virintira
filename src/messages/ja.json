@@ -41,6 +41,15 @@
       ]
     },
     "services": {
+      "index": {
+        "title": "Virintira | すべてのサービスカテゴリー"
+      },
+      "category": {
+        "titleFormat": "Virintira | {category}サービス"
+      },
+      "item": {
+        "titleFormat": "Virintira | {item} - {category}サービス"
+      },
       "bookkeeping": {
         "title": "Bookkeeping Service | Virintira",
         "description": "Full-service bookkeeping, monthly reporting, and bilingual support for Thai SMEs.",
@@ -367,23 +376,23 @@
     "categories": {
       "registrations": {
         "title": "法人設立",
-        "summary": "会社設立および登記手続き"
+        "summary": "企業、組織の設立、および法定登録。"
       },
       "corporate-changes": {
         "title": "登記変更",
-        "summary": "会社情報の更新・維持"
+        "summary": "会社登記簿および各種企業情報の変更。"
       },
       "accounting-audit": {
         "title": "会計・監査",
-        "summary": "経理、決算、監査対応"
+        "summary": "会計および税務関連のすべてのサービス。"
       },
       "licensing": {
         "title": "許認可",
-        "summary": "事業ライセンスおよび認可取得"
+        "summary": "事業運営に必要な各種ライセンスおよび許可。"
       },
       "digital-marketing": {
         "title": "デジタル",
-        "summary": "オンラインでの認知獲得と成長"
+        "summary": "ソーシャルメディア、ウェブサイト、AI、およびプログラミング。"
       },
       "other": {
         "title": "その他のサービス",
@@ -396,8 +405,8 @@
       "cta": "今すぐお問い合わせ！"
     },
     "items": {
-      "registration": {
-        "title": "合資会社 (L.P.)",
+      "company-limited": {
+        "title": "株式会社",
         "summary": "専門家の指導のもと、株式会社および合資会社の登録を完了します。",
         "hero": {
           "title": "Start your Thai Company correctly",
@@ -464,7 +473,7 @@
         "description": ""
       },
       "limited-partnership": {
-        "title": "合資会社 (L.P.)",
+        "title": "合資会社",
         "summary": "合資会社の設立・登録。",
         "description": "",
         "features": []
@@ -476,25 +485,25 @@
         "features": []
       },
       "association": {
-        "title": "組合・協会",
+        "title": "社団法人",
         "summary": "組合・協会の設立。",
         "description": "",
         "features": []
       },
       "commercial-shop": {
-        "title": "商業登記 (店舗)",
+        "title": "商業登記（店舗）",
         "summary": "店舗の商業登記。",
         "description": "",
         "features": []
       },
       "employer-sso": {
-        "title": "社会保険登録 (SSO)",
+        "title": "雇用者登録（SSO）",
         "summary": "雇用主登録および社会保険手続き。",
         "description": "",
         "features": []
       },
       "vat-registration": {
-        "title": "VAT登録",
+        "title": "VAT（付加価値税）登録",
         "summary": "付加価値税 (VAT) の登録。",
         "description": "",
         "features": []

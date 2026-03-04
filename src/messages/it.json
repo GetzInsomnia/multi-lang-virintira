@@ -41,6 +41,15 @@
       ]
     },
     "services": {
+      "index": {
+        "title": "Virintira | Tutte le nostre categorie di servizi"
+      },
+      "category": {
+        "titleFormat": "Virintira | Servizi di {category}"
+      },
+      "item": {
+        "titleFormat": "Virintira | {item} - Servizi di {category}"
+      },
       "bookkeeping": {
         "title": "Bookkeeping Service | Virintira",
         "description": "Full-service bookkeeping, monthly reporting, and bilingual support for Thai SMEs.",
@@ -367,23 +376,23 @@
     "categories": {
       "registrations": {
         "title": "Costituzione",
-        "summary": "Entity setup and statutory filings."
+        "summary": "Registrazione di aziende, organizzazioni e depositi legali."
       },
       "corporate-changes": {
         "title": "Modifiche",
-        "summary": "Update and maintain company records."
+        "summary": "Modifica delle visure camerali e varie informazioni aziendali."
       },
       "accounting-audit": {
         "title": "Contabilità",
-        "summary": "Compliance, reporting, and assurance."
+        "summary": "Tutti i servizi contabili e fiscali."
       },
       "licensing": {
         "title": "Licenze",
-        "summary": "Business permits and sector approvals."
+        "summary": "Varie licenze e permessi necessari per l'attività aziendale."
       },
       "digital-marketing": {
         "title": "Digital Marketing",
-        "summary": "Online visibility and growth."
+        "summary": "Social media, siti web, IA e programmazione."
       },
       "other": {
         "title": "Altri servizi",
@@ -396,8 +405,8 @@
       "cta": "Richiedi ora!"
     },
     "items": {
-      "registration": {
-        "title": "Società (Co., Ltd.)",
+      "company-limited": {
+        "title": "S.r.l.",
         "summary": "Registrazione completa per società a responsabilità limitata e partnership con la guida di esperti.",
         "hero": {
           "title": "Start your Thai Company correctly",
@@ -464,7 +473,7 @@
         "description": ""
       },
       "limited-partnership": {
-        "title": "Società in accomandita",
+        "title": "Società in Accomandita",
         "summary": "Servizi di registrazione per società in accomandita.",
         "description": "",
         "features": []
@@ -482,19 +491,19 @@
         "features": []
       },
       "commercial-shop": {
-        "title": "Registro imprese",
+        "title": "Registro Imprese (Shop)",
         "summary": "Registrazione commerciale per negozi.",
         "description": "",
         "features": []
       },
       "employer-sso": {
-        "title": "Datore di lavoro (SSO)",
-        "summary": "Registrazione datore di lavoro e previdenza sociale.",
+        "title": "Datore di Lavoro (SSO)",
+        "summary": "Registrazione del datore di lavoro e dei dipendenti nel sistema di sicurezza sociale. Gestiamo le complesse pratiche burocratiche nel rispetto delle leggi sul lavoro.",
         "description": "",
         "features": []
       },
       "vat-registration": {
-        "title": "Partita IVA",
+        "title": "Registrazione Partita IVA",
         "summary": "Servizi di registrazione IVA.",
         "description": "",
         "features": []

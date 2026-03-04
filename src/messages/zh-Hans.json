@@ -41,6 +41,15 @@
       ]
     },
     "services": {
+      "index": {
+        "title": "Virintira | 我们所有的服务类别"
+      },
+      "category": {
+        "titleFormat": "Virintira | {category}服务"
+      },
+      "item": {
+        "titleFormat": "Virintira | {item} - {category}服务"
+      },
       "bookkeeping": {
         "title": "Bookkeeping Service | Virintira",
         "description": "Full-service bookkeeping, monthly reporting, and bilingual support for Thai SMEs.",
@@ -367,23 +376,23 @@
     "categories": {
       "registrations": {
         "title": "公司注册",
-        "summary": "实体设立与法定备案。"
+        "summary": "企业、组织注册及各项法定登记。"
       },
       "corporate-changes": {
         "title": "公司变更",
-        "summary": "更新与维护公司记录。"
+        "summary": "修改公司证明及各项企业信息。"
       },
       "accounting-audit": {
         "title": "会计审计",
-        "summary": "合规、财报与审计保障。"
+        "summary": "所有会计与税务相关服务。"
       },
       "licensing": {
         "title": "许可执照",
-        "summary": "商业许可与行业审批。"
+        "summary": "经营业务所需的各种执照与许可证。"
       },
       "digital-marketing": {
         "title": "数字营销",
-        "summary": "提升在线品牌与业务增长。"
+        "summary": "社交媒体、网站、AI 及程序开发。"
       },
       "other": {
         "title": "其他服务",
@@ -396,8 +405,8 @@
       "cta": "立即咨询！"
     },
     "items": {
-      "registration": {
-        "title": "有限合伙",
+      "company-limited": {
+        "title": "有限公司",
         "summary": "在专家指导下完成有限公司和合伙企业的注册。",
         "hero": {
           "title": "Start your Thai Company correctly",
@@ -482,7 +491,7 @@
         "features": []
       },
       "commercial-shop": {
-        "title": "商业登记 (店铺)",
+        "title": "商业登记（店铺）",
         "summary": "店铺商业登记。",
         "description": "",
         "features": []

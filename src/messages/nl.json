@@ -41,6 +41,15 @@
       ]
     },
     "services": {
+      "index": {
+        "title": "Virintira | Al onze dienstencategorieën"
+      },
+      "category": {
+        "titleFormat": "Virintira | {category} Diensten"
+      },
+      "item": {
+        "titleFormat": "Virintira | {item} - {category} Diensten"
+      },
       "bookkeeping": {
         "title": "Bookkeeping Service | Virintira",
         "description": "Full-service bookkeeping, monthly reporting, and bilingual support for Thai SMEs.",
@@ -367,23 +376,23 @@
     "categories": {
       "registrations": {
         "title": "Oprichtingen",
-        "summary": "Entity setup and statutory filings."
+        "summary": "Registratie van bedrijven, organisaties en wettelijke deponeringen."
       },
       "corporate-changes": {
         "title": "Wijzigingen",
-        "summary": "Update and maintain company records."
+        "summary": "Wijzigingen in uittreksels en diverse bedrijfsinformatie."
       },
       "accounting-audit": {
         "title": "Boekhouding",
-        "summary": "Compliance, reporting, and assurance."
+        "summary": "Alle boekhoudkundige en fiscale diensten."
       },
       "licensing": {
         "title": "Vergunningen",
-        "summary": "Business permits and sector approvals."
+        "summary": "Diverse licenties en vergunningen vereist voor de bedrijfsvoering."
       },
       "digital-marketing": {
         "title": "Digital Marketing",
-        "summary": "Online visibility and growth."
+        "summary": "Social media, websites, AI en programmering."
       },
       "other": {
         "title": "Andere diensten",
@@ -396,8 +405,8 @@
       "cta": "Vraag nu aan!"
     },
     "items": {
-      "registration": {
-        "title": "BV (Co., Ltd.)",
+      "company-limited": {
+        "title": "B.V.",
         "summary": "Volledige registratie voor naamloze vennootschappen en partnerschappen met deskundige begeleiding.",
         "hero": {
           "title": "Start your Thai Company correctly",
@@ -464,7 +473,7 @@
         "description": ""
       },
       "limited-partnership": {
-        "title": "Commanditaire venn.",
+        "title": "Commanditaire Venn.",
         "summary": "Registratie commanditaire vennootschap.",
         "description": "",
         "features": []

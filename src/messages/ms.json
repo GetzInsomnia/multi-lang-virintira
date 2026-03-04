@@ -13,7 +13,7 @@
       ]
     },
     "aboutUs": {
-      "title": "About Virintira | Your Reliable Thai Business Partner",
+      "title": "Mengenai Virintira | Melangkah ke hadapan dengan yakin bersama kami",
       "description": "Learn about Virintira's mission, story, and core values. We provide transparent, high-speed corporate compliance and accounting in Thailand.",
       "keywords": [
         "About Virintira",
@@ -41,6 +41,15 @@
       ]
     },
     "services": {
+      "index": {
+        "title": "Virintira | Semua Kategori Perkhidmatan Kami"
+      },
+      "category": {
+        "titleFormat": "Virintira | Perkhidmatan {category}"
+      },
+      "item": {
+        "titleFormat": "Virintira | {item} - Perkhidmatan {category}"
+      },
       "bookkeeping": {
         "title": "Bookkeeping Service | Virintira",
         "description": "Full-service bookkeeping, monthly reporting, and bilingual support for Thai SMEs.",
@@ -352,23 +361,23 @@
     "categories": {
       "registrations": {
         "title": "Pendaftaran",
-        "summary": "Entity setup and statutory filings."
+        "summary": "Pendaftaran perniagaan, organisasi, dan pemfailan berkanun."
       },
       "corporate-changes": {
         "title": "Pindaan",
-        "summary": "Update and maintain company records."
+        "summary": "Pindaan afidavit syarikat dan pelbagai maklumat perniagaan."
       },
       "accounting-audit": {
         "title": "Perakaunan",
-        "summary": "Compliance, reporting, and assurance."
+        "summary": "Semua perkhidmatan berkaitan perakaunan dan cukai."
       },
       "licensing": {
         "title": "Lesen",
-        "summary": "Business permits and sector approvals."
+        "summary": "Pelbagai lesen dan permit yang diperlukan untuk mengendalikan perniagaan."
       },
       "digital-marketing": {
         "title": "Pemasaran Digital",
-        "summary": "Online visibility and growth."
+        "summary": "Media sosial, tapak web, AI, dan pengaturcaraan."
       },
       "other": {
         "title": "Perkhidmatan Lain",
@@ -381,9 +390,9 @@
       "cta": "Tanya Sekarang!"
     },
     "items": {
-      "registration": {
-        "title": "Syarikat (Co., Ltd.)",
-        "summary": "Lengkapkan pendaftaran untuk syarikat berhad dan perkongsian dengan bimbingan pakar.",
+      "company-limited": {
+        "title": "Syarikat Berhad",
+        "summary": "Pendaftaran syarikat berhad yang komprehensif. Kami menguruskan semua kertas kerja dan langkah undang-undang supaya anda boleh memulakan perniagaan dengan yakin.",
         "hero": {
           "title": "Start your Thai Company correctly",
           "subtitle": "Trusted by 500+ founders",
@@ -450,37 +459,37 @@
       },
       "limited-partnership": {
         "title": "Perkongsian Terhad",
-        "summary": "Pendaftaran perkongsian terhad.",
+        "summary": "Pendaftaran perkongsian terhad (LP) yang pantas dan mematuhi peraturan. Kami juga menyediakan perundingan struktur perniagaan awal.",
         "description": "",
         "features": []
       },
       "foundation": {
         "title": "Yayasan",
-        "summary": "Penubuhan yayasan.",
+        "summary": "Pelesenan penubuhan yayasan. Kami menguruskan prosedur yang rumit dan merangka objektif agar sejajar dengan peraturan kerajaan.",
         "description": "",
         "features": []
       },
       "association": {
         "title": "Persatuan",
-        "summary": "Pendaftaran persatuan.",
+        "summary": "Pendaftaran untuk semua jenis persatuan. Kami menyediakan dokumen dan undang-undang kecil yang ketat untuk memastikan kelancaran aktiviti operasi.",
         "description": "",
         "features": []
       },
       "commercial-shop": {
         "title": "Daftar Perniagaan",
-        "summary": "Pendaftaran kedai komersial.",
+        "summary": "Pendaftaran komersial (individu/kedai) untuk membina kredibiliti perniagaan dan menyokong transaksi masa depan.",
         "description": "",
         "features": []
       },
       "employer-sso": {
         "title": "Majikan (SSO)",
-        "summary": "Pendaftaran majikan dan keselamatan sosial.",
+        "summary": "Pendaftaran majikan dan pekerja ke dalam sistem Keselamatan Sosial. Kami menguruskan kerja kertas yang rumit mengikut undang-undang buruh.",
         "description": "",
         "features": []
       },
       "vat-registration": {
-        "title": "Cukai (VAT)",
-        "summary": "Pendaftaran cukai nilai tambah (VAT).",
+        "title": "Pendaftaran Cukai (VAT)",
+        "summary": "Pendaftaran VAT untuk memasuki sistem cukai dengan betul, termasuk nasihat mengenai pengurangan risiko dan perancangan cukai yang teliti.",
         "description": "",
         "features": []
       },
@@ -1073,15 +1082,15 @@
       "subtitle": "Virintira menggabungkan kepakaran perakaunan dengan teknologi moden untuk memberikan perkhidmatan menyeluruh yang telus dan boleh dipercayai."
     },
     "mission": {
-      "heading": "Our Mission",
-      "description": "To provide foreign and local entrepreneurs with seamless, compliant, and highly efficient back-office support, enabling them to focus entirely on scaling their businesses."
+      "p1": "Misi kami adalah untuk menjadi firma yang menyediakan lebih daripada sekadar perkhidmatan perakaunan dan cukai umum. Kami adalah \"firma pengurusan perniagaan dan teknologi yang komprehensif\" yang menyokong usahawan dalam setiap dimensi operasi perniagaan mereka.",
+      "p2": "Kami beroperasi atas prinsip ketepatan, ketelusan, dan meletakkan kepentingan terbaik pelanggan kami di hadapan. Kami berusaha untuk menjadi rakan pemikir yang dipercayai yang memahami sifat perniagaan anda serta sekutu perniagaan jangka panjang yang boleh diharap.",
+      "heading": "Misi Kami"
     },
     "story": {
-      "heading": "Our Story",
-      "paragraphs": [
-        "Founded on the principle of absolute transparency, Virintira started with a simple goal: making Thai corporate compliance easy to understand.",
-        "Today, we serve hundreds of companies—from emerging startups to established multinational corporations—delivering tailored financial strategies and rock-solid accounting."
-      ]
+      "p1": "Pasukan kami mempunyai lebih 10 tahun pengalaman dalam perundingan dan pengurusan perniagaan, meliputi pendaftaran korporat, pelesenan, perakaunan, percukaian, penutupan kewangan, dan undang-undang perniagaan yang berkaitan di Thailand.",
+      "p2": "Bekerja bersama pelbagai jenis usahawan, kami mendapati bahawa masalah utama yang dihadapi ramai pihak adalah tidak menerima maklumat lengkap atau penjelasan terus-terang untuk digunakan dalam perancangan dan membuat keputusan. Salah faham mengenai butiran undang-undang atau syarat agensi kerajaan boleh membawa kepada akibat yang teruk, seperti pembatalan lesen, denda, atau beban cukai yang tidak perlu.",
+      "p3": "Oleh itu, VIRINTIRA ditubuhkan dengan niat untuk menjadi perunding yang \"bercakap benar.\" Kami bersedia untuk membentangkan semua pilihan, menjelaskan kebaikan, keburukan, dan risiko secara berterus-terang, memperkasakan anda untuk melangkah ke hadapan dan memilih apa yang terbaik untuk perniagaan anda sendiri.",
+      "heading": "Kisah Kami"
     },
     "values": {
       "heading": "Our Core Values",
@@ -1103,6 +1112,25 @@
     "cta": {
       "heading": "Melangkah ke hadapan dengan yakin bersama Virintira.",
       "description": "Biarkan pasukan kami mengurus dokumen dan kerja back office, supaya anda boleh fokus sepenuhnya pada matlamat perniagaan anda."
+    },
+    "coreValues": {
+      "card1": "Integriti dan Ketelusan: Kami memberikan maklumat lengkap tentang semua pilihan, tidak menyembunyikan apa-apa, dan tidak memujuk pelanggan menggunakan perkhidmatan yang tidak perlu.",
+      "card2": "Kepakaran Komprehensif: Perkhidmatan kami meliputi perakaunan, percukaian, undang-undang perniagaan, dan teknologi untuk meningkatkan perniagaan anda dengan sempurna.",
+      "card3": "Tanggungjawab Profesional: Kami bertanggungjawab penuh ke atas tugas yang diberikan, tidak pernah mengabaikan projek, dan menyiapkan kerja tepat pada masanya (kecuali jika kelewatan disebabkan oleh prosedur agensi kerajaan).",
+      "card4": "Keterbukaan dan Ketulusan: Kami bekerja dengan hati, mengutamakan manfaat pelanggan kami, berdasarkan rasa hormat bersama dan pematuhan ketat kepada piawaian profesional.",
+      "heading": "Nilai Teras Kami"
+    },
+    "policies": {
+      "subHeader": "Untuk mengekalkan piawaian dan kecekapan tertinggi dalam perkhidmatan kami, kami mempunyai garis panduan dan dasar yang jelas seperti berikut:",
+      "card1": "Penilaian dan Perundingan: Apabila pelanggan menghubungi kami mengenai sesuatu perkhidmatan, kami menerangkan secara terperinci apa yang perlu disediakan, kaedah kerja, skop kerja, langkah, garis masa, dan yuran perkhidmatan. Ini memberi pelanggan gambaran menyeluruh untuk memudahkan perancangan matlamat.",
+      "card2": "Pembayaran Yuran Perkhidmatan: Untuk memastikan peruntukan sumber dan operasi yang lancar, perkhidmatan kami memerlukan pembayaran penuh sebelum kerja bermula. (Bagi perkhidmatan tertentu yang memerlukan tempoh operasi lebih daripada 1 bulan, pembayaran boleh dibahagikan kepada 2-3 ansuran, tertakluk kepada terma dan kadar yang dipersetujui.)",
+      "card3": "Dasar Tiada Pemulangan Wang: Oleh kerana model perkhidmatan kami melibatkan perundingan mendalam dan kerja profesional — yang memerlukan syarikat untuk segera memperuntukkan masa, sumber, dan kakitangan pakar untuk persediaan sebaik sahaja perjanjian dibuat — syarikat berhak untuk mengekalkan dasar tiada pemulangan wang dalam semua kes.",
+      "heading": "Dasar Perkhidmatan Kami"
+    },
+    "ethics": {
+      "p1": "Di VIRINTIRA, kami percaya bahawa kredibiliti, prestasi, dan kejayaan kami tidak diukur melalui gambar bekerja, gambar pelanggan, atau mempamerkan senarai pelanggan di media awam.",
+      "p2": "Kami mempunyai dasar yang ketat terhadap penerbitan maklumat, portfolio, atau ulasan pelanggan, kerana kami menganggap privasi dan kerahsiaan perniagaan anda adalah sangat penting. Kejayaan kami dibina atas kepercayaan dari mulut ke mulut yang diberikan oleh pelanggan kami dan 100% hasil kerja yang mematuhi undang-undang.",
+      "heading": "Etika dan Privasi"
     }
   }
 }

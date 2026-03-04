@@ -21,6 +21,16 @@ export async function generateStaticParams() {
     }));
 }
 
+export async function generateMetadata({ params: { locale, category } }: PageProps) {
+    const tServices = await getTranslations({ locale, namespace: 'services' });
+    const tMeta = await getTranslations({ locale, namespace: 'metadata.services.category' });
+    const categoryTitle = tServices(`categories.${category}.title`);
+
+    return {
+        title: tMeta('titleFormat', { category: categoryTitle }),
+    };
+}
+
 export default async function ServiceCategoryPage({ params }: PageProps) {
     const { locale, category } = params;
 

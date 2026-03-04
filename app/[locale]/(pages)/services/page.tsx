@@ -1,10 +1,16 @@
-
 import { getTranslations } from 'next-intl/server';
 import { Link } from '@/i18n/routing';
 import { servicesConfig } from '@/config/services';
 import { Breadcrumbs } from '@/components/ui/Breadcrumbs';
 import { FaCommentDots } from 'react-icons/fa6';
 import { ServiceGrid, type ServiceGridItem } from '@/components/services/ServiceGrid';
+
+export async function generateMetadata({ params: { locale } }: { params: { locale: string } }) {
+    const tMeta = await getTranslations({ locale, namespace: 'metadata.services.index' });
+    return {
+        title: tMeta('title'),
+    };
+}
 
 export default async function ServicesPage({
     params: { locale },
@@ -39,7 +45,7 @@ export default async function ServicesPage({
         imagePath: undefined,
         title: tServices('other.title'),
         summary: tServices('other.summary'),
-        ctaText: tServices('other.cta'), 
+        ctaText: tServices('other.cta'),
         variant: 'dashed',
     });
 

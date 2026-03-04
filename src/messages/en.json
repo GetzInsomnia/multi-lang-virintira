@@ -13,7 +13,7 @@
       ]
     },
     "aboutUs": {
-      "title": "About Virintira | Your Reliable Thai Business Partner",
+      "title": "About Virintira | Step forward with confidence with us",
       "description": "Learn about Virintira's mission, story, and core values. We provide transparent, high-speed corporate compliance and accounting in Thailand.",
       "keywords": [
         "About Virintira",
@@ -41,6 +41,15 @@
       ]
     },
     "services": {
+      "index": {
+        "title": "Virintira | All Our Service Categories"
+      },
+      "category": {
+        "titleFormat": "Virintira | {category} Services"
+      },
+      "item": {
+        "titleFormat": "Virintira | {item} - {category} Services"
+      },
       "bookkeeping": {
         "title": "Bookkeeping Service | Virintira",
         "description": "Full-service bookkeeping, monthly reporting, and bilingual support for Thai SMEs.",
@@ -367,23 +376,23 @@
     "categories": {
       "registrations": {
         "title": "Registrations",
-        "summary": "Entity setup and statutory filings."
+        "summary": "Registration of businesses, organizations, and statutory filings."
       },
       "corporate-changes": {
         "title": "Corporate changes",
-        "summary": "Update and maintain company records."
+        "summary": "Amendments to company affidavits and various business information."
       },
       "accounting-audit": {
         "title": "Accounting & Audit",
-        "summary": "Compliance, reporting, and assurance."
+        "summary": "All accounting and tax-related services."
       },
       "licensing": {
         "title": "Licensing",
-        "summary": "Business permits and sector approvals."
+        "summary": "Various licenses and permits required to operate a business."
       },
       "digital-marketing": {
         "title": "Digital marketing",
-        "summary": "Online visibility and growth."
+        "summary": "Social media, websites, AI, and programming."
       },
       "other": {
         "title": "Other Services",
@@ -396,9 +405,9 @@
       "cta": "Inquire Now!"
     },
     "items": {
-      "registration": {
-        "title": "Company (Co., Ltd.)",
-        "summary": "Complete registration for limited companies and partnerships with expert guidance.",
+      "company-limited": {
+        "title": "Company Limited",
+        "summary": "Comprehensive limited company registration. We handle all paperwork and legal steps so you can confidently start your business.",
         "hero": {
           "title": "Start your Thai Company correctly",
           "subtitle": "Trusted by 500+ founders",
@@ -464,38 +473,38 @@
         "description": ""
       },
       "limited-partnership": {
-        "title": "Limited partnership",
-        "summary": "Registration and compliance for limited partnerships.",
+        "title": "Limited Partnership",
+        "summary": "Fast and compliant limited partnership (LP) registration. We also provide preliminary business structure consulting.",
         "description": "",
         "features": []
       },
       "foundation": {
         "title": "Foundation",
-        "summary": "Establishment of charitable or private foundations.",
+        "summary": "Foundation establishment licensing. We navigate complex procedures and draft objectives to perfectly align with government regulations.",
         "description": "",
         "features": []
       },
       "association": {
         "title": "Association",
-        "summary": "Registration of trade or non-profit associations.",
+        "summary": "Registration for all types of associations. We prepare stringent documents and bylaws to ensure smooth operational activities.",
         "description": "",
         "features": []
       },
       "commercial-shop": {
-        "title": "Commercial (shop)",
-        "summary": "Registration for sole proprietorships and shop owners.",
+        "title": "Commercial Shop",
+        "summary": "Commercial registration (individuals/shops) to build business credibility and support future transactions.",
         "description": "",
         "features": []
       },
       "employer-sso": {
         "title": "Employer (SSO)",
-        "summary": "Social Security Fund registration for employers.",
+        "summary": "Employer and employee registration into the Social Security system. We handle complex paperwork in compliance with labor laws.",
         "description": "",
         "features": []
       },
       "vat-registration": {
-        "title": "VAT",
-        "summary": "Register for Value Added Tax (VAT) in Thailand.",
+        "title": "VAT Registration",
+        "summary": "VAT registration to properly enter the tax system, including expert advice on risk reduction and meticulous tax planning.",
         "description": "",
         "features": []
       },
@@ -1088,15 +1097,15 @@
       "subtitle": "Virintira combines accounting expertise with modern technology to deliver end-to-end services that are transparent and trustworthy."
     },
     "mission": {
-      "heading": "Our Mission",
-      "description": "To provide foreign and local entrepreneurs with seamless, compliant, and highly efficient back-office support, enabling them to focus entirely on scaling their businesses."
+      "p1": "Our mission is to be a firm that provides more than general accounting and tax services. We are a \"comprehensive business management and technology firm\" that supports entrepreneurs in every dimension of their business operations.",
+      "p2": "We operate on the principles of accuracy, transparency, and placing our clients' best interests first. We strive to be both a trusted thinking partner who understands the nature of your business and a reliable long-term business ally.",
+      "heading": "Our Mission"
     },
     "story": {
-      "heading": "Our Story",
-      "paragraphs": [
-        "Founded on the principle of absolute transparency, Virintira started with a simple goal: making Thai corporate compliance easy to understand.",
-        "Today, we serve hundreds of companies—from emerging startups to established multinational corporations—delivering tailored financial strategies and rock-solid accounting."
-      ]
+      "p1": "Our team has over 10 years of experience in business consulting and management, covering corporate registration, licensing, accounting, taxation, financial closing, and relevant business laws in Thailand.",
+      "p2": "Working alongside various types of entrepreneurs, we found that a major problem many face is not receiving complete information or straightforward explanations for planning and decision-making. Misunderstanding legal details or government agency conditions can lead to severe consequences, such as license revocation, fines, or unnecessary tax burdens.",
+      "p3": "VIRINTIRA was therefore founded with the intention of being a consultant who \"speaks the truth.\" We are ready to lay out all options, explaining the pros, cons, and risks straightforwardly, empowering you to move forward and choose what is best for your business yourself.",
+      "heading": "Our Story"
     },
     "values": {
       "heading": "Our Core Values",
@@ -1118,6 +1127,25 @@
     "cta": {
       "heading": "Take the next step with confidence together with Virintira.",
       "description": "Let our team handle your paperwork and back-office tasks, so you can focus fully on your business goals."
+    },
+    "coreValues": {
+      "card1": "Integrity and Transparency: We provide complete information on all options, conceal nothing, and do not persuade clients to use unnecessary services.",
+      "card2": "Comprehensive Expertise: Our services cover accounting, taxation, business law, and technology to perfectly elevate your business.",
+      "card3": "Professional Responsibility: We take full responsibility for assigned tasks, never abandon projects, and deliver work on time (except in cases of delays caused by government agency procedures).",
+      "card4": "Openness and Sincerity: We work with heart, prioritizing our clients' benefits, based on mutual respect and strict adherence to professional standards.",
+      "heading": "Our Core Values"
+    },
+    "policies": {
+      "subHeader": "To maintain the highest standards and efficiency in our services, we have clear guidelines and policies as follows:",
+      "card1": "Assessment and Consultation: When clients contact us regarding a service, we thoroughly explain what needs to be prepared, working methods, scope of work, steps, timeline, and service fees. This provides clients with a complete overview to facilitate goal planning.",
+      "card2": "Payment of Service Fees: To ensure smooth resource allocation and operations, our services require full payment prior to the commencement of work. (For certain services requiring an operational period of more than 1 month, payment can be divided into 2-3 installments, subject to agreed terms and rates.)",
+      "card3": "Non-Refund Policy: As our service model entails in-depth consulting and professional work—requiring the company to immediately allocate time, resources, and expert personnel to prepare for operations once an agreement is made—the company reserves the right to strictly enforce a no-refund policy in all cases.",
+      "heading": "Our Service Policies"
+    },
+    "ethics": {
+      "p1": "At VIRINTIRA, we believe our credibility, performance, and success are not measured by working photos, client photos, or showcasing client lists on public media.",
+      "p2": "We have a strict policy against publishing client information, portfolios, or reviews, as we consider your privacy and business confidentiality to be of the utmost importance. Our success is built on the word-of-mouth trust bestowed by our clients and 100% legally compliant work results.",
+      "heading": "Ethics and Privacy"
     }
   }
 }
