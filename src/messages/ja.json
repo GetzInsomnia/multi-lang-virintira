@@ -673,31 +673,31 @@
       },
       "tourism-licence": {
         "title": "旅行業ライセンス",
-        "summary": "TAT 旅行業ライセンス申請。",
+        "summary": "観光局からの旅行業ライセンスおよび関連するすべての許可申請サービス。ツアーおよび旅行ビジネスが合法的かつスムーズに運営されるようサポートします。",
         "description": "",
         "features": []
       },
       "thai-fda": {
         "title": "タイFDA",
-        "summary": "食品および医薬品の FDA 登録。",
+        "summary": "食品医薬品局（FDA）の許可申請サービス。食品、医薬品、化粧品、医療用品、健康製品をカバーします。迅速な承認のために書類を厳密に処理します。",
         "description": "",
         "features": []
       },
       "visa-work-permit": {
         "title": "ビザ・WP申請",
-        "summary": "外国人向けビザおよび労働許可証。",
+        "summary": "すべての国籍の外国人を対象としたビザ（Non-B、Non-Oなど）の申請・更新および就労許可証（ワークパミット）サービス。タイでの合法的な滞在と就労のため、複雑な手続きをワンストップで処理します。",
         "description": "",
         "features": []
       },
       "boi-promotion": {
         "title": "BOI 申請代行",
-        "summary": "BOI (投資委員会) 奨励申請。",
+        "summary": "あらゆる対象業種向けのBOI投資奨励申請サービス。専門的なコンサルティングとプロジェクトの準備を行い、政府から最大の優遇措置を受けられるよう支援します。",
         "description": "",
         "features": []
       },
       "foreign-business": {
         "title": "外国人事業許可 (FBL/FBC)",
-        "summary": "外国人事業許可 (FBL) の申請。",
+        "summary": "外国人事業許可（FBL）および証明書（FBC）の申請サービス。タイでの安定した事業運営のため、外国資本比率やBOI特権に適合した法的手続きを綿密に管理します。",
         "description": "",
         "features": []
       },

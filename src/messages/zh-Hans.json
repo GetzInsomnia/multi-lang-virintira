@@ -673,31 +673,31 @@
       },
       "tourism-licence": {
         "title": "旅游执照",
-        "summary": "TAT 旅游执照申请。",
+        "summary": "提供向旅游局申请旅行社营业执照及所有相关许可证的服务，确保您的旅游业务合法、顺利地运营。",
         "description": "",
         "features": []
       },
       "thai-fda": {
         "title": "泰国 FDA",
-        "summary": "食品及药品 FDA 注册。",
+        "summary": "泰国食品药品监督管理局（FDA）许可申请服务，涵盖食品、药品、化妆品、医疗用品和健康产品。我们严谨处理文件，以确保快速获批。",
         "description": "",
         "features": []
       },
       "visa-work-permit": {
         "title": "签证 / 工作证",
-        "summary": "外国人签证及工作证服务。",
+        "summary": "为所有国籍的外籍人士提供签证（Non-B、Non-O等）申请及延期和工作许可证服务。我们在一个地方集中处理繁杂的文件和程序，确保您在泰国合法居留和工作。",
         "description": "",
         "features": []
       },
       "boi-promotion": {
         "title": "BOI 投资优惠",
-        "summary": "BOI 投资促进申请。",
+        "summary": "为所有符合条件的企业类型提供 BOI 投资促进申请服务。我们提供深度咨询并专业地准备您的项目，让您的企业获得最大的政府优惠。",
         "description": "",
         "features": []
       },
       "foreign-business": {
         "title": "外商经营许可 (FBL / FBC)",
-        "summary": "外商经营许可证申请服务。",
+        "summary": "外商经营许可证（FBL）和证明书（FBC）申请服务。我们仔细处理符合外资持股比例或 BOI 特权的法律程序，确保您在泰国稳健经营。",
         "description": "",
         "features": []
       },
