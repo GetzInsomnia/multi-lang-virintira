@@ -570,7 +570,7 @@
       },
       "monthly-bookkeeping": {
         "title": "Comptabilité société",
-        "summary": "Enregistrement des transactions, rapprochements et déclarations conformes aux normes IFRS.",
+        "summary": "Services complets de comptabilité d'entreprise. Nous enregistrons systématiquement les écritures comptables et assurons le dépôt précis et ponctuel des déclarations auprès des organismes gouvernementaux compétents.",
         "hero": {
           "title": "Stress-free Accounting & Tax Filing",
           "subtitle": "Starting from 2,500 THB/month",
@@ -637,37 +637,37 @@
       },
       "monthly-tax": {
         "title": "TVA mensuelle",
-        "summary": "Préparation et dépôt des taxes mensuelles.",
+        "summary": "Gestion mensuelle des impôts et de la sécurité sociale. Nous nous occupons de la préparation et du dépôt de toutes les déclarations fiscales pour réduire vos formalités administratives mensuelles et prévenir les risques d'amendes rétroactives.",
         "description": "",
         "features": []
       },
       "close-financial": {
         "title": "Comptes annuels",
-        "summary": "Comptes annuels préparés et clôturés efficacement pour le DBD et le département des revenus.",
+        "summary": "Clôture annuelle des comptes et préparation des états financiers. Couvrant les exercices comptables standards et non standards, ainsi que les bilans de liquidation, garantissant que la soumission des données financières répond aux normes légales.",
         "description": "",
         "features": []
       },
       "personal-accounts": {
         "title": "Comptabilité privée",
-        "summary": "Comptabilité et impôts personnels.",
+        "summary": "Gestion de la comptabilité et des impôts personnels. Couvrant les employés à temps plein, les indépendants et les entreprises individuelles, nous calculons et déclarons précisément vos impôts tout en maximisant vos déductions.",
         "description": "",
         "features": []
       },
       "audit": {
         "title": "Audit",
-        "summary": "Audit légal par CPA.",
+        "summary": "Services d'audit par des experts-comptables certifiés (CPA). Menés conformément aux normes professionnelles pour renforcer la transparence, la crédibilité et certifier l'exactitude de vos états financiers.",
         "description": "",
         "features": []
       },
       "foreign-tax-id": {
         "title": "Numéro fiscal étranger",
-        "summary": "Demande de numéro fiscal pour étrangers.",
+        "summary": "Demande de Numéro d'Identification Fiscale (TIN) pour les étrangers. Nous accélérons la préparation des documents et la coordination avec le département des impôts pour faciliter votre travail et vos transactions en Thaïlande.",
         "description": "",
         "features": []
       },
       "tax-planning": {
         "title": "Planification fiscale",
-        "summary": "Structuration et conseils fiscaux stratégiques pour des opérations commerciales optimisées.",
+        "summary": "Planification et conseils fiscaux stratégiques. Nous analysons la structure de vos revenus pour gérer efficacement vos impôts, maximiser légalement les avantages et atténuer les risques juridiques.",
         "description": "",
         "features": []
       },

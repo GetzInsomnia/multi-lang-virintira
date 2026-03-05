@@ -570,7 +570,7 @@
       },
       "monthly-bookkeeping": {
         "title": "公司账务",
-        "summary": "交易记录、对账和符合 IFRS 的财务报表。",
+        "summary": "全面的企业会计服务。我们系统地记录会计账目，并确保向相关政府机构准确、按时地提交报告。",
         "hero": {
           "title": "Stress-free Accounting & Tax Filing",
           "subtitle": "Starting from 2,500 THB/month",
@@ -637,37 +637,37 @@
       },
       "monthly-tax": {
         "title": "每月报税",
-        "summary": "月度和年度税务申报及处理。",
+        "summary": "月度税务和社会保障管理服务。我们负责准备和提交所有类型的税务申报表，以减少每月的文书工作量并防止产生滞纳金的风险。",
         "description": "",
         "features": []
       },
       "close-financial": {
         "title": "年度财报",
-        "summary": "高效编制年度账目，提交给商业发展局和税务局。",
+        "summary": "年度关账及财务报表编制服务。涵盖正常和非正常会计期间以及清算报表，确保提交的财务数据符合法律标准。",
         "description": "",
         "features": []
       },
       "personal-accounts": {
         "title": "个人账务",
-        "summary": "个人记账及税务申报。",
+        "summary": "个人会计与税务管理服务。涵盖全职员工、自由职业者和个体商户，为您精确计算、报税并最大化利用可扣除福利。",
         "description": "",
         "features": []
       },
       "audit": {
         "title": "审计服务",
-        "summary": "注册会计师 (CPA) 法定审计。",
+        "summary": "由注册会计师（CPA）提供的审计服务。按照专业标准进行，旨在建立透明度、信誉并证明您财务报表的准确性。",
         "description": "",
         "features": []
       },
       "foreign-tax-id": {
         "title": "外国税号",
-        "summary": "外国人税号申请服务。",
+        "summary": "外籍人士纳税人识别号（TIN）申请服务。我们加快文件准备以及与税务局的对接工作，以便利您在泰国的工作和交易。",
         "description": "",
         "features": []
       },
       "tax-planning": {
         "title": "税务筹划",
-        "summary": "战略性税务结构和咨询，以优化业务运营。",
+        "summary": "战略性税务规划与咨询服务。我们分析您的收入结构，以高效管理税务、合法地实现利益最大化，并降低法律风险。",
         "description": "",
         "features": []
       },

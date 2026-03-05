@@ -570,7 +570,7 @@
       },
       "monthly-bookkeeping": {
         "title": "公司帳務",
-        "summary": "交易記錄、對帳和符合 IFRS 的財務報表。",
+        "summary": "全面的企業會計服務。我們系統地記錄會計帳目，並確保向相關政府機構準確、按時地提交報告。",
         "hero": {
           "title": "Stress-free Accounting & Tax Filing",
           "subtitle": "Starting from 2,500 THB/month",
@@ -637,37 +637,37 @@
       },
       "monthly-tax": {
         "title": "每月報稅",
-        "summary": "每月和半年稅務申報服務。",
+        "summary": "月度稅務和社會保障管理服務。我們負責準備和提交所有類型的稅務申報表，以減少每月的文書工作量並防止產生滯納金的風險。",
         "description": "",
         "features": []
       },
       "close-financial": {
         "title": "年度財報",
-        "summary": "高效編製年度帳目，提交給商業發展局和稅務局。",
+        "summary": "年度關帳及財務報表編製服務。涵蓋正常和非正常會計期間以及清算報表，確保提交的財務數據符合法律標準。",
         "description": "",
         "features": []
       },
       "personal-accounts": {
         "title": "個人帳務",
-        "summary": "個人記帳和稅務申報。",
+        "summary": "個人會計與稅務管理服務。涵蓋全職員工、自由工作者和個體商戶，為您精確計算、報稅並最大化利用可扣除福利。",
         "description": "",
         "features": []
       },
       "audit": {
         "title": "審計服務",
-        "summary": "法定審計和會計師 (CPA) 服務。",
+        "summary": "由會計師（CPA）提供的審計服務。按照專業標準進行，旨在建立透明度、信譽並證明您財務報表的準確性。",
         "description": "",
         "features": []
       },
       "foreign-tax-id": {
         "title": "外國稅號",
-        "summary": "外國人稅務 ID 申請。",
+        "summary": "外籍人士納稅人識別號（TIN）申請服務。我們加快文件準備以及與稅務局的對接工作，以便利您在泰國的工作和交易。",
         "description": "",
         "features": []
       },
       "tax-planning": {
         "title": "稅務規劃",
-        "summary": "戰略性稅務結構和諮詢，以優化業務運營。",
+        "summary": "戰略性稅務規劃與諮詢服務。我們分析您的收入結構，以高效管理稅務、合法地實現利益最大化，並降低法律風險。",
         "description": "",
         "features": []
       },

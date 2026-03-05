@@ -570,7 +570,7 @@
       },
       "monthly-bookkeeping": {
         "title": "법인 기장",
-        "summary": "거래 기록, 대조, 그리고 IFRS 준수 재무 제표 작성.",
+        "summary": "종합적인 법인 회계 서비스. 체계적인 회계 장부 기장과 함께 관련 정부 기관에 대한 정확하고 기한을 준수한 세무 신고 및 보고서 제출을 지원합니다。",
         "hero": {
           "title": "Stress-free Accounting & Tax Filing",
           "subtitle": "Starting from 2,500 THB/month",
@@ -637,37 +637,37 @@
       },
       "monthly-tax": {
         "title": "월별 세무",
-        "summary": "월별 및 연간 세금 신고.",
+        "summary": "월별 세무 및 사회보장 관리 서비스. 매월 발생하는 서류 작업 부담을 줄이고 소급 벌금의 위험을 방지하기 위해 모든 종류 세무 신고서 작성 및 제출을 처리합니다.",
         "description": "",
         "features": []
       },
       "close-financial": {
         "title": "연간 결산",
-        "summary": "DBD 및 국세청에 연간 계정을 효율적으로 준비하고 결산합니다.",
+        "summary": "연차 결산 및 재무제표 작성 서비스. 일반 및 비일반 회계 기간은 물론 청산 재무제표까지 포괄하여, 법적 기준을 충족하는 재무 데이터 제출을 보장합니다.",
         "description": "",
         "features": []
       },
       "personal-accounts": {
         "title": "개인 회계",
-        "summary": "개인 회계 및 세금 신고.",
+        "summary": "개인 회계 및 세무 관리 서비스. 정규직 근로자, 프리랜서 및 개인 사업자를 대상으로 세금을 정확하게 계산 및 신고하며, 공제 혜택을 최대한 활용할 수 있도록 지원합니다.",
         "description": "",
         "features": []
       },
       "audit": {
         "title": "회계 감사",
-        "summary": "CPA 및 법정 감사 서비스.",
+        "summary": "공인회계사(CPA)의 회계 감사 서비스. 전문 기준에 따라 업무를 수행하여 투명성과 신뢰성을 구축하고 귀사 재무제표의 정확성을 보증합니다.",
         "description": "",
         "features": []
       },
       "foreign-tax-id": {
         "title": "외국인 납세번호",
-        "summary": "외국인용 세금 ID 신청.",
+        "summary": "외국인을 위한 납세자 번호(TIN) 신청 서비스. 태국 내 원활한 업무 및 거래를 지원하기 위해 신속하게 서류를 준비하고 국세청과의 연락을 대행합니다.",
         "description": "",
         "features": []
       },
       "tax-planning": {
         "title": "절세 플랜",
-        "summary": "최적화된 비즈니스 운영을 위한 전략적 세무 구조 및 자문.",
+        "summary": "전략적 세무 계획 및 컨설팅 서비스. 수익 구조를 분석하여 세금을 효율적으로 관리하고, 법적 테두리 안에서 혜택을 극대화하며 법적 위험을 줄입니다.",
         "description": "",
         "features": []
       },

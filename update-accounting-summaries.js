@@ -48,8 +48,8 @@ const newSummaries = {
         "foreign-tax-id": "外国人向け納税者番号（TIN）取得サービス。タイでの就労や各種取引を円滑にするため、書類作成から歳入局との調整までを迅速に行います。"
     },
     ko: {
-        "monthly-bookkeeping": "종합적인 법인 회계 서비스. 체계적인 회계 장부 기장과 함께 관련 정부 기관에 대한 정확하고 기한을 준수한 세무 신고 및 보고서 제출을 지원합니다.",
-        "monthly-tax": "월별 세무 및 사회보장 관리 서비스. 매월 발생하는 서류 작업 부담을 줄이고 소급 벌금의 위험을 방지하기 위해 모든 종류 세무 신고서 작성 및 제출을 처리 거합니다.",
+        "monthly-bookkeeping": "종합적인 법인 회계 서비스. 체계적인 회계 장부 기장과 함께 관련 정부 기관에 대한 정확하고 기한을 준수한 세무 신고 및 보고서 제출을 지원합니다。",
+        "monthly-tax": "월별 세무 및 사회보장 관리 서비스. 매월 발생하는 서류 작업 부담을 줄이고 소급 벌금의 위험을 방지하기 위해 모든 종류 세무 신고서 작성 및 제출을 처리합니다.",
         "close-financial": "연차 결산 및 재무제표 작성 서비스. 일반 및 비일반 회계 기간은 물론 청산 재무제표까지 포괄하여, 법적 기준을 충족하는 재무 데이터 제출을 보장합니다.",
         "personal-accounts": "개인 회계 및 세무 관리 서비스. 정규직 근로자, 프리랜서 및 개인 사업자를 대상으로 세금을 정확하게 계산 및 신고하며, 공제 혜택을 최대한 활용할 수 있도록 지원합니다.",
         "audit": "공인회계사(CPA)의 회계 감사 서비스. 전문 기준에 따라 업무를 수행하여 투명성과 신뢰성을 구축하고 귀사 재무제표의 정확성을 보증합니다.",
@@ -133,38 +133,37 @@ files.forEach(file => {
 
     const translations = newSummaries[lang];
 
-    // the subcategories are directly on `data`, not under data.services.categories.accounting-audit
-    if (data) {
+    // The subcategories are inside `data.services.items`
+    if (data?.services?.items) {
         let updated = false;
+        const items = data.services.items;
 
-        // Note from view_file: the subcategories e.g. "monthly-bookkeeping", "monthly-tax" are placed directly on the root object
-        // So we will just look at the root object keys since that is the structure we discovered in th.json
-        if (data["monthly-bookkeeping"] && translations["monthly-bookkeeping"]) {
-            data["monthly-bookkeeping"].summary = translations["monthly-bookkeeping"];
+        if (items["monthly-bookkeeping"] && translations["monthly-bookkeeping"]) {
+            items["monthly-bookkeeping"].summary = translations["monthly-bookkeeping"];
             updated = true;
         }
-        if (data["monthly-tax"] && translations["monthly-tax"]) {
-            data["monthly-tax"].summary = translations["monthly-tax"];
+        if (items["monthly-tax"] && translations["monthly-tax"]) {
+            items["monthly-tax"].summary = translations["monthly-tax"];
             updated = true;
         }
-        if (data["close-financial"] && translations["close-financial"]) {
-            data["close-financial"].summary = translations["close-financial"];
+        if (items["close-financial"] && translations["close-financial"]) {
+            items["close-financial"].summary = translations["close-financial"];
             updated = true;
         }
-        if (data["personal-accounts"] && translations["personal-accounts"]) {
-            data["personal-accounts"].summary = translations["personal-accounts"];
+        if (items["personal-accounts"] && translations["personal-accounts"]) {
+            items["personal-accounts"].summary = translations["personal-accounts"];
             updated = true;
         }
-        if (data["audit"] && translations["audit"]) {
-            data["audit"].summary = translations["audit"];
+        if (items["audit"] && translations["audit"]) {
+            items["audit"].summary = translations["audit"];
             updated = true;
         }
-        if (data["tax-planning"] && translations["tax-planning"]) {
-            data["tax-planning"].summary = translations["tax-planning"];
+        if (items["tax-planning"] && translations["tax-planning"]) {
+            items["tax-planning"].summary = translations["tax-planning"];
             updated = true;
         }
-        if (data["foreign-tax-id"] && translations["foreign-tax-id"]) {
-            data["foreign-tax-id"].summary = translations["foreign-tax-id"];
+        if (items["foreign-tax-id"] && translations["foreign-tax-id"]) {
+            items["foreign-tax-id"].summary = translations["foreign-tax-id"];
             updated = true;
         }
 

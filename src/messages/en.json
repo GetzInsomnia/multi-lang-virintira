@@ -570,7 +570,7 @@
       },
       "monthly-bookkeeping": {
         "title": "Company accounts",
-        "summary": "Transaction recording, reconciliations, and IFRS-compliant statements.",
+        "summary": "Comprehensive corporate accounting services. We systematically record accounting entries and ensure accurate and timely filing of reports to relevant government agencies.",
         "hero": {
           "title": "Stress-free Accounting & Tax Filing",
           "subtitle": "Starting from 2,500 THB/month",
@@ -637,37 +637,37 @@
       },
       "monthly-tax": {
         "title": "Monthly tax",
-        "summary": "Recurring tax compliance services.",
+        "summary": "Monthly tax and social security management. We handle the preparation and filing of all tax returns to reduce your monthly paperwork and prevent risks of retroactive fines.",
         "description": "",
         "features": []
       },
       "close-financial": {
         "title": "Annual accounts",
-        "summary": "Annual accounts prepared and closed efficiently for DBD and Revenue Department.",
+        "summary": "Annual account closing and financial statement preparation. Covering standard and non-standard accounting periods, as well as liquidation statements, ensuring financial data submissions meet legal standards.",
         "description": "",
         "features": []
       },
       "personal-accounts": {
         "title": "Personal accounts",
-        "summary": "Accounting for individuals and freelancers.",
+        "summary": "Personal accounting and tax management. Covering full-time employees, freelancers, and sole proprietors, we precisely calculate, file tax returns, and maximize your deductible benefits.",
         "description": "",
         "features": []
       },
       "audit": {
         "title": "Audit",
-        "summary": "Statutory financial audit by CPA.",
+        "summary": "Auditing services by Certified Public Accountants (CPA). Conducted in accordance with professional standards to build transparency, credibility, and certify the accuracy of your financial statements.",
         "description": "",
         "features": []
       },
       "foreign-tax-id": {
         "title": "Foreign tax ID",
-        "summary": "Tax ID card for foreign entities.",
+        "summary": "Tax Identification Number (TIN) application for foreigners. We expedite document preparation and coordination with the Revenue Department to facilitate your work and transactions in Thailand.",
         "description": "",
         "features": []
       },
       "tax-planning": {
         "title": "Tax planning",
-        "summary": "Strategic tax structuring and advisory for optimized business operations.",
+        "summary": "Strategic tax planning and consulting. We analyze your income structure to manage taxes efficiently, maximize benefits legally, and mitigate legal risks.",
         "description": "",
         "features": []
       },
