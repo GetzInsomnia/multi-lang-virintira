@@ -516,55 +516,55 @@
       },
       "company-name": {
         "title": "公司名称",
-        "summary": "更改公司名称。",
+        "summary": "公司名称变更注册服务，包括向所有政府机构进行准确、完整的文件修改，以支持您的新业务形象。",
         "description": "",
         "features": []
       },
       "company-seal": {
         "title": "公司公章",
-        "summary": "新公章登记。",
+        "summary": "依法变更或修改公司印章的注册服务，确保各项交易的严密性和安全性。",
         "description": "",
         "features": []
       },
       "directors": {
         "title": "董事信息",
-        "summary": "更改董事或权限。",
+        "summary": "增加、减少或变更董事信息的注册服务。我们谨慎处理相关文件，使管理架构与当前状况保持同步。",
         "description": "",
         "features": []
       },
       "signing-authority": {
         "title": "签字权限",
-        "summary": "更新签字授权人。",
+        "summary": "修改董事对公司具有约束力的签字条件和权限的服务。明确规定以防范风险，并提高管理灵活性。",
         "description": "",
         "features": []
       },
       "shareholders": {
         "title": "股东 / 股权",
-        "summary": "更新股东名册 (BOJ.5)。",
+        "summary": "股东名册（BOJ.5）信息变更服务，涵盖股份转让、比例变更或按规定更新股东信息。",
         "description": "",
         "features": []
       },
       "capital": {
         "title": "注册资本",
-        "summary": "增加或减少注册资本。",
+        "summary": "增加或减少公司注册资本的注册服务。我们仔细处理审核程序和证明文件，以适应业务扩张或结构调整。",
         "description": "",
         "features": []
       },
       "address": {
         "title": "地址 / 分支",
-        "summary": "搬迁总部或设立分支机构。",
+        "summary": "总部搬迁或增减分支机构的注册服务。一站式处理向商务部（DBD）、税务局和社保局的信息变更通知。",
         "description": "",
         "features": []
       },
       "objectives": {
         "title": "经营范围",
-        "summary": "修改公司经营范围。",
+        "summary": "修改或增加公司营业目的的注册服务，合法扩大业务范围，以涵盖新的服务和产品。",
         "description": "",
         "features": []
       },
       "dissolution": {
         "title": "公司注销",
-        "summary": "公司解散及清算服务。",
+        "summary": "公司注销和清算注册服务。全程处理从注销通知、税务结清到最终财务结账的所有步骤，让您无后顾之忧地彻底结束业务。",
         "description": "",
         "features": []
       },

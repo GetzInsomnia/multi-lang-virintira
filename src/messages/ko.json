@@ -516,55 +516,55 @@
       },
       "company-name": {
         "title": "법인명 변경",
-        "summary": "회사 이름 변경 서비스.",
+        "summary": "새로운 비즈니스 이미지를 지원하기 위해 모든 정부 기관과 관련된 문서를 정확하고 완벽하게 수정하는 법인명 변경 등록 서비스입니다.",
         "description": "",
         "features": []
       },
       "company-seal": {
         "title": "법인 인감",
-        "summary": "새로운 법인 인감 등록.",
+        "summary": "다양한 거래에서 안전성과 엄격함을 보장하기 위해 법인 인감을 합법적으로 변경하거나 수정하는 등록 서비스입니다.",
         "description": "",
         "features": []
       },
       "directors": {
         "title": "이사 변경",
-        "summary": "이사 또는 권한 변경.",
+        "summary": "임원 정보를 추가, 삭제 또는 변경하는 등록 서비스입니다. 관리 구조를 현재 상태와 일치하도록 최신 상태로 유지하기 위해 문서를 신중하게 처리합니다.",
         "description": "",
         "features": []
       },
       "signing-authority": {
         "title": "서명 권한",
-        "summary": "서명 권한자 업데이트.",
+        "summary": "법인에 구속력을 갖는 임원의 서명 조건 및 권한을 수정하는 서비스입니다. 위험을 방지하고 관리의 유연성을 높이기 위해 규정을 명확히 합니다.",
         "description": "",
         "features": []
       },
       "shareholders": {
         "title": "주주 / 지분",
-        "summary": "주주 명부(BOJ.5) 업데이트.",
+        "summary": "주주 명부(BOJ.5) 정보 수정 서비스로, 규정에 따른 주식 양도, 비율 변경 또는 주주 정보 업데이트를 포괄합니다.",
         "description": "",
         "features": []
       },
       "capital": {
         "title": "자본금 증자/감자",
-        "summary": "등록 자본금 증자 또는 감자.",
+        "summary": "법인의 등록 자본금을 늘리거나 줄이는 등록 서비스입니다. 비즈니스 확장 또는 구조 조정을 수용할 수 있도록 절차 및 증빙 서류를 신중하게 관리합니다.",
         "description": "",
         "features": []
       },
       "address": {
         "title": "주소 / 지점",
-        "summary": "본사 또는 지점 이전.",
+        "summary": "본점 이전 또는 지점 추가/삭제 등록 서비스입니다. 상무부(DBD), 국세청 및 사회보장청에 대한 정보 변경 통지를 한 곳에서 원스톱으로 처리합니다.",
         "description": "",
         "features": []
       },
       "objectives": {
         "title": "사업 목적",
-        "summary": "사업 목적 변경.",
+        "summary": "새로운 서비스 및 제품을 합법적으로 수용할 수 있도록 사업 범위를 확장하기 위해 법인의 사업 목적을 수정하거나 추가하는 등록 서비스입니다.",
         "description": "",
         "features": []
       },
       "dissolution": {
         "title": "법인 청산",
-        "summary": "회사 해산 및 청산 서비스.",
+        "summary": "법인 해산 및 청산 등록 서비스입니다. 해산 통지, 세금 문제 해결부터 최종 회계 마감까지 모든 단계를 처리하여 걱정 없이 사업을 완전히 종료할 수 있도록 돕습니다.",
         "description": "",
         "features": []
       },

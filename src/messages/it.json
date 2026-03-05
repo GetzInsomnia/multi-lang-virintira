@@ -516,55 +516,55 @@
       },
       "company-name": {
         "title": "Ragione sociale",
-        "summary": "Servizi di cambio nome aziendale.",
+        "summary": "Servizio di registrazione della modifica del nome della società, che copre l'emendamento completo e accurato dei documenti presso tutte le agenzie governative per supportare la nuova immagine aziendale.",
         "description": "",
         "features": []
       },
       "company-seal": {
         "title": "Timbro aziendale",
-        "summary": "Registrazione del nuovo timbro aziendale.",
+        "summary": "Servizio di registrazione per modificare o emendare legalmente il timbro della società, garantendo sicurezza e rigore in tutte le transazioni.",
         "description": "",
         "features": []
       },
       "directors": {
         "title": "Amministratori",
-        "summary": "Cambio di amministratori o poteri.",
+        "summary": "Servizio di registrazione per aggiungere, rimuovere o modificare le informazioni sugli amministratori. Gestiamo attentamente i documenti per mantenere la struttura di gestione aggiornata con lo stato attuale.",
         "description": "",
         "features": []
       },
       "signing-authority": {
         "title": "Poteri di firma",
-        "summary": "Aggiornamento dei firmatari autorizzati.",
+        "summary": "Servizio per modificare le condizioni e i poteri degli amministratori di vincolare la società, definendo chiaramente i termini per prevenire i rischi e aumentare l'agilità gestionale.",
         "description": "",
         "features": []
       },
       "shareholders": {
         "title": "Soci / Quote",
-        "summary": "Aggiornamento lista soci (BOJ.5).",
+        "summary": "Servizio per modificare l'elenco degli azionisti (BOJ.5), che copre i trasferimenti di azioni, le variazioni delle quote o l'aggiornamento delle informazioni sugli azionisti secondo le normative.",
         "description": "",
         "features": []
       },
       "capital": {
         "title": "Capitale sociale",
-        "summary": "Aumento o riduzione del capitale registrato.",
+        "summary": "Servizio di registrazione per aumentare o diminuire il capitale sociale. Gestiamo meticolosamente le procedure e i documenti di supporto per assecondare l'espansione o la ristrutturazione aziendale.",
         "description": "",
         "features": []
       },
       "address": {
         "title": "Sede / Filiali",
-        "summary": "Trasferimento sede o filiali.",
+        "summary": "Servizio di registrazione per il trasferimento della sede centrale o l'aggiunta/rimozione di filiali. Gestiamo la notifica delle modifiche al DBD, all'Agenzia delle Entrate e all'Ufficio di Sicurezza Sociale in un'unica soluzione.",
         "description": "",
         "features": []
       },
       "objectives": {
         "title": "Oggetto sociale",
-        "summary": "Modifica dell'oggetto sociale.",
+        "summary": "Servizio di registrazione per modificare o aggiungere obiettivi aziendali, espandendo legalmente l'ambito di attività per accogliere nuovi servizi e prodotti.",
         "description": "",
         "features": []
       },
       "dissolution": {
         "title": "Liquidazione",
-        "summary": "Servizi di scioglimento e liquidazione aziendale.",
+        "summary": "Servizio di registrazione per lo scioglimento e la liquidazione della società. Gestiamo ogni fase, dalla notifica di scioglimento alla liquidazione delle imposte fino alla chiusura del bilancio finale, permettendoti di chiudere l'attività completamente e senza preoccupazioni.",
         "description": "",
         "features": []
       },

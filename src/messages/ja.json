@@ -516,55 +516,55 @@
       },
       "company-name": {
         "title": "商号変更",
-        "summary": "会社名の変更手続き。",
+        "summary": "法人名変更の登記サービス。すべての政府機関における文書の正確かつ完全な修正を含み、新しいビジネスイメージをサポートします。",
         "description": "",
         "features": []
       },
       "company-seal": {
         "title": "社印・実印",
-        "summary": "新しい社印の登録。",
+        "summary": "取引の厳密性と安全性を確保するため、法的に適切な社印（ゴム印）の変更または修正の登記サービス。",
         "description": "",
         "features": []
       },
       "directors": {
         "title": "役員変更",
-        "summary": "取締役の変更・権限変更。",
+        "summary": "役員の追加、削除、または変更の登記サービス。管理体制を最新の状態に保つため、書類作成を慎重に行います。",
         "description": "",
         "features": []
       },
       "signing-authority": {
         "title": "署名権限",
-        "summary": "署名権限者の変更。",
+        "summary": "法人を拘束する役員の署名条件および権限の変更サービス。リスクを防ぎ、管理の柔軟性を高めるために規定を明確にします。",
         "description": "",
         "features": []
       },
       "shareholders": {
         "title": "株主 / 株式",
-        "summary": "株主名簿の更新 (BOJ.5)。",
+        "summary": "株主名簿（BOJ.5）の変更サービス。株式譲渡、比率の変更、または規制に基づく株主情報の更新をカバーします。",
         "description": "",
         "features": []
       },
       "capital": {
         "title": "資本金",
-        "summary": "増資または減資の手続き。",
+        "summary": "法人の登録資本金の増資または減資の登記サービス。事業の拡大や再編に合わせて、手続きや必要書類を慎重に処理します。",
         "description": "",
         "features": []
       },
       "address": {
         "title": "住所 / 支店",
-        "summary": "本店移転または支店設置。",
+        "summary": "本店の移転、または支店の追加/削除の登記サービス。事業開発局（DBD）、歳入局、社会保険事務局への変更通知をワンストップで処理します。",
         "description": "",
         "features": []
       },
       "objectives": {
         "title": "事業目的",
-        "summary": "事業目的の変更。",
+        "summary": "法人の事業目的の変更または追加の登記サービス。新しいサービスや製品に法的に対応できるよう、事業範囲を拡大します。",
         "description": "",
         "features": []
       },
       "dissolution": {
         "title": "解散・清算",
-        "summary": "会社の解散および清算手続き。",
+        "summary": "法人の解散および清算の登記サービス。解散通知から税務処理、最終決算まで全工程をサポートし、安心して事業を完全に終了できます。",
         "description": "",
         "features": []
       },

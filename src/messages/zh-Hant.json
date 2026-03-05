@@ -516,55 +516,55 @@
       },
       "company-name": {
         "title": "公司名稱",
-        "summary": "公司更名服務。",
+        "summary": "公司名稱變更註冊服務，包括向所有政府機構進行準確、完整的文件修改，以支持您的新業務形象。",
         "description": "",
         "features": []
       },
       "company-seal": {
         "title": "公司印章",
-        "summary": "新公司印章註冊。",
+        "summary": "依法變更或修改公司印章的註冊服務，確保各項交易的嚴密性和安全性。",
         "description": "",
         "features": []
       },
       "directors": {
         "title": "董事資訊",
-        "summary": "更改董事或授權簽字人。",
+        "summary": "增加、減少或變更董事資訊的註冊服務。我們謹慎處理相關文件，使管理架構與當前狀況保持同步。",
         "description": "",
         "features": []
       },
       "signing-authority": {
         "title": "簽署權限",
-        "summary": "更新授權簽字條件。",
+        "summary": "修改董事對公司具有約束力的簽字條件和權限的服務。明確規定以防範風險，並提高管理靈活性。",
         "description": "",
         "features": []
       },
       "shareholders": {
         "title": "股東 / 股權",
-        "summary": "更新股東名冊 (BOJ.5)。",
+        "summary": "股東名冊（BOJ.5）資訊變更服務，涵蓋股份轉讓、比例變更或按規定更新股東資訊。",
         "description": "",
         "features": []
       },
       "capital": {
         "title": "註冊資本",
-        "summary": "增加或減少註冊資本。",
+        "summary": "增加或減少公司註冊資本的註冊服務。我們仔細處理審核程序和證明文件，以適應業務擴張或結構調整。",
         "description": "",
         "features": []
       },
       "address": {
         "title": "地址 / 分支",
-        "summary": "總部或分公司搬遷。",
+        "summary": "總部搬遷或增減分支機構的註冊服務。一站式處理向商務部（DBD）、稅務局和社保局的資訊變更通知。",
         "description": "",
         "features": []
       },
       "objectives": {
         "title": "營業項目",
-        "summary": "修改公司業務目標。",
+        "summary": "修改或增加公司營業目的的註冊服務，合法擴大業務範圍，以涵蓋新的服務和產品。",
         "description": "",
         "features": []
       },
       "dissolution": {
         "title": "公司註銷",
-        "summary": "公司解散和註銷服務。",
+        "summary": "公司註銷和清算註冊服務。全程處理從註銷通知、稅務結清到最終財務結帳的所有步驟，讓您無後顧之憂地徹底結束業務。",
         "description": "",
         "features": []
       },

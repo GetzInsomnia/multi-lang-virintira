@@ -516,55 +516,55 @@
       },
       "company-name": {
         "title": "Company name",
-        "summary": "Legal process to change your corporate name.",
+        "summary": "Corporate name change registration service, covering complete and accurate document amendments with all government agencies to support your new business image.",
         "description": "",
         "features": []
       },
       "company-seal": {
         "title": "Company seal / stamp",
-        "summary": "Update your registered company seal.",
+        "summary": "Registration service for legally changing or amending the corporate seal (stamp), ensuring strictness and safety in various transactions.",
         "description": "",
         "features": []
       },
       "directors": {
         "title": "Directors",
-        "summary": "Add or remove company directors.",
+        "summary": "Registration service for adding, removing, or changing director information. We handle all documentation carefully to keep your management structure updated and aligned with your current status.",
         "description": "",
         "features": []
       },
       "signing-authority": {
         "title": "Signing authority",
-        "summary": "Update authorized signatories and conditions.",
+        "summary": "Service to amend the conditions and authority of directors to bind the corporate entity, clearly defining terms to prevent risks and enhance management agility.",
         "description": "",
         "features": []
       },
       "shareholders": {
         "title": "Shareholders / shares",
-        "summary": "Transfer of shares and updating shareholder list (BOJ.5).",
+        "summary": "Service to update the list of shareholders (BOJ.5), covering share transfers, ratio changes, or updating shareholder information in accordance with regulations.",
         "description": "",
         "features": []
       },
       "capital": {
         "title": "Capital",
-        "summary": "Increase or decrease registered capital.",
+        "summary": "Registration service for increasing or decreasing corporate registered capital. We meticulously manage the procedures and supporting documents to accommodate business expansion or restructuring.",
         "description": "",
         "features": []
       },
       "address": {
         "title": "Address / branches",
-        "summary": "Relocate your company's registered address.",
+        "summary": "Registration service for relocating the head office or adding/removing branches. We seamlessly manage the notification of changes to the DBD, Revenue Department, and Social Security Office all in one place.",
         "description": "",
         "features": []
       },
       "objectives": {
         "title": "Objectives",
-        "summary": "Update business objectives (Vat. Obj.).",
+        "summary": "Registration service to amend or add corporate objectives, legally expanding your business scope to accommodate new services and products.",
         "description": "",
         "features": []
       },
       "dissolution": {
         "title": "Dissolution",
-        "summary": "Legal closing and liquidation of the company.",
+        "summary": "Corporate dissolution and liquidation registration service. We handle every step from dissolution notification and tax clearance to final accounting closure, allowing you to end the business completely and worry-free.",
         "description": "",
         "features": []
       },

@@ -516,55 +516,55 @@
       },
       "company-name": {
         "title": "Dénomination sociale",
-        "summary": "Changement de nom de l'entreprise.",
+        "summary": "Service d'enregistrement de changement de nom de l'entreprise, couvrant la modification complète et précise des documents auprès de toutes les agences gouvernementales pour soutenir votre nouvelle image commerciale.",
         "description": "",
         "features": []
       },
       "company-seal": {
         "title": "Cachet d’entreprise",
-        "summary": "Enregistrement d'un nouveau cachet.",
+        "summary": "Service d'enregistrement pour modifier ou ajuster légalement le sceau de l'entreprise, garantissant la sécurité et la rigueur de toutes les transactions.",
         "description": "",
         "features": []
       },
       "directors": {
         "title": "Administrateurs",
-        "summary": "Changement d'administrateurs.",
+        "summary": "Service d'enregistrement pour ajouter, supprimer ou modifier les informations sur les directeurs. Nous traitons les documents avec soin pour maintenir votre structure de gestion à jour.",
         "description": "",
         "features": []
       },
       "signing-authority": {
         "title": "Pouvoirs de signature",
-        "summary": "Mise à jour des pouvoirs de signature.",
+        "summary": "Service pour modifier les conditions et les pouvoirs des directeurs pour engager l'entreprise, définissant clairement les termes pour prévenir les risques et accroître l'agilité de gestion.",
         "description": "",
         "features": []
       },
       "shareholders": {
         "title": "Actionnariats",
-        "summary": "Mise à jour de la liste des actionnaires (BOJ.5).",
+        "summary": "Service pour modifier la liste des actionnaires (BOJ.5), couvrant les transferts d'actions, les changements de ratio, ou la mise à jour des informations des actionnaires conformément à la réglementation.",
         "description": "",
         "features": []
       },
       "capital": {
         "title": "Capital social",
-        "summary": "Augmentation ou réduction du capital.",
+        "summary": "Service d'enregistrement pour augmenter ou réduire le capital social. Nous gérons méticuleusement les procédures et les pièces justificatives pour accompagner l'expansion ou la restructuration de l'entreprise.",
         "description": "",
         "features": []
       },
       "address": {
         "title": "Siège / Succursales",
-        "summary": "Transfert de siège ou succursales.",
+        "summary": "Service d'enregistrement pour le déménagement du siège social ou l'ajout/suppression de succursales. Nous gérons la notification des changements au DBD, au département des impôts et à la sécurité sociale en un seul endroit.",
         "description": "",
         "features": []
       },
       "objectives": {
         "title": "Objet social",
-        "summary": "Modification de l'objet social.",
+        "summary": "Service d'enregistrement pour modifier ou ajouter des objectifs à l'entreprise, élargissant légalement le champ d'activité pour inclure de nouveaux services et produits.",
         "description": "",
         "features": []
       },
       "dissolution": {
         "title": "Dissolution",
-        "summary": "Dissolution et liquidation de la société.",
+        "summary": "Service d'enregistrement de dissolution et de liquidation d'entreprise. Nous gérons chaque étape, de la notification de dissolution à l'apurement des impôts et à la clôture des comptes finaux, pour vous permettre de mettre fin à votre entreprise en toute tranquillité.",
         "description": "",
         "features": []
       },

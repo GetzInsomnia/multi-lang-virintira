@@ -516,55 +516,55 @@
       },
       "company-name": {
         "title": "Firmenname",
-        "summary": "Änderung des Firmennamens.",
+        "summary": "Registrierungsservice für Firmennamensänderungen, einschließlich der vollständigen und genauen Änderung von Dokumenten bei allen Regierungsbehörden, um Ihr neues Geschäftsimage zu unterstützen.",
         "description": "",
         "features": []
       },
       "company-seal": {
         "title": "Firmenstempel",
-        "summary": "Registrierung eines neuen Firmenstempels.",
+        "summary": "Registrierungsservice für die rechtskonforme Änderung oder Anpassung des Firmenstempels, um Sicherheit und Strenge bei allen Transaktionen zu gewährleisten.",
         "description": "",
         "features": []
       },
       "directors": {
         "title": "Geschäftsführer",
-        "summary": "Änderung der Geschäftsführer.",
+        "summary": "Registrierungsservice zum Hinzufügen, Entfernen oder Ändern von Geschäftsführerinformationen. Wir bearbeiten Dokumente sorgfältig, um Ihre Managementstruktur auf dem neuesten Stand zu halten.",
         "description": "",
         "features": []
       },
       "signing-authority": {
         "title": "Zeichnungsrecht",
-        "summary": "Änderung der Zeichnungsberechtigung.",
+        "summary": "Service zur Änderung der Bedingungen und Befugnisse von Geschäftsführern zur rechtlichen Bindung des Unternehmens. Klare Definition der Bestimmungen zur Risikoprävention und Erhöhung der Managementflexibilität.",
         "description": "",
         "features": []
       },
       "shareholders": {
         "title": "Aktionäre / Anteile",
-        "summary": "Aktualisierung der Aktionärsliste (BOJ.5).",
+        "summary": "Service zur Änderung des Aktionärsregisters (BOJ.5), der Aktienübertragungen, Verhältnisänderungen oder die Aktualisierung von Aktionärsinformationen gemäß den Vorschriften umfasst.",
         "description": "",
         "features": []
       },
       "capital": {
         "title": "Stammkapital",
-        "summary": "Kapitalerhöhung oder -herabsetzung.",
+        "summary": "Registrierungsservice für die Erhöhung oder Herabsetzung des eingetragenen Kapitals. Wir kümmern uns sorgfältig um die Verfahren und Belege, um Geschäftserweiterungen oder Umstrukturierungen anzupassen.",
         "description": "",
         "features": []
       },
       "address": {
         "title": "Adresse / Filialen",
-        "summary": "Sitzverlegung oder neue Filialen.",
+        "summary": "Registrierungsservice für die Verlegung des Hauptsitzes oder das Hinzufügen/Entfernen von Zweigniederlassungen. Wir verwalten die Änderungsmeldungen beim Department of Business Development (DBD), dem Finanzamt und der Sozialversicherungsbehörde aus einer Hand.",
         "description": "",
         "features": []
       },
       "objectives": {
         "title": "Geschäftszweck",
-        "summary": "Änderung des Geschäftszwecks.",
+        "summary": "Registrierungsservice zur Änderung oder Ergänzung des Unternehmenszwecks, um den Geschäftsumfang rechtmäßig für neue Dienstleistungen und Produkte zu erweitern.",
         "description": "",
         "features": []
       },
       "dissolution": {
         "title": "Liquidation",
-        "summary": "Auflösung und Liquidation der Firma.",
+        "summary": "Registrierungsservice für die Auflösung und Liquidation von Unternehmen. Wir kümmern uns um jeden Schritt, von der Auflösungsmeldung über die Steuerabwicklung bis zum endgültigen Jahresabschluss, damit Sie Ihr Geschäft vollständig und sorgenfrei beenden können.",
         "description": "",
         "features": []
       },
