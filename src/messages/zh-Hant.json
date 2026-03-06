@@ -703,61 +703,61 @@
       },
       "website-build": {
         "title": "網站架設",
-        "summary": "網站開發和電子商務解決方案。",
+        "summary": "全面的企業網站設計與開發服務。打造值得信賴的形象，支援所有設備，為您在數位世界奠定堅實基礎。",
         "description": "",
         "features": []
       },
       "facebook-page": {
         "title": "Facebook 粉專",
-        "summary": "Facebook 粉絲專頁管理和內容創作。",
+        "summary": "Facebook 粉絲專頁管理及內容策略服務。建立良好的互動，並精準吸引目標客戶群體。",
         "description": "",
         "features": []
       },
       "line-oa": {
         "title": "LINE OA",
-        "summary": "LINE 官方帳號 (OA) 設置和管理。",
+        "summary": "LINE 官方帳號系統的搭建與管理服務，這是維護客戶關係 (CRM) 和有效促進銷售的重要工具。",
         "description": "",
         "features": []
       },
       "tiktok": {
         "title": "TikTok",
-        "summary": "TikTok 行銷和短影音內容。",
+        "summary": "透過創作緊跟潮流的短影音進行 TikTok 行銷，快速擴大客戶群並提升品牌知名度。",
         "description": "",
         "features": []
       },
       "youtube": {
         "title": "YouTube",
-        "summary": "YouTube 影片製作和頻道推廣。",
+        "summary": "YouTube 頻道管理和行銷服務。展示高品質的影音內容，以建立信譽並長期觸及受眾。",
         "description": "",
         "features": []
       },
       "video-production": {
         "title": "影片製作",
-        "summary": "專業影片拍攝和剪輯服務。",
+        "summary": "提供從構思、拍攝到後期剪輯的高品質影片製作服務，用於有效溝通並提升品牌形象。",
         "description": "",
         "features": []
       },
       "paid-ads": {
         "title": "付費廣告",
-        "summary": "Facebook、Google 和 TikTok 廣告投放。",
+        "summary": "線上廣告規劃與管理服務。深入分析數據並精準定位目標受眾，以實現最大的投資回報率 (ROI)。",
         "description": "",
         "features": []
       },
       "ai-solutions": {
         "title": "AI 解決方案",
-        "summary": "人工智能諮詢和業務自動化。",
+        "summary": "人工智慧技術的諮詢與應用服務，旨在優化工作流程、降低成本並提升企業的核心競爭力。",
         "description": "",
         "features": []
       },
       "odoo-erp": {
         "title": "Odoo ERP",
-        "summary": "Odoo ERP 系統實施和支援。",
+        "summary": "Odoo 企業資源規劃 (ERP) 系統導入服務，將各部門的數據和工作流程無縫連接，實現順暢精確的管理。",
         "description": "",
         "features": []
       },
       "custom-software": {
         "title": "客製化軟體",
-        "summary": "客製化軟體開發服務。",
+        "summary": "根據企業需求量身定制的軟體設計與開發服務。打造滿足特定業務需求的系統，以解決問題並提高組織效率。",
         "description": "",
         "features": []
       }

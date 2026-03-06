@@ -703,61 +703,61 @@
       },
       "website-build": {
         "title": "Création de site",
-        "summary": "Développement de sites Web (Corporate/E-commerce).",
+        "summary": "Services complets de conception et de développement de sites web d'entreprise. Nous construisons une image crédible, adaptée à tous les appareils, comme base numérique solide.",
         "description": "",
         "features": []
       },
       "facebook-page": {
         "title": "Page Facebook",
-        "summary": "Gestion de page Facebook et contenu.",
+        "summary": "Gestion de page Facebook et stratégie de contenu pour générer un engagement positif et attirer précisément votre public cible.",
         "description": "",
         "features": []
       },
       "line-oa": {
         "title": "LINE OA",
-        "summary": "Configuration et gestion de compte LINE OA.",
+        "summary": "Configuration et gestion de comptes LINE Official, un outil CRM essentiel pour maintenir les relations clients et stimuler efficacement les ventes.",
         "description": "",
         "features": []
       },
       "tiktok": {
         "title": "TikTok",
-        "summary": "Marketing TikTok et création de contenu.",
+        "summary": "Marketing sur TikTok via la création de vidéos courtes et tendance, permettant d'élargir rapidement votre clientèle et d'accroître la notoriété de la marque.",
         "description": "",
         "features": []
       },
       "youtube": {
         "title": "YouTube",
-        "summary": "Production vidéo et marketing YouTube.",
+        "summary": "Gestion de chaîne et marketing sur YouTube, présentant un contenu vidéo de haute qualité pour renforcer la crédibilité et atteindre le public à long terme.",
         "description": "",
         "features": []
       },
       "video-production": {
         "title": "Production vidéo",
-        "summary": "Services de production vidéo professionnelle.",
+        "summary": "Production de vidéos de haute qualité, de la scénarisation au tournage et au montage, pour communiquer et valoriser l'image de votre marque.",
         "description": "",
         "features": []
       },
       "paid-ads": {
         "title": "Publicité payante",
-        "summary": "Gestion des publicités FB, Google, TikTok.",
+        "summary": "Planification et gestion de campagnes publicitaires en ligne. Nous analysons les données et ciblons avec précision pour un retour sur investissement (ROI) maximal.",
         "description": "",
         "features": []
       },
       "ai-solutions": {
         "title": "Solutions IA",
-        "summary": "Solutions d'affaires et conseil en IA.",
+        "summary": "Conseil et intégration de la technologie IA pour optimiser les processus de travail, réduire les coûts et accroître la compétitivité de votre entreprise.",
         "description": "",
         "features": []
       },
       "odoo-erp": {
         "title": "Odoo ERP",
-        "summary": "Implémentation et support Odoo ERP.",
+        "summary": "Implémentation du système de planification des ressources de l'entreprise (Odoo ERP), reliant les données et les flux de travail de tous les départements pour une gestion fluide et précise.",
         "description": "",
         "features": []
       },
       "custom-software": {
         "title": "Logiciel sur mesure",
-        "summary": "Développement de logiciels et applications sur mesure.",
+        "summary": "Conception et développement de logiciels sur mesure pour répondre aux besoins spécifiques de votre entreprise, résoudre des problèmes et améliorer l'efficacité organisationnelle.",
         "description": "",
         "features": []
       }

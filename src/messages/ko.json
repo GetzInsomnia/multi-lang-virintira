@@ -703,61 +703,61 @@
       },
       "website-build": {
         "title": "웹사이트 제작",
-        "summary": "웹사이트 개발 및 전자상거래.",
+        "summary": "종합적인 기업 웹사이트 디자인 및 개발 서비스. 모든 기기를 지원하며 디지털 세계에서 탄탄한 기반이 될 신뢰할 수 있는 이미지를 구축합니다.",
         "description": "",
         "features": []
       },
       "facebook-page": {
         "title": "페이스북 페이지",
-        "summary": "페이스북 페이지 관리 및 콘텐츠.",
+        "summary": "Facebook 페이지 관리 및 콘텐츠 전략 서비스. 긍정적인 상호 작용을 만들고 타겟 고객을 정확하게 유치합니다.",
         "description": "",
         "features": []
       },
       "line-oa": {
         "title": "LINE OA",
-        "summary": "LINE 공식 계정 설정.",
+        "summary": "고객 관계 관리(CRM) 및 효과적인 판매 촉진을 위한 필수 도구인 LINE 공식 계정 시스템 구축 및 관리 서비스.",
         "description": "",
         "features": []
       },
       "tiktok": {
         "title": "TikTok",
-        "summary": "TikTok 마케팅 및 콘텐츠 제작.",
+        "summary": "트렌디한 숏폼 비디오 제작을 통한 TikTok 마케팅 서비스. 고객 기반을 빠르게 확장하고 브랜드 인지도를 높입니다.",
         "description": "",
         "features": []
       },
       "youtube": {
         "title": "YouTube",
-        "summary": "YouTube 영상 제작 및 홍보.",
+        "summary": "YouTube 채널 관리 및 마케팅 서비스. 고품질 비디오 콘텐츠를 제공하여 신뢰성을 구축하고 장기적인 시청자에게 도달합니다.",
         "description": "",
         "features": []
       },
       "video-production": {
         "title": "영상 제작",
-        "summary": "전문 영상 촬영 및 편집.",
+        "summary": "스토리보드 작성, 촬영부터 편집 과정까지, 브랜드 이미지를 소통하고 향상시키기 위한 고품질 비디오 제작 서비스.",
         "description": "",
         "features": []
       },
       "paid-ads": {
         "title": "유료 광고 집행",
-        "summary": "페이스북, 구글, 틱톡 광고.",
+        "summary": "온라인 광고 기획 및 관리 서비스. 데이터를 분석하고 타겟 고객을 정확하게 공략하여 투자 수익률(ROI)을 극대화합니다.",
         "description": "",
         "features": []
       },
       "ai-solutions": {
         "title": "AI 솔루션",
-        "summary": "AI 컨설팅 및 비즈니스 솔루션.",
+        "summary": "업무 프로세스 개선, 비용 절감 및 기업의 경쟁력 향상을 위한 AI 기술 컨설팅 및 적용 서비스.",
         "description": "",
         "features": []
       },
       "odoo-erp": {
         "title": "Odoo ERP",
-        "summary": "Odoo ERP 구현 및 지원.",
+        "summary": "전사적 자원 관리(Odoo ERP) 시스템 구축 서비스. 모든 부서의 데이터와 업무 프로세스를 연결하여 원활하고 정확한 관리를 실현합니다.",
         "description": "",
         "features": []
       },
       "custom-software": {
         "title": "소프트웨어 개발",
-        "summary": "맞춤형 소프트웨어 개발 서비스.",
+        "summary": "비즈니스 요구에 맞춘 맞춤형 소프트웨어 디자인 및 개발 서비스. 문제를 해결하고 조직의 효율성을 높이는 특정 업무용 시스템을 구축합니다.",
         "description": "",
         "features": []
       }

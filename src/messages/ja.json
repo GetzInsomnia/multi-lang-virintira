@@ -703,61 +703,61 @@
       },
       "website-build": {
         "title": "Web制作",
-        "summary": "コーポレートサイトおよびECサイト制作。",
+        "summary": "総合的な企業ウェブサイトのデザインおよび開発サービス。すべてのデバイスに対応し、デジタル世界での強固な基盤となる信頼できるイメージを構築します。",
         "description": "",
         "features": []
       },
       "facebook-page": {
         "title": "Facebook運用",
-        "summary": "Facebook ページの管理およびコンテンツ。",
+        "summary": "Facebookページの管理およびコンテンツ戦略サービス。良好なエンゲージメントを生み出し、ターゲット顧客を的確に惹きつけます。",
         "description": "",
         "features": []
       },
       "line-oa": {
         "title": "LINE OA",
-        "summary": "LINE 公式アカウントの設定と管理。",
+        "summary": "顧客関係管理（CRM）および効果的な販売促進の重要なツールであるLINE公式アカウントのシステム構築・管理サービス。",
         "description": "",
         "features": []
       },
       "tiktok": {
         "title": "TikTok",
-        "summary": "TikTok マーケティングおよびコンテンツ。",
+        "summary": "トレンドを取り入れたショート動画の制作を通じたTikTokマーケティングサービス。顧客基盤を拡大し、ブランド認知度を急速に高めます。",
         "description": "",
         "features": []
       },
       "youtube": {
         "title": "YouTube",
-        "summary": "YouTube 動画制作およびマーケティング。",
+        "summary": "YouTubeチャンネルの管理およびマーケティングサービス。信頼を築き、長期的に視聴者にリーチするための高品質な動画コンテンツを提供します。",
         "description": "",
         "features": []
       },
       "video-production": {
         "title": "動画制作",
-        "summary": "プロフェッショナルな動画制作サービス。",
+        "summary": "企画構成から撮影、編集プロセスに至るまで、コミュニケーションを深めブランドイメージを向上させる高品質な動画制作サービス。",
         "description": "",
         "features": []
       },
       "paid-ads": {
         "title": "Web広告運用",
-        "summary": "FB, Google, TikTok 広告管理。",
+        "summary": "オンライン広告の企画・管理サービス。データを分析し、ターゲット層に正確にアプローチすることで、投資対効果（ROI）を最大化します。",
         "description": "",
         "features": []
       },
       "ai-solutions": {
         "title": "AIソリューション",
-        "summary": "ビジネス向け AI 導入およびコンサルティング。",
+        "summary": "業務プロセスの改善、コスト削減、企業の競争力向上を目的としたAIテクノロジーのコンサルティングおよび導入サービス。",
         "description": "",
         "features": []
       },
       "odoo-erp": {
         "title": "Odoo ERP",
-        "summary": "Odoo ERP の導入およびサポート。",
+        "summary": "組織の資源管理システム（Odoo ERP）の導入サービス。全社部門のデータと業務プロセスを連携させ、スムーズで正確な管理を実現します。",
         "description": "",
         "features": []
       },
       "custom-software": {
         "title": "システム開発",
-        "summary": "お客様のニーズに合わせたシステム開発。",
+        "summary": "ビジネスのニーズに合わせたカスタムソフトウェアの設計・開発サービス。課題を解決し、組織の効率を高める専門的なシステムを構築します。",
         "description": "",
         "features": []
       }

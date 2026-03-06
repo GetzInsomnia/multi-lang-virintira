@@ -703,61 +703,61 @@
       },
       "website-build": {
         "title": "Website build",
-        "summary": "Professional corporate website design and build.",
+        "summary": "Comprehensive corporate website design and development services. We build a credible image, fully responsive on all devices, as a strong digital foundation.",
         "description": "",
         "features": []
       },
       "facebook-page": {
         "title": "Facebook Page",
-        "summary": "Business page creation and optimization.",
+        "summary": "Facebook Page management services with content strategies to build positive engagement and precisely attract your target audience.",
         "description": "",
         "features": []
       },
       "line-oa": {
         "title": "LINE OA",
-        "summary": "LINE OA setup and menu configuration.",
+        "summary": "Setup and management services for LINE Official Account, a vital Customer Relationship Management (CRM) tool to effectively boost sales.",
         "description": "",
         "features": []
       },
       "tiktok": {
         "title": "TikTok",
-        "summary": "TikTok business account setup.",
+        "summary": "TikTok marketing services through the creation of trendy short videos to rapidly expand your customer base and enhance brand awareness.",
         "description": "",
         "features": []
       },
       "youtube": {
         "title": "YouTube",
-        "summary": "Corporate YouTube channel setup.",
+        "summary": "Channel management and marketing services on YouTube, presenting high-quality video content to build credibility and reach a long-term audience.",
         "description": "",
         "features": []
       },
       "video-production": {
         "title": "Video production",
-        "summary": "Short-form video content creation.",
+        "summary": "High-quality video production services, from storyboarding and filming to the editing process, to effectively communicate and elevate your brand image.",
         "description": "",
         "features": []
       },
       "paid-ads": {
         "title": "Paid ads",
-        "summary": "Ads management on FB, Google, TikTok.",
+        "summary": "Online advertising planning and management services. We analyze data and precisely target audiences for maximum Return on Investment (ROI).",
         "description": "",
         "features": []
       },
       "ai-solutions": {
         "title": "AI solutions",
-        "summary": "AI integration for business efficiency.",
+        "summary": "Consulting and application services for AI technology to streamline workflows, reduce costs, and increase your business's competitive edge.",
         "description": "",
         "features": []
       },
       "odoo-erp": {
         "title": "Odoo ERP",
-        "summary": "Odoo ERP implementation and support.",
+        "summary": "Enterprise Resource Planning (Odoo ERP) implementation services, connecting data and workflows across all departments for smooth and accurate management.",
         "description": "",
         "features": []
       },
       "custom-software": {
         "title": "Custom software",
-        "summary": "Tailored software development for your needs.",
+        "summary": "Custom software design and development services tailored to your business needs, creating specific solutions to solve problems and increase organizational efficiency.",
         "description": "",
         "features": []
       }

@@ -703,61 +703,61 @@
       },
       "website-build": {
         "title": "Webentwicklung",
-        "summary": "Corporate- und E-Commerce-Websites.",
+        "summary": "Umfassende Dienstleistungen für Design und Entwicklung von Unternehmenswebsites. Wir schaffen ein glaubwürdiges, geräteübergreifendes Image als starkes digitales Fundament.",
         "description": "",
         "features": []
       },
       "facebook-page": {
         "title": "Facebook-Seite",
-        "summary": "Facebook-Seitenverwaltung und Content.",
+        "summary": "Verwaltung von Facebook-Seiten und Content-Strategie. Wir fördern positive Interaktionen und ziehen Ihre Zielgruppe präzise an.",
         "description": "",
         "features": []
       },
       "line-oa": {
         "title": "LINE OA",
-        "summary": "Einrichtung und Verwaltung von LINE OA.",
+        "summary": "Systemeinrichtung und Verwaltung des LINE Official Accounts, einem wichtigen CRM-Tool zur effektiven Verkaufsförderung.",
         "description": "",
         "features": []
       },
       "tiktok": {
         "title": "TikTok",
-        "summary": "TikTok-Marketing und Content-Erstellung.",
+        "summary": "TikTok-Marketing durch die Erstellung trendiger Kurzvideos, um Ihren Kundenstamm schnell zu erweitern und die Markenbekanntheit zu steigern.",
         "description": "",
         "features": []
       },
       "youtube": {
         "title": "YouTube",
-        "summary": "YouTube-Videoproduktion und Marketing.",
+        "summary": "Kanalmanagement und Marketing auf YouTube. Wir präsentieren hochwertige Videoinhalte, um Glaubwürdigkeit aufzubauen und langfristig Zuschauer zu erreichen.",
         "description": "",
         "features": []
       },
       "video-production": {
         "title": "Videoproduktion",
-        "summary": "Professionelle Videoproduktion.",
+        "summary": "Hochwertige Videoproduktion vom Storyboard über den Dreh bis zum Schnitt, um Ihr Markenimage effektiv zu kommunizieren und zu verbessern.",
         "description": "",
         "features": []
       },
       "paid-ads": {
         "title": "Bezahlte Werbung",
-        "summary": "Anzeigenmanagement für FB, Google, TikTok.",
+        "summary": "Planung und Verwaltung von Online-Werbung. Wir analysieren Daten und sprechen Zielgruppen präzise an, um den maximalen Return on Investment (ROI) zu erzielen.",
         "description": "",
         "features": []
       },
       "ai-solutions": {
         "title": "KI-Lösungen",
-        "summary": "KI-Unternehmenslösungen und Beratung.",
+        "summary": "Beratung und Anwendung von KI-Technologien zur Optimierung von Arbeitsabläufen, Kostensenkung und Steigerung der Wettbewerbsfähigkeit Ihres Unternehmens.",
         "description": "",
         "features": []
       },
       "odoo-erp": {
         "title": "Odoo ERP",
-        "summary": "Odoo ERP Implementierung und Support.",
+        "summary": "Implementierung von Enterprise Resource Planning (Odoo ERP). Wir vernetzen Daten und Arbeitsabläufe aller Abteilungen für ein reibungsloses und präzises Management.",
         "description": "",
         "features": []
       },
       "custom-software": {
         "title": "Individualsoftware",
-        "summary": "Maßgeschneiderte Softwareentwicklung.",
+        "summary": "Kundenspezifisches Software-Design und -Entwicklung, zugeschnitten auf Ihre geschäftlichen Anforderungen, um Probleme zu lösen und die Unternehmenseffizienz zu steigern.",
         "description": "",
         "features": []
       }
