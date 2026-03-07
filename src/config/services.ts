@@ -74,27 +74,27 @@ export const servicesConfig: ServicesConfig = {
     {
       categorySlug: 'registrations',
       order: 1,
-      imagePath: '/services/registration.webp',
+      imagePath: '/services/registrations.webp',
       items: [
         {
           serviceSlug: 'company-limited',
           categorySlug: 'registrations',
           isPopular: true,
-          imagePath: '/services/registration.webp',
+          imagePath: '/services/registrations/company-limited.webp',
           order: 1,
         },
-        { serviceSlug: 'limited-partnership', categorySlug: 'registrations', isPopular: false, imagePath: '', order: 2 },
-        { serviceSlug: 'foundation', categorySlug: 'registrations', isPopular: false, imagePath: '', order: 3 },
-        { serviceSlug: 'association', categorySlug: 'registrations', isPopular: false, imagePath: '', order: 4 },
-        { serviceSlug: 'commercial-shop', categorySlug: 'registrations', isPopular: false, imagePath: '', order: 5 },
-        { serviceSlug: 'employer-sso', categorySlug: 'registrations', isPopular: false, imagePath: '', order: 6 },
-        { serviceSlug: 'vat-registration', categorySlug: 'registrations', isPopular: false, imagePath: '', order: 7 },
+        { serviceSlug: 'limited-partnership', categorySlug: 'registrations', isPopular: false, imagePath: '/services/registrations/limited-partnership.webp', order: 2 },
+        { serviceSlug: 'foundation', categorySlug: 'registrations', isPopular: false, imagePath: '/services/registrations/foundation.webp', order: 3 },
+        { serviceSlug: 'association', categorySlug: 'registrations', isPopular: false, imagePath: '/services/registrations/association.webp', order: 4 },
+        { serviceSlug: 'commercial-shop', categorySlug: 'registrations', isPopular: false, imagePath: '/services/registrations/commercial-shop.webp', order: 5 },
+        { serviceSlug: 'employer-sso', categorySlug: 'registrations', isPopular: false, imagePath: '/services/registrations/employer-sso.webp', order: 6 },
+        { serviceSlug: 'vat-registration', categorySlug: 'registrations', isPopular: false, imagePath: '/services/registrations/vat-registration.webp', order: 7 },
       ],
     },
     {
       categorySlug: 'corporate-changes',
       order: 2,
-      imagePath: '/services/edit-info.webp',
+      imagePath: '/services/corporate-changes.webp',
       items: [
         {
           serviceSlug: 'company-name',
@@ -116,7 +116,7 @@ export const servicesConfig: ServicesConfig = {
     {
       categorySlug: 'accounting-audit',
       order: 3,
-      imagePath: '/services/accounting.webp',
+      imagePath: '/services/accounting-audit.webp',
       items: [
         {
           serviceSlug: 'monthly-bookkeeping',
@@ -148,7 +148,7 @@ export const servicesConfig: ServicesConfig = {
     {
       categorySlug: 'licensing',
       order: 4,
-      imagePath: '/services/close-financial.webp',
+      imagePath: '/services/licensing.webp',
       items: [
         { serviceSlug: 'tourism-licence', categorySlug: 'licensing', isPopular: false, imagePath: '', order: 1 },
         { serviceSlug: 'thai-fda', categorySlug: 'licensing', isPopular: false, imagePath: '', order: 2 },
@@ -160,7 +160,7 @@ export const servicesConfig: ServicesConfig = {
     {
       categorySlug: 'digital-marketing',
       order: 5,
-      imagePath: '/services/tax.webp',
+      imagePath: '/services/digital-marketing.webp',
       items: [
         { serviceSlug: 'website-build', categorySlug: 'digital-marketing', isPopular: false, imagePath: '', order: 1 },
         { serviceSlug: 'facebook-page', categorySlug: 'digital-marketing', isPopular: false, imagePath: '', order: 2 },
