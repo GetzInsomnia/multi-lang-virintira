@@ -725,10 +725,30 @@
         "features": []
       },
       "tourism-licence": {
-        "title": "Licence tourisme",
+        "title": "Entreprise touristique",
         "summary": "Services de demande de licence d'entreprise touristique auprès du Département du Tourisme, y compris toutes les licences connexes, garantissant que vos activités touristiques se déroulent légalement et sans heurts.",
         "description": "",
         "features": []
+      },
+      "employment-agency": {
+        "title": "Cabinet de recrutement",
+        "summary": "Services de demande de licence pour agence de recrutement. Nous gérons la soumission des documents et les procédures de dépôt de garantie conformément au droit du travail pour un démarrage stable de l'entreprise."
+      },
+      "security-agency": {
+        "title": "Entreprise de sécurité",
+        "summary": "Services de demande de licence pour entreprise de sécurité. Nous préparons les documents et les structures organisationnelles en stricte conformité avec la loi sur les entreprises de sécurité."
+      },
+      "transport-license": {
+        "title": "Entreprise de transport",
+        "summary": "Services de demande de licence d'opérateur de transport terrestre pour toutes les catégories. Nous coordonnons avec le département des transports terrestres pour assurer le bon fonctionnement et la légalité de votre entreprise logistique."
+      },
+      "factory-license": {
+        "title": "Exploitation d'usine",
+        "summary": "Services de demande de licence d'exploitation d'usine (R.N.4). Nous fournissons des conseils sur les réglementations de zonage et gérons les formalités complexes avec le département des travaux industriels en un seul endroit."
+      },
+      "financial-license": {
+        "title": "Entreprise financière",
+        "summary": "Services de demande de licence commerciale financière et de crédit (par ex. Pico Finance). Nous exécutons méticuleusement les procédures en respectant les conditions strictes du ministère des Finances et de la BOT."
       },
       "thai-fda": {
         "title": "Thai FDA",

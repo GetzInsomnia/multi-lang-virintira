@@ -725,10 +725,30 @@
         "features": []
       },
       "tourism-licence": {
-        "title": "Licenza turistica",
+        "title": "Attività turistica",
         "summary": "Servizi di richiesta di licenze per imprese turistiche presso il Dipartimento del Turismo, comprese tutte le licenze correlate, garantendo che le operazioni di tour e viaggi si svolgano legalmente e senza intoppi.",
         "description": "",
         "features": []
+      },
+      "employment-agency": {
+        "title": "Agenzia di reclutamento",
+        "summary": "Servizi di richiesta licenza per agenzia di reclutamento. Gestiamo la presentazione dei documenti e le procedure di deposito cauzionale in conformità con le leggi sul lavoro per un avvio stabile dell'attività."
+      },
+      "security-agency": {
+        "title": "Attività di sicurezza",
+        "summary": "Servizi di richiesta licenza per attività di sicurezza. Prepariamo documenti e strutture organizzative in stretta conformità con la legge sulle imprese di sicurezza."
+      },
+      "transport-license": {
+        "title": "Attività di trasporto",
+        "summary": "Servizi di richiesta licenza di operatore di trasporto terrestre per tutte le categorie. Coordiniamo con il Dipartimento dei Trasporti Terrestri per garantire che la tua attività logistica funzioni senza intoppi e legalmente."
+      },
+      "factory-license": {
+        "title": "Attività di fabbrica",
+        "summary": "Servizi di richiesta licenza di esercizio di fabbrica (R.N.4). Forniamo consulenza sulle normative di zonizzazione e gestiamo complesse pratiche burocratiche con il Dipartimento dei Lavori Industriali in un'unica soluzione."
+      },
+      "financial-license": {
+        "title": "Attività finanziaria",
+        "summary": "Servizi di richiesta licenza commerciale finanziaria e di credito (es. Pico Finance). Eseguiamo meticolosamente le procedure aderendo alle rigide condizioni del Ministero delle Finanze e della BOT."
       },
       "thai-fda": {
         "title": "Thai FDA",

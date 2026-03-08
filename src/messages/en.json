@@ -725,10 +725,30 @@
         "features": []
       },
       "tourism-licence": {
-        "title": "Tourism licence",
+        "title": "Tourism Business",
         "summary": "Tourism business license application services from the Department of Tourism, including all related licenses, ensuring your tour and travel operations run legally and smoothly.",
         "description": "",
         "features": []
+      },
+      "employment-agency": {
+        "title": "Recruitment Agency",
+        "summary": "Recruitment agency license application services. We handle document submission and security deposit procedures in compliance with labor laws for a stable business start."
+      },
+      "security-agency": {
+        "title": "Security Business",
+        "summary": "Security business license application services. We prepare documents and organizational structures in strict compliance with the Security Guard Business Act."
+      },
+      "transport-license": {
+        "title": "Transport Business",
+        "summary": "Land transport operator license application services for all categories. We coordinate with the Department of Land Transport to ensure your logistics business runs smoothly and legally."
+      },
+      "factory-license": {
+        "title": "Factory Business",
+        "summary": "Factory operation license (R.N.4) application services. We provide consulting on zoning regulations and manage complex paperwork with the Department of Industrial Works all in one place."
+      },
+      "financial-license": {
+        "title": "Financial Business",
+        "summary": "Financial and credit business license application services (e.g., Pico Finance). We meticulously execute procedures adhering to the strict conditions of the Ministry of Finance and the BOT."
       },
       "thai-fda": {
         "title": "Thai FDA",

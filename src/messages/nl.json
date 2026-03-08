@@ -725,10 +725,30 @@
         "features": []
       },
       "tourism-licence": {
-        "title": "Toerismevergunning",
+        "title": "Toerismebedrijf",
         "summary": "Aanvraagdiensten voor toerismelicenties bij het Department of Tourism, inclusief alle gerelateerde vergunningen, zodat uw reis- en touroperaties legaal en soepel verlopen.",
         "description": "",
         "features": []
+      },
+      "employment-agency": {
+        "title": "Wervingsbureau",
+        "summary": "Aanvraagdiensten voor licenties voor wervingsbureaus. Wij regelen de indiening van documenten en borgprocedures in overeenstemming met de arbeidswetten voor een stabiele zakelijke start."
+      },
+      "security-agency": {
+        "title": "Beveiligingsbedrijf",
+        "summary": "Aanvraagdiensten voor licenties voor beveiligingsbedrijven. Wij bereiden documenten en organisatiestructuren voor in strikte overeenstemming met de Wet op de Beveiligingsbedrijven."
+      },
+      "transport-license": {
+        "title": "Transportbedrijf",
+        "summary": "Aanvraagdiensten voor licenties voor wegvervoersondernemers voor alle categorieën. Wij coördineren met het Department of Land Transport om ervoor te zorgen dat uw logistieke bedrijf soepel en legaal verloopt."
+      },
+      "factory-license": {
+        "title": "Fabrieksbedrijf",
+        "summary": "Aanvraagdiensten voor fabrieksexploitatielicenties (R.N.4). Wij bieden advies over bestemmingsplannen en beheren complex papierwerk met het Department of Industrial Works allemaal op één plek."
+      },
+      "financial-license": {
+        "title": "Financieel bedrijf",
+        "summary": "Aanvraagdiensten voor licenties voor financiële en kredietactiviteiten (bijv. Pico Finance). Wij voeren procedures nauwgezet uit met inachtneming van de strenge voorwaarden van het ministerie van Financiën en de BOT."
       },
       "thai-fda": {
         "title": "Thaise FDA",

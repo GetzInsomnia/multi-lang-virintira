@@ -725,10 +725,30 @@
         "features": []
       },
       "tourism-licence": {
-        "title": "旅遊執照",
+        "title": "旅遊業務",
         "summary": "提供向旅遊局申請旅行社營業執照及所有相關許可證的服務，確保您的旅遊業務合法、順利地運營。",
         "description": "",
         "features": []
+      },
+      "employment-agency": {
+        "title": "招聘機構",
+        "summary": "職業介紹所許可證申請服務。我們負責處理符合勞動法的文件提交和保證金程序，讓您的招聘業務穩健起步。"
+      },
+      "security-agency": {
+        "title": "安保業務",
+        "summary": "安保業務許可證申請服務。我們嚴格按照《保安業務法》準備文件和組織架構。"
+      },
+      "transport-license": {
+        "title": "運輸業務",
+        "summary": "各類陸路運輸經營許可證申請服務。我們與陸路運輸局協調，確保您的物流業務合法、順利運行。"
+      },
+      "factory-license": {
+        "title": "工廠業務",
+        "summary": "工廠營業許可證（R.N.4）申請服務。我們提供有關區劃法規的諮詢，並一站式處理與工業工程局的複雜文書工作。"
+      },
+      "financial-license": {
+        "title": "金融業務",
+        "summary": "金融和信貸業務許可證申請服務（如 Pico Finance）。我們嚴格按照財政部和泰國央行的嚴格條件精心執行程序。"
       },
       "thai-fda": {
         "title": "泰國 FDA",

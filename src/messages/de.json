@@ -725,10 +725,30 @@
         "features": []
       },
       "tourism-licence": {
-        "title": "Tourismuslizenz",
+        "title": "Tourismusgewerbe",
         "summary": "Beantragung von Tourismuslizenzen beim Department of Tourism, einschließlich aller zugehörigen Genehmigungen, damit Ihr Reise- und Tourismusgeschäft rechtmäßig und reibungslos läuft.",
         "description": "",
         "features": []
+      },
+      "employment-agency": {
+        "title": "Personalvermittlung",
+        "summary": "Beantragung von Lizenzen für Arbeitsvermittlungen. Wir kümmern uns um die Einreichung von Dokumenten und Kautionsverfahren in Übereinstimmung mit den Arbeitsgesetzen für einen stabilen Geschäftsstart."
+      },
+      "security-agency": {
+        "title": "Sicherheitsgewerbe",
+        "summary": "Beantragung von Lizenzen für das Sicherheitsgewerbe. Wir bereiten Dokumente und Organisationsstrukturen unter strenger Einhaltung des Sicherheitsgewerbegesetzes vor."
+      },
+      "transport-license": {
+        "title": "Transportgewerbe",
+        "summary": "Beantragung von Lizenzen für Landverkehrsunternehmer aller Kategorien. Wir koordinieren mit dem Department of Land Transport, um sicherzustellen, dass Ihr Logistikgeschäft reibungslos und legal abläuft."
+      },
+      "factory-license": {
+        "title": "Fabrikgewerbe",
+        "summary": "Beantragung von Fabrikbetriebslizenzen (R.N.4). Wir bieten Beratung zu Bebauungsvorschriften und verwalten komplexe Formalitäten mit dem Department of Industrial Works aus einer Hand."
+      },
+      "financial-license": {
+        "title": "Finanzgewerbe",
+        "summary": "Beantragung von Lizenzen für das Finanz- und Kreditgeschäft (z. B. Pico Finance). Wir führen Verfahren akribisch unter Einhaltung der strengen Bedingungen des Finanzministeriums und der BOT durch."
       },
       "thai-fda": {
         "title": "Thai FDA",

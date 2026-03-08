@@ -710,10 +710,30 @@
         "features": []
       },
       "tourism-licence": {
-        "title": "Lesen Pelancongan",
+        "title": "Perniagaan Pelancongan",
         "summary": "Perkhidmatan permohonan lesen perniagaan pelancongan dari Jabatan Pelancongan, termasuk semua lesen berkaitan, memastikan operasi lawatan dan perjalanan anda berjalan secara sah dan lancar.",
         "description": "",
         "features": []
+      },
+      "employment-agency": {
+        "title": "Agensi Pekerjaan",
+        "summary": "Perkhidmatan permohonan lesen agensi pekerjaan. Kami menguruskan penyerahan dokumen dan prosedur deposit keselamatan selaras dengan undang-undang buruh untuk permulaan perniagaan yang stabil."
+      },
+      "security-agency": {
+        "title": "Perniagaan Keselamatan",
+        "summary": "Perkhidmatan permohonan lesen perniagaan keselamatan. Kami menyediakan dokumen dan struktur organisasi yang mematuhi Akta Perniagaan Keselamatan secara ketat."
+      },
+      "transport-license": {
+        "title": "Perniagaan Pengangkutan",
+        "summary": "Perkhidmatan permohonan lesen pengendali pengangkutan darat untuk semua kategori. Kami menyelaras dengan Jabatan Pengangkutan Darat untuk memastikan perniagaan logistik anda berjalan lancar dan sah."
+      },
+      "factory-license": {
+        "title": "Perniagaan Kilang",
+        "summary": "Perkhidmatan permohonan lesen operasi kilang (R.N.4). Kami menyediakan perundingan mengenai peraturan pengezonan dan menguruskan kerja kertas yang rumit dengan Jabatan Kerja Perindustrian di satu tempat."
+      },
+      "financial-license": {
+        "title": "Perniagaan Kewangan",
+        "summary": "Perkhidmatan permohonan lesen perniagaan kewangan dan kredit (cth. Pico Finance). Kami melaksanakan prosedur dengan teliti mematuhi syarat ketat Kementerian Kewangan dan BOT."
       },
       "thai-fda": {
         "title": "Thai FDA",
