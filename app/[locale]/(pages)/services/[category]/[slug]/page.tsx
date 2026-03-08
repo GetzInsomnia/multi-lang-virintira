@@ -71,6 +71,8 @@ export default async function ServiceDetailPage({ params }: PageProps) {
         cta: "Get a Quote"
     };
     const features = serviceData?.features; // { title, items: [] }
+    const benefits = serviceData?.benefits; // { title, items: [] }
+    const requirements = serviceData?.requirements; // { title, subtitle, documents: { title, items: [] }, information: { title, items: [] } }
     const process = serviceData?.process;   // { title, steps: [] }
     const faq = serviceData?.faq;           // { title, items: [] }
 
@@ -187,7 +189,81 @@ export default async function ServiceDetailPage({ params }: PageProps) {
                     </section>
                 )}
 
-                {/* --- 3. Process Timeline --- */}
+                {/* --- 2.5 Benefits Grid --- */}
+                {benefits && benefits.items && benefits.items.some((item: string) => item.trim() !== "") && (
+                    <section className="space-y-8 rounded-3xl bg-[#FFF5F5] px-6 py-12 sm:px-10">
+                        <div className="flex items-center gap-3">
+                            <h2 className="text-2xl font-bold text-[#A70909] sm:text-3xl">
+                                {benefits.title}
+                            </h2>
+                        </div>
+                        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+                            {benefits.items.filter((item: string) => item.trim() !== "").map((item: string, idx: number) => (
+                                <div key={idx} className="flex items-start gap-4 rounded-xl bg-white p-5 shadow-sm">
+                                    <div className="flex-shrink-0 text-[#A70909]">
+                                        <FaCircleCheck className="mt-1 h-5 w-5" />
+                                    </div>
+                                    <p className="text-sm font-medium text-gray-800 sm:text-base leading-snug">{item}</p>
+                                </div>
+                            ))}
+                        </div>
+                    </section>
+                )}
+
+                {/* --- 2.7 Requirements Section --- */}
+                {requirements && requirements.title && requirements.title.trim() !== "" && (
+                    <section className="space-y-8">
+                        <div>
+                            <h2 className="text-2xl font-bold text-gray-900 sm:text-3xl">
+                                {requirements.title}
+                            </h2>
+                            {requirements.subtitle && (
+                                <p className="mt-2 text-lg text-gray-600">{requirements.subtitle}</p>
+                            )}
+                        </div>
+                        <div className="grid gap-8 lg:grid-cols-2">
+                            {/* Documents Required */}
+                            {requirements.documents && requirements.documents.items.some((item: string) => item.trim() !== "") && (
+                                <div className="rounded-2xl border border-gray-100 bg-white p-8 shadow-sm">
+                                    <div className="mb-6 flex items-center gap-4">
+                                        <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-blue-50 text-blue-600">
+                                            <FaFileContract className="h-6 w-6" />
+                                        </div>
+                                        <h3 className="text-xl font-bold text-gray-900">{requirements.documents.title}</h3>
+                                    </div>
+                                    <ul className="space-y-4">
+                                        {requirements.documents.items.filter((item: string) => item.trim() !== "").map((item: string, idx: number) => (
+                                            <li key={idx} className="flex items-start gap-3 text-gray-700">
+                                                <div className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-blue-600" />
+                                                <span className="leading-relaxed">{item}</span>
+                                            </li>
+                                        ))}
+                                    </ul>
+                                </div>
+                            )}
+
+                            {/* Information Required */}
+                            {requirements.information && requirements.information.items.some((item: string) => item.trim() !== "") && (
+                                <div className="rounded-2xl border border-gray-100 bg-white p-8 shadow-sm">
+                                    <div className="mb-6 flex items-center gap-4">
+                                        <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-purple-50 text-purple-600">
+                                            <FaRegClock className="h-6 w-6" />
+                                        </div>
+                                        <h3 className="text-xl font-bold text-gray-900">{requirements.information.title}</h3>
+                                    </div>
+                                    <ul className="space-y-4">
+                                        {requirements.information.items.filter((item: string) => item.trim() !== "").map((item: string, idx: number) => (
+                                            <li key={idx} className="flex items-start gap-3 text-gray-700">
+                                                <div className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-purple-600" />
+                                                <span className="leading-relaxed">{item}</span>
+                                            </li>
+                                        ))}
+                                    </ul>
+                                </div>
+                            )}
+                        </div>
+                    </section>
+                )}
                 {process && process.steps && process.steps.length > 0 && (
                     <section className="space-y-8 rounded-3xl bg-gray-50 px-6 py-12 sm:px-10">
                         <h2 className="text-2xl font-bold text-gray-900 sm:text-3xl">

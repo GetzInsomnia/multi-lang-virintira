@@ -409,68 +409,121 @@
         "title": "SARL",
         "summary": "Enregistrement complet de société. Nous gérons tous les documents et démarches juridiques pour que vous puissiez démarrer votre entreprise en toute confiance.",
         "hero": {
-          "title": "Start your Thai Company correctly",
-          "subtitle": "Trusted by 500+ founders",
-          "description": "We handle the Department of Business Development, Tax Registration, and Social Security so you can focus on your business.",
-          "cta": "Get a Quote",
-          "image": "/images/services/registration-hero.webp"
+          "title": "",
+          "subtitle": "",
+          "description": "",
+          "cta": ""
         },
         "features": {
-          "title": "Everything you need to trade legally",
+          "title": "",
           "items": [
             {
-              "title": "Company Name Reservation",
-              "description": "We check and reserve your name with the DBD instantly."
+              "title": "",
+              "description": ""
             },
             {
-              "title": "MoA & Articles of Association",
-              "description": "Drafting all statutory meeting notes and bylaws."
+              "title": "",
+              "description": ""
             },
             {
-              "title": "VAT & Tax Registration",
-              "description": "Getting your Tax ID and VAT certificate (P.P.20)."
+              "title": "",
+              "description": ""
             },
             {
-              "title": "Bank Account Opening",
-              "description": "Assistance with board resolutions to open your corporate bank account."
+              "title": "",
+              "description": ""
             }
           ]
         },
+        "benefits": {
+          "title": "",
+          "items": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        "requirements": {
+          "title": "",
+          "subtitle": "",
+          "documents": {
+            "title": "",
+            "items": [
+              "",
+              "",
+              "",
+              ""
+            ]
+          },
+          "information": {
+            "title": "",
+            "items": [
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ]
+          }
+        },
         "process": {
-          "title": "Registration Process",
+          "title": "",
           "steps": [
             {
-              "title": "Consultation",
-              "description": "We clarify your business objectives and shareholders."
+              "title": "",
+              "description": ""
             },
             {
-              "title": "Name Reservation",
-              "description": "Locking in your company name (1-3 days)."
+              "title": "",
+              "description": ""
             },
             {
-              "title": "Filing & Signing",
-              "description": "Directors sign the application. We submit to DBD."
+              "title": "",
+              "description": ""
             },
             {
-              "title": "Company Formed",
-              "description": "Receive your Affidavit and Company Certificate."
+              "title": "",
+              "description": ""
             }
           ]
         },
         "faq": {
-          "title": "Common Questions",
+          "title": "",
           "items": [
             {
-              "question": "How long does it take?",
-              "answer": "Typically 3-5 business days after name reservation."
+              "question": "",
+              "answer": ""
             },
             {
-              "question": "Do I need a Thai shareholder?",
-              "answer": "Yes, unless you have BOI promotion or FBL."
+              "question": "",
+              "answer": ""
+            },
+            {
+              "question": "",
+              "answer": ""
+            },
+            {
+              "question": "",
+              "answer": ""
+            },
+            {
+              "question": "",
+              "answer": ""
+            },
+            {
+              "question": "",
+              "answer": ""
             }
           ]
-        },
-        "description": ""
+        }
       },
       "limited-partnership": {
         "title": "Société en Commandite",
