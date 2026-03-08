@@ -13,6 +13,7 @@ export interface ServiceCardProps {
     ctaText: string;
     variant?: 'default' | 'dashed';
     onClick?: () => void;
+    index?: number;
 }
 
 export function ServiceCard({
@@ -22,7 +23,8 @@ export function ServiceCard({
     summary,
     ctaText,
     variant = 'default',
-    onClick
+    onClick,
+    index = 0
 }: ServiceCardProps) {
     const [imageError, setImageError] = useState(false);
     const isDashed = variant === 'dashed';
@@ -60,10 +62,21 @@ export function ServiceCard({
         );
     }
 
+    const shadowColors = [
+        'hover:shadow-[0_8px_30px_rgba(147,51,234,0.4)]',   // Purple
+        'hover:shadow-[0_8px_30px_rgba(79,70,229,0.4)]',    // Indigo
+        'hover:shadow-[0_8px_30px_rgba(37,99,235,0.4)]',    // Blue
+        'hover:shadow-[0_8px_30px_rgba(22,163,74,0.4)]',    // Green
+        'hover:shadow-[0_8px_30px_rgba(202,138,4,0.4)]',    // Yellow
+        'hover:shadow-[0_8px_30px_rgba(234,88,12,0.4)]',    // Orange
+        'hover:shadow-[0_8px_30px_rgba(220,38,38,0.4)]',    // Red
+    ];
+    const hoverShadowClass = shadowColors[index % shadowColors.length];
+
     return (
         <Link
             href={href}
-            className="group relative isolate flex h-full flex-col overflow-hidden rounded-2xl border border-[#f3dede] bg-white shadow-[0_8px_30px_rgb(167,9,9,0.15)] transition-all duration-300 ease-out hover:shadow-[0_8px_30px_rgb(167,9,9,0.30)]"
+            className={`group relative isolate flex h-full flex-col overflow-hidden rounded-2xl border border-[#f3dede] bg-white shadow-[0_8px_30px_rgba(167,9,9,0.1)] transition-all duration-300 ease-out ${hoverShadowClass}`}
         >
             <div className="relative aspect-[16/9] w-full overflow-hidden bg-gray-100">
                 {imagePath && !imageError ? (
@@ -71,6 +84,7 @@ export function ServiceCard({
                         src={imagePath}
                         alt={title}
                         fill
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                         className="transform-gpu object-cover object-center transition-transform duration-500 ease-out will-change-transform group-hover:scale-[1.04]"
                         onError={() => setImageError(true)}
                     />
@@ -87,7 +101,7 @@ export function ServiceCard({
                     aria-hidden="true"
                 />
                 <div className="absolute bottom-4 left-4 right-4 z-[3]">
-                    <h2 className="text-xl font-bold text-white drop-shadow-md">
+                    <h2 className="text-xl font-bold text-white drop-shadow-lg [text-shadow:0_2px_6px_rgba(0,0,0,0.8)]">
                         {title}
                     </h2>
                 </div>

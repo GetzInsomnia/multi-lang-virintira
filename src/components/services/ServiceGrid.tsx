@@ -69,6 +69,7 @@ export function ServiceGrid({ items }: { items: ServiceGridItem[] }) {
                         ctaText={item.ctaText}
                         variant={item.variant}
                         onClick={item.onClick}
+                        index={index}
                     />
                 </motion.div>
             ))}

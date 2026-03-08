@@ -7,6 +7,7 @@ This document serves as the "Constitution" for the Virintira project. All code m
 
 ### 1.1 Largest Contentful Paint (LCP)
 - **Hero Images:** The main hero image MUST use `next/image` with `priority={true}` and appropriate `sizes` based on breakpoints.
+- **Responsive Images:** Any usage of `next/image` with the `fill` property MUST include an explicit `sizes` attribute (e.g., `sizes="(max-width: 768px) 100vw, 33vw"`) to minimize bandwidth waste and optimize LCP. This is an absolute requirement for all grids, cards, and filled components.
 - **Preloading:** Critical assets (fonts, hero images) must be preloaded.
 - **Format:** Use `content-visibility: auto` for below-the-fold content if complex.
 
@@ -64,4 +65,5 @@ This document serves as the "Constitution" for the Virintira project. All code m
 
 ## 5. Global Configuration Instructions for Agent
 *To ensure AI follows these rules, add this to the custom instructions or `GEMINI.md`:*
-> "Prioritize `DEVELOPMENT_STANDARDS.md`. Before proposing code, simulate the change against these standards. If a change risks LCP/CLS or A11y, flag it immediately. Explicitly check for 'Drift' in Framer Motion animations."
+> "Prioritize `DEVELOPMENT_STANDARDS.md`. Before proposing code, simulate the change against these standards. If a change risks LCP/CLS or A11y, flag it immediately. Explicitly check for 'Drift' in Framer Motion animations. 
+> **CRITICAL:** DO NOT execute commands directly on the terminal. If tasks require a script, generate the file and instruct the USER to run the command themselves."

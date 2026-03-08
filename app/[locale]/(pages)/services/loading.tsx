@@ -9,6 +9,7 @@ export default function ServiceLoading() {
                     src="/logo.png"
                     alt="Loading..."
                     fill
+                    sizes="128px"
                     className="object-contain"
                 />
             </div>
