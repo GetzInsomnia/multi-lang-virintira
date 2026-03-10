@@ -7,7 +7,13 @@ import { ServiceLayout } from '@/components/services/ServiceLayout';
 import { JsonLd } from '@/components/common/JsonLd';
 import { buildBreadcrumbJsonLd, buildServiceJsonLd, buildWebPageJsonLd } from '@/seo/jsonld';
 import { COMPANY } from '@/data/company';
-import { FaCircleCheck, FaPhone, FaLine, FaChevronDown, FaRegClock, FaFileContract } from "react-icons/fa6";
+import { FaCircleCheck, FaPhone, FaLine, FaChevronDown, FaRegClock, FaFileContract, FaTrophy } from "react-icons/fa6";
+import { FAQAccordion } from '@/components/ui/FAQAccordion';
+import { StaggerContainer, StaggerItem } from '@/components/ui/StaggerContainer';
+import { FadeUp } from '@/components/ui/FadeUp';
+import { DynamicIcon } from '@/components/ui/DynamicIcon';
+import { FileText, Info } from 'lucide-react';
+import { PromotionSectionItem } from '@/components/ui/PromotionSectionItem';
 
 interface PageProps {
     params: {
@@ -75,6 +81,7 @@ export default async function ServiceDetailPage({ params }: PageProps) {
     const requirements = serviceData?.requirements; // { title, subtitle, documents: { title, items: [] }, information: { title, items: [] } }
     const process = serviceData?.process;   // { title, steps: [] }
     const faq = serviceData?.faq;           // { title, items: [] }
+    const promotion = serviceData?.promotion; // { title, subtitle, cta }
 
     // 4. JSON-LD & Breadcrumbs
     const breadcrumbs = [
@@ -125,49 +132,90 @@ export default async function ServiceDetailPage({ params }: PageProps) {
                 <JsonLd id={`jsonld-${slug}-breadcrumb`} data={breadcrumbJsonLd} />
                 <JsonLd id={`jsonld-${slug}-service`} data={serviceJsonLd} />
 
-                {/* --- 1. Hero Section --- */}
-                <section className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-[#FFF5F5] to-white px-6 py-12 shadow-sm sm:px-10 sm:py-16">
-                    <div className="relative z-10 max-w-2xl">
-                        {hero.subtitle && (
-                            <span className="mb-4 inline-block rounded-full bg-red-100 px-4 py-1.5 text-sm font-semibold text-[#A70909]">
-                                {hero.subtitle}
-                            </span>
-                        )}
-                        <h1 className="mb-6 text-3xl font-bold leading-tight text-gray-900 sm:text-4xl md:text-5xl">
-                            {hero.title}
-                        </h1>
-                        <p className="mb-8 text-lg leading-relaxed text-gray-600 sm:text-xl">
-                            {hero.description}
-                        </p>
-
-                        <div className="flex flex-col gap-4 sm:flex-row">
-                            <a
-                                href={`tel:${COMPANY.phone}`}
-                                className="inline-flex items-center justify-center gap-2 rounded-full bg-[#A70909] px-8 py-3.5 text-base font-semibold text-white transition hover:-translate-y-0.5 hover:bg-[#8B0808] hover:shadow-lg"
-                            >
-                                <FaPhone className="h-4 w-4" />
-                                {tLayout('cta.call', { phone: phoneDisplay })}
-                            </a>
-                            <a
-                                href={COMPANY.socials.line}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="inline-flex items-center justify-center gap-2 rounded-full bg-[#06C755] px-8 py-3.5 text-base font-semibold text-white transition hover:-translate-y-0.5 hover:brightness-105 hover:shadow-lg"
-                            >
-                                <FaLine className="h-5 w-5" />
-                                {tLayout('cta.chat')}
-                            </a>
+                {/* --- 1. Premium Hero Section --- */}
+                {hero && hero.title && (
+                    <section className="relative overflow-hidden rounded-[2.5rem] bg-white p-8 sm:p-16 lg:p-24 shadow-sm border border-red-50">
+                        {/* Premium SVG Background */}
+                        <div className="absolute inset-0 z-0 pointer-events-none opacity-20">
+                            <svg className="absolute w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
+                                <path d="M0,20 Q20,10 40,30 T100,20 L100,0 L0,0 Z" fill="#A70909" />
+                                <path d="M0,80 Q20,90 50,70 T100,80 L100,100 L0,100 Z" fill="#06C755" />
+                                <circle cx="85" cy="15" r="40" fill="none" stroke="currentColor" strokeWidth="0.5" className="text-[#A70909]" />
+                                <circle cx="15" cy="85" r="40" fill="none" stroke="currentColor" strokeWidth="0.5" className="text-[#06C755]" />
+                            </svg>
                         </div>
-                    </div>
-                    {/* Decorative Background Element */}
-                    <div className="pointer-events-none absolute -right-20 -top-20 h-96 w-96 opacity-[0.03]">
-                        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-                            <path fill="#A70909" d="M44.7,-76.4C58.9,-69.2,71.8,-59.1,81.6,-46.6C91.4,-34.1,98.2,-19.2,95.8,-4.9C93.4,9.4,81.8,23.1,70.8,35.3C59.8,47.5,49.4,58.2,37.2,65.8C25,73.4,11,77.9,-3.8,84.5C-18.6,91.1,-34.2,99.8,-47.5,96.3C-60.8,92.8,-71.8,77.1,-79.8,60.6C-87.8,44.1,-92.8,26.8,-91.6,10C-90.4,-6.8,-83,-23.1,-72.6,-36.8C-62.2,-50.5,-48.8,-61.6,-34.6,-68.8C-20.4,-76,-5.4,-79.3,7.6,-92.4L44.7,-76.4Z" transform="translate(100 100)" />
-                        </svg>
-                    </div>
-                </section>
+                        {/* Decorative Premium Orbs */}
+                        <div className="absolute -left-20 -top-20 h-72 w-72 rounded-full bg-red-100/60 blur-[60px] animate-pulseSlow z-0"></div>
+                        <div className="absolute -bottom-20 -right-20 h-80 w-80 rounded-full bg-[#A70909]/5 blur-[80px] animate-float z-0"></div>
+                        <div className="absolute inset-0 bg-white/40 backdrop-blur-[1px] z-0"></div>
+                        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-full w-full bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.8)_0%,transparent_100%)] pointer-events-none z-0"></div>
 
-                {/* --- 2. Benefits Grid --- */}
+                        <div className="relative z-10 mx-auto max-w-4xl text-center">
+                            <StaggerContainer>
+                                {hero.subtitle && (
+                                    <StaggerItem>
+                                        <div className="mb-6 inline-flex items-center gap-2 overflow-hidden rounded-full bg-gradient-to-r from-[#A70909] via-[#ff4e50] to-[#A70909] bg-[length:200%_auto] px-5 py-2 text-xs font-bold uppercase tracking-wider text-white shadow-lg shadow-red-900/20 animate-shimmer-gradient">
+                                            <FaTrophy className="h-4 w-4 text-yellow-300 drop-shadow-sm" />
+                                            <span>{hero.subtitle}</span>
+                                        </div>
+                                    </StaggerItem>
+                                )}
+                                <StaggerItem>
+                                    <h1 className="mb-8 text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl lg:text-5xl lg:leading-[1.15]">
+                                        {hero.title}
+                                    </h1>
+                                </StaggerItem>
+                                {hero.description && (
+                                    <StaggerItem>
+                                        <p className="mb-12 text-base text-gray-600 sm:text-lg lg:text-xl leading-relaxed max-w-2xl mx-auto font-medium" style={{ textWrap: 'pretty' }}>
+                                            {hero.description}
+                                        </p>
+                                    </StaggerItem>
+                                )}
+                                <StaggerItem>
+                                    <div className="flex flex-col items-center justify-center gap-4 sm:flex-row mt-4">
+                                        <div className="relative group/btn inline-flex w-full sm:w-auto justify-center">
+                                            <div className="absolute -inset-1 rounded-full bg-gradient-to-r from-red-600 via-orange-500 to-red-600 opacity-30 blur-xl transition-opacity duration-500 group-hover/btn:opacity-60 hidden sm:block animate-pulse-slow" />
+                                            <a
+                                                href={`tel:${COMPANY.phone}`}
+                                                className="relative overflow-hidden inline-flex w-full sm:w-auto items-center justify-center gap-2 rounded-full bg-[#A70909] px-8 py-3.5 text-base font-bold text-white shadow-xl transition-all duration-300 hover:-translate-y-1 hover:bg-[#900000] hover:shadow-red-900/30 hover:shadow-2xl"
+                                            >
+                                                <FaPhone className="h-5 w-5 shrink-0" />
+                                                <span className="relative z-10 whitespace-nowrap">{phoneDisplay}</span>
+                                                <div className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/20 to-transparent group-hover/btn:animate-[shimmer_1.5s_infinite] pointer-events-none" />
+                                            </a>
+                                        </div>
+                                        <a
+                                            href={COMPANY.socials.line}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="inline-flex w-full sm:w-auto items-center justify-center gap-2 rounded-full bg-[#06C755] px-8 py-3.5 text-base font-bold text-white shadow-lg transition-all duration-300 hover:-translate-y-1 hover:brightness-105 hover:shadow-xl hover:shadow-green-900/10"
+                                        >
+                                            <FaLine className="h-5 w-5 shrink-0" />
+                                            <span className="whitespace-nowrap">{tLayout('cta.chat')}</span>
+                                        </a>
+                                    </div>
+                                </StaggerItem>
+                            </StaggerContainer>
+                        </div>
+                    </section>
+                )}
+
+                {/* --- 1.5 Rainbow Shadow Config --- */}
+                {(() => {
+                    const RAINBOW_SHADOWS = [
+                        "hover:shadow-[0_20px_40px_-15px_rgba(147,51,234,0.5)]",   // Purple
+                        "hover:shadow-[0_20px_40px_-15px_rgba(79,70,229,0.5)]",    // Indigo
+                        "hover:shadow-[0_20px_40px_-15px_rgba(37,99,235,0.5)]",    // Blue
+                        "hover:shadow-[0_20px_40px_-15px_rgba(22,163,74,0.5)]",    // Green
+                        "hover:shadow-[0_20px_40px_-15px_rgba(202,138,4,0.5)]",    // Yellow
+                        "hover:shadow-[0_20px_40px_-15px_rgba(234,88,12,0.5)]",    // Orange
+                        "hover:shadow-[0_20px_40px_-15px_rgba(220,38,38,0.5)]",    // Red
+                    ];
+                    return null;
+                })()}
+
+                {/* --- 2. Features Grid --- */}
                 {features && features.items && features.items.length > 0 && (
                     <section className="space-y-8">
                         <div className="flex items-center gap-3">
@@ -175,38 +223,78 @@ export default async function ServiceDetailPage({ params }: PageProps) {
                                 {features.title}
                             </h2>
                         </div>
-                        <div className="grid gap-6 sm:grid-cols-2">
-                            {features.items.map((item: any, idx: number) => (
-                                <div key={idx} className="group rounded-2xl border border-gray-100 bg-white p-6 shadow-sm transition hover:shadow-md">
-                                    <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-red-50 text-[#A70909]">
-                                        <FaCircleCheck className="h-6 w-6" />
-                                    </div>
-                                    <h3 className="mb-2 text-lg font-bold text-gray-900">{item.title}</h3>
-                                    <p className="text-gray-600">{item.description}</p>
-                                </div>
-                            ))}
-                        </div>
+                        <StaggerContainer className="grid gap-6 sm:grid-cols-2 lg:grid-cols-2 auto-rows-fr">
+                            {features.items.map((item: any, idx: number) => {
+                                const RAINBOW_SHADOWS = [
+                                    "hover:shadow-[0_20px_40px_-15px_rgba(147,51,234,0.4)]",
+                                    "hover:shadow-[0_20px_40px_-15px_rgba(79,70,229,0.4)]",
+                                    "hover:shadow-[0_20px_40px_-15px_rgba(37,99,235,0.4)]",
+                                    "hover:shadow-[0_20px_40px_-15px_rgba(22,163,74,0.4)]",
+                                    "hover:shadow-[0_20px_40px_-15px_rgba(202,138,4,0.4)]",
+                                    "hover:shadow-[0_20px_40px_-15px_rgba(234,88,12,0.4)]",
+                                    "hover:shadow-[0_20px_40px_-15px_rgba(220,38,38,0.4)]",
+                                ];
+                                const shadowClass = RAINBOW_SHADOWS[idx % RAINBOW_SHADOWS.length];
+                                return (
+                                    <StaggerItem key={idx} className="h-full">
+                                        <div className={`group flex flex-col h-full rounded-3xl border border-gray-100 bg-white p-6 sm:p-8 shadow-sm transition-all duration-300 ${shadowClass}`}>
+                                            <div className="flex items-center gap-6 mb-4">
+                                                <div className="flex-shrink-0 inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-red-50 text-[#A70909] transition-all duration-500 group-hover:scale-110 group-hover:bg-[#A70909] group-hover:text-white shadow-inner">
+                                                    {item.icon ? (
+                                                        <DynamicIcon name={item.icon} className="h-7 w-7" strokeWidth={2} />
+                                                    ) : (
+                                                        <FaCircleCheck className="h-6 w-6" />
+                                                    )}
+                                                </div>
+                                                <h3 className="text-xl font-bold text-gray-900 leading-tight">{item.title}</h3>
+                                            </div>
+                                            <p className="text-gray-600 leading-relaxed text-base flex-1">{item.description}</p>
+                                        </div>
+                                    </StaggerItem>
+                                );
+                            })}
+                        </StaggerContainer>
                     </section>
                 )}
 
                 {/* --- 2.5 Benefits Grid --- */}
-                {benefits && benefits.items && benefits.items.some((item: string) => item.trim() !== "") && (
+                {benefits && benefits.items && benefits.items.some((item: any) => (typeof item === 'string' ? item.trim() !== "" : item.title?.trim() !== "")) && (
                     <section className="space-y-8 rounded-3xl bg-[#FFF5F5] px-6 py-12 sm:px-10">
                         <div className="flex items-center gap-3">
                             <h2 className="text-2xl font-bold text-[#A70909] sm:text-3xl">
                                 {benefits.title}
                             </h2>
                         </div>
-                        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-                            {benefits.items.filter((item: string) => item.trim() !== "").map((item: string, idx: number) => (
-                                <div key={idx} className="flex items-start gap-4 rounded-xl bg-white p-5 shadow-sm">
-                                    <div className="flex-shrink-0 text-[#A70909]">
-                                        <FaCircleCheck className="mt-1 h-5 w-5" />
-                                    </div>
-                                    <p className="text-sm font-medium text-gray-800 sm:text-base leading-snug">{item}</p>
-                                </div>
-                            ))}
-                        </div>
+                        <StaggerContainer className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 auto-rows-fr">
+                            {benefits.items.filter((item: any) => (typeof item === 'string' ? item.trim() !== "" : item.title?.trim() !== "")).map((item: any, idx: number) => {
+                                const title = typeof item === 'string' ? item : item.title;
+                                const iconName = typeof item === 'string' ? undefined : item.icon;
+                                const RAINBOW_SHADOWS = [
+                                    "hover:shadow-[0_20px_40px_-15px_rgba(147,51,234,0.4)]",
+                                    "hover:shadow-[0_20px_40px_-15px_rgba(79,70,229,0.4)]",
+                                    "hover:shadow-[0_20px_40px_-15px_rgba(37,99,235,0.4)]",
+                                    "hover:shadow-[0_20px_40px_-15px_rgba(22,163,74,0.4)]",
+                                    "hover:shadow-[0_20px_40px_-15px_rgba(202,138,4,0.4)]",
+                                    "hover:shadow-[0_20px_40px_-15px_rgba(234,88,12,0.4)]",
+                                    "hover:shadow-[0_20px_40px_-15px_rgba(220,38,38,0.4)]",
+                                ];
+                                const shadowClass = RAINBOW_SHADOWS[idx % RAINBOW_SHADOWS.length];
+                                return (
+                                    <StaggerItem key={idx} className="h-full">
+                                        <div className={`group flex flex-col sm:flex-row h-full items-center gap-4 rounded-2xl border border-gray-100 bg-white p-5 shadow-sm transition-all duration-300 ${shadowClass}`}>
+                                            <div className="flex-shrink-0 text-[#A70909] p-3 bg-red-50 rounded-xl transition-all duration-500 group-hover:scale-110 group-hover:bg-[#A70909] group-hover:text-white group-hover:shadow-md">
+                                                {iconName ? (
+                                                    <DynamicIcon name={iconName} className="h-6 w-6" strokeWidth={2.5} />
+                                                ) : (
+                                                    <FaCircleCheck className="h-6 w-6" />
+                                                )}
+                                            </div>
+                                            <p className="text-sm font-semibold text-gray-800 sm:text-base leading-snug flex-1 text-center sm:text-left">{title}</p>
+                                        </div>
+                                    </StaggerItem>
+                                );
+                            })}
+                        </StaggerContainer>
                     </section>
                 )}
 
@@ -234,8 +322,8 @@ export default async function ServiceDetailPage({ params }: PageProps) {
                                     <ul className="space-y-4">
                                         {requirements.documents.items.filter((item: string) => item.trim() !== "").map((item: string, idx: number) => (
                                             <li key={idx} className="flex items-start gap-3 text-gray-700">
-                                                <div className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-blue-600" />
-                                                <span className="leading-relaxed">{item}</span>
+                                                <div className="mt-3 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-blue-600" />
+                                                <span className="leading-relaxed flex-1">{item}</span>
                                             </li>
                                         ))}
                                     </ul>
@@ -254,8 +342,8 @@ export default async function ServiceDetailPage({ params }: PageProps) {
                                     <ul className="space-y-4">
                                         {requirements.information.items.filter((item: string) => item.trim() !== "").map((item: string, idx: number) => (
                                             <li key={idx} className="flex items-start gap-3 text-gray-700">
-                                                <div className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-purple-600" />
-                                                <span className="leading-relaxed">{item}</span>
+                                                <div className="mt-3 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-purple-600" />
+                                                <span className="leading-relaxed flex-1">{item}</span>
                                             </li>
                                         ))}
                                     </ul>
@@ -269,47 +357,53 @@ export default async function ServiceDetailPage({ params }: PageProps) {
                         <h2 className="text-2xl font-bold text-gray-900 sm:text-3xl">
                             {process.title}
                         </h2>
-                        <div className="relative space-y-8 border-l-2 border-red-200 pl-8 sm:space-y-12">
-                            {process.steps.map((step: any, idx: number) => (
-                                <div key={idx} className="relative">
-                                    <span className="absolute -left-[41px] top-1 flex h-6 w-6 items-center justify-center rounded-full bg-[#A70909] text-xs font-bold text-white ring-4 ring-white">
-                                        {idx + 1}
-                                    </span>
-                                    <div className="space-y-1">
-                                        <h3 className="text-xl font-bold text-gray-900">{step.title}</h3>
-                                        <p className="text-gray-600">{step.description}</p>
-                                    </div>
-                                </div>
-                            ))}
-                        </div>
+                        <StaggerContainer className="relative grid gap-6 sm:gap-10 auto-rows-fr">
+                            {process.steps.map((step: any, idx: number) => {
+                                const RAINBOW_SHADOWS = [
+                                    "hover:shadow-[0_20px_40px_-15px_rgba(147,51,234,0.4)]",
+                                    "hover:shadow-[0_20px_40px_-15px_rgba(79,70,229,0.4)]",
+                                    "hover:shadow-[0_20px_40px_-15px_rgba(37,99,235,0.4)]",
+                                    "hover:shadow-[0_20px_40px_-15px_rgba(22,163,74,0.4)]",
+                                    "hover:shadow-[0_20px_40px_-15px_rgba(202,138,4,0.4)]",
+                                    "hover:shadow-[0_20px_40px_-15px_rgba(234,88,12,0.4)]",
+                                    "hover:shadow-[0_20px_40px_-15px_rgba(220,38,38,0.4)]",
+                                ];
+                                const shadowClass = RAINBOW_SHADOWS[idx % RAINBOW_SHADOWS.length];
+                                return (
+                                    <StaggerItem key={idx} className="relative pl-16 sm:pl-24 group h-full">
+                                        <div className="absolute left-0 top-1/2 -translate-y-1/2 flex h-14 w-14 sm:h-16 sm:w-16 items-center justify-center rounded-2xl bg-[#A70909] text-white shadow-[0_4px_20px_rgba(167,9,9,0.4)] ring-4 ring-white transition-transform duration-500 group-hover:scale-110">
+                                            {step.icon ? (
+                                                <DynamicIcon name={step.icon} className="h-6 w-6 sm:h-8 sm:w-8" strokeWidth={2.5} />
+                                            ) : (
+                                                <span className="text-xl sm:text-2xl font-bold">{idx + 1}</span>
+                                            )}
+                                        </div>
+                                        <div className={`space-y-3 h-full flex flex-col justify-center rounded-3xl border border-gray-100 bg-white p-6 sm:p-8 shadow-sm transition-all duration-300 ${shadowClass}`}>
+                                            <div className="flex items-center gap-3">
+                                                <span className="text-sm font-bold text-red-500 bg-red-50 px-3 py-1 rounded-full uppercase tracking-wider">Step {idx + 1}</span>
+                                                <h3 className="text-xl sm:text-2xl font-bold text-gray-900">{step.title}</h3>
+                                            </div>
+                                            <p className="leading-relaxed text-gray-600 text-base sm:text-lg">{step.description}</p>
+                                        </div>
+                                    </StaggerItem>
+                                )
+                            })}
+                        </StaggerContainer>
                     </section>
                 )}
 
-                {/* --- 4. FAQ Section --- */}
+                {/* --- 5. Promotion Section (Special Deal) --- */}
+                {process && promotion && promotion.title && (
+                    <PromotionSectionItem promotion={promotion} />
+                )}
+
+                {/* --- 6. FAQ Section --- */}
                 {faq && faq.items && faq.items.length > 0 && (
                     <section className="space-y-8">
                         <h2 className="text-2xl font-bold text-gray-900 sm:text-3xl">{faq.title}</h2>
-                        <div className="space-y-4">
-                            {faq.items.map((item: any, idx: number) => (
-                                <details key={idx} className="group rounded-2xl border border-gray-100 bg-white shadow-sm [&_summary::-webkit-details-marker]:hidden">
-                                    <summary className="flex cursor-pointer items-center justify-between gap-1.5 p-6 text-gray-900">
-                                        <div className="flex items-center gap-3 font-semibold">
-                                            <span className="text-[#A70909]">Q.</span>
-                                            {item.question}
-                                        </div>
-                                        <FaChevronDown className="h-4 w-4 text-gray-400 transition group-open:rotate-180" />
-                                    </summary>
-                                    <div className="px-6 pb-6 text-gray-600 leading-relaxed">
-                                        {item.answer}
-                                    </div>
-                                </details>
-                            ))}
-                        </div>
+                        <FAQAccordion items={faq.items} />
                     </section>
                 )}
-
-
-
             </div>
         </ServiceLayout>
     );

@@ -414,6 +414,11 @@
           "description": "",
           "cta": ""
         },
+        "promotion": {
+          "title": "",
+          "subtitle": "",
+          "cta": ""
+        },
         "features": {
           "title": "",
           "items": [

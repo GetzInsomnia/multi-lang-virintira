@@ -63,7 +63,11 @@ This document serves as the "Constitution" for the Virintira project. All code m
 2.  **Check Languages:** Does this work in **Tamil (Longest)**? **German (Long Words)**? **Thai (Tall Lines)**?
 3.  **Check Devices:** Verify on Mobile (Stack), Tablet (Hybrid), Desktop (Wide).
 
-## 5. Global Configuration Instructions for Agent
+## 5. Agent Interaction Rules (CRITICAL)
+**Before executing any changes:**
+- **NO TERMINAL COMMANDS:** Agents MUST NOT run any commands directly on the terminal (e.g., `npm run dev`, `tsc`, `node script.js`). If a command needs to be executed, provide the exact syntax to the USER and ask them to run it, or generate a `.js`/`.sh` file and ask the USER to execute it. This is a strict safety and workflow requirement.
+
+## 6. Global Configuration Instructions for Agent
 *To ensure AI follows these rules, add this to the custom instructions or `GEMINI.md`:*
 > "Prioritize `DEVELOPMENT_STANDARDS.md`. Before proposing code, simulate the change against these standards. If a change risks LCP/CLS or A11y, flag it immediately. Explicitly check for 'Drift' in Framer Motion animations. 
 > **CRITICAL:** DO NOT execute commands directly on the terminal. If tasks require a script, generate the file and instruct the USER to run the command themselves."
