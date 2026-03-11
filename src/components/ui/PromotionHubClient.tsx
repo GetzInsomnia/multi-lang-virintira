@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { FaCheckCircle, FaTags } from 'react-icons/fa';
+import { FaCheckCircle, FaTags, FaPlus } from 'react-icons/fa';
 import Link from 'next/link';
 import { Breadcrumbs } from '@/components/ui/Breadcrumbs';
 
@@ -48,16 +48,16 @@ export function PromotionHubClient({ locale, hero, filters, items, ui }: Promoti
             {/* 1. Hero Section */}
             <section className="bg-gradient-to-b from-[#FFF5F5] to-[#FFFEFE] pt-12 pb-12 sm:pt-20 sm:pb-16 overflow-hidden border-b border-red-50/50">
                 <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 text-center relative z-10">
-                    <div className="flex justify-start mb-6 sm:mb-8 text-left">
+                    <div className="flex justify-center mb-6 sm:mb-8">
                         <Breadcrumbs
                             homeLabel={ui.breadcrumbHome || 'หน้าแรก'}
                             items={[{ label: ui.breadcrumbPromotion || 'โปรโมชั่น', href: '/promotion' }]}
                         />
                     </div>
-                    <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#A70909] leading-tight mb-6 text-left">
+                    <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#A70909] leading-tight mb-6 mt-2 text-center">
                         {hero.title}
                     </h1>
-                    <p className="text-lg sm:text-xl text-gray-700 leading-relaxed max-w-3xl text-left">
+                    <p className="text-lg sm:text-xl text-gray-700 leading-relaxed max-w-3xl mx-auto text-center">
                         {hero.summary}
                     </p>
                 </div>
@@ -120,21 +120,26 @@ export function PromotionHubClient({ locale, hero, filters, items, ui }: Promoti
                                                 </li>
                                             ))}
                                             {item.benefits && item.benefits.length > 3 && (
-                                                <li className="text-gray-400 text-xs italic mt-2 ml-6">
-                                                    {ui.andMore || 'และอื่นๆ อีกมากมาย...'}
+                                                <li className="flex items-center gap-2 text-gray-600 text-sm mt-3 font-medium">
+                                                    <div className="bg-[#A70909] text-white rounded-full flex items-center justify-center p-0.5 flex-shrink-0">
+                                                        <FaPlus className="text-[10px]" />
+                                                    </div>
+                                                    <span>{ui.andMore || 'และอื่นๆ อีกมากมาย...'}</span>
                                                 </li>
                                             )}
                                         </ul>
 
                                         {/* Pricing Block */}
-                                        <div className="mt-auto pt-6 border-t border-gray-100 mb-6">
-                                            {item.originalPrice && (
-                                                <div className="text-gray-400 text-sm font-medium line-through mb-1">
-                                                    ฿ {item.originalPrice}
+                                        <div className="mt-auto pt-6 border-t border-gray-100 mb-6 flex justify-center">
+                                            <div className="flex flex-col text-left max-w-full">
+                                                {item.originalPrice && (
+                                                    <div className="text-gray-400 text-sm font-medium line-through mb-1 text-center">
+                                                        ฿ {item.originalPrice}
+                                                    </div>
+                                                )}
+                                                <div className="text-[#A70909] text-2xl sm:text-3xl font-bold break-words">
+                                                    {item.price === 'ติดต่อสอบถามราคา' ? item.price : item.price.includes('ติดต่อ') ? item.price : item.price.includes('เริ่มต้น') ? item.price : `฿ ${item.price}`}
                                                 </div>
-                                            )}
-                                            <div className="text-[#A70909] text-2xl sm:text-3xl font-bold">
-                                                {item.price === 'ติดต่อสอบถามราคา' ? item.price : item.price.includes('ติดต่อ') ? item.price : item.price.includes('เริ่มต้น') ? item.price : `฿ ${item.price}`}
                                             </div>
                                         </div>
 

@@ -1,8 +1,9 @@
 'use client';
 
 import React from 'react';
-import { FaCheckCircle, FaLine, FaPhoneAlt } from 'react-icons/fa';
+import { FaCheckCircle, FaLine, FaPhoneAlt, FaComments } from 'react-icons/fa';
 import { COMPANY } from '@/data/company';
+import { useUI } from '@/context/UIContext';
 
 interface PromotionItem {
     slug: string;
@@ -27,10 +28,13 @@ interface PromotionDetailsContentProps {
         freeAssessment?: string;
         chatViaLine?: string;
         callNow?: string;
+        otherContacts?: string;
     };
 }
 
 export function PromotionDetailsContent({ item, ui }: PromotionDetailsContentProps) {
+    const { openContactDrawer } = useUI();
+
     if (!item) return null;
 
     return (
@@ -123,27 +127,35 @@ export function PromotionDetailsContent({ item, ui }: PromotionDetailsContentPro
                         </div>
                     )}
 
-                    <div className="space-y-4">
+                    <div className="space-y-3">
                         <a
                             href={COMPANY.socials.line}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="w-full flex items-center justify-center gap-3 bg-[#06C755] hover:bg-[#05b34c] text-white font-bold py-4 px-6 rounded-2xl transition-all shadow-md hover:shadow-lg"
+                            className="w-full flex items-center justify-center gap-3 bg-[#06C755] hover:bg-[#05b34c] text-white font-bold py-3.5 px-6 rounded-full transition-all shadow-sm hover:shadow-md"
                         >
-                            <FaLine className="text-2xl" />
+                            <FaLine className="text-xl" />
                             <span>{ui?.chatViaLine}</span>
                         </a>
 
                         <a
                             href={`tel:${COMPANY.phone}`}
-                            className="w-full flex items-center justify-center gap-3 bg-red-50 hover:bg-red-100 text-[#A70909] font-bold py-4 px-6 rounded-2xl transition-all border border-red-100"
+                            className="w-full flex items-center justify-center gap-3 bg-red-50 hover:bg-red-100 text-[#A70909] font-bold py-3.5 px-6 rounded-full transition-all border border-red-100"
                         >
-                            <FaPhoneAlt className="text-xl" />
+                            <FaPhoneAlt className="text-lg" />
                             <span>{ui?.callNow}</span>
                         </a>
+
+                        <button
+                            onClick={openContactDrawer}
+                            className="w-full flex items-center justify-center gap-3 bg-white hover:bg-gray-50 text-gray-700 font-bold py-3.5 px-6 rounded-full transition-all border border-gray-200"
+                        >
+                            <FaComments className="text-lg" />
+                            <span>{ui?.otherContacts || 'ช่องทางติดต่ออื่นๆ'}</span>
+                        </button>
                     </div>
 
-                    <p className="text-xs text-center text-gray-400 mt-6">
+                    <p className="text-sm font-semibold text-[#A70909] bg-red-50 py-3 px-4 rounded-xl text-center mt-6 shadow-sm border border-red-100">
                         {ui?.freeAssessment}
                     </p>
                 </div>

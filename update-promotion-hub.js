@@ -36,7 +36,8 @@ const THAI_CONTENT = {
         "viewDetails": "ดูรายละเอียดโปรโมชั่น",
         "andMore": "และอื่นๆ อีกมากมาย...",
         "drawerTitle": "โปรโมชั่นและสิทธิพิเศษ",
-        "emptyHub": "ยังไม่มีโปรโมชั่นในหมวดหมู่นี้"
+        "emptyHub": "ยังไม่มีโปรโมชั่นในหมวดหมู่นี้",
+        "otherContacts": "ช่องทางติดต่ออื่นๆ"
     },
     "items": {
         "company-registration-deal": {
@@ -129,7 +130,7 @@ const THAI_CONTENT = {
                 "มั่นใจ ถูกต้องตามกฎหมาย 100%",
                 "จัดทำ ภ.ง.ด.50 และยื่น E-Filing"
             ],
-            "price": "ติดต่อสอบถามราคา",
+            "price": "เริ่มต้น 9,900 บาท",
             "originalPrice": "",
             "pricingTiers": [],
             "benefits": [
@@ -212,7 +213,8 @@ const EMPTY_CONTENT = {
         "viewDetails": "",
         "andMore": "",
         "drawerTitle": "",
-        "emptyHub": ""
+        "emptyHub": "",
+        "otherContacts": ""
     }
 };
 
