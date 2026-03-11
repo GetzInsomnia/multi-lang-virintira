@@ -304,35 +304,6 @@
       "description": "무료 상담으로 비용을 가늠해 보고, 비즈니스에 가장 잘 맞는 서비스를 찾아보세요."
     }
   },
-  "promotion": {
-    "hero": {
-      "title": "신뢰할 수 있는 현대적인 비즈니스 서비스,\n함께 성장합니다.",
-      "intro": "비용 절감과 성장을 효율적으로 지원하도록 설계된 서비스·솔루션의 특별 혜택을 확인하세요."
-    },
-    "offers": [
-      {
-        "name": "신규 고객 독점 혜택 🔥",
-        "bullets": [
-          "5,200 THB 상당의 법인 설립 등록 수수료 무료",
-          "1,100 THB 상당의 인증 사본 번들 무료",
-          "7,900 THB 이상의 보너스 혜택"
-        ],
-        "note": "오늘 Virintira에 가입하고 모든 혜택을 즉시 누리세요."
-      },
-      {
-        "name": "장부 기장 고객 독점 혜택 💡",
-        "bullets": [
-          "3,500 THB 상당의 장부 기장 서비스 무료",
-          "추가 비용 없는 무제한 비즈니스 컨설팅 세션",
-          "귀사의 비즈니스에 맞춘 맞춤형 세무 계획"
-        ],
-        "note": "전담 전문가 팀으로부터 월간 엔드투엔드 지원을 받으세요."
-      }
-    ],
-    "cta": "전체 프로모션 보기",
-    "complimentary": "무료: 상담 및 초기 진단 포함",
-    "badge": "Limited Offer"
-  },
   "resources": {
     "hero": {
       "title": "Finance templates and compliance timelines",
@@ -1205,6 +1176,79 @@
     "cta": {
       "heading": "Virintira와 함께, 더 자신 있게 다음 단계로.",
       "description": "서류 및 백오피스 업무는 저희가 맡고, 고객님은 비즈니스 목표에 집중하세요."
+    }
+  },
+  "promotions": {
+    "metadata": {
+      "title": "",
+      "description": "",
+      "keywords": []
+    },
+    "hub": {
+      "hero": {
+        "title": "",
+        "summary": ""
+      },
+      "filters": {
+        "all": "",
+        "registration": "",
+        "accounting": ""
+      }
+    },
+    "items": {
+      "company-registration-deal": {
+        "slug": "company-registration-deal",
+        "category": "",
+        "categoryId": "registration",
+        "title": "",
+        "imagePlaceholder": "4:3",
+        "shortInfo": [],
+        "price": "",
+        "originalPrice": "",
+        "benefits": [],
+        "conditions": ""
+      },
+      "partnership-registration-deal": {
+        "slug": "partnership-registration-deal",
+        "category": "",
+        "categoryId": "registration",
+        "title": "",
+        "imagePlaceholder": "4:3",
+        "shortInfo": [],
+        "price": "",
+        "originalPrice": "",
+        "benefits": [],
+        "conditions": ""
+      },
+      "monthly-accounting-bundle": {
+        "slug": "monthly-accounting-bundle",
+        "category": "",
+        "categoryId": "accounting",
+        "title": "",
+        "imagePlaceholder": "4:3",
+        "shortInfo": [],
+        "price": "",
+        "originalPrice": "",
+        "benefits": [],
+        "conditions": ""
+      },
+      "yearly-audit-deal": {
+        "slug": "yearly-audit-deal",
+        "category": "",
+        "categoryId": "accounting",
+        "title": "",
+        "imagePlaceholder": "4:3",
+        "shortInfo": [],
+        "price": "",
+        "originalPrice": "",
+        "benefits": [],
+        "conditions": ""
+      }
+    },
+    "ui": {
+      "ctaPrimary": "",
+      "chatViaLine": "",
+      "callNow": ""
     }
   }
 }

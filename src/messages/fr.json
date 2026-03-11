@@ -304,35 +304,6 @@
       "description": "Profitez d’une consultation gratuite pour estimer les coûts et trouver le service le plus adapté à votre entreprise."
     }
   },
-  "promotion": {
-    "hero": {
-      "title": "Des services d’entreprise fiables et modernes, prêts à grandir avec vous.",
-      "intro": "Profitez d’avantages exclusifs sur nos services et solutions, conçus pour réduire les coûts et accélérer votre croissance efficacement."
-    },
-    "offers": [
-      {
-        "name": "Exclusif pour les nouveaux clients 🔥",
-        "bullets": [
-          "Frais d'enregistrement gouvernementaux gratuits d'une valeur de 5 200 THB",
-          "Pack de copies certifiées gratuit d'une valeur de 1 100 THB",
-          "Avantages bonus d'une valeur de plus de 7 900 THB"
-        ],
-        "note": "Inscrivez-vous chez Virintira aujourd'hui pour profiter immédiatement de tous les avantages."
-      },
-      {
-        "name": "Exclusif pour les clients comptables 💡",
-        "bullets": [
-          "Service de comptabilité gratuit d'une valeur de 3 500 THB",
-          "Sessions de conseil d'entreprise illimitées sans frais supplémentaires",
-          "Planification fiscale personnalisée conçue pour votre entreprise"
-        ],
-        "note": "Bénéficiez d'un support mensuel complet d'une équipe d'experts dédiée."
-      }
-    ],
-    "cta": "Voir toutes les promotions",
-    "complimentary": "Gratuit : conseil et évaluation initiale",
-    "badge": "Limited Offer"
-  },
   "resources": {
     "hero": {
       "title": "Finance templates and compliance timelines",
@@ -1224,6 +1195,79 @@
       "p1": "Chez VIRINTIRA, nous pensons que notre crédibilité, nos performances et notre succès ne se mesurent pas par des photos de travail, des photos de clients ou la présentation de listes de clients dans les médias publics.",
       "p2": "Nous avons une politique stricte contre la publication d'informations, de portefeuilles ou d'avis de clients, car nous considérons votre vie privée et la confidentialité de votre entreprise comme étant de la plus haute importance. Notre succès repose sur la confiance du bouche-à-oreille accordée par nos clients et sur des résultats de travail 100% conformes à la loi.",
       "heading": "Éthique et Confidentialité"
+    }
+  },
+  "promotions": {
+    "metadata": {
+      "title": "",
+      "description": "",
+      "keywords": []
+    },
+    "hub": {
+      "hero": {
+        "title": "",
+        "summary": ""
+      },
+      "filters": {
+        "all": "",
+        "registration": "",
+        "accounting": ""
+      }
+    },
+    "items": {
+      "company-registration-deal": {
+        "slug": "company-registration-deal",
+        "category": "",
+        "categoryId": "registration",
+        "title": "",
+        "imagePlaceholder": "4:3",
+        "shortInfo": [],
+        "price": "",
+        "originalPrice": "",
+        "benefits": [],
+        "conditions": ""
+      },
+      "partnership-registration-deal": {
+        "slug": "partnership-registration-deal",
+        "category": "",
+        "categoryId": "registration",
+        "title": "",
+        "imagePlaceholder": "4:3",
+        "shortInfo": [],
+        "price": "",
+        "originalPrice": "",
+        "benefits": [],
+        "conditions": ""
+      },
+      "monthly-accounting-bundle": {
+        "slug": "monthly-accounting-bundle",
+        "category": "",
+        "categoryId": "accounting",
+        "title": "",
+        "imagePlaceholder": "4:3",
+        "shortInfo": [],
+        "price": "",
+        "originalPrice": "",
+        "benefits": [],
+        "conditions": ""
+      },
+      "yearly-audit-deal": {
+        "slug": "yearly-audit-deal",
+        "category": "",
+        "categoryId": "accounting",
+        "title": "",
+        "imagePlaceholder": "4:3",
+        "shortInfo": [],
+        "price": "",
+        "originalPrice": "",
+        "benefits": [],
+        "conditions": ""
+      }
+    },
+    "ui": {
+      "ctaPrimary": "",
+      "chatViaLine": "",
+      "callNow": ""
     }
   }
 }

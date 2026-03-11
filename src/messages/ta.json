@@ -304,35 +304,6 @@
       "description": "இலவச ஆலோசனை பெறுங்கள்—செலவை மதிப்பிட்டு, உங்கள் வணிகத்திற்கு மிகச் சிறந்த சேவையைத் தேர்வு செய்ய உதவுகிறோம்."
     }
   },
-  "promotion": {
-    "hero": {
-      "title": "நம்பகமான, நவீன வணிக சேவைகள்—உங்களுடன் வளர தயாராக.",
-      "intro": "செலவைக் குறைத்து உங்கள் வளர்ச்சியை திறம்பட முன்னேற்ற உருவாக்கப்பட்ட எங்கள் சேவைகள் மற்றும் தீர்வுகளுக்கான சிறப்பு சலுகைகளைப் பெறுங்கள்."
-    },
-    "offers": [
-      {
-        "name": "புதிய வாடிக்கையாளர்களுக்கு மட்டும் 🔥",
-        "bullets": [
-          "5,200 THB மதிப்புள்ள இலவச அரசு நிறுவன பதிவு கட்டணம்",
-          "1,100 THB மதிப்புள்ள இலவச சான்றளிக்கப்பட்ட நகல் தொகுப்பு",
-          "7,900 THBக்கும் அதிகமான மதிப்புள்ள போனஸ் சலுகைகள்"
-        ],
-        "note": "ஒவ்வொரு பலனையும் உடனடியாக அனுபவிக்க இன்றே Virintiraவில் பதிவு செய்யுங்கள்."
-      },
-      {
-        "name": "கணக்கு வைப்பு வாடிக்கையாளர்களுக்கு மட்டும் 💡",
-        "bullets": [
-          "3,500 THB மதிப்புள்ள இலவச கணக்கு வைப்பு சேவை",
-          "கூடுதல் செலவில்லாமல் வரம்பற்ற வணிக ஆலோசனை அமர்வுகள்",
-          "உங்கள் வணிகத்திற்காக வடிவமைக்கப்பட்ட தனிப்பயனாக்கப்பட்ட வரித் திட்டமிடல்"
-        ],
-        "note": "அர்ப்பணிப்புள்ள நிபுணர் குழுவிடம் இருந்து முழுமையான மாதந்தோறும் ஆதரவைப் பெறுங்கள்."
-      }
-    ],
-    "cta": "சலுகைகளைப் பார்க்க",
-    "complimentary": "இலவசம்: ஆலோசனை மற்றும் ஆரம்ப மதிப்பீடு",
-    "badge": "Limited Offer"
-  },
   "resources": {
     "hero": {
       "title": "Finance templates and compliance timelines",
@@ -1224,6 +1195,79 @@
       "p1": "VIRINTIRA-வில், எங்கள் நம்பகத்தன்மை, செயல்திறன் மற்றும் வெற்றி ஆகியவை பணிபுரியும் புகைப்படங்கள், வாடிக்கையாளர் புகைப்படங்கள் அல்லது பொது ஊடகங்களில் வாடிக்கையாளர் பட்டியல்களைக் காண்பிப்பதன் மூலம் அளவிடப்படுவதில்லை என்று நாங்கள் நம்புகிறோம்.",
       "p2": "வாடிக்கையாளர் தகவல், போர்ட்ஃபோலியோக்கள் அல்லது விமர்சனங்களை வெளியிடுவதற்கு எதிராக எங்களிடம் கடுமையான கொள்கை உள்ளது, ஏனெனில் உங்கள் தனியுரிமை மற்றும் வணிக ரகசியத்தன்மையை நாங்கள் மிக முக்கியமானதாகக் கருதுகிறோம். எங்கள் வெற்றி வாடிக்கையாளர்கள் எங்களுக்கு அளித்த நன்மதிப்பு மற்றும் 100% சட்டப்பூர்வமாக இணங்கும் வேலை முடிவுகளின் மீது கட்டமைக்கப்பட்டுள்ளது.",
       "heading": "நெறிமுறைகள் மற்றும் தனியுரிமை"
+    }
+  },
+  "promotions": {
+    "metadata": {
+      "title": "",
+      "description": "",
+      "keywords": []
+    },
+    "hub": {
+      "hero": {
+        "title": "",
+        "summary": ""
+      },
+      "filters": {
+        "all": "",
+        "registration": "",
+        "accounting": ""
+      }
+    },
+    "items": {
+      "company-registration-deal": {
+        "slug": "company-registration-deal",
+        "category": "",
+        "categoryId": "registration",
+        "title": "",
+        "imagePlaceholder": "4:3",
+        "shortInfo": [],
+        "price": "",
+        "originalPrice": "",
+        "benefits": [],
+        "conditions": ""
+      },
+      "partnership-registration-deal": {
+        "slug": "partnership-registration-deal",
+        "category": "",
+        "categoryId": "registration",
+        "title": "",
+        "imagePlaceholder": "4:3",
+        "shortInfo": [],
+        "price": "",
+        "originalPrice": "",
+        "benefits": [],
+        "conditions": ""
+      },
+      "monthly-accounting-bundle": {
+        "slug": "monthly-accounting-bundle",
+        "category": "",
+        "categoryId": "accounting",
+        "title": "",
+        "imagePlaceholder": "4:3",
+        "shortInfo": [],
+        "price": "",
+        "originalPrice": "",
+        "benefits": [],
+        "conditions": ""
+      },
+      "yearly-audit-deal": {
+        "slug": "yearly-audit-deal",
+        "category": "",
+        "categoryId": "accounting",
+        "title": "",
+        "imagePlaceholder": "4:3",
+        "shortInfo": [],
+        "price": "",
+        "originalPrice": "",
+        "benefits": [],
+        "conditions": ""
+      }
+    },
+    "ui": {
+      "ctaPrimary": "",
+      "chatViaLine": "",
+      "callNow": ""
     }
   }
 }

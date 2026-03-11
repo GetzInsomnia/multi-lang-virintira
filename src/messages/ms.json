@@ -304,20 +304,6 @@
       "description": "Dapatkan konsultasi percuma untuk membantu anggar kos dan tentukan perkhidmatan yang paling sesuai untuk perniagaan anda."
     }
   },
-  "promotion": {
-    "hero": {
-      "title": "Perkhidmatan perniagaan yang dipercayai dan moden—bersedia berkembang bersama anda.",
-      "intro": "Dapatkan tawaran eksklusif untuk perkhidmatan dan solusi kami, direka untuk mengurangkan kos dan mempercepat pertumbuhan anda dengan lebih berkesan."
-    },
-    "offers": [
-      {
-        "note": "Ideal for scaling teams planning fundraising or expansion."
-      }
-    ],
-    "cta": "Lihat Semua Promosi",
-    "complimentary": "Percuma: konsultasi dan penilaian awal",
-    "badge": "Limited Offer"
-  },
   "resources": {
     "hero": {
       "title": "Finance templates and compliance timelines",
@@ -1209,6 +1195,79 @@
       "p1": "Di VIRINTIRA, kami percaya bahawa kredibiliti, prestasi, dan kejayaan kami tidak diukur melalui gambar bekerja, gambar pelanggan, atau mempamerkan senarai pelanggan di media awam.",
       "p2": "Kami mempunyai dasar yang ketat terhadap penerbitan maklumat, portfolio, atau ulasan pelanggan, kerana kami menganggap privasi dan kerahsiaan perniagaan anda adalah sangat penting. Kejayaan kami dibina atas kepercayaan dari mulut ke mulut yang diberikan oleh pelanggan kami dan 100% hasil kerja yang mematuhi undang-undang.",
       "heading": "Etika dan Privasi"
+    }
+  },
+  "promotions": {
+    "metadata": {
+      "title": "",
+      "description": "",
+      "keywords": []
+    },
+    "hub": {
+      "hero": {
+        "title": "",
+        "summary": ""
+      },
+      "filters": {
+        "all": "",
+        "registration": "",
+        "accounting": ""
+      }
+    },
+    "items": {
+      "company-registration-deal": {
+        "slug": "company-registration-deal",
+        "category": "",
+        "categoryId": "registration",
+        "title": "",
+        "imagePlaceholder": "4:3",
+        "shortInfo": [],
+        "price": "",
+        "originalPrice": "",
+        "benefits": [],
+        "conditions": ""
+      },
+      "partnership-registration-deal": {
+        "slug": "partnership-registration-deal",
+        "category": "",
+        "categoryId": "registration",
+        "title": "",
+        "imagePlaceholder": "4:3",
+        "shortInfo": [],
+        "price": "",
+        "originalPrice": "",
+        "benefits": [],
+        "conditions": ""
+      },
+      "monthly-accounting-bundle": {
+        "slug": "monthly-accounting-bundle",
+        "category": "",
+        "categoryId": "accounting",
+        "title": "",
+        "imagePlaceholder": "4:3",
+        "shortInfo": [],
+        "price": "",
+        "originalPrice": "",
+        "benefits": [],
+        "conditions": ""
+      },
+      "yearly-audit-deal": {
+        "slug": "yearly-audit-deal",
+        "category": "",
+        "categoryId": "accounting",
+        "title": "",
+        "imagePlaceholder": "4:3",
+        "shortInfo": [],
+        "price": "",
+        "originalPrice": "",
+        "benefits": [],
+        "conditions": ""
+      }
+    },
+    "ui": {
+      "ctaPrimary": "",
+      "chatViaLine": "",
+      "callNow": ""
     }
   }
 }

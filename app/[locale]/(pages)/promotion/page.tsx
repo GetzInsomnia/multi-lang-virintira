@@ -7,6 +7,7 @@ import { absoluteUrl } from '@/config/site';
 import { buildLocaleAlternates } from '@/lib/metadata';
 import { loadMessages, resolveLocale } from '@/i18n/loadMessages';
 import { buildBreadcrumbJsonLd, buildWebPageJsonLd } from '@/seo/jsonld';
+import { PromotionHubClient } from '@/components/ui/PromotionHubClient';
 
 interface PageParams {
   params: { locale: string };
@@ -19,16 +20,16 @@ export async function generateMetadata({ params }: PageParams): Promise<Metadata
   const path = `/${locale}/promotion`;
 
   return {
-    title: meta.title,
-    description: meta.description,
-    keywords: meta.keywords,
+    title: meta?.title || "Virintira | Promotions",
+    description: meta?.description || "",
+    keywords: meta?.keywords || [],
     alternates: {
       canonical: absoluteUrl(path),
       languages: buildLocaleAlternates("/promotion"),
     },
     openGraph: {
-      title: meta.title,
-      description: meta.description,
+      title: meta?.title || "Virintira | Promotions",
+      description: meta?.description || "",
       url: absoluteUrl(path),
       siteName: COMPANY.brand,
       type: "article",
@@ -38,110 +39,62 @@ export async function generateMetadata({ params }: PageParams): Promise<Metadata
           url: absoluteUrl(`/${locale}/promotion/opengraph-image`),
           width: 1200,
           height: 630,
-          alt: meta.title,
+          alt: meta?.title || "Promotions",
         },
       ],
     },
     twitter: {
       card: "summary_large_image",
-      title: meta.title,
-      description: meta.description,
+      title: meta?.title || "Virintira | Promotions",
+      description: meta?.description || "",
       images: [absoluteUrl(`/${locale}/promotion/opengraph-image`)],
     },
   };
 }
 
-const ensureString = (value: unknown): string =>
-  typeof value === 'string' ? value : value != null ? String(value) : '';
-
 export default async function PromotionPage({ params }: PageParams) {
   const { locale } = params;
-  const tPromotion = await getTranslations({ locale, namespace: 'promotion' });
+  const tPromotions = await getTranslations({ locale, namespace: 'promotions' });
   const tBreadcrumbs = await getTranslations({ locale, namespace: 'breadcrumbs' });
-  const tLayout = await getTranslations({ locale, namespace: 'layout' });
 
-  const heroRaw = (tPromotion.raw('hero') ?? {}) as Record<string, unknown>;
+  const hubRaw = (tPromotions.raw('hub') ?? {}) as Record<string, any>;
+  const itemsRaw = tPromotions.raw('items') as Record<string, any> | undefined;
+  const uiRaw = (tPromotions.raw('ui') ?? {}) as Record<string, string>;
+
   const hero = {
-    title: ensureString(heroRaw.title),
-    intro: ensureString(heroRaw.intro),
+    title: String(hubRaw?.hero?.title || ''),
+    summary: String(hubRaw?.hero?.summary || ''),
   };
 
-  const offersSource = tPromotion.raw('offers');
-  const offersRaw = Array.isArray(offersSource)
-    ? (offersSource as Array<Record<string, unknown>>)
-    : [];
-  const offers = offersRaw.map((offer) => ({
-    name: ensureString(offer?.name),
-    bullets: Array.isArray(offer?.bullets)
-      ? (offer.bullets as unknown[])
-          .map((bullet) => ensureString(bullet))
-          .filter((bullet): bullet is string => bullet.length > 0)
-      : [],
-    note: ensureString(offer?.note),
-  }));
+  const filters = (hubRaw?.filters || {}) as Record<string, string>;
 
-  const cta = ensureString(tPromotion.raw('cta'));
-  const chatLabel = tLayout('cta.chat');
+  // Convert dictionary into array
+  const items = itemsRaw ? Object.values(itemsRaw) : [];
 
   const breadcrumbJsonLd = buildBreadcrumbJsonLd([
     { name: tBreadcrumbs("home"), path: `/${locale}` },
     { name: tBreadcrumbs("promotion"), path: `/${locale}/promotion` },
   ]);
+
   const webPageJsonLd = buildWebPageJsonLd({
     locale,
     title: hero.title,
-    description: hero.intro,
+    description: hero.summary,
     path: `/${locale}/promotion`,
   });
 
   return (
-    <div className="space-y-16 pb-20">
+    <>
       <JsonLd id="jsonld-promotion" data={webPageJsonLd} />
       <JsonLd id="jsonld-promotion-breadcrumb" data={breadcrumbJsonLd} />
-      <section className="bg-[#FFF5F5]">
-        <div className="mx-auto max-w-5xl px-4 py-16 text-center">
-          <h1 className="text-[clamp(2.25rem,1.4rem+2.1vw,3.25rem)] font-bold text-[#A70909]">{hero.title}</h1>
-          <p className="mt-6 text-[clamp(1.1rem,1rem+0.5vw,1.45rem)] text-gray-700">{hero.intro}</p>
-        </div>
-      </section>
-      <section className="mx-auto max-w-5xl px-4 space-y-10">
-        {offers.map((offer) => (
-          <article key={offer.name} className="rounded-3xl border border-[#A70909]/20 bg-white p-8 shadow-md">
-            <div className="flex flex-col gap-4 lg:flex-row lg:items-start lg:justify-between">
-              <div className="space-y-4">
-                <h2 className="text-[clamp(1.5rem,1.1rem+1.2vw,2.1rem)] font-semibold text-[#A70909]">{offer.name}</h2>
-                <ul className="space-y-3 text-[clamp(0.95rem,0.9rem+0.3vw,1.1rem)] text-gray-700">
-                  {offer.bullets.map((bullet) => (
-                    <li key={bullet} className="flex items-start gap-3">
-                      <span className="mt-1 h-2 w-2 flex-shrink-0 rounded-full bg-[#A70909]" aria-hidden="true" />
-                      <span>{bullet}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <div className="rounded-2xl bg-[#FFF0F0] p-6 text-left text-sm text-gray-600">
-                <p className="text-[clamp(0.95rem,0.9rem+0.3vw,1.05rem)]">{offer.note}</p>
-              </div>
-            </div>
-            <div className="mt-6 flex flex-col gap-3 sm:flex-row">
-              <a
-                href={`tel:${COMPANY.phone}`}
-                className="inline-flex min-w-[200px] items-center justify-center rounded-full border-2 border-[#A70909] px-6 py-3 text-sm font-semibold text-[#A70909] transition hover:bg-[#A70909] hover:text-white"
-              >
-                {cta}
-              </a>
-              <a
-                href={COMPANY.socials.line}
-                className="inline-flex min-w-[200px] items-center justify-center rounded-full bg-[#06C755] px-6 py-3 text-sm font-semibold text-white transition hover:brightness-110"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                {chatLabel}
-              </a>
-            </div>
-          </article>
-        ))}
-      </section>
-    </div>
+
+      <PromotionHubClient
+        locale={locale}
+        hero={hero}
+        filters={filters}
+        items={items as any}
+        ui={uiRaw}
+      />
+    </>
   );
 }

@@ -304,35 +304,6 @@
       "description": "निःशुल्क परामर्श लें—खर्च का अनुमान लगाएँ और अपने व्यवसाय के लिए सबसे उपयुक्त सेवा चुनें।"
     }
   },
-  "promotion": {
-    "hero": {
-      "title": "भरोसेमंद, आधुनिक बिज़नेस सेवाएँ—जो आपके साथ आगे बढ़ें।",
-      "intro": "हमारी सेवाओं और समाधानों पर विशेष ऑफ़र पाएं—जो लागत घटाने और आपकी वृद्धि को प्रभावी ढंग से आगे बढ़ाने के लिए बनाए गए हैं।"
-    },
-    "offers": [
-      {
-        "name": "नए ग्राहकों के लिए विशेष 🔥",
-        "bullets": [
-          "5,200 THB मूल्य का नि:शुल्क सरकारी कंपनी पंजीकरण शुल्क",
-          "1,100 THB मूल्य का नि:शुल्क प्रमाणित प्रतिलिपि बंडल",
-          "7,900 THB से अधिक मूल्य के बोनस लाभ"
-        ],
-        "note": "हर लाभ का तुरंत आनंद लेने के लिए आज ही Virintira के साथ साइन अप करें।"
-      },
-      {
-        "name": "बहीखाता ग्राहकों के लिए विशेष 💡",
-        "bullets": [
-          "3,500 THB मूल्य की नि:शुल्क बहीखाता सेवा",
-          "बिना किसी अतिरिक्त लागत के असीमित व्यावसायिक परामर्श सत्र",
-          "आपके व्यवसाय के लिए डिज़ाइन की गई व्यक्तिगत कर योजना"
-        ],
-        "note": "एक समर्पित विशेषज्ञ टीम से एंड-टू-एंड मासिक सहायता प्राप्त करें।"
-      }
-    ],
-    "cta": "सभी प्रमोशन्स देखें",
-    "complimentary": "निःशुल्क: परामर्श और प्रारंभिक आकलन",
-    "badge": "Limited Offer"
-  },
   "resources": {
     "hero": {
       "title": "Finance templates and compliance timelines",
@@ -1224,6 +1195,79 @@
       "p1": "VIRINTIRA में, हमारा मानना है कि हमारी विश्वसनीयता, प्रदर्शन और सफलता को कार्यशील तस्वीरों, ग्राहक फ़ोटो, या सार्वजनिक मीडिया पर ग्राहकों की सूची दिखाने से नहीं मापा जाता है।",
       "p2": "ग्राहकों की जानकारी, पोर्टफोलियो या समीक्षाओं को प्रकाशित करने के खिलाफ हमारी सख्त नीति है, क्योंकि हम आपकी गोपनीयता और व्यावसायिक गोपनीयता को अत्यंत महत्वपूर्ण मानते हैं। हमारी सफलता हमारे ग्राहकों द्वारा दिए गए विश्वास और 100% कानूनी रूप से अनुपालन कार्य परिणामों पर बनी है।",
       "heading": "नैतिकता और गोपनीयता"
+    }
+  },
+  "promotions": {
+    "metadata": {
+      "title": "",
+      "description": "",
+      "keywords": []
+    },
+    "hub": {
+      "hero": {
+        "title": "",
+        "summary": ""
+      },
+      "filters": {
+        "all": "",
+        "registration": "",
+        "accounting": ""
+      }
+    },
+    "items": {
+      "company-registration-deal": {
+        "slug": "company-registration-deal",
+        "category": "",
+        "categoryId": "registration",
+        "title": "",
+        "imagePlaceholder": "4:3",
+        "shortInfo": [],
+        "price": "",
+        "originalPrice": "",
+        "benefits": [],
+        "conditions": ""
+      },
+      "partnership-registration-deal": {
+        "slug": "partnership-registration-deal",
+        "category": "",
+        "categoryId": "registration",
+        "title": "",
+        "imagePlaceholder": "4:3",
+        "shortInfo": [],
+        "price": "",
+        "originalPrice": "",
+        "benefits": [],
+        "conditions": ""
+      },
+      "monthly-accounting-bundle": {
+        "slug": "monthly-accounting-bundle",
+        "category": "",
+        "categoryId": "accounting",
+        "title": "",
+        "imagePlaceholder": "4:3",
+        "shortInfo": [],
+        "price": "",
+        "originalPrice": "",
+        "benefits": [],
+        "conditions": ""
+      },
+      "yearly-audit-deal": {
+        "slug": "yearly-audit-deal",
+        "category": "",
+        "categoryId": "accounting",
+        "title": "",
+        "imagePlaceholder": "4:3",
+        "shortInfo": [],
+        "price": "",
+        "originalPrice": "",
+        "benefits": [],
+        "conditions": ""
+      }
+    },
+    "ui": {
+      "ctaPrimary": "",
+      "chatViaLine": "",
+      "callNow": ""
     }
   }
 }

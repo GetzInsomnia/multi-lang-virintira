@@ -304,35 +304,6 @@
       "description": "预约免费咨询，帮助您评估费用，并找到最适合您企业的服务。"
     }
   },
-  "promotion": {
-    "hero": {
-      "title": "<nw>可靠、现代的</nw><nw>商务服务。</nw><br></br><nw>与您一同</nw><nw>稳健成长。</nw>",
-      "intro": "领取我们的专属优惠：服务与解决方案专为降低成本、提升效率并推动业务增长而打造。"
-    },
-    "offers": [
-      {
-        "name": "新客户专享 🔥",
-        "bullets": [
-          "免除价值 5,200 泰铢政府公司注册费",
-          "免费提供价值 1,100 泰铢的认证副本包",
-          "价值超过 7,900 泰铢的额外福利"
-        ],
-        "note": "立即注册 Virintira，立享所有福利。"
-      },
-      {
-        "name": "记账客户专享 💡",
-        "bullets": [
-          "免费提供价值 3,500 泰铢的记账服务",
-          "无限次商业咨询会议，无额外费用",
-          "为您企业量身定制的税务规划"
-        ],
-        "note": "获得专属专家团队的全程月度支持。"
-      }
-    ],
-    "cta": "查看全部优惠活动",
-    "complimentary": "免费：咨询与初步评估",
-    "badge": "Limited Offer"
-  },
   "resources": {
     "hero": {
       "title": "Finance templates and compliance timelines",
@@ -1205,6 +1176,79 @@
     "cta": {
       "heading": "与 Virintira 一起，<br></br><nw>自信迈向下一步。</nw>",
       "description": "让我们为您处理资料与<nw>后勤事务，</nw><br></br>您可以全力专注于<nw>企业目标。</nw>"
+    }
+  },
+  "promotions": {
+    "metadata": {
+      "title": "",
+      "description": "",
+      "keywords": []
+    },
+    "hub": {
+      "hero": {
+        "title": "",
+        "summary": ""
+      },
+      "filters": {
+        "all": "",
+        "registration": "",
+        "accounting": ""
+      }
+    },
+    "items": {
+      "company-registration-deal": {
+        "slug": "company-registration-deal",
+        "category": "",
+        "categoryId": "registration",
+        "title": "",
+        "imagePlaceholder": "4:3",
+        "shortInfo": [],
+        "price": "",
+        "originalPrice": "",
+        "benefits": [],
+        "conditions": ""
+      },
+      "partnership-registration-deal": {
+        "slug": "partnership-registration-deal",
+        "category": "",
+        "categoryId": "registration",
+        "title": "",
+        "imagePlaceholder": "4:3",
+        "shortInfo": [],
+        "price": "",
+        "originalPrice": "",
+        "benefits": [],
+        "conditions": ""
+      },
+      "monthly-accounting-bundle": {
+        "slug": "monthly-accounting-bundle",
+        "category": "",
+        "categoryId": "accounting",
+        "title": "",
+        "imagePlaceholder": "4:3",
+        "shortInfo": [],
+        "price": "",
+        "originalPrice": "",
+        "benefits": [],
+        "conditions": ""
+      },
+      "yearly-audit-deal": {
+        "slug": "yearly-audit-deal",
+        "category": "",
+        "categoryId": "accounting",
+        "title": "",
+        "imagePlaceholder": "4:3",
+        "shortInfo": [],
+        "price": "",
+        "originalPrice": "",
+        "benefits": [],
+        "conditions": ""
+      }
+    },
+    "ui": {
+      "ctaPrimary": "",
+      "chatViaLine": "",
+      "callNow": ""
     }
   }
 }

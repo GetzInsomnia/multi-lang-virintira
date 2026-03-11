@@ -63,6 +63,7 @@ export default async function ServiceDetailPage({ params }: PageProps) {
     const tBreadcrumbs = await getTranslations({ locale, namespace: 'breadcrumbs' });
     const tLayout = await getTranslations({ locale, namespace: 'layout' });
     const tServices = await getTranslations({ locale, namespace: 'services' });
+    const tPromotion = await getTranslations({ locale, namespace: 'promotion' });
 
     // Safe Data Access
     const serviceData = (messages.services as any)?.items?.[slug];
@@ -82,6 +83,16 @@ export default async function ServiceDetailPage({ params }: PageProps) {
     const process = serviceData?.process;   // { title, steps: [] }
     const faq = serviceData?.faq;           // { title, items: [] }
     const promotion = serviceData?.promotion; // { title, subtitle, cta }
+
+    // Safely parse promotion offers from the 'promotions' namespace
+    const tPromotions = await getTranslations({ locale, namespace: 'promotions' });
+    const itemsRaw = tPromotions.raw('items') as Record<string, any> | undefined;
+    const ui = (tPromotions.raw('ui') ?? {}) as Record<string, string>;
+
+    // Find matching promotion based on the slug from service JSON payload
+    const promotionItem = (promotion && promotion.slug && itemsRaw && itemsRaw[promotion.slug])
+        ? itemsRaw[promotion.slug]
+        : undefined;
 
     // 4. JSON-LD & Breadcrumbs
     const breadcrumbs = [
@@ -154,9 +165,9 @@ export default async function ServiceDetailPage({ params }: PageProps) {
                             <StaggerContainer>
                                 {hero.subtitle && (
                                     <StaggerItem>
-                                        <div className="mb-6 inline-flex items-center gap-2 overflow-hidden rounded-full bg-gradient-to-r from-[#A70909] via-[#ff4e50] to-[#A70909] bg-[length:200%_auto] px-5 py-2 text-xs font-bold uppercase tracking-wider text-white shadow-lg shadow-red-900/20 animate-shimmer-gradient">
-                                            <FaTrophy className="h-4 w-4 text-yellow-300 drop-shadow-sm" />
-                                            <span>{hero.subtitle}</span>
+                                        <div className="mb-6 inline-flex items-center sm:items-center justify-center gap-2 overflow-hidden rounded-full bg-gradient-to-r from-[#A70909] via-[#ff4e50] to-[#A70909] bg-[length:200%_auto] px-5 py-2 text-[11px] sm:text-xs font-bold uppercase tracking-wider text-white shadow-lg shadow-red-900/20 animate-shimmer-gradient max-w-[90vw]">
+                                            <FaTrophy className="h-4 w-4 shrink-0 text-yellow-300 drop-shadow-sm" />
+                                            <span className="leading-tight sm:leading-normal text-left sm:text-center shrink-1 whitespace-pre-wrap">{hero.subtitle}</span>
                                         </div>
                                     </StaggerItem>
                                 )}
@@ -309,7 +320,7 @@ export default async function ServiceDetailPage({ params }: PageProps) {
                                 <p className="mt-2 text-lg text-gray-600">{requirements.subtitle}</p>
                             )}
                         </div>
-                        <div className="grid gap-8 lg:grid-cols-2">
+                        <div className="grid gap-8 md:grid-cols-2">
                             {/* Documents Required */}
                             {requirements.documents && requirements.documents.items.some((item: string) => item.trim() !== "") && (
                                 <div className="rounded-2xl border border-gray-100 bg-white p-8 shadow-sm">
@@ -323,7 +334,7 @@ export default async function ServiceDetailPage({ params }: PageProps) {
                                         {requirements.documents.items.filter((item: string) => item.trim() !== "").map((item: string, idx: number) => (
                                             <li key={idx} className="flex items-start gap-3 text-gray-700">
                                                 <div className="mt-3 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-blue-600" />
-                                                <span className="leading-relaxed flex-1">{item}</span>
+                                                <span className="leading-relaxed flex-1 whitespace-pre-line">{item}</span>
                                             </li>
                                         ))}
                                     </ul>
@@ -343,7 +354,7 @@ export default async function ServiceDetailPage({ params }: PageProps) {
                                         {requirements.information.items.filter((item: string) => item.trim() !== "").map((item: string, idx: number) => (
                                             <li key={idx} className="flex items-start gap-3 text-gray-700">
                                                 <div className="mt-3 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-purple-600" />
-                                                <span className="leading-relaxed flex-1">{item}</span>
+                                                <span className="leading-relaxed flex-1 whitespace-pre-line">{item}</span>
                                             </li>
                                         ))}
                                     </ul>
@@ -370,18 +381,27 @@ export default async function ServiceDetailPage({ params }: PageProps) {
                                 ];
                                 const shadowClass = RAINBOW_SHADOWS[idx % RAINBOW_SHADOWS.length];
                                 return (
-                                    <StaggerItem key={idx} className="relative pl-16 sm:pl-24 group h-full">
-                                        <div className="absolute left-0 top-1/2 -translate-y-1/2 flex h-14 w-14 sm:h-16 sm:w-16 items-center justify-center rounded-2xl bg-[#A70909] text-white shadow-[0_4px_20px_rgba(167,9,9,0.4)] ring-4 ring-white transition-transform duration-500 group-hover:scale-110">
+                                    <StaggerItem key={idx} className="relative pl-0 sm:pl-24 group h-full">
+                                        <div className="hidden sm:flex absolute left-0 top-1/2 -translate-y-1/2 h-16 w-16 items-center justify-center rounded-2xl bg-[#A70909] text-white shadow-[0_4px_20px_rgba(167,9,9,0.4)] ring-4 ring-white transition-transform duration-500 group-hover:scale-110">
                                             {step.icon ? (
-                                                <DynamicIcon name={step.icon} className="h-6 w-6 sm:h-8 sm:w-8" strokeWidth={2.5} />
+                                                <DynamicIcon name={step.icon} className="h-8 w-8" strokeWidth={2.5} />
                                             ) : (
-                                                <span className="text-xl sm:text-2xl font-bold">{idx + 1}</span>
+                                                <span className="text-2xl font-bold">{idx + 1}</span>
                                             )}
                                         </div>
                                         <div className={`space-y-3 h-full flex flex-col justify-center rounded-3xl border border-gray-100 bg-white p-6 sm:p-8 shadow-sm transition-all duration-300 ${shadowClass}`}>
-                                            <div className="flex items-center gap-3">
-                                                <span className="text-sm font-bold text-red-500 bg-red-50 px-3 py-1 rounded-full uppercase tracking-wider">Step {idx + 1}</span>
-                                                <h3 className="text-xl sm:text-2xl font-bold text-gray-900">{step.title}</h3>
+                                            <div className="flex flex-col sm:flex-row sm:items-center items-start gap-4 sm:gap-3">
+                                                <div className="flex items-center gap-3">
+                                                    <div className="flex sm:hidden h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[#A70909] text-white shadow-[0_2px_10px_rgba(167,9,9,0.3)]">
+                                                        {step.icon ? (
+                                                            <DynamicIcon name={step.icon} className="h-5 w-5" strokeWidth={2.5} />
+                                                        ) : (
+                                                            <span className="text-lg font-bold">{idx + 1}</span>
+                                                        )}
+                                                    </div>
+                                                    <span className="text-sm font-bold text-red-500 bg-red-50 px-3 py-1 rounded-full uppercase tracking-wider shrink-0">Step {idx + 1}</span>
+                                                </div>
+                                                <h3 className="text-xl sm:text-2xl font-bold text-gray-900 leading-snug">{step.title}</h3>
                                             </div>
                                             <p className="leading-relaxed text-gray-600 text-base sm:text-lg">{step.description}</p>
                                         </div>
@@ -393,8 +413,12 @@ export default async function ServiceDetailPage({ params }: PageProps) {
                 )}
 
                 {/* --- 5. Promotion Section (Special Deal) --- */}
-                {process && promotion && promotion.title && (
-                    <PromotionSectionItem promotion={promotion} />
+                {process && promotion && promotion.title && promotionItem && (
+                    <PromotionSectionItem
+                        promotion={promotion}
+                        item={promotionItem}
+                        ui={ui}
+                    />
                 )}
 
                 {/* --- 6. FAQ Section --- */}

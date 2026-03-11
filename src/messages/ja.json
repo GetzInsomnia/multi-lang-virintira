@@ -304,35 +304,6 @@
       "description": "無料相談で費用の目安を確認し、貴社に最適なサービスを一緒に見つけましょう。"
     }
   },
-  "promotion": {
-    "hero": {
-      "title": "<nw>信頼できる、</nw><nw>モダンな</nw><nw>ビジネスサービス。</nw><br></br><nw>あなたとともに</nw><nw>成長します。</nw>",
-      "intro": "コスト削減と成長促進を目的に設計された当社のサービス／ソリューションの特典をご利用ください。"
-    },
-    "offers": [
-      {
-        "name": "新規のお客様限定 🔥",
-        "bullets": [
-          "会社設立の政府登録費用（5,200 THB相当）が無料",
-          "認証謄本バンドル（1,100 THB相当）が無料",
-          "総額7,900 THB以上の特典ボーナス"
-        ],
-        "note": "今すぐVirintiraに登録して、すべての特典を即座にご利用ください。"
-      },
-      {
-        "name": "記帳代行のお客様限定 💡",
-        "bullets": [
-          "記帳代行サービス（3,500 THB相当）が無料",
-          "追加費用なしの無制限ビジネスコンサルティング",
-          "貴社のビジネスに合わせたパーソナライズされた税務計画"
-        ],
-        "note": "専任のエキスパートチームによる月次ポートを受けられます。"
-      }
-    ],
-    "cta": "すべてのプロモーションを見る",
-    "complimentary": "無料：初回相談・簡易診断付き",
-    "badge": "Limited Offer"
-  },
   "resources": {
     "hero": {
       "title": "Finance templates and compliance timelines",
@@ -1205,6 +1176,79 @@
     "cta": {
       "heading": "Virintiraとともに、<br></br>次の一歩を<nw>自信をもって。</nw>",
       "description": "<nw>書類対応や</nw><nw>バックオフィス業務は</nw><br></br><nw>私たちが担い、</nw>貴社は<nw>事業目標に</nw><nw>集中できます。</nw>"
+    }
+  },
+  "promotions": {
+    "metadata": {
+      "title": "",
+      "description": "",
+      "keywords": []
+    },
+    "hub": {
+      "hero": {
+        "title": "",
+        "summary": ""
+      },
+      "filters": {
+        "all": "",
+        "registration": "",
+        "accounting": ""
+      }
+    },
+    "items": {
+      "company-registration-deal": {
+        "slug": "company-registration-deal",
+        "category": "",
+        "categoryId": "registration",
+        "title": "",
+        "imagePlaceholder": "4:3",
+        "shortInfo": [],
+        "price": "",
+        "originalPrice": "",
+        "benefits": [],
+        "conditions": ""
+      },
+      "partnership-registration-deal": {
+        "slug": "partnership-registration-deal",
+        "category": "",
+        "categoryId": "registration",
+        "title": "",
+        "imagePlaceholder": "4:3",
+        "shortInfo": [],
+        "price": "",
+        "originalPrice": "",
+        "benefits": [],
+        "conditions": ""
+      },
+      "monthly-accounting-bundle": {
+        "slug": "monthly-accounting-bundle",
+        "category": "",
+        "categoryId": "accounting",
+        "title": "",
+        "imagePlaceholder": "4:3",
+        "shortInfo": [],
+        "price": "",
+        "originalPrice": "",
+        "benefits": [],
+        "conditions": ""
+      },
+      "yearly-audit-deal": {
+        "slug": "yearly-audit-deal",
+        "category": "",
+        "categoryId": "accounting",
+        "title": "",
+        "imagePlaceholder": "4:3",
+        "shortInfo": [],
+        "price": "",
+        "originalPrice": "",
+        "benefits": [],
+        "conditions": ""
+      }
+    },
+    "ui": {
+      "ctaPrimary": "",
+      "chatViaLine": "",
+      "callNow": ""
     }
   }
 }

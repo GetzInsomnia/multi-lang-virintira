@@ -304,35 +304,6 @@
       "description": "預約免費諮詢，協助您評估費用，並找出最適合您企業的服務。"
     }
   },
-  "promotion": {
-    "hero": {
-      "title": "<nw>可靠、現代的</nw><nw>商務服務。</nw><br></br><nw>與您一同</nw><nw>穩健成長。</nw>",
-      "intro": "享有專屬優惠：我們的服務與解決方案旨在協助降低成本，並高效推動您的業務成長。"
-    },
-    "offers": [
-      {
-        "name": "新客戶專享 🔥",
-        "bullets": [
-          "免除價值 5,200 泰銖的政府公司註冊費",
-          "免費提供價值 1,100 泰銖的認證副本包",
-          "價值超過 7,900 泰銖的額外福利"
-        ],
-        "note": "立即註冊 Virintira，立享所有福利。"
-      },
-      {
-        "name": "記帳客戶專享 💡",
-        "bullets": [
-          "免費提供價值 3,500 泰銖的記帳服務",
-          "無限次商業咨詢會議，無額外費用",
-          "為您企業量身定制的稅務規劃"
-        ],
-        "note": "獲得專屬專家團隊的全程月度支持。"
-      }
-    ],
-    "cta": "查看所有優惠活動",
-    "complimentary": "免費：諮詢與初步評估",
-    "badge": "Limited Offer"
-  },
   "resources": {
     "hero": {
       "title": "Finance templates and compliance timelines",
@@ -1224,6 +1195,79 @@
       "p1": "在 VIRINTIRA，我們認為我們的信譽、業績和成功不是通過工作照片、客戶照片或在公共媒體上展示客戶名單來衡量的。",
       "p2": "我們嚴格禁止發布客戶信息、作品集或評論，因為我們認為您的隱私和商業機密是必須得到最高保護的。我們的成功建立在客戶口耳相傳的信任和100%合法合規的工作成果之上。",
       "heading": "道德與隱私"
+    }
+  },
+  "promotions": {
+    "metadata": {
+      "title": "",
+      "description": "",
+      "keywords": []
+    },
+    "hub": {
+      "hero": {
+        "title": "",
+        "summary": ""
+      },
+      "filters": {
+        "all": "",
+        "registration": "",
+        "accounting": ""
+      }
+    },
+    "items": {
+      "company-registration-deal": {
+        "slug": "company-registration-deal",
+        "category": "",
+        "categoryId": "registration",
+        "title": "",
+        "imagePlaceholder": "4:3",
+        "shortInfo": [],
+        "price": "",
+        "originalPrice": "",
+        "benefits": [],
+        "conditions": ""
+      },
+      "partnership-registration-deal": {
+        "slug": "partnership-registration-deal",
+        "category": "",
+        "categoryId": "registration",
+        "title": "",
+        "imagePlaceholder": "4:3",
+        "shortInfo": [],
+        "price": "",
+        "originalPrice": "",
+        "benefits": [],
+        "conditions": ""
+      },
+      "monthly-accounting-bundle": {
+        "slug": "monthly-accounting-bundle",
+        "category": "",
+        "categoryId": "accounting",
+        "title": "",
+        "imagePlaceholder": "4:3",
+        "shortInfo": [],
+        "price": "",
+        "originalPrice": "",
+        "benefits": [],
+        "conditions": ""
+      },
+      "yearly-audit-deal": {
+        "slug": "yearly-audit-deal",
+        "category": "",
+        "categoryId": "accounting",
+        "title": "",
+        "imagePlaceholder": "4:3",
+        "shortInfo": [],
+        "price": "",
+        "originalPrice": "",
+        "benefits": [],
+        "conditions": ""
+      }
+    },
+    "ui": {
+      "ctaPrimary": "",
+      "chatViaLine": "",
+      "callNow": ""
     }
   }
 }

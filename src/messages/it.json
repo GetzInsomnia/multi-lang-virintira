@@ -304,35 +304,6 @@
       "description": "Richiedi una consulenza gratuita per stimare i costi e trovare il servizio più adatto alla tua attività."
     }
   },
-  "promotion": {
-    "hero": {
-      "title": "Servizi aziendali affidabili e moderni, pronti a crescere con te.",
-      "intro": "Accedi a vantaggi esclusivi sui nostri servizi e soluzioni, pensati per ridurre i costi e sostenere la tua crescita in modo efficiente."
-    },
-    "offers": [
-      {
-        "name": "Esclusivo per nuovi clienti 🔥",
-        "bullets": [
-          "Quote di registrazione governativa gratuite del valore di 5.200 THB",
-          "Pacchetto copie certificate gratuito del valore di 1.100 THB",
-          "Vantaggi bonus del valore di oltre 7.900 THB"
-        ],
-        "note": "Iscriviti oggi a Virintira per godere immediatamente di ogni vantaggio."
-      },
-      {
-        "name": "Esclusivo per clienti contabilità 💡",
-        "bullets": [
-          "Servizio di contabilità gratuito del valore di 3.500 THB",
-          "Sessioni di consulenza aziendale illimitate senza costi aggiuntivi",
-          "Pianificazione fiscale personalizzata progettata per la tua azienda"
-        ],
-        "note": "Ricevi supporto mensile end-to-end da un team di esperti dedicato."
-      }
-    ],
-    "cta": "Vedi tutte le promozioni",
-    "complimentary": "Gratis: consulenza e valutazione iniziale",
-    "badge": "Limited Offer"
-  },
   "resources": {
     "hero": {
       "title": "Finance templates and compliance timelines",
@@ -1205,6 +1176,79 @@
     "cta": {
       "heading": "Fai il prossimo passo con fiducia insieme a Virintira.",
       "description": "Lascia a noi pratiche e back office, così potrai concentrarti completamente sui tuoi obiettivi di business."
+    }
+  },
+  "promotions": {
+    "metadata": {
+      "title": "",
+      "description": "",
+      "keywords": []
+    },
+    "hub": {
+      "hero": {
+        "title": "",
+        "summary": ""
+      },
+      "filters": {
+        "all": "",
+        "registration": "",
+        "accounting": ""
+      }
+    },
+    "items": {
+      "company-registration-deal": {
+        "slug": "company-registration-deal",
+        "category": "",
+        "categoryId": "registration",
+        "title": "",
+        "imagePlaceholder": "4:3",
+        "shortInfo": [],
+        "price": "",
+        "originalPrice": "",
+        "benefits": [],
+        "conditions": ""
+      },
+      "partnership-registration-deal": {
+        "slug": "partnership-registration-deal",
+        "category": "",
+        "categoryId": "registration",
+        "title": "",
+        "imagePlaceholder": "4:3",
+        "shortInfo": [],
+        "price": "",
+        "originalPrice": "",
+        "benefits": [],
+        "conditions": ""
+      },
+      "monthly-accounting-bundle": {
+        "slug": "monthly-accounting-bundle",
+        "category": "",
+        "categoryId": "accounting",
+        "title": "",
+        "imagePlaceholder": "4:3",
+        "shortInfo": [],
+        "price": "",
+        "originalPrice": "",
+        "benefits": [],
+        "conditions": ""
+      },
+      "yearly-audit-deal": {
+        "slug": "yearly-audit-deal",
+        "category": "",
+        "categoryId": "accounting",
+        "title": "",
+        "imagePlaceholder": "4:3",
+        "shortInfo": [],
+        "price": "",
+        "originalPrice": "",
+        "benefits": [],
+        "conditions": ""
+      }
+    },
+    "ui": {
+      "ctaPrimary": "",
+      "chatViaLine": "",
+      "callNow": ""
     }
   }
 }
