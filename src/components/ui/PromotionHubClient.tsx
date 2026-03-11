@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FaCheckCircle, FaTags } from 'react-icons/fa';
 import Link from 'next/link';
+import { Breadcrumbs } from '@/components/ui/Breadcrumbs';
 
 interface PromotionItem {
     slug: string;
@@ -14,6 +15,7 @@ interface PromotionItem {
     shortInfo: string[];
     price: string;
     originalPrice: string;
+    pricingTiers?: Array<{name: string, price: string}>;
     benefits: string[];
     conditions: string;
 }
@@ -39,38 +41,32 @@ export function PromotionHubClient({ locale, hero, filters, items, ui }: Promoti
         return item.categoryId === activeTab;
     });
 
-    const filterKeys = ['all', 'registration', 'accounting'];
+    const filterKeys = ['all', 'registration', 'amendment', 'accounting', 'license', 'marketing'];
 
     return (
         <div className="flex flex-col min-h-screen bg-[#FFFEFE]">
             {/* 1. Hero Section */}
-            <section className="bg-[#FFF5F5] pt-12 pb-16 sm:pt-16 sm:pb-24 overflow-hidden">
-                <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                        {/* Left: Text */}
-                        <div className="space-y-6 text-center lg:text-left z-10">
-                            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#A70909] leading-tight">
-                                {hero.title}
-                            </h1>
-                            <p className="text-lg sm:text-xl text-gray-700 leading-relaxed max-w-2xl mx-auto lg:mx-0">
-                                {hero.summary}
-                            </p>
-                        </div>
-                        {/* Right: Image Placeholder */}
-                        <div className="relative w-full aspect-video rounded-3xl bg-gray-200 shadow-inner flex items-center justify-center border-2 border-dashed border-gray-300 overflow-hidden">
-                            <div className="text-gray-400 font-medium flex flex-col items-center gap-2">
-                                <svg className="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2-2v12a2 2 0 002 2z" /></svg>
-                                <span>Image Placeholder (16:9)</span>
-                            </div>
-                        </div>
+            <section className="bg-gradient-to-b from-[#FFF5F5] to-[#FFFEFE] pt-12 pb-12 sm:pt-20 sm:pb-16 overflow-hidden border-b border-red-50/50">
+                <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 text-center relative z-10">
+                    <div className="flex justify-start mb-6 sm:mb-8 text-left">
+                        <Breadcrumbs
+                            homeLabel={ui.breadcrumbHome || 'หน้าแรก'}
+                            items={[{ label: ui.breadcrumbPromotion || 'โปรโมชั่น', href: '/promotion' }]}
+                        />
                     </div>
+                    <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#A70909] leading-tight mb-6 text-left">
+                        {hero.title}
+                    </h1>
+                    <p className="text-lg sm:text-xl text-gray-700 leading-relaxed max-w-3xl text-left">
+                        {hero.summary}
+                    </p>
                 </div>
             </section>
 
             {/* 2. Filter System (Sticky) */}
-            <div className="sticky top-[60px] lg:top-[80px] z-40 bg-white/80 backdrop-blur-md border-b border-gray-100 shadow-sm py-4">
+            <div className="sticky top-[60px] lg:top-[80px] z-40 bg-white/80 backdrop-blur-md border-b border-gray-100 shadow-sm py-2 sm:py-4">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="flex justify-start sm:justify-center overflow-x-auto hide-scrollbar gap-3 pb-1">
+                    <div className="flex justify-start xl:justify-center overflow-x-auto hide-scrollbar gap-3 pt-2 pb-4 px-2">
                         {filterKeys.map(key => (
                             <button
                                 key={key}
@@ -90,27 +86,18 @@ export function PromotionHubClient({ locale, hero, filters, items, ui }: Promoti
             {/* 3. Promotion Cards Grid */}
             <section className="flex-1 py-12 sm:py-20 bg-gray-50/50">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <AnimatePresence mode="popLayout">
-                        <motion.div
-                            layout
-                            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8"
-                        >
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
                             {filteredItems.map((item) => (
-                                <motion.div
+                                <Link
+                                    href={`/${locale}/promotion/${item.slug}`}
                                     key={item.slug}
-                                    layout
-                                    initial={{ opacity: 0, scale: 0.9 }}
-                                    animate={{ opacity: 1, scale: 1 }}
-                                    exit={{ opacity: 0, scale: 0.9 }}
-                                    transition={{ duration: 0.3 }}
-                                    className="flex flex-col bg-white rounded-3xl border border-gray-100 overflow-hidden hover:shadow-xl transition-shadow duration-300 group"
+                                    className="flex flex-col bg-white rounded-3xl border border-gray-100 overflow-hidden hover:shadow-xl transition-shadow duration-300 group outline-none focus-visible:ring-2 focus-visible:ring-[#A70909]"
                                 >
                                     {/* Thumbnail Placeholder */}
-                                    <div className="relative w-full aspect-[4/3] bg-gray-100 border-b border-gray-100 flex items-center justify-center overflow-hidden">
-                                        <div className="text-gray-400 font-medium text-sm flex flex-col items-center gap-1 group-hover:scale-105 transition-transform duration-500">
-                                            <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2-2v12a2 2 0 002 2z" /></svg>
-                                            <span>Image (4:3)</span>
-                                        </div>
+                                    <div className="relative w-full aspect-[4/3] bg-gray-50 flex items-center justify-center border-b border-gray-100 overflow-hidden text-gray-300">
+                                        <span className="text-4xl text-gray-400 font-bold opacity-20 select-none group-hover:scale-105 transition-transform duration-500">
+                                            Virintira
+                                        </span>
                                         {/* Category Badge absolute positioned over image */}
                                         <div className="absolute top-4 left-4 inline-flex items-center gap-1.5 bg-white/95 backdrop-blur-sm text-gray-800 px-3 py-1.5 rounded-full text-xs font-bold shadow-sm border border-gray-100/50">
                                             <FaTags className="text-[#A70909]" />
@@ -124,14 +111,19 @@ export function PromotionHubClient({ locale, hero, filters, items, ui }: Promoti
                                             {item.title}
                                         </h3>
 
-                                        {/* Short Info Bullets */}
+                                        {/* Benefits Bullets */}
                                         <ul className="space-y-2 mb-6 flex-1">
-                                            {item.shortInfo && item.shortInfo.map((info, idx) => (
+                                            {item.benefits && item.benefits.slice(0, 3).map((benefit, idx) => (
                                                 <li key={idx} className="flex items-start gap-2 text-gray-600 text-sm">
                                                     <FaCheckCircle className="text-green-500 mt-1 flex-shrink-0" />
-                                                    <span className="leading-relaxed">{info}</span>
+                                                    <span className="leading-relaxed line-clamp-2">{benefit}</span>
                                                 </li>
                                             ))}
+                                            {item.benefits && item.benefits.length > 3 && (
+                                                <li className="text-gray-400 text-xs italic mt-2 ml-6">
+                                                    {ui.andMore || 'และอื่นๆ อีกมากมาย...'}
+                                                </li>
+                                            )}
                                         </ul>
 
                                         {/* Pricing Block */}
@@ -142,26 +134,23 @@ export function PromotionHubClient({ locale, hero, filters, items, ui }: Promoti
                                                 </div>
                                             )}
                                             <div className="text-[#A70909] text-2xl sm:text-3xl font-bold">
-                                                {item.price === 'ติดต่อสอบถามราคา' ? item.price : item.price.includes('ติดต่อ') ? item.price : `฿ ${item.price}`}
+                                                {item.price === 'ติดต่อสอบถามราคา' ? item.price : item.price.includes('ติดต่อ') ? item.price : item.price.includes('เริ่มต้น') ? item.price : `฿ ${item.price}`}
                                             </div>
                                         </div>
 
-                                        {/* CTA Button */}
-                                        <Link
-                                            href={`/${locale}/promotion/${item.slug}`}
-                                            className="w-full inline-block text-center bg-[#A70909] hover:bg-red-800 text-white font-bold py-3.5 px-6 rounded-xl transition-all duration-300 shadow-md hover:shadow-lg hover:-translate-y-0.5"
+                                        <div
+                                            className="w-full inline-block text-center bg-white text-[#A70909] border border-[#A70909] group-hover:bg-[#A70909] group-hover:text-white font-bold py-3.5 px-6 rounded-full transition-all duration-300"
                                         >
-                                            {ui.ctaPrimary || 'ดูรายละเอียดสิทธิพิเศษ'}
-                                        </Link>
+                                            {ui.viewDetails || 'ดูรายละเอียดโปรโมชั่น'}
+                                        </div>
                                     </div>
-                                </motion.div>
+                                </Link>
                             ))}
-                        </motion.div>
-                    </AnimatePresence>
+                        </div>
 
                     {filteredItems.length === 0 && (
                         <div className="text-center py-20 text-gray-500">
-                            ยังไม่มีโปรโมชั่นในหมวดหมู่นี้
+                            {ui.emptyHub || 'ยังไม่มีโปรโมชั่นในหมวดหมู่นี้'}
                         </div>
                     )}
                 </div>

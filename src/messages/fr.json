@@ -1267,7 +1267,26 @@
     "ui": {
       "ctaPrimary": "",
       "chatViaLine": "",
-      "callNow": ""
+      "callNow": "",
+      "benefitsTitle": "",
+      "conditionsTitle": "",
+      "summaryTitle": "",
+      "specialPrice": "",
+      "serviceRates": "",
+      "freeAssessment": "",
+      "viewDetails": "",
+      "andMore": "",
+      "drawerTitle": "",
+      "emptyHub": ""
     }
+  },
+  "promotion": {
+    "hero": {
+      "title": "",
+      "intro": ""
+    },
+    "cta": "",
+    "badge": "",
+    "complimentary": ""
   }
 }

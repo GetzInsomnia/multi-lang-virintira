@@ -58,7 +58,7 @@ function mergeMessages<T extends Record<string, unknown>>(
       continue;
     }
 
-    if (overrideValue !== undefined) {
+    if (overrideValue !== undefined && overrideValue !== "") {
       output[key] = overrideValue;
     }
   }

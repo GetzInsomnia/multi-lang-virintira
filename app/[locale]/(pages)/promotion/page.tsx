@@ -59,7 +59,11 @@ export default async function PromotionPage({ params }: PageParams) {
 
   const hubRaw = (tPromotions.raw('hub') ?? {}) as Record<string, any>;
   const itemsRaw = tPromotions.raw('items') as Record<string, any> | undefined;
-  const uiRaw = (tPromotions.raw('ui') ?? {}) as Record<string, string>;
+  const uiRaw = {
+    ...((tPromotions.raw('ui') ?? {}) as Record<string, string>),
+    breadcrumbHome: tBreadcrumbs("home"),
+    breadcrumbPromotion: tBreadcrumbs("promotion"),
+  };
 
   const hero = {
     title: String(hubRaw?.hero?.title || ''),

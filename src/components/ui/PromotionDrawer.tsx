@@ -21,6 +21,7 @@ interface PromotionDrawerProps {
     onClose: () => void;
     item?: PromotionItem;
     ui: {
+        drawerTitle?: string;
         chatViaLine?: string;
         callNow?: string;
     };
@@ -78,7 +79,7 @@ export function PromotionDrawer({ isOpen, onClose, item, ui }: PromotionDrawerPr
                     >
                         {/* Header (Sticky inside the full screen modal) */}
                         <div className="flex z-[60] bg-white items-center justify-between border-b border-gray-100 px-6 py-4 shadow-sm sticky top-0">
-                            <h2 className="text-xl font-bold text-[#A70909]">โปรโมชั่นและสิทธิพิเศษ</h2>
+                            <h2 className="text-xl font-bold text-[#A70909]">{ui?.drawerTitle || 'โปรโมชั่นและสิทธิพิเศษ'}</h2>
                             <button
                                 onClick={onClose}
                                 className="rounded-full p-2 bg-gray-50 text-gray-400 transition-colors hover:bg-gray-200 hover:text-gray-900 focus:outline-none"
