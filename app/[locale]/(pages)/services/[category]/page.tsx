@@ -69,7 +69,7 @@ export default async function ServiceCategoryPage({ params }: PageProps) {
     });
 
     const breadcrumbs = [
-        { label: tBreadcrumbs('services'), href: '/services' },
+        { label: tBreadcrumbs('services'), href: '/services', scroll: false },
         { label: categoryTitle, href: `/services/${category}` },
     ];
 

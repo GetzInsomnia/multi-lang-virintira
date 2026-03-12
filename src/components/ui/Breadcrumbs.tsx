@@ -7,6 +7,7 @@ import { Fragment } from 'react';
 export type BreadcrumbItem = {
     label: string;
     href: string;
+    scroll?: boolean;
 };
 
 interface BreadcrumbsProps {
@@ -39,6 +40,7 @@ export function Breadcrumbs({ items, className, homeLabel }: BreadcrumbsProps) {
                                 ) : (
                                     <Link
                                         href={item.href}
+                                        scroll={item.scroll}
                                         className="flex items-center hover:text-gray-900 hover:underline"
                                     >
                                         {isHome ? (

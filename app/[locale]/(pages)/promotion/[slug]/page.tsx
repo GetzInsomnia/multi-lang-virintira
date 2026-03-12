@@ -89,11 +89,11 @@ export default async function SinglePromotionPage({ params }: PageParams) {
             <JsonLd id="jsonld-single-promo" data={webPageJsonLd} />
             <JsonLd id="jsonld-single-promo-breadcrumb" data={breadcrumbJsonLd} />
 
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 sm:py-6">
+            <div className="max-w-7xl mx-auto px-4 pt-8 pb-6 sm:px-6 lg:px-8">
                 <Breadcrumbs
                     homeLabel={tBreadcrumbs("home")}
                     items={[
-                        { label: tBreadcrumbs("promotion"), href: `/promotion` },
+                        { label: tBreadcrumbs("promotion"), href: `/promotion`, scroll: false },
                         { label: item.title, href: `/promotion/${slug}` },
                     ]}
                 />

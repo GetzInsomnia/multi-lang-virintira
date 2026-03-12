@@ -76,7 +76,8 @@ function buildMobileItems(nav: NavItem[], columns: MegaMenuColumn[]): MenuItem[]
 }
 
 export default function Navbar({ data }: NavbarProps) {
-  const { isContactDrawerOpen } = useUI();
+  const { isContactDrawerOpen, isPromotionDrawerOpen } = useUI();
+  const isAnyDrawerOpen = isContactDrawerOpen || isPromotionDrawerOpen;
   const locale = useLocale();
   const t = useTranslations('layout.header');
   const pathname = usePathname() || '/';
@@ -465,13 +466,15 @@ export default function Navbar({ data }: NavbarProps) {
     [router, basePath, locale],
   );
 
+
+
   return (
     <>
       <SocialFloating {...({ menuOpen: mobileOpen } as any)} />
 
 
       <header
-        className={`sticky top-0 z-[61] bg-white/80 backdrop-blur-md border-b border-gray-100 shadow-sm transition-transform ${MOBILE_MENU_TRANSITION_DURATION_CLASS} ${MOBILE_MENU_TRANSITION_EASING_CLASS} supports-[backdrop-filter]:bg-white/60 ${isContactDrawerOpen ? '-translate-x-full' : 'translate-x-0'
+        className={`sticky top-0 z-[61] bg-white/80 backdrop-blur-md border-b border-gray-100 shadow-sm transition-transform ${MOBILE_MENU_TRANSITION_DURATION_CLASS} ${MOBILE_MENU_TRANSITION_EASING_CLASS} supports-[backdrop-filter]:bg-white/60 ${isAnyDrawerOpen ? '-translate-x-full' : 'translate-x-0'
           }`}
         style={{ '--header-height': '72px', paddingRight: 'var(--removed-body-scroll-bar-size, 0px)' } as CSSProperties}
       >
@@ -575,7 +578,9 @@ export default function Navbar({ data }: NavbarProps) {
               columns={megaColumns}
               onMouseEnter={(e) => { void e; cancelMegaClose(); setMegaOpen(true); }}
               onMouseLeave={(e) => { void e; scheduleMegaClose(); }}
-              onLinkClick={() => setMegaOpen(false)}
+              onLinkClick={() => {
+                setMegaOpen(false);
+              }}
             />
           ) : null}
         </div>

@@ -66,6 +66,7 @@ export function PromotionSectionItem({ promotion, item, ui }: PromotionSectionIt
                             <h2 className="text-xl sm:text-2xl font-bold text-[#A70909] tracking-tight">
                                 {promotion.title}
                             </h2>
+                            {/* eslint-disable-next-line react/no-danger */}
                             <div className="text-gray-700 text-[0.95rem] leading-relaxed max-w-xl mx-auto sm:mx-0 whitespace-pre-line" dangerouslySetInnerHTML={{ __html: promotion.subtitle || '' }} />
                         </div>
                     </div>

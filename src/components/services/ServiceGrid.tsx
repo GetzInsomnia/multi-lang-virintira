@@ -31,6 +31,7 @@ const itemAnim = {
 };
 
 import { useUI } from '@/context/UIContext';
+import { useEffect } from 'react';
 
 export function ServiceGrid({ items }: { items: ServiceGridItem[] }) {
     const { openContactDrawer } = useUI();

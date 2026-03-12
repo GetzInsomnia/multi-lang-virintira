@@ -4,6 +4,7 @@ import { useEffect, useState, useRef } from 'react';
 import { createPortal } from 'react-dom';
 import { PromotionDetailsContent } from '@/components/ui/PromotionDetailsContent';
 import { COMPANY } from '@/data/company';
+import { useUI } from '@/context/UIContext';
 
 interface PromotionItem {
     slug: string;
@@ -28,6 +29,7 @@ interface PromotionDrawerProps {
 }
 
 export function PromotionDrawer({ isOpen, onClose, item, ui }: PromotionDrawerProps) {
+    const { setPromotionDrawerOpen } = useUI();
     const [mounted, setMounted] = useState(false);
     const scrollAreaRef = useRef<HTMLDivElement>(null);
 
@@ -35,14 +37,37 @@ export function PromotionDrawer({ isOpen, onClose, item, ui }: PromotionDrawerPr
         setMounted(true);
     }, []);
 
+    // Sync global UI state for Navbar pushing
+    useEffect(() => {
+        setPromotionDrawerOpen(isOpen);
+    }, [isOpen, setPromotionDrawerOpen]);
+
+    // Close on Escape key
+    useEffect(() => {
+        if (!isOpen) return;
+        const handleKey = (e: KeyboardEvent) => {
+            if (e.key === 'Escape') onClose();
+        };
+        window.addEventListener('keydown', handleKey);
+        return () => window.removeEventListener('keydown', handleKey);
+    }, [isOpen, onClose]);
+
     // Prevent background scrolling when open and avoid shift/jump
     useEffect(() => {
         if (isOpen) {
             const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
-            document.body.style.overflow = 'hidden';
-            document.documentElement.style.overflow = 'hidden';
+            const isClipSupported = CSS.supports('overflow', 'clip');
+            const overflowValue = isClipSupported ? 'clip' : 'hidden';
+
+            document.body.style.overflow = overflowValue;
+            document.documentElement.style.overflow = overflowValue;
             document.body.style.paddingRight = `${scrollbarWidth}px`;
+            document.documentElement.style.setProperty('--removed-body-scroll-bar-size', `${scrollbarWidth}px`);
         } else {
+            document.body.style.overflow = '';
+            document.documentElement.style.overflow = '';
+            document.body.style.paddingRight = '';
+            document.documentElement.style.removeProperty('--removed-body-scroll-bar-size');
             document.body.style.overflow = '';
             document.documentElement.style.overflow = '';
             document.body.style.paddingRight = '';
@@ -51,6 +76,7 @@ export function PromotionDrawer({ isOpen, onClose, item, ui }: PromotionDrawerPr
             document.body.style.overflow = '';
             document.documentElement.style.overflow = '';
             document.body.style.paddingRight = '';
+            document.documentElement.style.removeProperty('--removed-body-scroll-bar-size');
         };
     }, [isOpen]);
 
@@ -91,7 +117,7 @@ export function PromotionDrawer({ isOpen, onClose, item, ui }: PromotionDrawerPr
 
                         {/* Content Body (Scrollable, rendering actual Promotion UI) */}
                         <div className="flex-1 overflow-y-auto bg-[#FFFEFE]" ref={scrollAreaRef}>
-                            <div className="p-4 sm:p-8">
+                            <div className="pt-4 sm:pt-8 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                                 <PromotionDetailsContent item={item} ui={ui} />
                             </div>
                         </div>

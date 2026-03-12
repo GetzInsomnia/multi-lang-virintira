@@ -30,8 +30,11 @@ export default function ContactDrawer({ isOpen, onClose }: ContactDrawerProps) {
         if (isOpen) {
             setMounted(true);
             const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
-            document.body.style.overflow = 'hidden';
-            document.documentElement.style.overflow = 'hidden';
+            const isClipSupported = CSS.supports('overflow', 'clip');
+            const overflowValue = isClipSupported ? 'clip' : 'hidden';
+            
+            document.body.style.overflow = overflowValue;
+            document.documentElement.style.overflow = overflowValue;
             document.body.style.paddingRight = `${scrollbarWidth}px`;
             document.documentElement.style.setProperty('--removed-body-scroll-bar-size', `${scrollbarWidth}px`);
         } else {

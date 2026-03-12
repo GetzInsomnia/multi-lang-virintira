@@ -6,18 +6,24 @@ interface UIContextType {
     isContactDrawerOpen: boolean;
     openContactDrawer: () => void;
     closeContactDrawer: () => void;
+    isPromotionDrawerOpen: boolean;
+    setPromotionDrawerOpen: (isOpen: boolean) => void;
 }
 
 const UIContext = createContext<UIContextType | undefined>(undefined);
 
 export function UIProvider({ children }: { children: ReactNode }) {
     const [isContactDrawerOpen, setIsContactDrawerOpen] = useState(false);
+    const [isPromotionDrawerOpen, setPromotionDrawerOpen] = useState(false);
 
     const openContactDrawer = () => setIsContactDrawerOpen(true);
     const closeContactDrawer = () => setIsContactDrawerOpen(false);
 
     return (
-        <UIContext.Provider value={{ isContactDrawerOpen, openContactDrawer, closeContactDrawer }}>
+        <UIContext.Provider value={{ 
+            isContactDrawerOpen, openContactDrawer, closeContactDrawer,
+            isPromotionDrawerOpen, setPromotionDrawerOpen
+        }}>
             {children}
         </UIContext.Provider>
     );

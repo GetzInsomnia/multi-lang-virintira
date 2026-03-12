@@ -98,6 +98,7 @@ export default function Footer({ data }: { data: FooterData }) {
 
   const handleLogoClick = () => {
     if (typeof window === 'undefined') return;
+    
     if (pathname === '/' || pathname === `/${locale}`) {
       window.location.hash = HERO_SECTION_ID;
       const target = document.getElementById(HERO_SECTION_ID);
@@ -213,6 +214,7 @@ export default function Footer({ data }: { data: FooterData }) {
   const LogoBlock = () => (
     <Link
       href="/"
+      onClick={handleLogoClick}
       className="min-w-0 flex flex-col items-center justify-center text-center h-full cursor-pointer hover:opacity-80 transition-opacity"
       prefetch={false}
     >

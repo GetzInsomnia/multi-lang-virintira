@@ -96,8 +96,8 @@ export default async function ServiceDetailPage({ params }: PageProps) {
 
     // 4. JSON-LD & Breadcrumbs
     const breadcrumbs = [
-        { label: tBreadcrumbs('services'), href: '/services' },
-        { label: categoryTitle, href: `/services/${category}` },
+        { label: tBreadcrumbs('services'), href: '/services', scroll: false },
+        { label: categoryTitle, href: `/services/${category}`, scroll: false },
         { label: serviceTitle, href: `/services/${category}/${slug}` },
     ];
 

@@ -76,6 +76,7 @@ export function ServiceCard({
     return (
         <Link
             href={href}
+            onClick={handleClick}
             className={`group relative isolate flex h-full flex-col overflow-hidden rounded-2xl border border-[#f3dede] bg-white shadow-[0_8px_30px_rgba(167,9,9,0.1)] transition-all duration-300 ease-out ${hoverShadowClass}`}
         >
             <div className="relative aspect-[16/9] w-full overflow-hidden bg-gray-100">
