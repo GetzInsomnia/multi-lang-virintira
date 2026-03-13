@@ -12,7 +12,7 @@ const THAI_CONTENT = {
         "cta": "โทร. 092-882-5556"
     },
     "promotion": {
-        "title": "โปรโมชั่นพิเศษ! (Special Deal)",
+        "title": "โปรโมชั่นพิเศษ!",
         "subtitle": "พลาดไม่ได้กับราคาพิเศษและสิทธิประโยชน์สำหรับบริการนี้โดยเฉพาะ",
         "cta": "ดูโปรโมชั่นเลย",
         "slug": "company-registration-deal"
@@ -205,111 +205,1972 @@ const THAI_CONTENT = {
 };
 
 const EMPTY_CONTENT = {
-    "hero": {
-        "title": "",
-        "subtitle": "",
-        "description": "",
-        "cta": ""
-    },
-    "promotion": {
-        "title": "",
-        "subtitle": "",
-        "cta": ""
-    },
-    "features": {
-        "title": "",
-        "items": [
-            {
-                "title": "",
-                "description": ""
-            },
-            {
-                "title": "",
-                "description": ""
-            },
-            {
-                "title": "",
-                "description": ""
-            },
-            {
-                "title": "",
-                "description": ""
-            }
-        ]
-    },
-    "benefits": {
-        "title": "",
-        "items": [
-            "", "", "", "", "", "", "", "", ""
-        ]
-    },
-    "requirements": {
-        "title": "",
-        "subtitle": "",
-        "documents": {
-            "title": "",
+    "th": {
+        "hero": {
+            "title": "เริ่มต้นธุรกิจอย่างมืออาชีพ จดทะเบียนบริษัทครบจบในที่เดียว",
+            "subtitle": "ได้รับความไว้วางใจจากผู้ประกอบการกว่า 300 ราย",
+            "description": "เปลี่ยนเรื่องเอกสารและขั้นตอนทางกฎหมายที่ยุ่งยากให้เป็นเรื่องง่าย เราดูแลให้ครบตั้งแต่จดจัดตั้งบริษัทกับกรมพัฒนาธุรกิจการค้า ขอเลขนิติบุคคล และขอเลขประจำตัวผู้เสียภาษี ให้คุณเอาเวลาไปโฟกัสกับการเติบโตของธุรกิจได้อย่างเต็มที่",
+            "cta": "โทร. 092-882-5556"
+        },
+        "promotion": {
+            "title": "โปรโมชั่นพิเศษ!",
+            "subtitle": "พลาดไม่ได้กับราคาพิเศษและสิทธิประโยชน์สำหรับบริการนี้โดยเฉพาะ",
+            "cta": "ดูโปรโมชั่นเลย",
+            "slug": "company-registration-deal"
+        },
+        "features": {
+            "title": "ทุกสิ่งที่คุณต้องการในการเริ่มต้นธุรกิจ",
             "items": [
-                "", "", "", ""
+                {
+                    "title": "ให้คำปรึกษาและวางแผนธุรกิจ",
+                    "description": "วิเคราะห์โครงสร้างธุรกิจและให้คำแนะนำที่เหมาะสมที่สุดสำหรับกิจการของคุณแบบ Case by Case",
+                    "icon": "Lightbulb"
+                },
+                {
+                    "title": "จัดทำเอกสารและหนังสือบริคณห์สนธิ",
+                    "description": "ดำเนินการจัดทำแบบฟอร์มราชการอย่างถูกต้องแม่นยำ ผ่านระบบจดทะเบียนนิติบุคคลดิจิทัล (DBD Biz Regist)",
+                    "icon": "FileSignature"
+                },
+                {
+                    "title": "ยื่นจดทะเบียนนิติบุคคล",
+                    "description": "เป็นตัวแทนดำเนินการยื่นเรื่องต่อกรมพัฒนาธุรกิจการค้า กระทรวงพาณิชย์ ในทุกขั้นตอน",
+                    "icon": "Landmark"
+                },
+                {
+                    "title": "ขอเลขประจำตัวผู้เสียภาษี",
+                    "description": "ดูแลเรื่องการขอเลขนิติบุคคลและเลขประจำตัวผู้เสียภาษี เพื่อเตรียมความพร้อมสำหรับระบบภาษีของบริษัท",
+                    "icon": "Calculator"
+                }
             ]
         },
-        "information": {
-            "title": "",
+        "benefits": {
+            "title": "จัดเต็ม! สิทธิพิเศษเพื่อคุณโดยเฉพาะ",
             "items": [
-                "", "", "", "", "", "", ""
+                { "title": "ไม่ผูกมัดทำบัญชี!", "icon": "Unlock" },
+                { "title": "ฟรี! ตรวจสอบและจองชื่อบริษัทสูงสุด 3 ชื่อ", "icon": "SearchCheck" },
+                { "title": "ฟรี! ตรายางแบบหมึกในตัว 1 ด้าม", "icon": "Stamp" },
+                { "title": "ฟรี! ขอรหัสผ่านยื่นกรมพัฒนาธุรกิจการค้า", "icon": "KeySquare" },
+                { "title": "ฟรี! ขอรหัสผ่านสำหรับยื่นกรมสรรพากร", "icon": "KeyRound" },
+                { "title": "ฟรี! ชุดเอกสารสำหรับใช้เปิดบัญชีธนาคารบริษัท", "icon": "Wallet" },
+                { "title": "ฟรี! เอกสารหนังสือรับรองบริษัทชุดใหญ่ (DBD) ครบชุด", "icon": "ScrollText" },
+                { "title": "ฟรี! คอร์สอบรมเทคนิคทางภาษี (มูลค่า 5,900 บาท)", "icon": "GraduationCap" },
+                { "title": "ฟรี! นามบัตรสำหรับออกใบเสร็จ/ใบกำกับภาษี", "icon": "Contact2" }
+            ]
+        },
+        "requirements": {
+            "title": "สิ่งที่ต้องเตรียมเพื่อจดทะเบียนบริษัท",
+            "subtitle": "เตรียมข้อมูลง่ายๆ ส่วนที่เหลือปล่อยให้เป็นหน้าที่เรา",
+            "documents": {
+                "title": "1. เอกสารสำคัญที่ต้องใช้",
+                "items": [
+                    "ผู้ถือหุ้นอย่างน้อย 2 ท่าน \n\n1. กรณีผู้ถือหุ้นชาวไทย: สำเนาบัตรประชาชน (ถ่ายชัดเจนทั้งหน้า-หลัง)\n\n2. กรณีผู้ถือหุ้นชาวต่างชาติ: สำเนาพาสปอร์ต (เฉพาะหน้าแรกที่มีรูปถ่าย)\n\n3. กรณีผู้ถือหุ้นเป็นนิติบุคคล: สำเนาหนังสือรับรอง และสำเนาบัตรประชาชนของผู้มีอำนาจลงนาม",
+                    "ทะเบียนบ้านที่จะใช้เป็นที่ตั้งสำนักงานใหญ่ของบริษัท",
+                    "แบบตรายาง (ถ้ามี)"
+                ]
+            },
+            "information": {
+                "title": "2. ข้อมูลเบื้องต้นเกี่ยวกับธุรกิจ",
+                "items": [
+                    "ชื่อบริษัทที่ต้องการ (ภาษาไทย-อังกฤษ)",
+                    "สัดส่วนหุ้นแต่ละท่าน (เป็นเปอร์เซ็นต์ เช่น 99% และ 1% เป็นต้น)",
+                    "รายชื่อกรรมการ (ผู้มีอำนาจลงนามผูกพันบริษัท)",
+                    "อธิบายลักษณะการประกอบกิจการ",
+                    "จำนวนทุนจดทะเบียน (เช่น ทุน 1 ล้านบาท ชำระ 25%)",
+                    "ข้อมูลติดต่อของบริษัท \n1. เบอร์โทรศัพท์ \n2. อีเมล",
+                    "ข้อมูลติดต่อของผู้ถือหุ้นแต่ละท่าน \n1. เบอร์โทรศัพท์ \n2. อีเมล \n3. LINE ID"
+                ]
+            }
+        },
+        "process": {
+            "title": "4 ขั้นตอนง่ายๆ ในการจดทะเบียน",
+            "steps": [
+                {
+                    "title": "รับคำปรึกษาและจองชื่อ",
+                    "description": "การจดทะเบียนบริษัทก็เหมือนการสั่งตัดชุดสูทที่ต้องวัดตัวให้พอดี เราจะพูดคุยเพื่อรับทราบข้อมูล ช่วยวางแผนโครงสร้างธุรกิจให้เหมาะสมกับกิจการของคุณมากที่สุด พร้อมดำเนินการจองชื่อบริษัท",
+                    "icon": "MessageSquareText"
+                },
+                {
+                    "title": "จัดเตรียมเอกสารผ่านระบบราชการ",
+                    "description": "ทีมงานจัดเตรียมเอกสารและจัดทำแบบฟอร์มทั้งหมด ผ่านระบบจดทะเบียนนิติบุคคลดิจิทัล (DBD Biz Regist) ของกรมพัฒนาธุรกิจการค้า กระทรวงพาณิชย์ ให้พร้อมสำหรับการดำเนินการ",
+                    "icon": "FileStack"
+                },
+                {
+                    "title": "ยืนยันตัวตนออนไลน์ (สะดวก ไม่ต้องเดินทาง)",
+                    "description": "ผู้ถือหุ้นและกรรมการทำการยืนยันตัวตน (ชาวไทยใช้แอปฯ ThaiD, ชาวต่างชาติใช้แอปฯ DBD e-Service) โดยสามารถเลือก สแกน QR Code หรือกดยืนยันตัวตนผ่านลิงก์ที่กรมพัฒนาธุรกิจการค้าส่งเข้าอีเมลส่วนตัวของแต่ละท่าน",
+                    "icon": "SmartphoneNfc"
+                },
+                {
+                    "title": "ยื่นจดทะเบียนและส่งมอบงาน",
+                    "description": "ทีมงานเข้าดำเนินการยื่นเรื่องต่อกรมพัฒนาธุรกิจการค้า เมื่อได้รับอนุมัติใบทะเบียนและหนังสือรับรองบริษัทเรียบร้อยแล้ว เราจะทำการตรวจสอบความถูกต้องและจัดส่งเอกสารสำคัญพร้อมของแถมส่งตรงถึงมือคุณทันที",
+                    "icon": "Gift"
+                }
+            ]
+        },
+        "faq": {
+            "title": "คำถามที่พบบ่อย",
+            "items": [
+                {
+                    "question": "บริษัทจำกัด (บจก.) กับ ห้างหุ้นส่วนจำกัด (หจก.) ต่างกันอย่างไร และควรเลือกจดแบบไหนดี?",
+                    "answer": "แม้ทั้งสองรูปแบบจะมีสถานะเป็น <b>\"นิติบุคคล\"</b> และมีอัตราการเสียภาษีที่เหมือนกัน แต่จะมีความแตกต่างหลักๆ ในเรื่องของ <b>\"ความรับผิดชอบต่อหนี้สิน\"</b>, <b>\"ความน่าเชื่อถือ\"</b> และ <b>\"ข้อจำกัดด้านชาวต่างชาติ\"</b> เพื่อให้เห็นภาพและตัดสินใจได้ง่ายขึ้น เราขอเปรียบเทียบให้ดูดังนี้\n\n<b>1. บริษัทจำกัด (Company Limited)</b>\n• <b>ความรับผิดชอบ:</b> <i>\"จำกัดความรับผิด\"</i> (ยกเว้นผู้เป็นกรรมการ) ผู้ถือหุ้นทุกคนจะรับผิดชอบหนี้สินของบริษัท ไม่เกินจำนวนมูลค่าหุ้นรวมที่ตนเองถือ (เป็นการแยกกระเป๋าเงินส่วนตัว ออกจากกระเป๋าเงินธุรกิจอย่างชัดเจน ปลอดภัยต่อทรัพย์สินส่วนตัว)\n• <b>ความน่าเชื่อถือ:</b> สูงมาก เหมาะสำหรับการทำธุรกิจระยะยาว การประมูลงานราชการ การรับงานโปรเจกต์ใหญ่ การดึงดูดนักลงทุน หรือการทำธุรกิจแบบ B2B (Business-to-Business)\n• <b>กรณีมีชาวต่างชาติ / ขอใบอนุญาตทำงาน (Work Permit):</b> เหมาะสมที่สุด กฎหมายและหน่วยงานราชการรองรับโครงสร้างบริษัทจำกัดได้ดีเยี่ยม ไม่ว่าจะเป็นการให้ต่างชาติถือหุ้น (ไม่เกิน 49%) การขอใบอนุญาตทำงาน (Work Permit) การขอวีซ่าธุรกิจ หรือการยื่นขอส่งเสริมการลงทุน (BOI) ฯลฯ\n• <b>จำนวนผู้เริ่มก่อตั้ง:</b> ปัจจุบันใช้ผู้ถือหุ้นขั้นต่ำเพียง 2 ท่าน ก็จดทะเบียนได้แล้ว\n\n<b>2. ห้างหุ้นส่วนจำกัด (Limited Partnership)</b>\n• <b>ความรับผิดชอบ:</b> กฎหมายบังคับให้ต้องมีหุ้นส่วนอย่างน้อย 1 คน ทำหน้าที่เป็น <i>\"หุ้นส่วนผู้จัดการ\"</i> ซึ่งต้องรับผิดชอบหนี้สินของกิจการแบบ <b>\"ไม่จำกัดจำนวน\"</b> (หากกิจการมีปัญหา หุ้นส่วนผู้จัดการอาจต้องนำทรัพย์สินส่วนตัวมาชดใช้หนี้) ส่วนหุ้นส่วนคนอื่นๆ จะจำกัดความรับผิดชอบแค่เงินที่ลงทุนไป\n• <b>ความน่าเชื่อถือ:</b> ระดับปานกลาง เหมาะกับธุรกิจขนาดเล็ก ธุรกิจแบบครอบครัว (Family Business) หรือกิจการที่คู่ค้าไม่ได้ซีเรียสเรื่องรูปแบบนิติบุคคลมากนัก\n• <b>กรณีมีชาวต่างชาติ:</b> ไม่แนะนำ การมีชาวต่างชาติใน หจก. มีข้อจำกัดทางกฎหมายที่ซับซ้อนมาก และหากให้ชาวต่างชาติเป็นหุ้นส่วนผู้จัดการ อาจจะถูกตีความว่าเป็นนิติบุคคลต่างด้าว ซึ่งทำให้การประกอบธุรกิจและการขอ Work Permit ยุ่งยากกว่าบริษัทจำกัดมาก\n• <b>จำนวนผู้เริ่มก่อตั้ง:</b> ใช้ผู้เริ่มก่อการเพียง 2 ท่าน เท่ากันกับการจดทะเบียนบริษัท\n\n<b>สรุปว่าควรเลือกแบบไหนดี?</b>\n• ควรเลือก <b>\"บริษัทจำกัด\"</b> ถ้ามองหาความน่าเชื่อถือสูงสุด, มีแผนขยายกิจการหรือสาขาในอนาคต, ต้องการจำกัดความเสี่ยงไม่ให้กระทบสินทรัพย์ส่วนตัว, มีชาวต่างชาติเป็นผู้ถือหุ้น, หรือมีแผนจะจ้างงานพนักงานต่างชาติ (ขอ Work Permit)\n• ควรเลือก <b>\"ห้างหุ้นส่วนจำกัด\"</b> ถ้าเป็นธุรกิจในครอบครัวหรือคนสนิทที่ไว้ใจได้ 100%, กิจการไม่มีความเสี่ยงเรื่องหนี้สินสูง, ไม่มีหุ้นส่วนชาวต่างชาติ และเน้นโครงสร้างการบริหารที่เรียบง่ายที่สุด\n\n<i><b>หมายเหตุ:</b> ปัจจุบันค่าใช้จ่ายในการจดทะเบียน ค่าทำบัญชีรายเดือน รวมถึงค่าปิดงบประจำปีของ บจก. และ หจก. ไม่ได้แตกต่างกันมากนัก การจดทะเบียนเป็น \"บริษัทจำกัด\" จะเกิดประโยชน์สูงสุดในระยะยาวมากกว่า</i>"
+                },
+                {
+                    "question": "ใช้ระยะเวลาดำเนินการกี่วัน?",
+                    "answer": "โดยปกติจะใช้เวลาประมาณ <b>1-5 วันทำการ</b> (ไม่นับวันหยุดราชการ) หลังจากได้รับข้อมูลและเอกสารจากลูกค้าครบถ้วน ทั้งนี้ระยะเวลาอาจขึ้นอยู่กับคิวงานของกรมพัฒนาธุรกิจการค้าในขณะนั้น รวมถึงความสะดวกรวดเร็วในการยืนยันตัวตน (หรือการส่งรหัส OTP) ของทางฝั่งลูกค้า"
+                },
+                {
+                    "question": "ทุนจดทะเบียนคืออะไร? ถ้าไม่มีเงินก้อนตามทุนจดทะเบียน สามารถจดบริษัทได้หรือไม่?",
+                    "answer": "อธิบายง่ายๆ <b>\"ทุนจดทะเบียน\"</b> คือเงินทุนหมุนเวียนที่ใช้สำหรับการประกอบกิจการ การ <i>\"ชำระทุนจดทะเบียน\"</i> ไม่ใช่การนำเงินไปจ่ายให้ใคร แต่เป็นการนำเงินทุนเข้าบัญชีธนาคารในนามบริษัท (ซึ่งจะเปิดบัญชีได้หลังจากจดบริษัทเสร็จแล้ว)\n\n• <b>กรณีที่ไม่มีเงินก้อนทั้งหมด:</b> คุณสามารถทยอยนำเงินเข้าบัญชีได้ เช่น หากทุนจดทะเบียน 1 ล้านบาท (ชำระขั้นต่ำ 25% คือ 250,000 บาท) คุณอาจเริ่มเปิดบัญชีบริษัทด้วยเงิน 1,000 บาทก่อน แล้วเมื่อมีรายจ่ายที่เกี่ยวข้องกับกิจการ ค่อยนำเงินเข้าบัญชีบริษัทแล้วจ่ายออกไป เงินก้อนนี้ไม่จำเป็นต้องแช่นิ่งไว้ในบัญชี แต่ใช้หมุนเวียนทำธุรกิจได้เลย\n• <b>ข้อควรระวัง:</b> ยกเว้นกรณีที่บริษัทมี <b>ผู้ถือหุ้นชาวต่างชาติ</b> หรือ เป็นบริษัทคนไทยล้วนที่มี <b>ทุนจดทะเบียนเกิน 5 ล้านบาทขึ้นไป</b> กรณีเหล่านี้ กฎหมายบังคับให้ต้องมีเงินจริง และต้องแสดงหนังสือรับรองเงินฝาก (Bank Certificate) จากธนาคารในขั้นตอนการจดทะเบียนด้วย"
+                },
+                {
+                    "question": "ชาวต่างชาติสามารถร่วมถือหุ้นได้หรือไม่ และต้องแสดงหลักฐานทางการเงินอย่างไร?",
+                    "answer": "สามารถทำได้ โดยการจดทะเบียนบริษัทจำกัดทั่วไป หากต้องการให้บริษัทมีสถานะเป็นนิติบุคคลสัญชาติไทย จะต้องมีคนไทยถือหุ้นรวมกันอย่างน้อย 51% โดยมีเงื่อนไขเรื่องหลักฐานทางการเงินและสัดส่วนการถือหุ้น ดังนี้:\n\n• <b>กรณีมีชาวต่างชาติร่วมถือหุ้น (คนไทยถือหุ้น 51% ขึ้นไป):</b> หุ้นส่วนคนไทยจะต้องโชว์หนังสือรับรองเงินฝาก (Bank Certificate) ตามสัดส่วนหุ้นที่ตนถือ (ชาวต่างชาติไม่ต้องโชว์เงิน) เช่น\n  1. เพื่อเตรียมขอ Work Permit: ทุนจดทะเบียน 2 ล้านบาท (ชำระเต็ม 100%) คนไทยถือหุ้น 51% ต้องโชว์เงินฝากอย่างน้อย 1,020,000 บาท\n  2. ไม่ต้องการขอ Work Permit: ทุนจดทะเบียน 1 ล้านบาท (ชำระขั้นต่ำ 25%) คนไทยถือหุ้น 51% ต้องโชว์เงินฝากอย่างน้อย 127,500 บาท\n• <b>กรณีเป็นผู้ถือหุ้นคนไทย 100%:</b> หากทุนจดทะเบียนไม่เกิน 5,000,000 บาท ไม่จำเป็นต้องโชว์หลักฐานทางการเงิน ในขั้นตอนการตั้งบริษัท (แม้จะมีการเปลี่ยนตัวผู้ถือหุ้นนำชาวต่างชาติเข้ามาในภายหลังก็ตาม)\n• <b>กรณีชาวต่างชาติต้องการถือหุ้น 100% (หรือมากกว่า 49%):</b> สามารถจดทะเบียนจัดตั้งบริษัทได้ แต่เมื่อจดทะเบียนเสร็จแล้ว บริษัทจะยังไม่สามารถประกอบกิจการใดๆ ได้ จนกว่าจะดำเนินการขออนุญาตตามช่องทางใดช่องทางหนึ่ง ดังนี้\n  1. ยื่นขอใบอนุญาตประกอบธุรกิจของคนต่างด้าว (Foreign Business License: FBL) เมื่อได้รับใบอนุญาตแล้วจึงจะสามารถประกอบกิจการได้\n  2. ยื่นขอรับการส่งเสริมการลงทุน (BOI) เมื่อได้รับบัตรส่งเสริมการลงทุนแล้ว จะต้องนำไปทำเรื่องขอ หนังสือรับรองการประกอบธุรกิจของคนต่างด้าว (Foreign Business Certificate: FBC) เมื่อได้รับหนังสือรับรองฯ แล้วจึงจะสามารถประกอบกิจการได้"
+                },
+                {
+                    "question": "ถ้ายังไม่มีออฟฟิศ หรือสถานที่ตั้ง สามารถจดทะเบียนได้ไหม?",
+                    "answer": "<b>สามารถจดทะเบียนได้</b> ปกติแล้วสามารถใช้อาคารพาณิชย์ ตึกแถว ทาวน์เฮ้าส์ ทาวน์โฮมหรือบ้านพักอาศัยเป็นสถานที่สำหรับจดทะเบียนได้ แต่หากไม่มีสถานที่เหล่านี้หรือไม่สะดวกใช้สถานที่ของตนเอง เรามีบริการที่ตั้งสำนักงานเสมือน <b>(Virtual Office)</b> ให้บริการถึง 3 รูปแบบ เพื่อให้ตรงกับความต้องการของคุณ ได้แก่\n1. ใช้เป็นที่ตั้งสำหรับจดทะเบียนบริษัทอย่างเดียว\n2. ใช้เป็นที่ตั้งจดทะเบียนบริษัท + จดทะเบียนภาษีมูลค่าเพิ่ม (VAT)\n3. ใช้เป็นที่ตั้งจดทะเบียนบริษัท + จดทะเบียนภาษีมูลค่าเพิ่ม (VAT) + ขึ้นทะเบียนนายจ้างกับประกันสังคม"
+                },
+                {
+                    "question": "ถ้าไม่ได้เป็นเจ้าของบ้านเอง เช่น ใช้บ้านเช่า หรือใช้ที่อยู่คอนโด สามารถจดทะเบียนบริษัทได้ไหม?",
+                    "answer": "ทำได้แต่จะมีเงื่อนไขหรือเอกสารเพิ่มเติม ดังนี้\n\n• <b>กรณีบ้านเช่า/พื้นที่เช่า:</b> ต้องมี <i>\"หนังสือยินยอมให้ใช้สถานที่\"</i> พร้อมแนบสำเนาบัตรประชาชนและสำเนาทะเบียนบ้านของ \"เจ้าบ้านหรือเจ้าของกรรมสิทธิ์\" ที่เซ็นรับรองถูกต้อง ประกอบการยื่นจดทะเบียนด้วย\n• <b>กรณีคอนโดมิเนียม:</b> แม้กฎหมายจะอนุญาต แต่ควรตรวจสอบกับนิติบุคคลของคอนโดนั้นๆ ก่อน เพราะหลายโครงการมีกฎระเบียบภายในที่ไม่อนุญาตให้ใช้ห้องพักอาศัยจดทะเบียนเป็นนิติบุคคลหรือสำนักงาน เพื่อป้องกันความวุ่นวายและการรบกวนลูกบ้านท่านอื่น <i>(เรามีบริการ Virtual Office เพื่อแก้ปัญหานี้ให้ได้)</i>"
+                },
+                {
+                    "question": "ถ้าไม่มีเบอร์โทรศัพท์พื้นฐาน (เบอร์ 02) สามารถจดบริษัทได้ไหม?",
+                    "answer": "สามารถจดทะเบียนได้ ปัจจุบันกรมพัฒนาธุรกิจการค้าได้อำนวยความสะดวกให้ผู้ประกอบการ โดยสามารถใช้หมายเลขโทรศัพท์มือถือในการจดทะเบียนได้แล้ว นอกจากนี้ในส่วนของอีเมล ก็สามารถใช้อีเมลทั่วไปได้เลย (เช่น @gmail.com หรือ @hotmail.com) ไม่จำเป็นต้องใช้อีเมลภายใต้โดเมนเนมของบริษัท"
+                },
+                {
+                    "question": "เมื่อจดทะเบียนบริษัทเสร็จแล้ว สามารถเริ่มประกอบกิจการได้ทันทีเลยไหม?",
+                    "answer": "สำหรับกิจการส่วนใหญ่ที่มีประเภทธุรกิจทั่วๆไป เมื่อจดทะเบียนเป็นนิติบุคคลเสร็จสิ้นก็จะสามารถเริ่มประกอบธุรกิจได้ทันที แต่จะมี<b>กิจการบางประเภทที่มีกฎหมายควบคุมเฉพาะ</b> ซึ่งต้องไปขอใบอนุญาตเพิ่มเติมจากหน่วยงานราชการที่เกี่ยวข้องเสียก่อน จึงจะสามารถดำเนินกิจการได้อย่างถูกต้องตามกฎหมาย ตัวอย่างเช่น\n\n• <b>กิจการท่องเที่ยวและเดินทาง:</b> ธุรกิจนำเที่ยว, มัคคุเทศก์, โรงแรม, ที่พัก (ต้องขอใบอนุญาต ททท. หรือหน่วยงานที่เกี่ยวข้อง)\n• <b>กิจการด้านสุขภาพและอาหาร:</b> ร้านอาหาร, คลินิก, สถานพยาบาล, สปา, การผลิตหรือนำเข้าอาหาร ยา เครื่องสำอาง (ต้องขออนุญาต อย. หรือ สธ. หรือหน่วยงานที่เกี่ยวข้อง)\n• <b>กิจการด้านอุตสาหกรรม:</b> โรงงานอุตสาหกรรม, การครอบครองสารเคมีหรือวัตถุอันตราย (ต้องขอใบอนุญาตจากกรมโรงงาน หรือหน่วยงานที่เกี่ยวข้อง)\n• <b>กิจการด้านการเงิน:</b> ธุรกิจสินเชื่อ เช่น พิโกไฟแนนซ์ (ต้องขอใบอนุญาตจากธนาคารแห่งประเทศไทย หรือกระทรวงการคลัง)\n• <b>กิจการด้านอื่นๆ:</b> ธุรกิจจัดหาแรงงาน ธุรกิจรักษาความปลอดภัย ธุรกิจโลจิสติกส์และขนส่ง ฯลฯ (ต้องขอใบอนุญาตจากกรมการจัดหางาน สำนักงานตำรวจแห่งชาติ กรมการขนส่งทางบก หรือหน่วยงานอื่นๆ ที่เกี่ยวข้อง)\n\n<i><b>หมายเหตุสำคัญ:</b> บางกิจการอาจมีข้อกำหนดสงวนไว้สำหรับคนไทยเท่านั้น หากบริษัทมีชาวต่างชาติเป็นผู้ถือหุ้นหรือถือหุ้นเกินสัดส่วนที่กำหนด หรือมีกรรมการชาวต่างชาติเป็นผู้มีอำนาจลงนาม อาจทำให้ไม่สามารถขอใบอนุญาตประกอบกิจการนั้นๆ ได้ ดังนั้นเพื่อป้องกันการเสียเวลาและค่าใช้จ่าย แนะนำให้ศึกษาหาข้อมูลหรือสอบถามข้อกำหนดจากหน่วยงานที่กำกับดูแลกิจการนั้นๆ โดยตรง ก่อนเริ่มดำเนินการจดทะเบียนบริษัท</i>"
+                },
+                {
+                    "question": "จดทะเบียนบริษัทปุ๊บ ต้องจดทะเบียนภาษีมูลค่าเพิ่ม (VAT 7%) ปั๊บเลยไหม?",
+                    "answer": "ไม่จำเป็นเสมอไป การจดทะเบียนบริษัท กับการจดทะเบียนภาษีมูลค่าเพิ่ม (VAT) เป็นคนละส่วนกัน บริษัทจะถูกบังคับให้จด VAT ก็ต่อเมื่อบริษัทมีรายได้จากการประกอบกิจการ<b>เกิน 1.8 ล้านบาทต่อปี</b>\n\nอย่างไรก็ตาม หากบริษัทจำเป็นต้องนำเข้า-ส่งออกสินค้า หรือต้องดีลงานกับคู่ค้าที่เป็นนิติบุคคลด้วยกันเอง (B2B) ที่บังคับให้บริษัทต้องออกใบกำกับภาษีให้ บริษัทก็<b>จำเป็นต้องยื่นขอจดทะเบียนภาษีมูลค่าเพิ่ม (VAT)</b> เพื่อให้สามารถออกใบกำกับภาษีให้คู่ค้าได้"
+                },
+                {
+                    "question": "จดทะเบียนบริษัทเสร็จแล้ว แต่ยังไม่ได้เริ่มขาย หรือยังไม่มีรายได้ ต้องทำบัญชีไหม?",
+                    "answer": "<b>ต้องทำ</b> นี่คือสิ่งที่ผู้ประกอบการมือใหม่มักเข้าใจผิด ตามกฎหมาย (พระราชบัญญัติการบัญชี พ.ศ.2543) บังคับให้นิติบุคคลทุกประเภทต้องจัดทำบัญชี และนำส่งรายงานที่เกี่ยวข้องให้แก่กรมพัฒนาธุรกิจการค้าและกรมสรรพากร <b>\"แม้ว่าในเดือนนั้นๆ หรือปีนั้นๆ จะไม่มีรายได้ ไม่มีรายจ่าย หรือยังไม่ได้เริ่มดำเนินกิจการเลยก็ตาม\"</b> หากละเลยไม่นำส่งตามกำหนด จะมีโทษปรับตามกฎหมายในอัตราที่ค่อนข้างสูง"
+                },
+                {
+                    "question": "เป็นกรรมการบริษัท ต้องหักเงินเดือนตัวเองเพื่อส่งประกันสังคมไหม?",
+                    "answer": "<b>ไม่ต้อง</b> หากคุณเป็นกรรมการผู้มีอำนาจลงนามและเป็นผู้ถือหุ้นหลัก จะถือว่าคุณอยู่ในฐานะ <b>\"นายจ้าง\"</b> ไม่ใช่ลูกจ้าง จึงไม่สามารถและไม่ต้องขึ้นทะเบียนเป็นผู้ประกันตน (มาตรา 33) ในบริษัทของตนเอง\n\nแต่เมื่อไหร่ก็ตามที่บริษัทเริ่มมีการจ้าง <b>\"พนักงานประจำ\"</b> กฎหมายบังคับให้บริษัทต้องทำเรื่องขึ้นทะเบียนนายจ้างและนำส่งประกันสังคมให้พนักงานภายใน 30 วันนับจากวันรับพนักงานเข้าทำงาน"
+                }
             ]
         }
     },
-    "process": {
-        "title": "",
-        "steps": [
-            {
-                "title": "",
-                "description": ""
+    "en": {
+        "hero": {
+            "title": "Start your business professionally. Complete company registration in one place.",
+            "subtitle": "Trusted by over 300 entrepreneurs.",
+            "description": "Turn complicated paperwork and legal procedures into a simple process. We take care of everything from setting up your company with the Department of Business Development (DBD), to requesting a corporate ID and tax identification number, so you can fully focus on growing your business.",
+            "cta": "Call 092-882-5556"
+        },
+        "promotion": {
+            "title": "Special Deal!",
+            "subtitle": "Don't miss out on special prices and exclusive benefits specifically for this service.",
+            "cta": "View Promotion",
+            "slug": "company-registration-deal"
+        },
+        "features": {
+            "title": "Everything you need to start a business",
+            "items": [
+                {
+                    "title": "Business Consulting & Planning",
+                    "description": "We analyze your business structure and provide the most suitable advice for your enterprise on a case-by-case basis.",
+                    "icon": "Lightbulb"
+                },
+                {
+                    "title": "Document & MOA Preparation",
+                    "description": "Accurately prepare official forms via the DBD Biz Regist system.",
+                    "icon": "FileSignature"
+                },
+                {
+                    "title": "Corporate Registration Filing",
+                    "description": "Act as your representative to submit documents to the Department of Business Development (DBD) at every step.",
+                    "icon": "Landmark"
+                },
+                {
+                    "title": "Tax ID Request",
+                    "description": "Handle your corporate ID and tax identification number requests to prepare your company's tax system.",
+                    "icon": "Calculator"
+                }
+            ]
+        },
+        "benefits": {
+            "title": "Fully loaded! Exclusive privileges just for you",
+            "items": [
+                { "title": "No monthly accounting commitment!", "icon": "Unlock" },
+                { "title": "FREE! Check and reserve up to 3 company names", "icon": "SearchCheck" },
+                { "title": "FREE! 1 self-inking company stamp", "icon": "Stamp" },
+                { "title": "FREE! Request e-Filing password for DBD", "icon": "KeySquare" },
+                { "title": "FREE! Request password for Revenue Department", "icon": "KeyRound" },
+                { "title": "FREE! Document set for opening a corporate bank account", "icon": "Wallet" },
+                { "title": "FREE! Complete set of company certificate documents (DBD)", "icon": "ScrollText" },
+                { "title": "FREE! Tax technique training course (Value 5,900 THB)", "icon": "GraduationCap" },
+                { "title": "FREE! Business cards for issuing receipts/tax invoices", "icon": "Contact2" }
+            ]
+        },
+        "requirements": {
+            "title": "What to prepare for company registration",
+            "subtitle": "Simply prepare the basic information, and leave the rest to us.",
+            "documents": {
+                "title": "1. Important documents required",
+                "items": [
+                    "At least 2 shareholders \n\n1. Thai shareholders: Copy of ID card (Clear copy of front and back)\n\n2. Foreign shareholders: Copy of passport (Only the first page with photo)\n\n3. Corporate shareholders: Copy of company certificate and copy of authorized director's ID card",
+                    "House registration to be used as the company's head office",
+                    "Stamp design (if any)"
+                ]
             },
-            {
-                "title": "",
-                "description": ""
-            },
-            {
-                "title": "",
-                "description": ""
-            },
-            {
-                "title": "",
-                "description": ""
+            "information": {
+                "title": "2. Basic business information",
+                "items": [
+                    "Desired company name (Thai-English)",
+                    "Shareholding ratio (in percentages, e.g., 99% and 1%)",
+                    "List of directors (Authorized signatories)",
+                    "Business description",
+                    "Registered capital amount (e.g., 1 million THB capital, 25% paid-up)",
+                    "Company contact info \n1. Phone number \n2. Email",
+                    "Shareholders' contact info \n1. Phone number \n2. Email \n3. LINE ID"
+                ]
             }
-        ]
+        },
+        "process": {
+            "title": "4 simple registration steps",
+            "steps": [
+                {
+                    "title": "Consultation & Name Reservation",
+                    "description": "Registering a company is like tailoring a suit. We discuss your needs, help plan the business structure that best fits your enterprise, and proceed to reserve the company name.",
+                    "icon": "MessageSquareText"
+                },
+                {
+                    "title": "Prepare documents via government system",
+                    "description": "Our team prepares all documents and official forms via the DBD Biz Regist system of the Department of Business Development, Ministry of Commerce.",
+                    "icon": "FileStack"
+                },
+                {
+                    "title": "Online Identity Verification (No travel required)",
+                    "description": "Shareholders and directors verify their identity (Thai citizens use the ThaID app, foreigners use the DBD e-Service app) by scanning a QR Code or clicking a verification link sent by the DBD to their personal email.",
+                    "icon": "SmartphoneNfc"
+                },
+                {
+                    "title": "Submit Registration & Deliver",
+                    "description": "Our team submits the application to the DBD. Once the registration and company certificate are approved, we will verify the accuracy and deliver the essential documents along with your free gifts directly to you.",
+                    "icon": "Gift"
+                }
+            ]
+        },
+        "faq": {
+            "title": "Frequently Asked Questions",
+            "items": [
+                {
+                    "question": "What is the difference between a Company Limited (Co., Ltd.) and a Limited Partnership (Ltd. Part.), and which one should I choose?",
+                    "answer": "Although both structures have <b>\"Juristic Person\"</b> status and share the same tax rates, the main differences lie in <b>\"Liability for Debts\"</b>, <b>\"Credibility\"</b>, and <b>\"Restrictions on Foreigners\"</b>. To make it easier to understand, here is a comparison:\n\n<b>1. Company Limited (Co., Ltd.)</b>\n• <b>Liability:</b> <i>\"Limited Liability\"</i> (except for directors). All shareholders are liable for the company's debts only up to the unpaid amount of the shares they hold (clearly separates personal finances from business finances, securing personal assets).\n• <b>Credibility:</b> Very High. Suitable for long-term business, government bidding, large projects, attracting investors, or B2B (Business-to-Business) operations.\n• <b>Foreigners / Work Permit:</b> Highly Recommended. Laws and government agencies fully support the Co., Ltd. structure, whether it's for foreign shareholding (up to 49%), Work Permit applications, Business Visas, or BOI investment promotions.\n• <b>Founders required:</b> Currently, a minimum of only 2 shareholders is required to register.\n\n<b>2. Limited Partnership (Ltd. Part.)</b>\n• <b>Liability:</b> The law requires at least one partner to act as the <i>\"Managing Partner\"</i>, who has <b>\"Unlimited Liability\"</b> for the business's debts (if the business faces issues, the managing partner may have to use personal assets to pay off debts). Other partners have limited liability based on their investment.\n• <b>Credibility:</b> Moderate. Suitable for small businesses, Family Businesses, or enterprises where partners are not strict about the legal entity type.\n• <b>Foreigners:</b> Not Recommended. Having foreigners in a Ltd. Part. involves complex legal restrictions. If a foreigner acts as the managing partner, the business may be classified as a foreign entity, making operations and Work Permits much more difficult than a Co., Ltd.\n• <b>Founders required:</b> Requires only 2 founders, same as a company registration.\n\n<b>Summary: Which one to choose?</b>\n• Choose a <b>\"Company Limited\"</b> if you seek the highest credibility, plan to expand the business or branches, want to limit risks to personal assets, have foreign shareholders, or plan to hire foreign employees (Work Permit).\n• Choose a <b>\"Limited Partnership\"</b> if it is a family business or close friends you trust 100%, the business has low debt risk, no foreign partners, and you prefer the simplest management structure.\n\n<i><b>Note:</b> Currently, the costs of registration, monthly accounting, and annual financial closing for Co., Ltd. and Ltd. Part. do not differ significantly. Registering as a \"Company Limited\" generally yields maximum long-term benefits.</i>"
+                },
+                {
+                    "question": "How many days does the processing take?",
+                    "answer": "It typically takes about <b>1-5 working days</b> (excluding public holidays) after receiving complete information and documents from the customer. The timeframe may depend on the queue at the Department of Business Development at that time, as well as the customer's promptness in online identity verification (or OTP submission)."
+                },
+                {
+                    "question": "What is registered capital? Can I register a company if I don't have the full amount?",
+                    "answer": "Simply put, <b>\"Registered Capital\"</b> is the working capital used for business operations. <i>\"Paying up the registered capital\"</i> does not mean paying someone else; it means depositing funds into the company's bank account (which can be opened after the company is registered).\n\n• <b>If you don't have the full lump sum:</b> You can gradually deposit the money. For example, if the registered capital is 1 million THB (minimum 25% paid-up is 250,000 THB), you can start by opening the account with 1,000 THB. When there are business expenses, you can deposit money into the company account and pay it out. These funds do not need to sit idle in the account; they can be used as working capital.\n• <b>Caution:</b> Except in cases where the company has <b>Foreign Shareholders</b> or is a fully Thai-owned company with <b>registered capital exceeding 5 million THB</b>. In these cases, the law requires actual funds and a Bank Certificate to be shown during the registration process."
+                },
+                {
+                    "question": "Can foreigners be shareholders, and what financial proof is required?",
+                    "answer": "Yes, they can, through a general Company Limited registration. If the company is to be a Thai juristic person, Thai nationals must hold at least 51% of the shares. The conditions regarding financial proof and shareholding ratio are as follows:\n\n• <b>If there are foreign shareholders (Thais hold 51% or more):</b> Thai partners must present a Bank Certificate corresponding to their share proportion (Foreigners do not need to show funds). For example:\n  1. To prepare for a Work Permit: Registered capital of 2 million THB (100% paid-up), Thais holding 51% must show at least 1,020,000 THB in deposits.\n  2. No Work Permit required: Registered capital of 1 million THB (minimum 25% paid-up), Thais holding 51% must show at least 127,500 THB in deposits.\n• <b>If shareholders are 100% Thai:</b> If the registered capital does not exceed 5,000,000 THB, no financial proof is needed during the setup process (even if shareholders change and foreigners are brought in later).\n• <b>If foreigners want to hold 100% (or more than 49%):</b> The company can be registered, but upon completion, the company cannot conduct any business until permission is granted through one of the following channels:\n  1. Apply for a Foreign Business License (FBL). Operations can begin once the license is received.\n  2. Apply for investment promotion (BOI). Once the BOI certificate is received, you must apply for a Foreign Business Certificate (FBC) before commencing operations."
+                },
+                {
+                    "question": "If I don't have an office or location yet, can I still register?",
+                    "answer": "<b>Yes, you can register.</b> Normally, a commercial building, shophouse, townhouse, townhome, or residential house can be used as the registration address. However, if you do not have these locations or prefer not to use your own, we offer a <b>Virtual Office</b> service in 3 formats to suit your needs:\n1. Use as an address for company registration only.\n2. Use as an address for company registration + VAT registration.\n3. Use as an address for company registration + VAT registration + Employer registration with Social Security."
+                },
+                {
+                    "question": "If I don't own the house, such as using a rental house or condo, can I register the company there?",
+                    "answer": "Yes, but there are additional documents required:\n\n• <b>Rental house/space:</b> A <i>\"Letter of Consent to use the premises\"</i> is required, along with certified copies of the ID card and house registration of the \"House Master or Property Owner\" to be submitted with the registration.\n• <b>Condominiums:</b> Although legally permissible, you should check with the condo's juristic person first. Many projects have internal regulations prohibiting the use of residential units as corporate entities or offices to prevent disturbances to other residents. <i>(We have a Virtual Office service to solve this problem for you.)</i>"
+                },
+                {
+                    "question": "If I don't have a landline telephone number (02), can I register a company?",
+                    "answer": "Yes, you can. Currently, the Department of Business Development allows entrepreneurs to use mobile phone numbers for registration. Additionally, for emails, you can use general emails (such as @gmail.com or @hotmail.com); it is not necessary to use an email under the company's domain name."
+                },
+                {
+                    "question": "Once the company is registered, can I start doing business immediately?",
+                    "answer": "For most businesses with general operations, once the juristic person registration is complete, you can start business operations immediately. However, there are <b>certain businesses regulated by specific laws</b> that require additional licenses from relevant government agencies before operating legally. For example:\n\n• <b>Tourism and Travel:</b> Tour operators, guides, hotels, accommodations (Must apply for a TAT license or relevant agency).\n• <b>Health and Food:</b> Restaurants, clinics, hospitals, spas, production/import of food, drugs, cosmetics (Must apply for FDA or Ministry of Public Health license).\n• <b>Industrial:</b> Factories, possession of chemicals or hazardous materials (Must apply for a license from the Department of Industrial Works).\n• <b>Financial:</b> Credit businesses like Pico Finance (Must apply for a license from the Bank of Thailand or Ministry of Finance).\n• <b>Others:</b> Recruitment agencies, security services, logistics and transportation, etc. (Must apply from the Department of Employment, Royal Thai Police, Department of Land Transport, etc.)\n\n<i><b>Important Note:</b> Some businesses may be reserved exclusively for Thai nationals. If your company has foreign shareholders exceeding the set limit or foreign authorized directors, you might not be able to obtain that specific license. To save time and money, we recommend studying the requirements or directly inquiring with the regulating agency before initiating the company registration.</i>"
+                },
+                {
+                    "question": "Do I need to register for Value Added Tax (VAT 7%) immediately after company registration?",
+                    "answer": "Not necessarily. Company registration and VAT registration are separate processes. A company is only required to register for VAT when its business income <b>exceeds 1.8 million THB per year</b>.\n\nHowever, if your company needs to import/export goods or deal with other B2B corporate partners who require you to issue tax invoices, your company <b>must apply for VAT registration</b> to be able to issue tax invoices to your partners."
+                },
+                {
+                    "question": "After registering the company, but before starting sales or generating income, do I need to do accounting?",
+                    "answer": "<b>Yes, you must.</b> This is a common misconception among new entrepreneurs. By law (Accounting Act B.E. 2543), all juristic entities are required to prepare accounts and submit relevant reports to the DBD and the Revenue Department, <b>\"even if there is no income, no expenses, or business operations haven't started in that month or year.\"</b> Failure to submit by the deadline will result in significant legal fines."
+                },
+                {
+                    "question": "As a company director, do I need to deduct my salary for Social Security?",
+                    "answer": "<b>No.</b> If you are an authorized director and a major shareholder, you are considered an <b>\"Employer\"</b>, not an employee. Therefore, you cannot and do not need to register as an insured person (Section 33) in your own company.\n\nHowever, as soon as the company starts hiring <b>\"Full-time employees\"</b>, the law requires the company to register as an employer and submit Social Security for the employees within 30 days from the date they start working."
+                }
+            ]
+        }
     },
-    "faq": {
-        "title": "",
-        "items": [
-            {
-                "question": "",
-                "answer": ""
+    "zh-Hans": {
+        "hero": {
+            "title": "以专业方式开启您的业务。一站式完成公司注册",
+            "subtitle": "获得超过300位企业家的信赖",
+            "description": "让繁琐的文书工作和法律程序变得简单。从在商业发展局（DBD）设立公司、申请法人编号到获取纳税识别号，我们全程为您打理，让您能全心全意专注于业务的增长。",
+            "cta": "致电 092-882-5556"
+        },
+        "promotion": {
+            "title": "特别优惠！",
+            "subtitle": "千万不要错过专为此项服务提供的特价和专属福利",
+            "cta": "查看优惠",
+            "slug": "company-registration-deal"
+        },
+        "features": {
+            "title": "开启业务所需的一切",
+            "items": [
+                {
+                    "title": "商业咨询与规划",
+                    "description": "分析业务结构，并针对您的企业提供最合适的建议（视具体情况而定）。",
+                    "icon": "Lightbulb"
+                },
+                {
+                    "title": "准备文件与组织大纲",
+                    "description": "通过数字法人注册系统（DBD Biz Regist）准确填写官方表格。",
+                    "icon": "FileSignature"
+                },
+                {
+                    "title": "提交法人注册",
+                    "description": "作为您的代表，向商务部商业发展局（DBD）提交所有阶段的文件。",
+                    "icon": "Landmark"
+                },
+                {
+                    "title": "申请纳税识别号",
+                    "description": "处理法人编号和纳税识别号的申请，为公司的税务系统做好准备。",
+                    "icon": "Calculator"
+                }
+            ]
+        },
+        "benefits": {
+            "title": "诚意满满！为您量身定制的专属特权",
+            "items": [
+                { "title": "无月度会计绑定！", "icon": "Unlock" },
+                { "title": "免费！检查并保留最多3个公司名称", "icon": "SearchCheck" },
+                { "title": "免费！自带墨水公司印章1枚", "icon": "Stamp" },
+                { "title": "免费！申请商业发展局（DBD）电子申报密码", "icon": "KeySquare" },
+                { "title": "免费！申请税务局密码", "icon": "KeyRound" },
+                { "title": "免费！用于开设公司银行账户的文件包", "icon": "Wallet" },
+                { "title": "免费！全套公司证明文件（DBD）", "icon": "ScrollText" },
+                { "title": "免费！税务技巧培训课程（价值 5,900 泰铢）", "icon": "GraduationCap" },
+                { "title": "免费！用于开具收据/税务发票的名片", "icon": "Contact2" }
+            ]
+        },
+        "requirements": {
+            "title": "公司注册需要准备什么",
+            "subtitle": "只需准备基本信息，其余交给我们",
+            "documents": {
+                "title": "1. 需提供的核心文件",
+                "items": [
+                    "至少2名股东 \n\n1. 泰国股东：身份证复印件（正反面清晰）\n\n2. 外籍股东：护照复印件（仅含照片的首页）\n\n3. 法人股东：公司证明复印件及授权签字人身份证复印件",
+                    "用作公司总部的房屋户口本",
+                    "印章设计（如有）"
+                ]
             },
-            {
-                "question": "",
-                "answer": ""
-            },
-            {
-                "question": "",
-                "answer": ""
-            },
-            {
-                "question": "",
-                "answer": ""
-            },
-            {
-                "question": "",
-                "answer": ""
-            },
-            {
-                "question": "",
-                "answer": ""
+            "information": {
+                "title": "2. 基本业务信息",
+                "items": [
+                    "期望的公司名称（泰文-英文）",
+                    "各股东持股比例（百分比，如 99% 和 1%）",
+                    "董事名单（授权签字人）",
+                    "业务性质说明",
+                    "注册资本金额（例如：注册资本100万泰铢，实缴25%）",
+                    "公司联系信息 \n1. 电话号码 \n2. 电子邮箱",
+                    "各股东联系信息 \n1. 电话号码 \n2. 电子邮箱 \n3. LINE ID"
+                ]
             }
-        ]
+        },
+        "process": {
+            "title": "轻松注册的4个步骤",
+            "steps": [
+                {
+                    "title": "咨询与名称预留",
+                    "description": "注册公司就像量身定制西装。我们将与您沟通以了解信息，帮助规划最适合您企业的业务结构，并进行公司名称预留。",
+                    "icon": "MessageSquareText"
+                },
+                {
+                    "title": "通过政府系统准备文件",
+                    "description": "我们的团队将通过商业部商业发展局的数字法人注册系统（DBD Biz Regist）准备所有文件和官方表格。",
+                    "icon": "FileStack"
+                },
+                {
+                    "title": "在线身份验证（无需出行）",
+                    "description": "股东和董事进行身份验证（泰国人使用ThaID应用，外国人使用DBD e-Service应用）。可选择扫描QR码或点击DBD发送到个人邮箱的链接进行验证。",
+                    "icon": "SmartphoneNfc"
+                },
+                {
+                    "title": "提交注册并交付",
+                    "description": "团队向商业发展局提交申请。一旦登记和公司证明获批，我们将核实无误后，将重要文件连同免费赠品直接送到您手中。",
+                    "icon": "Gift"
+                }
+            ]
+        },
+        "faq": {
+            "title": "常见问题 (FAQ)",
+            "items": [
+                {
+                    "question": "有限公司（Co., Ltd.）和有限合伙企业（Ltd. Part.）有什么区别？我应该选择哪种？",
+                    "answer": "虽然这两种形式都具有 <b>“法人”</b> 地位并适用相同的税率，但主要区别在于 <b>“债务责任”</b>、<b>“信誉度”</b> 和 <b>“对外籍人士的限制”</b>。为便于理解，我们做如下比较：\n\n<b>1. 有限公司 (Company Limited)</b>\n• <b>责任：</b> <i>“有限责任”</i>（董事除外）。所有股东对公司债务的责任仅限于其未缴足的股份金额（明确区分个人资金与商业资金，保护个人资产）。\n• <b>信誉度：</b> 极高。适合长期业务、政府招标、大型项目、吸引投资者或B2B（企业对企业）业务。\n• <b>外籍人士/工作许可证 (Work Permit)：</b> 最合适。法律和政府机构非常支持有限公司结构，无论是外资持股（不超过49%）、申请工作许可证、商务签证还是申请投资促进委员会（BOI）优惠等。\n• <b>创始人人数：</b> 目前只需至少2名股东即可注册。\n\n<b>2. 有限合伙企业 (Limited Partnership)</b>\n• <b>责任：</b> 法律强制要求至少有1名合伙人担任 <i>“管理合伙人”</i>，其对企业债务承担 <b>“无限责任”</b>（若企业出现问题，管理合伙人可能需要动用个人资产偿还债务）。其他合伙人的责任仅限于其投资金额。\n• <b>信誉度：</b> 中等。适合小型企业、家族企业 (Family Business) 或对法人形式要求不严的业务伙伴。\n• <b>外籍人士：</b> 不推荐。有限合伙企业中如果有外籍人士，将面临复杂的法律限制。如果让外籍人士担任管理合伙人，可能会被认定为外资法人，这使得业务运营和申请工作许可证比有限公司困难得多。\n• <b>创始人人数：</b> 与注册公司一样，只需2名创始人。\n\n<b>总结：该如何选择？</b>\n• 如果您追求最高信誉度、计划未来扩张业务或分公司、希望限制风险以免波及个人资产、有外籍股东或计划雇佣外籍员工（申请工作许可证），请选择 <b>“有限公司”</b>。\n• 如果是家族企业或100%信任的密友、企业债务风险低、没有外籍合伙人，且希望管理结构越简单越好，可选择 <b>“有限合伙企业”</b>。\n\n<i><b>备注：</b> 目前，有限公司和有限合伙企业的注册费、每月会计费及年度财务结算费相差不大。从长远利益来看，注册为“有限公司”能够实现效益最大化。</i>"
+                },
+                {
+                    "question": "办理时间需要几天？",
+                    "answer": "在收到客户完整的信息和文件后，通常需要约 <b>1-5个工作日</b>（不含公共假日）。该时间可能取决于当时商业发展局的工作排队情况，以及客户在线验证身份（或发送OTP）的快捷程度。"
+                },
+                {
+                    "question": "什么是注册资本？如果没有与注册资本等额的资金，还能注册公司吗？",
+                    "answer": "简单来说，<b>“注册资本”</b> 是指用于企业运营的营运资金。<i>“实缴注册资本”</i> 并不是把钱付给某人，而是将资金存入公司名下的银行账户（公司注册完成后即可开户）。\n\n• <b>如果没有全额资金：</b> 您可以分批将资金存入账户。例如，如果注册资本为100万泰铢（最低实缴25%，即250,000泰铢），您可以先用1,000泰铢开设公司账户。当有业务相关支出时，再将钱存入公司账户并支付出去。这笔钱不需要闲置在账户里，可以直接用于业务周转。\n• <b>注意事项：</b> 除非公司有 <b>外籍股东</b>，或 <b>注册资本超过500万泰铢</b> 的全泰资公司。在这些情况下，法律强制要求必须有真实资金，并在注册阶段出示银行存款证明（Bank Certificate）。"
+                },
+                {
+                    "question": "外国人可以参股吗？需要提供怎样的财务证明？",
+                    "answer": "可以的，通过注册一般有限公司即可。如果希望公司保持泰国国籍法人的地位，泰国人必须合计持股至少51%。关于财务证明和持股比例的条件如下：\n\n• <b>有外籍人士参股的情况（泰国人持股51%及以上）：</b> 泰国合伙人必须根据其持股比例出示银行存款证明（Bank Certificate）（外籍人士无需出示资金）。例如：\n  1. 准备申请工作许可证 (Work Permit)：注册资本200万泰铢（100%实缴），持股51%的泰国人必须出示至少1,020,000泰铢的存款。\n  2. 不需要申请工作许可证：注册资本100万泰铢（最低实缴25%），持股51%的泰国人必须出示至少127,500泰铢的存款。\n• <b>100%泰国股东的情况：</b> 如果注册资本不超过5,000,000泰铢，在设立公司阶段无需出示财务证明（即使日后更换股东引入外籍人士也是如此）。\n• <b>外籍人士希望持股100%（或超过49%）的情况：</b> 可以注册设立公司，但注册完成后，公司还不能从事任何业务，直到通过以下任一渠道获得许可：\n  1. 申请外商经营许可证 (Foreign Business License: FBL)，获得许可后方可开展业务。\n  2. 申请投资促进 (BOI)，获得投资促进证书后，必须办理外商经营证明 (Foreign Business Certificate: FBC)，获批后方可开展业务。"
+                },
+                {
+                    "question": "如果还没有办公室或营业地点，可以注册吗？",
+                    "answer": "<b>可以注册。</b> 通常可以使用商业楼、店屋、联排别墅、联排客机或住宅作为注册地点。但如果没有这些地点或不方便使用自有地点，我们提供 <b>虚拟办公室 (Virtual Office)</b> 服务，有3种形式可满足您的需求：\n1. 仅用作公司注册的地址\n2. 用作公司注册 + 增值税 (VAT) 注册的地址\n3. 用作公司注册 + 增值税 (VAT) 注册 + 社保雇主登记的地址"
+                },
+                {
+                    "question": "如果房屋不是自己的，比如租用的房屋或公寓，可以用来注册公司吗？",
+                    "answer": "可以，但会有附加条件或文件要求，如下：\n\n• <b>租用房屋/场地的情况：</b> 必须在提交注册时附上 <i>“场地使用同意书”</i>，并附上已签字确认的“户主或产权所有人”的身份证复印件和房屋户口本复印件。\n• <b>公寓 (Condo) 的情况：</b> 尽管法律允许，但应先与该公寓的物业管理方核实。因为许多项目有内部规定，不允许将住宅单元注册为法人或办公室，以防止混乱和打扰其他住户。<i>（我们提供虚拟办公室服务为您解决此问题）</i>"
+                },
+                {
+                    "question": "如果没有座机号码（02开头），可以注册公司吗？",
+                    "answer": "可以注册。目前商业发展局为方便企业家，已允许使用手机号码进行注册。此外，在电子邮件方面，也可以使用普通邮箱（如 @gmail.com 或 @hotmail.com），不强制使用公司域名下的企业邮箱。"
+                },
+                {
+                    "question": "公司注册完成后，可以马上开始营业吗？",
+                    "answer": "对于大多数普通类型的企业，法人注册完成后即可马上开始营业。但是，<b>某些受特定法律管制的业务</b> 必须先向相关政府机构申请额外的许可证后，才能合法运营。例如：\n\n• <b>旅游及出行类：</b> 旅游业务、导游、酒店、住宿（需向泰国国家旅游局 TAT 或相关机构申请许可证）\n• <b>健康与食品类：</b> 餐厅、诊所、医疗机构、水疗中心、生产或进口食品、药品、化妆品（需向食药监局 FDA 或卫生部或相关机构申请许可）\n• <b>工业类：</b> 工厂、持有化学品或危险物质（需向工厂局或相关机构申请许可证）\n• <b>金融类：</b> 信贷业务，如Pico Finance（需向泰国央行或财政部申请许可）\n• <b>其他类别：</b> 人力资源中介、安保服务、物流和运输等（需向就业厅、国家警察总署、陆路交通厅或其他相关机构申请许可证）\n\n<i><b>重要提示：</b> 某些业务可能有仅限泰国人从事的规定。如果您的公司有外籍股东或持股比例超过规定，或有外籍董事作为授权签字人，可能会导致无法申请该特定许可证。因此，为避免浪费时间和金钱，建议在开始注册公司前，先向监管该业务的机构研究或咨询相关规定。</i>"
+                },
+                {
+                    "question": "公司注册后，必须马上注册增值税 (VAT 7%) 吗？",
+                    "answer": "不一定。公司注册和增值税 (VAT) 注册是两个独立的部分。只有当公司营业收入 <b>每年超过 180 万泰铢</b> 时，才会被强制要求注册 VAT。\n\n但是，如果公司需要进出口商品，或与要求您开具税务发票的法人实体（B2B）进行交易，公司则 <b>必须申请注册增值税 (VAT)</b>，以便能向合作伙伴开具税务发票。"
+                },
+                {
+                    "question": "公司注册完了，但还没有开始销售或没有收入，还需要做账吗？",
+                    "answer": "<b>必须做。</b> 这是新手企业家常有的误解。根据法律（佛历2543年会计法），所有类型的法人都必须编制账目，并向商业发展局和税务局提交相关报告，<b>“即使在那个月或那一年里没有收入、没有支出，或者根本没有开始营业（零申报）”</b>。如果未按时提交，将面临相当高的法定罚款。"
+                },
+                {
+                    "question": "作为公司董事，需要扣除自己的工资来交社保吗？",
+                    "answer": "<b>不需要。</b> 如果您是授权签字董事兼主要股东，您将处于 <b>“雇主”</b> 的地位，而不是员工。因此，您不能也无需在自己的公司里登记为被保险人（第33条）。\n\n但一旦公司开始雇佣 <b>“全职员工”</b>，法律强制要求公司必须在员工入职之日起30天内，为员工办理雇主登记并缴纳社保。"
+                }
+            ]
+        }
+    },
+    "zh-Hant": {
+        "hero": {
+            "title": "以專業方式開啟您的業務。一站式完成公司註冊",
+            "subtitle": "獲得超過300位企業家的信賴",
+            "description": "讓繁瑣的文書工作和法律程序變得簡單。從在商業發展局（DBD）設立公司、申請法人編號到獲取納稅識別號，我們全程為您打理，讓您能全心全意專注於業務的增長。",
+            "cta": "致電 092-882-5556"
+        },
+        "promotion": {
+            "title": "特別優惠！",
+            "subtitle": "千萬不要錯過專為此項服務提供的特價和專屬福利",
+            "cta": "查看優惠",
+            "slug": "company-registration-deal"
+        },
+        "features": {
+            "title": "開啟業務所需的一切",
+            "items": [
+                {
+                    "title": "商業諮詢與規劃",
+                    "description": "分析業務結構，並針對您的企業提供最合適的建議（視具體情況而定）。",
+                    "icon": "Lightbulb"
+                },
+                {
+                    "title": "準備文件與組織大綱",
+                    "description": "透過數位法人註冊系統（DBD Biz Regist）準確填寫官方表格。",
+                    "icon": "FileSignature"
+                },
+                {
+                    "title": "提交法人註冊",
+                    "description": "作為您的代表，向商務部商業發展局（DBD）提交所有階段的文件。",
+                    "icon": "Landmark"
+                },
+                {
+                    "title": "申請納稅識別號",
+                    "description": "處理法人編號和納稅識別號的申請，為公司的稅務系統做好準備。",
+                    "icon": "Calculator"
+                }
+            ]
+        },
+        "benefits": {
+            "title": "誠意滿滿！為您量身定制的專屬特權",
+            "items": [
+                { "title": "無月度會計綁定！", "icon": "Unlock" },
+                { "title": "免費！檢查並保留最多3個公司名稱", "icon": "SearchCheck" },
+                { "title": "免費！自帶墨水公司印章1枚", "icon": "Stamp" },
+                { "title": "免費！申請商業發展局（DBD）電子申報密碼", "icon": "KeySquare" },
+                { "title": "免費！申請稅務局密碼", "icon": "KeyRound" },
+                { "title": "免費！用於開設公司銀行帳戶的文件包", "icon": "Wallet" },
+                { "title": "免費！全套公司證明文件（DBD）", "icon": "ScrollText" },
+                { "title": "免費！稅務技巧培訓課程（價值 5,900 泰銖）", "icon": "GraduationCap" },
+                { "title": "免費！用於開具收據/稅務發票的名片", "icon": "Contact2" }
+            ]
+        },
+        "requirements": {
+            "title": "公司註冊需要準備什麼",
+            "subtitle": "只需準備基本資訊，其餘交給我們",
+            "documents": {
+                "title": "1. 需提供的核心文件",
+                "items": [
+                    "至少2名股東 \n\n1. 泰國股東：身分證影本（正反面清晰）\n\n2. 外籍股東：護照影本（僅含照片的首頁）\n\n3. 法人股東：公司證明影本及授權簽字人身分證影本",
+                    "用作公司總部的房屋戶口本",
+                    "印章設計（如有）"
+                ]
+            },
+            "information": {
+                "title": "2. 基本業務資訊",
+                "items": [
+                    "期望的公司名稱（泰文-英文）",
+                    "各股東持股比例（百分比，如 99% 和 1%）",
+                    "董事名單（授權簽字人）",
+                    "業務性質說明",
+                    "註冊資本金額（例如：註冊資本100萬泰銖，實繳25%）",
+                    "公司聯絡資訊 \n1. 電話號碼 \n2. 電子郵件",
+                    "各股東聯絡資訊 \n1. 電話號碼 \n2. 電子郵件 \n3. LINE ID"
+                ]
+            }
+        },
+        "process": {
+            "title": "輕鬆註冊的4個步驟",
+            "steps": [
+                {
+                    "title": "諮詢與名稱預留",
+                    "description": "註冊公司就像量身定制西裝。我們將與您溝通以了解資訊，幫助規劃最適合您企業的業務結構，並進行公司名稱預留。",
+                    "icon": "MessageSquareText"
+                },
+                {
+                    "title": "透過政府系統準備文件",
+                    "description": "我們的團隊將透過商業部商業發展局的數位法人註冊系統（DBD Biz Regist）準備所有文件和官方表格。",
+                    "icon": "FileStack"
+                },
+                {
+                    "title": "線上身分驗證（無需出行）",
+                    "description": "股東和董事進行身分驗證（泰國人使用ThaID應用，外國人使用DBD e-Service應用）。可選擇掃描QR碼或點擊DBD發送到個人信箱的連結進行驗證。",
+                    "icon": "SmartphoneNfc"
+                },
+                {
+                    "title": "提交註冊並交付",
+                    "description": "團隊向商業發展局提交申請。一旦登記和公司證明獲批，我們將核實無誤後，將重要文件連同免費贈品直接送到您手中。",
+                    "icon": "Gift"
+                }
+            ]
+        },
+        "faq": {
+            "title": "常見問題 (FAQ)",
+            "items": [
+                {
+                    "question": "有限公司（Co., Ltd.）和有限合夥企業（Ltd. Part.）有什麼區別？我應該選擇哪種？",
+                    "answer": "雖然這兩種形式都具有 <b>「法人」</b> 地位並適用相同的稅率，但主要區別在於 <b>「債務責任」</b>、<b>「信譽度」</b> 和 <b>「對外籍人士的限制」</b>。為便於理解，我們做如下比較：\n\n<b>1. 有限公司 (Company Limited)</b>\n• <b>責任：</b> <i>「有限責任」</i>（董事除外）。所有股東對公司債務的責任僅限於其未繳足的股份金額（明確區分個人資金與商業資金，保護個人資產）。\n• <b>信譽度：</b> 極高。適合長期業務、政府招標、大型項目、吸引投資者或B2B（企業對企業）業務。\n• <b>外籍人士/工作許可證 (Work Permit)：</b> 最合適。法律和政府機構非常支持有限公司結構，無論是外資持股（不超過49%）、申請工作許可證、商務簽證還是申請投資促進委員會（BOI）優惠等。\n• <b>創始人人數：</b> 目前只需至少2名股東即可註冊。\n\n<b>2. 有限合夥企業 (Limited Partnership)</b>\n• <b>責任：</b> 法律強制要求至少有1名合夥人擔任 <i>「管理合夥人」</i>，其對企業債務承擔 <b>「無限責任」</b>（若企業出現問題，管理合夥人可能需要動用個人資產償還債務）。其他合夥人的責任僅限於其投資金額。\n• <b>信譽度：</b> 中等。適合小型企業、家族企業 (Family Business) 或對法人形式要求不嚴的業務夥伴。\n• <b>外籍人士：</b> 不推薦。有限合夥企業中如果有外籍人士，將面臨複雜的法律限制。如果讓外籍人士擔任管理合夥人，可能會被認定為外資法人，這使得業務運營和申請工作許可證比有限公司困難得多。\n• <b>創始人人數：</b> 與註冊公司一樣，只需2名創始人。\n\n<b>總結：該如何選擇？</b>\n• 如果您追求最高信譽度、計劃未來擴張業務或分公司、希望限制風險以免波及個人資產、有外籍股東或計劃雇傭外籍員工（申請工作許可證），請選擇 <b>「有限公司」</b>。\n• 如果是家族企業或100%信任的密友、企業債務風險低、沒有外籍合夥人，且希望管理結構越簡單越好，可選擇 <b>「有限合夥企業」</b>。\n\n<i><b>備註：</b> 目前，有限公司和有限合夥企業的註冊費、每月會計費及年度財務結算費相差不大。從長遠利益來看，註冊為「有限公司」能夠實現效益最大化。</i>"
+                },
+                {
+                    "question": "辦理時間需要幾天？",
+                    "answer": "在收到客戶完整的資訊和文件後，通常需要約 <b>1-5個工作日</b>（不含國定假日）。該時間可能取決於當時商業發展局的工作排隊情況，以及客戶線上驗證身分（或發送OTP）的快捷程度。"
+                },
+                {
+                    "question": "什麼是註冊資本？如果沒有與註冊資本等額的資金，還能註冊公司嗎？",
+                    "answer": "簡單來說，<b>「註冊資本」</b> 是指用於企業營運的營運資金。<i>「實繳註冊資本」</i> 並不是把錢付給某人，而是將資金存入公司名下的銀行帳戶（公司註冊完成後即可開戶）。\n\n• <b>如果沒有全額資金：</b> 您可以分批將資金存入帳戶。例如，如果註冊資本為100萬泰銖（最低實繳25%，即250,000泰銖），您可以先用1,000泰銖開設公司帳戶。當有業務相關支出時，再將錢存入公司帳戶並支付出去。這筆錢不需要閒置在帳戶裡，可以直接用於業務周轉。\n• <b>注意事項：</b> 除非公司有 <b>外籍股東</b>，或 <b>註冊資本超過500萬泰銖</b> 的全泰資公司。在這些情況下，法律強制要求必須有真實資金，並在註冊階段出示銀行存款證明（Bank Certificate）。"
+                },
+                {
+                    "question": "外國人可以參股嗎？需要提供怎樣的財務證明？",
+                    "answer": "可以的，透過註冊一般有限公司即可。如果希望公司保持泰國國籍法人的地位，泰國人必須合計持股至少51%。關於財務證明和持股比例的條件如下：\n\n• <b>有外籍人士參股的情況（泰國人持股51%及以上）：</b> 泰國合夥人必須根據其持股比例出示銀行存款證明（Bank Certificate）（外籍人士無需出示資金）。例如：\n  1. 準備申請工作許可證 (Work Permit)：註冊資本200萬泰銖（100%實繳），持股51%的泰國人必須出示至少1,020,000泰銖的存款。\n  2. 不需要申請工作許可證：註冊資本100萬泰銖（最低實繳25%），持股51%的泰國人必須出示至少127,500泰銖的存款。\n• <b>100%泰國股東的情況：</b> 如果註冊資本不超過5,000,000泰銖，在設立公司階段無需出示財務證明（即使日後更換股東引入外籍人士也是如此）。\n• <b>外籍人士希望持股100%（或超過49%）的情況：</b> 可以註冊設立公司，但註冊完成後，公司還不能從事任何業務，直到透過以下任一管道獲得許可：\n  1. 申請外商營業許可證 (Foreign Business License: FBL)，獲得許可後方可開展業務。\n  2. 申請投資促進 (BOI)，獲得投資促進證書後，必須辦理外商營業證明 (Foreign Business Certificate: FBC)，獲批後方可開展業務。"
+                },
+                {
+                    "question": "如果還沒有辦公室或營業地點，可以註冊嗎？",
+                    "answer": "<b>可以註冊。</b> 通常可以使用商業樓、店屋、透天厝、連棟別墅或住宅作為註冊地點。但如果沒有這些地點或不方便使用自有地點，我們提供 <b>虛擬辦公室 (Virtual Office)</b> 服務，有3種形式可滿足您的需求：\n1. 僅用作公司註冊的地址\n2. 用作公司註冊 + 營業稅 (VAT) 註冊的地址\n3. 用作公司註冊 + 營業稅 (VAT) 註冊 + 勞健保雇主登記的地址"
+                },
+                {
+                    "question": "如果房屋不是自己的，比如租用的房屋或公寓，可以用來註冊公司嗎？",
+                    "answer": "可以，但會有附加條件或文件要求，如下：\n\n• <b>租用房屋/場地的情況：</b> 必須在提交註冊時附上 <i>「場地使用同意書」</i>，並附上已簽字確認的「戶主或產權所有人」的身分證影本和房屋戶口本影本。\n• <b>公寓 (Condo) 的情況：</b> 儘管法律允許，但應先與該公寓的管委會核實。因為許多建案有內部規定，不允許將住宅單元註冊為法人或辦公室，以防止混亂和打擾其他住戶。<i>（我們提供虛擬辦公室服務為您解決此問題）</i>"
+                },
+                {
+                    "question": "如果沒有市話號碼（02開頭），可以註冊公司嗎？",
+                    "answer": "可以註冊。目前商業發展局為方便企業家，已允許使用手機號碼進行註冊。此外，在電子郵件方面，也可以使用普通信箱（如 @gmail.com 或 @hotmail.com），不強制使用公司網域下的企業信箱。"
+                },
+                {
+                    "question": "公司註冊完成後，可以馬上開始營業嗎？",
+                    "answer": "對於大多數普通類型的企業，法人註冊完成後即可馬上開始營業。但是，<b>某些受特定法律管制的業務</b> 必須先向相關政府機構申請額外的許可證後，才能合法營運。例如：\n\n• <b>旅遊及出行類：</b> 旅遊業務、導遊、飯店、住宿（需向泰國國家旅遊局 TAT 或相關機構申請許可證）\n• <b>健康與食品類：</b> 餐廳、診所、醫療機構、SPA、生產或進口食品、藥品、化妝品（需向食藥監局 FDA 或衛生部或相關機構申請許可）\n• <b>工業類：</b> 工廠、持有化學品或危險物質（需向工業局或相關機構申請許可證）\n• <b>金融類：</b> 信貸業務，如Pico Finance（需向泰國央行或財政部申請許可）\n• <b>其他類別：</b> 人力資源仲介、保全服務、物流和運輸等（需向就業廳、國家警察總署、陸路交通廳或其他相關機構申請許可證）\n\n<i><b>重要提示：</b> 某些業務可能有僅限泰國人從事的規定。如果您的公司有外籍股東或持股比例超過規定，或有外籍董事作為授權簽字人，可能會導致無法申請該特定許可證。因此，為避免浪費時間和金錢，建議在開始註冊公司前，先向監管該業務的機構研究或諮詢相關規定。</i>"
+                },
+                {
+                    "question": "公司註冊後，必須馬上註冊營業稅 (VAT 7%) 嗎？",
+                    "answer": "不一定。公司註冊和營業稅 (VAT) 註冊是兩個獨立的部分。只有當公司營業收入 <b>每年超過 180 萬泰銖</b> 時，才會被強制要求註冊 VAT。\n\n但是，如果公司需要進出口商品，或與要求您開具統一發票的法人實體（B2B）進行交易，公司則 <b>必須申請註冊營業稅 (VAT)</b>，以便能向合作夥伴開具稅務發票。"
+                },
+                {
+                    "question": "公司註冊完了，但還沒有開始銷售或沒有收入，還需要做帳嗎？",
+                    "answer": "<b>必須做。</b> 這是新手企業家常有的誤解。根據法律（佛曆2543年會計法），所有類型的法人都必須編製帳目，並向商業發展局和稅務局提交相關報告，<b>「即使在那個月或那一年裡沒有收入、沒有支出，或者根本沒有開始營業（零申報）」</b>。如果未按時提交，將面臨相當高的法定罰款。"
+                },
+                {
+                    "question": "作為公司董事，需要扣除自己的工資來交勞健保嗎？",
+                    "answer": "<b>不需要。</b> 如果您是授權簽字董事兼主要股東，您將處於 <b>「雇主」</b> 的地位，而不是員工。因此，您不能也無需在自己的公司裡登記為被保險人（第33條）。\n\n但一旦公司開始雇傭 <b>「全職員工」</b>，法律強制要求公司必須在員工入職之日起30天內，為員工辦理雇主登記並繳納社會保險。"
+                }
+            ]
+        }
+    },
+    "ja": {
+        "hero": {
+            "title": "プロフェッショナルなビジネスの立ち上げ。会社設立を1か所で完結",
+            "subtitle": "300人以上の起業家からの信頼",
+            "description": "煩雑な書類手続きや法的手続きを簡単に。商業登記局（DBD）での会社設立、法人番号の取得、納税者番号の取得まで全てサポートします。お客様はビジネスの成長に専念していただけます。",
+            "cta": "電話 092-882-5556"
+        },
+        "promotion": {
+            "title": "特別プロモーション！",
+            "subtitle": "このサービス限定の特別価格と特典をお見逃しなく",
+            "cta": "プロモーションを見る",
+            "slug": "company-registration-deal"
+        },
+        "features": {
+            "title": "ビジネス立ち上げに必要なすべて",
+            "items": [
+                {
+                    "title": "ビジネスコンサルティングと計画",
+                    "description": "ビジネス構造を分析し、お客様の企業に最適なアドバイスをケースバイケースで提供します。",
+                    "icon": "Lightbulb"
+                },
+                {
+                    "title": "書類・定款の作成",
+                    "description": "デジタル法人登記システム（DBD Biz Regist）を通じて、公式フォームを正確に作成します。",
+                    "icon": "FileSignature"
+                },
+                {
+                    "title": "法人登記の提出",
+                    "description": "お客様の代理として、すべての段階で商業登記局（DBD）への書類提出を行います。",
+                    "icon": "Landmark"
+                },
+                {
+                    "title": "納税者番号の取得",
+                    "description": "法人の税務システムの準備として、法人番号および納税者番号の取得を処理します。",
+                    "icon": "Calculator"
+                }
+            ]
+        },
+        "benefits": {
+            "title": "充実！あなただけの限定特典",
+            "items": [
+                { "title": "月次会計の縛りなし！", "icon": "Unlock" },
+                { "title": "無料！会社名の調査と予約（最大3つ）", "icon": "SearchCheck" },
+                { "title": "無料！インク内蔵型会社印 1個", "icon": "Stamp" },
+                { "title": "無料！商業登記局（DBD）電子申告パスワードの取得", "icon": "KeySquare" },
+                { "title": "無料！歳入局パスワードの取得", "icon": "KeyRound" },
+                { "title": "無料！法人口座開設用書類一式", "icon": "Wallet" },
+                { "title": "無料！会社登記簿謄本一式 (DBD)", "icon": "ScrollText" },
+                { "title": "無料！税務テクニック研修コース（5,900バーツ相当）", "icon": "GraduationCap" },
+                { "title": "無料！領収書・税務請求書発行用名刺", "icon": "Contact2" }
+            ]
+        },
+        "requirements": {
+            "title": "会社設立に必要なもの",
+            "subtitle": "基本的な情報をご準備いただくだけで、あとはお任せください",
+            "documents": {
+                "title": "1. 必要な重要書類",
+                "items": [
+                    "2名以上の株主 \n\n1. タイ人株主の場合：IDカードのコピー（表裏が鮮明なもの）\n\n2. 外国人株主の場合：パスポートのコピー（顔写真のあるページのみ）\n\n3. 法人株主の場合：会社登記簿謄本のコピーおよび代表取締役のIDカードのコピー",
+                    "本店所在地として使用する住居登録証（タビアンバーン）",
+                    "社印のデザイン（ある場合）"
+                ]
+            },
+            "information": {
+                "title": "2. 基本的なビジネス情報",
+                "items": [
+                    "希望する会社名（タイ語・英語）",
+                    "各株主の持株比率（例：99%と1%など）",
+                    "取締役（サイン権限者）のリスト",
+                    "事業内容の説明",
+                    "登録資本金（例：資本金100万バーツ、払込25%）",
+                    "会社の連絡先 \n1. 電話番号 \n2. メールアドレス",
+                    "各株主の連絡先 \n1. 電話番号 \n2. メールアドレス \n3. LINE ID"
+                ]
+            }
+        },
+        "process": {
+            "title": "簡単4ステップの登記手順",
+            "description": "会社設立はスーツを仕立てるようなものです。情報を伺い、お客様の企業に最適なビジネス構造を計画し、会社名の予約を進めます。",
+            "steps": [
+                {
+                    "title": "ご相談と名称予約",
+                    "description": "会社設立はオーダースーツを作るようなものです。話し合いを通じて情報を把握し、お客様の事業に最適な構造を計画し、社名予約を進めます。",
+                    "icon": "MessageSquareText"
+                },
+                {
+                    "title": "政府システムを通じた書類作成",
+                    "description": "私たちのチームが、商業省商業登記局のデジタル法人登記システム（DBD Biz Regist）を通じて、すべての書類と公式フォームを作成します。",
+                    "icon": "FileStack"
+                },
+                {
+                    "title": "オンライン本人確認（来店不要）",
+                    "description": "株主および取締役は本人確認を行います（タイ人はThaIDアプリ、外国人はDBD e-Serviceアプリを使用）。QRコードをスキャンするか、DBDから個人のメールに送信されるリンクをクリックして確認できます。",
+                    "icon": "SmartphoneNfc"
+                },
+                {
+                    "title": "登記提出と納品",
+                    "description": "チームが商業登記局に申請を提出します。登記と会社証明書が承認された後、正確性を確認し、重要書類と無料特典を直接お客様にお届けします。",
+                    "icon": "Gift"
+                }
+            ]
+        },
+        "faq": {
+            "title": "よくある質問 (FAQ)",
+            "items": [
+                {
+                    "question": "株式会社（Co., Ltd.）と合資会社（Ltd. Part.）の違いは何ですか？どちらを選ぶべきですか？",
+                    "answer": "どちらの形態も <b>「法人」</b> としての地位を持ち、税率は同じですが、主な違いは <b>「負債に対する責任」</b>、<b>「信頼性」</b>、および <b>「外国人に対する制限」</b> にあります。わかりやすく比較すると以下のようになります：\n\n<b>1. 株式会社 (Company Limited)</b>\n• <b>責任：</b> <i>「有限責任」</i>（取締役を除く）。すべての株主は、自身が保有する株式の未払い分の金額を限度として会社の負債に対して責任を負います（個人の資金と事業の資金が明確に分離され、個人の資産が保護されます）。\n• <b>信頼性：</b> 非常に高い。長期的なビジネス、政府の入札、大型プロジェクト、投資家の誘致、またはB2B（企業間取引）ビジネスに適しています。\n• <b>外国人 / 労働許可証 (Work Permit)：</b> 最も適しています。法律や政府機関は、外国人の株式保有（49％まで）、労働許可証の申請、ビジネスビザ、BOI（投資委員会）の恩恵など、株式会社の構造を全面的にサポートしています。\n• <b>発起人の数：</b> 現在、最低2名の株主で設立可能です。\n\n<b>2. 合資会社 (Limited Partnership)</b>\n• <b>責任：</b> 法律により、少なくとも1名のパートナーが <i>「無限責任社員（Managing Partner）」</i> を務めることが義務付けられており、事業の負債に対して <b>「無限責任」</b> を負います（事業に問題が生じた場合、個人の資産で借金を返済しなければならない可能性があります）。他のパートナーの責任は投資額に限定されます。\n• <b>信頼性：</b> 中程度。小規模ビジネス、家族経営 (Family Business)、または取引先が法人形態に厳格でない場合に適しています。\n• <b>外国人：</b> お勧めしません。合資会社に外国人が含まれる場合、複雑な法的制限を受けます。外国人が無限責任社員を務める場合、外国法人と見なされる可能性があり、事業運営や労働許可証の取得が株式会社よりもはるかに困難になります。\n• <b>発起人の数：</b> 株式会社の設立と同様に、2名の発起人で設立可能です。\n\n<b>まとめ：どちらを選ぶべきか？</b>\n• 最高の信頼性を求める場合、将来的に事業や支店を拡大する計画がある場合、個人の資産に影響を与えないようリスクを限定したい場合、外国人株主がいる場合、または外国人従業員を雇用する計画がある場合（労働許可証の取得）は、<b>「株式会社」</b> を選択してください。\n• 家族経営や100％信頼できる親しい友人同士である場合、事業の負債リスクが低い場合、外国人パートナーがいない場合、そして管理構造をできるだけシンプルにしたい場合は、<b>「合資会社」</b> を選択してください。\n\n<i><b>注：</b> 現在、株式会社と合資会社の設立費用、月次会計費用、および年次決算費用に大きな違いはありません。長期的なメリットを最大化するためには、「株式会社」として設立することをお勧めします。</i>"
+                },
+                {
+                    "question": "手続きには何日かかりますか？",
+                    "answer": "お客様から完全な情報と書類を受け取ってから、通常 <b>約1〜5営業日</b>（祝日を除く）かかります。ただし、この期間は当時の商業登記局の混雑状況や、お客様側のオンライン本人確認（またはOTP送信）の迅速さによって異なります。"
+                },
+                {
+                    "question": "登録資本金とは何ですか？登録資本金と同額の資金がない場合でも会社を設立できますか？",
+                    "answer": "簡単に言うと、<b>「登録資本金」</b> は事業運営に使用される運転資金です。<i>「資本金の払込み」</i> とは、誰かに支払うのではなく、会社名義の銀行口座（会社設立後に開設可能）に資金を入金することを意味します。\n\n• <b>全額の資金がない場合：</b> 段階的に口座に入金することができます。例えば、登録資本金が100万バーツ（最低払込25％、つまり250,000バーツ）の場合、まずは1,000バーツで会社の口座を開設し、事業に関連する支出が発生した際に会社口座に入金してそこから支払うことができます。この資金は口座に眠らせておく必要はなく、事業の運転資金として使用できます。\n• <b>注意点：</b> 会社に <b>外国人株主</b> がいる場合、または <b>登録資本金が500万バーツを超える</b> 全員タイ人株主の会社の場合は例外です。これらの場合、法律で実際の資金の証明が義務付けられており、登記の段階で銀行の残高証明書（Bank Certificate）を提示する必要があります。"
+                },
+                {
+                    "question": "外国人も株主になれますか？その場合、どのような財務証明が必要ですか？",
+                    "answer": "はい、一般的な株式会社の登記を通じて可能です。会社がタイ国籍の法人としての地位を維持したい場合、タイ人が合計で少なくとも51％の株式を保有する必要があります。財務証明と持株比率に関する条件は以下の通りです：\n\n• <b>外国人が共同出資する場合（タイ人が51％以上保有）：</b> タイ人パートナーは、自分の持株比率に応じた銀行の残高証明書（Bank Certificate）を提示する必要があります（外国人は資金を提示する必要はありません）。例：\n  1. 労働許可証 (Work Permit) の申請準備：登録資本金200万バーツ（100％払込）でタイ人が51％を保有する場合、少なくとも1,020,000バーツの預金を提示する必要があります。\n  2. 労働許可証が不要な場合：登録資本金100万バーツ（最低払込25％）でタイ人が51％を保有する場合、少なくとも127,500バーツの預金を提示する必要があります。\n• <b>タイ人株主が100％の場合：</b> 登録資本金が5,000,000バーツを超えない場合、会社設立段階で財務証明を提示する必要はありません（後に株主を変更して外国人を迎え入れた場合でも同様です）。\n• <b>外国人が100％（または49％を超える）株式の保有を希望する場合：</b> 会社の設立登記は可能ですが、登記完了後、以下のいずれかの方法で許可を得るまで、会社はいかなる事業も行うことができません。\n  1. 外国人事業ライセンス (Foreign Business License: FBL) を申請する。ライセンスを取得した後、事業を開始できます。\n  2. 投資奨励 (BOI) を申請する。投資奨励証書を取得した後、外国人事業証明書 (Foreign Business Certificate: FBC) を申請し、証明書を取得した後に事業を開始できます。"
+                },
+                {
+                    "question": "まだオフィスや所在地がない場合でも設立できますか？",
+                    "answer": "<b>設立可能です。</b> 通常、商業ビル、ショップハウス、タウンハウス、タウンホーム、または住宅を登記場所として使用できます。もしこれらの場所がない場合や、自身の場所を使用するのが不都合な場合は、お客様のニーズに合わせた3つの形式の <b>バーチャルオフィス (Virtual Office)</b> サービスを提供しています：\n1. 会社設立登記のみの住所として使用\n2. 会社設立登記 ＋ 付加価値税 (VAT) 登録の住所として使用\n3. 会社設立登記 ＋ 付加価値税 (VAT) 登録 ＋ 社会保険の雇用主登録の住所として使用"
+                },
+                {
+                    "question": "賃貸住宅やコンドミニアムなど、自分の持ち家ではない場所で会社を設立できますか？",
+                    "answer": "可能ですが、追加の条件や書類が必要です。\n\n• <b>賃貸住宅・スペースの場合：</b> 登記を提出する際、<i>「場所使用同意書」</i> とともに、署名済みの「家主または物件所有者」のIDカードのコピーおよび住居登録証（タビアンバーン）のコピーを添付する必要があります。\n• <b>コンドミニアムの場合：</b> 法律上は許可されていますが、事前にそのコンドミニアムの管理組合に確認する必要があります。多くの物件では、他の住民への迷惑を防ぐため、居住ユニットを法人やオフィスとして登記することを禁止する内部規定があります。<i>（この問題を解決するためにバーチャルオフィスサービスを提供しています）</i>"
+                },
+                {
+                    "question": "固定電話番号（02番号）がなくても会社を設立できますか？",
+                    "answer": "設立可能です。現在、商業登記局は起業家の利便性を高めるため、携帯電話番号での登記を許可しています。また、メールアドレスについても、一般的なメール（@gmail.comや@hotmail.comなど）を使用でき、会社のドメイン名でのメールアドレスを使用する必要はありません。"
+                },
+                {
+                    "question": "会社設立が完了したら、すぐに事業を開始できますか？",
+                    "answer": "一般的な業種のほとんどの事業では、法人登記が完了すればすぐに事業を開始できます。しかし、<b>特定の法律で規制されている一部の事業</b> では、合法的に事業を運営する前に、関連する政府機関から追加のライセンス（許可証）を取得する必要があります。例：\n\n• <b>観光および旅行関連：</b> 旅行業、ツアーガイド、ホテル、宿泊施設（タイ国政府観光庁 TAT または関連機関への許可申請が必要）\n• <b>健康および食品関連：</b> レストラン、クリニック、医療機関、スパ、食品・医薬品・化粧品の製造または輸入（食品医薬品局 FDA または保健省、または関連機関への許可申請が必要）\n• <b>工業関連：</b> 工場、化学物質や危険物の所持（工場局または関連機関への許可申請が必要）\n• <b>金融関連：</b> ピコファイナンスなどの信用事業（タイ中央銀行または財務省への許可申請が必要）\n• <b>その他の分野：</b> 人材派遣、警備サービス、物流・運送など（雇用局、国家警察庁、陸運局、またはその他の関連機関への許可申請が必要）\n\n<i><b>重要な注意事項：</b> 一部の事業には、タイ人のみに留保されている規定がある場合があります。あなたの会社に外国人の株主がいる、規定の割合を超えている、またはサイン権限を持つ外国人取締役がいる場合、その特定のライセンスを申請できない可能性があります。したがって、時間と費用の無駄を防ぐため、会社設立の手続きを始める前に、その事業を監督する機関に規定を調査または問い合わせることをお勧めします。</i>"
+                },
+                {
+                    "question": "会社設立後、すぐに付加価値税（VAT 7%）の登録をしなければなりませんか？",
+                    "answer": "必ずしもそうではありません。会社設立と付加価値税（VAT）登録は別のものです。会社がVATの登録を義務付けられるのは、事業からの収入が <b>年間180万バーツを超えた場合</b> のみです。\n\nただし、会社が商品の輸出入を行う必要がある場合、またはタックスインボイス（税務請求書）の発行を求めてくる法人取引先（B2B）と取引を行う場合は、パートナーにタックスインボイスを発行できるように、会社は <b>付加価値税（VAT）の登録を申請する必要があります</b>。"
+                },
+                {
+                    "question": "会社は設立しましたが、まだ販売を開始していない、または収入がない場合でも会計処理を行う必要がありますか？",
+                    "answer": "<b>行う必要があります。</b> これは初心者の起業家によくある誤解です。法律（仏暦2543年会計法）により、すべての法人は会計帳簿を作成し、商業登記局および歳入局に関連する報告書を提出することが義務付けられています。<b>「その月またはその年に収入がない、支出がない、または事業を全く開始していない（ゼロ申告）場合でも」</b> 提出しなければなりません。期限までに提出を怠った場合、かなり高額な法的罰金が科せられます。"
+                },
+                {
+                    "question": "会社の取締役として、社会保険に加入するために自分の給与から天引きする必要がありますか？",
+                    "answer": "<b>必要ありません。</b> あなたがサイン権限を持つ取締役であり主要株主である場合、従業員ではなく <b>「雇用主」</b> の立場と見なされます。したがって、自身の会社で被保険者（第33条）として登録することはできず、その必要もありません。\n\nただし、会社が <b>「正社員」</b> の雇用を開始した場合、法律により、会社は従業員が働き始めた日から30日以内に雇用主登録を行い、社会保険料を納付することが義務付けられています。"
+                }
+            ]
+        }
+    },
+    "ko": {
+        "hero": {
+            "title": "전문적인 비즈니스의 시작. 법인 설립을 한 곳에서 완벽하게",
+            "subtitle": "300명 이상의 기업가가 신뢰하는 서비스",
+            "description": "복잡한 서류 작업과 법적 절차를 간편하게 바꿔드립니다. 상무부 사업개발국(DBD) 법인 설립부터 법인 번호 및 납세자 번호 발급까지 모든 것을 처리해 드립니다. 고객님은 비즈니스 성장에만 온전히 집중하세요.",
+            "cta": "전화 092-882-5556"
+        },
+        "promotion": {
+            "title": "특별 프로모션! ",
+            "subtitle": "본 서비스만을 위한 특별한 가격과 혜택을 놓치지 마세요.",
+            "cta": "프로모션 확인하기",
+            "slug": "company-registration-deal"
+        },
+        "features": {
+            "title": "비즈니스 시작에 필요한 모든 것",
+            "items": [
+                {
+                    "title": "비즈니스 컨설팅 및 계획",
+                    "description": "비즈니스 구조를 분석하여 고객님의 기업에 가장 적합한 조언을 맞춤형으로 제공합니다.",
+                    "icon": "Lightbulb"
+                },
+                {
+                    "title": "서류 및 정관 작성",
+                    "description": "디지털 법인 등록 시스템(DBD Biz Regist)을 통해 공식 양식을 정확하게 작성합니다.",
+                    "icon": "FileSignature"
+                },
+                {
+                    "title": "법인 등록 제출",
+                    "description": "고객님의 대리인으로서 상무부 사업개발국(DBD)에 모든 단계의 서류를 제출합니다.",
+                    "icon": "Landmark"
+                },
+                {
+                    "title": "납세자 번호 신청",
+                    "description": "법인의 세무 시스템을 준비하기 위해 법인 번호 및 납세자 식별 번호 신청을 처리합니다.",
+                    "icon": "Calculator"
+                }
+            ]
+        },
+        "benefits": {
+            "title": "풍성한 혜택! 고객님만을 위한 독점 혜택",
+            "items": [
+                { "title": "월 기장 대행 약정 없음!", "icon": "Unlock" },
+                { "title": "무료! 회사명 조회 및 예약 (최대 3개)", "icon": "SearchCheck" },
+                { "title": "무료! 잉크 내장형 법인 인감 1개", "icon": "Stamp" },
+                { "title": "무료! 사업개발국(DBD) 전자 신고 비밀번호 신청", "icon": "KeySquare" },
+                { "title": "무료! 국세청 비밀번호 신청", "icon": "KeyRound" },
+                { "title": "무료! 법인 은행 계좌 개설용 서류 세트", "icon": "Wallet" },
+                { "title": "무료! 법인 등기부등본(DBD) 풀세트", "icon": "ScrollText" },
+                { "title": "무료! 세무 테크닉 교육 과정 (5,900바트 상당)", "icon": "GraduationCap" },
+                { "title": "무료! 영수증/세금계산서 발행용 명함", "icon": "Contact2" }
+            ]
+        },
+        "requirements": {
+            "title": "법인 설립 준비 사항",
+            "subtitle": "기본 정보만 준비해 주시면 나머지는 저희가 알아서 처리하겠습니다.",
+            "documents": {
+                "title": "1. 필요 핵심 서류",
+                "items": [
+                    "주주 최소 2명 \n\n1. 태국인 주주의 경우: 신분증 사본 (앞뒷면이 선명해야 함)\n\n2. 외국인 주주의 경우: 여권 사본 (사진이 있는 첫 페이지만)\n\n3. 법인 주주의 경우: 법인 등기부등본 사본 및 서명권자의 신분증 사본",
+                    "본점으로 사용할 주소지의 하우스 레지스트리(타비안반)",
+                    "법인 인감 도안 (있는 경우)"
+                ]
+            },
+            "information": {
+                "title": "2. 기본 비즈니스 정보",
+                "items": [
+                    "원하는 회사명 (태국어-영어)",
+                    "각 주주의 지분율 (백분율, 예: 99% 및 1%)",
+                    "이사 명단 (법적 서명 권한자)",
+                    "사업 내용 설명",
+                    "등록 자본금 (예: 자본금 100만 바트, 납입 자본금 25%)",
+                    "회사 연락처 정보 \n1. 전화번호 \n2. 이메일",
+                    "각 주주의 연락처 정보 \n1. 전화번호 \n2. 이메일 \n3. LINE ID"
+                ]
+            }
+        },
+        "process": {
+            "title": "간편한 4단계 등록 절차",
+            "steps": [
+                {
+                    "title": "상담 및 회사명 예약",
+                    "description": "법인 설립은 맞춤 정장을 만드는 것과 같습니다. 상담을 통해 정보를 파악하고, 고객님의 기업에 가장 적합한 사업 구조를 계획하며, 회사명 예약을 진행합니다.",
+                    "icon": "MessageSquareText"
+                },
+                {
+                    "title": "정부 시스템을 통한 서류 준비",
+                    "description": "저희 팀이 상무부 사업개발국의 디지털 법인 등록 시스템(DBD Biz Regist)을 통해 모든 서류와 공식 양식을 준비합니다.",
+                    "icon": "FileStack"
+                },
+                {
+                    "title": "온라인 본인 인증 (방문 불필요)",
+                    "description": "주주 및 이사는 본인 인증을 진행합니다(태국인은 ThaID 앱, 외국인은 DBD e-Service 앱 사용). QR 코드를 스캔하거나 DBD에서 개인 이메일로 전송한 링크를 클릭하여 인증할 수 있습니다.",
+                    "icon": "SmartphoneNfc"
+                },
+                {
+                    "title": "등록 제출 및 서류 전달",
+                    "description": "팀에서 사업개발국에 신청서를 제출합니다. 등록 및 회사 증명서가 승인되면 정확성을 확인한 후, 중요 서류와 무료 혜택을 고객님께 직접 전달해 드립니다.",
+                    "icon": "Gift"
+                }
+            ]
+        },
+        "faq": {
+            "title": "자주 묻는 질문 (FAQ)",
+            "items": [
+                {
+                    "question": "유한회사(Co., Ltd.)와 합자회사(Ltd. Part.)의 차이점은 무엇이며 어떤 것을 선택해야 합니까?",
+                    "answer": "두 형태 모두 <b>\"법인\"</b> 자격을 가지며 세율은 동일하지만, <b>\"부채에 대한 책임\"</b>, <b>\"신뢰도\"</b>, <b>\"외국인에 대한 제한\"</b> 측면에서 주요 차이점이 있습니다. 이해를 돕기 위해 다음과 같이 비교해 드립니다.\n\n<b>1. 유한회사 (Company Limited)</b>\n• <b>책임:</b> <i>\"유한 책임\"</i> (이사 제외). 모든 주주는 자신이 보유한 주식의 미납 금액까지만 회사의 부채에 대한 책임을 집니다(개인의 자금과 사업 자금을 명확히 분리하여 개인 자산을 보호합니다).\n• <b>신뢰도:</b> 매우 높음. 장기 비즈니스, 정부 입찰, 대규모 프로젝트, 투자자 유치 또는 B2B(기업 간 거래) 비즈니스에 적합합니다.\n• <b>외국인 / 워크퍼밋 (Work Permit):</b> 가장 적합함. 법률 및 정부 기관은 외국인 지분 보유(최대 49%), 워크퍼밋 신청, 비즈니스 비자, BOI(투자청) 혜택 등 유한회사 구조를 전적으로 지원합니다.\n• <b>발기인 수:</b> 현재 최소 2명의 주주만으로 등록 가능합니다.\n\n<b>2. 합자회사 (Limited Partnership)</b>\n• <b>책임:</b> 법적으로 최소 1명의 파트너가 <i>\"무한책임사원(Managing Partner)\"</i>을 맡아야 하며, 사업의 부채에 대해 <b>\"무한 책임\"</b>을 집니다(사업에 문제가 발생할 경우 개인 자산을 사용하여 빚을 갚아야 할 수도 있습니다). 다른 파트너의 책임은 투자 금액으로 제한됩니다.\n• <b>신뢰도:</b> 보통. 소규모 비즈니스, 가족 기업 (Family Business) 또는 거래처가 법인 형태를 엄격하게 따지지 않는 파트너십에 적합합니다.\n• <b>외국인:</b> 권장하지 않음. 합자회사에 외국인이 포함될 경우 복잡한 법적 제한이 따릅니다. 외국인이 무한책임사원을 맡을 경우 외국 법인으로 간주될 수 있으며, 이로 인해 유한회사보다 사업 운영 및 워크퍼밋 취득이 훨씬 어려워집니다.\n• <b>발기인 수:</b> 회사 등록과 마찬가지로 2명의 발기인으로 설립 가능합니다.\n\n<b>요약: 어떤 것을 선택해야 할까요?</b>\n• 가장 높은 신뢰도를 원하시거나, 향후 사업이나 지점을 확장할 계획이 있거나, 개인 자산에 영향을 미치지 않도록 리스크를 제한하고 싶거나, 외국인 주주가 있거나, 외국인 직원을 고용할 계획(워크퍼밋 취득)이 있다면 <b>\"유한회사\"</b>를 선택하십시오.\n• 가족 기업이나 100% 신뢰할 수 있는 가까운 친구 사이이고, 부채 리스크가 낮으며, 외국인 파트너가 없고, 관리 구조를 최대한 단순하게 유지하고 싶다면 <b>\"합자회사\"</b>를 선택하십시오.\n\n<i><b>참고:</b> 현재 유한회사와 합자회사의 등록 비용, 월 기장 대행 비용, 연간 결산 비용에는 큰 차이가 없습니다. 장기적인 이익을 극대화하려면 \"유한회사\"로 등록하는 것이 좋습니다.</i>"
+                },
+                {
+                    "question": "처리 기간은 며칠이 소요되나요?",
+                    "answer": "고객으로부터 완전한 정보와 서류를 접수한 후 대개 <b>약 1~5 영업일</b>(공휴일 제외)이 소요됩니다. 단, 이 기간은 당시 사업개발국의 대기열 상황과 고객 측의 온라인 본인 인증(또는 OTP 전송)의 신속성에 따라 달라질 수 있습니다."
+                },
+                {
+                    "question": "등록 자본금이란 무엇입니까? 등록 자본금과 동일한 금액이 없어도 회사를 설립할 수 있습니까?",
+                    "answer": "간단히 말해, <b>\"등록 자본금\"</b>은 사업 운영에 사용되는 운영 자금입니다. <i>\"자본금 납입\"</i>은 누군가에게 돈을 지불하는 것이 아니라, 회사 명의의 은행 계좌(법인 설립 후 개설 가능)에 자금을 입금하는 것을 의미합니다.\n\n• <b>전체 금액이 없는 경우:</b> 계좌에 단계적으로 입금할 수 있습니다. 예를 들어, 등록 자본금이 100만 바트(최소 납입 25%, 즉 250,000바트)인 경우, 우선 1,000바트로 회사 계좌를 개설하고 비즈니스 관련 지출이 있을 때 회사 계좌에 돈을 입금한 후 지불할 수 있습니다. 이 자금은 계좌에 묶여 있을 필요가 없으며 사업 운영 자금으로 바로 사용할 수 있습니다.\n• <b>주의 사항:</b> 회사에 <b>외국인 주주</b>가 있거나 <b>등록 자본금이 500만 바트를 초과하는</b> 100% 태국인 주주 회사인 경우는 예외입니다. 이러한 경우 법적으로 실제 자금을 증명해야 하므로, 등록 단계에서 은행 잔고 증명서(Bank Certificate)를 제출해야 합니다."
+                },
+                {
+                    "question": "외국인도 주주가 될 수 있습니까? 어떤 재정 증명이 필요합니까?",
+                    "answer": "네, 일반 유한회사 등록을 통해 가능합니다. 회사가 태국 국적 법인의 지위를 유지하려면 태국인이 총 최소 51%의 지분을 보유해야 합니다. 재정 증명 및 지분율에 관한 조건은 다음과 같습니다.\n\n• <b>외국인이 공동 투자하는 경우 (태국인이 51% 이상 보유):</b> 태국인 파트너는 자신의 지분율에 따른 은행 잔고 증명서(Bank Certificate)를 제출해야 합니다(외국인은 자금을 증명할 필요가 없습니다). 예:\n  1. 워크퍼밋 (Work Permit) 신청 준비: 등록 자본금 200만 바트(100% 납입), 태국인이 51%를 보유하는 경우 최소 1,020,000바트의 예금을 증명해야 합니다.\n  2. 워크퍼밋이 필요 없는 경우: 등록 자본금 100만 바트(최소 납입 25%), 태국인이 51%를 보유하는 경우 최소 127,500바트의 예금을 증명해야 합니다.\n• <b>태국인 주주 100%인 경우:</b> 등록 자본금이 5,000,000바트를 초과하지 않는 경우 법인 설립 단계에서 재정 증명이 필요하지 않습니다(나중에 주주를 변경하여 외국인을 영입하더라도 마찬가지입니다).\n• <b>외국인이 100%(또는 49% 초과) 지분 보유를 원하는 경우:</b> 법인 설립 등록은 가능하지만, 등록 완료 후 다음 경로 중 하나를 통해 허가를 받을 때까지 회사는 어떠한 비즈니스도 수행할 수 없습니다.\n  1. 외국인 사업 라이선스 (Foreign Business License: FBL)를 신청합니다. 라이선스를 획득한 후 사업을 시작할 수 있습니다.\n  2. 투자청(BOI) 혜택을 신청합니다. 투자 장려 인증서를 받은 후 외국인 사업 증명서 (Foreign Business Certificate: FBC)를 신청하여 증명서를 발급받은 후에 사업을 시작할 수 있습니다."
+                },
+                {
+                    "question": "아직 사무실이나 사업장 주소가 없어도 설립할 수 있습니까?",
+                    "answer": "<b>설립 가능합니다.</b> 일반적으로 상가 건물, 숍하우스, 타운하우스, 타운홈 또는 주택을 등록 주소지로 사용할 수 있습니다. 그러나 이러한 장소가 없거나 자신의 장소를 사용하는 것이 불편한 경우, 고객의 요구에 맞춘 3가지 형태의 <b>가상 오피스 (Virtual Office)</b> 서비스를 제공하고 있습니다.\n1. 법인 등록 전용 주소지로 사용\n2. 법인 등록 + 부가가치세 (VAT) 등록 주소지로 사용\n3. 법인 등록 + 부가가치세 (VAT) 등록 + 사회보험 고용주 등록 주소지로 사용"
+                },
+                {
+                    "question": "본인 소유의 주택이 아닌 임대 주택이나 콘도 등에서도 법인을 설립할 수 있습니까?",
+                    "answer": "가능하지만 추가 조건이나 서류가 필요합니다.\n\n• <b>임대 주택/공간의 경우:</b> 등록 서류 제출 시 <i>\"장소 사용 동의서\"</i>와 함께 서명이 완료된 \"세대주 또는 건물주\"의 신분증 사본 및 타비안반(하우스 레지스트리) 사본을 첨부해야 합니다.\n• <b>콘도미니엄의 경우:</b> 법적으로는 허용되지만 사전에 해당 콘도미니엄의 관리사무소(법인)에 확인해야 합니다. 다른 주민들에게 불편을 주는 것을 방지하기 위해 주거 단위를 법인이나 사무실로 등록하는 것을 금지하는 내부 규정이 있는 곳이 많기 때문입니다. <i>(저희 가상 오피스 서비스로 이 문제를 해결하실 수 있습니다)</i>"
+                },
+                {
+                    "question": "유선 전화번호(02 번호)가 없어도 법인을 설립할 수 있습니까?",
+                    "answer": "설립 가능합니다. 현재 사업개발국은 기업가의 편의를 위해 휴대전화 번호를 사용한 등록을 허용하고 있습니다. 또한 이메일의 경우에도 일반 이메일(예: @gmail.com 또는 @hotmail.com)을 사용할 수 있으며, 굳이 회사 도메인 이름의 이메일을 사용할 필요는 없습니다."
+                },
+                {
+                    "question": "법인 설립이 완료되면 바로 비즈니스를 시작할 수 있습니까?",
+                    "answer": "일반적인 비즈니스의 경우 법인 등록이 완료되면 즉시 사업을 시작할 수 있습니다. 그러나 <b>특정 법률에 의해 규제되는 일부 비즈니스</b>의 경우 합법적으로 운영하기 전에 관련 정부 기관으로부터 추가 라이선스(허가)를 취득해야 합니다. 예:\n\n• <b>관광 및 여행 분야:</b> 여행사, 가이드, 호텔, 숙박시설 (태국 관광청 TAT 또는 관련 기관에 라이선스 신청 필요)\n• <b>건강 및 식품 분야:</b> 레스토랑, 클리닉, 의료 기관, 스파, 식품·의약품·화장품 생산 및 수입 (식약청 FDA 또는 보건부 또는 관련 기관에 허가 신청 필요)\n• <b>산업 분야:</b> 공장, 화학물질 및 위험물 소지 (공장국 또는 관련 기관에 라이선스 신청 필요)\n• <b>금융 분야:</b> 피코 파이낸스와 같은 신용 사업 (태국 중앙은행 또는 재무부에 허가 신청 필요)\n• <b>기타 분야:</b> 인력 파견, 보안 서비스, 물류 및 운송 등 (고용국, 국가경찰청, 육운국 또는 기타 관련 기관에 라이선스 신청 필요)\n\n<i><b>중요 참고 사항:</b> 일부 비즈니스에는 태국인에게만 유보된 규정이 있을 수 있습니다. 회사에 외국인 주주가 있거나 규정된 비율을 초과하는 지분을 소유한 경우, 또는 서명 권한이 있는 외국인 이사가 있는 경우 해당 특정 라이선스를 신청하지 못할 수도 있습니다. 따라서 시간과 비용의 낭비를 방지하기 위해, 법인 등록 절차를 시작하기 전에 해당 비즈니스를 감독하는 기관에 규정을 조사하거나 문의하는 것을 권장합니다.</i>"
+                },
+                {
+                    "question": "법인 설립 후 바로 부가가치세(VAT 7%)를 등록해야 합니까?",
+                    "answer": "반드시 그런 것은 아닙니다. 법인 등록과 부가가치세(VAT) 등록은 별개입니다. 회사의 사업 소득이 <b>연간 180만 바트를 초과하는 경우</b>에만 VAT 등록이 의무화됩니다.\n\n단, 회사가 상품을 수출입해야 하거나 세금계산서 발급을 요구하는 다른 법인 파트너(B2B)와 거래해야 하는 경우, 파트너에게 세금계산서를 발행할 수 있도록 <b>부가가치세(VAT) 등록을 신청해야 합니다</b>."
+                },
+                {
+                    "question": "법인 설립은 완료했지만 아직 판매를 시작하지 않았거나 수입이 없는 경우에도 회계 처리를 해야 합니까?",
+                    "answer": "<b>해야 합니다.</b> 이는 초보 기업가들이 흔히 하는 오해입니다. 법률(불기 2543년 회계법)에 따라 모든 유형의 법인은 회계 장부를 작성하고 상무부 사업개발국 및 국세청에 관련 보고서를 제출해야 합니다. <b>\"해당 월이나 연도에 수입이나 지출이 전혀 없거나 비즈니스를 아예 시작하지 않았더라도(무실적 신고)\"</b> 제출해야 합니다. 기한 내에 제출하지 않으면 꽤 높은 법적 벌금이 부과됩니다."
+                },
+                {
+                    "question": "회사 이사로서 사회보험에 가입하기 위해 내 월급에서 공제해야 합니까?",
+                    "answer": "<b>필요 없습니다.</b> 귀하가 서명 권한이 있는 이사이자 주요 주주인 경우, 직원이 아닌 <b>\"고용주\"</b>의 위치에 있는 것으로 간주됩니다. 따라서 자신의 회사에서 피보험자(제33조)로 등록할 수 없으며 그럴 필요도 없습니다.\n\n다만 회사가 <b>\"정규직 직원\"</b>을 고용하기 시작하면, 법에 따라 회사는 직원이 근무를 시작한 날로부터 30일 이내에 고용주로 등록하고 직원의 사회보험료를 납부해야 합니다."
+                }
+            ]
+        }
+    },
+    "de": {
+        "hero": {
+            "title": "Starten Sie Ihr Unternehmen professionell. Komplette Firmenregistrierung an einem Ort",
+            "subtitle": "Vertrauen von über 300 Unternehmern",
+            "description": "Machen Sie aus kompliziertem Papierkram und rechtlichen Verfahren einen einfachen Prozess. Wir kümmern uns um alles, von der Gründung Ihres Unternehmens beim Department of Business Development (DBD) über die Beantragung einer Firmen-ID bis hin zur Steuernummer, damit Sie sich voll und ganz auf das Wachstum Ihres Unternehmens konzentrieren können.",
+            "cta": "Tel. 092-882-5556"
+        },
+        "promotion": {
+            "title": "Sonderangebot!",
+            "subtitle": "Verpassen Sie nicht die Sonderpreise und exklusiven Vorteile speziell für diesen Service",
+            "cta": "Angebot ansehen",
+            "slug": "company-registration-deal"
+        },
+        "features": {
+            "title": "Alles, was Sie für die Unternehmensgründung brauchen",
+            "items": [
+                {
+                    "title": "Unternehmensberatung & Planung",
+                    "description": "Wir analysieren Ihre Geschäftsstruktur und bieten von Fall zu Fall die bestmögliche Beratung für Ihr Unternehmen.",
+                    "icon": "Lightbulb"
+                },
+                {
+                    "title": "Erstellung von Dokumenten & Gründungsurkunden",
+                    "description": "Korrekte und präzise Erstellung offizieller Formulare über das digitale Firmenregistrierungssystem (DBD Biz Regist).",
+                    "icon": "FileSignature"
+                },
+                {
+                    "title": "Einreichung der Firmenregistrierung",
+                    "description": "Wir handeln als Ihr Vertreter und reichen in jeder Phase Dokumente beim Department of Business Development (DBD) ein.",
+                    "icon": "Landmark"
+                },
+                {
+                    "title": "Beantragung der Steuernummer",
+                    "description": "Wir kümmern uns um die Beantragung der Firmen-ID und der Steuernummer, um das Steuersystem Ihres Unternehmens vorzubereiten.",
+                    "icon": "Calculator"
+                }
+            ]
+        },
+        "benefits": {
+            "title": "Voll ausgestattet! Exklusive Privilegien nur für Sie",
+            "items": [
+                { "title": "Keine monatliche Buchhaltungsverpflichtung!", "icon": "Unlock" },
+                { "title": "KOSTENLOS! Prüfung und Reservierung von bis zu 3 Firmennamen", "icon": "SearchCheck" },
+                { "title": "KOSTENLOS! 1 selbstfärbender Firmenstempel", "icon": "Stamp" },
+                { "title": "KOSTENLOS! Beantragung des e-Filing-Passworts für das DBD", "icon": "KeySquare" },
+                { "title": "KOSTENLOS! Beantragung des Passworts für die Steuerbehörde", "icon": "KeyRound" },
+                { "title": "KOSTENLOS! Dokumentensatz zur Eröffnung eines Firmenkontos", "icon": "Wallet" },
+                { "title": "KOSTENLOS! Kompletter Satz von Firmenzertifikaten (DBD)", "icon": "ScrollText" },
+                { "title": "KOSTENLOS! Schulungskurs für Steuertechniken (Wert 5.900 THB)", "icon": "GraduationCap" },
+                { "title": "KOSTENLOS! Visitenkarten für die Ausstellung von Quittungen/Steuerrechnungen", "icon": "Contact2" }
+            ]
+        },
+        "requirements": {
+            "title": "Was Sie für die Firmenregistrierung vorbereiten müssen",
+            "subtitle": "Bereiten Sie einfach die grundlegenden Informationen vor, den Rest erledigen wir",
+            "documents": {
+                "title": "1. Erforderliche wichtige Dokumente",
+                "items": [
+                    "Mindestens 2 Aktionäre \n\n1. Thailändische Aktionäre: Kopie des Personalausweises (Vorder- und Rückseite deutlich lesbar)\n\n2. Ausländische Aktionäre: Kopie des Reisepasses (Nur die erste Seite mit Foto)\n\n3. Juristische Personen als Aktionäre: Kopie der Firmenbescheinigung und Kopie des Personalausweises des vertretungsberechtigten Direktors",
+                    "Hausregistrierung (Tabien Baan), die als Hauptsitz des Unternehmens genutzt wird",
+                    "Stempeldesign (falls vorhanden)"
+                ]
+            },
+            "information": {
+                "title": "2. Grundlegende Geschäftsinformationen",
+                "items": [
+                    "Gewünschter Firmenname (Thai-Englisch)",
+                    "Beteiligungsverhältnis (in Prozent, z.B. 99% und 1%)",
+                    "Liste der Direktoren (Zeichnungsberechtigte)",
+                    "Geschäftsbeschreibung",
+                    "Höhe des Stammkapitals (z.B. 1 Million THB Kapital, 25% eingezahlt)",
+                    "Kontaktinformationen des Unternehmens \n1. Telefonnummer \n2. E-Mail",
+                    "Kontaktinformationen der Aktionäre \n1. Telefonnummer \n2. E-Mail \n3. LINE ID"
+                ]
+            }
+        },
+        "process": {
+            "title": "4 einfache Registrierungsschritte",
+            "steps": [
+                {
+                    "title": "Beratung & Namensreservierung",
+                    "description": "Die Registrierung eines Unternehmens ist wie das Schneidern eines Anzugs. Wir besprechen Ihre Anforderungen, helfen bei der Planung der für Ihr Unternehmen am besten geeigneten Struktur und reservieren den Firmennamen.",
+                    "icon": "MessageSquareText"
+                },
+                {
+                    "title": "Dokumentenvorbereitung über das Regierungssystem",
+                    "description": "Unser Team bereitet alle Dokumente und offiziellen Formulare über das DBD Biz Regist-System des Department of Business Development vor.",
+                    "icon": "FileStack"
+                },
+                {
+                    "title": "Online-Identitätsprüfung (Keine Anreise erforderlich)",
+                    "description": "Aktionäre und Direktoren verifizieren ihre Identität (Thailänder nutzen die ThaID-App, Ausländer die DBD e-Service-App), indem sie einen QR-Code scannen oder auf einen Verifizierungslink klicken, der vom DBD an ihre private E-Mail-Adresse gesendet wird.",
+                    "icon": "SmartphoneNfc"
+                },
+                {
+                    "title": "Registrierung einreichen & liefern",
+                    "description": "Unser Team reicht den Antrag beim DBD ein. Sobald die Registrierung und das Firmenzertifikat genehmigt sind, prüfen wir die Richtigkeit und liefern Ihnen die wichtigsten Dokumente zusammen mit Ihren Gratisbeigaben direkt nach Hause.",
+                    "icon": "Gift"
+                }
+            ]
+        },
+        "faq": {
+            "title": "Häufig gestellte Fragen (FAQ)",
+            "items": [
+                {
+                    "question": "Was ist der Unterschied zwischen einer Company Limited (Co., Ltd.) und einer Limited Partnership (Ltd. Part.) und welche sollte ich wählen?",
+                    "answer": "Obwohl beide Strukturen den Status einer <b>\"juristischen Person\"</b> haben und denselben Steuersätzen unterliegen, liegen die Hauptunterschiede in der <b>\"Haftung für Schulden\"</b>, der <b>\"Glaubwürdigkeit\"</b> und den <b>\"Beschränkungen für Ausländer\"</b>. Zur besseren Verständlichkeit hier ein Vergleich:\n\n<b>1. Company Limited (Co., Ltd.)</b>\n• <b>Haftung:</b> <i>\"Beschränkte Haftung\"</i> (außer für Direktoren). Alle Aktionäre haften für die Schulden des Unternehmens nur bis zur Höhe des nicht eingezahlten Betrags der von ihnen gehaltenen Aktien (klare Trennung von privaten und geschäftlichen Finanzen zum Schutz des Privatvermögens).\n• <b>Glaubwürdigkeit:</b> Sehr hoch. Geeignet für langfristige Geschäfte, Regierungsaufträge, Großprojekte, die Gewinnung von Investoren oder B2B-Geschäfte (Business-to-Business).\n• <b>Ausländer / Arbeitserlaubnis (Work Permit):</b> Sehr zu empfehlen. Gesetze und Regierungsbehörden unterstützen die Struktur der Co., Ltd. in vollem Umfang, sei es für ausländische Beteiligungen (bis zu 49 %), Anträge auf Arbeitserlaubnis, Geschäftsvisa oder BOI-Investitionsförderungen.\n• <b>Erforderliche Gründer:</b> Derzeit sind für die Registrierung mindestens 2 Aktionäre erforderlich.\n\n<b>2. Limited Partnership (Ltd. Part.)</b>\n• <b>Haftung:</b> Das Gesetz schreibt vor, dass mindestens ein Partner als <i>\"Managing Partner\"</i> fungieren muss, der <b>\"unbeschränkt\"</b> für die Schulden des Unternehmens haftet. Die Haftung anderer Partner ist auf ihre Investition beschränkt.\n• <b>Glaubwürdigkeit:</b> Moderat. Geeignet für Kleinunternehmen, Familienunternehmen oder Unternehmen, bei denen die Partner keinen großen Wert auf die Rechtsform legen.\n• <b>Ausländer:</b> Nicht empfohlen. Ausländer in einer Ltd. Part. unterliegen komplexen rechtlichen Einschränkungen. Wenn ein Ausländer als Managing Partner fungiert, kann das Unternehmen als ausländische Einheit eingestuft werden.\n• <b>Erforderliche Gründer:</b> Benötigt nur 2 Gründer.\n\n<b>Zusammenfassung: Was soll ich wählen?</b>\n• Wählen Sie eine <b>\"Company Limited\"</b>, wenn Sie höchste Glaubwürdigkeit suchen, das Unternehmen erweitern möchten, Risiken für das Privatvermögen begrenzen wollen, ausländische Aktionäre haben oder ausländische Mitarbeiter einstellen möchten.\n• Wählen Sie eine <b>\"Limited Partnership\"</b>, wenn es sich um ein Familienunternehmen handelt, das Schuldenrisiko gering ist, es keine ausländischen Partner gibt und Sie die einfachste Führungsstruktur bevorzugen.\n\n<i><b>Hinweis:</b> Derzeit unterscheiden sich die Kosten für Registrierung, monatliche Buchhaltung und Jahresabschluss für Co., Ltd. und Ltd. Part. nicht wesentlich. Die Registrierung als \"Company Limited\" bringt im Allgemeinen langfristig maximale Vorteile.</i>"
+                },
+                {
+                    "question": "Wie viele Tage dauert die Bearbeitung?",
+                    "answer": "Nach Erhalt der vollständigen Informationen und Dokumente vom Kunden dauert es in der Regel etwa <b>1-5 Werktage</b> (außer an Feiertagen). Die Dauer kann von der Warteschlange beim Department of Business Development sowie von der Schnelligkeit des Kunden bei der Online-Identitätsprüfung abhängen."
+                },
+                {
+                    "question": "Was ist das Stammkapital? Kann ich ein Unternehmen gründen, auch wenn ich nicht den vollen Betrag habe?",
+                    "answer": "Einfach ausgedrückt ist das <b>\"Stammkapital\"</b> das Betriebskapital, das für den Geschäftsbetrieb verwendet wird. <i>\"Einzahlung des Stammkapitals\"</i> bedeutet nicht, jemanden zu bezahlen; es bedeutet, Geld auf das Bankkonto des Unternehmens einzuzahlen.\n\n• <b>Wenn Sie nicht die volle Summe haben:</b> Sie können das Geld schrittweise einzahlen. Ist das Stammkapital beispielsweise 1 Million THB (mindestens 25 % eingezahlt entspricht 250.000 THB), können Sie mit 1.000 THB beginnen. Wenn geschäftliche Ausgaben anfallen, zahlen Sie Geld auf das Firmenkonto ein und überweisen es von dort. Dieses Geld muss nicht ungenutzt auf dem Konto liegen.\n• <b>Achtung:</b> Ausgenommen sind Fälle, in denen das Unternehmen <b>ausländische Aktionäre</b> hat oder es sich um ein vollständig in thailändischem Besitz befindliches Unternehmen mit einem <b>Stammkapital von über 5 Millionen THB</b> handelt. In diesen Fällen verlangt das Gesetz den Nachweis tatsächlicher Geldmittel (Bank Certificate) während der Registrierung."
+                },
+                {
+                    "question": "Können Ausländer Aktionäre sein und welcher Finanzierungsnachweis ist erforderlich?",
+                    "answer": "Ja, durch eine allgemeine Registrierung als Company Limited. Wenn das Unternehmen den Status einer thailändischen juristischen Person behalten soll, müssen thailändische Staatsangehörige mindestens 51 % der Anteile halten.\n\n• <b>Wenn es ausländische Aktionäre gibt (Thailänder halten 51 % oder mehr):</b> Thailändische Partner müssen ein Bankzertifikat (Bank Certificate) vorlegen, das ihrem Anteil entspricht (Ausländer müssen keine Geldmittel nachweisen). Beispiel:\n  1. Zur Vorbereitung auf eine Arbeitserlaubnis (Work Permit): Stammkapital 2 Millionen THB (100 % eingezahlt), Thailänder mit 51 % müssen Einlagen von mindestens 1.020.000 THB nachweisen.\n  2. Keine Arbeitserlaubnis erforderlich: Stammkapital 1 Million THB (mindestens 25 % eingezahlt), Thailänder mit 51 % müssen Einlagen von mindestens 127.500 THB nachweisen.\n• <b>Wenn die Aktionäre zu 100 % Thailänder sind:</b> Übersteigt das Stammkapital nicht 5.000.000 THB, ist während der Gründung kein Finanzierungsnachweis erforderlich.\n• <b>Wenn Ausländer 100 % (oder mehr als 49 %) halten wollen:</b> Das Unternehmen kann registriert werden, darf aber nach Abschluss keine Geschäfte tätigen, bis die Erlaubnis durch eine der folgenden Möglichkeiten erteilt wurde:\n  1. Beantragung einer Foreign Business License (FBL).\n  2. Beantragung der Investitionsförderung (BOI). Anschließend muss ein Foreign Business Certificate (FBC) beantragt werden."
+                },
+                {
+                    "question": "Kann ich ein Unternehmen registrieren, wenn ich noch kein Büro oder keinen Standort habe?",
+                    "answer": "<b>Ja, Sie können registrieren.</b> Normalerweise können Geschäftsgebäude, Reihenhäuser oder Wohnhäuser als Registrierungsadresse verwendet werden. Wenn Sie diese nicht haben, bieten wir einen <b>Virtual Office</b>-Service in 3 Formaten an:\n1. Nutzung nur als Adresse für die Firmenregistrierung.\n2. Nutzung als Adresse für Firmenregistrierung + Mehrwertsteuer (VAT)-Registrierung.\n3. Nutzung als Adresse für Firmenregistrierung + VAT-Registrierung + Arbeitgeberregistrierung bei der Sozialversicherung."
+                },
+                {
+                    "question": "Kann ich das Unternehmen dort registrieren, wenn ich nicht Eigentümer des Hauses bin, z. B. in einem gemieteten Haus oder einer Eigentumswohnung?",
+                    "answer": "Ja, es sind jedoch zusätzliche Dokumente erforderlich:\n\n• <b>Gemietetes Haus/Räume:</b> Eine <i>\"Einverständniserklärung zur Nutzung der Räumlichkeiten\"</i> sowie beglaubigte Kopien des Personalausweises und der Hausregistrierung des Eigentümers sind erforderlich.\n• <b>Eigentumswohnungen (Condo):</b> Obwohl gesetzlich zulässig, sollten Sie sich zunächst an die Hausverwaltung wenden. Viele Gebäude haben interne Vorschriften, die die Nutzung von Wohneinheiten als Firmen oder Büros verbieten. <i>(Wir bieten einen Virtual Office-Service an, um dieses Problem für Sie zu lösen.)</i>"
+                },
+                {
+                    "question": "Kann ich ein Unternehmen gründen, wenn ich keine Festnetznummer (02) habe?",
+                    "answer": "Ja, Sie können. Derzeit erlaubt das Department of Business Development die Verwendung von Mobiltelefonnummern für die Registrierung. Auch für E-Mails können Sie allgemeine Adressen (wie @gmail.com) verwenden."
+                },
+                {
+                    "question": "Kann ich nach der Firmenregistrierung sofort mit der Geschäftstätigkeit beginnen?",
+                    "answer": "Bei den meisten Unternehmen können Sie sofort nach Abschluss der Registrierung den Betrieb aufnehmen. Es gibt jedoch <b>bestimmte Geschäftsbereiche, die durch spezielle Gesetze geregelt sind</b> und zusätzliche Lizenzen erfordern. Zum Beispiel:\n\n• <b>Tourismus und Reisen:</b> Reiseveranstalter, Hotels (Lizenz der TAT erforderlich).\n• <b>Gesundheit und Lebensmittel:</b> Restaurants, Kliniken, Herstellung/Import von Lebensmitteln, Medikamenten (FDA-Lizenz erforderlich).\n• <b>Industrie:</b> Fabriken, Besitz von Chemikalien (Lizenz des Department of Industrial Works erforderlich).\n• <b>Finanzen:</b> Kreditgeschäfte wie Pico Finance (Lizenz der Bank von Thailand erforderlich).\n\n<i><b>Wichtiger Hinweis:</b> Einige Geschäftsbereiche können thailändischen Staatsangehörigen vorbehalten sein. Wir empfehlen, die Anforderungen vor Beginn der Unternehmensregistrierung zu prüfen, um Zeit und Geld zu sparen.</i>"
+                },
+                {
+                    "question": "Muss ich mich sofort nach der Unternehmensregistrierung für die Mehrwertsteuer (VAT 7%) registrieren?",
+                    "answer": "Nicht unbedingt. Ein Unternehmen ist nur dann zur Mehrwertsteuerregistrierung verpflichtet, wenn die Geschäftseinnahmen <b>1,8 Millionen THB pro Jahr übersteigen</b>.\n\nWenn Ihr Unternehmen jedoch Waren importieren/exportieren muss oder mit anderen B2B-Partnern zusammenarbeitet, die die Ausstellung von Steuerrechnungen verlangen, <b>muss sich Ihr Unternehmen für die Mehrwertsteuer registrieren</b>."
+                },
+                {
+                    "question": "Muss ich nach der Gründung des Unternehmens Buchhaltung betreiben, auch wenn ich noch keine Einnahmen habe?",
+                    "answer": "<b>Ja, Sie müssen.</b> Dies ist ein häufiges Missverständnis bei neuen Unternehmern. Gesetzlich ist jede juristische Person verpflichtet, Buchhaltungs- und Finanzberichte zu erstellen und einzureichen, <b>\"selbst wenn in diesem Monat oder Jahr keine Einnahmen oder Ausgaben anfallen oder der Geschäftsbetrieb noch nicht aufgenommen wurde (Nullmeldung)\"</b>. Die Nichteinhaltung der Frist führt zu erheblichen Geldstrafen."
+                },
+                {
+                    "question": "Muss ich mir als Unternehmensdirektor mein Gehalt für die Sozialversicherung abziehen?",
+                    "answer": "<b>Nein.</b> Wenn Sie ein vertretungsberechtigter Direktor und Hauptaktionär sind, gelten Sie als <b>\"Arbeitgeber\"</b> und nicht als Arbeitnehmer. Daher können und müssen Sie sich in Ihrem eigenen Unternehmen nicht als Versicherter (Abschnitt 33) registrieren.\n\nSobald das Unternehmen jedoch <b>\"Vollzeitbeschäftigte\"</b> einstellt, ist es gesetzlich verpflichtet, sich als Arbeitgeber zu registrieren und die Sozialversicherungsbeiträge für die Mitarbeiter abzuführen."
+                }
+            ]
+        }
+    },
+    "fr": {
+        "hero": {
+            "title": "Démarrez votre entreprise de manière professionnelle. Enregistrement complet de la société en un seul endroit.",
+            "subtitle": "La confiance de plus de 300 entrepreneurs.",
+            "description": "Transformez la paperasse complexe et les procédures légales en un processus simple. Nous nous occupons de tout, de la création de votre entreprise auprès du Département du Développement des Affaires (DBD), à la demande d'identification de l'entreprise et de numéro d'identification fiscale, afin que vous puissiez vous concentrer pleinement sur la croissance de votre entreprise.",
+            "cta": "Appelez le 092-882-5556"
+        },
+        "promotion": {
+            "title": "Offre Spéciale !",
+            "subtitle": "Ne manquez pas les prix spéciaux et les avantages exclusifs spécifiquement pour ce service.",
+            "cta": "Voir l'offre",
+            "slug": "company-registration-deal"
+        },
+        "features": {
+            "title": "Tout ce dont vous avez besoin pour démarrer une entreprise",
+            "items": [
+                {
+                    "title": "Conseil et planification d'entreprise",
+                    "description": "Nous analysons la structure de votre entreprise et fournissons les conseils les plus adaptés à votre entreprise, au cas par cas.",
+                    "icon": "Lightbulb"
+                },
+                {
+                    "title": "Préparation des documents et statuts",
+                    "description": "Préparez avec précision les formulaires officiels via le système d'enregistrement numérique des entreprises (DBD Biz Regist).",
+                    "icon": "FileSignature"
+                },
+                {
+                    "title": "Dépôt de l'enregistrement de l'entreprise",
+                    "description": "Nous agissons en tant que votre représentant pour soumettre les documents au Département du Développement des Affaires (DBD) à chaque étape.",
+                    "icon": "Landmark"
+                },
+                {
+                    "title": "Demande de numéro d'identification fiscale",
+                    "description": "Gérez vos demandes d'identification d'entreprise et de numéro fiscal pour préparer le système fiscal de votre entreprise.",
+                    "icon": "Calculator"
+                }
+            ]
+        },
+        "benefits": {
+            "title": "Complet ! Des privilèges exclusifs rien que pour vous",
+            "items": [
+                { "title": "Aucun engagement comptable mensuel !", "icon": "Unlock" },
+                { "title": "GRATUIT ! Vérification et réservation jusqu'à 3 noms d'entreprise", "icon": "SearchCheck" },
+                { "title": "GRATUIT ! 1 tampon d'entreprise auto-encreur", "icon": "Stamp" },
+                { "title": "GRATUIT ! Demande de mot de passe e-Filing pour le DBD", "icon": "KeySquare" },
+                { "title": "GRATUIT ! Demande de mot de passe pour le Département du Revenu", "icon": "KeyRound" },
+                { "title": "GRATUIT ! Ensemble de documents pour l'ouverture d'un compte bancaire d'entreprise", "icon": "Wallet" },
+                { "title": "GRATUIT ! Ensemble complet de certificats d'entreprise (DBD)", "icon": "ScrollText" },
+                { "title": "GRATUIT ! Cours de formation en techniques fiscales (Valeur 5 900 THB)", "icon": "GraduationCap" },
+                { "title": "GRATUIT ! Cartes de visite pour l'émission de reçus/factures fiscales", "icon": "Contact2" }
+            ]
+        },
+        "requirements": {
+            "title": "Ce qu'il faut préparer pour l'enregistrement de l'entreprise",
+            "subtitle": "Préparez simplement les informations de base et laissez-nous le reste",
+            "documents": {
+                "title": "1. Documents importants requis",
+                "items": [
+                    "Au moins 2 actionnaires \n\n1. Actionnaires thaïlandais : Copie de la carte d'identité (Copie claire du recto et du verso)\n\n2. Actionnaires étrangers : Copie du passeport (Uniquement la première page avec photo)\n\n3. Actionnaires personnes morales : Copie du certificat d'entreprise et copie de la carte d'identité du directeur autorisé",
+                    "Livret de famille (Tabien Baan) à utiliser comme siège social de l'entreprise",
+                    "Conception du tampon (le cas échéant)"
+                ]
+            },
+            "information": {
+                "title": "2. Informations de base sur l'entreprise",
+                "items": [
+                    "Nom d'entreprise souhaité (Thaï-Anglais)",
+                    "Ratio d'actionnariat (en pourcentages, ex. 99% et 1%)",
+                    "Liste des directeurs (Signataires autorisés)",
+                    "Description de l'activité",
+                    "Montant du capital social (ex. 1 million de THB de capital, 25% libéré)",
+                    "Coordonnées de l'entreprise \n1. Numéro de téléphone \n2. E-mail",
+                    "Coordonnées des actionnaires \n1. Numéro de téléphone \n2. E-mail \n3. ID LINE"
+                ]
+            }
+        },
+        "process": {
+            "title": "4 étapes simples d'enregistrement",
+            "steps": [
+                {
+                    "title": "Consultation et réservation de nom",
+                    "description": "Enregistrer une entreprise, c'est comme tailler un costume sur mesure. Nous discutons de vos besoins, aidons à planifier la structure commerciale la mieux adaptée à votre entreprise et procédons à la réservation du nom de l'entreprise.",
+                    "icon": "MessageSquareText"
+                },
+                {
+                    "title": "Préparation des documents via le système gouvernemental",
+                    "description": "Notre équipe prépare tous les documents et formulaires officiels via le système DBD Biz Regist.",
+                    "icon": "FileStack"
+                },
+                {
+                    "title": "Vérification d'identité en ligne (Aucun déplacement requis)",
+                    "description": "Les actionnaires et directeurs vérifient leur identité (les Thaïlandais utilisent l'application ThaID, les étrangers l'application DBD e-Service) en scannant un code QR ou en cliquant sur un lien de vérification envoyé à leur e-mail personnel.",
+                    "icon": "SmartphoneNfc"
+                },
+                {
+                    "title": "Soumission de l'enregistrement et livraison",
+                    "description": "Notre équipe soumet la demande au DBD. Une fois l'enregistrement et le certificat d'entreprise approuvés, nous livrerons les documents essentiels ainsi que vos cadeaux directement chez vous.",
+                    "icon": "Gift"
+                }
+            ]
+        },
+        "faq": {
+            "title": "Foire Aux Questions (FAQ)",
+            "items": [
+                {
+                    "question": "Quelle est la différence entre une Company Limited (Co., Ltd.) et une Limited Partnership (Ltd. Part.), et laquelle dois-je choisir ?",
+                    "answer": "Bien que les deux structures aient le statut de <b>\"Personne Morale\"</b> et partagent les mêmes taux d'imposition, les principales différences résident dans la <b>\"Responsabilité des dettes\"</b>, la <b>\"Crédibilité\"</b> et les <b>\"Restrictions pour les étrangers\"</b>. Voici une comparaison :\n\n<b>1. Company Limited (Co., Ltd.)</b>\n• <b>Responsabilité :</b> <i>\"Responsabilité limitée\"</i> (sauf pour les directeurs). Les actionnaires ne sont responsables des dettes qu'à hauteur du montant non libéré de leurs actions.\n• <b>Crédibilité :</b> Très élevée. Convient aux entreprises à long terme, aux appels d'offres gouvernementaux ou au B2B.\n• <b>Étrangers / Permis de travail (Work Permit) :</b> Fortement recommandé. Les lois soutiennent pleinement la structure Co., Ltd. (jusqu'à 49 % d'actionnariat étranger, permis de travail, visas, BOI).\n• <b>Fondateurs requis :</b> Actuellement, un minimum de 2 actionnaires est requis.\n\n<b>2. Limited Partnership (Ltd. Part.)</b>\n• <b>Responsabilité :</b> La loi exige qu'au moins un partenaire agisse en tant que <i>\"Managing Partner\"</i>, avec une <b>\"Responsabilité illimitée\"</b>. La responsabilité des autres partenaires est limitée à leur investissement.\n• <b>Crédibilité :</b> Modérée. Convient aux petites entreprises ou entreprises familiales.\n• <b>Étrangers :</b> Non recommandé. Implique des restrictions légales complexes.\n• <b>Fondateurs requis :</b> Seulement 2 fondateurs nécessaires.\n\n<b>Résumé : Laquelle choisir ?</b>\n• Choisissez une <b>\"Company Limited\"</b> si vous recherchez une crédibilité maximale, prévoyez une expansion, souhaitez limiter les risques sur vos biens personnels, ou avez des actionnaires/employés étrangers.\n• Choisissez une <b>\"Limited Partnership\"</b> pour une entreprise familiale avec peu de risques d'endettement et une gestion simple.\n\n<i><b>Remarque :</b> Actuellement, les coûts de création et de comptabilité ne diffèrent pas de manière significative. S'enregistrer en tant que \"Company Limited\" offre généralement le maximum d'avantages à long terme.</i>"
+                },
+                {
+                    "question": "Combien de jours prend le traitement ?",
+                    "answer": "Cela prend généralement environ <b>1 à 5 jours ouvrables</b> (hors jours fériés) après réception des informations et documents complets. Le délai dépend de la file d'attente au DBD et de la rapidité du client pour la vérification d'identité."
+                },
+                {
+                    "question": "Qu'est-ce que le capital social ? Puis-je enregistrer une entreprise si je n'ai pas le montant total ?",
+                    "answer": "En termes simples, le <b>\"Capital Social\"</b> est le fonds de roulement utilisé pour les opérations. <i>\"Libérer le capital\"</i> signifie déposer des fonds sur le compte bancaire de l'entreprise.\n\n• <b>Si vous n'avez pas la somme totale :</b> Vous pouvez déposer l'argent progressivement. Par exemple, pour 1 million de THB (25 % libérés = 250 000 THB), vous pouvez commencer par ouvrir le compte avec 1 000 THB et l'utiliser comme fonds de roulement.\n• <b>Attention :</b> Sauf dans les cas où l'entreprise a des <b>actionnaires étrangers</b> ou un <b>capital supérieur à 5 millions de THB</b>. La loi exige alors de prouver les fonds (Bank Certificate) lors de l'enregistrement."
+                },
+                {
+                    "question": "Les étrangers peuvent-ils être actionnaires, et quelle preuve financière est requise ?",
+                    "answer": "Oui, via l'enregistrement d'une Company Limited. Si l'entreprise doit être une personne morale thaïlandaise, les ressortissants thaïlandais doivent détenir au moins 51 % des actions.\n\n• <b>S'il y a des actionnaires étrangers (Les Thaïlandais détiennent 51 % ou plus) :</b> Les partenaires thaïlandais doivent présenter un certificat bancaire (Bank Certificate) correspondant à leur proportion d'actions. Exemple :\n  1. Pour un permis de travail (Work Permit) : Capital de 2 millions de THB (100% libéré), les Thaïlandais à 51% doivent montrer au moins 1 020 000 THB de dépôts.\n  2. Pas de permis de travail : Capital de 1 million de THB (25% libéré minimum), les Thaïlandais à 51% doivent montrer au moins 127 500 THB.\n• <b>Si les actionnaires sont 100 % thaïlandais :</b> Si le capital ne dépasse pas 5 000 000 THB, aucune preuve n'est requise lors de la création.\n• <b>Si les étrangers veulent détenir 100 % (ou plus de 49 %) :</b> L'entreprise peut être enregistrée, mais ne peut opérer avant d'avoir obtenu une licence étrangère (FBL) ou une promotion des investissements (BOI/FBC)."
+                },
+                {
+                    "question": "Si je n'ai pas encore de bureau ou de local, puis-je quand même m'inscrire ?",
+                    "answer": "<b>Oui, vous pouvez vous inscrire.</b> Normalement, un bâtiment commercial, une maison de ville ou une résidence peut être utilisé. Si vous n'en avez pas, nous proposons un service de <b>Bureau Virtuel (Virtual Office)</b> en 3 formats :\n1. Adresse pour l'enregistrement de l'entreprise uniquement.\n2. Adresse pour l'entreprise + enregistrement de la TVA.\n3. Adresse pour l'entreprise + TVA + enregistrement de l'employeur (Sécurité sociale)."
+                },
+                {
+                    "question": "Si je ne suis pas propriétaire de la maison (par exemple location ou appartement), puis-je y enregistrer l'entreprise ?",
+                    "answer": "Oui, mais des documents supplémentaires sont requis :\n\n• <b>Maison/Espace en location :</b> Une <i>\"Lettre de consentement\"</i> est requise, accompagnée de copies certifiées conformes de la carte d'identité et du livret de famille du propriétaire.\n• <b>Copropriétés (Condo) :</b> Bien que légalement autorisé, vous devez d'abord vérifier auprès du syndic de copropriété, car beaucoup interdisent l'utilisation des logements comme bureaux. <i>(Nous avons un service de bureau virtuel pour résoudre ce problème.)</i>"
+                },
+                {
+                    "question": "Si je n'ai pas de numéro de téléphone fixe (02), puis-je créer une entreprise ?",
+                    "answer": "Oui. Actuellement, le DBD autorise l'utilisation de numéros de téléphone portable. De même pour les e-mails, vous pouvez utiliser des e-mails généraux (comme @gmail.com) sans avoir besoin d'un domaine d'entreprise."
+                },
+                {
+                    "question": "Une fois l'entreprise enregistrée, puis-je démarrer mon activité immédiatement ?",
+                    "answer": "Pour la plupart des entreprises, oui. Cependant, <b>certaines activités sont réglementées par des lois spécifiques</b> et nécessitent des licences supplémentaires. Par exemple :\n\n• <b>Tourisme :</b> Agences de voyages, hôtels (Licence TAT requise).\n• <b>Santé et Alimentation :</b> Restaurants, cliniques, importation de produits alimentaires/médicaments (Licence FDA requise).\n• <b>Industriel :</b> Usines, détention de produits chimiques.\n• <b>Financier :</b> Entreprises de crédit comme Pico Finance.\n\n<i><b>Remarque importante :</b> Certaines activités peuvent être réservées exclusivement aux ressortissants thaïlandais. Nous recommandons de vous renseigner auprès de l'agence de régulation avant de commencer l'enregistrement.</i>"
+                },
+                {
+                    "question": "Dois-je m'inscrire à la taxe sur la valeur ajoutée (TVA 7 %) immédiatement après la création ?",
+                    "answer": "Pas nécessairement. Une entreprise n'est tenue de s'inscrire à la TVA que lorsque ses revenus <b>dépassent 1,8 million de THB par an</b>.\n\nCependant, si votre entreprise importe/exporte ou traite avec des partenaires B2B exigeant des factures fiscales, elle <b>doit s'inscrire à la TVA</b> pour pouvoir en émettre."
+                },
+                {
+                    "question": "Après l'enregistrement, mais avant d'avoir des revenus, dois-je tenir une comptabilité ?",
+                    "answer": "<b>Oui, c'est obligatoire.</b> C'est une idée fausse courante. La loi exige que toutes les entités juridiques préparent des comptes et soumettent des rapports, <b>\"même s'il n'y a pas de revenus, pas de dépenses, ou si les opérations n'ont pas commencé (Déclaration à zéro)\"</b>. Le non-respect des délais entraîne des amendes importantes."
+                },
+                {
+                    "question": "En tant que directeur, dois-je déduire mon salaire pour la sécurité sociale ?",
+                    "answer": "<b>Non.</b> En tant que directeur autorisé et actionnaire principal, vous êtes considéré comme un <b>\"Employeur\"</b>. Vous n'avez pas besoin de vous inscrire comme assuré (Section 33).\n\nCependant, dès que l'entreprise embauche des <b>\"Employés à temps plein\"</b>, la loi exige de s'inscrire comme employeur et de soumettre la Sécurité Sociale dans les 30 jours."
+                }
+            ]
+        }
+    },
+    "it": {
+        "hero": {
+            "title": "Avvia la tua attività in modo professionale. Registrazione aziendale completa in un unico posto.",
+            "subtitle": "Scelto da oltre 300 imprenditori.",
+            "description": "Trasforma documenti e procedure legali complicate in un processo semplice. Ci occupiamo di tutto, dalla costituzione della tua azienda presso il Department of Business Development (DBD), alla richiesta del codice fiscale aziendale e della partita IVA, affinché tu possa concentrarti sulla crescita della tua attività.",
+            "cta": "Chiama 092-882-5556"
+        },
+        "promotion": {
+            "title": "Offerta Speciale!",
+            "subtitle": "Non perderti i prezzi speciali e i vantaggi esclusivi riservati a questo servizio.",
+            "cta": "Vedi Promozione",
+            "slug": "company-registration-deal"
+        },
+        "features": {
+            "title": "Tutto ciò di cui hai bisogno per avviare un'attività",
+            "items": [
+                {
+                    "title": "Consulenza e Pianificazione Aziendale",
+                    "description": "Analizziamo la struttura della tua attività e forniamo la consulenza più adatta alla tua impresa, caso per caso.",
+                    "icon": "Lightbulb"
+                },
+                {
+                    "title": "Preparazione Documenti e Statuto",
+                    "description": "Compilazione accurata dei moduli ufficiali tramite il sistema di registrazione digitale (DBD Biz Regist).",
+                    "icon": "FileSignature"
+                },
+                {
+                    "title": "Presentazione della Registrazione",
+                    "description": "Agiamo come tuo rappresentante per inviare i documenti al Department of Business Development in ogni fase.",
+                    "icon": "Landmark"
+                },
+                {
+                    "title": "Richiesta Partita IVA/Codice Fiscale",
+                    "description": "Gestiamo la richiesta dei codici identificativi per predisporre il sistema fiscale della tua azienda.",
+                    "icon": "Calculator"
+                }
+            ]
+        },
+        "benefits": {
+            "title": "Vantaggi esclusivi solo per te",
+            "items": [
+                { "title": "Nessun vincolo di contabilità mensile!", "icon": "Unlock" },
+                { "title": "GRATIS! Verifica e prenotazione di massimo 3 nomi aziendali", "icon": "SearchCheck" },
+                { "title": "GRATIS! 1 timbro aziendale autoinchiostrante", "icon": "Stamp" },
+                { "title": "GRATIS! Richiesta password e-Filing per il DBD", "icon": "KeySquare" },
+                { "title": "GRATIS! Richiesta password per l'Agenzia delle Entrate", "icon": "KeyRound" },
+                { "title": "GRATIS! Set di documenti per l'apertura del conto corrente aziendale", "icon": "Wallet" },
+                { "title": "GRATIS! Set completo di certificati camerali (DBD)", "icon": "ScrollText" },
+                { "title": "GRATIS! Corso di formazione sulle tecniche fiscali (Valore 5.900 THB)", "icon": "GraduationCap" },
+                { "title": "GRATIS! Biglietti da visita per l'emissione di ricevute/fatture", "icon": "Contact2" }
+            ]
+        },
+        "requirements": {
+            "title": "Cosa preparare per la registrazione della società",
+            "subtitle": "Prepara semplicemente le informazioni di base, al resto pensiamo noi.",
+            "documents": {
+                "title": "1. Documenti importanti richiesti",
+                "items": [
+                    "Almeno 2 azionisti \n\n1. Azionisti thailandesi: Copia del documento d'identità (Fronte/retro leggibile)\n\n2. Azionisti stranieri: Copia del passaporto (Solo la prima pagina con foto)\n\n3. Azionisti societari: Copia della visura camerale e documento del legale rappresentante",
+                    "Registrazione di domicilio (Tabien Baan) da utilizzare come sede legale",
+                    "Design del timbro (se disponibile)"
+                ]
+            },
+            "information": {
+                "title": "2. Informazioni aziendali di base",
+                "items": [
+                    "Nome della società desiderato (Tailandese-Inglese)",
+                    "Quote di partecipazione (in percentuale, es. 99% e 1%)",
+                    "Elenco dei direttori (Firmatari autorizzati)",
+                    "Descrizione dell'attività",
+                    "Importo del capitale sociale (es. Capitale di 1 milione di THB, versato al 25%)",
+                    "Contatti dell'azienda \n1. Numero di telefono \n2. Email",
+                    "Contatti degli azionisti \n1. Numero di telefono \n2. Email \n3. ID LINE"
+                ]
+            }
+        },
+        "process": {
+            "title": "4 semplici passaggi per la registrazione",
+            "steps": [
+                {
+                    "title": "Consulenza e Prenotazione del Nome",
+                    "description": "Registrare una società è come creare un abito su misura. Discutiamo le tue esigenze, aiutiamo a pianificare la struttura e procediamo alla prenotazione del nome.",
+                    "icon": "MessageSquareText"
+                },
+                {
+                    "title": "Preparazione documenti tramite sistema governativo",
+                    "description": "Il nostro team prepara tutti i documenti tramite il sistema DBD Biz Regist.",
+                    "icon": "FileStack"
+                },
+                {
+                    "title": "Verifica dell'identità online (Non sono necessari spostamenti)",
+                    "description": "Azionisti e direttori verificano la propria identità tramite app (ThaID per i thailandesi, DBD e-Service per gli stranieri) scansionando un codice QR o tramite link email.",
+                    "icon": "SmartphoneNfc"
+                },
+                {
+                    "title": "Invio della registrazione e consegna",
+                    "description": "Presentiamo la domanda al DBD. Una volta approvata, consegneremo i documenti essenziali e i tuoi omaggi gratuiti direttamente a te.",
+                    "icon": "Gift"
+                }
+            ]
+        },
+        "faq": {
+            "title": "Domande Frequenti (FAQ)",
+            "items": [
+                {
+                    "question": "Qual è la differenza tra Company Limited (Co., Ltd.) e Limited Partnership (Ltd. Part.), e quale dovrei scegliere?",
+                    "answer": "Sebbene entrambe abbiano lo status di <b>\"Persona Giuridica\"</b> e le stesse aliquote fiscali, le differenze principali risiedono nella <b>\"Responsabilità per i debiti\"</b>, nella <b>\"Credibilità\"</b> e nelle <b>\"Restrizioni per gli stranieri\"</b>. Ecco un confronto:\n\n<b>1. Company Limited (Co., Ltd.)</b>\n• <b>Responsabilità:</b> <i>\"Responsabilità Limitata\"</i>. Tutti gli azionisti sono responsabili solo fino all'importo non versato delle azioni possedute.\n• <b>Credibilità:</b> Molto alta. Adatta per affari a lungo termine, gare d'appalto o B2B.\n• <b>Stranieri / Permesso di lavoro:</b> Altamente consigliato. La legge supporta pienamente questa struttura per l'azionariato straniero (fino al 49%), permessi di lavoro e visti.\n• <b>Fondatori richiesti:</b> Minimo 2 azionisti.\n\n<b>2. Limited Partnership (Ltd. Part.)</b>\n• <b>Responsabilità:</b> Almeno un partner deve essere il <i>\"Managing Partner\"</i> con <b>\"Responsabilità illimitata\"</b>.\n• <b>Credibilità:</b> Moderata. Adatta per piccole imprese o a conduzione familiare.\n• <b>Stranieri:</b> Sconsigliato. Restrizioni legali complesse.\n• <b>Fondatori richiesti:</b> Bastano 2 fondatori.\n\n<b>Riepilogo:</b> Scegli <b>\"Company Limited\"</b> per massima credibilità, protezione del patrimonio e assunzioni di stranieri. La registrazione come Co., Ltd. offre i massimi vantaggi a lungo termine."
+                },
+                {
+                    "question": "Quanti giorni richiede la procedura?",
+                    "answer": "In genere sono necessari circa <b>1-5 giorni lavorativi</b> dopo aver ricevuto tutte le informazioni. Il lasso di tempo dipende anche dalla tempestività del cliente nella verifica online dell'identità."
+                },
+                {
+                    "question": "Cos'è il capitale sociale? Posso registrare una società se non dispongo dell'intero importo?",
+                    "answer": "Il <b>\"Capitale Sociale\"</b> è il capitale circolante. <i>\"Versare il capitale\"</i> significa depositare i fondi sul conto della società.\n\n• <b>Se non hai l'intero importo:</b> Puoi depositare il denaro gradualmente (es. versando il 25%).\n• <b>Attenzione:</b> Se la società ha <b>Azionisti Stranieri</b> o un capitale superiore a <b>5 milioni di THB</b>, la legge richiede una prova dei fondi (Bank Certificate) durante la registrazione."
+                },
+                {
+                    "question": "Gli stranieri possono essere azionisti e quale prova finanziaria è richiesta?",
+                    "answer": "Sì, in una Company Limited. Per essere una società thailandese, i cittadini thailandesi devono detenere almeno il 51%.\n\n• <b>Se ci sono azionisti stranieri:</b> I partner thailandesi devono presentare un Bank Certificate per la loro quota.\n• <b>Se gli azionisti sono thailandesi al 100%:</b> Sotto i 5.000.000 THB, non è necessaria alcuna prova finanziaria.\n• <b>Se gli stranieri vogliono detenere il 100%:</b> Serve una Foreign Business License (FBL) o promozione BOI prima di poter operare."
+                },
+                {
+                    "question": "Se non ho ancora un ufficio, posso comunque registrarmi?",
+                    "answer": "<b>Sì.</b> Normalmente si usano edifici commerciali o case. Se non ne hai uno, offriamo un servizio di <b>Virtual Office</b> in 3 formati (solo registrazione, registrazione + IVA, registrazione + IVA + registrazione datore di lavoro)."
+                },
+                {
+                    "question": "Posso registrare la società in una casa in affitto o in un condominio?",
+                    "answer": "Sì, ma con documenti aggiuntivi:\n\n• <b>Casa in affitto:</b> È necessaria una <i>\"Lettera di consenso\"</i> del proprietario.\n• <b>Condomini:</b> Molti regolamenti vietano l'uso residenziale come ufficio. Si consiglia di verificare o utilizzare il nostro servizio di Virtual Office."
+                },
+                {
+                    "question": "Posso registrare una società senza numero di rete fissa (02)?",
+                    "answer": "Sì. Il DBD consente di utilizzare i numeri di cellulare. Puoi usare anche email generiche come @gmail.com."
+                },
+                {
+                    "question": "Una volta registrata la società, posso iniziare subito l'attività?",
+                    "answer": "Per la maggior parte delle imprese, sì. Tuttavia, <b>alcune attività regolate da leggi specifiche</b> richiedono licenze aggiuntive (es. Turismo, Salute/Cibo, Industria, Finanza). Ti consigliamo di informarti prima di avviare la registrazione."
+                },
+                {
+                    "question": "Devo registrarmi per l'IVA (VAT 7%) subito dopo la registrazione della società?",
+                    "answer": "Non necessariamente. L'obbligo scatta se il reddito aziendale <b>supera 1,8 milioni di THB all'anno</b>. Se devi importare/esportare o operare in B2B emettendo fatture fiscali, allora <b>devi richiedere la registrazione IVA</b>."
+                },
+                {
+                    "question": "Devo tenere la contabilità anche se non ho iniziato a vendere?",
+                    "answer": "<b>Sì.</b> La legge impone a tutte le entità giuridiche di tenere la contabilità <b>\"anche in assenza di entrate o uscite (Dichiarazione a zero)\"</b>. Le sanzioni per mancata presentazione sono elevate."
+                },
+                {
+                    "question": "Come amministratore, devo versare i contributi previdenziali sul mio stipendio?",
+                    "answer": "<b>No.</b> Come amministratore e azionista principale, sei considerato <b>\"Datore di Lavoro\"</b>. Tuttavia, non appena assumi <b>\"Dipendenti a tempo pieno\"</b>, dovrai registrarli presso la Previdenza Sociale entro 30 giorni."
+                }
+            ]
+        }
+    },
+    "nl": {
+        "hero": {
+            "title": "Start uw bedrijf professioneel. Volledige bedrijfsregistratie op één plek.",
+            "subtitle": "Vertrouwd door meer dan 300 ondernemers.",
+            "description": "Verander ingewikkeld papierwerk en juridische procedures in een eenvoudig proces. Wij regelen alles, van de oprichting van uw bedrijf bij het Department of Business Development (DBD) tot het aanvragen van een bedrijfs-ID en btw-nummer, zodat u zich volledig kunt concentreren op de groei van uw bedrijf.",
+            "cta": "Bel 092-882-5556"
+        },
+        "promotion": {
+            "title": "Speciale Aanbieding!",
+            "subtitle": "Mis de speciale prijzen en exclusieve voordelen voor deze service niet.",
+            "cta": "Bekijk Aanbieding",
+            "slug": "company-registration-deal"
+        },
+        "features": {
+            "title": "Alles wat u nodig heeft om een bedrijf te starten",
+            "items": [
+                {
+                    "title": "Bedrijfsadvies & Planning",
+                    "description": "We analyseren uw bedrijfsstructuur en geven het meest geschikte advies voor uw onderneming per specifiek geval.",
+                    "icon": "Lightbulb"
+                },
+                {
+                    "title": "Document- en Statutenvoorbereiding",
+                    "description": "Nauwkeurige voorbereiding van officiële formulieren via het digitale registratiesysteem (DBD Biz Regist).",
+                    "icon": "FileSignature"
+                },
+                {
+                    "title": "Indiening Bedrijfsregistratie",
+                    "description": "Wij treden op als uw vertegenwoordiger om documenten in elke fase in te dienen bij het DBD.",
+                    "icon": "Landmark"
+                },
+                {
+                    "title": "Aanvraag BTW-nummer",
+                    "description": "Afhandeling van uw bedrijfs-ID en btw-nummer om het belastingsysteem van uw bedrijf voor te bereiden.",
+                    "icon": "Calculator"
+                }
+            ]
+        },
+        "benefits": {
+            "title": "Exclusieve privileges speciaal voor u",
+            "items": [
+                { "title": "Geen maandelijkse boekhoudverplichting!", "icon": "Unlock" },
+                { "title": "GRATIS! Controleer en reserveer tot 3 bedrijfsnamen", "icon": "SearchCheck" },
+                { "title": "GRATIS! 1 zelfinktende bedrijfsstempel", "icon": "Stamp" },
+                { "title": "GRATIS! Vraag een e-Filing wachtwoord aan voor het DBD", "icon": "KeySquare" },
+                { "title": "GRATIS! Vraag een wachtwoord aan voor de Belastingdienst", "icon": "KeyRound" },
+                { "title": "GRATIS! Documentenset voor het openen van een zakelijke bankrekening", "icon": "Wallet" },
+                { "title": "GRATIS! Complete set bedrijfscertificaten (DBD)", "icon": "ScrollText" },
+                { "title": "GRATIS! Trainingscursus belastingtechniek (Waarde 5.900 THB)", "icon": "GraduationCap" },
+                { "title": "GRATIS! Visitekaartjes voor het uitschrijven van bonnen/facturen", "icon": "Contact2" }
+            ]
+        },
+        "requirements": {
+            "title": "Wat moet u voorbereiden voor de registratie",
+            "subtitle": "Bereid simpelweg de basisinformatie voor, wij doen de rest.",
+            "documents": {
+                "title": "1. Belangrijke vereiste documenten",
+                "items": [
+                    "Minimaal 2 aandeelhouders \n\n1. Thaise aandeelhouders: Kopie ID-kaart (Duidelijk, voor- en achterkant)\n\n2. Buitenlandse aandeelhouders: Kopie paspoort (Alleen eerste pagina met foto)\n\n3. Zakelijke aandeelhouders: Kopie bedrijfscertificaat en ID-kaart van de bevoegde directeur",
+                    "Huisregistratie (Tabien Baan) te gebruiken als hoofdkantoor",
+                    "Stempelontwerp (indien aanwezig)"
+                ]
+            },
+            "information": {
+                "title": "2. Basis bedrijfsinformatie",
+                "items": [
+                    "Gewenste bedrijfsnaam (Thais-Engels)",
+                    "Aandelenverhouding (in procenten, bijv. 99% en 1%)",
+                    "Lijst van directeuren (tekenbevoegden)",
+                    "Bedrijfsomschrijving",
+                    "Geregistreerd kapitaal (bijv. 1 miljoen THB, 25% gestort)",
+                    "Contactgegevens bedrijf \n1. Telefoonnummer \n2. E-mail",
+                    "Contactgegevens aandeelhouders \n1. Telefoonnummer \n2. E-mail \n3. LINE ID"
+                ]
+            }
+        },
+        "process": {
+            "title": "4 eenvoudige registratiestappen",
+            "steps": [
+                {
+                    "title": "Advies & Naamsreservering",
+                    "description": "Een bedrijf registreren is als een maatpak maken. We bespreken uw behoeften, plannen de zakelijke structuur die het beste bij uw onderneming past, en reserveren de bedrijfsnaam.",
+                    "icon": "MessageSquareText"
+                },
+                {
+                    "title": "Voorbereiding via overheidssysteem",
+                    "description": "Ons team bereidt alle documenten en officiële formulieren voor via het DBD Biz Regist-systeem van het Department of Business Development, Ministerie van Handel.",
+                    "icon": "FileStack"
+                },
+                {
+                    "title": "Online Identiteitsverificatie (Geen reizen nodig)",
+                    "description": "Aandeelhouders en directeuren verifiëren hun identiteit (Thaise burgers gebruiken de ThaID-app, buitenlanders de DBD e-Service-app) door een QR-code te scannen of op een verificatielink te klikken die door het DBD naar hun persoonlijke e-mail is gestuurd.",
+                    "icon": "SmartphoneNfc"
+                },
+                {
+                    "title": "Registratie Indienen & Levering",
+                    "description": "Ons team dient de aanvraag in bij het DBD. Zodra de registratie en het bedrijfscertificaat zijn goedgekeurd, controleren we de juistheid en leveren we de essentiële documenten inclusief uw gratis geschenken rechtstreeks aan u.",
+                    "icon": "Gift"
+                }
+            ]
+        },
+        "faq": {
+            "title": "Veelgestelde Vragen (FAQ)",
+            "items": [
+                {
+                    "question": "Wat is het verschil tussen een Company Limited (Co., Ltd.) en een Limited Partnership (Ltd. Part.), en welke moet ik kiezen?",
+                    "answer": "Hoewel beide structuren de status van <b>\"Rechtspersoon\"</b> hebben en dezelfde belastingtarieven delen, liggen de belangrijkste verschillen in de <b>\"Aansprakelijkheid voor schulden\"</b>, de <b>\"Geloofwaardigheid\"</b> en de <b>\"Beperkingen voor buitenlanders\"</b>. Om het gemakkelijker te begrijpen, is hier een vergelijking:\n\n<b>1. Company Limited (Co., Ltd.)</b>\n• <b>Aansprakelijkheid:</b> <i>\"Beperkte Aansprakelijkheid\"</i> (behalve voor directeuren). Alle aandeelhouders zijn slechts aansprakelijk voor de schulden van het bedrijf tot het onbetaalde bedrag van hun aandelen (scheidt persoonlijke financiën duidelijk van zakelijke financiën, waardoor persoonlijke bezittingen worden veiliggesteld).\n• <b>Geloofwaardigheid:</b> Zeer hoog. Geschikt voor zakendoen op de lange termijn, overheidsaanbestedingen, grote projecten, het aantrekken van investeerders of B2B (Business-to-Business) activiteiten.\n• <b>Buitenlanders / Werkvergunning:</b> Sterk aanbevolen. Wetten en overheidsinstanties ondersteunen de Co., Ltd. structuur volledig, of het nu gaat om buitenlands aandeelhouderschap (tot 49%), aanvragen voor werkvergunningen, zakelijke visa of BOI-investeringspromoties.\n• <b>Vereiste oprichters:</b> Momenteel zijn er minimaal slechts 2 aandeelhouders nodig om te registreren.\n\n<b>2. Limited Partnership (Ltd. Part.)</b>\n• <b>Aansprakelijkheid:</b> De wet vereist dat ten minste één partner optreedt als de <i>\"Managing Partner\"</i>, die een <b>\"Onbeperkte Aansprakelijkheid\"</b> heeft voor de schulden van het bedrijf (als het bedrijf problemen ondervindt, moet de managing partner mogelijk persoonlijke bezittingen gebruiken om schulden af te betalen). Andere partners hebben een beperkte aansprakelijkheid op basis van hun investering.\n• <b>Geloofwaardigheid:</b> Gemiddeld. Geschikt voor kleine bedrijven, familiebedrijven of ondernemingen waar partners niet strikt zijn over het type juridische entiteit.\n• <b>Buitenlanders:</b> Niet aanbevolen. Buitenlanders in een Ltd. Part. brengen complexe wettelijke beperkingen met zich mee. Als een buitenlander optreedt als managing partner, kan het bedrijf worden geclassificeerd als een buitenlandse entiteit, waardoor activiteiten en werkvergunningen veel moeilijker worden dan bij een Co., Ltd.\n• <b>Vereiste oprichters:</b> Heeft slechts 2 oprichters nodig, net als een bedrijfsregistratie.\n\n<b>Samenvatting: Welke moet ik kiezen?</b>\n• Kies een <b>\"Company Limited\"</b> als u de hoogste geloofwaardigheid zoekt, van plan bent het bedrijf uit te breiden, risico's voor persoonlijke bezittingen wilt beperken, buitenlandse aandeelhouders heeft, of van plan bent buitenlandse werknemers in te huren (werkvergunning).\n• Kies een <b>\"Limited Partnership\"</b> als het een familiebedrijf betreft of nauwe vrienden die u 100% vertrouwt, het bedrijf een laag schuldenrisico heeft, er geen buitenlandse partners zijn en u de voorkeur geeft aan de eenvoudigste beheerstructuur.\n\n<i><b>Opmerking:</b> Momenteel verschillen de kosten voor registratie, maandelijkse boekhouding en de jaarlijkse financiële afsluiting voor Co., Ltd. en Ltd. Part. niet significant. Registratie als een \"Company Limited\" levert op de lange termijn over het algemeen de maximale voordelen op.</i>"
+                },
+                {
+                    "question": "Hoeveel dagen duurt de verwerking?",
+                    "answer": "Het duurt doorgaans ongeveer <b>1-5 werkdagen</b> (exclusief feestdagen) na ontvangst van de volledige informatie en documenten van de klant. De tijdsduur kan afhangen van de wachtrij bij het Department of Business Development op dat moment, evenals de snelheid van de klant bij de online identiteitsverificatie (of OTP-indiening)."
+                },
+                {
+                    "question": "Wat is geregistreerd kapitaal? Kan ik een bedrijf registreren als ik niet het volledige bedrag heb?",
+                    "answer": "Eenvoudig gezegd is <b>\"Geregistreerd Kapitaal\"</b> het werkkapitaal dat wordt gebruikt voor de bedrijfsactiviteiten. <i>\"Het kapitaal storten\"</i> betekent niet dat u iemand anders betaalt; het betekent dat u geld stort op de bankrekening van het bedrijf (die kan worden geopend nadat het bedrijf is geregistreerd).\n\n• <b>Als u niet het volledige bedrag heeft:</b> U kunt het geld geleidelijk storten. Bijvoorbeeld, als het geregistreerde kapitaal 1 miljoen THB is (minimaal 25% gestort is 250.000 THB), kunt u beginnen door de rekening te openen met 1.000 THB. Wanneer er zakelijke uitgaven zijn, kunt u geld op de bedrijfsrekening storten en het uitbetalen. Dit geld hoeft niet stil op de rekening te staan; het kan worden gebruikt als werkkapitaal.\n• <b>Let op:</b> Behalve in gevallen waarin het bedrijf <b>Buitenlandse aandeelhouders</b> heeft of een volledig Thais bedrijf is met een <b>geregistreerd kapitaal van meer dan 5 miljoen THB</b>. In deze gevallen vereist de wet dat tijdens het registratieproces echte fondsen en een Bankverklaring (Bank Certificate) worden getoond."
+                },
+                {
+                    "question": "Mogen buitenlanders aandeelhouder zijn, en welk financieel bewijs is vereist?",
+                    "answer": "Ja, dat kan, via een algemene Company Limited registratie. Als het bedrijf de status van Thaise rechtspersoon moet behouden, moeten Thaise staatsburgers ten minste 51% van de aandelen in handen hebben. De voorwaarden met betrekking tot financieel bewijs en aandelenverhouding zijn als volgt:\n\n• <b>Als er buitenlandse aandeelhouders zijn (Thais hebben 51% of meer):</b> Thaise partners moeten een Bankverklaring (Bank Certificate) overleggen die overeenkomt met hun aandelenpercentage (buitenlanders hoeven geen fondsen te tonen). Bijvoorbeeld:\n  1. Ter voorbereiding op een werkvergunning (Work Permit): Geregistreerd kapitaal 2 miljoen THB (100% gestort), Thais met 51% moeten ten minste 1.020.000 THB aan deposito's aantonen.\n  2. Geen werkvergunning nodig: Geregistreerd kapitaal 1 miljoen THB (minimaal 25% gestort), Thais met 51% moeten ten minste 127.500 THB aan deposito's aantonen.\n• <b>Als de aandeelhouders 100% Thais zijn:</b> Als het geregistreerde kapitaal niet hoger is dan 5.000.000 THB, is er tijdens het oprichtingsproces geen financieel bewijs nodig (zelfs als aandeelhouders later veranderen en er buitenlanders bijkomen).\n• <b>Als buitenlanders 100% (of meer dan 49%) in handen willen hebben:</b> Het bedrijf kan worden geregistreerd, maar na voltooiing kan het bedrijf geen activiteiten uitvoeren totdat toestemming is verleend via een van de volgende kanalen:\n  1. Vraag een Foreign Business License (FBL) aan. Zodra de licentie is ontvangen, kunnen de activiteiten beginnen.\n  2. Vraag investeringspromotie (BOI) aan. Zodra het BOI-certificaat is ontvangen, moet u een Foreign Business Certificate (FBC) aanvragen voordat u met de activiteiten begint."
+                },
+                {
+                    "question": "Als ik nog geen kantoor of locatie heb, kan ik me dan toch registreren?",
+                    "answer": "<b>Ja, u kunt zich registreren.</b> Normaal gesproken kan een commercieel gebouw, winkelpand, herenhuis of woonhuis worden gebruikt als registratieadres. Als u echter niet over deze locaties beschikt of uw eigen locatie liever niet gebruikt, bieden wij een <b>Virtual Office</b> service in 3 formaten om aan uw behoeften te voldoen:\n1. Gebruik als adres uitsluitend voor bedrijfsregistratie.\n2. Gebruik als adres voor bedrijfsregistratie + Btw-registratie (VAT).\n3. Gebruik als adres voor bedrijfsregistratie + Btw-registratie + Werkgeversregistratie bij de Sociale Zekerheid."
+                },
+                {
+                    "question": "Als ik niet de eigenaar van het huis ben, zoals bij het gebruik van een huurhuis of appartement (condo), kan ik het bedrijf daar dan registreren?",
+                    "answer": "Ja, maar er zijn aanvullende documenten vereist:\n\n• <b>Huurhuis/ruimte:</b> Een <i>\"Toestemmingsbrief om de locatie te gebruiken\"</i> is vereist, samen met gewaarmerkte kopieën van de ID-kaart en de huisregistratie van de \"Huismeester of Eigenaar\" om met de registratie te worden ingediend.\n• <b>Condominiums:</b> Hoewel wettelijk toegestaan, dient u dit eerst te controleren bij de beheerder (juristic person) van het appartement. Veel projecten hebben interne regels die het gebruik van wooneenheden als bedrijfsentiteiten of kantoren verbieden om overlast voor andere bewoners te voorkomen. <i>(Wij hebben een Virtual Office service om dit probleem voor u op te lossen.)</i>"
+                },
+                {
+                    "question": "Als ik geen vaste telefoonlijn (02-nummer) heb, kan ik dan een bedrijf registreren?",
+                    "answer": "Ja, dat kan. Momenteel staat het Department of Business Development ondernemers toe om mobiele telefoonnummers te gebruiken voor de registratie. Bovendien kunt u voor e-mails algemene e-mailadressen gebruiken (zoals @gmail.com of @hotmail.com); het is niet nodig om een e-mailadres onder de domeinnaam van het bedrijf te gebruiken."
+                },
+                {
+                    "question": "Kan ik, nadat het bedrijf is geregistreerd, direct beginnen met zakendoen?",
+                    "answer": "Voor de meeste bedrijven met algemene activiteiten geldt dat u onmiddellijk kunt beginnen met de bedrijfsactiviteiten zodra de registratie als rechtspersoon is voltooid. Echter, er zijn <b>bepaalde bedrijven die gereguleerd worden door specifieke wetten</b> en die extra licenties van de relevante overheidsinstanties vereisen voordat ze legaal mogen opereren. Bijvoorbeeld:\n\n• <b>Toerisme en Reizen:</b> Touroperators, gidsen, hotels, accommodaties (Moet een TAT-licentie of een licentie van de relevante instantie aanvragen).\n• <b>Gezondheid en Voeding:</b> Restaurants, klinieken, ziekenhuizen, spa's, productie/import van voedsel, medicijnen, cosmetica (Moet een licentie aanvragen bij de FDA of het Ministerie van Volksgezondheid).\n• <b>Industrieel:</b> Fabriken, bezit van chemicaliën of gevaarlijke stoffen (Moet een licentie aanvragen bij het Department of Industrial Works).\n• <b>Financieel:</b> Kredietbedrijven zoals Pico Finance (Moet een licentie aanvragen bij de Bank van Thailand of het Ministerie van Financiën).\n• <b>Overige:</b> Wervingsbureaus, beveiligingsdiensten, logistiek en transport, enz. (Moet een aanvraag indienen bij het Department of Employment, de Koninklijke Thaise Politie, het Department of Land Transport, enz.)\n\n<i><b>Belangrijke opmerking:</b> Bepaalde activiteiten kunnen uitsluitend zijn voorbehouden aan Thaise staatsburgers. Als uw bedrijf buitenlandse aandeelhouders heeft die de vastgestelde limiet overschrijden, of buitenlandse bevoegde directeuren, is het mogelijk dat u die specifieke licentie niet kunt verkrijgen. Om tijd en geld te besparen, raden wij u aan om de vereisten te bestuderen of rechtstreeks navraag te doen bij de regulerende instantie voordat u de bedrijfsregistratie start.</i>"
+                },
+                {
+                    "question": "Moet ik me direct na de bedrijfsregistratie aanmelden voor de Belasting over de Toegevoegde Waarde (VAT 7%)?",
+                    "answer": "Niet noodzakelijk. Bedrijfsregistratie en Btw-registratie zijn afzonderlijke processen. Een bedrijf is pas verplicht zich voor de Btw te registreren wanneer de bedrijfsinkomsten <b>1,8 miljoen THB per jaar overschrijden</b>.\n\nEchter, als uw bedrijf goederen moet importeren/exporteren of zakendoet met andere B2B zakelijke partners die vereisen dat u belastingfacturen uitschrijft, dan <b>moet uw bedrijf Btw-registratie aanvragen</b> om belastingfacturen aan uw partners te kunnen uitschrijven."
+                },
+                {
+                    "question": "Moet ik, nadat het bedrijf is geregistreerd, maar voordat ik begin met de verkoop of inkomsten genereer, een boekhouding bijhouden?",
+                    "answer": "<b>Ja, dat moet.</b> Dit is een veelvoorkomende misvatting onder nieuwe ondernemers. Volgens de wet (Accounting Act B.E. 2543) zijn alle juridische entiteiten verplicht om rekeningen op te stellen en relevante rapporten in te dienen bij het DBD en de Belastingdienst, <b>\"zelfs als er in die maand of dat jaar geen inkomsten zijn, geen uitgaven zijn, of als de bedrijfsactiviteiten nog niet zijn gestart (Nul-aangifte).\"</b> Het niet indienen vóór de deadline zal leiden tot aanzienlijke wettelijke boetes."
+                },
+                {
+                    "question": "Moet ik als bedrijfsdirecteur mijn salaris inhouden voor de Sociale Zekerheid?",
+                    "answer": "<b>Nee.</b> Als u een bevoegd directeur en grootaandeelhouder bent, wordt u beschouwd als een <b>\"Werkgever\"</b>, niet als een werknemer. Daarom kunt en hoeft u zich niet als verzekerde (Artikel 33) in uw eigen bedrijf te registreren.\n\nEchter, zodra het bedrijf begint met het aannemen van <b>\"Fulltime werknemers\"</b>, eist de wet dat het bedrijf zich registreert als werkgever en binnen 30 dagen na de datum waarop de werknemers beginnen te werken, de Sociale Zekerheid voor hen indient."
+                }
+            ]
+        }
+    },
+    "ms": {
+        "hero": {
+            "title": "Mulakan perniagaan anda secara profesional. Pendaftaran syarikat lengkap di satu tempat.",
+            "subtitle": "Dipercayai oleh lebih 300 usahawan.",
+            "description": "Tukar kerja kertas dan prosedur undang-undang yang rumit kepada proses yang mudah. Kami menguruskan semuanya daripada menubuhkan syarikat anda dengan Jabatan Pembangunan Perniagaan (DBD), hingga memohon ID korporat dan nombor pengenalan cukai, supaya anda boleh fokus pada pertumbuhan perniagaan anda.",
+            "cta": "Hubungi 092-882-5556"
+        },
+        "promotion": {
+            "title": "Tawaran Istimewa!",
+            "subtitle": "Jangan lepaskan harga istimewa dan faedah eksklusif khusus untuk perkhidmatan ini.",
+            "cta": "Lihat Promosi",
+            "slug": "company-registration-deal"
+        },
+        "features": {
+            "title": "Segalanya yang anda perlukan untuk memulakan perniagaan",
+            "items": [
+                {
+                    "title": "Perundingan & Perancangan Perniagaan",
+                    "description": "Kami menganalisis struktur perniagaan anda dan memberi nasihat yang paling sesuai mengikut kes tertentu.",
+                    "icon": "Lightbulb"
+                },
+                {
+                    "title": "Penyediaan Dokumen & M&A",
+                    "description": "Sediakan borang rasmi dengan tepat melalui sistem pendaftaran digital (DBD Biz Regist).",
+                    "icon": "FileSignature"
+                },
+                {
+                    "title": "Penyerahan Pendaftaran",
+                    "description": "Bertindak sebagai wakil anda untuk menyerahkan dokumen kepada Jabatan Pembangunan Perniagaan (DBD) pada setiap langkah.",
+                    "icon": "Landmark"
+                },
+                {
+                    "title": "Permohonan ID Cukai",
+                    "description": "Uruskan permohonan ID korporat dan nombor cukai untuk menyediakan sistem cukai syarikat anda.",
+                    "icon": "Calculator"
+                }
+            ]
+        },
+        "benefits": {
+            "title": "Keistimewaan eksklusif hanya untuk anda",
+            "items": [
+                { "title": "Tiada komitmen perakaunan bulanan!", "icon": "Unlock" },
+                { "title": "PERCUMA! Semak dan tempah sehingga 3 nama syarikat", "icon": "SearchCheck" },
+                { "title": "PERCUMA! 1 cop syarikat berdakwat sendiri", "icon": "Stamp" },
+                { "title": "PERCUMA! Mohon kata laluan e-Filing untuk DBD", "icon": "KeySquare" },
+                { "title": "PERCUMA! Mohon kata laluan untuk Jabatan Hasil (Revenue Department)", "icon": "KeyRound" },
+                { "title": "PERCUMA! Set dokumen untuk membuka akaun bank korporat", "icon": "Wallet" },
+                { "title": "PERCUMA! Set lengkap sijil syarikat (DBD)", "icon": "ScrollText" },
+                { "title": "PERCUMA! Kursus latihan teknik cukai (Bernilai 5,900 THB)", "icon": "GraduationCap" },
+                { "title": "PERCUMA! Kad perniagaan untuk pengeluaran resit/invois cukai", "icon": "Contact2" }
+            ]
+        },
+        "requirements": {
+            "title": "Apa yang perlu disediakan untuk pendaftaran syarikat",
+            "subtitle": "Sediakan maklumat asas, dan serahkan selebihnya kepada kami.",
+            "documents": {
+                "title": "1. Dokumen penting yang diperlukan",
+                "items": [
+                    "Sekurang-kurangnya 2 pemegang saham \n\n1. Pemegang saham Thai: Salinan kad pengenalan (Salinan depan dan belakang yang jelas)\n\n2. Pemegang saham asing: Salinan pasport (Hanya halaman pertama dengan gambar)\n\n3. Pemegang saham korporat: Salinan sijil syarikat dan salinan kad pengenalan pengarah yang sah",
+                    "Pendaftaran rumah (Tabien Baan) yang akan digunakan sebagai ibu pejabat syarikat",
+                    "Reka bentuk cop (jika ada)"
+                ]
+            },
+            "information": {
+                "title": "2. Maklumat asas perniagaan",
+                "items": [
+                    "Nama syarikat yang dikehendaki (Thai-Inggeris)",
+                    "Nisbah pegangan saham (dalam peratusan, cth., 99% dan 1%)",
+                    "Senarai pengarah (Penandatangan yang diberi kuasa)",
+                    "Penerangan perniagaan",
+                    "Jumlah modal berdaftar (cth., Modal 1 juta THB, 25% berbayar)",
+                    "Maklumat hubungan syarikat \n1. Nombor telefon \n2. E-mel",
+                    "Maklumat hubungan pemegang saham \n1. Nombor telefon \n2. E-mel \n3. ID LINE"
+                ]
+            }
+        },
+        "process": {
+            "title": "4 langkah pendaftaran mudah",
+            "steps": [
+                {
+                    "title": "Perundingan & Tempahan Nama",
+                    "description": "Mendaftar syarikat adalah seperti menempah sut pakaian. Kami membincangkan keperluan anda, membantu merancang struktur perniagaan yang paling sesuai, dan meneruskan tempahan nama syarikat.",
+                    "icon": "MessageSquareText"
+                },
+                {
+                    "title": "Penyediaan dokumen melalui sistem kerajaan",
+                    "description": "Pasukan kami menyediakan semua dokumen dan borang rasmi melalui sistem DBD Biz Regist dari Jabatan Pembangunan Perniagaan, Kementerian Perdagangan.",
+                    "icon": "FileStack"
+                },
+                {
+                    "title": "Pengesahan Identiti Dalam Talian (Tanpa perlu hadir)",
+                    "description": "Pemegang saham dan pengarah mengesahkan identiti mereka (Warganegara Thai menggunakan aplikasi ThaID, warga asing menggunakan aplikasi DBD e-Service) dengan mengimbas Kod QR atau mengklik pautan pengesahan yang dihantar oleh DBD ke e-mel peribadi mereka.",
+                    "icon": "SmartphoneNfc"
+                },
+                {
+                    "title": "Hantar Pendaftaran & Penghantaran",
+                    "description": "Pasukan kami menyerahkan permohonan kepada DBD. Setelah pendaftaran dan sijil syarikat diluluskan, kami akan mengesahkan ketepatannya dan menghantar dokumen penting berserta hadiah percuma terus kepada anda.",
+                    "icon": "Gift"
+                }
+            ]
+        },
+        "faq": {
+            "title": "Soalan Lazim (FAQ)",
+            "items": [
+                {
+                    "question": "Apakah perbezaan antara Syarikat Berhad (Company Limited / Co., Ltd.) dan Perkongsian Terhad (Limited Partnership / Ltd. Part.), dan yang manakah harus saya pilih?",
+                    "answer": "Walaupun kedua-dua struktur mempunyai status <b>\"Entiti Sah (Juristic Person)\"</b> dan berkongsi kadar cukai yang sama, perbezaan utama terletak pada <b>\"Liabiliti untuk Hutang\"</b>, <b>\"Kredibiliti\"</b>, dan <b>\"Sekatan ke atas Warga Asing\"</b>. Untuk memudahkan pemahaman, berikut adalah perbandingan:\n\n<b>1. Syarikat Berhad (Co., Ltd.)</b>\n• <b>Liabiliti:</b> <i>\"Liabiliti Terhad\"</i> (kecuali untuk pengarah). Semua pemegang saham hanya bertanggungjawab ke atas hutang syarikat setakat jumlah saham mereka yang belum dibayar (memisahkan kewangan peribadi daripada kewangan perniagaan dengan jelas, melindungi aset peribadi).\n• <b>Kredibiliti:</b> Sangat Tinggi. Sesuai untuk perniagaan jangka panjang, bidaan kerajaan, projek besar, menarik pelabur, atau operasi B2B (Perniagaan-ke-Perniagaan).\n• <b>Warga Asing / Permit Kerja:</b> Sangat Disyorkan. Undang-undang dan agensi kerajaan menyokong sepenuhnya struktur Co., Ltd., sama ada untuk pegangan saham asing (sehingga 49%), permohonan Permit Kerja, Visa Perniagaan, atau promosi pelaburan BOI.\n• <b>Pengasas yang diperlukan:</b> Pada masa ini, minimum hanya 2 pemegang saham diperlukan untuk mendaftar.\n\n<b>2. Perkongsian Terhad (Ltd. Part.)</b>\n• <b>Liabiliti:</b> Undang-undang menetapkan sekurang-kurangnya seorang rakan kongsi bertindak sebagai <i>\"Rakan Pengurus (Managing Partner)\"</i>, yang mempunyai <b>\"Liabiliti Tidak Terhad\"</b> untuk hutang perniagaan (jika perniagaan menghadapi masalah, rakan pengurus mungkin perlu menggunakan aset peribadi untuk membayar hutang). Rakan kongsi lain mempunyai liabiliti terhad berdasarkan pelaburan mereka.\n• <b>Kredibiliti:</b> Sederhana. Sesuai untuk perniagaan kecil, Perniagaan Keluarga, atau syarikat di mana rakan kongsi tidak ketat tentang jenis entiti sah.\n• <b>Warga Asing:</b> Tidak Disyorkan. Melibatkan warga asing dalam Ltd. Part. mempunyai sekatan undang-undang yang rumit. Jika warga asing bertindak sebagai rakan pengurus, perniagaan tersebut mungkin diklasifikasikan sebagai entiti asing, menjadikan operasi dan Permit Kerja jauh lebih sukar berbanding Co., Ltd.\n• <b>Pengasas yang diperlukan:</b> Memerlukan hanya 2 pengasas, sama seperti pendaftaran syarikat.\n\n<b>Ringkasan: Yang manakah patut dipilih?</b>\n• Pilih <b>\"Syarikat Berhad (Company Limited)\"</b> jika anda mencari kredibiliti tertinggi, merancang untuk mengembangkan perniagaan atau cawangan, ingin mengehadkan risiko kepada aset peribadi, mempunyai pemegang saham asing, atau merancang untuk mengupah pekerja asing (Permit Kerja).\n• Pilih <b>\"Perkongsian Terhad (Limited Partnership)\"</b> jika ia adalah perniagaan keluarga atau rakan karib yang anda percayai 100%, perniagaan mempunyai risiko hutang yang rendah, tiada rakan kongsi asing, dan anda lebih suka struktur pengurusan yang paling ringkas.\n\n<i><b>Nota:</b> Pada masa ini, kos pendaftaran, perakaunan bulanan, dan penutupan kewangan tahunan untuk Co., Ltd. dan Ltd. Part. tidak berbeza dengan ketara. Mendaftar sebagai \"Syarikat Berhad\" secara amnya memberikan faedah jangka panjang yang maksimum.</i>"
+                },
+                {
+                    "question": "Berapa hari masa pemprosesan yang diambil?",
+                    "answer": "Ia biasanya mengambil masa kira-kira <b>1-5 hari bekerja</b> (tidak termasuk cuti umum) selepas menerima maklumat dan dokumen yang lengkap daripada pelanggan. Jangka masa mungkin bergantung pada giliran di Jabatan Pembangunan Perniagaan pada masa itu, serta kepantasan pelanggan dalam pengesahan identiti dalam talian (atau penghantaran OTP)."
+                },
+                {
+                    "question": "Apakah modal berdaftar? Bolehkah saya mendaftar syarikat jika saya tidak mempunyai jumlah penuh?",
+                    "answer": "Ringkasnya, <b>\"Modal Berdaftar (Registered Capital)\"</b> ialah modal kerja yang digunakan untuk operasi perniagaan. <i>\"Membayar modal berdaftar\"</i> tidak bermaksud membayar kepada orang lain; ia bermaksud mendepositkan dana ke dalam akaun bank syarikat (yang boleh dibuka selepas syarikat didaftarkan).\n\n• <b>Jika anda tidak mempunyai jumlah penuh sekali gus:</b> Anda boleh mendepositkan wang secara beransur-ansur. Contohnya, jika modal berdaftar ialah 1 juta THB (minimum 25% berbayar ialah 250,000 THB), anda boleh bermula dengan membuka akaun dengan 1,000 THB. Apabila terdapat perbelanjaan perniagaan, anda boleh mendepositkan wang ke dalam akaun syarikat dan membayarnya. Dana ini tidak perlu dibiarkan terbiar di dalam akaun; ia boleh digunakan sebagai modal kerja.\n• <b>Awas:</b> Kecuali dalam kes di mana syarikat mempunyai <b>Pemegang Saham Asing</b> atau syarikat pemilikan Thai sepenuhnya dengan <b>modal berdaftar melebihi 5 juta THB</b>. Dalam kes ini, undang-undang memerlukan dana sebenar dan Sijil Bank (Bank Certificate) ditunjukkan semasa proses pendaftaran."
+                },
+                {
+                    "question": "Bolehkah warga asing menjadi pemegang saham, dan apakah bukti kewangan yang diperlukan?",
+                    "answer": "Ya, mereka boleh, melalui pendaftaran Syarikat Berhad (Company Limited) umum. Jika syarikat itu ingin menjadi entiti sah Thai, warganegara Thai mesti memegang sekurang-kurangnya 51% daripada saham. Syarat mengenai bukti kewangan dan nisbah pegangan saham adalah seperti berikut:\n\n• <b>Jika terdapat pemegang saham asing (Warganegara Thai memegang 51% atau lebih):</b> Rakan kongsi Thai mesti menunjukkan Sijil Bank (Bank Certificate) yang sepadan dengan bahagian saham mereka (Warga asing tidak perlu menunjukkan dana). Contohnya:\n  1. Untuk persediaan Permit Kerja: Modal berdaftar 2 juta THB (100% berbayar), warga Thai yang memegang 51% mesti menunjukkan deposit sekurang-kurangnya 1,020,000 THB.\n  2. Tiada Permit Kerja diperlukan: Modal berdaftar 1 juta THB (minimum 25% berbayar), warga Thai yang memegang 51% mesti menunjukkan deposit sekurang-kurangnya 127,500 THB.\n• <b>Jika pemegang saham adalah 100% Thai:</b> Jika modal berdaftar tidak melebihi 5,000,000 THB, tiada bukti kewangan diperlukan semasa proses penubuhan (walaupun pemegang saham berubah dan warga asing dibawa masuk kemudian).\n• <b>Jika warga asing ingin memegang 100% (atau lebih daripada 49%):</b> Syarikat itu boleh didaftarkan, tetapi setelah selesai, syarikat tidak boleh menjalankan sebarang perniagaan sehingga kebenaran diberikan melalui salah satu saluran berikut:\n  1. Mohon Lesen Perniagaan Asing (Foreign Business License: FBL). Operasi boleh bermula setelah lesen diterima.\n  2. Mohon promosi pelaburan (BOI). Setelah sijil BOI diterima, anda mesti memohon Sijil Perniagaan Asing (Foreign Business Certificate: FBC) sebelum memulakan operasi."
+                },
+                {
+                    "question": "Jika saya belum mempunyai pejabat atau lokasi, bolehkah saya masih mendaftar?",
+                    "answer": "<b>Ya, anda boleh mendaftar.</b> Lazimnya, bangunan komersial, rumah kedai, rumah bandar, atau rumah kediaman boleh digunakan sebagai alamat pendaftaran. Walau bagaimanapun, jika anda tidak mempunyai lokasi ini atau memilih untuk tidak menggunakan lokasi anda sendiri, kami menawarkan perkhidmatan <b>Pejabat Maya (Virtual Office)</b> dalam 3 format untuk memenuhi keperluan anda:\n1. Digunakan sebagai alamat untuk pendaftaran syarikat sahaja.\n2. Digunakan sebagai alamat untuk pendaftaran syarikat + pendaftaran VAT.\n3. Digunakan sebagai alamat untuk pendaftaran syarikat + pendaftaran VAT + Pendaftaran majikan dengan Keselamatan Sosial."
+                },
+                {
+                    "question": "Jika saya bukan pemilik rumah, seperti menggunakan rumah sewa atau kondominium, bolehkah saya mendaftar syarikat di sana?",
+                    "answer": "Ya, tetapi terdapat dokumen tambahan yang diperlukan:\n\n• <b>Rumah/ruang sewa:</b> <i>\"Surat Kebenaran untuk menggunakan premis\"</i> diperlukan, bersama dengan salinan kad pengenalan dan pendaftaran rumah \"Tuan Rumah atau Pemilik Hartanah\" yang disahkan untuk diserahkan bersama pendaftaran.\n• <b>Kondominium:</b> Walaupun dibenarkan di sisi undang-undang, anda harus menyemak dengan pengurusan (juristic person) kondo tersebut terlebih dahulu. Banyak projek mempunyai peraturan dalaman yang melarang penggunaan unit kediaman sebagai entiti korporat atau pejabat untuk mengelakkan gangguan kepada penduduk lain. <i>(Kami mempunyai perkhidmatan Pejabat Maya untuk menyelesaikan masalah ini untuk anda.)</i>"
+                },
+                {
+                    "question": "Jika saya tidak mempunyai nombor telefon talian tetap (02), bolehkah saya mendaftar syarikat?",
+                    "answer": "Ya, boleh. Pada masa ini, Jabatan Pembangunan Perniagaan membenarkan usahawan menggunakan nombor telefon bimbit untuk pendaftaran. Selain itu, untuk e-mel, anda boleh menggunakan e-mel umum (seperti @gmail.com atau @hotmail.com); tidak perlu menggunakan e-mel di bawah nama domain syarikat."
+                },
+                {
+                    "question": "Setelah syarikat didaftarkan, bolehkah saya mula beroperasi serta-merta?",
+                    "answer": "Bagi kebanyakan perniagaan dengan operasi umum, sebaik sahaja pendaftaran entiti sah selesai, anda boleh memulakan operasi perniagaan serta-merta. Walau bagaimanapun, terdapat <b>perniagaan tertentu yang dikawal oleh undang-undang khusus</b> yang memerlukan lesen tambahan daripada agensi kerajaan yang berkaitan sebelum beroperasi secara sah. Contohnya:\n\n• <b>Pelancongan dan Perjalanan:</b> Pengendali pelancongan, pemandu pelancong, hotel, penginapan (Mesti memohon lesen TAT atau agensi yang berkaitan).\n• <b>Kesihatan dan Makanan:</b> Restoran, klinik, hospital, spa, pengeluaran/import makanan, ubat-ubatan, kosmetik (Mesti memohon lesen FDA atau Kementerian Kesihatan Awam).\n• <b>Perindustrian:</b> Kilang, pemilikan bahan kimia atau bahan berbahaya (Mesti memohon lesen daripada Jabatan Kerja Perindustrian).\n• <b>Kewangan:</b> Perniagaan kredit seperti Pico Finance (Mesti memohon lesen daripada Bank of Thailand atau Kementerian Kewangan).\n• <b>Lain-lain:</b> Agensi pekerjaan, perkhidmatan keselamatan, logistik dan pengangkutan, dsb. (Mesti memohon daripada Jabatan Pekerjaan, Polis Diraja Thai, Jabatan Pengangkutan Darat, dsb.)\n\n<i><b>Nota Penting:</b> Beberapa perniagaan mungkin dikhaskan secara eksklusif untuk warganegara Thai. Jika syarikat anda mempunyai pemegang saham asing yang melebihi had yang ditetapkan atau pengarah sah warga asing, anda mungkin tidak dapat memperoleh lesen khusus tersebut. Untuk menjimatkan masa dan wang, kami menasihatkan agar mengkaji keperluan atau bertanya terus dengan agensi pengawal selia sebelum memulakan pendaftaran syarikat.</i>"
+                },
+                {
+                    "question": "Adakah saya perlu mendaftar untuk Cukai Nilai Tambah (VAT 7%) serta-merta selepas pendaftaran syarikat?",
+                    "answer": "Tidak semestinya. Pendaftaran syarikat dan pendaftaran VAT adalah proses yang berasingan. Syarikat hanya diwajibkan mendaftar untuk VAT apabila pendapatan perniagaannya <b>melebihi 1.8 juta THB setahun</b>.\n\nWalau bagaimanapun, jika syarikat anda perlu mengimport/mengeksport barangan atau berurusan dengan rakan kongsi korporat B2B lain yang memerlukan anda mengeluarkan invois cukai, syarikat anda <b>mesti memohon pendaftaran VAT</b> untuk membolehkan pengeluaran invois cukai kepada rakan kongsi anda."
+                },
+                {
+                    "question": "Selepas mendaftar syarikat, tetapi sebelum memulakan jualan atau menjana pendapatan, adakah saya perlu melakukan perakaunan?",
+                    "answer": "<b>Ya, anda mesti.</b> Ini adalah salah faham umum dalam kalangan usahawan baharu. Menurut undang-undang (Akta Perakaunan B.E. 2543), semua entiti sah diwajibkan untuk menyediakan akaun dan menyerahkan laporan yang berkaitan kepada DBD dan Jabatan Hasil, <b>\"walaupun tiada pendapatan, tiada perbelanjaan, atau operasi perniagaan belum bermula pada bulan atau tahun tersebut (Pengisytiharan Sifar).\"</b> Kegagalan berbuat demikian mengikut tarikh akhir akan mengakibatkan denda undang-undang yang ketara."
+                },
+                {
+                    "question": "Sebagai pengarah syarikat, adakah saya perlu memotong gaji saya untuk Keselamatan Sosial?",
+                    "answer": "<b>Tidak.</b> Jika anda adalah pengarah yang diberi kuasa dan pemegang saham utama, anda dianggap sebagai <b>\"Majikan\"</b>, bukan pekerja. Oleh itu, anda tidak boleh dan tidak perlu mendaftar sebagai orang yang diinsuranskan (Seksyen 33) dalam syarikat anda sendiri.\n\nWalau bagaimanapun, sebaik sahaja syarikat mula mengambil <b>\"Pekerja sepenuh masa\"</b>, undang-undang memerlukan syarikat untuk mendaftar sebagai majikan dan menyerahkan Keselamatan Sosial untuk pekerja tersebut dalam masa 30 hari dari tarikh mereka mula bekerja."
+                }
+            ]
+        }
+    },
+    "hi": {
+        "hero": {
+            "title": "अपना व्यवसाय पेशेवर रूप से शुरू करें। एक ही स्थान पर पूर्ण कंपनी पंजीकरण।",
+            "subtitle": "300 से अधिक उद्यमियों द्वारा विश्वसनीय।",
+            "description": "जटिल कागजी कार्रवाई और कानूनी प्रक्रियाओं को एक सरल प्रक्रिया में बदलें। हम व्यवसाय विकास विभाग (DBD) के साथ आपकी कंपनी स्थापित करने से लेकर कॉर्पोरेट आईडी और कर पहचान संख्या (Tax ID) का अनुरोध करने तक सब कुछ संभालते हैं, ताकि आप अपने व्यवसाय को बढ़ाने पर ध्यान केंद्रित कर सकें।",
+            "cta": "कॉल करें 092-882-5556"
+        },
+        "promotion": {
+            "title": "विशेष छूट!",
+            "subtitle": "विशेष रूप से इस सेवा के लिए विशेष कीमतों और लाभों को न चूकें।",
+            "cta": "प्रमोशन देखें",
+            "slug": "company-registration-deal"
+        },
+        "features": {
+            "title": "व्यवसाय शुरू करने के लिए आवश्यक सब कुछ",
+            "items": [
+                {
+                    "title": "व्यापार परामर्श और योजना",
+                    "description": "हम आपके व्यवसाय संरचना का विश्लेषण करते हैं और आपके उद्यम के लिए केस-दर-केस के आधार पर सबसे उपयुक्त सलाह प्रदान करते हैं।",
+                    "icon": "Lightbulb"
+                },
+                {
+                    "title": "दस्तावेज़ और MOA तैयारी",
+                    "description": "डिजिटल कॉर्पोरेट पंजीकरण प्रणाली (DBD Biz Regist) के माध्यम से आधिकारिक फॉर्म सटीक रूप से तैयार करें।",
+                    "icon": "FileSignature"
+                },
+                {
+                    "title": "पंजीकरण दाखिल करना",
+                    "description": "हर कदम पर व्यवसाय विकास विभाग (DBD) को दस्तावेज़ जमा करने के लिए आपके प्रतिनिधि के रूप में कार्य करना।",
+                    "icon": "Landmark"
+                },
+                {
+                    "title": "कर पहचान (Tax ID) अनुरोध",
+                    "description": "आपकी कंपनी की कर प्रणाली तैयार करने के लिए कॉर्पोरेट आईडी और टैक्स पहचान संख्या के अनुरोध को संभालना।",
+                    "icon": "Calculator"
+                }
+            ]
+        },
+        "benefits": {
+            "title": "पूरी तरह से लोडेड! सिर्फ आपके लिए विशेष लाभ",
+            "items": [
+                { "title": "कोई मासिक लेखांकन प्रतिबद्धता नहीं!", "icon": "Unlock" },
+                { "title": "मुफ़्त! 3 कंपनी नामों की जाँच और आरक्षण", "icon": "SearchCheck" },
+                { "title": "मुफ़्त! 1 स्व-स्याही (self-inking) कंपनी स्टाम्प", "icon": "Stamp" },
+                { "title": "मुफ़्त! DBD के लिए ई-फाइलिंग (e-Filing) पासवर्ड अनुरोध", "icon": "KeySquare" },
+                { "title": "मुफ़्त! राजस्व विभाग के लिए पासवर्ड अनुरोध", "icon": "KeyRound" },
+                { "title": "मुफ़्त! कॉर्पोरेट बैंक खाता खोलने के लिए दस्तावेज़ सेट", "icon": "Wallet" },
+                { "title": "मुफ़्त! कंपनी प्रमाणपत्र दस्तावेजों (DBD) का पूरा सेट", "icon": "ScrollText" },
+                { "title": "मुफ़्त! कर तकनीक प्रशिक्षण पाठ्यक्रम (मूल्य 5,900 THB)", "icon": "GraduationCap" },
+                { "title": "मुफ़्त! रसीद/कर चालान जारी करने के लिए बिजनेस कार्ड", "icon": "Contact2" }
+            ]
+        },
+        "requirements": {
+            "title": "कंपनी पंजीकरण के लिए क्या तैयार करें",
+            "subtitle": "बस बुनियादी जानकारी तैयार करें, बाकी हम पर छोड़ दें।",
+            "documents": {
+                "title": "1. आवश्यक महत्वपूर्ण दस्तावेज़",
+                "items": [
+                    "कम से कम 2 शेयरधारक \n\n1. थाई शेयरधारक: आईडी कार्ड की कॉपी (आगे और पीछे की स्पष्ट कॉपी)\n\n2. विदेशी शेयरधारक: पासपोर्ट की कॉपी (केवल फोटो वाला पहला पेज)\n\n3. कॉर्पोरेट शेयरधारक: कंपनी प्रमाणपत्र की कॉपी और अधिकृत निदेशक के आईडी कार्ड की कॉपी",
+                    "कंपनी के मुख्यालय के रूप में उपयोग किए जाने के लिए हाउस रजिस्ट्रेशन (Tabien Baan)",
+                    "स्टाम्प डिज़ाइन (यदि कोई हो)"
+                ]
+            },
+            "information": {
+                "title": "2. बुनियादी व्यावसायिक जानकारी",
+                "items": [
+                    "वांछित कंपनी का नाम (थाई-अंग्रेजी)",
+                    "शेयरधारिता अनुपात (प्रतिशत में, जैसे 99% और 1%)",
+                    "निदेशकों की सूची (अधिकृत हस्ताक्षरकर्ता)",
+                    "व्यवसाय का विवरण",
+                    "पंजीकृत पूंजी राशि (उदाहरण: 1 मिलियन THB पूंजी, 25% भुगतान)",
+                    "कंपनी संपर्क जानकारी \n1. फोन नंबर \n2. ईमेल",
+                    "शेयरधारकों की संपर्क जानकारी \n1. फोन नंबर \n2. ईमेल \n3. LINE ID"
+                ]
+            }
+        },
+        "process": {
+            "title": "4 सरल पंजीकरण चरण",
+            "steps": [
+                {
+                    "title": "परामर्श और नाम आरक्षण",
+                    "description": "कंपनी पंजीकृत करना एक सूट सिलवाने जैसा है। हम आपकी आवश्यकताओं पर चर्चा करते हैं, उस व्यावसायिक संरचना की योजना बनाने में मदद करते हैं जो आपके उद्यम के लिए सबसे उपयुक्त है, और कंपनी का नाम आरक्षित करने के लिए आगे बढ़ते हैं।",
+                    "icon": "MessageSquareText"
+                },
+                {
+                    "title": "सरकारी प्रणाली के माध्यम से दस्तावेज़ तैयार करें",
+                    "description": "हमारी टीम वाणिज्य मंत्रालय के व्यवसाय विकास विभाग के DBD Biz Regist प्रणाली के माध्यम से सभी दस्तावेज़ और आधिकारिक फॉर्म तैयार करती है।",
+                    "icon": "FileStack"
+                },
+                {
+                    "title": "ऑनलाइन पहचान सत्यापन (यात्रा की आवश्यकता नहीं)",
+                    "description": "शेयरधारक और निदेशक अपनी पहचान सत्यापित करते हैं (थाई नागरिक ThaID ऐप का उपयोग करते हैं, विदेशी DBD e-Service ऐप का उपयोग करते हैं) QR कोड स्कैन करके या DBD द्वारा उनके व्यक्तिगत ईमेल पर भेजे गए सत्यापन लिंक पर क्लिक करके।",
+                    "icon": "SmartphoneNfc"
+                },
+                {
+                    "title": "पंजीकरण जमा करें और डिलीवरी प्राप्त करें",
+                    "description": "हमारी टीम DBD में आवेदन जमा करती है। एक बार पंजीकरण और कंपनी प्रमाणपत्र स्वीकृत हो जाने के बाद, हम सटीकता की पुष्टि करेंगे और आपके मुफ्त उपहारों के साथ आवश्यक दस्तावेज़ सीधे आप तक पहुंचाएंगे।",
+                    "icon": "Gift"
+                }
+            ]
+        },
+        "faq": {
+            "title": "अक्सर पूछे जाने वाले प्रश्न (FAQ)",
+            "items": [
+                {
+                    "question": "कंपनी लिमिटेड (Co., Ltd.) और लिमिटेड पार्टनरशिप (Ltd. Part.) में क्या अंतर है, और मुझे कौन सा चुनना चाहिए?",
+                    "answer": "हालांकि दोनों संरचनाओं को <b>\"कानूनी इकाई (Juristic Person)\"</b> का दर्जा प्राप्त है और वे समान कर दरों को साझा करते हैं, मुख्य अंतर <b>\"ऋण के लिए देयता\"</b>, <b>\"विश्वसनीयता\"</b> और <b>\"विदेशी नागरिकों पर प्रतिबंध\"</b> में हैं। समझने में आसानी के लिए, यहां एक तुलना दी गई है:\n\n<b>1. कंपनी लिमिटेड (Company Limited / Co., Ltd.)</b>\n• <b>देयता:</b> <i>\"सीमित देयता\"</i> (निदेशकों को छोड़कर)। सभी शेयरधारक कंपनी के ऋणों के लिए केवल उनके पास मौजूद शेयरों की अवैतनिक राशि तक ही उत्तरदायी हैं (व्यक्तिगत संपत्ति को सुरक्षित करते हुए व्यक्तिगत वित्त को व्यापारिक वित्त से स्पष्ट रूप से अलग करता है)।\n• <b>विश्वसनीयता:</b> बहुत अधिक। दीर्घकालिक व्यापार, सरकारी बोली (bidding), बड़ी परियोजनाओं, निवेशकों को आकर्षित करने, या B2B (व्यापार-से-व्यापार) संचालन के लिए उपयुक्त।\n• <b>विदेशी / वर्क परमिट (Work Permit):</b> अत्यधिक अनुशंसित। कानून और सरकारी एजेंसियां कंपनी लिमिटेड संरचना का पूरी तरह से समर्थन करती हैं, चाहे वह विदेशी शेयरधारिता (49% तक), वर्क परमिट आवेदन, बिजनेस वीजा, या BOI निवेश प्रोत्साहन के लिए हो।\n• <b>आवश्यक संस्थापक:</b> वर्तमान में, पंजीकरण के लिए कम से कम 2 शेयरधारकों की आवश्यकता होती है।\n\n<b>2. लिमिटेड पार्टनरशिप (Limited Partnership / Ltd. Part.)</b>\n• <b>देयता:</b> कानून के अनुसार कम से कम एक भागीदार को <i>\"प्रबंध भागीदार (Managing Partner)\"</i> के रूप में कार्य करने की आवश्यकता होती है, जिसकी व्यवसाय के ऋणों के लिए <b>\"असीमित देयता\"</b> होती है (यदि व्यवसाय को समस्याओं का सामना करना पड़ता है, तो प्रबंध भागीदार को ऋण चुकाने के लिए व्यक्तिगत संपत्ति का उपयोग करना पड़ सकता है)। अन्य भागीदारों की उनके निवेश के आधार पर सीमित देयता होती है।\n• <b>विश्वसनीयता:</b> मध्यम। छोटे व्यवसायों, पारिवारिक व्यवसायों (Family Businesses), या ऐसे उद्यमों के लिए उपयुक्त जहां भागीदार कानूनी इकाई के प्रकार के बारे में सख्त नहीं हैं।\n• <b>विदेशी:</b> अनुशंसित नहीं। लिमिटेड पार्टनरशिप में विदेशियों का होना जटिल कानूनी प्रतिबंधों से जुड़ा है। यदि कोई विदेशी प्रबंध भागीदार के रूप में कार्य करता है, तो व्यवसाय को एक विदेशी इकाई के रूप में वर्गीकृत किया जा सकता है, जिससे संचालन और वर्क परमिट कंपनी लिमिटेड की तुलना में बहुत अधिक कठिन हो जाते हैं।\n• <b>आवश्यक संस्थापक:</b> कंपनी पंजीकरण के समान, केवल 2 संस्थापकों की आवश्यकता है।\n\n<b>सारांश: कौन सा चुनें?</b>\n• यदि आप सर्वोच्च विश्वसनीयता चाहते हैं, व्यवसाय या शाखाओं का विस्तार करने की योजना बना रहे हैं, व्यक्तिगत संपत्ति के जोखिमों को सीमित करना चाहते हैं, विदेशी शेयरधारक हैं, या विदेशी कर्मचारियों (वर्क परमिट) को काम पर रखने की योजना बना रहे हैं, तो <b>\"कंपनी लिमिटेड\"</b> चुनें।\n• यदि यह एक पारिवारिक व्यवसाय है या करीबी दोस्त हैं जिन पर आप 100% भरोसा करते हैं, व्यवसाय में ऋण जोखिम कम है, कोई विदेशी भागीदार नहीं है, और आप सबसे सरल प्रबंधन संरचना पसंद करते हैं, तो <b>\"लिमिटेड पार्टनरशिप\"</b> चुनें।\n\n<i><b>नोट:</b> वर्तमान में, Co., Ltd. और Ltd. Part. के लिए पंजीकरण, मासिक लेखांकन और वार्षिक वित्तीय समापन की लागत में कोई महत्वपूर्ण अंतर नहीं है। \"कंपनी लिमिटेड\" के रूप में पंजीकरण करने से आम तौर पर अधिकतम दीर्घकालिक लाभ प्राप्त होते हैं।</i>"
+                },
+                {
+                    "question": "प्रक्रिया में कितने दिन लगते हैं?",
+                    "answer": "ग्राहक से पूरी जानकारी और दस्तावेज़ प्राप्त करने के बाद इसमें आमतौर पर <b>1-5 कार्य दिवस</b> (सार्वजनिक छुट्टियों को छोड़कर) लगते हैं। समय सीमा उस समय व्यवसाय विकास विभाग में कतार पर, साथ ही ऑनलाइन पहचान सत्यापन (या OTP सबमिशन) में ग्राहक की तत्परता पर निर्भर हो सकती है।"
+                },
+                {
+                    "question": "पंजीकृत पूंजी (Registered Capital) क्या है? क्या मैं कंपनी को पंजीकृत कर सकता हूँ यदि मेरे पास पूरी राशि नहीं है?",
+                    "answer": "सरल शब्दों में, <b>\"पंजीकृत पूंजी\"</b> व्यवसाय संचालन के लिए उपयोग की जाने वाली कार्यशील पूंजी (working capital) है। <i>\"पूंजी का भुगतान करने\"</i> का मतलब किसी और को भुगतान करना नहीं है; इसका अर्थ है कंपनी के बैंक खाते में धन जमा करना (जो कंपनी पंजीकृत होने के बाद खोला जा सकता है)।\n\n• <b>यदि आपके पास पूरी एकमुश्त राशि नहीं है:</b> आप धीरे-धीरे पैसे जमा कर सकते हैं। उदाहरण के लिए, यदि पंजीकृत पूंजी 1 मिलियन THB है (न्यूनतम 25% भुगतान 250,000 THB है), तो आप 1,000 THB के साथ खाता खोलकर शुरुआत कर सकते हैं। जब व्यावसायिक खर्च होते हैं, तो आप कंपनी के खाते में पैसे जमा कर सकते हैं और उसका भुगतान कर सकते हैं। इन निधियों को खाते में बेकार पड़े रहने की आवश्यकता नहीं है; इन्हें कार्यशील पूंजी के रूप में इस्तेमाल किया जा सकता है।\n• <b>चेतावनी:</b> उन मामलों को छोड़कर जहां कंपनी में <b>विदेशी शेयरधारक</b> हैं या एक पूर्ण थाई स्वामित्व वाली कंपनी है जिसकी <b>पंजीकृत पूंजी 5 मिलियन THB से अधिक है</b>। इन मामलों में, कानून के अनुसार पंजीकरण प्रक्रिया के दौरान वास्तविक धन और बैंक प्रमाणपत्र (Bank Certificate) दिखाया जाना आवश्यक है।"
+                },
+                {
+                    "question": "क्या विदेशी नागरिक शेयरधारक हो सकते हैं, और इसके लिए क्या वित्तीय प्रमाण आवश्यक है?",
+                    "answer": "हां, वे एक सामान्य कंपनी लिमिटेड पंजीकरण के माध्यम से हो सकते हैं। यदि कंपनी को थाई कानूनी इकाई होना है, तो थाई नागरिकों के पास कम से कम 51% शेयर होने चाहिए। वित्तीय प्रमाण और शेयरधारिता अनुपात के संबंध में शर्तें इस प्रकार हैं:\n\n• <b>यदि विदेशी शेयरधारक हैं (थाई के पास 51% या अधिक हिस्सा है):</b> थाई भागीदारों को अपने शेयर अनुपात के अनुरूप बैंक प्रमाणपत्र (Bank Certificate) प्रस्तुत करना होगा (विदेशियों को धन दिखाने की आवश्यकता नहीं है)। उदाहरण के लिए:\n  1. वर्क परमिट की तैयारी के लिए: 2 मिलियन THB की पंजीकृत पूंजी (100% भुगतान), 51% रखने वाले थाई नागरिक को कम से कम 1,020,000 THB जमा राशि दिखानी होगी।\n  2. वर्क परमिट की आवश्यकता नहीं है: 1 मिलियन THB की पंजीकृत पूंजी (न्यूनतम 25% भुगतान), 51% रखने वाले थाई नागरिक को कम से कम 127,500 THB जमा राशि दिखानी होगी।\n• <b>यदि शेयरधारक 100% थाई हैं:</b> यदि पंजीकृत पूंजी 5,000,000 THB से अधिक नहीं है, तो सेटअप प्रक्रिया के दौरान किसी वित्तीय प्रमाण की आवश्यकता नहीं है (भले ही शेयरधारक बाद में बदलें और विदेशियों को लाया जाए)।\n• <b>यदि विदेशी नागरिक 100% (या 49% से अधिक) शेयर चाहते हैं:</b> कंपनी को पंजीकृत किया जा सकता है, लेकिन पूरा होने पर, कंपनी तब तक कोई व्यवसाय नहीं कर सकती जब तक कि निम्नलिखित में से किसी एक माध्यम से अनुमति न मिल जाए:\n  1. विदेशी व्यापार लाइसेंस (Foreign Business License: FBL) के लिए आवेदन करें। लाइसेंस प्राप्त होने के बाद संचालन शुरू हो सकता है।\n  2. निवेश प्रोत्साहन (BOI) के लिए आवेदन करें। BOI प्रमाणपत्र प्राप्त होने के बाद, संचालन शुरू करने से पहले आपको विदेशी व्यापार प्रमाणपत्र (Foreign Business Certificate: FBC) के लिए आवेदन करना होगा।"
+                },
+                {
+                    "question": "यदि मेरे पास अभी तक कार्यालय या स्थान नहीं है, तो क्या मैं फिर भी पंजीकरण कर सकता हूँ?",
+                    "answer": "<b>हां, आप पंजीकरण कर सकते हैं।</b> आमतौर पर, एक वाणिज्यिक भवन, दुकान, टाउनहाउस, टाउनहोम, या आवासीय घर का उपयोग पंजीकरण पते के रूप में किया जा सकता है। हालाँकि, यदि आपके पास ये स्थान नहीं हैं या आप अपने स्थान का उपयोग नहीं करना चाहते हैं, तो हम आपकी आवश्यकताओं के अनुरूप 3 प्रारूपों में <b>वर्चुअल ऑफिस (Virtual Office)</b> सेवा प्रदान करते हैं:\n1. केवल कंपनी पंजीकरण के लिए एक पते के रूप में उपयोग करें।\n2. कंपनी पंजीकरण + वैट (VAT) पंजीकरण के पते के रूप में उपयोग करें。\n3. कंपनी पंजीकरण + वैट (VAT) पंजीकरण + सामाजिक सुरक्षा के साथ नियोक्ता पंजीकरण के पते के रूप में उपयोग करें।"
+                },
+                {
+                    "question": "यदि मैं घर का मालिक नहीं हूँ, जैसे कि किराए के घर या कोंडो (Condo) का उपयोग कर रहा हूँ, तो क्या मैं वहां कंपनी पंजीकृत कर सकता हूँ?",
+                    "answer": "हां, लेकिन इसके लिए अतिरिक्त दस्तावेजों की आवश्यकता है:\n\n• <b>किराए का घर/स्थान:</b> <i>\"परिसर का उपयोग करने के लिए सहमति पत्र\"</i> आवश्यक है, साथ ही पंजीकरण के साथ जमा करने के लिए \"घर के मालिक या संपत्ति के मालिक\" के आईडी कार्ड और घर के पंजीकरण की प्रमाणित प्रतियां आवश्यक हैं।\n• <b>कोंडोमिनियम (Condominiums):</b> हालांकि कानूनी रूप से इसकी अनुमति है, आपको पहले कोंडो के न्यायिक व्यक्ति (Juristic person) से जांच करनी चाहिए। कई परियोजनाओं में अन्य निवासियों को होने वाली परेशानी को रोकने के लिए कॉर्पोरेट संस्थाओं या कार्यालयों के रूप में आवासीय इकाइयों के उपयोग को प्रतिबंधित करने वाले आंतरिक नियम होते हैं। <i>(आपके लिए इस समस्या को हल करने के लिए हमारे पास वर्चुअल ऑफिस सेवा है।)</i>"
+                },
+                {
+                    "question": "यदि मेरे पास लैंडलाइन टेलीफोन नंबर (02) नहीं है, तो क्या मैं एक कंपनी पंजीकृत कर सकता हूँ?",
+                    "answer": "हां, आप कर सकते हैं। वर्तमान में, व्यवसाय विकास विभाग उद्यमियों को पंजीकरण के लिए मोबाइल फोन नंबर का उपयोग करने की अनुमति देता है। इसके अतिरिक्त, ईमेल के लिए, आप सामान्य ईमेल (जैसे @gmail.com या @hotmail.com) का उपयोग कर सकते हैं; कंपनी के डोमेन नाम के तहत ईमेल का उपयोग करना आवश्यक नहीं है।"
+                },
+                {
+                    "question": "एक बार कंपनी पंजीकृत हो जाने के बाद, क्या मैं तुरंत व्यवसाय शुरू कर सकता हूँ?",
+                    "answer": "सामान्य संचालन वाले अधिकांश व्यवसायों के लिए, एक बार कानूनी इकाई पंजीकरण पूरा हो जाने के बाद, आप तुरंत व्यावसायिक संचालन शुरू कर सकते हैं। हालांकि, <b>विशिष्ट कानूनों द्वारा विनियमित कुछ व्यवसाय</b> हैं जिन्हें कानूनी रूप से संचालित करने से पहले संबंधित सरकारी एजेंसियों से अतिरिक्त लाइसेंस की आवश्यकता होती है। उदाहरण के लिए:\n\n• <b>पर्यटन और यात्रा:</b> टूर ऑपरेटर, गाइड, होटल, आवास (TAT लाइसेंस या संबंधित एजेंसी के लिए आवेदन करना होगा)।\n• <b>स्वास्थ्य और भोजन:</b> रेस्तरां, क्लिनिक, अस्पताल, स्पा, भोजन/दवा/सौंदर्य प्रसाधन का उत्पादन/आयात (FDA या सार्वजनिक स्वास्थ्य मंत्रालय के लाइसेंस के लिए आवेदन करना होगा)।\n• <b>औद्योगिक:</b> कारखाने, रसायन या खतरनाक सामग्री रखना (औद्योगिक कार्य विभाग से लाइसेंस के लिए आवेदन करना होगा)।\n• <b>वित्तीय:</b> पिको फाइनेंस (Pico Finance) जैसे क्रेडिट व्यवसाय (बैंक ऑफ थाईलैंड या वित्त मंत्रालय से लाइसेंस के लिए आवेदन करना होगा)।\n• <b>अन्य:</b> भर्ती एजेंसियां, सुरक्षा सेवाएं, रसद और परिवहन, आदि (रोजगार विभाग, रॉयल थाई पुलिस, भूमि परिवहन विभाग, आदि से आवेदन करना होगा।)\n\n<i><b>महत्वपूर्ण नोट:</b> कुछ व्यवसाय विशेष रूप से थाई नागरिकों के लिए आरक्षित हो सकते हैं। यदि आपकी कंपनी में विदेशी शेयरधारक निर्धारित सीमा से अधिक हैं या विदेशी अधिकृत निदेशक हैं, तो हो सकता है कि आप उस विशिष्ट लाइसेंस को प्राप्त न कर सकें। समय और धन बचाने के लिए, हम कंपनी पंजीकरण शुरू करने से पहले आवश्यकताओं का अध्ययन करने या सीधे नियामक एजेंसी से पूछताछ करने की सलाह देते हैं।</i>"
+                },
+                {
+                    "question": "क्या मुझे कंपनी पंजीकरण के तुरंत बाद मूल्य वर्धित कर (VAT 7%) के लिए पंजीकरण करने की आवश्यकता है?",
+                    "answer": "जरूरी नहीं। कंपनी पंजीकरण और वैट (VAT) पंजीकरण अलग-अलग प्रक्रियाएं हैं। किसी कंपनी को वैट के लिए पंजीकरण करने की आवश्यकता तभी होती है जब उसकी व्यावसायिक आय <b>प्रति वर्ष 1.8 मिलियन THB से अधिक हो</b>।\n\nहालाँकि, यदि आपकी कंपनी को वस्तुओं का आयात/निर्यात करने की आवश्यकता है या अन्य B2B कॉर्पोरेट भागीदारों के साथ सौदे करने हैं जो आपसे कर चालान (Tax invoices) जारी करने की मांग करते हैं, तो आपकी कंपनी को अपने भागीदारों को कर चालान जारी करने में सक्षम होने के लिए <b>वैट पंजीकरण के लिए आवेदन करना होगा</b>।"
+                },
+                {
+                    "question": "कंपनी को पंजीकृत करने के बाद, लेकिन बिक्री शुरू करने या आय उत्पन्न करने से पहले, क्या मुझे लेखांकन (Accounting) करने की आवश्यकता है?",
+                    "answer": "<b>हां, आपको करना होगा।</b> यह नए उद्यमियों के बीच एक आम गलतफहमी है। कानून (लेखांकन अधिनियम B.E. 2543) के अनुसार, सभी कानूनी संस्थाओं को खाते तैयार करने और DBD और राजस्व विभाग को प्रासंगिक रिपोर्ट प्रस्तुत करने की आवश्यकता होती है, <b>\"भले ही उस महीने या वर्ष में कोई आय न हो, कोई खर्च न हो, या व्यवसाय संचालन शुरू न हुआ हो (शून्य घोषणा - Zero declaration)।\"</b> समय सीमा तक प्रस्तुत करने में विफल रहने पर भारी कानूनी जुर्माना लगेगा।"
+                },
+                {
+                    "question": "कंपनी के निदेशक के रूप में, क्या मुझे सामाजिक सुरक्षा (Social Security) के लिए अपने वेतन में कटौती करने की आवश्यकता है?",
+                    "answer": "<b>नहीं।</b> यदि आप एक अधिकृत निदेशक और प्रमुख शेयरधारक हैं, तो आपको कर्मचारी नहीं बल्कि <b>\"नियोक्ता (Employer)\"</b> माना जाता है। इसलिए, आप अपनी ही कंपनी में एक बीमित व्यक्ति (धारा 33) के रूप में पंजीकरण नहीं कर सकते और न ही आपको इसकी आवश्यकता है।\n\nहालाँकि, जैसे ही कंपनी <b>\"पूर्णकालिक कर्मचारियों\"</b> को काम पर रखना शुरू करती है, कानून के अनुसार कंपनी को नियोक्ता के रूप में पंजीकरण करना होता है और कर्मचारियों के काम शुरू करने की तारीख से 30 दिनों के भीतर उनके लिए सामाजिक सुरक्षा जमा करनी होती है।"
+                }
+            ]
+        }
+    },
+    "ta": {
+        "hero": {
+            "title": "உங்கள் வணிகத்தை தொழில்முறையாக தொடங்குங்கள். ஒரே இடத்தில் முழுமையான நிறுவன பதிவு.",
+            "subtitle": "300 க்கும் மேற்பட்ட தொழில்முனைவோரால் நம்பப்படுகிறது.",
+            "description": "சிக்கலான ஆவணங்கள் மற்றும் சட்ட நடைமுறைகளை எளிமையான செயல்முறையாக மாற்றவும். வணிக மேம்பாட்டுத் துறையுடன் (DBD) உங்கள் நிறுவனத்தை அமைப்பதில் இருந்து நிறுவன ஐடி மற்றும் வரி எண்ணை கோருவது வரை அனைத்தையும் நாங்கள் கையாளுகிறோம், எனவே நீங்கள் உங்கள் வணிகத்தை வளர்ப்பதில் முழுமையாக கவனம் செலுத்தலாம்.",
+            "cta": "அழைக்கவும் 092-882-5556"
+        },
+        "promotion": {
+            "title": "சிறப்பு சலுகை!",
+            "subtitle": "இந்த சேவைக்கான சிறப்பு விலைகள் மற்றும் பிரத்தியேக நன்மைகளைத் தவறவிடாதீர்கள்.",
+            "cta": "சலுகையைக் காண்க",
+            "slug": "company-registration-deal"
+        },
+        "features": {
+            "title": "வணிகத்தைத் தொடங்க உங்களுக்குத் தேவையான அனைத்தும்",
+            "items": [
+                {
+                    "title": "வணிக ஆலோசனை மற்றும் திட்டமிடல்",
+                    "description": "நாங்கள் உங்கள் வணிக அமைப்பை பகுப்பாய்வு செய்து, உங்கள் நிறுவனத்திற்கு மிகவும் பொருத்தமான ஆலோசனையை ஒவ்வொரு வழக்கிற்கும் ஏற்ப வழங்குகிறோம்.",
+                    "icon": "Lightbulb"
+                },
+                {
+                    "title": "ஆவணம் மற்றும் MOA தயாரிப்பு",
+                    "description": "டிஜிட்டல் கார்ப்பரேட் பதிவு அமைப்பு (DBD Biz Regist) மூலம் அதிகாரப்பூர்வ படிவங்களை துல்லியமாகத் தயாரிக்கவும்.",
+                    "icon": "FileSignature"
+                },
+                {
+                    "title": "நிறுவனப் பதிவு சமர்ப்பிப்பு",
+                    "description": "ஒவ்வொரு கட்டத்திலும் வணிக மேம்பாட்டுத் துறைக்கு (DBD) ஆவணங்களைச் சமர்ப்பிக்க உங்கள் பிரதிநிதியாகச் செயல்படுகிறோம்.",
+                    "icon": "Landmark"
+                },
+                {
+                    "title": "வரி ஐடி (Tax ID) கோரிக்கை",
+                    "description": "நிறுவனத்தின் வரி அமைப்பைத் தயாரிக்க கார்ப்பரேட் ஐடி மற்றும் வரி அடையாள எண் கோரிக்கைகளைக் கையாளுகிறோம்.",
+                    "icon": "Calculator"
+                }
+            ]
+        },
+        "benefits": {
+            "title": "முழுமையானது! உங்களுக்கான பிரத்தியேக சலுகைகள்",
+            "items": [
+                { "title": "மாதாந்திர கணக்கியல் அர்ப்பணிப்பு இல்லை!", "icon": "Unlock" },
+                { "title": "இலவசம்! 3 நிறுவன பெயர்களை சரிபார்த்து முன்பதிவு செய்தல்", "icon": "SearchCheck" },
+                { "title": "இலவசம்! 1 சுய மையிடும் (self-inking) நிறுவன முத்திரை", "icon": "Stamp" },
+                { "title": "இலவசம்! DBD க்கான இ-ஃபைலிங் (e-Filing) கடவுச்சொல் கோரிக்கை", "icon": "KeySquare" },
+                { "title": "இலவசம்! வருவாய்த் துறைக்கான கடவுச்சொல் கோரிக்கை", "icon": "KeyRound" },
+                { "title": "இலவசம்! கார்ப்பரேட் வங்கி கணக்கு திறப்பதற்கான ஆவணங்களின் தொகுப்பு", "icon": "Wallet" },
+                { "title": "இலவசம்! முழுமையான நிறுவன சான்றிதழ் ஆவணங்களின் தொகுப்பு (DBD)", "icon": "ScrollText" },
+                { "title": "இலவசம்! வரி நுட்ப பயிற்சி பாடநெறி (மதிப்பு 5,900 THB)", "icon": "GraduationCap" },
+                { "title": "இலவசம்! ரசீதுகள்/வரி இன்வாய்ஸ்களை வழங்குவதற்கான வணிக அட்டைகள்", "icon": "Contact2" }
+            ]
+        },
+        "requirements": {
+            "title": "நிறுவனப் பதிவுக்கு என்ன தயார் செய்ய வேண்டும்",
+            "subtitle": "அடிப்படை தகவல்களை தயார் செய்யுங்கள், மீதமுள்ளவற்றை எங்களிடம் விட்டுவிடுங்கள்.",
+            "documents": {
+                "title": "1. தேவையான முக்கிய ஆவணங்கள்",
+                "items": [
+                    "குறைந்தது 2 பங்குதாரர்கள் \n\n1. தாய் பங்குதாரர்கள்: அடையாள அட்டை நகல் (முன்புறம் மற்றும் பின்புறத்தின் தெளிவான நகல்)\n\n2. வெளிநாட்டு பங்குதாரர்கள்: பாஸ்போர்ட் நகல் (புகைப்படத்துடன் கூடிய முதல் பக்கம் மட்டுமே)\n\n3. கார்ப்பரேட் பங்குதாரர்கள்: நிறுவன சான்றிதழின் நகல் மற்றும் அங்கீகரிக்கப்பட்ட இயக்குநரின் அடையாள அட்டை நகல்",
+                    "நிறுவனத்தின் தலைமையகமாகப் பயன்படுத்தப்படும் வீட்டின் பதிவு (Tabien Baan)",
+                    "முத்திரை வடிவமைப்பு (ஏதேனும் இருந்தால்)"
+                ]
+            },
+            "information": {
+                "title": "2. அடிப்படை வணிக தகவல்",
+                "items": [
+                    "விரும்பிய நிறுவனத்தின் பெயர் (தாய்-ஆங்கிலம்)",
+                    "பங்கு விகிதம் (சதவீதத்தில், எ.கா., 99% மற்றும் 1%)",
+                    "இயக்குநர்களின் பட்டியல் (அங்கீகரிக்கப்பட்ட கையொப்பமிட்டவர்கள்)",
+                    "வணிகத்தின் விளக்கம்",
+                    "பதிவுசெய்யப்பட்ட மூலதனத் தொகை (எ.கா., 1 மில்லியன் THB மூலதனம், 25% செலுத்தப்பட்டது)",
+                    "நிறுவனத்தின் தொடர்பு தகவல் \n1. தொலைபேசி எண் \n2. மின்னஞ்சல்",
+                    "பங்குதாரர்களின் தொடர்பு தகவல் \n1. தொலைபேசி எண் \n2. மின்னஞ்சல் \n3. LINE ID"
+                ]
+            }
+        },
+        "process": {
+            "title": "4 எளிய பதிவு படிகள்",
+            "steps": [
+                {
+                    "title": "ஆலோசனை & பெயர் முன்பதிவு",
+                    "description": "ஒரு நிறுவனத்தை பதிவு செய்வது ஒரு சூட்டை வடிவமைப்பது போன்றது. உங்கள் தேவைகளைப் பற்றி நாங்கள் விவாதிக்கிறோம், உங்கள் நிறுவனத்திற்குச் சிறந்த வணிக அமைப்பைத் திட்டமிட உதவுகிறோம், மேலும் நிறுவனத்தின் பெயரை முன்பதிவு செய்யத் தொடங்குவோம்.",
+                    "icon": "MessageSquareText"
+                },
+                {
+                    "title": "அரசு அமைப்பு மூலம் ஆவணங்களைத் தயார் செய்தல்",
+                    "description": "வர்த்தக அமைச்சகத்தின் வணிக மேம்பாட்டுத் துறையின் DBD Biz Regist அமைப்பு மூலம் எங்கள் குழு அனைத்து ஆவணங்களையும் அதிகாரப்பூர்வ படிவங்களையும் தயார் செய்கிறது.",
+                    "icon": "FileStack"
+                },
+                {
+                    "title": "ஆன்லைன் அடையாள சரிபார்ப்பு (பயணம் தேவையில்லை)",
+                    "description": "பங்குதாரர்கள் மற்றும் இயக்குநர்கள் QR குறியீட்டை ஸ்கேன் செய்வதன் மூலமோ அல்லது DBD மூலம் அவர்களின் தனிப்பட்ட மின்னஞ்சலுக்கு அனுப்பப்பட்ட சரிபார்ப்பு இணைப்பைக் கிளிக் செய்வதன் மூலமோ தங்கள் அடையாளத்தை சரிபார்க்கிறார்கள் (தாய் குடிமக்கள் ThaID செயலியைப் பயன்படுத்துகின்றனர், வெளிநாட்டவர்கள் DBD e-Service செயலியைப் பயன்படுத்துகின்றனர்).",
+                    "icon": "SmartphoneNfc"
+                },
+                {
+                    "title": "பதிவைச் சமர்ப்பித்து டெலிவரி பெறுதல்",
+                    "description": "எங்கள் குழு விண்ணப்பத்தை DBD யிடம் சமர்ப்பிக்கிறது. பதிவு மற்றும் நிறுவனச் சான்றிதழ் அங்கீகரிக்கப்பட்டதும், நாங்கள் துல்லியத்தைச் சரிபார்த்து, உங்கள் இலவசப் பரிசுகளுடன் அத்தியாவசிய ஆவணங்களையும் நேரடியாக உங்களிடம் வழங்குவோம்.",
+                    "icon": "Gift"
+                }
+            ]
+        },
+        "faq": {
+            "title": "அடிக்கடி கேட்கப்படும் கேள்விகள் (FAQ)",
+            "items": [
+                {
+                    "question": "கம்பெனி லிமிடெட் (Company Limited / Co., Ltd.) மற்றும் லிமிடெட் பார்ட்னர்ஷிப் (Limited Partnership / Ltd. Part.) இடையே உள்ள வேறுபாடு என்ன, நான் எதை தேர்வு செய்ய வேண்டும்?",
+                    "answer": "இரண்டு அமைப்புகளும் <b>\"சட்டபூர்வ நபர் (Juristic Person)\"</b> என்ற அந்தஸ்தைக் கொண்டிருந்தாலும் மற்றும் ஒரே வரி விகிதங்களைப் பகிர்ந்து கொண்டாலும், <b>\"கடன்களுக்கான பொறுப்பு\"</b>, <b>\"நம்பகத்தன்மை\"</b> மற்றும் <b>\"வெளிநாட்டவர்களுக்கான கட்டுப்பாடுகள்\"</b> ஆகியவற்றில் முக்கிய வேறுபாடுகள் உள்ளன. புரிந்துகொள்வதை எளிதாக்க, இதோ ஒரு ஒப்பீடு:\n\n<b>1. கம்பெனி லிமிடெட் (Co., Ltd.)</b>\n• <b>பொறுப்பு:</b> <i>\"வரையறுக்கப்பட்ட பொறுப்பு\"</i> (இயக்குநர்கள் தவிர). அனைத்து பங்குதாரர்களும் தாங்கள் வைத்திருக்கும் பங்குகளின் செலுத்தப்படாத தொகைக்கு மட்டுமே நிறுவனத்தின் கடன்களுக்கு பொறுப்பாவார்கள் (தனிப்பட்ட நிதிகளை வணிக நிதியிலிருந்து தெளிவாகப் பிரிக்கிறது, தனிப்பட்ட சொத்துக்களைப் பாதுகாக்கிறது).\n• <b>நம்பகத்தன்மை:</b> மிக அதிகம். நீண்ட கால வணிகம், அரசாங்க ஏலம், பெரிய திட்டங்கள், முதலீட்டாளர்களை ஈர்ப்பது அல்லது B2B (வணிகத்திலிருந்து வணிகம்) செயல்பாடுகளுக்கு ஏற்றது.\n• <b>வெளிநாட்டவர்கள் / பணி அனுமதி (Work Permit):</b> மிகவும் பரிந்துரைக்கப்படுகிறது. வெளிநாட்டு பங்குதாரர்கள் (49% வரை), பணி அனுமதி விண்ணப்பங்கள், வணிக விசாக்கள் அல்லது BOI முதலீட்டு விளம்பரங்கள் என சட்டங்கள் மற்றும் அரசு நிறுவனங்கள் Co., Ltd. கட்டமைப்பை முழுமையாக ஆதரிக்கின்றன.\n• <b>தேவையான நிறுவனர்கள்:</b> தற்போது, பதிவு செய்ய குறைந்தபட்சம் 2 பங்குதாரர்கள் மட்டுமே தேவை.\n\n<b>2. லிமிடெட் பார்ட்னர்ஷிப் (Ltd. Part.)</b>\n• <b>பொறுப்பு:</b> சட்டத்தின்படி குறைந்தது ஒரு கூட்டாளர் <i>\"நிர்வாகப் கூட்டாளராக (Managing Partner)\"</i> செயல்பட வேண்டும், அவர் வணிகத்தின் கடன்களுக்கு <b>\"வரம்பற்ற பொறுப்பைக்\"</b> கொண்டுள்ளார் (வணிகம் சிக்கல்களை எதிர்கொண்டால், கடனை அடைக்க நிர்வாகப் கூட்டாளர் தனிப்பட்ட சொத்துக்களைப் பயன்படுத்த வேண்டியிருக்கும்). மற்ற கூட்டாளர்களுக்கு அவர்களின் முதலீட்டின் அடிப்படையில் வரையறுக்கப்பட்ட பொறுப்பு உள்ளது.\n• <b>நம்பகத்தன்மை:</b> மிதமானது. சிறு வணிகங்கள், குடும்ப வணிகங்கள் அல்லது கூட்டாளர்கள் சட்டபூர்வ நிறுவன வகையைப் பற்றி கண்டிப்பாக இல்லாத நிறுவனங்களுக்கு ஏற்றது.\n• <b>வெளிநாட்டவர்கள்:</b> பரிந்துரைக்கப்படவில்லை. ஒரு Ltd. Part. இல் வெளிநாட்டவர்களைக் கொண்டிருப்பது சிக்கலான சட்டக் கட்டுப்பாடுகளை உள்ளடக்கியது. ஒரு வெளிநாட்டவர் நிர்வாகக் கூட்டாளராகச் செயல்பட்டால், வணிகம் வெளிநாட்டு நிறுவனமாக வகைப்படுத்தப்படலாம், இதனால் செயல்பாடுகள் மற்றும் பணி அனுமதிகள் Co., Ltd. ஐ விட மிகவும் கடினமாகிவிடும்.\n• <b>தேவையான நிறுவனர்கள்:</b> நிறுவனப் பதிவைப் போலவே 2 நிறுவனர்கள் மட்டுமே தேவை.\n\n<b>சுருக்கம்: எதை தேர்வு செய்வது?</b>\n• நீங்கள் அதிக நம்பகத்தன்மையைத் தேடுகிறீர்களானால், வணிகம் அல்லது கிளைகளை விரிவுபடுத்தத் திட்டமிட்டிருந்தால், தனிப்பட்ட சொத்துக்களுக்கான அபாயங்களைக் கட்டுப்படுத்த விரும்பினால், வெளிநாட்டுப் பங்குதாரர்களைக் கொண்டிருந்தால் அல்லது வெளிநாட்டு ஊழியர்களைப் பணியமர்த்தத் திட்டமிட்டால் (பணி அனுமதி) <b>\"கம்பெனி லிமிடெட்\"</b> என்பதைத் தேர்வுசெய்யவும்.\n• இது குடும்ப வணிகமாகவோ அல்லது நீங்கள் 100% நம்பும் நெருங்கிய நண்பர்களாகவோ இருந்தால், வணிகத்தில் கடன் அபாயம் குறைவாக இருந்தால், வெளிநாட்டுக் கூட்டாளர்கள் இல்லை என்றால், மற்றும் எளிமையான நிர்வாக அமைப்பை நீங்கள் விரும்பினால் <b>\"லிமிடெட் பார்ட்னர்ஷிப்\"</b> என்பதைத் தேர்வுசெய்யவும்.\n\n<i><b>குறிப்பு:</b> தற்போது, Co., Ltd. மற்றும் Ltd. Part. ஆகியவற்றுக்கான பதிவு, மாதாந்திர கணக்கியல் மற்றும் வருடாந்திர நிதி முடிப்பு செலவுகள் கணிசமாக வேறுபடுவதில்லை. \"கம்பெனி லிமிடெட்\" ஆகப் பதிவு செய்வது பொதுவாக அதிகபட்ச நீண்ட கால நன்மைகளைத் தருகிறது.</i>"
+                },
+                {
+                    "question": "செயல்முறைக்கு எத்தனை நாட்கள் ஆகும்?",
+                    "answer": "வாடிக்கையாளரிடமிருந்து முழுமையான தகவல்களையும் ஆவணங்களையும் பெற்ற பிறகு பொதுவாக <b>1-5 வேலை நாட்கள்</b> (பொது விடுமுறை நாட்கள் தவிர) ஆகும். வணிக மேம்பாட்டுத் துறையில் அந்த நேரத்தில் உள்ள வரிசையைப் பொறுத்தும், அதே போல் ஆன்லைன் அடையாளச் சரிபார்ப்பில் (அல்லது OTP சமர்ப்பிப்பு) வாடிக்கையாளரின் விரைவான தன்மையைப் பொறுத்தும் கால அளவு இருக்கலாம்."
+                },
+                {
+                    "question": "பதிவு செய்யப்பட்ட மூலதனம் (Registered Capital) என்றால் என்ன? என்னிடம் முழுத் தொகையும் இல்லையென்றாலும் ஒரு நிறுவனத்தைப் பதிவு செய்ய முடியுமா?",
+                    "answer": "எளிமையாகச் சொன்னால், <b>\"பதிவு செய்யப்பட்ட மூலதனம்\"</b> என்பது வணிகச் செயல்பாடுகளுக்குப் பயன்படுத்தப்படும் நடைமுறை மூலதனமாகும் (working capital). <i>\"மூலதனத்தைச் செலுத்துதல்\"</i> என்பது வேறு ஒருவருக்குச் செலுத்துவதைக் குறிக்காது; நிறுவனத்தின் வங்கிக் கணக்கில் (நிறுவனம் பதிவு செய்யப்பட்ட பிறகு திறக்கப்படலாம்) பணத்தை வைப்பதாகும்.\n\n• <b>உங்களிடம் முழுத் தொகையும் மொத்தமாக இல்லை என்றால்:</b> நீங்கள் படிப்படியாக பணத்தை டெபாசிட் செய்யலாம். எடுத்துக்காட்டாக, பதிவு செய்யப்பட்ட மூலதனம் 1 மில்லியன் THB ஆக இருந்தால் (குறைந்தபட்சம் 25% செலுத்தப்பட்டது 250,000 THB), நீங்கள் 1,000 THB உடன் கணக்கைத் திறப்பதன் மூலம் தொடங்கலாம். வணிகச் செலவுகள் ஏற்படும் போது, நீங்கள் நிறுவனத்தின் கணக்கில் பணத்தை டெபாசிட் செய்து அதைச் செலுத்தலாம். இந்த நிதி கணக்கில் சும்மா இருக்க வேண்டியதில்லை; அவை நடைமுறை மூலதனமாகப் பயன்படுத்தப்படலாம்.\n• <b>எச்சரிக்கை:</b> நிறுவனத்தில் <b>வெளிநாட்டுப் பங்குதாரர்கள்</b> உள்ள சந்தர்ப்பங்கள் அல்லது <b>பதிவு செய்யப்பட்ட மூலதனம் 5 மில்லியன் THB க்கு மேல்</b> உள்ள முழு தாய்லாந்துக்குச் சொந்தமான நிறுவனம் தவிர. இந்த சந்தர்ப்பங்களில், பதிவுச் செயல்பாட்டின் போது உண்மையான நிதி மற்றும் வங்கிக் சான்றிதழ் (Bank Certificate) காட்டப்பட வேண்டும் என்று சட்டம் கோருகிறது."
+                },
+                {
+                    "question": "வெளிநாட்டவர்கள் பங்குதாரர்களாக இருக்க முடியுமா, அதற்கு என்ன நிதிச் சான்று தேவை?",
+                    "answer": "ஆம், ஒரு பொதுவான கம்பெனி லிமிடெட் பதிவு மூலம் அவர்கள் இருக்க முடியும். நிறுவனம் தாய் சட்டபூர்வமான நபராக இருக்க வேண்டும் என்றால், தாய்லாந்து குடிமக்கள் குறைந்தபட்சம் 51% பங்குகளை வைத்திருக்க வேண்டும். நிதிச் சான்று மற்றும் பங்கு விகிதம் தொடர்பான நிபந்தனைகள் பின்வருமாறு:\n\n• <b>வெளிநாட்டுப் பங்குதாரர்கள் இருந்தால் (தாய் மக்கள் 51% அல்லது அதற்கு மேல் வைத்திருக்கிறார்கள்):</b> தாய்லாந்து கூட்டாளர்கள் தங்கள் பங்கு விகிதத்திற்கு ஏற்ற வங்கிக் சான்றிதழை (Bank Certificate) சமர்ப்பிக்க வேண்டும் (வெளிநாட்டவர்கள் நிதியைக் காட்ட வேண்டியதில்லை). எடுத்துக்காட்டாக:\n  1. பணி அனுமதி (Work Permit) தயாரிக்க: பதிவு செய்யப்பட்ட மூலதனம் 2 மில்லியன் THB (100% செலுத்தப்பட்டது), 51% வைத்திருக்கும் தாய்லாந்து குடிமக்கள் குறைந்தது 1,020,000 THB டெபாசிட்டைக் காட்ட வேண்டும்.\n  2. பணி அனுமதி தேவையில்லை: பதிவு செய்யப்பட்ட மூலதனம் 1 மில்லியன் THB (குறைந்தபட்சம் 25% செலுத்தப்பட்டது), 51% வைத்திருக்கும் தாய்லாந்து குடிமக்கள் குறைந்தது 127,500 THB டெபாசிட்டைக் காட்ட வேண்டும்.\n• <b>பங்குதாரர்கள் 100% தாய்லாந்து குடிமக்களாக இருந்தால்:</b> பதிவு செய்யப்பட்ட மூலதனம் 5,000,000 THBக்கு மிகாமல் இருந்தால், அமைவுச் செயல்பாட்டின் போது நிதிச் சான்று எதுவும் தேவையில்லை (பங்குதாரர்கள் மாறி, பின்னர் வெளிநாட்டவர்கள் அழைத்து வரப்பட்டாலும் கூட).\n• <b>வெளிநாட்டவர்கள் 100% (அல்லது 49% க்கும் மேல்) வைத்திருக்க விரும்பினால்:</b> நிறுவனத்தைப் பதிவு செய்யலாம், ஆனால் முடிந்தவுடன், பின்வரும் சேனல்களில் ஒன்றின் மூலம் அனுமதி வழங்கப்படும் வரை நிறுவனம் எந்தவொரு வணிகத்தையும் நடத்த முடியாது:\n  1. வெளிநாட்டு வணிக உரிமத்திற்கு (Foreign Business License: FBL) விண்ணப்பிக்கவும். உரிமம் பெற்றவுடன் செயல்பாடுகள் தொடங்கும்.\n  2. முதலீட்டு மேம்பாட்டிற்கு (BOI) விண்ணப்பிக்கவும். BOI சான்றிதழைப் பெற்றவுடன், செயல்பாடுகளைத் தொடங்குவதற்கு முன் வெளிநாட்டு வணிகச் சான்றிதழுக்கு (Foreign Business Certificate: FBC) விண்ணப்பிக்க வேண்டும்."
+                },
+                {
+                    "question": "என்னிடம் இன்னும் அலுவலகம் அல்லது இடம் இல்லையென்றால், நான் இன்னும் பதிவு செய்ய முடியுமா?",
+                    "answer": "<b>ஆம், நீங்கள் பதிவு செய்யலாம்.</b> பொதுவாக, ஒரு வணிக கட்டிடம், கடை, டவுன்ஹவுஸ், டவுன்ஹோம் அல்லது குடியிருப்பு வீடு ஆகியவற்றை பதிவு முகவரியாகப் பயன்படுத்தலாம். இருப்பினும், உங்களிடம் இந்த இடங்கள் இல்லையென்றால் அல்லது உங்களுடைய சொந்த இடத்தைப் பயன்படுத்த விரும்பவில்லை என்றால், உங்கள் தேவைகளுக்கு ஏற்ப 3 வடிவங்களில் <b>விர்ச்சுவல் ஆஃபீஸ் (Virtual Office)</b> சேவையை நாங்கள் வழங்குகிறோம்:\n1. நிறுவனப் பதிவுக்கு மட்டுமே முகவரியாகப் பயன்படுத்தவும்.\n2. நிறுவனப் பதிவு + VAT பதிவுக்கான முகவரியாகப் பயன்படுத்தவும்.\n3. நிறுவனப் பதிவு + VAT பதிவு + சமூகப் பாதுகாப்புடன் முதலாளி பதிவுக்கான முகவரியாகப் பயன்படுத்தவும்."
+                },
+                {
+                    "question": "வாடகை வீடு அல்லது காண்டோ (Condo) போன்றவற்றைப் பயன்படுத்துவது போல, நான் வீட்டின் உரிமையாளராக இல்லாவிட்டால், நான் அங்கு நிறுவனத்தைப் பதிவு செய்ய முடியுமா?",
+                    "answer": "ஆம், ஆனால் கூடுதல் ஆவணங்கள் தேவை:\n\n• <b>வாடகை வீடு/இடம்:</b> பதிவுடன் சமர்ப்பிக்க \"வீட்டு எஜமானர் அல்லது சொத்து உரிமையாளரின்\" அடையாள அட்டை மற்றும் வீட்டுப் பதிவின் சான்றளிக்கப்பட்ட நகல்களுடன் <i>\"வளாகத்தைப் பயன்படுத்துவதற்கான சம்மதக் கடிதம்\"</i> தேவை.\n• <b>காண்டோமினியம்கள்:</b> சட்டப்பூர்வமாக அனுமதிக்கப்பட்டிருந்தாலும், நீங்கள் முதலில் காண்டோவின் நிர்வாகத்திடம் (Juristic person) சரிபார்க்க வேண்டும். மற்ற குடியிருப்பாளர்களுக்கு இடையூறு ஏற்படுவதைத் தடுக்க குடியிருப்பு அலகுகளை கார்ப்பரேட் நிறுவனங்கள் அல்லது அலுவலகங்களாகப் பயன்படுத்துவதைத் தடைசெய்யும் உள் விதிமுறைகள் பல திட்டங்களில் உள்ளன. <i>(உங்களுக்காக இந்தச் சிக்கலைத் தீர்க்க எங்களிடம் விர்ச்சுவல் ஆஃபீஸ் சேவை உள்ளது.)</i>"
+                },
+                {
+                    "question": "என்னிடம் லேண்ட்லைன் தொலைபேசி எண் (02) இல்லை என்றால், நான் ஒரு நிறுவனத்தை பதிவு செய்ய முடியுமா?",
+                    "answer": "ஆம், உங்களால் முடியும். தற்போது, வணிக மேம்பாட்டுத் துறையானது தொழில்முனைவோர் பதிவு செய்வதற்கு மொபைல் போன் எண்களைப் பயன்படுத்த அனுமதிக்கிறது. கூடுதலாக, மின்னஞ்சல்களுக்கு, நீங்கள் பொதுவான மின்னஞ்சல்களைப் பயன்படுத்தலாம் (@gmail.com அல்லது @hotmail.com போன்றவை); நிறுவனத்தின் டொமைன் பெயரின் கீழ் மின்னஞ்சலைப் பயன்படுத்த வேண்டிய அவசியமில்லை."
+                },
+                {
+                    "question": "நிறுவனம் பதிவு செய்யப்பட்டவுடன், உடனடியாக வியாபாரத்தை தொடங்க முடியுமா?",
+                    "answer": "பொதுவான செயல்பாடுகளைக் கொண்ட பெரும்பாலான வணிகங்களுக்கு, சட்டப்பூர்வ நபர் பதிவு முடிந்ததும், நீங்கள் உடனடியாக வணிக செயல்பாடுகளைத் தொடங்கலாம். இருப்பினும், <b>குறிப்பிட்ட சட்டங்களால் கட்டுப்படுத்தப்படும் சில வணிகங்கள்</b> சட்டப்பூர்வமாக செயல்படுவதற்கு முன்பு தொடர்புடைய அரசு நிறுவனங்களிடமிருந்து கூடுதல் உரிமங்கள் தேவைப்படுகின்றன. எடுத்துக்காட்டாக:\n\n• <b>சுற்றுலா மற்றும் பயணம்:</b> டூர் ஆபரேட்டர்கள், வழிகாட்டிகள், ஹோட்டல்கள், தங்கும் இடங்கள் (TAT உரிமம் அல்லது தொடர்புடைய நிறுவனத்திற்கு விண்ணப்பிக்க வேண்டும்).\n• <b>சுகாதாரம் மற்றும் உணவு:</b> உணவகங்கள், கிளினிக்குகள், மருத்துவமனைகள், ஸ்பாக்கள், உணவு/மருந்துகள்/ஒப்பனைப் பொருட்களின் உற்பத்தி/இறக்குமதி (FDA அல்லது பொது சுகாதார அமைச்சக உரிமத்திற்கு விண்ணப்பிக்க வேண்டும்).\n• <b>தொழில்துறை:</b> தொழிற்சாலைகள், ரசாயனங்கள் அல்லது அபாயகரமான பொருட்களை வைத்திருத்தல் (தொழில்துறை பணிகள் துறையிலிருந்து உரிமத்திற்கு விண்ணப்பிக்க வேண்டும்).\n• <b>நிதி:</b> பிகோ ஃபைனான்ஸ் (Pico Finance) போன்ற கடன் வணிகங்கள் (பாங்க் ஆஃப் தாய்லாந்து அல்லது நிதி அமைச்சகத்திடம் இருந்து உரிமத்திற்கு விண்ணப்பிக்க வேண்டும்).\n• <b>மற்றவை:</b> ஆட்சேர்ப்பு நிறுவனங்கள், பாதுகாப்பு சேவைகள், தளவாடங்கள் மற்றும் போக்குவரத்து போன்றவை. (வேலைவாய்ப்பு துறை, ராயல் தாய் போலீஸ், நிலப் போக்குவரத்து துறை போன்றவற்றிடமிருந்து விண்ணப்பிக்க வேண்டும்.)\n\n<i><b>முக்கிய குறிப்பு:</b> சில வணிகங்கள் தாய்லாந்து குடிமக்களுக்காக பிரத்தியேகமாக ஒதுக்கப்படலாம். உங்கள் நிறுவனத்தில் நிர்ணயிக்கப்பட்ட வரம்பை மீறும் வெளிநாட்டுப் பங்குதாரர்கள் அல்லது வெளிநாட்டு அங்கீகரிக்கப்பட்ட இயக்குநர்கள் இருந்தால், அந்த குறிப்பிட்ட உரிமத்தை உங்களால் பெற முடியாமல் போகலாம். நேரத்தையும் பணத்தையும் மிச்சப்படுத்த, நிறுவனப் பதிவைத் தொடங்குவதற்கு முன் தேவைகளைப் படிக்க அல்லது நேரடியாக ஒழுங்குமுறை நிறுவனத்திடம் விசாரிக்க பரிந்துரைக்கிறோம்.</i>"
+                },
+                {
+                    "question": "நிறுவனப் பதிவு செய்தவுடன் மதிப்பு கூட்டப்பட்ட வரிக்கு (VAT 7%) உடனடியாக பதிவு செய்ய வேண்டுமா?",
+                    "answer": "கட்டாயமில்லை. நிறுவனப் பதிவு மற்றும் VAT பதிவு ஆகியவை தனித்தனி செயல்முறைகளாகும். ஒரு நிறுவனத்தின் வணிக வருமானம் <b>ஆண்டுக்கு 1.8 மில்லியன் THB க்கு மேல்</b> இருக்கும் போது மட்டுமே VAT க்கு பதிவு செய்ய வேண்டும்.\n\nஇருப்பினும், உங்கள் நிறுவனம் பொருட்களை இறக்குமதி/ஏற்றுமதி செய்ய வேண்டுமானால் அல்லது வரி இன்வாய்ஸ்களை வழங்கக் கோரும் பிற B2B கார்ப்பரேட் கூட்டாளர்களுடன் ஒப்பந்தம் செய்ய வேண்டுமானால், உங்கள் கூட்டாளர்களுக்கு வரி இன்வாய்ஸ்களை வழங்குவதற்கு உங்கள் நிறுவனம் <b>VAT பதிவுக்கு விண்ணப்பிக்க வேண்டும்</b>."
+                },
+                {
+                    "question": "நிறுவனத்தை பதிவு செய்த பிறகு, ஆனால் விற்பனையைத் தொடங்குவதற்கு முன் அல்லது வருமானத்தை உருவாக்குவதற்கு முன், நான் கணக்கியல் (Accounting) செய்ய வேண்டுமா?",
+                    "answer": "<b>ஆம், நீங்கள் கட்டாயம் செய்ய வேண்டும்.</b> புதிய தொழில்முனைவோர் மத்தியில் இது ஒரு பொதுவான தவறான கருத்தாகும். சட்டத்தின்படி (கணக்கியல் சட்டம் B.E. 2543), அனைத்து சட்டப்பூர்வ நிறுவனங்களும் கணக்குகளைத் தயாரித்து, <b>\"அந்த மாதம் அல்லது வருடத்தில் வருமானம் இல்லை என்றாலும், செலவுகள் இல்லை என்றாலும் அல்லது வணிக செயல்பாடுகள் தொடங்கப்படவில்லை என்றாலும் (Zero declaration)\"</b> DBD மற்றும் வருவாய்த் துறைக்கு தொடர்புடைய அறிக்கைகளைச் சமர்ப்பிக்க வேண்டும். காலக்கெடுவிற்குள் சமர்ப்பிக்கத் தவறினால் கணிசமான சட்ட அபராதம் விதிக்கப்படும்."
+                },
+                {
+                    "question": "ஒரு நிறுவனத்தின் இயக்குநராக, சமூகப் பாதுகாப்பிற்காக (Social Security) எனது சம்பளத்தைக் கழிக்க வேண்டுமா?",
+                    "answer": "<b>இல்லை.</b> நீங்கள் அங்கீகரிக்கப்பட்ட இயக்குனர் மற்றும் முக்கிய பங்குதாரராக இருந்தால், நீங்கள் ஒரு பணியாளராக அல்லாமல் ஒரு <b>\"முதலாளியாக\"</b> கருதப்படுவீர்கள். எனவே, உங்களின் சொந்த நிறுவனத்தில் காப்பீடு செய்யப்பட்ட நபராக (பிரிவு 33) நீங்கள் பதிவு செய்ய முடியாது மற்றும் பதிவு செய்ய வேண்டியதில்லை.\n\nஇருப்பினும், நிறுவனம் <b>\"முழு நேர ஊழியர்களை\"</b> பணியமர்த்தத் தொடங்கியவுடன், நிறுவனம் ஒரு முதலாளியாகப் பதிவுசெய்து, ஊழியர்கள் வேலை செய்யத் தொடங்கிய தேதியிலிருந்து 30 நாட்களுக்குள் அவர்களுக்கான சமூகப் பாதுகாப்பைச் சமர்ப்பிக்க வேண்டும் என்று சட்டம் கோருகிறது."
+                }
+            ]
+        }
     }
 };
+
 
 function processLanguage(lang) {
     const filePath = path.join(MESSAGES_DIR, `${lang}.json`);
@@ -328,7 +2189,7 @@ function processLanguage(lang) {
             const existingSummary = data.services.items['company-limited'].summary;
 
             // Select content based on language
-            const newContent = lang === 'th' ? THAI_CONTENT : EMPTY_CONTENT;
+            const newContent = lang === 'th' ? THAI_CONTENT : (EMPTY_CONTENT[lang] || {});
 
             // Update the object
             data.services.items['company-limited'] = {

@@ -380,123 +380,178 @@
         "title": "S.r.l.",
         "summary": "Registrazione aziendale completa. Gestiamo tutti i documenti e le procedure legali per farti avviare la tua attività con sicurezza.",
         "hero": {
-          "title": "",
-          "subtitle": "",
-          "description": "",
-          "cta": ""
+          "title": "Avvia la tua attività in modo professionale. Registrazione aziendale completa in un unico posto.",
+          "subtitle": "Scelto da oltre 300 imprenditori.",
+          "description": "Trasforma documenti e procedure legali complicate in un processo semplice. Ci occupiamo di tutto, dalla costituzione della tua azienda presso il Department of Business Development (DBD), alla richiesta del codice fiscale aziendale e della partita IVA, affinché tu possa concentrarti sulla crescita della tua attività.",
+          "cta": "Chiama 092-882-5556"
         },
         "promotion": {
-          "title": "",
-          "subtitle": "",
-          "cta": ""
+          "title": "Offerta Speciale!",
+          "subtitle": "Non perderti i prezzi speciali e i vantaggi esclusivi riservati a questo servizio.",
+          "cta": "Vedi Promozione",
+          "slug": "company-registration-deal"
         },
         "features": {
-          "title": "",
+          "title": "Tutto ciò di cui hai bisogno per avviare un'attività",
           "items": [
             {
-              "title": "",
-              "description": ""
+              "title": "Consulenza e Pianificazione Aziendale",
+              "description": "Analizziamo la struttura della tua attività e forniamo la consulenza più adatta alla tua impresa, caso per caso.",
+              "icon": "Lightbulb"
             },
             {
-              "title": "",
-              "description": ""
+              "title": "Preparazione Documenti e Statuto",
+              "description": "Compilazione accurata dei moduli ufficiali tramite il sistema di registrazione digitale (DBD Biz Regist).",
+              "icon": "FileSignature"
             },
             {
-              "title": "",
-              "description": ""
+              "title": "Presentazione della Registrazione",
+              "description": "Agiamo come tuo rappresentante per inviare i documenti al Department of Business Development in ogni fase.",
+              "icon": "Landmark"
             },
             {
-              "title": "",
-              "description": ""
+              "title": "Richiesta Partita IVA/Codice Fiscale",
+              "description": "Gestiamo la richiesta dei codici identificativi per predisporre il sistema fiscale della tua azienda.",
+              "icon": "Calculator"
             }
           ]
         },
         "benefits": {
-          "title": "",
+          "title": "Vantaggi esclusivi solo per te",
           "items": [
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            ""
+            {
+              "title": "Nessun vincolo di contabilità mensile!",
+              "icon": "Unlock"
+            },
+            {
+              "title": "GRATIS! Verifica e prenotazione di massimo 3 nomi aziendali",
+              "icon": "SearchCheck"
+            },
+            {
+              "title": "GRATIS! 1 timbro aziendale autoinchiostrante",
+              "icon": "Stamp"
+            },
+            {
+              "title": "GRATIS! Richiesta password e-Filing per il DBD",
+              "icon": "KeySquare"
+            },
+            {
+              "title": "GRATIS! Richiesta password per l'Agenzia delle Entrate",
+              "icon": "KeyRound"
+            },
+            {
+              "title": "GRATIS! Set di documenti per l'apertura del conto corrente aziendale",
+              "icon": "Wallet"
+            },
+            {
+              "title": "GRATIS! Set completo di certificati camerali (DBD)",
+              "icon": "ScrollText"
+            },
+            {
+              "title": "GRATIS! Corso di formazione sulle tecniche fiscali (Valore 5.900 THB)",
+              "icon": "GraduationCap"
+            },
+            {
+              "title": "GRATIS! Biglietti da visita per l'emissione di ricevute/fatture",
+              "icon": "Contact2"
+            }
           ]
         },
         "requirements": {
-          "title": "",
-          "subtitle": "",
+          "title": "Cosa preparare per la registrazione della società",
+          "subtitle": "Prepara semplicemente le informazioni di base, al resto pensiamo noi.",
           "documents": {
-            "title": "",
+            "title": "1. Documenti importanti richiesti",
             "items": [
-              "",
-              "",
-              "",
-              ""
+              "Almeno 2 azionisti \n\n1. Azionisti thailandesi: Copia del documento d'identità (Fronte/retro leggibile)\n\n2. Azionisti stranieri: Copia del passaporto (Solo la prima pagina con foto)\n\n3. Azionisti societari: Copia della visura camerale e documento del legale rappresentante",
+              "Registrazione di domicilio (Tabien Baan) da utilizzare come sede legale",
+              "Design del timbro (se disponibile)"
             ]
           },
           "information": {
-            "title": "",
+            "title": "2. Informazioni aziendali di base",
             "items": [
-              "",
-              "",
-              "",
-              "",
-              "",
-              "",
-              ""
+              "Nome della società desiderato (Tailandese-Inglese)",
+              "Quote di partecipazione (in percentuale, es. 99% e 1%)",
+              "Elenco dei direttori (Firmatari autorizzati)",
+              "Descrizione dell'attività",
+              "Importo del capitale sociale (es. Capitale di 1 milione di THB, versato al 25%)",
+              "Contatti dell'azienda \n1. Numero di telefono \n2. Email",
+              "Contatti degli azionisti \n1. Numero di telefono \n2. Email \n3. ID LINE"
             ]
           }
         },
         "process": {
-          "title": "",
+          "title": "4 semplici passaggi per la registrazione",
           "steps": [
             {
-              "title": "",
-              "description": ""
+              "title": "Consulenza e Prenotazione del Nome",
+              "description": "Registrare una società è come creare un abito su misura. Discutiamo le tue esigenze, aiutiamo a pianificare la struttura e procediamo alla prenotazione del nome.",
+              "icon": "MessageSquareText"
             },
             {
-              "title": "",
-              "description": ""
+              "title": "Preparazione documenti tramite sistema governativo",
+              "description": "Il nostro team prepara tutti i documenti tramite il sistema DBD Biz Regist.",
+              "icon": "FileStack"
             },
             {
-              "title": "",
-              "description": ""
+              "title": "Verifica dell'identità online (Non sono necessari spostamenti)",
+              "description": "Azionisti e direttori verificano la propria identità tramite app (ThaID per i thailandesi, DBD e-Service per gli stranieri) scansionando un codice QR o tramite link email.",
+              "icon": "SmartphoneNfc"
             },
             {
-              "title": "",
-              "description": ""
+              "title": "Invio della registrazione e consegna",
+              "description": "Presentiamo la domanda al DBD. Una volta approvata, consegneremo i documenti essenziali e i tuoi omaggi gratuiti direttamente a te.",
+              "icon": "Gift"
             }
           ]
         },
         "faq": {
-          "title": "",
+          "title": "Domande Frequenti (FAQ)",
           "items": [
             {
-              "question": "",
-              "answer": ""
+              "question": "Qual è la differenza tra Company Limited (Co., Ltd.) e Limited Partnership (Ltd. Part.), e quale dovrei scegliere?",
+              "answer": "Sebbene entrambe abbiano lo status di <b>\"Persona Giuridica\"</b> e le stesse aliquote fiscali, le differenze principali risiedono nella <b>\"Responsabilità per i debiti\"</b>, nella <b>\"Credibilità\"</b> e nelle <b>\"Restrizioni per gli stranieri\"</b>. Ecco un confronto:\n\n<b>1. Company Limited (Co., Ltd.)</b>\n• <b>Responsabilità:</b> <i>\"Responsabilità Limitata\"</i>. Tutti gli azionisti sono responsabili solo fino all'importo non versato delle azioni possedute.\n• <b>Credibilità:</b> Molto alta. Adatta per affari a lungo termine, gare d'appalto o B2B.\n• <b>Stranieri / Permesso di lavoro:</b> Altamente consigliato. La legge supporta pienamente questa struttura per l'azionariato straniero (fino al 49%), permessi di lavoro e visti.\n• <b>Fondatori richiesti:</b> Minimo 2 azionisti.\n\n<b>2. Limited Partnership (Ltd. Part.)</b>\n• <b>Responsabilità:</b> Almeno un partner deve essere il <i>\"Managing Partner\"</i> con <b>\"Responsabilità illimitata\"</b>.\n• <b>Credibilità:</b> Moderata. Adatta per piccole imprese o a conduzione familiare.\n• <b>Stranieri:</b> Sconsigliato. Restrizioni legali complesse.\n• <b>Fondatori richiesti:</b> Bastano 2 fondatori.\n\n<b>Riepilogo:</b> Scegli <b>\"Company Limited\"</b> per massima credibilità, protezione del patrimonio e assunzioni di stranieri. La registrazione come Co., Ltd. offre i massimi vantaggi a lungo termine."
             },
             {
-              "question": "",
-              "answer": ""
+              "question": "Quanti giorni richiede la procedura?",
+              "answer": "In genere sono necessari circa <b>1-5 giorni lavorativi</b> dopo aver ricevuto tutte le informazioni. Il lasso di tempo dipende anche dalla tempestività del cliente nella verifica online dell'identità."
             },
             {
-              "question": "",
-              "answer": ""
+              "question": "Cos'è il capitale sociale? Posso registrare una società se non dispongo dell'intero importo?",
+              "answer": "Il <b>\"Capitale Sociale\"</b> è il capitale circolante. <i>\"Versare il capitale\"</i> significa depositare i fondi sul conto della società.\n\n• <b>Se non hai l'intero importo:</b> Puoi depositare il denaro gradualmente (es. versando il 25%).\n• <b>Attenzione:</b> Se la società ha <b>Azionisti Stranieri</b> o un capitale superiore a <b>5 milioni di THB</b>, la legge richiede una prova dei fondi (Bank Certificate) durante la registrazione."
             },
             {
-              "question": "",
-              "answer": ""
+              "question": "Gli stranieri possono essere azionisti e quale prova finanziaria è richiesta?",
+              "answer": "Sì, in una Company Limited. Per essere una società thailandese, i cittadini thailandesi devono detenere almeno il 51%.\n\n• <b>Se ci sono azionisti stranieri:</b> I partner thailandesi devono presentare un Bank Certificate per la loro quota.\n• <b>Se gli azionisti sono thailandesi al 100%:</b> Sotto i 5.000.000 THB, non è necessaria alcuna prova finanziaria.\n• <b>Se gli stranieri vogliono detenere il 100%:</b> Serve una Foreign Business License (FBL) o promozione BOI prima di poter operare."
             },
             {
-              "question": "",
-              "answer": ""
+              "question": "Se non ho ancora un ufficio, posso comunque registrarmi?",
+              "answer": "<b>Sì.</b> Normalmente si usano edifici commerciali o case. Se non ne hai uno, offriamo un servizio di <b>Virtual Office</b> in 3 formati (solo registrazione, registrazione + IVA, registrazione + IVA + registrazione datore di lavoro)."
             },
             {
-              "question": "",
-              "answer": ""
+              "question": "Posso registrare la società in una casa in affitto o in un condominio?",
+              "answer": "Sì, ma con documenti aggiuntivi:\n\n• <b>Casa in affitto:</b> È necessaria una <i>\"Lettera di consenso\"</i> del proprietario.\n• <b>Condomini:</b> Molti regolamenti vietano l'uso residenziale come ufficio. Si consiglia di verificare o utilizzare il nostro servizio di Virtual Office."
+            },
+            {
+              "question": "Posso registrare una società senza numero di rete fissa (02)?",
+              "answer": "Sì. Il DBD consente di utilizzare i numeri di cellulare. Puoi usare anche email generiche come @gmail.com."
+            },
+            {
+              "question": "Una volta registrata la società, posso iniziare subito l'attività?",
+              "answer": "Per la maggior parte delle imprese, sì. Tuttavia, <b>alcune attività regolate da leggi specifiche</b> richiedono licenze aggiuntive (es. Turismo, Salute/Cibo, Industria, Finanza). Ti consigliamo di informarti prima di avviare la registrazione."
+            },
+            {
+              "question": "Devo registrarmi per l'IVA (VAT 7%) subito dopo la registrazione della società?",
+              "answer": "Non necessariamente. L'obbligo scatta se il reddito aziendale <b>supera 1,8 milioni di THB all'anno</b>. Se devi importare/esportare o operare in B2B emettendo fatture fiscali, allora <b>devi richiedere la registrazione IVA</b>."
+            },
+            {
+              "question": "Devo tenere la contabilità anche se non ho iniziato a vendere?",
+              "answer": "<b>Sì.</b> La legge impone a tutte le entità giuridiche di tenere la contabilità <b>\"anche in assenza di entrate o uscite (Dichiarazione a zero)\"</b>. Le sanzioni per mancata presentazione sono elevate."
+            },
+            {
+              "question": "Come amministratore, devo versare i contributi previdenziali sul mio stipendio?",
+              "answer": "<b>No.</b> Come amministratore e azionista principale, sei considerato <b>\"Datore di Lavoro\"</b>. Tuttavia, non appena assumi <b>\"Dipendenti a tempo pieno\"</b>, dovrai registrarli presso la Previdenza Sociale entro 30 giorni."
             }
           ]
         }

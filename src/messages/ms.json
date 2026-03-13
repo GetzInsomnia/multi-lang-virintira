@@ -380,123 +380,178 @@
         "title": "Syarikat Berhad",
         "summary": "Pendaftaran syarikat berhad yang komprehensif. Kami menguruskan semua kertas kerja dan langkah undang-undang supaya anda boleh memulakan perniagaan dengan yakin.",
         "hero": {
-          "title": "",
-          "subtitle": "",
-          "description": "",
-          "cta": ""
+          "title": "Mulakan perniagaan anda secara profesional. Pendaftaran syarikat lengkap di satu tempat.",
+          "subtitle": "Dipercayai oleh lebih 300 usahawan.",
+          "description": "Tukar kerja kertas dan prosedur undang-undang yang rumit kepada proses yang mudah. Kami menguruskan semuanya daripada menubuhkan syarikat anda dengan Jabatan Pembangunan Perniagaan (DBD), hingga memohon ID korporat dan nombor pengenalan cukai, supaya anda boleh fokus pada pertumbuhan perniagaan anda.",
+          "cta": "Hubungi 092-882-5556"
         },
         "promotion": {
-          "title": "",
-          "subtitle": "",
-          "cta": ""
+          "title": "Tawaran Istimewa!",
+          "subtitle": "Jangan lepaskan harga istimewa dan faedah eksklusif khusus untuk perkhidmatan ini.",
+          "cta": "Lihat Promosi",
+          "slug": "company-registration-deal"
         },
         "features": {
-          "title": "",
+          "title": "Segalanya yang anda perlukan untuk memulakan perniagaan",
           "items": [
             {
-              "title": "",
-              "description": ""
+              "title": "Perundingan & Perancangan Perniagaan",
+              "description": "Kami menganalisis struktur perniagaan anda dan memberi nasihat yang paling sesuai mengikut kes tertentu.",
+              "icon": "Lightbulb"
             },
             {
-              "title": "",
-              "description": ""
+              "title": "Penyediaan Dokumen & M&A",
+              "description": "Sediakan borang rasmi dengan tepat melalui sistem pendaftaran digital (DBD Biz Regist).",
+              "icon": "FileSignature"
             },
             {
-              "title": "",
-              "description": ""
+              "title": "Penyerahan Pendaftaran",
+              "description": "Bertindak sebagai wakil anda untuk menyerahkan dokumen kepada Jabatan Pembangunan Perniagaan (DBD) pada setiap langkah.",
+              "icon": "Landmark"
             },
             {
-              "title": "",
-              "description": ""
+              "title": "Permohonan ID Cukai",
+              "description": "Uruskan permohonan ID korporat dan nombor cukai untuk menyediakan sistem cukai syarikat anda.",
+              "icon": "Calculator"
             }
           ]
         },
         "benefits": {
-          "title": "",
+          "title": "Keistimewaan eksklusif hanya untuk anda",
           "items": [
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            ""
+            {
+              "title": "Tiada komitmen perakaunan bulanan!",
+              "icon": "Unlock"
+            },
+            {
+              "title": "PERCUMA! Semak dan tempah sehingga 3 nama syarikat",
+              "icon": "SearchCheck"
+            },
+            {
+              "title": "PERCUMA! 1 cop syarikat berdakwat sendiri",
+              "icon": "Stamp"
+            },
+            {
+              "title": "PERCUMA! Mohon kata laluan e-Filing untuk DBD",
+              "icon": "KeySquare"
+            },
+            {
+              "title": "PERCUMA! Mohon kata laluan untuk Jabatan Hasil (Revenue Department)",
+              "icon": "KeyRound"
+            },
+            {
+              "title": "PERCUMA! Set dokumen untuk membuka akaun bank korporat",
+              "icon": "Wallet"
+            },
+            {
+              "title": "PERCUMA! Set lengkap sijil syarikat (DBD)",
+              "icon": "ScrollText"
+            },
+            {
+              "title": "PERCUMA! Kursus latihan teknik cukai (Bernilai 5,900 THB)",
+              "icon": "GraduationCap"
+            },
+            {
+              "title": "PERCUMA! Kad perniagaan untuk pengeluaran resit/invois cukai",
+              "icon": "Contact2"
+            }
           ]
         },
         "requirements": {
-          "title": "",
-          "subtitle": "",
+          "title": "Apa yang perlu disediakan untuk pendaftaran syarikat",
+          "subtitle": "Sediakan maklumat asas, dan serahkan selebihnya kepada kami.",
           "documents": {
-            "title": "",
+            "title": "1. Dokumen penting yang diperlukan",
             "items": [
-              "",
-              "",
-              "",
-              ""
+              "Sekurang-kurangnya 2 pemegang saham \n\n1. Pemegang saham Thai: Salinan kad pengenalan (Salinan depan dan belakang yang jelas)\n\n2. Pemegang saham asing: Salinan pasport (Hanya halaman pertama dengan gambar)\n\n3. Pemegang saham korporat: Salinan sijil syarikat dan salinan kad pengenalan pengarah yang sah",
+              "Pendaftaran rumah (Tabien Baan) yang akan digunakan sebagai ibu pejabat syarikat",
+              "Reka bentuk cop (jika ada)"
             ]
           },
           "information": {
-            "title": "",
+            "title": "2. Maklumat asas perniagaan",
             "items": [
-              "",
-              "",
-              "",
-              "",
-              "",
-              "",
-              ""
+              "Nama syarikat yang dikehendaki (Thai-Inggeris)",
+              "Nisbah pegangan saham (dalam peratusan, cth., 99% dan 1%)",
+              "Senarai pengarah (Penandatangan yang diberi kuasa)",
+              "Penerangan perniagaan",
+              "Jumlah modal berdaftar (cth., Modal 1 juta THB, 25% berbayar)",
+              "Maklumat hubungan syarikat \n1. Nombor telefon \n2. E-mel",
+              "Maklumat hubungan pemegang saham \n1. Nombor telefon \n2. E-mel \n3. ID LINE"
             ]
           }
         },
         "process": {
-          "title": "",
+          "title": "4 langkah pendaftaran mudah",
           "steps": [
             {
-              "title": "",
-              "description": ""
+              "title": "Perundingan & Tempahan Nama",
+              "description": "Mendaftar syarikat adalah seperti menempah sut pakaian. Kami membincangkan keperluan anda, membantu merancang struktur perniagaan yang paling sesuai, dan meneruskan tempahan nama syarikat.",
+              "icon": "MessageSquareText"
             },
             {
-              "title": "",
-              "description": ""
+              "title": "Penyediaan dokumen melalui sistem kerajaan",
+              "description": "Pasukan kami menyediakan semua dokumen dan borang rasmi melalui sistem DBD Biz Regist dari Jabatan Pembangunan Perniagaan, Kementerian Perdagangan.",
+              "icon": "FileStack"
             },
             {
-              "title": "",
-              "description": ""
+              "title": "Pengesahan Identiti Dalam Talian (Tanpa perlu hadir)",
+              "description": "Pemegang saham dan pengarah mengesahkan identiti mereka (Warganegara Thai menggunakan aplikasi ThaID, warga asing menggunakan aplikasi DBD e-Service) dengan mengimbas Kod QR atau mengklik pautan pengesahan yang dihantar oleh DBD ke e-mel peribadi mereka.",
+              "icon": "SmartphoneNfc"
             },
             {
-              "title": "",
-              "description": ""
+              "title": "Hantar Pendaftaran & Penghantaran",
+              "description": "Pasukan kami menyerahkan permohonan kepada DBD. Setelah pendaftaran dan sijil syarikat diluluskan, kami akan mengesahkan ketepatannya dan menghantar dokumen penting berserta hadiah percuma terus kepada anda.",
+              "icon": "Gift"
             }
           ]
         },
         "faq": {
-          "title": "",
+          "title": "Soalan Lazim (FAQ)",
           "items": [
             {
-              "question": "",
-              "answer": ""
+              "question": "Apakah perbezaan antara Syarikat Berhad (Company Limited / Co., Ltd.) dan Perkongsian Terhad (Limited Partnership / Ltd. Part.), dan yang manakah harus saya pilih?",
+              "answer": "Walaupun kedua-dua struktur mempunyai status <b>\"Entiti Sah (Juristic Person)\"</b> dan berkongsi kadar cukai yang sama, perbezaan utama terletak pada <b>\"Liabiliti untuk Hutang\"</b>, <b>\"Kredibiliti\"</b>, dan <b>\"Sekatan ke atas Warga Asing\"</b>. Untuk memudahkan pemahaman, berikut adalah perbandingan:\n\n<b>1. Syarikat Berhad (Co., Ltd.)</b>\n• <b>Liabiliti:</b> <i>\"Liabiliti Terhad\"</i> (kecuali untuk pengarah). Semua pemegang saham hanya bertanggungjawab ke atas hutang syarikat setakat jumlah saham mereka yang belum dibayar (memisahkan kewangan peribadi daripada kewangan perniagaan dengan jelas, melindungi aset peribadi).\n• <b>Kredibiliti:</b> Sangat Tinggi. Sesuai untuk perniagaan jangka panjang, bidaan kerajaan, projek besar, menarik pelabur, atau operasi B2B (Perniagaan-ke-Perniagaan).\n• <b>Warga Asing / Permit Kerja:</b> Sangat Disyorkan. Undang-undang dan agensi kerajaan menyokong sepenuhnya struktur Co., Ltd., sama ada untuk pegangan saham asing (sehingga 49%), permohonan Permit Kerja, Visa Perniagaan, atau promosi pelaburan BOI.\n• <b>Pengasas yang diperlukan:</b> Pada masa ini, minimum hanya 2 pemegang saham diperlukan untuk mendaftar.\n\n<b>2. Perkongsian Terhad (Ltd. Part.)</b>\n• <b>Liabiliti:</b> Undang-undang menetapkan sekurang-kurangnya seorang rakan kongsi bertindak sebagai <i>\"Rakan Pengurus (Managing Partner)\"</i>, yang mempunyai <b>\"Liabiliti Tidak Terhad\"</b> untuk hutang perniagaan (jika perniagaan menghadapi masalah, rakan pengurus mungkin perlu menggunakan aset peribadi untuk membayar hutang). Rakan kongsi lain mempunyai liabiliti terhad berdasarkan pelaburan mereka.\n• <b>Kredibiliti:</b> Sederhana. Sesuai untuk perniagaan kecil, Perniagaan Keluarga, atau syarikat di mana rakan kongsi tidak ketat tentang jenis entiti sah.\n• <b>Warga Asing:</b> Tidak Disyorkan. Melibatkan warga asing dalam Ltd. Part. mempunyai sekatan undang-undang yang rumit. Jika warga asing bertindak sebagai rakan pengurus, perniagaan tersebut mungkin diklasifikasikan sebagai entiti asing, menjadikan operasi dan Permit Kerja jauh lebih sukar berbanding Co., Ltd.\n• <b>Pengasas yang diperlukan:</b> Memerlukan hanya 2 pengasas, sama seperti pendaftaran syarikat.\n\n<b>Ringkasan: Yang manakah patut dipilih?</b>\n• Pilih <b>\"Syarikat Berhad (Company Limited)\"</b> jika anda mencari kredibiliti tertinggi, merancang untuk mengembangkan perniagaan atau cawangan, ingin mengehadkan risiko kepada aset peribadi, mempunyai pemegang saham asing, atau merancang untuk mengupah pekerja asing (Permit Kerja).\n• Pilih <b>\"Perkongsian Terhad (Limited Partnership)\"</b> jika ia adalah perniagaan keluarga atau rakan karib yang anda percayai 100%, perniagaan mempunyai risiko hutang yang rendah, tiada rakan kongsi asing, dan anda lebih suka struktur pengurusan yang paling ringkas.\n\n<i><b>Nota:</b> Pada masa ini, kos pendaftaran, perakaunan bulanan, dan penutupan kewangan tahunan untuk Co., Ltd. dan Ltd. Part. tidak berbeza dengan ketara. Mendaftar sebagai \"Syarikat Berhad\" secara amnya memberikan faedah jangka panjang yang maksimum.</i>"
             },
             {
-              "question": "",
-              "answer": ""
+              "question": "Berapa hari masa pemprosesan yang diambil?",
+              "answer": "Ia biasanya mengambil masa kira-kira <b>1-5 hari bekerja</b> (tidak termasuk cuti umum) selepas menerima maklumat dan dokumen yang lengkap daripada pelanggan. Jangka masa mungkin bergantung pada giliran di Jabatan Pembangunan Perniagaan pada masa itu, serta kepantasan pelanggan dalam pengesahan identiti dalam talian (atau penghantaran OTP)."
             },
             {
-              "question": "",
-              "answer": ""
+              "question": "Apakah modal berdaftar? Bolehkah saya mendaftar syarikat jika saya tidak mempunyai jumlah penuh?",
+              "answer": "Ringkasnya, <b>\"Modal Berdaftar (Registered Capital)\"</b> ialah modal kerja yang digunakan untuk operasi perniagaan. <i>\"Membayar modal berdaftar\"</i> tidak bermaksud membayar kepada orang lain; ia bermaksud mendepositkan dana ke dalam akaun bank syarikat (yang boleh dibuka selepas syarikat didaftarkan).\n\n• <b>Jika anda tidak mempunyai jumlah penuh sekali gus:</b> Anda boleh mendepositkan wang secara beransur-ansur. Contohnya, jika modal berdaftar ialah 1 juta THB (minimum 25% berbayar ialah 250,000 THB), anda boleh bermula dengan membuka akaun dengan 1,000 THB. Apabila terdapat perbelanjaan perniagaan, anda boleh mendepositkan wang ke dalam akaun syarikat dan membayarnya. Dana ini tidak perlu dibiarkan terbiar di dalam akaun; ia boleh digunakan sebagai modal kerja.\n• <b>Awas:</b> Kecuali dalam kes di mana syarikat mempunyai <b>Pemegang Saham Asing</b> atau syarikat pemilikan Thai sepenuhnya dengan <b>modal berdaftar melebihi 5 juta THB</b>. Dalam kes ini, undang-undang memerlukan dana sebenar dan Sijil Bank (Bank Certificate) ditunjukkan semasa proses pendaftaran."
             },
             {
-              "question": "",
-              "answer": ""
+              "question": "Bolehkah warga asing menjadi pemegang saham, dan apakah bukti kewangan yang diperlukan?",
+              "answer": "Ya, mereka boleh, melalui pendaftaran Syarikat Berhad (Company Limited) umum. Jika syarikat itu ingin menjadi entiti sah Thai, warganegara Thai mesti memegang sekurang-kurangnya 51% daripada saham. Syarat mengenai bukti kewangan dan nisbah pegangan saham adalah seperti berikut:\n\n• <b>Jika terdapat pemegang saham asing (Warganegara Thai memegang 51% atau lebih):</b> Rakan kongsi Thai mesti menunjukkan Sijil Bank (Bank Certificate) yang sepadan dengan bahagian saham mereka (Warga asing tidak perlu menunjukkan dana). Contohnya:\n  1. Untuk persediaan Permit Kerja: Modal berdaftar 2 juta THB (100% berbayar), warga Thai yang memegang 51% mesti menunjukkan deposit sekurang-kurangnya 1,020,000 THB.\n  2. Tiada Permit Kerja diperlukan: Modal berdaftar 1 juta THB (minimum 25% berbayar), warga Thai yang memegang 51% mesti menunjukkan deposit sekurang-kurangnya 127,500 THB.\n• <b>Jika pemegang saham adalah 100% Thai:</b> Jika modal berdaftar tidak melebihi 5,000,000 THB, tiada bukti kewangan diperlukan semasa proses penubuhan (walaupun pemegang saham berubah dan warga asing dibawa masuk kemudian).\n• <b>Jika warga asing ingin memegang 100% (atau lebih daripada 49%):</b> Syarikat itu boleh didaftarkan, tetapi setelah selesai, syarikat tidak boleh menjalankan sebarang perniagaan sehingga kebenaran diberikan melalui salah satu saluran berikut:\n  1. Mohon Lesen Perniagaan Asing (Foreign Business License: FBL). Operasi boleh bermula setelah lesen diterima.\n  2. Mohon promosi pelaburan (BOI). Setelah sijil BOI diterima, anda mesti memohon Sijil Perniagaan Asing (Foreign Business Certificate: FBC) sebelum memulakan operasi."
             },
             {
-              "question": "",
-              "answer": ""
+              "question": "Jika saya belum mempunyai pejabat atau lokasi, bolehkah saya masih mendaftar?",
+              "answer": "<b>Ya, anda boleh mendaftar.</b> Lazimnya, bangunan komersial, rumah kedai, rumah bandar, atau rumah kediaman boleh digunakan sebagai alamat pendaftaran. Walau bagaimanapun, jika anda tidak mempunyai lokasi ini atau memilih untuk tidak menggunakan lokasi anda sendiri, kami menawarkan perkhidmatan <b>Pejabat Maya (Virtual Office)</b> dalam 3 format untuk memenuhi keperluan anda:\n1. Digunakan sebagai alamat untuk pendaftaran syarikat sahaja.\n2. Digunakan sebagai alamat untuk pendaftaran syarikat + pendaftaran VAT.\n3. Digunakan sebagai alamat untuk pendaftaran syarikat + pendaftaran VAT + Pendaftaran majikan dengan Keselamatan Sosial."
             },
             {
-              "question": "",
-              "answer": ""
+              "question": "Jika saya bukan pemilik rumah, seperti menggunakan rumah sewa atau kondominium, bolehkah saya mendaftar syarikat di sana?",
+              "answer": "Ya, tetapi terdapat dokumen tambahan yang diperlukan:\n\n• <b>Rumah/ruang sewa:</b> <i>\"Surat Kebenaran untuk menggunakan premis\"</i> diperlukan, bersama dengan salinan kad pengenalan dan pendaftaran rumah \"Tuan Rumah atau Pemilik Hartanah\" yang disahkan untuk diserahkan bersama pendaftaran.\n• <b>Kondominium:</b> Walaupun dibenarkan di sisi undang-undang, anda harus menyemak dengan pengurusan (juristic person) kondo tersebut terlebih dahulu. Banyak projek mempunyai peraturan dalaman yang melarang penggunaan unit kediaman sebagai entiti korporat atau pejabat untuk mengelakkan gangguan kepada penduduk lain. <i>(Kami mempunyai perkhidmatan Pejabat Maya untuk menyelesaikan masalah ini untuk anda.)</i>"
+            },
+            {
+              "question": "Jika saya tidak mempunyai nombor telefon talian tetap (02), bolehkah saya mendaftar syarikat?",
+              "answer": "Ya, boleh. Pada masa ini, Jabatan Pembangunan Perniagaan membenarkan usahawan menggunakan nombor telefon bimbit untuk pendaftaran. Selain itu, untuk e-mel, anda boleh menggunakan e-mel umum (seperti @gmail.com atau @hotmail.com); tidak perlu menggunakan e-mel di bawah nama domain syarikat."
+            },
+            {
+              "question": "Setelah syarikat didaftarkan, bolehkah saya mula beroperasi serta-merta?",
+              "answer": "Bagi kebanyakan perniagaan dengan operasi umum, sebaik sahaja pendaftaran entiti sah selesai, anda boleh memulakan operasi perniagaan serta-merta. Walau bagaimanapun, terdapat <b>perniagaan tertentu yang dikawal oleh undang-undang khusus</b> yang memerlukan lesen tambahan daripada agensi kerajaan yang berkaitan sebelum beroperasi secara sah. Contohnya:\n\n• <b>Pelancongan dan Perjalanan:</b> Pengendali pelancongan, pemandu pelancong, hotel, penginapan (Mesti memohon lesen TAT atau agensi yang berkaitan).\n• <b>Kesihatan dan Makanan:</b> Restoran, klinik, hospital, spa, pengeluaran/import makanan, ubat-ubatan, kosmetik (Mesti memohon lesen FDA atau Kementerian Kesihatan Awam).\n• <b>Perindustrian:</b> Kilang, pemilikan bahan kimia atau bahan berbahaya (Mesti memohon lesen daripada Jabatan Kerja Perindustrian).\n• <b>Kewangan:</b> Perniagaan kredit seperti Pico Finance (Mesti memohon lesen daripada Bank of Thailand atau Kementerian Kewangan).\n• <b>Lain-lain:</b> Agensi pekerjaan, perkhidmatan keselamatan, logistik dan pengangkutan, dsb. (Mesti memohon daripada Jabatan Pekerjaan, Polis Diraja Thai, Jabatan Pengangkutan Darat, dsb.)\n\n<i><b>Nota Penting:</b> Beberapa perniagaan mungkin dikhaskan secara eksklusif untuk warganegara Thai. Jika syarikat anda mempunyai pemegang saham asing yang melebihi had yang ditetapkan atau pengarah sah warga asing, anda mungkin tidak dapat memperoleh lesen khusus tersebut. Untuk menjimatkan masa dan wang, kami menasihatkan agar mengkaji keperluan atau bertanya terus dengan agensi pengawal selia sebelum memulakan pendaftaran syarikat.</i>"
+            },
+            {
+              "question": "Adakah saya perlu mendaftar untuk Cukai Nilai Tambah (VAT 7%) serta-merta selepas pendaftaran syarikat?",
+              "answer": "Tidak semestinya. Pendaftaran syarikat dan pendaftaran VAT adalah proses yang berasingan. Syarikat hanya diwajibkan mendaftar untuk VAT apabila pendapatan perniagaannya <b>melebihi 1.8 juta THB setahun</b>.\n\nWalau bagaimanapun, jika syarikat anda perlu mengimport/mengeksport barangan atau berurusan dengan rakan kongsi korporat B2B lain yang memerlukan anda mengeluarkan invois cukai, syarikat anda <b>mesti memohon pendaftaran VAT</b> untuk membolehkan pengeluaran invois cukai kepada rakan kongsi anda."
+            },
+            {
+              "question": "Selepas mendaftar syarikat, tetapi sebelum memulakan jualan atau menjana pendapatan, adakah saya perlu melakukan perakaunan?",
+              "answer": "<b>Ya, anda mesti.</b> Ini adalah salah faham umum dalam kalangan usahawan baharu. Menurut undang-undang (Akta Perakaunan B.E. 2543), semua entiti sah diwajibkan untuk menyediakan akaun dan menyerahkan laporan yang berkaitan kepada DBD dan Jabatan Hasil, <b>\"walaupun tiada pendapatan, tiada perbelanjaan, atau operasi perniagaan belum bermula pada bulan atau tahun tersebut (Pengisytiharan Sifar).\"</b> Kegagalan berbuat demikian mengikut tarikh akhir akan mengakibatkan denda undang-undang yang ketara."
+            },
+            {
+              "question": "Sebagai pengarah syarikat, adakah saya perlu memotong gaji saya untuk Keselamatan Sosial?",
+              "answer": "<b>Tidak.</b> Jika anda adalah pengarah yang diberi kuasa dan pemegang saham utama, anda dianggap sebagai <b>\"Majikan\"</b>, bukan pekerja. Oleh itu, anda tidak boleh dan tidak perlu mendaftar sebagai orang yang diinsuranskan (Seksyen 33) dalam syarikat anda sendiri.\n\nWalau bagaimanapun, sebaik sahaja syarikat mula mengambil <b>\"Pekerja sepenuh masa\"</b>, undang-undang memerlukan syarikat untuk mendaftar sebagai majikan dan menyerahkan Keselamatan Sosial untuk pekerja tersebut dalam masa 30 hari dari tarikh mereka mula bekerja."
             }
           ]
         }

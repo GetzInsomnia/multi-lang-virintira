@@ -380,123 +380,178 @@
         "title": "B.V.",
         "summary": "Uitgebreide bedrijfsregistratie. Wij regelen alle documenten en juridische stappen, zodat u met vertrouwen uw bedrijf kunt starten.",
         "hero": {
-          "title": "",
-          "subtitle": "",
-          "description": "",
-          "cta": ""
+          "title": "Start uw bedrijf professioneel. Volledige bedrijfsregistratie op één plek.",
+          "subtitle": "Vertrouwd door meer dan 300 ondernemers.",
+          "description": "Verander ingewikkeld papierwerk en juridische procedures in een eenvoudig proces. Wij regelen alles, van de oprichting van uw bedrijf bij het Department of Business Development (DBD) tot het aanvragen van een bedrijfs-ID en btw-nummer, zodat u zich volledig kunt concentreren op de groei van uw bedrijf.",
+          "cta": "Bel 092-882-5556"
         },
         "promotion": {
-          "title": "",
-          "subtitle": "",
-          "cta": ""
+          "title": "Speciale Aanbieding!",
+          "subtitle": "Mis de speciale prijzen en exclusieve voordelen voor deze service niet.",
+          "cta": "Bekijk Aanbieding",
+          "slug": "company-registration-deal"
         },
         "features": {
-          "title": "",
+          "title": "Alles wat u nodig heeft om een bedrijf te starten",
           "items": [
             {
-              "title": "",
-              "description": ""
+              "title": "Bedrijfsadvies & Planning",
+              "description": "We analyseren uw bedrijfsstructuur en geven het meest geschikte advies voor uw onderneming per specifiek geval.",
+              "icon": "Lightbulb"
             },
             {
-              "title": "",
-              "description": ""
+              "title": "Document- en Statutenvoorbereiding",
+              "description": "Nauwkeurige voorbereiding van officiële formulieren via het digitale registratiesysteem (DBD Biz Regist).",
+              "icon": "FileSignature"
             },
             {
-              "title": "",
-              "description": ""
+              "title": "Indiening Bedrijfsregistratie",
+              "description": "Wij treden op als uw vertegenwoordiger om documenten in elke fase in te dienen bij het DBD.",
+              "icon": "Landmark"
             },
             {
-              "title": "",
-              "description": ""
+              "title": "Aanvraag BTW-nummer",
+              "description": "Afhandeling van uw bedrijfs-ID en btw-nummer om het belastingsysteem van uw bedrijf voor te bereiden.",
+              "icon": "Calculator"
             }
           ]
         },
         "benefits": {
-          "title": "",
+          "title": "Exclusieve privileges speciaal voor u",
           "items": [
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            ""
+            {
+              "title": "Geen maandelijkse boekhoudverplichting!",
+              "icon": "Unlock"
+            },
+            {
+              "title": "GRATIS! Controleer en reserveer tot 3 bedrijfsnamen",
+              "icon": "SearchCheck"
+            },
+            {
+              "title": "GRATIS! 1 zelfinktende bedrijfsstempel",
+              "icon": "Stamp"
+            },
+            {
+              "title": "GRATIS! Vraag een e-Filing wachtwoord aan voor het DBD",
+              "icon": "KeySquare"
+            },
+            {
+              "title": "GRATIS! Vraag een wachtwoord aan voor de Belastingdienst",
+              "icon": "KeyRound"
+            },
+            {
+              "title": "GRATIS! Documentenset voor het openen van een zakelijke bankrekening",
+              "icon": "Wallet"
+            },
+            {
+              "title": "GRATIS! Complete set bedrijfscertificaten (DBD)",
+              "icon": "ScrollText"
+            },
+            {
+              "title": "GRATIS! Trainingscursus belastingtechniek (Waarde 5.900 THB)",
+              "icon": "GraduationCap"
+            },
+            {
+              "title": "GRATIS! Visitekaartjes voor het uitschrijven van bonnen/facturen",
+              "icon": "Contact2"
+            }
           ]
         },
         "requirements": {
-          "title": "",
-          "subtitle": "",
+          "title": "Wat moet u voorbereiden voor de registratie",
+          "subtitle": "Bereid simpelweg de basisinformatie voor, wij doen de rest.",
           "documents": {
-            "title": "",
+            "title": "1. Belangrijke vereiste documenten",
             "items": [
-              "",
-              "",
-              "",
-              ""
+              "Minimaal 2 aandeelhouders \n\n1. Thaise aandeelhouders: Kopie ID-kaart (Duidelijk, voor- en achterkant)\n\n2. Buitenlandse aandeelhouders: Kopie paspoort (Alleen eerste pagina met foto)\n\n3. Zakelijke aandeelhouders: Kopie bedrijfscertificaat en ID-kaart van de bevoegde directeur",
+              "Huisregistratie (Tabien Baan) te gebruiken als hoofdkantoor",
+              "Stempelontwerp (indien aanwezig)"
             ]
           },
           "information": {
-            "title": "",
+            "title": "2. Basis bedrijfsinformatie",
             "items": [
-              "",
-              "",
-              "",
-              "",
-              "",
-              "",
-              ""
+              "Gewenste bedrijfsnaam (Thais-Engels)",
+              "Aandelenverhouding (in procenten, bijv. 99% en 1%)",
+              "Lijst van directeuren (tekenbevoegden)",
+              "Bedrijfsomschrijving",
+              "Geregistreerd kapitaal (bijv. 1 miljoen THB, 25% gestort)",
+              "Contactgegevens bedrijf \n1. Telefoonnummer \n2. E-mail",
+              "Contactgegevens aandeelhouders \n1. Telefoonnummer \n2. E-mail \n3. LINE ID"
             ]
           }
         },
         "process": {
-          "title": "",
+          "title": "4 eenvoudige registratiestappen",
           "steps": [
             {
-              "title": "",
-              "description": ""
+              "title": "Advies & Naamsreservering",
+              "description": "Een bedrijf registreren is als een maatpak maken. We bespreken uw behoeften, plannen de zakelijke structuur die het beste bij uw onderneming past, en reserveren de bedrijfsnaam.",
+              "icon": "MessageSquareText"
             },
             {
-              "title": "",
-              "description": ""
+              "title": "Voorbereiding via overheidssysteem",
+              "description": "Ons team bereidt alle documenten en officiële formulieren voor via het DBD Biz Regist-systeem van het Department of Business Development, Ministerie van Handel.",
+              "icon": "FileStack"
             },
             {
-              "title": "",
-              "description": ""
+              "title": "Online Identiteitsverificatie (Geen reizen nodig)",
+              "description": "Aandeelhouders en directeuren verifiëren hun identiteit (Thaise burgers gebruiken de ThaID-app, buitenlanders de DBD e-Service-app) door een QR-code te scannen of op een verificatielink te klikken die door het DBD naar hun persoonlijke e-mail is gestuurd.",
+              "icon": "SmartphoneNfc"
             },
             {
-              "title": "",
-              "description": ""
+              "title": "Registratie Indienen & Levering",
+              "description": "Ons team dient de aanvraag in bij het DBD. Zodra de registratie en het bedrijfscertificaat zijn goedgekeurd, controleren we de juistheid en leveren we de essentiële documenten inclusief uw gratis geschenken rechtstreeks aan u.",
+              "icon": "Gift"
             }
           ]
         },
         "faq": {
-          "title": "",
+          "title": "Veelgestelde Vragen (FAQ)",
           "items": [
             {
-              "question": "",
-              "answer": ""
+              "question": "Wat is het verschil tussen een Company Limited (Co., Ltd.) en een Limited Partnership (Ltd. Part.), en welke moet ik kiezen?",
+              "answer": "Hoewel beide structuren de status van <b>\"Rechtspersoon\"</b> hebben en dezelfde belastingtarieven delen, liggen de belangrijkste verschillen in de <b>\"Aansprakelijkheid voor schulden\"</b>, de <b>\"Geloofwaardigheid\"</b> en de <b>\"Beperkingen voor buitenlanders\"</b>. Om het gemakkelijker te begrijpen, is hier een vergelijking:\n\n<b>1. Company Limited (Co., Ltd.)</b>\n• <b>Aansprakelijkheid:</b> <i>\"Beperkte Aansprakelijkheid\"</i> (behalve voor directeuren). Alle aandeelhouders zijn slechts aansprakelijk voor de schulden van het bedrijf tot het onbetaalde bedrag van hun aandelen (scheidt persoonlijke financiën duidelijk van zakelijke financiën, waardoor persoonlijke bezittingen worden veiliggesteld).\n• <b>Geloofwaardigheid:</b> Zeer hoog. Geschikt voor zakendoen op de lange termijn, overheidsaanbestedingen, grote projecten, het aantrekken van investeerders of B2B (Business-to-Business) activiteiten.\n• <b>Buitenlanders / Werkvergunning:</b> Sterk aanbevolen. Wetten en overheidsinstanties ondersteunen de Co., Ltd. structuur volledig, of het nu gaat om buitenlands aandeelhouderschap (tot 49%), aanvragen voor werkvergunningen, zakelijke visa of BOI-investeringspromoties.\n• <b>Vereiste oprichters:</b> Momenteel zijn er minimaal slechts 2 aandeelhouders nodig om te registreren.\n\n<b>2. Limited Partnership (Ltd. Part.)</b>\n• <b>Aansprakelijkheid:</b> De wet vereist dat ten minste één partner optreedt als de <i>\"Managing Partner\"</i>, die een <b>\"Onbeperkte Aansprakelijkheid\"</b> heeft voor de schulden van het bedrijf (als het bedrijf problemen ondervindt, moet de managing partner mogelijk persoonlijke bezittingen gebruiken om schulden af te betalen). Andere partners hebben een beperkte aansprakelijkheid op basis van hun investering.\n• <b>Geloofwaardigheid:</b> Gemiddeld. Geschikt voor kleine bedrijven, familiebedrijven of ondernemingen waar partners niet strikt zijn over het type juridische entiteit.\n• <b>Buitenlanders:</b> Niet aanbevolen. Buitenlanders in een Ltd. Part. brengen complexe wettelijke beperkingen met zich mee. Als een buitenlander optreedt als managing partner, kan het bedrijf worden geclassificeerd als een buitenlandse entiteit, waardoor activiteiten en werkvergunningen veel moeilijker worden dan bij een Co., Ltd.\n• <b>Vereiste oprichters:</b> Heeft slechts 2 oprichters nodig, net als een bedrijfsregistratie.\n\n<b>Samenvatting: Welke moet ik kiezen?</b>\n• Kies een <b>\"Company Limited\"</b> als u de hoogste geloofwaardigheid zoekt, van plan bent het bedrijf uit te breiden, risico's voor persoonlijke bezittingen wilt beperken, buitenlandse aandeelhouders heeft, of van plan bent buitenlandse werknemers in te huren (werkvergunning).\n• Kies een <b>\"Limited Partnership\"</b> als het een familiebedrijf betreft of nauwe vrienden die u 100% vertrouwt, het bedrijf een laag schuldenrisico heeft, er geen buitenlandse partners zijn en u de voorkeur geeft aan de eenvoudigste beheerstructuur.\n\n<i><b>Opmerking:</b> Momenteel verschillen de kosten voor registratie, maandelijkse boekhouding en de jaarlijkse financiële afsluiting voor Co., Ltd. en Ltd. Part. niet significant. Registratie als een \"Company Limited\" levert op de lange termijn over het algemeen de maximale voordelen op.</i>"
             },
             {
-              "question": "",
-              "answer": ""
+              "question": "Hoeveel dagen duurt de verwerking?",
+              "answer": "Het duurt doorgaans ongeveer <b>1-5 werkdagen</b> (exclusief feestdagen) na ontvangst van de volledige informatie en documenten van de klant. De tijdsduur kan afhangen van de wachtrij bij het Department of Business Development op dat moment, evenals de snelheid van de klant bij de online identiteitsverificatie (of OTP-indiening)."
             },
             {
-              "question": "",
-              "answer": ""
+              "question": "Wat is geregistreerd kapitaal? Kan ik een bedrijf registreren als ik niet het volledige bedrag heb?",
+              "answer": "Eenvoudig gezegd is <b>\"Geregistreerd Kapitaal\"</b> het werkkapitaal dat wordt gebruikt voor de bedrijfsactiviteiten. <i>\"Het kapitaal storten\"</i> betekent niet dat u iemand anders betaalt; het betekent dat u geld stort op de bankrekening van het bedrijf (die kan worden geopend nadat het bedrijf is geregistreerd).\n\n• <b>Als u niet het volledige bedrag heeft:</b> U kunt het geld geleidelijk storten. Bijvoorbeeld, als het geregistreerde kapitaal 1 miljoen THB is (minimaal 25% gestort is 250.000 THB), kunt u beginnen door de rekening te openen met 1.000 THB. Wanneer er zakelijke uitgaven zijn, kunt u geld op de bedrijfsrekening storten en het uitbetalen. Dit geld hoeft niet stil op de rekening te staan; het kan worden gebruikt als werkkapitaal.\n• <b>Let op:</b> Behalve in gevallen waarin het bedrijf <b>Buitenlandse aandeelhouders</b> heeft of een volledig Thais bedrijf is met een <b>geregistreerd kapitaal van meer dan 5 miljoen THB</b>. In deze gevallen vereist de wet dat tijdens het registratieproces echte fondsen en een Bankverklaring (Bank Certificate) worden getoond."
             },
             {
-              "question": "",
-              "answer": ""
+              "question": "Mogen buitenlanders aandeelhouder zijn, en welk financieel bewijs is vereist?",
+              "answer": "Ja, dat kan, via een algemene Company Limited registratie. Als het bedrijf de status van Thaise rechtspersoon moet behouden, moeten Thaise staatsburgers ten minste 51% van de aandelen in handen hebben. De voorwaarden met betrekking tot financieel bewijs en aandelenverhouding zijn als volgt:\n\n• <b>Als er buitenlandse aandeelhouders zijn (Thais hebben 51% of meer):</b> Thaise partners moeten een Bankverklaring (Bank Certificate) overleggen die overeenkomt met hun aandelenpercentage (buitenlanders hoeven geen fondsen te tonen). Bijvoorbeeld:\n  1. Ter voorbereiding op een werkvergunning (Work Permit): Geregistreerd kapitaal 2 miljoen THB (100% gestort), Thais met 51% moeten ten minste 1.020.000 THB aan deposito's aantonen.\n  2. Geen werkvergunning nodig: Geregistreerd kapitaal 1 miljoen THB (minimaal 25% gestort), Thais met 51% moeten ten minste 127.500 THB aan deposito's aantonen.\n• <b>Als de aandeelhouders 100% Thais zijn:</b> Als het geregistreerde kapitaal niet hoger is dan 5.000.000 THB, is er tijdens het oprichtingsproces geen financieel bewijs nodig (zelfs als aandeelhouders later veranderen en er buitenlanders bijkomen).\n• <b>Als buitenlanders 100% (of meer dan 49%) in handen willen hebben:</b> Het bedrijf kan worden geregistreerd, maar na voltooiing kan het bedrijf geen activiteiten uitvoeren totdat toestemming is verleend via een van de volgende kanalen:\n  1. Vraag een Foreign Business License (FBL) aan. Zodra de licentie is ontvangen, kunnen de activiteiten beginnen.\n  2. Vraag investeringspromotie (BOI) aan. Zodra het BOI-certificaat is ontvangen, moet u een Foreign Business Certificate (FBC) aanvragen voordat u met de activiteiten begint."
             },
             {
-              "question": "",
-              "answer": ""
+              "question": "Als ik nog geen kantoor of locatie heb, kan ik me dan toch registreren?",
+              "answer": "<b>Ja, u kunt zich registreren.</b> Normaal gesproken kan een commercieel gebouw, winkelpand, herenhuis of woonhuis worden gebruikt als registratieadres. Als u echter niet over deze locaties beschikt of uw eigen locatie liever niet gebruikt, bieden wij een <b>Virtual Office</b> service in 3 formaten om aan uw behoeften te voldoen:\n1. Gebruik als adres uitsluitend voor bedrijfsregistratie.\n2. Gebruik als adres voor bedrijfsregistratie + Btw-registratie (VAT).\n3. Gebruik als adres voor bedrijfsregistratie + Btw-registratie + Werkgeversregistratie bij de Sociale Zekerheid."
             },
             {
-              "question": "",
-              "answer": ""
+              "question": "Als ik niet de eigenaar van het huis ben, zoals bij het gebruik van een huurhuis of appartement (condo), kan ik het bedrijf daar dan registreren?",
+              "answer": "Ja, maar er zijn aanvullende documenten vereist:\n\n• <b>Huurhuis/ruimte:</b> Een <i>\"Toestemmingsbrief om de locatie te gebruiken\"</i> is vereist, samen met gewaarmerkte kopieën van de ID-kaart en de huisregistratie van de \"Huismeester of Eigenaar\" om met de registratie te worden ingediend.\n• <b>Condominiums:</b> Hoewel wettelijk toegestaan, dient u dit eerst te controleren bij de beheerder (juristic person) van het appartement. Veel projecten hebben interne regels die het gebruik van wooneenheden als bedrijfsentiteiten of kantoren verbieden om overlast voor andere bewoners te voorkomen. <i>(Wij hebben een Virtual Office service om dit probleem voor u op te lossen.)</i>"
+            },
+            {
+              "question": "Als ik geen vaste telefoonlijn (02-nummer) heb, kan ik dan een bedrijf registreren?",
+              "answer": "Ja, dat kan. Momenteel staat het Department of Business Development ondernemers toe om mobiele telefoonnummers te gebruiken voor de registratie. Bovendien kunt u voor e-mails algemene e-mailadressen gebruiken (zoals @gmail.com of @hotmail.com); het is niet nodig om een e-mailadres onder de domeinnaam van het bedrijf te gebruiken."
+            },
+            {
+              "question": "Kan ik, nadat het bedrijf is geregistreerd, direct beginnen met zakendoen?",
+              "answer": "Voor de meeste bedrijven met algemene activiteiten geldt dat u onmiddellijk kunt beginnen met de bedrijfsactiviteiten zodra de registratie als rechtspersoon is voltooid. Echter, er zijn <b>bepaalde bedrijven die gereguleerd worden door specifieke wetten</b> en die extra licenties van de relevante overheidsinstanties vereisen voordat ze legaal mogen opereren. Bijvoorbeeld:\n\n• <b>Toerisme en Reizen:</b> Touroperators, gidsen, hotels, accommodaties (Moet een TAT-licentie of een licentie van de relevante instantie aanvragen).\n• <b>Gezondheid en Voeding:</b> Restaurants, klinieken, ziekenhuizen, spa's, productie/import van voedsel, medicijnen, cosmetica (Moet een licentie aanvragen bij de FDA of het Ministerie van Volksgezondheid).\n• <b>Industrieel:</b> Fabriken, bezit van chemicaliën of gevaarlijke stoffen (Moet een licentie aanvragen bij het Department of Industrial Works).\n• <b>Financieel:</b> Kredietbedrijven zoals Pico Finance (Moet een licentie aanvragen bij de Bank van Thailand of het Ministerie van Financiën).\n• <b>Overige:</b> Wervingsbureaus, beveiligingsdiensten, logistiek en transport, enz. (Moet een aanvraag indienen bij het Department of Employment, de Koninklijke Thaise Politie, het Department of Land Transport, enz.)\n\n<i><b>Belangrijke opmerking:</b> Bepaalde activiteiten kunnen uitsluitend zijn voorbehouden aan Thaise staatsburgers. Als uw bedrijf buitenlandse aandeelhouders heeft die de vastgestelde limiet overschrijden, of buitenlandse bevoegde directeuren, is het mogelijk dat u die specifieke licentie niet kunt verkrijgen. Om tijd en geld te besparen, raden wij u aan om de vereisten te bestuderen of rechtstreeks navraag te doen bij de regulerende instantie voordat u de bedrijfsregistratie start.</i>"
+            },
+            {
+              "question": "Moet ik me direct na de bedrijfsregistratie aanmelden voor de Belasting over de Toegevoegde Waarde (VAT 7%)?",
+              "answer": "Niet noodzakelijk. Bedrijfsregistratie en Btw-registratie zijn afzonderlijke processen. Een bedrijf is pas verplicht zich voor de Btw te registreren wanneer de bedrijfsinkomsten <b>1,8 miljoen THB per jaar overschrijden</b>.\n\nEchter, als uw bedrijf goederen moet importeren/exporteren of zakendoet met andere B2B zakelijke partners die vereisen dat u belastingfacturen uitschrijft, dan <b>moet uw bedrijf Btw-registratie aanvragen</b> om belastingfacturen aan uw partners te kunnen uitschrijven."
+            },
+            {
+              "question": "Moet ik, nadat het bedrijf is geregistreerd, maar voordat ik begin met de verkoop of inkomsten genereer, een boekhouding bijhouden?",
+              "answer": "<b>Ja, dat moet.</b> Dit is een veelvoorkomende misvatting onder nieuwe ondernemers. Volgens de wet (Accounting Act B.E. 2543) zijn alle juridische entiteiten verplicht om rekeningen op te stellen en relevante rapporten in te dienen bij het DBD en de Belastingdienst, <b>\"zelfs als er in die maand of dat jaar geen inkomsten zijn, geen uitgaven zijn, of als de bedrijfsactiviteiten nog niet zijn gestart (Nul-aangifte).\"</b> Het niet indienen vóór de deadline zal leiden tot aanzienlijke wettelijke boetes."
+            },
+            {
+              "question": "Moet ik als bedrijfsdirecteur mijn salaris inhouden voor de Sociale Zekerheid?",
+              "answer": "<b>Nee.</b> Als u een bevoegd directeur en grootaandeelhouder bent, wordt u beschouwd als een <b>\"Werkgever\"</b>, niet als een werknemer. Daarom kunt en hoeft u zich niet als verzekerde (Artikel 33) in uw eigen bedrijf te registreren.\n\nEchter, zodra het bedrijf begint met het aannemen van <b>\"Fulltime werknemers\"</b>, eist de wet dat het bedrijf zich registreert als werkgever en binnen 30 dagen na de datum waarop de werknemers beginnen te werken, de Sociale Zekerheid voor hen indient."
             }
           ]
         }

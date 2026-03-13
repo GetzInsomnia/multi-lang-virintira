@@ -380,123 +380,178 @@
         "title": "Company Limited",
         "summary": "Comprehensive limited company registration. We handle all paperwork and legal steps so you can confidently start your business.",
         "hero": {
-          "title": "",
-          "subtitle": "",
-          "description": "",
-          "cta": ""
+          "title": "Start your business professionally. Complete company registration in one place.",
+          "subtitle": "Trusted by over 300 entrepreneurs.",
+          "description": "Turn complicated paperwork and legal procedures into a simple process. We take care of everything from setting up your company with the Department of Business Development (DBD), to requesting a corporate ID and tax identification number, so you can fully focus on growing your business.",
+          "cta": "Call 092-882-5556"
         },
         "promotion": {
-          "title": "",
-          "subtitle": "",
-          "cta": ""
+          "title": "Special Deal!",
+          "subtitle": "Don't miss out on special prices and exclusive benefits specifically for this service.",
+          "cta": "View Promotion",
+          "slug": "company-registration-deal"
         },
         "features": {
-          "title": "",
+          "title": "Everything you need to start a business",
           "items": [
             {
-              "title": "",
-              "description": ""
+              "title": "Business Consulting & Planning",
+              "description": "We analyze your business structure and provide the most suitable advice for your enterprise on a case-by-case basis.",
+              "icon": "Lightbulb"
             },
             {
-              "title": "",
-              "description": ""
+              "title": "Document & MOA Preparation",
+              "description": "Accurately prepare official forms via the DBD Biz Regist system.",
+              "icon": "FileSignature"
             },
             {
-              "title": "",
-              "description": ""
+              "title": "Corporate Registration Filing",
+              "description": "Act as your representative to submit documents to the Department of Business Development (DBD) at every step.",
+              "icon": "Landmark"
             },
             {
-              "title": "",
-              "description": ""
+              "title": "Tax ID Request",
+              "description": "Handle your corporate ID and tax identification number requests to prepare your company's tax system.",
+              "icon": "Calculator"
             }
           ]
         },
         "benefits": {
-          "title": "",
+          "title": "Fully loaded! Exclusive privileges just for you",
           "items": [
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            ""
+            {
+              "title": "No monthly accounting commitment!",
+              "icon": "Unlock"
+            },
+            {
+              "title": "FREE! Check and reserve up to 3 company names",
+              "icon": "SearchCheck"
+            },
+            {
+              "title": "FREE! 1 self-inking company stamp",
+              "icon": "Stamp"
+            },
+            {
+              "title": "FREE! Request e-Filing password for DBD",
+              "icon": "KeySquare"
+            },
+            {
+              "title": "FREE! Request password for Revenue Department",
+              "icon": "KeyRound"
+            },
+            {
+              "title": "FREE! Document set for opening a corporate bank account",
+              "icon": "Wallet"
+            },
+            {
+              "title": "FREE! Complete set of company certificate documents (DBD)",
+              "icon": "ScrollText"
+            },
+            {
+              "title": "FREE! Tax technique training course (Value 5,900 THB)",
+              "icon": "GraduationCap"
+            },
+            {
+              "title": "FREE! Business cards for issuing receipts/tax invoices",
+              "icon": "Contact2"
+            }
           ]
         },
         "requirements": {
-          "title": "",
-          "subtitle": "",
+          "title": "What to prepare for company registration",
+          "subtitle": "Simply prepare the basic information, and leave the rest to us.",
           "documents": {
-            "title": "",
+            "title": "1. Important documents required",
             "items": [
-              "",
-              "",
-              "",
-              ""
+              "At least 2 shareholders \n\n1. Thai shareholders: Copy of ID card (Clear copy of front and back)\n\n2. Foreign shareholders: Copy of passport (Only the first page with photo)\n\n3. Corporate shareholders: Copy of company certificate and copy of authorized director's ID card",
+              "House registration to be used as the company's head office",
+              "Stamp design (if any)"
             ]
           },
           "information": {
-            "title": "",
+            "title": "2. Basic business information",
             "items": [
-              "",
-              "",
-              "",
-              "",
-              "",
-              "",
-              ""
+              "Desired company name (Thai-English)",
+              "Shareholding ratio (in percentages, e.g., 99% and 1%)",
+              "List of directors (Authorized signatories)",
+              "Business description",
+              "Registered capital amount (e.g., 1 million THB capital, 25% paid-up)",
+              "Company contact info \n1. Phone number \n2. Email",
+              "Shareholders' contact info \n1. Phone number \n2. Email \n3. LINE ID"
             ]
           }
         },
         "process": {
-          "title": "",
+          "title": "4 simple registration steps",
           "steps": [
             {
-              "title": "",
-              "description": ""
+              "title": "Consultation & Name Reservation",
+              "description": "Registering a company is like tailoring a suit. We discuss your needs, help plan the business structure that best fits your enterprise, and proceed to reserve the company name.",
+              "icon": "MessageSquareText"
             },
             {
-              "title": "",
-              "description": ""
+              "title": "Prepare documents via government system",
+              "description": "Our team prepares all documents and official forms via the DBD Biz Regist system of the Department of Business Development, Ministry of Commerce.",
+              "icon": "FileStack"
             },
             {
-              "title": "",
-              "description": ""
+              "title": "Online Identity Verification (No travel required)",
+              "description": "Shareholders and directors verify their identity (Thai citizens use the ThaID app, foreigners use the DBD e-Service app) by scanning a QR Code or clicking a verification link sent by the DBD to their personal email.",
+              "icon": "SmartphoneNfc"
             },
             {
-              "title": "",
-              "description": ""
+              "title": "Submit Registration & Deliver",
+              "description": "Our team submits the application to the DBD. Once the registration and company certificate are approved, we will verify the accuracy and deliver the essential documents along with your free gifts directly to you.",
+              "icon": "Gift"
             }
           ]
         },
         "faq": {
-          "title": "",
+          "title": "Frequently Asked Questions",
           "items": [
             {
-              "question": "",
-              "answer": ""
+              "question": "What is the difference between a Company Limited (Co., Ltd.) and a Limited Partnership (Ltd. Part.), and which one should I choose?",
+              "answer": "Although both structures have <b>\"Juristic Person\"</b> status and share the same tax rates, the main differences lie in <b>\"Liability for Debts\"</b>, <b>\"Credibility\"</b>, and <b>\"Restrictions on Foreigners\"</b>. To make it easier to understand, here is a comparison:\n\n<b>1. Company Limited (Co., Ltd.)</b>\n• <b>Liability:</b> <i>\"Limited Liability\"</i> (except for directors). All shareholders are liable for the company's debts only up to the unpaid amount of the shares they hold (clearly separates personal finances from business finances, securing personal assets).\n• <b>Credibility:</b> Very High. Suitable for long-term business, government bidding, large projects, attracting investors, or B2B (Business-to-Business) operations.\n• <b>Foreigners / Work Permit:</b> Highly Recommended. Laws and government agencies fully support the Co., Ltd. structure, whether it's for foreign shareholding (up to 49%), Work Permit applications, Business Visas, or BOI investment promotions.\n• <b>Founders required:</b> Currently, a minimum of only 2 shareholders is required to register.\n\n<b>2. Limited Partnership (Ltd. Part.)</b>\n• <b>Liability:</b> The law requires at least one partner to act as the <i>\"Managing Partner\"</i>, who has <b>\"Unlimited Liability\"</b> for the business's debts (if the business faces issues, the managing partner may have to use personal assets to pay off debts). Other partners have limited liability based on their investment.\n• <b>Credibility:</b> Moderate. Suitable for small businesses, Family Businesses, or enterprises where partners are not strict about the legal entity type.\n• <b>Foreigners:</b> Not Recommended. Having foreigners in a Ltd. Part. involves complex legal restrictions. If a foreigner acts as the managing partner, the business may be classified as a foreign entity, making operations and Work Permits much more difficult than a Co., Ltd.\n• <b>Founders required:</b> Requires only 2 founders, same as a company registration.\n\n<b>Summary: Which one to choose?</b>\n• Choose a <b>\"Company Limited\"</b> if you seek the highest credibility, plan to expand the business or branches, want to limit risks to personal assets, have foreign shareholders, or plan to hire foreign employees (Work Permit).\n• Choose a <b>\"Limited Partnership\"</b> if it is a family business or close friends you trust 100%, the business has low debt risk, no foreign partners, and you prefer the simplest management structure.\n\n<i><b>Note:</b> Currently, the costs of registration, monthly accounting, and annual financial closing for Co., Ltd. and Ltd. Part. do not differ significantly. Registering as a \"Company Limited\" generally yields maximum long-term benefits.</i>"
             },
             {
-              "question": "",
-              "answer": ""
+              "question": "How many days does the processing take?",
+              "answer": "It typically takes about <b>1-5 working days</b> (excluding public holidays) after receiving complete information and documents from the customer. The timeframe may depend on the queue at the Department of Business Development at that time, as well as the customer's promptness in online identity verification (or OTP submission)."
             },
             {
-              "question": "",
-              "answer": ""
+              "question": "What is registered capital? Can I register a company if I don't have the full amount?",
+              "answer": "Simply put, <b>\"Registered Capital\"</b> is the working capital used for business operations. <i>\"Paying up the registered capital\"</i> does not mean paying someone else; it means depositing funds into the company's bank account (which can be opened after the company is registered).\n\n• <b>If you don't have the full lump sum:</b> You can gradually deposit the money. For example, if the registered capital is 1 million THB (minimum 25% paid-up is 250,000 THB), you can start by opening the account with 1,000 THB. When there are business expenses, you can deposit money into the company account and pay it out. These funds do not need to sit idle in the account; they can be used as working capital.\n• <b>Caution:</b> Except in cases where the company has <b>Foreign Shareholders</b> or is a fully Thai-owned company with <b>registered capital exceeding 5 million THB</b>. In these cases, the law requires actual funds and a Bank Certificate to be shown during the registration process."
             },
             {
-              "question": "",
-              "answer": ""
+              "question": "Can foreigners be shareholders, and what financial proof is required?",
+              "answer": "Yes, they can, through a general Company Limited registration. If the company is to be a Thai juristic person, Thai nationals must hold at least 51% of the shares. The conditions regarding financial proof and shareholding ratio are as follows:\n\n• <b>If there are foreign shareholders (Thais hold 51% or more):</b> Thai partners must present a Bank Certificate corresponding to their share proportion (Foreigners do not need to show funds). For example:\n  1. To prepare for a Work Permit: Registered capital of 2 million THB (100% paid-up), Thais holding 51% must show at least 1,020,000 THB in deposits.\n  2. No Work Permit required: Registered capital of 1 million THB (minimum 25% paid-up), Thais holding 51% must show at least 127,500 THB in deposits.\n• <b>If shareholders are 100% Thai:</b> If the registered capital does not exceed 5,000,000 THB, no financial proof is needed during the setup process (even if shareholders change and foreigners are brought in later).\n• <b>If foreigners want to hold 100% (or more than 49%):</b> The company can be registered, but upon completion, the company cannot conduct any business until permission is granted through one of the following channels:\n  1. Apply for a Foreign Business License (FBL). Operations can begin once the license is received.\n  2. Apply for investment promotion (BOI). Once the BOI certificate is received, you must apply for a Foreign Business Certificate (FBC) before commencing operations."
             },
             {
-              "question": "",
-              "answer": ""
+              "question": "If I don't have an office or location yet, can I still register?",
+              "answer": "<b>Yes, you can register.</b> Normally, a commercial building, shophouse, townhouse, townhome, or residential house can be used as the registration address. However, if you do not have these locations or prefer not to use your own, we offer a <b>Virtual Office</b> service in 3 formats to suit your needs:\n1. Use as an address for company registration only.\n2. Use as an address for company registration + VAT registration.\n3. Use as an address for company registration + VAT registration + Employer registration with Social Security."
             },
             {
-              "question": "",
-              "answer": ""
+              "question": "If I don't own the house, such as using a rental house or condo, can I register the company there?",
+              "answer": "Yes, but there are additional documents required:\n\n• <b>Rental house/space:</b> A <i>\"Letter of Consent to use the premises\"</i> is required, along with certified copies of the ID card and house registration of the \"House Master or Property Owner\" to be submitted with the registration.\n• <b>Condominiums:</b> Although legally permissible, you should check with the condo's juristic person first. Many projects have internal regulations prohibiting the use of residential units as corporate entities or offices to prevent disturbances to other residents. <i>(We have a Virtual Office service to solve this problem for you.)</i>"
+            },
+            {
+              "question": "If I don't have a landline telephone number (02), can I register a company?",
+              "answer": "Yes, you can. Currently, the Department of Business Development allows entrepreneurs to use mobile phone numbers for registration. Additionally, for emails, you can use general emails (such as @gmail.com or @hotmail.com); it is not necessary to use an email under the company's domain name."
+            },
+            {
+              "question": "Once the company is registered, can I start doing business immediately?",
+              "answer": "For most businesses with general operations, once the juristic person registration is complete, you can start business operations immediately. However, there are <b>certain businesses regulated by specific laws</b> that require additional licenses from relevant government agencies before operating legally. For example:\n\n• <b>Tourism and Travel:</b> Tour operators, guides, hotels, accommodations (Must apply for a TAT license or relevant agency).\n• <b>Health and Food:</b> Restaurants, clinics, hospitals, spas, production/import of food, drugs, cosmetics (Must apply for FDA or Ministry of Public Health license).\n• <b>Industrial:</b> Factories, possession of chemicals or hazardous materials (Must apply for a license from the Department of Industrial Works).\n• <b>Financial:</b> Credit businesses like Pico Finance (Must apply for a license from the Bank of Thailand or Ministry of Finance).\n• <b>Others:</b> Recruitment agencies, security services, logistics and transportation, etc. (Must apply from the Department of Employment, Royal Thai Police, Department of Land Transport, etc.)\n\n<i><b>Important Note:</b> Some businesses may be reserved exclusively for Thai nationals. If your company has foreign shareholders exceeding the set limit or foreign authorized directors, you might not be able to obtain that specific license. To save time and money, we recommend studying the requirements or directly inquiring with the regulating agency before initiating the company registration.</i>"
+            },
+            {
+              "question": "Do I need to register for Value Added Tax (VAT 7%) immediately after company registration?",
+              "answer": "Not necessarily. Company registration and VAT registration are separate processes. A company is only required to register for VAT when its business income <b>exceeds 1.8 million THB per year</b>.\n\nHowever, if your company needs to import/export goods or deal with other B2B corporate partners who require you to issue tax invoices, your company <b>must apply for VAT registration</b> to be able to issue tax invoices to your partners."
+            },
+            {
+              "question": "After registering the company, but before starting sales or generating income, do I need to do accounting?",
+              "answer": "<b>Yes, you must.</b> This is a common misconception among new entrepreneurs. By law (Accounting Act B.E. 2543), all juristic entities are required to prepare accounts and submit relevant reports to the DBD and the Revenue Department, <b>\"even if there is no income, no expenses, or business operations haven't started in that month or year.\"</b> Failure to submit by the deadline will result in significant legal fines."
+            },
+            {
+              "question": "As a company director, do I need to deduct my salary for Social Security?",
+              "answer": "<b>No.</b> If you are an authorized director and a major shareholder, you are considered an <b>\"Employer\"</b>, not an employee. Therefore, you cannot and do not need to register as an insured person (Section 33) in your own company.\n\nHowever, as soon as the company starts hiring <b>\"Full-time employees\"</b>, the law requires the company to register as an employer and submit Social Security for the employees within 30 days from the date they start working."
             }
           ]
         }

@@ -380,123 +380,178 @@
         "title": "SARL",
         "summary": "Enregistrement complet de société. Nous gérons tous les documents et démarches juridiques pour que vous puissiez démarrer votre entreprise en toute confiance.",
         "hero": {
-          "title": "",
-          "subtitle": "",
-          "description": "",
-          "cta": ""
+          "title": "Démarrez votre entreprise de manière professionnelle. Enregistrement complet de la société en un seul endroit.",
+          "subtitle": "La confiance de plus de 300 entrepreneurs.",
+          "description": "Transformez la paperasse complexe et les procédures légales en un processus simple. Nous nous occupons de tout, de la création de votre entreprise auprès du Département du Développement des Affaires (DBD), à la demande d'identification de l'entreprise et de numéro d'identification fiscale, afin que vous puissiez vous concentrer pleinement sur la croissance de votre entreprise.",
+          "cta": "Appelez le 092-882-5556"
         },
         "promotion": {
-          "title": "",
-          "subtitle": "",
-          "cta": ""
+          "title": "Offre Spéciale !",
+          "subtitle": "Ne manquez pas les prix spéciaux et les avantages exclusifs spécifiquement pour ce service.",
+          "cta": "Voir l'offre",
+          "slug": "company-registration-deal"
         },
         "features": {
-          "title": "",
+          "title": "Tout ce dont vous avez besoin pour démarrer une entreprise",
           "items": [
             {
-              "title": "",
-              "description": ""
+              "title": "Conseil et planification d'entreprise",
+              "description": "Nous analysons la structure de votre entreprise et fournissons les conseils les plus adaptés à votre entreprise, au cas par cas.",
+              "icon": "Lightbulb"
             },
             {
-              "title": "",
-              "description": ""
+              "title": "Préparation des documents et statuts",
+              "description": "Préparez avec précision les formulaires officiels via le système d'enregistrement numérique des entreprises (DBD Biz Regist).",
+              "icon": "FileSignature"
             },
             {
-              "title": "",
-              "description": ""
+              "title": "Dépôt de l'enregistrement de l'entreprise",
+              "description": "Nous agissons en tant que votre représentant pour soumettre les documents au Département du Développement des Affaires (DBD) à chaque étape.",
+              "icon": "Landmark"
             },
             {
-              "title": "",
-              "description": ""
+              "title": "Demande de numéro d'identification fiscale",
+              "description": "Gérez vos demandes d'identification d'entreprise et de numéro fiscal pour préparer le système fiscal de votre entreprise.",
+              "icon": "Calculator"
             }
           ]
         },
         "benefits": {
-          "title": "",
+          "title": "Complet ! Des privilèges exclusifs rien que pour vous",
           "items": [
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            ""
+            {
+              "title": "Aucun engagement comptable mensuel !",
+              "icon": "Unlock"
+            },
+            {
+              "title": "GRATUIT ! Vérification et réservation jusqu'à 3 noms d'entreprise",
+              "icon": "SearchCheck"
+            },
+            {
+              "title": "GRATUIT ! 1 tampon d'entreprise auto-encreur",
+              "icon": "Stamp"
+            },
+            {
+              "title": "GRATUIT ! Demande de mot de passe e-Filing pour le DBD",
+              "icon": "KeySquare"
+            },
+            {
+              "title": "GRATUIT ! Demande de mot de passe pour le Département du Revenu",
+              "icon": "KeyRound"
+            },
+            {
+              "title": "GRATUIT ! Ensemble de documents pour l'ouverture d'un compte bancaire d'entreprise",
+              "icon": "Wallet"
+            },
+            {
+              "title": "GRATUIT ! Ensemble complet de certificats d'entreprise (DBD)",
+              "icon": "ScrollText"
+            },
+            {
+              "title": "GRATUIT ! Cours de formation en techniques fiscales (Valeur 5 900 THB)",
+              "icon": "GraduationCap"
+            },
+            {
+              "title": "GRATUIT ! Cartes de visite pour l'émission de reçus/factures fiscales",
+              "icon": "Contact2"
+            }
           ]
         },
         "requirements": {
-          "title": "",
-          "subtitle": "",
+          "title": "Ce qu'il faut préparer pour l'enregistrement de l'entreprise",
+          "subtitle": "Préparez simplement les informations de base et laissez-nous le reste",
           "documents": {
-            "title": "",
+            "title": "1. Documents importants requis",
             "items": [
-              "",
-              "",
-              "",
-              ""
+              "Au moins 2 actionnaires \n\n1. Actionnaires thaïlandais : Copie de la carte d'identité (Copie claire du recto et du verso)\n\n2. Actionnaires étrangers : Copie du passeport (Uniquement la première page avec photo)\n\n3. Actionnaires personnes morales : Copie du certificat d'entreprise et copie de la carte d'identité du directeur autorisé",
+              "Livret de famille (Tabien Baan) à utiliser comme siège social de l'entreprise",
+              "Conception du tampon (le cas échéant)"
             ]
           },
           "information": {
-            "title": "",
+            "title": "2. Informations de base sur l'entreprise",
             "items": [
-              "",
-              "",
-              "",
-              "",
-              "",
-              "",
-              ""
+              "Nom d'entreprise souhaité (Thaï-Anglais)",
+              "Ratio d'actionnariat (en pourcentages, ex. 99% et 1%)",
+              "Liste des directeurs (Signataires autorisés)",
+              "Description de l'activité",
+              "Montant du capital social (ex. 1 million de THB de capital, 25% libéré)",
+              "Coordonnées de l'entreprise \n1. Numéro de téléphone \n2. E-mail",
+              "Coordonnées des actionnaires \n1. Numéro de téléphone \n2. E-mail \n3. ID LINE"
             ]
           }
         },
         "process": {
-          "title": "",
+          "title": "4 étapes simples d'enregistrement",
           "steps": [
             {
-              "title": "",
-              "description": ""
+              "title": "Consultation et réservation de nom",
+              "description": "Enregistrer une entreprise, c'est comme tailler un costume sur mesure. Nous discutons de vos besoins, aidons à planifier la structure commerciale la mieux adaptée à votre entreprise et procédons à la réservation du nom de l'entreprise.",
+              "icon": "MessageSquareText"
             },
             {
-              "title": "",
-              "description": ""
+              "title": "Préparation des documents via le système gouvernemental",
+              "description": "Notre équipe prépare tous les documents et formulaires officiels via le système DBD Biz Regist.",
+              "icon": "FileStack"
             },
             {
-              "title": "",
-              "description": ""
+              "title": "Vérification d'identité en ligne (Aucun déplacement requis)",
+              "description": "Les actionnaires et directeurs vérifient leur identité (les Thaïlandais utilisent l'application ThaID, les étrangers l'application DBD e-Service) en scannant un code QR ou en cliquant sur un lien de vérification envoyé à leur e-mail personnel.",
+              "icon": "SmartphoneNfc"
             },
             {
-              "title": "",
-              "description": ""
+              "title": "Soumission de l'enregistrement et livraison",
+              "description": "Notre équipe soumet la demande au DBD. Une fois l'enregistrement et le certificat d'entreprise approuvés, nous livrerons les documents essentiels ainsi que vos cadeaux directement chez vous.",
+              "icon": "Gift"
             }
           ]
         },
         "faq": {
-          "title": "",
+          "title": "Foire Aux Questions (FAQ)",
           "items": [
             {
-              "question": "",
-              "answer": ""
+              "question": "Quelle est la différence entre une Company Limited (Co., Ltd.) et une Limited Partnership (Ltd. Part.), et laquelle dois-je choisir ?",
+              "answer": "Bien que les deux structures aient le statut de <b>\"Personne Morale\"</b> et partagent les mêmes taux d'imposition, les principales différences résident dans la <b>\"Responsabilité des dettes\"</b>, la <b>\"Crédibilité\"</b> et les <b>\"Restrictions pour les étrangers\"</b>. Voici une comparaison :\n\n<b>1. Company Limited (Co., Ltd.)</b>\n• <b>Responsabilité :</b> <i>\"Responsabilité limitée\"</i> (sauf pour les directeurs). Les actionnaires ne sont responsables des dettes qu'à hauteur du montant non libéré de leurs actions.\n• <b>Crédibilité :</b> Très élevée. Convient aux entreprises à long terme, aux appels d'offres gouvernementaux ou au B2B.\n• <b>Étrangers / Permis de travail (Work Permit) :</b> Fortement recommandé. Les lois soutiennent pleinement la structure Co., Ltd. (jusqu'à 49 % d'actionnariat étranger, permis de travail, visas, BOI).\n• <b>Fondateurs requis :</b> Actuellement, un minimum de 2 actionnaires est requis.\n\n<b>2. Limited Partnership (Ltd. Part.)</b>\n• <b>Responsabilité :</b> La loi exige qu'au moins un partenaire agisse en tant que <i>\"Managing Partner\"</i>, avec une <b>\"Responsabilité illimitée\"</b>. La responsabilité des autres partenaires est limitée à leur investissement.\n• <b>Crédibilité :</b> Modérée. Convient aux petites entreprises ou entreprises familiales.\n• <b>Étrangers :</b> Non recommandé. Implique des restrictions légales complexes.\n• <b>Fondateurs requis :</b> Seulement 2 fondateurs nécessaires.\n\n<b>Résumé : Laquelle choisir ?</b>\n• Choisissez une <b>\"Company Limited\"</b> si vous recherchez une crédibilité maximale, prévoyez une expansion, souhaitez limiter les risques sur vos biens personnels, ou avez des actionnaires/employés étrangers.\n• Choisissez une <b>\"Limited Partnership\"</b> pour une entreprise familiale avec peu de risques d'endettement et une gestion simple.\n\n<i><b>Remarque :</b> Actuellement, les coûts de création et de comptabilité ne diffèrent pas de manière significative. S'enregistrer en tant que \"Company Limited\" offre généralement le maximum d'avantages à long terme.</i>"
             },
             {
-              "question": "",
-              "answer": ""
+              "question": "Combien de jours prend le traitement ?",
+              "answer": "Cela prend généralement environ <b>1 à 5 jours ouvrables</b> (hors jours fériés) après réception des informations et documents complets. Le délai dépend de la file d'attente au DBD et de la rapidité du client pour la vérification d'identité."
             },
             {
-              "question": "",
-              "answer": ""
+              "question": "Qu'est-ce que le capital social ? Puis-je enregistrer une entreprise si je n'ai pas le montant total ?",
+              "answer": "En termes simples, le <b>\"Capital Social\"</b> est le fonds de roulement utilisé pour les opérations. <i>\"Libérer le capital\"</i> signifie déposer des fonds sur le compte bancaire de l'entreprise.\n\n• <b>Si vous n'avez pas la somme totale :</b> Vous pouvez déposer l'argent progressivement. Par exemple, pour 1 million de THB (25 % libérés = 250 000 THB), vous pouvez commencer par ouvrir le compte avec 1 000 THB et l'utiliser comme fonds de roulement.\n• <b>Attention :</b> Sauf dans les cas où l'entreprise a des <b>actionnaires étrangers</b> ou un <b>capital supérieur à 5 millions de THB</b>. La loi exige alors de prouver les fonds (Bank Certificate) lors de l'enregistrement."
             },
             {
-              "question": "",
-              "answer": ""
+              "question": "Les étrangers peuvent-ils être actionnaires, et quelle preuve financière est requise ?",
+              "answer": "Oui, via l'enregistrement d'une Company Limited. Si l'entreprise doit être une personne morale thaïlandaise, les ressortissants thaïlandais doivent détenir au moins 51 % des actions.\n\n• <b>S'il y a des actionnaires étrangers (Les Thaïlandais détiennent 51 % ou plus) :</b> Les partenaires thaïlandais doivent présenter un certificat bancaire (Bank Certificate) correspondant à leur proportion d'actions. Exemple :\n  1. Pour un permis de travail (Work Permit) : Capital de 2 millions de THB (100% libéré), les Thaïlandais à 51% doivent montrer au moins 1 020 000 THB de dépôts.\n  2. Pas de permis de travail : Capital de 1 million de THB (25% libéré minimum), les Thaïlandais à 51% doivent montrer au moins 127 500 THB.\n• <b>Si les actionnaires sont 100 % thaïlandais :</b> Si le capital ne dépasse pas 5 000 000 THB, aucune preuve n'est requise lors de la création.\n• <b>Si les étrangers veulent détenir 100 % (ou plus de 49 %) :</b> L'entreprise peut être enregistrée, mais ne peut opérer avant d'avoir obtenu une licence étrangère (FBL) ou une promotion des investissements (BOI/FBC)."
             },
             {
-              "question": "",
-              "answer": ""
+              "question": "Si je n'ai pas encore de bureau ou de local, puis-je quand même m'inscrire ?",
+              "answer": "<b>Oui, vous pouvez vous inscrire.</b> Normalement, un bâtiment commercial, une maison de ville ou une résidence peut être utilisé. Si vous n'en avez pas, nous proposons un service de <b>Bureau Virtuel (Virtual Office)</b> en 3 formats :\n1. Adresse pour l'enregistrement de l'entreprise uniquement.\n2. Adresse pour l'entreprise + enregistrement de la TVA.\n3. Adresse pour l'entreprise + TVA + enregistrement de l'employeur (Sécurité sociale)."
             },
             {
-              "question": "",
-              "answer": ""
+              "question": "Si je ne suis pas propriétaire de la maison (par exemple location ou appartement), puis-je y enregistrer l'entreprise ?",
+              "answer": "Oui, mais des documents supplémentaires sont requis :\n\n• <b>Maison/Espace en location :</b> Une <i>\"Lettre de consentement\"</i> est requise, accompagnée de copies certifiées conformes de la carte d'identité et du livret de famille du propriétaire.\n• <b>Copropriétés (Condo) :</b> Bien que légalement autorisé, vous devez d'abord vérifier auprès du syndic de copropriété, car beaucoup interdisent l'utilisation des logements comme bureaux. <i>(Nous avons un service de bureau virtuel pour résoudre ce problème.)</i>"
+            },
+            {
+              "question": "Si je n'ai pas de numéro de téléphone fixe (02), puis-je créer une entreprise ?",
+              "answer": "Oui. Actuellement, le DBD autorise l'utilisation de numéros de téléphone portable. De même pour les e-mails, vous pouvez utiliser des e-mails généraux (comme @gmail.com) sans avoir besoin d'un domaine d'entreprise."
+            },
+            {
+              "question": "Une fois l'entreprise enregistrée, puis-je démarrer mon activité immédiatement ?",
+              "answer": "Pour la plupart des entreprises, oui. Cependant, <b>certaines activités sont réglementées par des lois spécifiques</b> et nécessitent des licences supplémentaires. Par exemple :\n\n• <b>Tourisme :</b> Agences de voyages, hôtels (Licence TAT requise).\n• <b>Santé et Alimentation :</b> Restaurants, cliniques, importation de produits alimentaires/médicaments (Licence FDA requise).\n• <b>Industriel :</b> Usines, détention de produits chimiques.\n• <b>Financier :</b> Entreprises de crédit comme Pico Finance.\n\n<i><b>Remarque importante :</b> Certaines activités peuvent être réservées exclusivement aux ressortissants thaïlandais. Nous recommandons de vous renseigner auprès de l'agence de régulation avant de commencer l'enregistrement.</i>"
+            },
+            {
+              "question": "Dois-je m'inscrire à la taxe sur la valeur ajoutée (TVA 7 %) immédiatement après la création ?",
+              "answer": "Pas nécessairement. Une entreprise n'est tenue de s'inscrire à la TVA que lorsque ses revenus <b>dépassent 1,8 million de THB par an</b>.\n\nCependant, si votre entreprise importe/exporte ou traite avec des partenaires B2B exigeant des factures fiscales, elle <b>doit s'inscrire à la TVA</b> pour pouvoir en émettre."
+            },
+            {
+              "question": "Après l'enregistrement, mais avant d'avoir des revenus, dois-je tenir une comptabilité ?",
+              "answer": "<b>Oui, c'est obligatoire.</b> C'est une idée fausse courante. La loi exige que toutes les entités juridiques préparent des comptes et soumettent des rapports, <b>\"même s'il n'y a pas de revenus, pas de dépenses, ou si les opérations n'ont pas commencé (Déclaration à zéro)\"</b>. Le non-respect des délais entraîne des amendes importantes."
+            },
+            {
+              "question": "En tant que directeur, dois-je déduire mon salaire pour la sécurité sociale ?",
+              "answer": "<b>Non.</b> En tant que directeur autorisé et actionnaire principal, vous êtes considéré comme un <b>\"Employeur\"</b>. Vous n'avez pas besoin de vous inscrire comme assuré (Section 33).\n\nCependant, dès que l'entreprise embauche des <b>\"Employés à temps plein\"</b>, la loi exige de s'inscrire comme employeur et de soumettre la Sécurité Sociale dans les 30 jours."
             }
           ]
         }

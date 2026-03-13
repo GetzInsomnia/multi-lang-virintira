@@ -380,123 +380,178 @@
         "title": "GmbH",
         "summary": "Umfassende Unternehmensregistrierung. Wir kümmern uns um alle Dokumente und rechtlichen Schritte, damit Sie Ihr Geschäft zuversichtlich starten können.",
         "hero": {
-          "title": "",
-          "subtitle": "",
-          "description": "",
-          "cta": ""
+          "title": "Starten Sie Ihr Unternehmen professionell. Komplette Firmenregistrierung an einem Ort",
+          "subtitle": "Vertrauen von über 300 Unternehmern",
+          "description": "Machen Sie aus kompliziertem Papierkram und rechtlichen Verfahren einen einfachen Prozess. Wir kümmern uns um alles, von der Gründung Ihres Unternehmens beim Department of Business Development (DBD) über die Beantragung einer Firmen-ID bis hin zur Steuernummer, damit Sie sich voll und ganz auf das Wachstum Ihres Unternehmens konzentrieren können.",
+          "cta": "Tel. 092-882-5556"
         },
         "promotion": {
-          "title": "",
-          "subtitle": "",
-          "cta": ""
+          "title": "Sonderangebot!",
+          "subtitle": "Verpassen Sie nicht die Sonderpreise und exklusiven Vorteile speziell für diesen Service",
+          "cta": "Angebot ansehen",
+          "slug": "company-registration-deal"
         },
         "features": {
-          "title": "",
+          "title": "Alles, was Sie für die Unternehmensgründung brauchen",
           "items": [
             {
-              "title": "",
-              "description": ""
+              "title": "Unternehmensberatung & Planung",
+              "description": "Wir analysieren Ihre Geschäftsstruktur und bieten von Fall zu Fall die bestmögliche Beratung für Ihr Unternehmen.",
+              "icon": "Lightbulb"
             },
             {
-              "title": "",
-              "description": ""
+              "title": "Erstellung von Dokumenten & Gründungsurkunden",
+              "description": "Korrekte und präzise Erstellung offizieller Formulare über das digitale Firmenregistrierungssystem (DBD Biz Regist).",
+              "icon": "FileSignature"
             },
             {
-              "title": "",
-              "description": ""
+              "title": "Einreichung der Firmenregistrierung",
+              "description": "Wir handeln als Ihr Vertreter und reichen in jeder Phase Dokumente beim Department of Business Development (DBD) ein.",
+              "icon": "Landmark"
             },
             {
-              "title": "",
-              "description": ""
+              "title": "Beantragung der Steuernummer",
+              "description": "Wir kümmern uns um die Beantragung der Firmen-ID und der Steuernummer, um das Steuersystem Ihres Unternehmens vorzubereiten.",
+              "icon": "Calculator"
             }
           ]
         },
         "benefits": {
-          "title": "",
+          "title": "Voll ausgestattet! Exklusive Privilegien nur für Sie",
           "items": [
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            ""
+            {
+              "title": "Keine monatliche Buchhaltungsverpflichtung!",
+              "icon": "Unlock"
+            },
+            {
+              "title": "KOSTENLOS! Prüfung und Reservierung von bis zu 3 Firmennamen",
+              "icon": "SearchCheck"
+            },
+            {
+              "title": "KOSTENLOS! 1 selbstfärbender Firmenstempel",
+              "icon": "Stamp"
+            },
+            {
+              "title": "KOSTENLOS! Beantragung des e-Filing-Passworts für das DBD",
+              "icon": "KeySquare"
+            },
+            {
+              "title": "KOSTENLOS! Beantragung des Passworts für die Steuerbehörde",
+              "icon": "KeyRound"
+            },
+            {
+              "title": "KOSTENLOS! Dokumentensatz zur Eröffnung eines Firmenkontos",
+              "icon": "Wallet"
+            },
+            {
+              "title": "KOSTENLOS! Kompletter Satz von Firmenzertifikaten (DBD)",
+              "icon": "ScrollText"
+            },
+            {
+              "title": "KOSTENLOS! Schulungskurs für Steuertechniken (Wert 5.900 THB)",
+              "icon": "GraduationCap"
+            },
+            {
+              "title": "KOSTENLOS! Visitenkarten für die Ausstellung von Quittungen/Steuerrechnungen",
+              "icon": "Contact2"
+            }
           ]
         },
         "requirements": {
-          "title": "",
-          "subtitle": "",
+          "title": "Was Sie für die Firmenregistrierung vorbereiten müssen",
+          "subtitle": "Bereiten Sie einfach die grundlegenden Informationen vor, den Rest erledigen wir",
           "documents": {
-            "title": "",
+            "title": "1. Erforderliche wichtige Dokumente",
             "items": [
-              "",
-              "",
-              "",
-              ""
+              "Mindestens 2 Aktionäre \n\n1. Thailändische Aktionäre: Kopie des Personalausweises (Vorder- und Rückseite deutlich lesbar)\n\n2. Ausländische Aktionäre: Kopie des Reisepasses (Nur die erste Seite mit Foto)\n\n3. Juristische Personen als Aktionäre: Kopie der Firmenbescheinigung und Kopie des Personalausweises des vertretungsberechtigten Direktors",
+              "Hausregistrierung (Tabien Baan), die als Hauptsitz des Unternehmens genutzt wird",
+              "Stempeldesign (falls vorhanden)"
             ]
           },
           "information": {
-            "title": "",
+            "title": "2. Grundlegende Geschäftsinformationen",
             "items": [
-              "",
-              "",
-              "",
-              "",
-              "",
-              "",
-              ""
+              "Gewünschter Firmenname (Thai-Englisch)",
+              "Beteiligungsverhältnis (in Prozent, z.B. 99% und 1%)",
+              "Liste der Direktoren (Zeichnungsberechtigte)",
+              "Geschäftsbeschreibung",
+              "Höhe des Stammkapitals (z.B. 1 Million THB Kapital, 25% eingezahlt)",
+              "Kontaktinformationen des Unternehmens \n1. Telefonnummer \n2. E-Mail",
+              "Kontaktinformationen der Aktionäre \n1. Telefonnummer \n2. E-Mail \n3. LINE ID"
             ]
           }
         },
         "process": {
-          "title": "",
+          "title": "4 einfache Registrierungsschritte",
           "steps": [
             {
-              "title": "",
-              "description": ""
+              "title": "Beratung & Namensreservierung",
+              "description": "Die Registrierung eines Unternehmens ist wie das Schneidern eines Anzugs. Wir besprechen Ihre Anforderungen, helfen bei der Planung der für Ihr Unternehmen am besten geeigneten Struktur und reservieren den Firmennamen.",
+              "icon": "MessageSquareText"
             },
             {
-              "title": "",
-              "description": ""
+              "title": "Dokumentenvorbereitung über das Regierungssystem",
+              "description": "Unser Team bereitet alle Dokumente und offiziellen Formulare über das DBD Biz Regist-System des Department of Business Development vor.",
+              "icon": "FileStack"
             },
             {
-              "title": "",
-              "description": ""
+              "title": "Online-Identitätsprüfung (Keine Anreise erforderlich)",
+              "description": "Aktionäre und Direktoren verifizieren ihre Identität (Thailänder nutzen die ThaID-App, Ausländer die DBD e-Service-App), indem sie einen QR-Code scannen oder auf einen Verifizierungslink klicken, der vom DBD an ihre private E-Mail-Adresse gesendet wird.",
+              "icon": "SmartphoneNfc"
             },
             {
-              "title": "",
-              "description": ""
+              "title": "Registrierung einreichen & liefern",
+              "description": "Unser Team reicht den Antrag beim DBD ein. Sobald die Registrierung und das Firmenzertifikat genehmigt sind, prüfen wir die Richtigkeit und liefern Ihnen die wichtigsten Dokumente zusammen mit Ihren Gratisbeigaben direkt nach Hause.",
+              "icon": "Gift"
             }
           ]
         },
         "faq": {
-          "title": "",
+          "title": "Häufig gestellte Fragen (FAQ)",
           "items": [
             {
-              "question": "",
-              "answer": ""
+              "question": "Was ist der Unterschied zwischen einer Company Limited (Co., Ltd.) und einer Limited Partnership (Ltd. Part.) und welche sollte ich wählen?",
+              "answer": "Obwohl beide Strukturen den Status einer <b>\"juristischen Person\"</b> haben und denselben Steuersätzen unterliegen, liegen die Hauptunterschiede in der <b>\"Haftung für Schulden\"</b>, der <b>\"Glaubwürdigkeit\"</b> und den <b>\"Beschränkungen für Ausländer\"</b>. Zur besseren Verständlichkeit hier ein Vergleich:\n\n<b>1. Company Limited (Co., Ltd.)</b>\n• <b>Haftung:</b> <i>\"Beschränkte Haftung\"</i> (außer für Direktoren). Alle Aktionäre haften für die Schulden des Unternehmens nur bis zur Höhe des nicht eingezahlten Betrags der von ihnen gehaltenen Aktien (klare Trennung von privaten und geschäftlichen Finanzen zum Schutz des Privatvermögens).\n• <b>Glaubwürdigkeit:</b> Sehr hoch. Geeignet für langfristige Geschäfte, Regierungsaufträge, Großprojekte, die Gewinnung von Investoren oder B2B-Geschäfte (Business-to-Business).\n• <b>Ausländer / Arbeitserlaubnis (Work Permit):</b> Sehr zu empfehlen. Gesetze und Regierungsbehörden unterstützen die Struktur der Co., Ltd. in vollem Umfang, sei es für ausländische Beteiligungen (bis zu 49 %), Anträge auf Arbeitserlaubnis, Geschäftsvisa oder BOI-Investitionsförderungen.\n• <b>Erforderliche Gründer:</b> Derzeit sind für die Registrierung mindestens 2 Aktionäre erforderlich.\n\n<b>2. Limited Partnership (Ltd. Part.)</b>\n• <b>Haftung:</b> Das Gesetz schreibt vor, dass mindestens ein Partner als <i>\"Managing Partner\"</i> fungieren muss, der <b>\"unbeschränkt\"</b> für die Schulden des Unternehmens haftet. Die Haftung anderer Partner ist auf ihre Investition beschränkt.\n• <b>Glaubwürdigkeit:</b> Moderat. Geeignet für Kleinunternehmen, Familienunternehmen oder Unternehmen, bei denen die Partner keinen großen Wert auf die Rechtsform legen.\n• <b>Ausländer:</b> Nicht empfohlen. Ausländer in einer Ltd. Part. unterliegen komplexen rechtlichen Einschränkungen. Wenn ein Ausländer als Managing Partner fungiert, kann das Unternehmen als ausländische Einheit eingestuft werden.\n• <b>Erforderliche Gründer:</b> Benötigt nur 2 Gründer.\n\n<b>Zusammenfassung: Was soll ich wählen?</b>\n• Wählen Sie eine <b>\"Company Limited\"</b>, wenn Sie höchste Glaubwürdigkeit suchen, das Unternehmen erweitern möchten, Risiken für das Privatvermögen begrenzen wollen, ausländische Aktionäre haben oder ausländische Mitarbeiter einstellen möchten.\n• Wählen Sie eine <b>\"Limited Partnership\"</b>, wenn es sich um ein Familienunternehmen handelt, das Schuldenrisiko gering ist, es keine ausländischen Partner gibt und Sie die einfachste Führungsstruktur bevorzugen.\n\n<i><b>Hinweis:</b> Derzeit unterscheiden sich die Kosten für Registrierung, monatliche Buchhaltung und Jahresabschluss für Co., Ltd. und Ltd. Part. nicht wesentlich. Die Registrierung als \"Company Limited\" bringt im Allgemeinen langfristig maximale Vorteile.</i>"
             },
             {
-              "question": "",
-              "answer": ""
+              "question": "Wie viele Tage dauert die Bearbeitung?",
+              "answer": "Nach Erhalt der vollständigen Informationen und Dokumente vom Kunden dauert es in der Regel etwa <b>1-5 Werktage</b> (außer an Feiertagen). Die Dauer kann von der Warteschlange beim Department of Business Development sowie von der Schnelligkeit des Kunden bei der Online-Identitätsprüfung abhängen."
             },
             {
-              "question": "",
-              "answer": ""
+              "question": "Was ist das Stammkapital? Kann ich ein Unternehmen gründen, auch wenn ich nicht den vollen Betrag habe?",
+              "answer": "Einfach ausgedrückt ist das <b>\"Stammkapital\"</b> das Betriebskapital, das für den Geschäftsbetrieb verwendet wird. <i>\"Einzahlung des Stammkapitals\"</i> bedeutet nicht, jemanden zu bezahlen; es bedeutet, Geld auf das Bankkonto des Unternehmens einzuzahlen.\n\n• <b>Wenn Sie nicht die volle Summe haben:</b> Sie können das Geld schrittweise einzahlen. Ist das Stammkapital beispielsweise 1 Million THB (mindestens 25 % eingezahlt entspricht 250.000 THB), können Sie mit 1.000 THB beginnen. Wenn geschäftliche Ausgaben anfallen, zahlen Sie Geld auf das Firmenkonto ein und überweisen es von dort. Dieses Geld muss nicht ungenutzt auf dem Konto liegen.\n• <b>Achtung:</b> Ausgenommen sind Fälle, in denen das Unternehmen <b>ausländische Aktionäre</b> hat oder es sich um ein vollständig in thailändischem Besitz befindliches Unternehmen mit einem <b>Stammkapital von über 5 Millionen THB</b> handelt. In diesen Fällen verlangt das Gesetz den Nachweis tatsächlicher Geldmittel (Bank Certificate) während der Registrierung."
             },
             {
-              "question": "",
-              "answer": ""
+              "question": "Können Ausländer Aktionäre sein und welcher Finanzierungsnachweis ist erforderlich?",
+              "answer": "Ja, durch eine allgemeine Registrierung als Company Limited. Wenn das Unternehmen den Status einer thailändischen juristischen Person behalten soll, müssen thailändische Staatsangehörige mindestens 51 % der Anteile halten.\n\n• <b>Wenn es ausländische Aktionäre gibt (Thailänder halten 51 % oder mehr):</b> Thailändische Partner müssen ein Bankzertifikat (Bank Certificate) vorlegen, das ihrem Anteil entspricht (Ausländer müssen keine Geldmittel nachweisen). Beispiel:\n  1. Zur Vorbereitung auf eine Arbeitserlaubnis (Work Permit): Stammkapital 2 Millionen THB (100 % eingezahlt), Thailänder mit 51 % müssen Einlagen von mindestens 1.020.000 THB nachweisen.\n  2. Keine Arbeitserlaubnis erforderlich: Stammkapital 1 Million THB (mindestens 25 % eingezahlt), Thailänder mit 51 % müssen Einlagen von mindestens 127.500 THB nachweisen.\n• <b>Wenn die Aktionäre zu 100 % Thailänder sind:</b> Übersteigt das Stammkapital nicht 5.000.000 THB, ist während der Gründung kein Finanzierungsnachweis erforderlich.\n• <b>Wenn Ausländer 100 % (oder mehr als 49 %) halten wollen:</b> Das Unternehmen kann registriert werden, darf aber nach Abschluss keine Geschäfte tätigen, bis die Erlaubnis durch eine der folgenden Möglichkeiten erteilt wurde:\n  1. Beantragung einer Foreign Business License (FBL).\n  2. Beantragung der Investitionsförderung (BOI). Anschließend muss ein Foreign Business Certificate (FBC) beantragt werden."
             },
             {
-              "question": "",
-              "answer": ""
+              "question": "Kann ich ein Unternehmen registrieren, wenn ich noch kein Büro oder keinen Standort habe?",
+              "answer": "<b>Ja, Sie können registrieren.</b> Normalerweise können Geschäftsgebäude, Reihenhäuser oder Wohnhäuser als Registrierungsadresse verwendet werden. Wenn Sie diese nicht haben, bieten wir einen <b>Virtual Office</b>-Service in 3 Formaten an:\n1. Nutzung nur als Adresse für die Firmenregistrierung.\n2. Nutzung als Adresse für Firmenregistrierung + Mehrwertsteuer (VAT)-Registrierung.\n3. Nutzung als Adresse für Firmenregistrierung + VAT-Registrierung + Arbeitgeberregistrierung bei der Sozialversicherung."
             },
             {
-              "question": "",
-              "answer": ""
+              "question": "Kann ich das Unternehmen dort registrieren, wenn ich nicht Eigentümer des Hauses bin, z. B. in einem gemieteten Haus oder einer Eigentumswohnung?",
+              "answer": "Ja, es sind jedoch zusätzliche Dokumente erforderlich:\n\n• <b>Gemietetes Haus/Räume:</b> Eine <i>\"Einverständniserklärung zur Nutzung der Räumlichkeiten\"</i> sowie beglaubigte Kopien des Personalausweises und der Hausregistrierung des Eigentümers sind erforderlich.\n• <b>Eigentumswohnungen (Condo):</b> Obwohl gesetzlich zulässig, sollten Sie sich zunächst an die Hausverwaltung wenden. Viele Gebäude haben interne Vorschriften, die die Nutzung von Wohneinheiten als Firmen oder Büros verbieten. <i>(Wir bieten einen Virtual Office-Service an, um dieses Problem für Sie zu lösen.)</i>"
+            },
+            {
+              "question": "Kann ich ein Unternehmen gründen, wenn ich keine Festnetznummer (02) habe?",
+              "answer": "Ja, Sie können. Derzeit erlaubt das Department of Business Development die Verwendung von Mobiltelefonnummern für die Registrierung. Auch für E-Mails können Sie allgemeine Adressen (wie @gmail.com) verwenden."
+            },
+            {
+              "question": "Kann ich nach der Firmenregistrierung sofort mit der Geschäftstätigkeit beginnen?",
+              "answer": "Bei den meisten Unternehmen können Sie sofort nach Abschluss der Registrierung den Betrieb aufnehmen. Es gibt jedoch <b>bestimmte Geschäftsbereiche, die durch spezielle Gesetze geregelt sind</b> und zusätzliche Lizenzen erfordern. Zum Beispiel:\n\n• <b>Tourismus und Reisen:</b> Reiseveranstalter, Hotels (Lizenz der TAT erforderlich).\n• <b>Gesundheit und Lebensmittel:</b> Restaurants, Kliniken, Herstellung/Import von Lebensmitteln, Medikamenten (FDA-Lizenz erforderlich).\n• <b>Industrie:</b> Fabriken, Besitz von Chemikalien (Lizenz des Department of Industrial Works erforderlich).\n• <b>Finanzen:</b> Kreditgeschäfte wie Pico Finance (Lizenz der Bank von Thailand erforderlich).\n\n<i><b>Wichtiger Hinweis:</b> Einige Geschäftsbereiche können thailändischen Staatsangehörigen vorbehalten sein. Wir empfehlen, die Anforderungen vor Beginn der Unternehmensregistrierung zu prüfen, um Zeit und Geld zu sparen.</i>"
+            },
+            {
+              "question": "Muss ich mich sofort nach der Unternehmensregistrierung für die Mehrwertsteuer (VAT 7%) registrieren?",
+              "answer": "Nicht unbedingt. Ein Unternehmen ist nur dann zur Mehrwertsteuerregistrierung verpflichtet, wenn die Geschäftseinnahmen <b>1,8 Millionen THB pro Jahr übersteigen</b>.\n\nWenn Ihr Unternehmen jedoch Waren importieren/exportieren muss oder mit anderen B2B-Partnern zusammenarbeitet, die die Ausstellung von Steuerrechnungen verlangen, <b>muss sich Ihr Unternehmen für die Mehrwertsteuer registrieren</b>."
+            },
+            {
+              "question": "Muss ich nach der Gründung des Unternehmens Buchhaltung betreiben, auch wenn ich noch keine Einnahmen habe?",
+              "answer": "<b>Ja, Sie müssen.</b> Dies ist ein häufiges Missverständnis bei neuen Unternehmern. Gesetzlich ist jede juristische Person verpflichtet, Buchhaltungs- und Finanzberichte zu erstellen und einzureichen, <b>\"selbst wenn in diesem Monat oder Jahr keine Einnahmen oder Ausgaben anfallen oder der Geschäftsbetrieb noch nicht aufgenommen wurde (Nullmeldung)\"</b>. Die Nichteinhaltung der Frist führt zu erheblichen Geldstrafen."
+            },
+            {
+              "question": "Muss ich mir als Unternehmensdirektor mein Gehalt für die Sozialversicherung abziehen?",
+              "answer": "<b>Nein.</b> Wenn Sie ein vertretungsberechtigter Direktor und Hauptaktionär sind, gelten Sie als <b>\"Arbeitgeber\"</b> und nicht als Arbeitnehmer. Daher können und müssen Sie sich in Ihrem eigenen Unternehmen nicht als Versicherter (Abschnitt 33) registrieren.\n\nSobald das Unternehmen jedoch <b>\"Vollzeitbeschäftigte\"</b> einstellt, ist es gesetzlich verpflichtet, sich als Arbeitgeber zu registrieren und die Sozialversicherungsbeiträge für die Mitarbeiter abzuführen."
             }
           ]
         }
