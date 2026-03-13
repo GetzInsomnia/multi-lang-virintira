@@ -58,11 +58,12 @@ export function PromotionDetailsContent({ item, ui }: PromotionDetailsContentPro
 
     if (!item) return null;
 
-    // Helper to parse \n as <br /> and **text** or <b>text</b> as bold
+    // Helper to parse \n as lists and <p>, and **text** or <b>text</b> as bold
     const parseFormattedText = (text?: string) => {
         if (!text) return null;
-        return text.split('\n').map((line, idx, arr) => {
-            const parts = line.split(/(\*\*.*?\*\*|<b>.*?<\/b>)/g).map((part, pIdx) => {
+
+        const parseInline = (line: string) => {
+            return line.split(/(\*\*.*?\*\*|<b>.*?<\/b>)/g).map((part, pIdx) => {
                 if (part.startsWith('**') && part.endsWith('**')) {
                     return <strong key={pIdx} className="font-bold text-gray-900">{part.slice(2, -2)}</strong>;
                 }
@@ -80,13 +81,59 @@ export function PromotionDetailsContent({ item, ui }: PromotionDetailsContentPro
                 });
                 return <React.Fragment key={pIdx}>{italicParts}</React.Fragment>;
             });
-            return (
-                <React.Fragment key={idx}>
-                    {parts}
-                    {idx < arr.length - 1 && <br />}
-                </React.Fragment>
-            );
+        };
+
+        const lines = text.split('\n');
+        const elements: React.ReactNode[] = [];
+        let currentList: { type: 'ul' | 'ol', items: { text: string, indent: number }[] } | null = null;
+
+        const flushList = () => {
+            if (currentList) {
+                const ListTag = currentList.type;
+                const isNested = currentList.items.some(i => i.indent > 0);
+                
+                elements.push(
+                    <ListTag key={`list-${elements.length}`} className={`${currentList.type === 'ul' ? 'list-disc marker:text-gray-400' : 'list-decimal marker:text-gray-500 marker:font-semibold text-gray-600'} ${isNested ? 'ml-8 sm:ml-10' : 'ml-5 sm:ml-6'} space-y-1.5 my-2.5`}>
+                        {currentList.items.map((item, idx) => (
+                            <li key={idx} className={`${currentList?.type === 'ul' ? 'pl-2 text-[0.95em]' : 'pl-1'} leading-relaxed`}>
+                                {parseInline(item.text)}
+                            </li>
+                        ))}
+                    </ListTag>
+                );
+                currentList = null;
+            }
+        };
+
+        lines.forEach((line, idx) => {
+            const leadingSpaces = line.match(/^(\s*)/)?.[1].length || 0;
+            const trimmed = line.trim();
+
+            const bulletMatch = trimmed.match(/^(?:•|-|\*)\s+(.*)/);
+            const numberMatch = trimmed.match(/^(\d+)\.\s+(.*)/);
+
+            if (bulletMatch) {
+                if (currentList && currentList.type !== 'ul') flushList();
+                if (!currentList) currentList = { type: 'ul', items: [] };
+                currentList.items.push({ text: bulletMatch[1], indent: leadingSpaces });
+            } else if (numberMatch) {
+                if (currentList && currentList.type !== 'ol') flushList();
+                if (!currentList) currentList = { type: 'ol', items: [] };
+                currentList.items.push({ text: numberMatch[2], indent: leadingSpaces });
+            } else {
+                flushList();
+                if (trimmed !== '') {
+                    elements.push(
+                        <div key={`p-${idx}`} className={`leading-relaxed ${idx === lines.length - 1 ? 'mb-0' : 'mb-1'}`}>
+                            {parseInline(trimmed)}
+                        </div>
+                    );
+                }
+            }
         });
+
+        flushList();
+        return <>{elements}</>;
     };
 
     return (
@@ -135,9 +182,9 @@ export function PromotionDetailsContent({ item, ui }: PromotionDetailsContentPro
                                     <div className="mt-1 bg-white rounded-full p-1 shadow-sm border border-red-50 shrink-0">
                                         <FaCheckCircle className="text-[#06C755] text-xl" />
                                     </div>
-                                    <span className={`text-gray-800 text-lg leading-relaxed ${breakClass}`}>
+                                    <div className={`text-gray-800 text-lg leading-relaxed ${breakClass} w-full`}>
                                         {parseFormattedText(benefit)}
-                                    </span>
+                                    </div>
                                 </li>
                             ))}
                         </ul>
@@ -192,23 +239,31 @@ export function PromotionDetailsContent({ item, ui }: PromotionDetailsContentPro
                     ) : (
                         <div className="mb-8 space-y-3">
                             <div className="text-sm text-gray-500 font-medium mb-3 px-2">{ui?.serviceRates}</div>
-                            {item.pricingTiers.map((tier, idx) => (
-                                <div key={idx} className="flex justify-between items-center py-3 border-b border-gray-100 last:border-0 hover:bg-red-50 transition-colors px-3 rounded-xl">
-                                    <span className={`text-gray-800 font-medium pr-4 leading-snug ${breakClass}`}>
-                                        {parseFormattedText(tier.name)}
-                                    </span>
-                                    <div className="flex flex-col items-end shrink-0">
-                                        <span className="text-[#A70909] font-bold whitespace-nowrap text-[17px]">
-                                            {tier.price.includes('ติดต่อ') ? tier.price : `฿ ${tier.price}`}
-                                        </span>
-                                        {tier.originalPrice && (
-                                            <span className="text-xs text-gray-400 font-medium line-through">
-                                                ฿ {tier.originalPrice}
+                            {item.pricingTiers.map((tier, idx) => {
+                                const [mainName, subName] = tier.name.split('\n');
+                                const isAskForPrice = tier.price.includes('สอบถาม') || tier.price.includes('ติดต่อ');
+                                
+                                return (
+                                    <div key={idx} className="flex justify-between items-center py-3 border-b border-gray-100 last:border-0 hover:bg-red-50 transition-colors px-3 rounded-xl gap-4">
+                                        <div className={`flex flex-col text-gray-800 pr-2 leading-snug ${breakClass}`}>
+                                            <span className="font-semibold">{parseFormattedText(mainName)}</span>
+                                            {subName && (
+                                                <span className="text-[13px] text-gray-500 font-normal mt-0.5">{parseFormattedText(subName)}</span>
+                                            )}
+                                        </div>
+                                        <div className="flex flex-col items-end shrink-0">
+                                            <span className={`${isAskForPrice ? 'text-gray-600 text-[14px] font-medium bg-gray-100/80 px-2.5 py-1 rounded-md' : 'text-[#A70909] text-[17px]'} font-bold whitespace-nowrap`}>
+                                                {isAskForPrice ? tier.price : `฿ ${tier.price}`}
                                             </span>
-                                        )}
+                                            {tier.originalPrice && (
+                                                <span className="text-xs text-gray-400 font-medium line-through">
+                                                    ฿ {tier.originalPrice}
+                                                </span>
+                                            )}
+                                        </div>
                                     </div>
-                                </div>
-                            ))}
+                                );
+                            })}
                         </div>
                     )}
 
@@ -241,9 +296,9 @@ export function PromotionDetailsContent({ item, ui }: PromotionDetailsContentPro
                     </div>
 
                     <div className="w-full flex justify-center mt-6">
-                        <p className={`text-sm font-semibold text-[#A70909] bg-red-50 py-3 px-5 rounded-2xl text-left shadow-sm border border-red-100/50 max-w-fit leading-relaxed ${breakClass}`}>
+                        <div className={`text-sm font-semibold text-[#A70909] bg-red-50 py-3 px-5 rounded-2xl text-left shadow-sm border border-red-100/50 max-w-fit leading-relaxed ${breakClass}`}>
                             {parseFormattedText(ui?.freeAssessment)}
-                        </p>
+                        </div>
                     </div>
                 </div>
             </div>

@@ -93,7 +93,7 @@ export function PromotionHubClient({ locale, hero, filters, items, ui }: Promoti
             </section>
 
             {/* 2. Filter System (Sticky) */}
-            <div className="sticky top-[60px] lg:top-[80px] z-40 bg-white/80 backdrop-blur-md border-b border-gray-100 shadow-sm py-2 sm:py-4">
+            <div className="sticky top-[72px] z-40 bg-white/80 backdrop-blur-md border-b border-gray-100 shadow-sm py-2 sm:py-4">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="flex justify-start xl:justify-center overflow-x-auto hide-scrollbar gap-3 pt-2 pb-4 px-2">
                         {filterKeys.map(key => (

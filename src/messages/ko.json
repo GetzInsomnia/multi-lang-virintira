@@ -1220,8 +1220,8 @@
         "benefits": [],
         "conditions": ""
       },
-      "monthly-accounting-bundle": {
-        "slug": "monthly-accounting-bundle",
+      "close-financial-deal": {
+        "slug": "close-financial-deal",
         "category": "",
         "categoryId": "accounting",
         "title": "",
@@ -1232,8 +1232,8 @@
         "benefits": [],
         "conditions": ""
       },
-      "yearly-audit-deal": {
-        "slug": "yearly-audit-deal",
+      "monthly-bookkeeping-and-tax-bundle": {
+        "slug": "monthly-bookkeeping-and-tax-bundle",
         "category": "",
         "categoryId": "accounting",
         "title": "",
@@ -1241,6 +1241,19 @@
         "shortInfo": [],
         "price": "",
         "originalPrice": "",
+        "benefits": [],
+        "conditions": ""
+      },
+      "commercial-shop-registration-deal": {
+        "slug": "commercial-shop-registration-deal",
+        "category": "",
+        "categoryId": "registration",
+        "title": "",
+        "imagePlaceholder": "4:3",
+        "shortInfo": [],
+        "price": "",
+        "originalPrice": "",
+        "pricingTiers": [],
         "benefits": [],
         "conditions": ""
       }
