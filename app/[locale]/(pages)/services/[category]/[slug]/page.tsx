@@ -1,6 +1,7 @@
 import { notFound } from 'next/navigation';
 import { getTranslations, getMessages } from 'next-intl/server';
 import { servicesConfig } from '@/config/services';
+import { getCategoryTheme } from '@/config/categoryThemes';
 import { Breadcrumbs } from '@/components/ui/Breadcrumbs';
 import { ServiceSidebar } from '@/components/services/ServiceSidebar';
 import { ServiceLayout } from '@/components/services/ServiceLayout';
@@ -57,6 +58,9 @@ export default async function ServiceDetailPage({ params }: PageProps) {
     const serviceConfigItem = categoryConfig?.items.find((i) => i.serviceSlug === slug);
 
     if (!categoryConfig || !serviceConfigItem) return notFound();
+
+    // Get category-specific color theme
+    const theme = getCategoryTheme(category);
 
     // 2. Load Translations & Messages Object
     const messages = await getMessages({ locale });
@@ -145,19 +149,19 @@ export default async function ServiceDetailPage({ params }: PageProps) {
 
                 {/* --- 1. Premium Hero Section --- */}
                 {hero && hero.title && (
-                    <section className="relative overflow-hidden rounded-[2.5rem] bg-white p-8 sm:p-16 lg:p-24 shadow-sm border border-red-50">
+                    <section className={`relative overflow-hidden rounded-[2.5rem] bg-white p-8 sm:p-16 lg:p-24 shadow-sm border ${theme.heroBorder}`}>
                         {/* Premium SVG Background */}
                         <div className="absolute inset-0 z-0 pointer-events-none opacity-20">
                             <svg className="absolute w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
-                                <path d="M0,20 Q20,10 40,30 T100,20 L100,0 L0,0 Z" fill="#A70909" />
+                                <path d="M0,20 Q20,10 40,30 T100,20 L100,0 L0,0 Z" fill={theme.svgFill} />
                                 <path d="M0,80 Q20,90 50,70 T100,80 L100,100 L0,100 Z" fill="#06C755" />
-                                <circle cx="85" cy="15" r="40" fill="none" stroke="currentColor" strokeWidth="0.5" className="text-[#A70909]" />
+                                <circle cx="85" cy="15" r="40" fill="none" stroke={theme.svgFill} strokeWidth="0.5" />
                                 <circle cx="15" cy="85" r="40" fill="none" stroke="currentColor" strokeWidth="0.5" className="text-[#06C755]" />
                             </svg>
                         </div>
                         {/* Decorative Premium Orbs */}
-                        <div className="absolute -left-20 -top-20 h-72 w-72 rounded-full bg-red-100/60 blur-[60px] animate-pulseSlow z-0"></div>
-                        <div className="absolute -bottom-20 -right-20 h-80 w-80 rounded-full bg-[#A70909]/5 blur-[80px] animate-float z-0"></div>
+                        <div className={`absolute -left-20 -top-20 h-72 w-72 rounded-full blur-[60px] animate-pulseSlow z-0 ${theme.iconBg}`} style={{ opacity: 0.6 }}></div>
+                        <div className="absolute -bottom-20 -right-20 h-80 w-80 rounded-full blur-[80px] animate-float z-0" style={{ backgroundColor: theme.orbColor }}></div>
                         <div className="absolute inset-0 bg-white/40 backdrop-blur-[1px] z-0"></div>
                         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-full w-full bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.8)_0%,transparent_100%)] pointer-events-none z-0"></div>
 
@@ -165,7 +169,7 @@ export default async function ServiceDetailPage({ params }: PageProps) {
                             <StaggerContainer>
                                 {hero.subtitle && (
                                     <StaggerItem>
-                                        <div className="mb-6 inline-flex items-center sm:items-center justify-center gap-2 overflow-hidden rounded-full bg-gradient-to-r from-[#A70909] via-[#ff4e50] to-[#A70909] bg-[length:200%_auto] px-5 py-2 text-[11px] sm:text-xs font-bold uppercase tracking-wider text-white shadow-lg shadow-red-900/20 animate-shimmer-gradient max-w-[90vw]">
+                                        <div className="mb-6 inline-flex items-center sm:items-center justify-center gap-2 overflow-hidden rounded-full bg-[length:200%_auto] px-5 py-2 text-[11px] sm:text-xs font-bold uppercase tracking-wider text-white shadow-lg animate-shimmer-gradient max-w-[90vw]" style={{ backgroundImage: `linear-gradient(to right, ${theme.accent}, ${theme.accentLight}, ${theme.accent})`, boxShadow: `0 10px 15px -3px ${theme.orbColor}` }}>
                                             <FaTrophy className="h-4 w-4 shrink-0 text-yellow-300 drop-shadow-sm" />
                                             <span className="leading-tight sm:leading-normal text-left sm:text-center shrink-1 whitespace-pre-wrap">{hero.subtitle}</span>
                                         </div>
@@ -186,10 +190,11 @@ export default async function ServiceDetailPage({ params }: PageProps) {
                                 <StaggerItem>
                                     <div className="flex flex-col items-center justify-center gap-4 sm:flex-row mt-4">
                                         <div className="relative group/btn inline-flex w-full sm:w-auto justify-center">
-                                            <div className="absolute -inset-1 rounded-full bg-gradient-to-r from-red-600 via-orange-500 to-red-600 opacity-30 blur-xl transition-opacity duration-500 group-hover/btn:opacity-60 hidden sm:block animate-pulse-slow" />
+                                            <div className="absolute -inset-1 rounded-full opacity-30 blur-xl transition-opacity duration-500 group-hover/btn:opacity-60 hidden sm:block animate-pulse-slow" style={{ backgroundImage: `linear-gradient(to right, ${theme.accent}, ${theme.accentLight}, ${theme.accent})` }} />
                                             <a
                                                 href={`tel:${COMPANY.phone}`}
-                                                className="relative overflow-hidden inline-flex w-full sm:w-auto items-center justify-center gap-2 rounded-full bg-[#A70909] px-8 py-3.5 text-base font-bold text-white shadow-xl transition-all duration-300 hover:-translate-y-1 hover:bg-[#900000] hover:shadow-red-900/30 hover:shadow-2xl"
+                                                className="relative overflow-hidden inline-flex w-full sm:w-auto items-center justify-center gap-2 rounded-full px-8 py-3.5 text-base font-bold text-white shadow-xl transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl"
+                                                style={{ backgroundColor: theme.accent }}
                                             >
                                                 <FaPhone className="h-5 w-5 shrink-0" />
                                                 <span className="relative z-10 whitespace-nowrap">{phoneDisplay}</span>
@@ -248,9 +253,9 @@ export default async function ServiceDetailPage({ params }: PageProps) {
                                 const shadowClass = RAINBOW_SHADOWS[idx % RAINBOW_SHADOWS.length];
                                 return (
                                     <StaggerItem key={idx} className="h-full">
-                                        <div className={`group flex flex-col h-full rounded-3xl border border-gray-100 bg-white p-6 sm:p-8 shadow-sm transition-all duration-300 ${shadowClass}`}>
+                                        <div className={`group flex flex-col h-full rounded-3xl border border-gray-100 bg-white p-6 sm:p-8 shadow-sm transition-all duration-300 ${shadowClass} ${theme.hoverBorder}`}>
                                             <div className="flex items-center gap-6 mb-4">
-                                                <div className="flex-shrink-0 inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-red-50 text-[#A70909] transition-all duration-500 group-hover:scale-110 group-hover:bg-[#A70909] group-hover:text-white shadow-inner">
+                                                <div className={`flex-shrink-0 inline-flex h-14 w-14 items-center justify-center rounded-2xl ${theme.iconBg} ${theme.iconText} transition-all duration-500 group-hover:scale-110 group-hover:text-white group-hover:[background-color:var(--hover-bg)] shadow-inner`} style={{ '--hover-bg': theme.accent } as React.CSSProperties}>
                                                     {item.icon ? (
                                                         <DynamicIcon name={item.icon} className="h-7 w-7" strokeWidth={2} />
                                                     ) : (
@@ -270,9 +275,9 @@ export default async function ServiceDetailPage({ params }: PageProps) {
 
                 {/* --- 2.5 Benefits Grid --- */}
                 {benefits && benefits.items && benefits.items.some((item: any) => (typeof item === 'string' ? item.trim() !== "" : item.title?.trim() !== "")) && (
-                    <section className="space-y-8 rounded-3xl bg-[#FFF5F5] px-6 py-12 sm:px-10">
+                    <section className={`space-y-8 rounded-3xl ${theme.tintBg} px-6 py-12 sm:px-10`}>
                         <div className="flex items-center gap-3">
-                            <h2 className="text-2xl font-bold text-[#A70909] sm:text-3xl">
+                            <h2 className={`text-2xl font-bold ${theme.benefitsHeading} sm:text-3xl`}>
                                 {benefits.title}
                             </h2>
                         </div>
@@ -293,7 +298,7 @@ export default async function ServiceDetailPage({ params }: PageProps) {
                                 return (
                                     <StaggerItem key={idx} className="h-full">
                                         <div className={`group flex flex-col sm:flex-row h-full items-center gap-4 rounded-2xl border border-gray-100 bg-white p-5 shadow-sm transition-all duration-300 ${shadowClass}`}>
-                                            <div className="flex-shrink-0 text-[#A70909] p-3 bg-red-50 rounded-xl transition-all duration-500 group-hover:scale-110 group-hover:bg-[#A70909] group-hover:text-white group-hover:shadow-md">
+                                            <div className={`flex-shrink-0 ${theme.iconText} p-3 ${theme.iconBg} rounded-xl transition-all duration-500 group-hover:scale-110 group-hover:text-white group-hover:shadow-md group-hover:[background-color:var(--hover-bg)]`} style={{ '--hover-bg': theme.accent } as React.CSSProperties}>
                                                 {iconName ? (
                                                     <DynamicIcon name={iconName} className="h-6 w-6" strokeWidth={2.5} />
                                                 ) : (
@@ -382,7 +387,7 @@ export default async function ServiceDetailPage({ params }: PageProps) {
                                 const shadowClass = RAINBOW_SHADOWS[idx % RAINBOW_SHADOWS.length];
                                 return (
                                     <StaggerItem key={idx} className="relative pl-0 sm:pl-24 group h-full">
-                                        <div className="hidden sm:flex absolute left-0 top-1/2 -translate-y-1/2 h-16 w-16 items-center justify-center rounded-2xl bg-[#A70909] text-white shadow-[0_4px_20px_rgba(167,9,9,0.4)] ring-4 ring-white transition-transform duration-500 group-hover:scale-110">
+                                        <div className="hidden sm:flex absolute left-0 top-1/2 -translate-y-1/2 h-16 w-16 items-center justify-center rounded-2xl text-white ring-4 ring-white transition-transform duration-500 group-hover:scale-110" style={{ backgroundColor: theme.accent, boxShadow: `0 4px 20px ${theme.stepShadow}` }}>
                                             {step.icon ? (
                                                 <DynamicIcon name={step.icon} className="h-8 w-8" strokeWidth={2.5} />
                                             ) : (
@@ -392,14 +397,14 @@ export default async function ServiceDetailPage({ params }: PageProps) {
                                         <div className={`space-y-3 h-full flex flex-col justify-center rounded-3xl border border-gray-100 bg-white p-6 sm:p-8 shadow-sm transition-all duration-300 ${shadowClass}`}>
                                             <div className="flex flex-col sm:flex-row sm:items-center items-start gap-4 sm:gap-3">
                                                 <div className="flex items-center gap-3">
-                                                    <div className="flex sm:hidden h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[#A70909] text-white shadow-[0_2px_10px_rgba(167,9,9,0.3)]">
+                                                    <div className="flex sm:hidden h-10 w-10 shrink-0 items-center justify-center rounded-xl text-white" style={{ backgroundColor: theme.accent, boxShadow: `0 2px 10px ${theme.stepShadow}` }}>
                                                         {step.icon ? (
                                                             <DynamicIcon name={step.icon} className="h-5 w-5" strokeWidth={2.5} />
                                                         ) : (
                                                             <span className="text-lg font-bold">{idx + 1}</span>
                                                         )}
                                                     </div>
-                                                    <span className="text-sm font-bold text-red-500 bg-red-50 px-3 py-1 rounded-full uppercase tracking-wider shrink-0">Step {idx + 1}</span>
+                                                    <span className={`text-sm font-bold ${theme.iconText} ${theme.iconBg} px-3 py-1 rounded-full uppercase tracking-wider shrink-0`}>Step {idx + 1}</span>
                                                 </div>
                                                 <h3 className="text-xl sm:text-2xl font-bold text-gray-900 leading-snug">{step.title}</h3>
                                             </div>

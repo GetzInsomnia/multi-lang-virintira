@@ -2,6 +2,7 @@ import { notFound } from 'next/navigation';
 import { getTranslations } from 'next-intl/server';
 import { Link } from '@/i18n/routing';
 import { servicesConfig } from '@/config/services';
+import { getCategoryTheme } from '@/config/categoryThemes';
 import { Breadcrumbs } from '@/components/ui/Breadcrumbs';
 import { FaCommentDots } from 'react-icons/fa6';
 import { ServiceGrid, type ServiceGridItem } from '@/components/services/ServiceGrid';
@@ -39,6 +40,8 @@ export default async function ServiceCategoryPage({ params }: PageProps) {
         (c) => c.categorySlug === category
     );
     if (!categoryConfig) return notFound();
+
+    const theme = getCategoryTheme(category);
 
     // 2. Load Translations
     const tServices = await getTranslations({ locale, namespace: 'services' });
@@ -83,7 +86,7 @@ export default async function ServiceCategoryPage({ params }: PageProps) {
             <div className="space-y-8">
                 {/* Header */}
                 <div className="space-y-4 border-b border-gray-100 pb-8">
-                    <h1 className="text-3xl font-bold text-[#A70909] sm:text-4xl">
+                    <h1 className="text-3xl font-bold sm:text-4xl" style={{ color: theme.accent }}>
                         {categoryTitle}
                     </h1>
                     <p className="max-w-3xl text-lg text-gray-600">
