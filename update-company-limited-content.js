@@ -9,7 +9,7 @@ const THAI_CONTENT = {
         "title": "เริ่มต้นธุรกิจอย่างมืออาชีพ จดทะเบียนบริษัทครบจบในที่เดียว",
         "subtitle": "ได้รับความไว้วางใจจากผู้ประกอบการกว่า 300 ราย",
         "description": "เปลี่ยนเรื่องเอกสารและขั้นตอนทางกฎหมายที่ยุ่งยากให้เป็นเรื่องง่าย เราดูแลให้ครบตั้งแต่จดจัดตั้งบริษัทกับกรมพัฒนาธุรกิจการค้า ขอเลขนิติบุคคล และขอเลขประจำตัวผู้เสียภาษี ให้คุณเอาเวลาไปโฟกัสกับการเติบโตของธุรกิจได้อย่างเต็มที่",
-        "cta": "โทร. 092-882-5556"
+        "cta": "092-882-5556"
     },
     "promotion": {
         "title": "โปรโมชั่นพิเศษ!",
@@ -361,7 +361,7 @@ const EMPTY_CONTENT = {
             "title": "Start your business professionally. Complete company registration in one place.",
             "subtitle": "Trusted by over 300 entrepreneurs.",
             "description": "Turn complicated paperwork and legal procedures into a simple process. We take care of everything from setting up your company with the Department of Business Development (DBD), to requesting a corporate ID and tax identification number, so you can fully focus on growing your business.",
-            "cta": "Call 092-882-5556"
+            "cta": "+669 2882 5556"
         },
         "promotion": {
             "title": "Special Deal!",
@@ -512,7 +512,7 @@ const EMPTY_CONTENT = {
             "title": "以专业方式开启您的业务。一站式完成公司注册",
             "subtitle": "获得超过300位企业家的信赖",
             "description": "让繁琐的文书工作和法律程序变得简单。从在商业发展局（DBD）设立公司、申请法人编号到获取纳税识别号，我们全程为您打理，让您能全心全意专注于业务的增长。",
-            "cta": "致电 092-882-5556"
+            "cta": "+669 2882 5556"
         },
         "promotion": {
             "title": "特别优惠！",
@@ -663,7 +663,7 @@ const EMPTY_CONTENT = {
             "title": "以專業方式開啟您的業務。一站式完成公司註冊",
             "subtitle": "獲得超過300位企業家的信賴",
             "description": "讓繁瑣的文書工作和法律程序變得簡單。從在商業發展局（DBD）設立公司、申請法人編號到獲取納稅識別號，我們全程為您打理，讓您能全心全意專注於業務的增長。",
-            "cta": "致電 092-882-5556"
+            "cta": "+669 2882 5556"
         },
         "promotion": {
             "title": "特別優惠！",
@@ -814,7 +814,7 @@ const EMPTY_CONTENT = {
             "title": "プロフェッショナルなビジネスの立ち上げ。会社設立を1か所で完結",
             "subtitle": "300人以上の起業家からの信頼",
             "description": "煩雑な書類手続きや法的手続きを簡単に。商業登記局（DBD）での会社設立、法人番号の取得、納税者番号の取得まで全てサポートします。お客様はビジネスの成長に専念していただけます。",
-            "cta": "電話 092-882-5556"
+            "cta": "+669 2882 5556"
         },
         "promotion": {
             "title": "特別プロモーション！",
@@ -966,7 +966,7 @@ const EMPTY_CONTENT = {
             "title": "전문적인 비즈니스의 시작. 법인 설립을 한 곳에서 완벽하게",
             "subtitle": "300명 이상의 기업가가 신뢰하는 서비스",
             "description": "복잡한 서류 작업과 법적 절차를 간편하게 바꿔드립니다. 상무부 사업개발국(DBD) 법인 설립부터 법인 번호 및 납세자 번호 발급까지 모든 것을 처리해 드립니다. 고객님은 비즈니스 성장에만 온전히 집중하세요.",
-            "cta": "전화 092-882-5556"
+            "cta": "+669 2882 5556"
         },
         "promotion": {
             "title": "특별 프로모션! ",
@@ -1117,7 +1117,7 @@ const EMPTY_CONTENT = {
             "title": "Starten Sie Ihr Unternehmen professionell. Komplette Firmenregistrierung an einem Ort",
             "subtitle": "Vertrauen von über 300 Unternehmern",
             "description": "Machen Sie aus kompliziertem Papierkram und rechtlichen Verfahren einen einfachen Prozess. Wir kümmern uns um alles, von der Gründung Ihres Unternehmens beim Department of Business Development (DBD) über die Beantragung einer Firmen-ID bis hin zur Steuernummer, damit Sie sich voll und ganz auf das Wachstum Ihres Unternehmens konzentrieren können.",
-            "cta": "Tel. 092-882-5556"
+            "cta": "+669 2882 5556"
         },
         "promotion": {
             "title": "Sonderangebot!",
@@ -1268,7 +1268,7 @@ const EMPTY_CONTENT = {
             "title": "Démarrez votre entreprise de manière professionnelle. Enregistrement complet de la société en un seul endroit.",
             "subtitle": "La confiance de plus de 300 entrepreneurs.",
             "description": "Transformez la paperasse complexe et les procédures légales en un processus simple. Nous nous occupons de tout, de la création de votre entreprise auprès du Département du Développement des Affaires (DBD), à la demande d'identification de l'entreprise et de numéro d'identification fiscale, afin que vous puissiez vous concentrer pleinement sur la croissance de votre entreprise.",
-            "cta": "Appelez le 092-882-5556"
+            "cta": "+669 2882 5556"
         },
         "promotion": {
             "title": "Offre Spéciale !",
@@ -1419,7 +1419,7 @@ const EMPTY_CONTENT = {
             "title": "Avvia la tua attività in modo professionale. Registrazione aziendale completa in un unico posto.",
             "subtitle": "Scelto da oltre 300 imprenditori.",
             "description": "Trasforma documenti e procedure legali complicate in un processo semplice. Ci occupiamo di tutto, dalla costituzione della tua azienda presso il Department of Business Development (DBD), alla richiesta del codice fiscale aziendale e della partita IVA, affinché tu possa concentrarti sulla crescita della tua attività.",
-            "cta": "Chiama 092-882-5556"
+            "cta": "+669 2882 5556"
         },
         "promotion": {
             "title": "Offerta Speciale!",
@@ -1570,7 +1570,7 @@ const EMPTY_CONTENT = {
             "title": "Start uw bedrijf professioneel. Volledige bedrijfsregistratie op één plek.",
             "subtitle": "Vertrouwd door meer dan 300 ondernemers.",
             "description": "Verander ingewikkeld papierwerk en juridische procedures in een eenvoudig proces. Wij regelen alles, van de oprichting van uw bedrijf bij het Department of Business Development (DBD) tot het aanvragen van een bedrijfs-ID en btw-nummer, zodat u zich volledig kunt concentreren op de groei van uw bedrijf.",
-            "cta": "Bel 092-882-5556"
+            "cta": "+669 2882 5556"
         },
         "promotion": {
             "title": "Speciale Aanbieding!",
@@ -1721,7 +1721,7 @@ const EMPTY_CONTENT = {
             "title": "Mulakan perniagaan anda secara profesional. Pendaftaran syarikat lengkap di satu tempat.",
             "subtitle": "Dipercayai oleh lebih 300 usahawan.",
             "description": "Tukar kerja kertas dan prosedur undang-undang yang rumit kepada proses yang mudah. Kami menguruskan semuanya daripada menubuhkan syarikat anda dengan Jabatan Pembangunan Perniagaan (DBD), hingga memohon ID korporat dan nombor pengenalan cukai, supaya anda boleh fokus pada pertumbuhan perniagaan anda.",
-            "cta": "Hubungi 092-882-5556"
+            "cta": "+669 2882 5556"
         },
         "promotion": {
             "title": "Tawaran Istimewa!",
@@ -1872,7 +1872,7 @@ const EMPTY_CONTENT = {
             "title": "अपना व्यवसाय पेशेवर रूप से शुरू करें। एक ही स्थान पर पूर्ण कंपनी पंजीकरण।",
             "subtitle": "300 से अधिक उद्यमियों द्वारा विश्वसनीय।",
             "description": "जटिल कागजी कार्रवाई और कानूनी प्रक्रियाओं को एक सरल प्रक्रिया में बदलें। हम व्यवसाय विकास विभाग (DBD) के साथ आपकी कंपनी स्थापित करने से लेकर कॉर्पोरेट आईडी और कर पहचान संख्या (Tax ID) का अनुरोध करने तक सब कुछ संभालते हैं, ताकि आप अपने व्यवसाय को बढ़ाने पर ध्यान केंद्रित कर सकें।",
-            "cta": "कॉल करें 092-882-5556"
+            "cta": "+669 2882 5556"
         },
         "promotion": {
             "title": "विशेष छूट!",
@@ -2023,7 +2023,7 @@ const EMPTY_CONTENT = {
             "title": "உங்கள் வணிகத்தை தொழில்முறையாக தொடங்குங்கள். ஒரே இடத்தில் முழுமையான நிறுவன பதிவு.",
             "subtitle": "300 க்கும் மேற்பட்ட தொழில்முனைவோரால் நம்பப்படுகிறது.",
             "description": "சிக்கலான ஆவணங்கள் மற்றும் சட்ட நடைமுறைகளை எளிமையான செயல்முறையாக மாற்றவும். வணிக மேம்பாட்டுத் துறையுடன் (DBD) உங்கள் நிறுவனத்தை அமைப்பதில் இருந்து நிறுவன ஐடி மற்றும் வரி எண்ணை கோருவது வரை அனைத்தையும் நாங்கள் கையாளுகிறோம், எனவே நீங்கள் உங்கள் வணிகத்தை வளர்ப்பதில் முழுமையாக கவனம் செலுத்தலாம்.",
-            "cta": "அழைக்கவும் 092-882-5556"
+            "cta": "+669 2882 5556"
         },
         "promotion": {
             "title": "சிறப்பு சலுகை!",

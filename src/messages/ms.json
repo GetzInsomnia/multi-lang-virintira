@@ -121,7 +121,12 @@
         "placeholder": "Cari perkhidmatan atau artikel",
         "mobilePlaceholder": "Cari perkhidmatan atau artikel",
         "toggleLabel": "Toggle search",
-        "submitLabel": "Search"
+        "submitLabel": "Search",
+        "noResults": "Tiada hasil carian untuk \"{query}\"",
+        "noResultsHint": "Cuba cari dengan kata kunci lain",
+        "services": "Perkhidmatan",
+        "articles": "Artikel",
+        "viewAll": "Lihat semua hasil untuk \"{query}\""
       },
       "language": {
         "label": "Language",
@@ -383,7 +388,7 @@
           "title": "Mulakan perniagaan anda secara profesional. Pendaftaran syarikat lengkap di satu tempat.",
           "subtitle": "Dipercayai oleh lebih 300 usahawan.",
           "description": "Tukar kerja kertas dan prosedur undang-undang yang rumit kepada proses yang mudah. Kami menguruskan semuanya daripada menubuhkan syarikat anda dengan Jabatan Pembangunan Perniagaan (DBD), hingga memohon ID korporat dan nombor pengenalan cukai, supaya anda boleh fokus pada pertumbuhan perniagaan anda.",
-          "cta": "Hubungi 092-882-5556"
+          "cta": "+669 2882 5556"
         },
         "promotion": {
           "title": "Tawaran Istimewa!",
@@ -558,7 +563,174 @@
       },
       "limited-partnership": {
         "title": "Perkongsian Terhad",
-        "summary": "Pendaftaran perkongsian terhad (LP) yang pantas dan mematuhi peraturan. Kami juga menyediakan perundingan struktur perniagaan awal."
+        "summary": "Pendaftaran perkongsian terhad (LP) yang pantas dan mematuhi peraturan. Kami juga menyediakan perundingan struktur perniagaan awal.",
+        "hero": {
+          "title": "Pendaftaran Perkongsian Terhad (Ltd. Part.). Mudah diurus, menjimatkan kos.",
+          "subtitle": "Pilihan tepat untuk perniagaan kecil.",
+          "description": "Melangkah ke status entiti sah (juristic person) untuk meningkatkan kredibiliti dengan rakan kongsi dan pelanggan anda. Dengan struktur Perkongsian Terhad yang lebih mudah diurus dan kos yang lebih rendah, anda tidak perlu lagi risau tentang kerumitan undang-undang. Kami sedia menjadi pembantu peribadi anda, menguruskan semuanya dari mula hingga akhir sehingga anda bersedia untuk menjalankan perniagaan anda.",
+          "cta": "+669 2882 5556"
+        },
+        "promotion": {
+          "title": "Promosi Istimewa!",
+          "subtitle": "Jangan lepaskan harga istimewa dan keistimewaan penuh untuk mereka yang ingin memulakan perniagaan dengan kos yang menjimatkan.",
+          "cta": "Lihat Promosi sekarang",
+          "slug": "limited-partnership-registration-deal"
+        },
+        "features": {
+          "title": "Segalanya yang anda perlukan untuk memulakan Perkongsian Terhad",
+          "items": [
+            {
+              "title": "Perundingan dan Penstrukturan Liabiliti",
+              "description": "Menganalisis dan memberi nasihat mengenai penetapan \"Rakan Kongsi Pengurus\" dan \"Rakan Kongsi Liabiliti Terhad\" untuk melindungi aset peribadi anda daripada risiko mengikut kes.",
+              "icon": "Lightbulb"
+            },
+            {
+              "title": "Penyediaan Dokumen dan Permohonan",
+              "description": "Sediakan borang permohonan pendaftaran dengan tepat dan nyatakan butiran sumbangan modal melalui sistem pendaftaran entiti sah digital (DBD Biz Regist).",
+              "icon": "FileSignature"
+            },
+            {
+              "title": "Penyerahan Pendaftaran Entiti Sah",
+              "description": "Bertindak sebagai wakil anda untuk memproses dan menyerahkan permohonan kepada Jabatan Pembangunan Perniagaan, Kementerian Perdagangan pada setiap langkah.",
+              "icon": "Landmark"
+            },
+            {
+              "title": "Permohonan Nombor Pengenalan Cukai",
+              "description": "Uruskan permohonan nombor entiti sah dan nombor pengenalan cukai untuk menyediakan sistem cukai bagi Perkongsian Terhad anda.",
+              "icon": "Calculator"
+            }
+          ]
+        },
+        "benefits": {
+          "title": "Keistimewaan eksklusif hanya untuk anda",
+          "items": [
+            {
+              "title": "Tiada komitmen perakaunan bulanan!",
+              "icon": "Unlock"
+            },
+            {
+              "title": "PERCUMA! Semak dan tempah sehingga 3 nama Perkongsian Terhad",
+              "icon": "SearchCheck"
+            },
+            {
+              "title": "PERCUMA! 1 cop Perkongsian Terhad berdakwat sendiri",
+              "icon": "Stamp"
+            },
+            {
+              "title": "PERCUMA! Mohon kata laluan e-Filing untuk DBD",
+              "icon": "KeySquare"
+            },
+            {
+              "title": "PERCUMA! Mohon kata laluan untuk Jabatan Hasil",
+              "icon": "KeyRound"
+            },
+            {
+              "title": "PERCUMA! Set dokumen untuk membuka akaun bank korporat",
+              "icon": "Wallet"
+            },
+            {
+              "title": "PERCUMA! Set lengkap dokumen sijil Perkongsian Terhad (DBD)",
+              "icon": "ScrollText"
+            },
+            {
+              "title": "PERCUMA! Kursus latihan teknik cukai (Bernilai 5,900 THB)",
+              "icon": "GraduationCap"
+            },
+            {
+              "title": "PERCUMA! Kad perniagaan untuk pengeluaran resit/invois cukai",
+              "icon": "Contact2"
+            }
+          ]
+        },
+        "requirements": {
+          "title": "Apa yang perlu disediakan untuk pendaftaran Perkongsian Terhad",
+          "subtitle": "Sediakan maklumat asas, dan serahkan selebihnya kepada kami.",
+          "documents": {
+            "title": "1. Dokumen penting yang diperlukan",
+            "items": [
+              "Sekurang-kurangnya 2 rakan kongsi \n\n1. Rakan kongsi Thai: Salinan kad pengenalan (Salinan depan dan belakang yang jelas)\n\n2. Rakan kongsi asing: Salinan pasport (Hanya halaman pertama dengan gambar)",
+              "Pendaftaran rumah (Tabien Baan) yang akan digunakan sebagai ibu pejabat Perkongsian Terhad.",
+              "Reka bentuk cop (jika ada)"
+            ]
+          },
+          "information": {
+            "title": "2. Maklumat asas perniagaan",
+            "items": [
+              "Nama Perkongsian Terhad yang dikehendaki (Thai-Inggeris)",
+              "Jumlah sumbangan modal setiap orang (cth., En. A menyumbang 990,000 THB, En. B menyumbang 10,000 THB)",
+              "Nyatakan status rakan kongsi (Siapa yang bertindak sebagai \"Rakan Kongsi Pengurus\" dan siapa \"Rakan Kongsi Liabiliti Terhad\")",
+              "Penerangan tentang operasi perniagaan",
+              "Maklumat hubungan Perkongsian Terhad \n1. Nombor telefon \n2. E-mel",
+              "Maklumat hubungan setiap rakan kongsi \n1. Nombor telefon \n2. E-mel \n3. ID LINE"
+            ]
+          }
+        },
+        "process": {
+          "title": "4 langkah pendaftaran mudah",
+          "steps": [
+            {
+              "title": "Perundingan dan Tempahan Nama",
+              "description": "Kami akan berbincang untuk mengumpul maklumat, membantu merancang struktur Perkongsian Terhad yang paling sesuai dengan keperluan anda, dan meneruskan tempahan nama.",
+              "icon": "MessageSquareText"
+            },
+            {
+              "title": "Penyediaan Dokumen melalui Sistem Kerajaan",
+              "description": "Pasukan kami menyediakan semua dokumen dan borang melalui sistem pendaftaran entiti sah digital (DBD Biz Regist).",
+              "icon": "FileStack"
+            },
+            {
+              "title": "Pengesahan Identiti Dalam Talian (Mudah, Tidak perlu hadir)",
+              "description": "Rakan kongsi dan Rakan Kongsi Pengurus mengesahkan identiti mereka melalui aplikasi ThaiD atau DBD e-Service. Mereka boleh memilih untuk mengimbas Kod QR atau klik untuk mengesahkan melalui e-mel peribadi mereka.",
+              "icon": "SmartphoneNfc"
+            },
+            {
+              "title": "Penyerahan Pendaftaran dan Penghantaran",
+              "description": "Pasukan kami menyerahkan permohonan kepada Jabatan Pembangunan Perniagaan. Setelah diluluskan, kami akan mengesahkan ketepatannya dan menghantar dokumen penting bersama hadiah percuma terus kepada anda.",
+              "icon": "Gift"
+            }
+          ]
+        },
+        "faq": {
+          "title": "Soalan Lazim (FAQ)",
+          "items": [
+            {
+              "question": "Apakah perbezaan antara Rakan Kongsi Pengurus dan Rakan Kongsi Liabiliti Terhad?",
+              "answer": "Undang-undang membahagikan rakan kongsi dalam Perkongsian Terhad kepada 2 jenis utama, yang memberi kesan kepada tanggungjawab mereka ke atas aset peribadi, seperti berikut:\n\n<b>1. Rakan Kongsi Pengurus</b> \nUndang-undang mewajibkan Perkongsian Terhad mempunyai sekurang-kurangnya 1 rakan kongsi jenis ini untuk menguruskan perniagaan. Mereka mempunyai kuasa penuh untuk menandatangani dan mengikat Perkongsian Terhad. Walau bagaimanapun, peringatannya ialah mereka mesti bertanggungjawab ke atas hutang Perkongsian Terhad secara <b>\"tidak terhad\"</b> (jika perniagaan menghadapi masalah dan terpaksa ditutup, aset peribadi Rakan Kongsi Pengurus boleh digunakan untuk membayar hutang).\n\n<b>2. Rakan Kongsi Liabiliti Terhad</b> \nBertindak hanya sebagai \"pelabur bersama\" tanpa hak untuk menandatangani arahan atau mengurus perniagaan. Kelebihannya ialah mereka akan bertanggungjawab ke atas hutang Perkongsian Terhad <b>\"terhad kepada tidak lebih daripada jumlah yang mereka janjikan untuk melabur\"</b> (100% selamat untuk aset peribadi)."
+            },
+            {
+              "question": "Apakah perbezaan antara Syarikat Berhad (Company Limited / Co., Ltd.) dan Perkongsian Terhad (Limited Partnership / Ltd. Part.), dan yang manakah harus saya pilih?",
+              "answer": "Walaupun kedua-dua struktur mempunyai status <b>\"Entiti Sah\"</b> dan berkongsi kadar cukai yang sama, terdapat perbezaan besar mengenai <b>\"Liabiliti untuk hutang\"</b>, <b>\"Kredibiliti\"</b>, dan <b>\"Sekatan ke atas warga asing\"</b>. Untuk memudahkan pemahaman dan keputusan, mari kita bandingkan seperti berikut:\n\n<b>1. Syarikat Berhad (Company Limited)</b>\n• <b>Liabiliti:</b> <i>\"Liabiliti terhad\"</i> (kecuali untuk pengarah). Semua pemegang saham hanya bertanggungjawab ke atas hutang syarikat setakat jumlah saham mereka yang belum dibayar (ini secara jelas memisahkan kewangan peribadi daripada kewangan perniagaan, memastikan aset peribadi selamat).\n• <b>Kredibiliti:</b> Sangat tinggi. Sesuai untuk perniagaan jangka panjang, bidaan kerajaan, projek besar, menarik pelabur, atau operasi B2B (Perniagaan-ke-Perniagaan).\n• <b>Dalam kes warga asing / Permohonan Permit Kerja:</b> Sangat sesuai. Undang-undang dan agensi kerajaan menyokong sepenuhnya struktur Syarikat Berhad, sama ada ia melibatkan warga asing yang memegang saham (sehingga 49%), permohonan Permit Kerja, visa perniagaan, atau promosi pelaburan BOI, dsb.\n• <b>Bilangan pengasas:</b> Pada masa ini, minimum hanya 2 pemegang saham diperlukan untuk mendaftar.\n\n<b>2. Perkongsian Terhad (Limited Partnership)</b>\n• <b>Liabiliti:</b> Undang-undang menetapkan sekurang-kurangnya 1 rakan kongsi mesti bertindak sebagai <i>\"Rakan Kongsi Pengurus\"</i>, yang bertanggungjawab ke atas hutang perniagaan secara <b>\"tidak terhad\"</b> (jika perniagaan menghadapi masalah, rakan kongsi pengurus mungkin perlu menggunakan aset peribadi untuk membayar hutang). Liabiliti rakan kongsi lain terhad kepada wang yang mereka laburkan.\n• <b>Kredibiliti:</b> Sederhana. Sesuai untuk perniagaan kecil, Perniagaan Keluarga, atau syarikat di mana rakan kongsi tidak terlalu tegas mengenai format entiti sah.\n• <b>Dalam kes warga asing:</b> Tidak disyorkan. Melibatkan warga asing dalam Perkongsian Terhad tertakluk kepada sekatan undang-undang yang agak rumit. Jika warga asing menjadi Rakan Kongsi Pengurus, ia mungkin ditafsirkan sebagai entiti sah asing, menjadikan operasi perniagaan dan permohonan Permit Kerja lebih sukar berbanding Syarikat Berhad.\n• <b>Bilangan pengasas:</b> Hanya memerlukan 2 pengasas, sama seperti pendaftaran syarikat.\n\n<b>Ringkasan: Yang manakah patut anda pilih?</b>\n• Pilih <b>\"Syarikat Berhad\"</b> jika anda mencari kredibiliti tertinggi, mempunyai rancangan untuk mengembangkan perniagaan atau cawangan pada masa hadapan, ingin mengehadkan risiko ke atas aset peribadi, mempunyai pemegang saham asing, atau merancang untuk mengambil pekerja asing.\n• Pilih <b>\"Perkongsian Terhad\"</b> jika ia adalah perniagaan keluarga atau orang terdekat yang anda percayai 100%, perniagaan itu tidak mempunyai risiko hutang yang tinggi, tiada rakan kongsi asing, dan anda menekankan struktur pengurusan yang paling ringkas.\n\n<i><b>Nota:</b> Pada masa ini, kos pendaftaran, perakaunan bulanan, dan penutupan kewangan tahunan untuk Co., Ltd. dan Ltd. Part. tidak banyak berbeza. Mendaftar sebagai \"Syarikat Berhad\" secara amnya memberikan faedah maksimum dalam jangka masa panjang.</i>"
+            },
+            {
+              "question": "Adakah pendaftaran Perkongsian Terhad benar-benar menjimatkan kos audit perakaunan tahunan (CPA / TA)?",
+              "answer": "<b>Benar.</b> Ini adalah salah satu kelebihan terpenting bagi pendaftaran Perkongsian Terhad.\n\nMengikut undang-undang, jika Perkongsian Terhad anda memenuhi kriteria perusahaan kecil (Small SME) yang bermaksud mempunyai <b>modal berdaftar tidak melebihi 5 juta THB, jumlah hasil tidak melebihi 30 juta THB, dan jumlah aset tidak melebihi 30 juta THB</b>, anda berhak menggunakan <b>Juruaudit Cukai (TA - Tax Auditor)</b> untuk mengaudit dan menandatangani penyata kewangan tahunan.\n\nBiasanya, yuran perkhidmatan TA adalah lebih ekonomi dan mudah diakses berbanding menggunakan Akauntan Awam Bertauliah (CPA), yang diwajibkan oleh undang-undang untuk \"Syarikat Berhad\" dari semua saiz perniagaan. Ini menyebabkan Perkongsian Terhad mempunyai kos pengurusan tahunan yang lebih rendah."
+            },
+            {
+              "question": "Apakah Modal Berdaftar (Sumbangan Modal) bagi Perkongsian Terhad? Bolehkah saya mendaftar jika saya tidak mempunyai jumlah penuh?",
+              "answer": "Dalam Perkongsian Terhad, kami merujuk modal berdaftar sebagai <b>\"Sumbangan Modal\"</b>, yang boleh dilaburkan dalam bentuk tunai, aset, atau tenaga kerja. <i>\"Membayar sumbangan modal\"</i> tidak bermaksud membayar wang kepada sesiapa, tetapi ia bermaksud mendepositkan modal ke dalam akaun bank di bawah nama Perkongsian Terhad untuk digunakan sebagai modal kerja perniagaan (akaun boleh dibuka selepas pendaftaran Perkongsian Terhad selesai).\n\n• <b>Jika anda tidak mempunyai jumlah penuh sekali gus:</b> Anda boleh mendepositkan wang secara beransur-ansur ke dalam akaun sebaik sahaja akaun Perkongsian Terhad dibuka (undang-undang tidak memaksa anda membayar 100% dengan segera). Anda boleh bermula dengan membuka akaun Perkongsian Terhad dengan 1,000 THB. Jika terdapat perbelanjaan berkaitan perniagaan, anda boleh memasukkan wang ke dalam akaun dan kemudian membayarnya. Jumlah ini tidak perlu terbiar di dalam akaun.\n• <b>Langkah berjaga-jaga:</b> Kecuali dalam kes di mana Perkongsian Terhad mempunyai jumlah pelaburan <b>lebih daripada 5 juta THB</b>, undang-undang menetapkan bahawa wang sebenar mesti ada, dan Sijil Bank (Bank Certificate) semua rakan kongsi mesti ditunjukkan semasa proses pendaftaran."
+            },
+            {
+              "question": "Bolehkah warga asing menjadi rakan kongsi dalam Perkongsian Terhad?",
+              "answer": "Di sisi undang-undang ia boleh dilakukan, <b>tetapi secara praktikal dan pengurusan, kami amat tidak mengesyorkannya.</b>\n\nMempunyai warga asing sebagai rakan kongsi dalam Perkongsian Terhad melibatkan sekatan undang-undang yang agak rumit. Terutama jika warga asing menjadi \"Rakan Kongsi Pengurus\", Perkongsian Terhad tersebut mungkin ditafsirkan sebagai <b>\"Entiti Sah Asing\"</b>, yang boleh membawa kepada:\n1. Disekat daripada mengendalikan pelbagai jenis perniagaan di Thailand (mengikut Akta Perniagaan Asing).\n2. Memohon Permit Kerja dan visa perniagaan untuk warga asing mungkin menjadi rumit dan mempunyai peluang yang jauh lebih tinggi untuk ditolak berbanding Syarikat Berhad.\n<i>(Jika terdapat pelaburan bersama warga asing, kami mengesyorkan agar memilih untuk mendaftar sebagai \"Syarikat Berhad\", yang akan menjadi lebih lancar dan memberikan faedah maksimum dalam jangka masa panjang.)</i>"
+            },
+            {
+              "question": "Jika saya belum mempunyai pejabat, atau menggunakan rumah sewa/kondo sebagai lokasi, bolehkah saya mendaftar?",
+              "answer": "<b>Boleh didaftarkan</b> di bawah syarat-syarat berikut:\n• <b>Dalam kes rumah sewa/ruang sewa:</b> Anda mesti mempunyai <i>\"Surat Kebenaran Menggunakan Premis\"</i> bersama salinan kad pengenalan dan pendaftaran rumah \"Tuan Rumah atau Pemilik Hartanah\" yang disahkan.\n• <b>Dalam kes kondominium:</b> Walaupun undang-undang membenarkannya, anda harus menyemak dengan pengurusan kondo tersebut terlebih dahulu, kerana banyak projek mempunyai peraturan dalaman yang tidak membenarkan bilik kediaman didaftarkan sebagai pejabat.\n<i>(Jika anda tidak selesa menggunakan tempat anda sendiri, kami mempunyai perkhidmatan <b>Pejabat Maya (Virtual Office)</b> untuk menyelesaikan masalah ini.)</i>"
+            },
+            {
+              "question": "Setelah Perkongsian Terhad didaftarkan, adakah saya perlu mendaftar Cukai Nilai Tambah (VAT 7%) serta-merta?",
+              "answer": "Tidak semestinya. Mendaftar Perkongsian Terhad dan mendaftar Cukai Nilai Tambah (VAT) adalah dua perkara berbeza. Perkongsian Terhad hanya diwajibkan mendaftar VAT apabila ia mempunyai pendapatan perniagaan <b>melebihi 1.8 juta THB setahun</b>.\n\nWalau bagaimanapun, jika Perkongsian Terhad perlu mengimport-mengeksport barangan, atau berurusan dengan rakan kongsi B2B yang memerlukan invois cukai dikeluarkan, Perkongsian Terhad <b>mesti memohon pendaftaran Cukai Nilai Tambah (VAT)</b> untuk membolehkan pengeluaran invois cukai kepada rakan kongsi sejak permulaan perniagaan."
+            },
+            {
+              "question": "Selepas Perkongsian Terhad didaftarkan, tetapi belum mula menjual atau belum menjana pendapatan, adakah saya perlu melakukan perakaunan?",
+              "answer": "<b>Mesti dilakukan.</b> Mengikut undang-undang (Akta Perakaunan B.E. 2543), semua jenis entiti sah diwajibkan untuk menyediakan akaun dan menyerahkan penyata kewangan kepada Jabatan Pembangunan Perniagaan dan Jabatan Hasil <b>\"walaupun tiada pendapatan, tiada perbelanjaan, atau perniagaan belum mula beroperasi pada tahun tersebut (Pengisytiharan Sifar)\"</b>. Mengabaikan penyerahan pada masanya akan mengakibatkan denda undang-undang yang agak tinggi."
+            },
+            {
+              "question": "Adakah Rakan Kongsi Pengurus perlu memotong gaji sendiri untuk diserahkan kepada Keselamatan Sosial?",
+              "answer": "<b>Tidak perlu.</b> Memandangkan anda adalah Rakan Kongsi Pengurus dan pemilik perniagaan, anda berada dalam kedudukan <b>\"Majikan\"</b>, bukan pekerja. Oleh itu, anda tidak boleh dan tidak perlu mendaftar sebagai orang yang diinsuranskan (Perkara 33) dalam Perkongsian Terhad anda sendiri.\n\nWalau bagaimanapun, apabila Perkongsian Terhad mula mengambil <b>\"pekerja sepenuh masa\"</b>, undang-undang mewajibkan Perkongsian Terhad untuk mendaftar sebagai majikan dan menyerahkan Keselamatan Sosial bagi pekerja dalam tempoh 30 hari dari tarikh pengambilan bekerja."
+            }
+          ]
+        }
       },
       "foundation": {
         "title": "Yayasan",
@@ -1355,5 +1527,16 @@
     "cta": "",
     "badge": "",
     "complimentary": ""
+  },
+  "search": {
+    "heading": "Hasil carian untuk \"{query}\"",
+    "headingEmpty": "Cari perkhidmatan dan artikel",
+    "resultCount": "{count} keputusan ditemui",
+    "tabAll": "Semua",
+    "tabServices": "Perkhidmatan",
+    "tabArticles": "Artikel",
+    "emptyPrompt": "Taip kata kunci untuk mencari perkhidmatan atau artikel",
+    "noResults": "Tiada hasil carian untuk \"{query}\"",
+    "noResultsHint": "Cuba cari dengan kata kunci lain"
   }
 }

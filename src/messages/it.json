@@ -121,7 +121,12 @@
         "placeholder": "Cerca servizi o articoli",
         "mobilePlaceholder": "Cerca servizi o articoli",
         "toggleLabel": "Toggle search",
-        "submitLabel": "Search"
+        "submitLabel": "Search",
+        "noResults": "Nessun risultato trovato per \"{query}\"",
+        "noResultsHint": "Prova a cercare con parole chiave diverse",
+        "services": "Servizi",
+        "articles": "Articoli",
+        "viewAll": "Visualizza tutti i risultati per \"{query}\""
       },
       "language": {
         "label": "Language",
@@ -383,7 +388,7 @@
           "title": "Avvia la tua attività in modo professionale. Registrazione aziendale completa in un unico posto.",
           "subtitle": "Scelto da oltre 300 imprenditori.",
           "description": "Trasforma documenti e procedure legali complicate in un processo semplice. Ci occupiamo di tutto, dalla costituzione della tua azienda presso il Department of Business Development (DBD), alla richiesta del codice fiscale aziendale e della partita IVA, affinché tu possa concentrarti sulla crescita della tua attività.",
-          "cta": "Chiama 092-882-5556"
+          "cta": "+669 2882 5556"
         },
         "promotion": {
           "title": "Offerta Speciale!",
@@ -558,7 +563,174 @@
       },
       "limited-partnership": {
         "title": "Società in Accomandita",
-        "summary": "Registrazione rapida e conforme della società in accomandita (LP). Offriamo anche consulenza preliminare sulla struttura aziendale."
+        "summary": "Registrazione rapida e conforme della società in accomandita (LP). Offriamo anche consulenza preliminare sulla struttura aziendale.",
+        "hero": {
+          "title": "Registrazione di Società in Accomandita (Limited Partnership). Facile da gestire, economica.",
+          "subtitle": "La scelta perfetta per le piccole imprese.",
+          "description": "Fai il passo verso una persona giuridica a tutti gli effetti per aumentare la credibilità con partner e clienti. Con una struttura di Società in Accomandita più facile da gestire e più economica, non devi più preoccuparti delle complessità legali. Siamo pronti a essere il tuo assistente personale, occupandoci di tutto dall'inizio alla fine finché non sarai pronto per gestire la tua attività.",
+          "cta": "+669 2882 5556"
+        },
+        "promotion": {
+          "title": "Promozione Speciale!",
+          "subtitle": "Non perderti i prezzi speciali e i vantaggi completi per chi desidera avviare un'attività in modo conveniente.",
+          "cta": "Vedi la Promozione ora",
+          "slug": "limited-partnership-registration-deal"
+        },
+        "features": {
+          "title": "Tutto ciò che serve per avviare una Società in Accomandita",
+          "items": [
+            {
+              "title": "Consulenza e Strutturazione delle Responsabilità",
+              "description": "Analisi e consulenza sulla designazione del \"Socio Accomandatario\" e del \"Socio Accomandante\" per proteggere i tuoi beni personali dai rischi, caso per caso.",
+              "icon": "Lightbulb"
+            },
+            {
+              "title": "Preparazione dei Documenti e della Domanda",
+              "description": "Preparazione accurata dei moduli di domanda di registrazione e specifica dei dettagli del conferimento di capitale tramite il sistema digitale di registrazione delle persone giuridiche (DBD Biz Regist).",
+              "icon": "FileSignature"
+            },
+            {
+              "title": "Presentazione della Registrazione della Persona Giuridica",
+              "description": "Agiamo come tuo rappresentante per elaborare e presentare le domande al Department of Business Development, Ministero del Commercio, in ogni fase.",
+              "icon": "Landmark"
+            },
+            {
+              "title": "Richiesta del Numero di Identificazione Fiscale",
+              "description": "Gestione della richiesta del numero di entità giuridica e del numero di identificazione fiscale per preparare il sistema fiscale della tua Società in Accomandita.",
+              "icon": "Calculator"
+            }
+          ]
+        },
+        "benefits": {
+          "title": "Completo! Privilegi esclusivi solo per te",
+          "items": [
+            {
+              "title": "Nessun vincolo contabile mensile!",
+              "icon": "Unlock"
+            },
+            {
+              "title": "GRATIS! Verifica e prenotazione fino a 3 nomi per la Società in Accomandita",
+              "icon": "SearchCheck"
+            },
+            {
+              "title": "GRATIS! 1 timbro autoinchiostrante per la Società in Accomandita",
+              "icon": "Stamp"
+            },
+            {
+              "title": "GRATIS! Richiesta password e-Filing per il DBD",
+              "icon": "KeySquare"
+            },
+            {
+              "title": "GRATIS! Richiesta password per l'Agenzia delle Entrate",
+              "icon": "KeyRound"
+            },
+            {
+              "title": "GRATIS! Set di documenti per l'apertura di un conto bancario aziendale",
+              "icon": "Wallet"
+            },
+            {
+              "title": "GRATIS! Set completo di certificati della Società in Accomandita (DBD)",
+              "icon": "ScrollText"
+            },
+            {
+              "title": "GRATIS! Corso di formazione sulle tecniche fiscali (Valore 5.900 THB)",
+              "icon": "GraduationCap"
+            },
+            {
+              "title": "GRATIS! Biglietti da visita per l'emissione di ricevute/fatture fiscali",
+              "icon": "Contact2"
+            }
+          ]
+        },
+        "requirements": {
+          "title": "Cosa preparare per la registrazione della Società in Accomandita",
+          "subtitle": "Prepara semplicemente le informazioni di base e lascia il resto a noi.",
+          "documents": {
+            "title": "1. Documenti importanti richiesti",
+            "items": [
+              "Almeno 2 partner \n\n1. Partner thailandesi: Copia della carta d'identità (Copia chiara fronte e retro)\n\n2. Partner stranieri: Copia del passaporto (Solo la prima pagina con foto)",
+              "Registrazione della casa (Tabien Baan) da utilizzare come sede principale della Società in Accomandita.",
+              "Design del timbro (se presente)"
+            ]
+          },
+          "information": {
+            "title": "2. Informazioni aziendali di base",
+            "items": [
+              "Nome desiderato della Società in Accomandita (Tailandese-Inglese)",
+              "Importo del conferimento di capitale di ciascun partner (es. Sig. A conferisce 990.000 THB, Sig. B conferisce 10.000 THB)",
+              "Specifica dello status del partner (Chi agisce come \"Socio Accomandatario\" e chi come \"Socio Accomandante\")",
+              "Descrizione delle operazioni aziendali",
+              "Informazioni di contatto della Società in Accomandita \n1. Numero di telefono \n2. Email",
+              "Informazioni di contatto di ciascun partner \n1. Numero di telefono \n2. Email \n3. ID LINE"
+            ]
+          }
+        },
+        "process": {
+          "title": "4 semplici passaggi per la registrazione",
+          "steps": [
+            {
+              "title": "Consulenza e Prenotazione del Nome",
+              "description": "Discuteremo per raccogliere informazioni, aiutare a pianificare una struttura di Società in Accomandita più adatta alle tue esigenze e procedere con la prenotazione del nome.",
+              "icon": "MessageSquareText"
+            },
+            {
+              "title": "Preparazione dei Documenti tramite il Sistema Governativo",
+              "description": "Il nostro team prepara tutti i documenti e i moduli tramite il sistema digitale di registrazione delle persone giuridiche (DBD Biz Regist).",
+              "icon": "FileStack"
+            },
+            {
+              "title": "Verifica dell'Identità Online (Comodo, senza spostamenti)",
+              "description": "I partner e il Socio Accomandatario verificano la loro identità tramite l'app ThaiD o DBD e-Service. Possono scegliere di scansionare un codice QR o fare clic per verificare tramite la propria email personale.",
+              "icon": "SmartphoneNfc"
+            },
+            {
+              "title": "Invio della Registrazione e Consegna",
+              "description": "Il nostro team presenta la domanda al Department of Business Development. Una volta approvata, verificheremo l'accuratezza e consegneremo i documenti essenziali insieme ai regali direttamente a te.",
+              "icon": "Gift"
+            }
+          ]
+        },
+        "faq": {
+          "title": "Domande Frequenti (FAQ)",
+          "items": [
+            {
+              "question": "Qual è la differenza tra un Socio Accomandatario e un Socio Accomandante?",
+              "answer": "La legge divide i partner di una Società in Accomandita in 2 tipi principali, il che influisce sulla loro responsabilità sui beni personali, come segue:\n\n<b>1. Socio Accomandatario</b> \nLa legge richiede che una Società in Accomandita abbia almeno 1 partner di questo tipo per gestire l'azienda. Hanno piena autorità per firmare e vincolare la Società in Accomandita. Tuttavia, l'avvertenza è che devono essere responsabili per i debiti della Società in Accomandita in modo <b>\"illimitato\"</b> (se l'azienda affronta problemi e deve chiudere, i beni personali del Socio Accomandatario potrebbero essere utilizzati per ripagare i debiti).\n\n<b>2. Socio Accomandante</b> \nAgisce solo come \"co-investitore\" senza alcun diritto di firmare ordini o gestire l'azienda. Il vantaggio è che saranno responsabili per i debiti della Società in Accomandita <b>\"limitatamente a un importo non superiore a quello che hanno promesso di investire\"</b> (sicurezza al 100% per i beni personali)."
+            },
+            {
+              "question": "Qual è la differenza tra una Company Limited (Co., Ltd.) e una Società in Accomandita (Ltd. Part.), e quale dovrei scegliere?",
+              "answer": "Sebbene entrambe le strutture abbiano lo status di <b>\"Persona Giuridica\"</b> e condividano le stesse aliquote fiscali, ci sono importanti differenze riguardo a <b>\"Responsabilità per i debiti\"</b>, <b>\"Credibilità\"</b> e <b>\"Restrizioni per gli stranieri\"</b>. Per facilitare la comprensione e la decisione, confrontiamole come segue:\n\n<b>1. Company Limited (Co., Ltd.)</b>\n• <b>Responsabilità:</b> <i>\"Responsabilità limitata\"</i> (eccetto per i direttori). Tutti gli azionisti sono responsabili per i debiti della società solo fino all'importo non versato delle loro azioni (questo separa chiaramente le finanze personali da quelle aziendali, mantenendo al sicuro i beni personali).\n• <b>Credibilità:</b> Molto alta. Adatta per affari a lungo termine, gare d'appalto governative, grandi progetti, attrazione di investitori o operazioni B2B.\n• <b>In caso di stranieri / Richiesta di Permesso di Lavoro (Work Permit):</b> Altamente consigliato. La legge e le agenzie governative supportano eccellentemente la struttura della Company Limited, sia che si tratti di stranieri che detengono azioni (fino al 49%), richieste di permessi di lavoro, visti d'affari o promozioni di investimento BOI, ecc.\n• <b>Fondatori richiesti:</b> Attualmente, è richiesto un minimo di soli 2 azionisti per la registrazione.\n\n<b>2. Società in Accomandita (Limited Partnership)</b>\n• <b>Responsabilità:</b> La legge richiede che almeno 1 partner agisca come <i>\"Socio Accomandatario\"</i>, il quale deve essere responsabile dei debiti dell'azienda in modo <b>\"illimitato\"</b> (se l'azienda ha problemi, il socio accomandatario potrebbe dover utilizzare beni personali per pagare i debiti). La responsabilità degli altri partner è limitata al denaro investito.\n• <b>Credibilità:</b> Moderata. Adatta per piccole imprese, aziende familiari o imprese in cui i partner non sono troppo rigidi sul formato della persona giuridica.\n• <b>In caso di stranieri:</b> Sconsigliato. Avere stranieri in una Società in Accomandita comporta restrizioni legali molto complesse. Se uno straniero diventa Socio Accomandatario, potrebbe essere interpretata come una persona giuridica straniera, rendendo le operazioni aziendali e le richieste di permesso di lavoro molto più difficili rispetto a una Company Limited.\n• <b>Fondatori richiesti:</b> Richiede solo 2 fondatori, esattamente come la registrazione di un'azienda.\n\n<b>Riepilogo: Quale scegliere?</b>\n• Scegli una <b>\"Company Limited\"</b> se cerchi la massima credibilità, hai piani per espandere l'azienda o le filiali in futuro, vuoi limitare i rischi sui beni personali, hai azionisti stranieri o prevedi di assumere dipendenti stranieri.\n• Scegli una <b>\"Società in Accomandita\"</b> se si tratta di un'azienda familiare o di persone vicine di cui ti fidi al 100%, l'azienda non ha alti rischi di debito, non ci sono partner stranieri e preferisci la struttura di gestione più semplice in assoluto.\n\n<i><b>Nota:</b> Attualmente, i costi per la registrazione, la contabilità mensile e la chiusura finanziaria annuale per Co., Ltd. e Ltd. Part. non sono molto diversi. Registrarsi come \"Company Limited\" offre generalmente i massimi vantaggi a lungo termine.</i>"
+            },
+            {
+              "question": "La registrazione di una Società in Accomandita fa davvero risparmiare sui costi per le revisioni contabili annuali (CPA / TA)?",
+              "answer": "<b>Vero.</b> Questo è uno dei vantaggi più importanti della registrazione di una Società in Accomandita.\n\nPer legge, se la tua Società in Accomandita soddisfa i criteri di una piccola impresa (Small SME), il che significa avere un <b>capitale registrato non superiore a 5 milioni di THB, entrate totali non superiori a 30 milioni di THB e beni totali non superiori a 30 milioni di THB</b>, hai il diritto di utilizzare un <b>Revisore Fiscale (TA - Tax Auditor)</b> per la revisione e la firma del bilancio annuale.\n\nNormalmente, le tariffe di servizio di un TA sono più economiche e accessibili rispetto all'utilizzo di un Revisore Contabile (CPA), che la legge rende obbligatorio per le \"Company Limited\" di tutte le dimensioni. Ciò si traduce in costi di gestione annuali inferiori per la Società in Accomandita."
+            },
+            {
+              "question": "Cos'è il Capitale Registrato (Conferimento di Capitale) di una Società in Accomandita? Posso registrarmi se non possiedo l'intera somma forfettaria?",
+              "answer": "In una Società in Accomandita, ci riferiamo al capitale registrato come <b>\"Conferimento di Capitale\"</b>, che può essere investito in contanti, beni o lavoro. <i>\"Versare il conferimento di capitale\"</i> non significa pagare denaro a nessuno, ma significa depositare capitale in un conto bancario a nome della Società in Accomandita per essere utilizzato come capitale circolante per l'attività (il conto può essere aperto dopo il completamento della registrazione della Società in Accomandita).\n\n• <b>Se non hai l'intera somma in un'unica soluzione:</b> Puoi depositare gradualmente il denaro nel conto una volta aperto il conto della Società in Accomandita (la legge non ti obbliga a pagare il 100% per intero immediatamente). Puoi iniziare aprendo il conto con 1.000 THB. Se ci sono spese relative all'attività, puoi depositare denaro nel conto e poi pagarlo. Questo importo non deve rimanere inattivo nel conto.\n• <b>Precauzioni:</b> Tranne nel caso in cui la Società in Accomandita abbia un investimento totale di <b>oltre 5 milioni di THB</b>. In questo caso la legge richiede che il denaro reale sia presente e durante il processo di registrazione deve essere mostrato un Certificato Bancario (Bank Certificate) di tutti i partner."
+            },
+            {
+              "question": "Gli stranieri possono diventare partner in una Società in Accomandita?",
+              "answer": "Legalmente si può fare, <b>ma a livello pratico e gestionale, lo sconsigliamo vivamente.</b>\n\nAvere uno straniero come partner in una Società in Accomandita comporta restrizioni legali piuttosto complesse. Soprattutto se uno straniero diventa un \"Socio Accomandatario\", la Società in Accomandita potrebbe essere interpretata come una <b>\"Persona Giuridica Straniera\"</b>, il che potrebbe portare a:\n1. Essere limitati nell'operare in molti tipi di attività in Thailandia (secondo il Foreign Business Act).\n2. La richiesta di un Permesso di Lavoro (Work Permit) e di un visto d'affari per gli stranieri potrebbe essere complicata e ha una probabilità molto maggiore di essere respinta rispetto a una Company Limited.\n<i>(Se c'è un co-investimento straniero, consigliamo di scegliere di registrarsi come \"Company Limited\", che sarà più agevole e fornirà i massimi vantaggi a lungo termine.)</i>"
+            },
+            {
+              "question": "Se non ho ancora un ufficio, o utilizzo una casa in affitto/condominio come sede, posso registrarmi?",
+              "answer": "<b>Può essere registrato</b> alle seguenti condizioni:\n• <b>In caso di casa in affitto/spazio in affitto:</b> Devi avere una <i>\"Lettera di Consenso all'Uso dei Locali\"</i> insieme a copie debitamente certificate della carta d'identità e della registrazione della casa del \"Proprietario dell'Immobile\".\n• <b>In caso di condominio:</b> Sebbene la legge lo consenta, dovresti prima verificare con la persona giuridica del condominio, perché molti progetti hanno regolamenti interni che non consentono di registrare le stanze residenziali come uffici.\n<i>(Se non ti è comodo utilizzare il tuo spazio, abbiamo un servizio di <b>Virtual Office</b> disponibile per risolvere questo problema.)</i>"
+            },
+            {
+              "question": "Una volta registrata la Società in Accomandita, devo registrarmi immediatamente per l'Imposta sul Valore Aggiunto (IVA 7%)?",
+              "answer": "Non necessariamente. Registrare una Società in Accomandita e registrarsi per l'IVA sono due cose diverse. Una Società in Accomandita è obbligata a registrarsi per l'IVA solo quando ha un reddito d'impresa <b>superiore a 1,8 milioni di THB all'anno</b>.\n\nTuttavia, se la Società in Accomandita ha necessità di importare/esportare beni, o trattare con partner B2B che richiedono l'emissione di fatture fiscali, <b>deve richiedere la registrazione IVA</b> per poter emettere fatture fiscali ai partner fin dall'inizio dell'attività."
+            },
+            {
+              "question": "Dopo la registrazione della Società in Accomandita, ma prima di aver iniziato a vendere o generato reddito, devo tenere la contabilità?",
+              "answer": "<b>Deve essere fatto.</b> Per legge (Accounting Act B.E. 2543), tutti i tipi di persone giuridiche sono tenuti a preparare i conti e presentare i rendiconti finanziari al Department of Business Development e al Revenue Department <b>\"anche se in quell'anno non ci sono state entrate, uscite, o l'attività non è ancora iniziata (Dichiarazione a zero)\"</b>. La mancata presentazione in tempo comporterà multe legali relativamente alte."
+            },
+            {
+              "question": "Il Socio Accomandatario deve dedurre il proprio stipendio da versare alla Previdenza Sociale?",
+              "answer": "<b>Non necessario.</b> In qualità di Socio Accomandatario e titolare dell'attività, sei considerato un <b>\"Datore di Lavoro\"</b>, non un dipendente. Pertanto, non puoi e non hai bisogno di registrarti come persona assicurata (Articolo 33) nella tua stessa Società in Accomandita.\n\nTuttavia, ogni volta che la Società in Accomandita inizia ad assumere <b>\"dipendenti a tempo pieno\"</b>, la legge richiede che l'azienda si registri come datore di lavoro e versi la Previdenza Sociale per i dipendenti entro 30 giorni dalla data di assunzione."
+            }
+          ]
+        }
       },
       "foundation": {
         "title": "Fondazione",
@@ -1336,5 +1508,16 @@
     "cta": "",
     "badge": "",
     "complimentary": ""
+  },
+  "search": {
+    "heading": "Risultati di ricerca per \"{query}\"",
+    "headingEmpty": "Cerca servizi e articoli",
+    "resultCount": "{count} risultati trovati",
+    "tabAll": "Tutti",
+    "tabServices": "Servizi",
+    "tabArticles": "Articoli",
+    "emptyPrompt": "Digita una parola chiave per cercare servizi o articoli",
+    "noResults": "Nessun risultato trovato per \"{query}\"",
+    "noResultsHint": "Prova a cercare con parole chiave diverse"
   }
 }

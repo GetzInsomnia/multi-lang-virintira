@@ -121,7 +121,12 @@
         "placeholder": "Rechercher des services ou des articles",
         "mobilePlaceholder": "Rechercher des services ou des articles",
         "toggleLabel": "Toggle search",
-        "submitLabel": "Search"
+        "submitLabel": "Search",
+        "noResults": "Aucun résultat trouvé pour \"{query}\"",
+        "noResultsHint": "Essayez de rechercher avec d'autres mots-clés",
+        "services": "Services",
+        "articles": "Articles",
+        "viewAll": "Voir tous les résultats pour \"{query}\""
       },
       "language": {
         "label": "Language",
@@ -383,7 +388,7 @@
           "title": "Démarrez votre entreprise de manière professionnelle. Enregistrement complet de la société en un seul endroit.",
           "subtitle": "La confiance de plus de 300 entrepreneurs.",
           "description": "Transformez la paperasse complexe et les procédures légales en un processus simple. Nous nous occupons de tout, de la création de votre entreprise auprès du Département du Développement des Affaires (DBD), à la demande d'identification de l'entreprise et de numéro d'identification fiscale, afin que vous puissiez vous concentrer pleinement sur la croissance de votre entreprise.",
-          "cta": "Appelez le 092-882-5556"
+          "cta": "+669 2882 5556"
         },
         "promotion": {
           "title": "Offre Spéciale !",
@@ -558,7 +563,174 @@
       },
       "limited-partnership": {
         "title": "Société en Commandite",
-        "summary": "Enregistrement rapide et conforme de société en commandite (LP). Nous fournissons également des conseils préliminaires sur la structure de l'entreprise."
+        "summary": "Enregistrement rapide et conforme de société en commandite (LP). Nous fournissons également des conseils préliminaires sur la structure de l'entreprise.",
+        "hero": {
+          "title": "Enregistrement de Société en Commandite (Limited Partnership). Gestion facile, économique.",
+          "subtitle": "Le choix idéal pour les petites entreprises.",
+          "description": "Faites le pas vers une personne morale à part entière pour renforcer votre crédibilité auprès de vos partenaires et clients. Avec une structure de Société en Commandite plus facile à gérer et plus économique, vous n'avez plus à vous soucier des lois complexes. Nous sommes prêts à être votre assistant personnel, en nous occupant de tout, du début à la fin, jusqu'à ce que vous soyez prêt à exploiter votre entreprise.",
+          "cta": "+669 2882 5556"
+        },
+        "promotion": {
+          "title": "Promotion Spéciale !",
+          "subtitle": "Ne manquez pas les prix spéciaux et les privilèges complets pour ceux qui souhaitent démarrer une entreprise de manière rentable.",
+          "cta": "Voir la promotion maintenant",
+          "slug": "limited-partnership-registration-deal"
+        },
+        "features": {
+          "title": "Tout ce dont vous avez besoin pour démarrer une Société en Commandite",
+          "items": [
+            {
+              "title": "Conseil et structuration des responsabilités",
+              "description": "Analyse et conseils sur la désignation du « Commandité » et du « Commanditaire » afin de protéger vos biens personnels contre les risques, au cas par cas.",
+              "icon": "Lightbulb"
+            },
+            {
+              "title": "Préparation des documents et de la demande",
+              "description": "Préparation précise des formulaires de demande d'enregistrement et spécification des détails de l'apport en capital via le système d'enregistrement numérique des personnes morales (DBD Biz Regist).",
+              "icon": "FileSignature"
+            },
+            {
+              "title": "Soumission de l'enregistrement de la personne morale",
+              "description": "Nous agissons en tant que votre représentant pour soumettre les demandes au Département du Développement des Affaires, Ministère du Commerce, à chaque étape.",
+              "icon": "Landmark"
+            },
+            {
+              "title": "Demande de numéro d'identification fiscale",
+              "description": "Prise en charge de la demande du numéro d'entité juridique et du numéro d'identification fiscale pour préparer le système fiscal de votre Société en Commandite.",
+              "icon": "Calculator"
+            }
+          ]
+        },
+        "benefits": {
+          "title": "Complet ! Des privilèges exclusifs rien que pour vous",
+          "items": [
+            {
+              "title": "Aucun engagement comptable mensuel !",
+              "icon": "Unlock"
+            },
+            {
+              "title": "GRATUIT ! Vérification et réservation de jusqu'à 3 noms de Société en Commandite",
+              "icon": "SearchCheck"
+            },
+            {
+              "title": "GRATUIT ! 1 tampon de Société en Commandite auto-encreur",
+              "icon": "Stamp"
+            },
+            {
+              "title": "GRATUIT ! Demande de mot de passe e-Filing pour le DBD",
+              "icon": "KeySquare"
+            },
+            {
+              "title": "GRATUIT ! Demande de mot de passe pour le Département du Revenu",
+              "icon": "KeyRound"
+            },
+            {
+              "title": "GRATUIT ! Ensemble de documents pour l'ouverture d'un compte bancaire professionnel",
+              "icon": "Wallet"
+            },
+            {
+              "title": "GRATUIT ! Ensemble complet de certificats de Société en Commandite (DBD)",
+              "icon": "ScrollText"
+            },
+            {
+              "title": "GRATUIT ! Cours de formation en techniques fiscales (Valeur 5 900 THB)",
+              "icon": "GraduationCap"
+            },
+            {
+              "title": "GRATUIT ! Cartes de visite pour l'émission de reçus / factures fiscales",
+              "icon": "Contact2"
+            }
+          ]
+        },
+        "requirements": {
+          "title": "Ce qu'il faut préparer pour l'enregistrement d'une Société en Commandite",
+          "subtitle": "Préparez simplement les informations de base, nous nous occupons du reste.",
+          "documents": {
+            "title": "1. Documents importants requis",
+            "items": [
+              "Au moins 2 partenaires \n\n1. Partenaires thaïlandais : Copie de la carte d'identité (Copie claire du recto et du verso)\n\n2. Partenaires étrangers : Copie du passeport (Uniquement la première page avec photo)",
+              "Livret de famille (Tabien Baan) à utiliser comme siège social de la Société en Commandite.",
+              "Conception du tampon (le cas échéant)"
+            ]
+          },
+          "information": {
+            "title": "2. Informations de base sur l'entreprise",
+            "items": [
+              "Nom de Société en Commandite souhaité (Thaï-Anglais)",
+              "Montant de l'apport en capital de chaque personne (par ex., M. A apporte 990 000 THB, M. B apporte 10 000 THB)",
+              "Spécification du statut du partenaire (Qui agit en tant que « Commandité » et qui est le « Commanditaire »)",
+              "Description des opérations commerciales",
+              "Coordonnées de la Société en Commandite \n1. Numéro de téléphone \n2. E-mail",
+              "Coordonnées de chaque partenaire \n1. Numéro de téléphone \n2. E-mail \n3. ID LINE"
+            ]
+          }
+        },
+        "process": {
+          "title": "4 étapes simples pour l'enregistrement",
+          "steps": [
+            {
+              "title": "Consultation et réservation de nom",
+              "description": "Nous discuterons pour recueillir des informations, aiderons à planifier la structure de Société en Commandite qui correspond le mieux à vos besoins, et procéderons à la réservation du nom.",
+              "icon": "MessageSquareText"
+            },
+            {
+              "title": "Préparation des documents via le système gouvernemental",
+              "description": "Notre équipe prépare tous les documents et formulaires via le système d'enregistrement numérique des personnes morales (DBD Biz Regist).",
+              "icon": "FileStack"
+            },
+            {
+              "title": "Vérification d'identité en ligne (Pratique, sans déplacement)",
+              "description": "Les partenaires et le commandité vérifient leur identité via l'application ThaiD ou DBD e-Service. Ils peuvent choisir de scanner un code QR ou de cliquer pour vérifier via leur e-mail personnel.",
+              "icon": "SmartphoneNfc"
+            },
+            {
+              "title": "Soumission de l'enregistrement et livraison",
+              "description": "Notre équipe soumet la demande au Département du Développement des Affaires. Une fois approuvée, nous vérifierons l'exactitude et vous livrerons directement les documents essentiels ainsi que vos cadeaux gratuits.",
+              "icon": "Gift"
+            }
+          ]
+        },
+        "faq": {
+          "title": "Foire Aux Questions",
+          "items": [
+            {
+              "question": "Quelle est la différence entre un Commandité et un Commanditaire ?",
+              "answer": "La loi divise les partenaires d'une Société en Commandite en 2 types principaux, ce qui affecte leur responsabilité vis-à-vis des biens personnels, comme suit :\n\n<b>1. Commandité</b> \nLa loi exige qu'une Société en Commandite ait au moins 1 partenaire de ce type pour gérer l'entreprise. Ils ont le plein pouvoir de signer et d'engager la Société en Commandite. Cependant, la mise en garde est qu'ils doivent être responsables des dettes de la Société en Commandite de manière <b>« illimitée »</b> (si l'entreprise rencontre des problèmes et doit fermer, les biens personnels du commandité peuvent être utilisés pour rembourser les dettes).\n\n<b>2. Commanditaire</b> \nAgit uniquement en tant que « co-investisseur » sans droit de signer des ordres ou de gérer l'entreprise. L'avantage est qu'ils seront responsables des dettes de la Société en Commandite <b>« limitées à un montant ne dépassant pas celui qu'ils ont promis d'investir »</b> (100 % sûr pour les biens personnels)."
+            },
+            {
+              "question": "Quelle est la différence entre une Company Limited (Co., Ltd.) et une Société en Commandite (Ltd. Part.), et laquelle dois-je choisir ?",
+              "answer": "Bien que les deux structures aient le statut de <b>« Personne Morale »</b> et partagent les mêmes taux d'imposition, les principales différences résident dans la <b>« Responsabilité pour les dettes »</b>, la <b>« Crédibilité »</b> et les <b>« Restrictions sur les étrangers »</b>. Pour faciliter la compréhension et la décision, voici une comparaison :\n\n<b>1. Company Limited (Co., Ltd.)</b>\n• <b>Responsabilité :</b> <i>« Responsabilité limitée »</i> (sauf pour les directeurs). Tous les actionnaires ne sont responsables des dettes de l'entreprise qu'à hauteur du montant non libéré de leurs actions (cela sépare clairement les finances personnelles des finances de l'entreprise, protégeant ainsi les biens personnels).\n• <b>Crédibilité :</b> Très élevée. Convient aux affaires à long terme, aux appels d'offres gouvernementaux, aux grands projets, à l'attraction d'investisseurs ou aux opérations B2B.\n• <b>Cas des étrangers / Demande de permis de travail :</b> Fortement recommandé. La loi et les agences gouvernementales soutiennent pleinement la structure de Company Limited, qu'il s'agisse de la participation étrangère (jusqu'à 49 %), des demandes de permis de travail, des visas d'affaires ou des promotions d'investissement du BOI.\n• <b>Fondateurs requis :</b> Actuellement, un minimum de seulement 2 actionnaires est requis pour s'inscrire.\n\n<b>2. Société en Commandite (Limited Partnership)</b>\n• <b>Responsabilité :</b> La loi exige qu'au moins 1 partenaire agisse en tant que <i>« Commandité »</i>, qui doit être responsable des dettes de l'entreprise de manière <b>« illimitée »</b> (si l'entreprise rencontre des problèmes, le commandité pourrait devoir utiliser ses biens personnels pour rembourser les dettes). La responsabilité des autres partenaires est limitée à l'argent qu'ils ont investi.\n• <b>Crédibilité :</b> Modérée. Convient aux petites entreprises, aux entreprises familiales ou aux entreprises où les partenaires ne sont pas stricts quant au format juridique.\n• <b>Cas des étrangers :</b> Non recommandé. Avoir des étrangers dans une Société en Commandite implique des restrictions légales très complexes. Si un étranger devient commandité, l'entreprise pourrait être interprétée comme une entité étrangère, rendant les opérations et les demandes de permis de travail beaucoup plus difficiles qu'une Company Limited.\n• <b>Fondateurs requis :</b> Ne nécessite que 2 fondateurs, comme pour l'enregistrement d'une société.\n\n<b>Résumé : Laquelle choisir ?</b>\n• Choisissez une <b>« Company Limited »</b> si vous recherchez la crédibilité maximale, prévoyez d'étendre l'entreprise, souhaitez limiter les risques sur vos biens personnels, avez des actionnaires étrangers ou prévoyez d'embaucher des employés étrangers.\n• Choisissez une <b>« Société en Commandite »</b> si c'est une entreprise familiale ou avec des proches en qui vous avez 100 % confiance, si l'entreprise n'a pas de risques d'endettement élevés, s'il n'y a pas de partenaires étrangers et si vous privilégiez la structure de gestion la plus simple.\n\n<i><b>Remarque :</b> Actuellement, les coûts d'enregistrement, de comptabilité mensuelle et de clôture financière annuelle pour Co., Ltd. et Ltd. Part. ne diffèrent pas de manière significative. L'enregistrement en tant que « Company Limited » offre généralement les avantages maximaux à long terme.</i>"
+            },
+            {
+              "question": "L'enregistrement d'une Société en Commandite permet-il vraiment de réduire les coûts d'audit comptable annuel (CPA / TA) ?",
+              "answer": "<b>Vrai.</b> C'est l'un des avantages les plus importants de l'enregistrement d'une Société en Commandite.\n\nSelon la loi, si votre Société en Commandite répond aux critères d'une petite entreprise (Small SME), c'est-à-dire avoir un <b>capital enregistré ne dépassant pas 5 millions de THB, des revenus totaux ne dépassant pas 30 millions de THB et des actifs totaux ne dépassant pas 30 millions de THB</b>, vous avez le droit de faire appel à un <b>Auditeur Fiscal (TA - Tax Auditor)</b> pour auditer et signer les états financiers annuels.\n\nNormalement, les frais de service d'un TA sont plus économiques et accessibles que ceux d'un Expert-Comptable Agréé (CPA), que la loi rend obligatoire pour les « Company Limited » de toutes tailles. Cela permet à la Société en Commandite d'avoir des coûts de gestion annuels plus bas."
+            },
+            {
+              "question": "Qu'est-ce que le capital enregistré (apport en capital) d'une Société en Commandite ? Puis-je m'inscrire si je n'ai pas la totalité de la somme ?",
+              "answer": "Dans une Société en Commandite, nous appelons le capital enregistré <b>« Apport en capital »</b>, qui peut être investi en espèces, en actifs ou en main-d'œuvre. <i>« Payer l'apport en capital »</i> ne signifie pas payer de l'argent à quelqu'un, mais déposer du capital sur un compte bancaire au nom de la Société en Commandite pour être utilisé comme fonds de roulement (le compte peut être ouvert une fois l'enregistrement de la Société en Commandite terminé).\n\n• <b>Si vous n'avez pas la totalité de la somme :</b> Vous pouvez déposer de l'argent progressivement sur le compte une fois celui-ci ouvert (la loi ne vous oblige pas à payer 100 % immédiatement). Vous pouvez commencer par ouvrir le compte avec 1 000 THB. S'il y a des dépenses professionnelles, vous pouvez déposer de l'argent puis le dépenser. Cet argent n'a pas besoin de rester inactif sur le compte.\n• <b>Précautions :</b> Sauf dans le cas où l'investissement total de la Société en Commandite <b>dépasse 5 millions de THB</b>. La loi exige alors que l'argent réel soit présent et un certificat bancaire (Bank Certificate) de tous les partenaires doit être présenté lors du processus d'enregistrement."
+            },
+            {
+              "question": "Les étrangers peuvent-ils devenir partenaires dans une Société en Commandite ?",
+              "answer": "Légalement, c'est possible, <b>mais en pratique et pour la gestion, nous le déconseillons fortement.</b>\n\nAvoir un étranger comme partenaire dans une Société en Commandite implique des restrictions légales assez complexes. Surtout si un étranger devient le « Commandité », la Société en Commandite pourrait être interprétée comme une <b>« Personne Morale Étrangère »</b>, ce qui pourrait conduire à :\n1. Être restreint d'exploiter de nombreux types d'entreprises en Thaïlande (selon la loi sur les entreprises étrangères).\n2. La demande d'un permis de travail (Work Permit) et d'un visa d'affaires pour les étrangers peut être compliquée et a beaucoup plus de chances d'être rejetée que pour une Company Limited.\n<i>(S'il y a un co-investissement étranger, nous recommandons de s'inscrire en tant que « Company Limited », ce qui sera plus fluide et offrira un maximum d'avantages à long terme.)</i>"
+            },
+            {
+              "question": "Si je n'ai pas encore de bureau, ou si j'utilise une maison/un appartement en location comme adresse, puis-je m'inscrire ?",
+              "answer": "<b>Peut être enregistré</b> sous les conditions suivantes :\n• <b>Dans le cas d'une maison louée/un espace loué :</b> Vous devez avoir une <i>« Lettre de consentement pour utiliser les locaux »</i> accompagnée de copies dûment certifiées de la carte d'identité et du livret de famille du « Propriétaire ou Maître de maison ».\n• <b>Dans le cas d'une copropriété (Condominium) :</b> Bien que la loi le permette, vous devez d'abord vérifier auprès de la personne morale de la copropriété, car de nombreux projets ont des règlements internes interdisant l'enregistrement d'unités résidentielles en tant que bureaux.\n<i>(Si vous ne pouvez pas utiliser votre propre lieu, nous avons un service de <b>Bureau Virtuel (Virtual Office)</b> disponible pour résoudre ce problème.)</i>"
+            },
+            {
+              "question": "Une fois la Société en Commandite enregistrée, dois-je m'inscrire immédiatement à la Taxe sur la Valeur Ajoutée (TVA 7 %) ?",
+              "answer": "Pas nécessairement. L'enregistrement d'une Société en Commandite et l'enregistrement à la TVA sont deux choses différentes. Une Société en Commandite n'est obligée de s'inscrire à la TVA que lorsque ses revenus commerciaux <b>dépassent 1,8 million de THB par an</b>.\n\nCependant, si la Société en Commandite doit importer/exporter des biens, ou traiter avec des partenaires B2B qui exigent des factures fiscales, elle <b>doit demander l'enregistrement à la TVA</b> pour pouvoir émettre des factures fiscales dès le début de l'activité."
+            },
+            {
+              "question": "Après l'enregistrement de la Société en Commandite, mais avant qu'elle n'ait commencé à vendre ou généré des revenus, dois-je tenir une comptabilité ?",
+              "answer": "<b>Doit être fait.</b> Selon la loi (Loi sur la Comptabilité B.E. 2543), tous les types de personnes morales sont tenues de préparer des comptes et de soumettre des états financiers au Département du Développement des Affaires et au Département du Revenu <b>« même s'il n'y a pas de revenus, pas de dépenses, ou si l'entreprise n'a pas encore commencé ses opérations cette année-là (Déclaration à zéro) »</b>. Ne pas les soumettre à temps entraînera des amendes légales relativement élevées."
+            },
+            {
+              "question": "Le Commandité doit-il déduire son propre salaire pour la Sécurité Sociale ?",
+              "answer": "<b>Pas besoin.</b> En tant que commandité et propriétaire de l'entreprise, vous êtes dans la position d'un <b>« Employeur »</b>, et non d'un employé. Par conséquent, vous ne pouvez pas et n'avez pas besoin de vous inscrire comme personne assurée (Article 33) dans votre propre Société en Commandite.\n\nCependant, dès que la Société en Commandite commence à embaucher des <b>« employés à temps plein »</b>, la loi exige qu'elle s'inscrive comme employeur et soumette la Sécurité Sociale pour les employés dans les 30 jours suivant la date d'embauche."
+            }
+          ]
+        }
       },
       "foundation": {
         "title": "Fondation",
@@ -1355,5 +1527,16 @@
     "cta": "",
     "badge": "",
     "complimentary": ""
+  },
+  "search": {
+    "heading": "Résultats de recherche pour \"{query}\"",
+    "headingEmpty": "Rechercher des services et des articles",
+    "resultCount": "{count} résultats trouvés",
+    "tabAll": "Tous",
+    "tabServices": "Services",
+    "tabArticles": "Articles",
+    "emptyPrompt": "Tapez un mot-clé pour rechercher des services ou des articles",
+    "noResults": "Aucun résultat trouvé pour \"{query}\"",
+    "noResultsHint": "Essayez de rechercher avec d'autres mots-clés"
   }
 }

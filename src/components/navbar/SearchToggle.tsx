@@ -1,10 +1,11 @@
 // src/components/navbar/SearchToggle.tsx
 'use client';
 
-import { useCallback, useEffect, useRef, useState, type FormEvent } from 'react';
+import { useCallback, useDeferredValue, useEffect, useRef, useState, type FormEvent } from 'react';
 import { normalizeInternalHref } from '@/lib/links';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
+import SearchDropdown from '@/components/search/SearchDropdown';
 
 type SearchToggleProps = {
   open: boolean;
@@ -26,6 +27,7 @@ export default function SearchToggle({
   compactHidden = false,
 }: SearchToggleProps) {
   const [query, setQuery] = useState('');
+  const deferredQuery = useDeferredValue(query);
   const shellRef = useRef<HTMLDivElement | null>(null);
   const inputRef = useRef<HTMLInputElement | null>(null);
   const buttonRef = useRef<HTMLButtonElement | null>(null);
@@ -174,6 +176,12 @@ export default function SearchToggle({
                 </button>
               </form>
             </div>
+            {/* Inline search results dropdown */}
+            <SearchDropdown
+              query={deferredQuery}
+              visible={open && deferredQuery.trim().length > 0}
+              onSelect={close}
+            />
           </div>
         </div>
       </div>

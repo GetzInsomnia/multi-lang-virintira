@@ -121,7 +121,12 @@
         "placeholder": "Zoeken naar diensten of artikelen",
         "mobilePlaceholder": "Zoeken naar diensten of artikelen",
         "toggleLabel": "Toggle search",
-        "submitLabel": "Search"
+        "submitLabel": "Search",
+        "noResults": "Geen resultaten gevonden voor \"{query}\"",
+        "noResultsHint": "Probeer te zoeken met andere trefwoorden",
+        "services": "Diensten",
+        "articles": "Artikelen",
+        "viewAll": "Alle resultaten bekijken voor \"{query}\""
       },
       "language": {
         "label": "Language",
@@ -383,7 +388,7 @@
           "title": "Start uw bedrijf professioneel. Volledige bedrijfsregistratie op één plek.",
           "subtitle": "Vertrouwd door meer dan 300 ondernemers.",
           "description": "Verander ingewikkeld papierwerk en juridische procedures in een eenvoudig proces. Wij regelen alles, van de oprichting van uw bedrijf bij het Department of Business Development (DBD) tot het aanvragen van een bedrijfs-ID en btw-nummer, zodat u zich volledig kunt concentreren op de groei van uw bedrijf.",
-          "cta": "Bel 092-882-5556"
+          "cta": "+669 2882 5556"
         },
         "promotion": {
           "title": "Speciale Aanbieding!",
@@ -558,7 +563,174 @@
       },
       "limited-partnership": {
         "title": "Commanditaire Venn.",
-        "summary": "Snelle en conforme registratie van commanditaire vennootschappen (LP). Wij bieden ook voorlopig advies over de bedrijfsstructuur."
+        "summary": "Snelle en conforme registratie van commanditaire vennootschappen (LP). Wij bieden ook voorlopig advies over de bedrijfsstructuur.",
+        "hero": {
+          "title": "Registratie van Commanditaire Vennootschap (Limited Partnership). Eenvoudig te beheren, kosteneffectief.",
+          "subtitle": "De perfecte keuze voor kleine bedrijven.",
+          "description": "Zet de stap naar een volledig geregistreerde rechtspersoon om de geloofwaardigheid bij uw partners en klanten te vergroten. Met een structuur van een Commanditaire Vennootschap die gemakkelijker te beheren en kosteneffectiever is, hoeft u zich geen zorgen meer te maken over complexe juridische zaken. Wij staan klaar om uw persoonlijke assistent te zijn en alles van begin tot eind voor u te regelen totdat u klaar bent om uw bedrijf te runnen.",
+          "cta": "+669 2882 5556"
+        },
+        "promotion": {
+          "title": "Speciale Aanbieding!",
+          "subtitle": "Mis de speciale prijzen en volledige voordelen niet voor degenen die kosteneffectief een bedrijf willen starten.",
+          "cta": "Bekijk de aanbieding nu",
+          "slug": "limited-partnership-registration-deal"
+        },
+        "features": {
+          "title": "Alles wat u nodig heeft om een Commanditaire Vennootschap te starten",
+          "items": [
+            {
+              "title": "Advies en Aansprakelijkheidsstructurering",
+              "description": "Analyseer en adviseer bij het aanwijzen van de \"Beherend Vennoot\" en de \"Commanditaire Vennoot\" om uw persoonlijke bezittingen per geval te beschermen tegen risico's.",
+              "icon": "Lightbulb"
+            },
+            {
+              "title": "Documenten- en Aanvraagvoorbereiding",
+              "description": "Bereid registratieformulieren nauwkeurig voor en specificeer details van de kapitaalinbreng via het digitale registratiesysteem voor rechtspersonen (DBD Biz Regist).",
+              "icon": "FileSignature"
+            },
+            {
+              "title": "Indiening Bedrijfsregistratie",
+              "description": "Treed in elke fase op als uw vertegenwoordiger om aanvragen in te dienen bij het Department of Business Development, Ministerie van Handel.",
+              "icon": "Landmark"
+            },
+            {
+              "title": "Aanvraag Fiscaal Identificatienummer",
+              "description": "Handel de aanvraag voor het bedrijfsnummer en fiscaal identificatienummer af om het belastingsysteem voor uw Commanditaire Vennootschap voor te bereiden.",
+              "icon": "Calculator"
+            }
+          ]
+        },
+        "benefits": {
+          "title": "Compleet! Exclusieve privileges speciaal voor u",
+          "items": [
+            {
+              "title": "Geen maandelijkse boekhoudverplichting!",
+              "icon": "Unlock"
+            },
+            {
+              "title": "GRATIS! Controle en reservering van maximaal 3 bedrijfsnamen",
+              "icon": "SearchCheck"
+            },
+            {
+              "title": "GRATIS! 1 zelfinktende bedrijfsstempel",
+              "icon": "Stamp"
+            },
+            {
+              "title": "GRATIS! Vraag e-Filing wachtwoord aan voor de DBD",
+              "icon": "KeySquare"
+            },
+            {
+              "title": "GRATIS! Vraag een wachtwoord aan voor de Belastingdienst",
+              "icon": "KeyRound"
+            },
+            {
+              "title": "GRATIS! Documentenset voor het openen van een zakelijke bankrekening",
+              "icon": "Wallet"
+            },
+            {
+              "title": "GRATIS! Complete set bedrijfscertificaten (DBD)",
+              "icon": "ScrollText"
+            },
+            {
+              "title": "GRATIS! Trainingscursus belastingtechniek (Waarde 5.900 THB)",
+              "icon": "GraduationCap"
+            },
+            {
+              "title": "GRATIS! Visitekaartjes voor het uitschrijven van bonnen/belastingfacturen",
+              "icon": "Contact2"
+            }
+          ]
+        },
+        "requirements": {
+          "title": "Wat moet u voorbereiden voor de registratie van de Commanditaire Vennootschap",
+          "subtitle": "Bereid eenvoudig de basisinformatie voor, en wij doen de rest.",
+          "documents": {
+            "title": "1. Belangrijke vereiste documenten",
+            "items": [
+              "Minimaal 2 partners \n\n1. Thaise partners: Kopie identiteitskaart (Duidelijke kopie van voor- en achterkant)\n\n2. Buitenlandse partners: Kopie paspoort (Alleen de eerste pagina met foto)",
+              "Huisregistratie (Tabien Baan) te gebruiken als hoofdkantoor van de Commanditaire Vennootschap.",
+              "Stempelontwerp (indien aanwezig)"
+            ]
+          },
+          "information": {
+            "title": "2. Basis bedrijfsinformatie",
+            "items": [
+              "Gewenste naam Commanditaire Vennootschap (Thais-Engels)",
+              "Bedrag kapitaalinbreng van elke persoon (bijv. Dhr. A brengt 990.000 THB in, Dhr. B brengt 10.000 THB in)",
+              "Specificeer partnerstatus (Wie treedt op als de \"Beherend Vennoot\" en wie is de \"Commanditaire Vennoot\")",
+              "Beschrijving van de bedrijfsactiviteiten",
+              "Contactgegevens Commanditaire Vennootschap \n1. Telefoonnummer \n2. E-mail",
+              "Contactgegevens van elke partner \n1. Telefoonnummer \n2. E-mail \n3. LINE ID"
+            ]
+          }
+        },
+        "process": {
+          "title": "4 eenvoudige registratiestappen",
+          "steps": [
+            {
+              "title": "Advies en Naamsreservering",
+              "description": "We zullen overleggen om informatie te verzamelen, helpen bij het plannen van een structuur die het beste aan uw behoeften voldoet, en doorgaan met naamsreservering.",
+              "icon": "MessageSquareText"
+            },
+            {
+              "title": "Voorbereiding Documenten via Overheidssysteem",
+              "description": "Ons team bereidt alle documenten en formulieren voor via het digitale registratiesysteem voor rechtspersonen (DBD Biz Regist).",
+              "icon": "FileStack"
+            },
+            {
+              "title": "Online Identiteitsverificatie (Handig, geen reizen nodig)",
+              "description": "Partners en de Beherend Vennoot verifiëren hun identiteit via de ThaiD of DBD e-Service app. Ze kunnen ervoor kiezen om een QR-code te scannen of te klikken om te verifiëren via hun persoonlijke e-mail.",
+              "icon": "SmartphoneNfc"
+            },
+            {
+              "title": "Registratie Indienen en Levering",
+              "description": "Ons team dient de aanvraag in bij het Department of Business Development. Zodra deze is goedgekeurd, verifiëren we de juistheid en leveren we essentiële documenten en gratis geschenken rechtstreeks aan u af.",
+              "icon": "Gift"
+            }
+          ]
+        },
+        "faq": {
+          "title": "Veelgestelde Vragen (FAQ)",
+          "items": [
+            {
+              "question": "Wat is het verschil tussen een Beherend Vennoot en een Commanditaire Vennoot?",
+              "answer": "De wet verdeelt partners in een Commanditaire Vennootschap in 2 hoofdtypen, wat als volgt invloed heeft op hun verantwoordelijkheid over persoonlijke bezittingen:\n\n<b>1. Beherend Vennoot</b> \nDe wet vereist dat een Commanditaire Vennootschap ten minste 1 partner van dit type heeft om het bedrijf te leiden. Zij hebben de volledige bevoegdheid om te tekenen en de Commanditaire Vennootschap te binden. De waarschuwing is echter dat zij <b>\"onbeperkt\"</b> aansprakelijk moeten zijn voor de schulden van de Commanditaire Vennootschap (als het bedrijf problemen heeft en moet sluiten, kunnen de persoonlijke bezittingen van de Beherend Vennoot worden gebruikt om schulden af te betalen).\n\n<b>2. Commanditaire Vennoot</b> \nTrekt alleen op als een \"mede-investeerder\" zonder enig recht om opdrachten te ondertekenen of het bedrijf te beheren. Het voordeel is dat zij verantwoordelijk zullen zijn voor de schulden van de Commanditaire Vennootschap, <b>\"beperkt tot niet meer dan het bedrag dat zij hebben beloofd te investeren\"</b> (100% veilig voor persoonlijke bezittingen)."
+            },
+            {
+              "question": "Wat is het verschil tussen een Company Limited (Co., Ltd.) en een Commanditaire Vennootschap (Ltd. Part.), en welke moet ik kiezen?",
+              "answer": "Hoewel beide structuren de status van een <b>\"Rechtspersoon\"</b> hebben en dezelfde belastingtarieven delen, zijn er grote verschillen met betrekking tot <b>\"Aansprakelijkheid voor schulden\"</b>, <b>\"Geloofwaardigheid\"</b> en <b>\"Beperkingen voor buitenlanders\"</b>. Om het gemakkelijker te begrijpen en te beslissen, laten we ze als volgt vergelijken:\n\n<b>1. Company Limited (Co., Ltd.)</b>\n• <b>Aansprakelijkheid:</b> <i>\"Beperkte aansprakelijkheid\"</i> (behalve voor directeuren). Alle aandeelhouders zijn slechts aansprakelijk voor de schulden van de onderneming tot het onbetaalde bedrag van hun aandelen (dit scheidt persoonlijke financiën duidelijk van zakelijke financiën, waardoor persoonlijke bezittingen veilig blijven).\n• <b>Geloofwaardigheid:</b> Zeer hoog. Geschikt voor zakendoen op de lange termijn, overheidsaanbestedingen, grote projecten aannemen, investeerders aantrekken of B2B-activiteiten (Business-to-Business).\n• <b>In het geval van buitenlanders / Aanvragen van een werkvergunning (Work Permit):</b> Zeer geschikt. De wet en overheidsinstanties ondersteunen de Company Limited-structuur uitstekend, of het nu gaat om buitenlanders die aandelen bezitten (tot 49%), aanvragen voor werkvergunningen, zakelijke visa of BOI-investeringspromoties, enz.\n• <b>Aantal oprichters:</b> Momenteel is een minimum van slechts 2 aandeelhouders vereist om te registreren.\n\n<b>2. Commanditaire Vennootschap (Limited Partnership)</b>\n• <b>Aansprakelijkheid:</b> De wet vereist dat ten minste 1 partner optreedt als de <i>\"Beherend Vennoot\"</i>, die <b>\"onbeperkt\"</b> aansprakelijk moet zijn voor de schulden van de onderneming (als de onderneming problemen heeft, moet de beherend vennoot mogelijk persoonlijke bezittingen gebruiken om schulden te betalen). De aansprakelijkheid van andere partners is beperkt tot het door hen geïnvesteerde geld.\n• <b>Geloofwaardigheid:</b> Matig. Geschikt voor kleine bedrijven, familiebedrijven of ondernemingen waar partners niet te streng zijn over het formaat van de rechtspersoon.\n• <b>In het geval van buitenlanders:</b> Niet aanbevolen. Het hebben van buitenlanders in een Commanditaire Vennootschap brengt zeer complexe wettelijke beperkingen met zich mee. Als een buitenlander Beherend Vennoot wordt, kan dit worden geïnterpreteerd als een buitenlandse rechtspersoon, wat de bedrijfsvoering en het aanvragen van werkvergunningen veel moeilijker maakt dan bij een Company Limited.\n• <b>Aantal oprichters:</b> Vereist slechts 2 oprichters, net als bij het registreren van een bedrijf.\n\n<b>Samenvatting: Welke moet u kiezen?</b>\n• Kies een <b>\"Company Limited\"</b> als u de hoogste geloofwaardigheid zoekt, plannen heeft om het bedrijf of filialen in de toekomst uit te breiden, risico's voor uw persoonlijke bezittingen wilt beperken, buitenlandse aandeelhouders heeft, of van plan bent buitenlandse werknemers in dienst te nemen.\n• Kies een <b>\"Commanditaire Vennootschap\"</b> als het een familiebedrijf is of naaste mensen die u 100% vertrouwt, het bedrijf geen hoge schuldenrisico's heeft, er geen buitenlandse partners zijn, en u de nadruk legt op de eenvoudigste beheerstructuur.\n\n<i><b>Opmerking:</b> Momenteel verschillen de kosten voor registratie, maandelijkse boekhouding en de jaarlijkse financiële afsluiting voor Co., Ltd. en Ltd. Part. niet significant. Registreren als een \"Company Limited\" levert over het algemeen op de lange termijn de maximale voordelen op.</i>"
+            },
+            {
+              "question": "Bespaart het registreren van een Commanditaire Vennootschap echt kosten voor jaarlijkse boekhoudkundige controles (CPA / TA)?",
+              "answer": "<b>Waar.</b> Dit is een van de belangrijkste voordelen van het registreren van een Commanditaire Vennootschap.\n\nVolgens de wet heeft u, als uw Commanditaire Vennootschap voldoet aan de criteria van een kleine onderneming (Small SME), wat betekent dat deze een <b>geregistreerd kapitaal heeft van niet meer dan 5 miljoen THB, een totale omzet van niet meer dan 30 miljoen THB en totale activa van niet meer dan 30 miljoen THB</b>, het recht om een <b>Belastingcontroleur (TA - Tax Auditor)</b> te gebruiken om de jaarlijkse financiële overzichten te controleren en te ondertekenen.\n\nNormaal gesproken zijn de servicekosten van een TA zuiniger en toegankelijker in vergelijking met het gebruik van een Registeraccountant (CPA), die de wet verplicht stelt voor \"Company Limited\" van elke bedrijfsgrootte. Dit resulteert in lagere jaarlijkse beheerkosten voor de Commanditaire Vennootschap."
+            },
+            {
+              "question": "Wat is het Geregistreerd Kapitaal (Kapitaalinbreng) van een Commanditaire Vennootschap? Kan ik me registreren als ik niet het volledige bedrag in één keer heb?",
+              "answer": "In een Commanditaire Vennootschap verwijzen we naar het geregistreerd kapitaal als <b>\"Kapitaalinbreng\"</b>, dat in contanten, activa of arbeid kan worden geïnvesteerd. <i>\"De kapitaalinbreng betalen\"</i> betekent niet dat u geld aan iemand betaalt, maar het betekent dat u kapitaal stort op een bankrekening op naam van de Commanditaire Vennootschap om te worden gebruikt als werkkapitaal voor het bedrijf (de rekening kan worden geopend nadat de registratie van de Commanditaire Vennootschap is voltooid).\n\n• <b>Als u niet het volledige bedrag in één keer heeft:</b> U kunt het geld geleidelijk op de rekening storten zodra de rekening van de Commanditaire Vennootschap is geopend (de wet dwingt u niet om meteen de volledige 100% te storten). U kunt beginnen door de rekening te openen met 1.000 THB. Als er zakelijke uitgaven zijn, kunt u geld op de rekening storten en het dan uitbetalen. Dit bedrag hoeft niet stil te staan op de rekening.\n• <b>Voorzorgsmaatregelen:</b> Behalve in het geval dat de Commanditaire Vennootschap een totale investering heeft van <b>meer dan 5 miljoen THB</b>. De wet vereist in dat geval dat het daadwerkelijke geld aanwezig is, en tijdens het registratieproces moet een bankverklaring (Bank Certificate) van alle partners worden getoond."
+            },
+            {
+              "question": "Mogen buitenlanders partner worden in een Commanditaire Vennootschap?",
+              "answer": "Wettelijk kan het, <b>maar praktisch en beheersmatig raden wij het ten zeerste af.</b>\n\nHet hebben van een buitenlander als partner in een Commanditaire Vennootschap brengt nogal complexe wettelijke beperkingen met zich mee. Vooral als een buitenlander de \"Beherend Vennoot\" wordt, kan de Commanditaire Vennootschap worden geïnterpreteerd als een <b>\"Buitenlandse Rechtspersoon\"</b>, wat kan leiden tot:\n1. Beperkt zijn om in Thailand veel soorten bedrijven te runnen (volgens de wet op buitenlandse bedrijven).\n2. Het aanvragen van een werkvergunning (Work Permit) en een zakelijk visum voor buitenlanders kan ingewikkeld zijn en heeft een veel grotere kans om te worden afgewezen dan bij een Company Limited.\n<i>(Als er sprake is van buitenlandse mede-investeringen, raden we aan om te kiezen voor registratie als een \"Company Limited\", wat soepeler zal verlopen en op de lange termijn maximale voordelen zal opleveren.)</i>"
+            },
+            {
+              "question": "Als ik nog geen kantoor heb, of een huurhuis/condo als locatie gebruik, kan ik me dan registreren?",
+              "answer": "<b>Kan worden geregistreerd</b> onder de volgende voorwaarden:\n• <b>In het geval van een huurhuis/gehuurde ruimte:</b> U moet beschikken over een <i>\"Toestemmingsbrief om het pand te gebruiken\"</i> samen met naar behoren gewaarmerkte kopieën van de ID-kaart en huisregistratie van de \"Huismeester of Eigenaar van het onroerend goed\".\n• <b>In het geval van een condominium:</b> Hoewel de wet het toestaat, moet u dit eerst controleren bij de beheerder (juristic person) van het condominium, omdat veel projecten interne reglementen hebben die niet toestaan dat woonruimtes als kantoren worden geregistreerd.\n<i>(Als het voor u niet handig is om uw eigen ruimte te gebruiken, hebben we een <b>Virtual Office</b>-service beschikbaar om dit probleem op te lossen.)</i>"
+            },
+            {
+              "question": "Moet ik me, nadat de Commanditaire Vennootschap is geregistreerd, onmiddellijk registreren voor de Belasting over de Toegevoegde Waarde (BTW 7%)?",
+              "answer": "Niet noodzakelijkerwijs. Een Commanditaire Vennootschap registreren en u registreren voor de Belasting over de Toegevoegde Waarde (BTW) zijn twee verschillende dingen. Een Commanditaire Vennootschap is pas verplicht zich voor de BTW te registreren wanneer deze een bedrijfsinkomen heeft dat <b>hoger is dan 1,8 miljoen THB per jaar</b>.\n\nEchter, als de Commanditaire Vennootschap goederen moet importeren/exporteren, of te maken heeft met B2B-partners die vereisen dat er belastingfacturen worden uitgeschreven, <b>moet de Commanditaire Vennootschap een BTW-registratie aanvragen</b> om vanaf de start van het bedrijf belastingfacturen aan partners te kunnen uitschrijven."
+            },
+            {
+              "question": "Moet ik na registratie, ook al ben ik nog niet begonnen met verkopen of inkomsten genereren, toch een boekhouding bijhouden?",
+              "answer": "<b>Moet worden gedaan.</b> Volgens de wet (Boekhoudwet B.E. 2543) zijn alle soorten rechtspersonen verplicht om rekeningen op te stellen en financiële overzichten in te dienen bij het Department of Business Development en de Belastingdienst, <b>\"zelfs als er in dat jaar geen inkomsten, geen uitgaven zijn of als de bedrijfsactiviteiten nog niet zijn gestart (Nulaangifte)\"</b>. Het niet tijdig indienen zal leiden tot relatief hoge wettelijke boetes."
+            },
+            {
+              "question": "Moet de Beherend Vennoot zijn eigen salaris inhouden voor de Sociale Zekerheid?",
+              "answer": "<b>Niet nodig.</b> Aangezien u de Beherend Vennoot en bedrijfseigenaar bent, bevindt u zich in de positie van een <b>\"Werkgever\"</b>, niet van een werknemer. Daarom kunt u zich niet registreren als verzekerde persoon (Artikel 33) in uw eigen Commanditaire Vennootschap en hoeft u dat ook niet te doen.\n\nEchter, wanneer de Commanditaire Vennootschap begint met het inhuren van <b>\"fulltime werknemers\"</b>, vereist de wet dat de Commanditaire Vennootschap zich registreert als werkgever en de Sociale Zekerheid voor de werknemers indient binnen 30 dagen na de aanwervingsdatum."
+            }
+          ]
+        }
       },
       "foundation": {
         "title": "Stichting",
@@ -1336,5 +1508,16 @@
     "cta": "",
     "badge": "",
     "complimentary": ""
+  },
+  "search": {
+    "heading": "Zoekresultaten voor \"{query}\"",
+    "headingEmpty": "Diensten en artikelen zoeken",
+    "resultCount": "{count} resultaten gevonden",
+    "tabAll": "Alle",
+    "tabServices": "Diensten",
+    "tabArticles": "Artikelen",
+    "emptyPrompt": "Typ een trefwoord om diensten of artikelen te zoeken",
+    "noResults": "Geen resultaten gevonden voor \"{query}\"",
+    "noResultsHint": "Probeer te zoeken met andere trefwoorden"
   }
 }

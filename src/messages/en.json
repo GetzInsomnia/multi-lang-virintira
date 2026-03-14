@@ -121,7 +121,12 @@
         "placeholder": "Search for services or articles",
         "mobilePlaceholder": "Search for services or articles",
         "toggleLabel": "Toggle search",
-        "submitLabel": "Search"
+        "submitLabel": "Search",
+        "noResults": "No results found for \"{query}\"",
+        "noResultsHint": "Try searching with different keywords",
+        "services": "Services",
+        "articles": "Articles",
+        "viewAll": "View all results for \"{query}\""
       },
       "language": {
         "label": "Language",
@@ -383,7 +388,7 @@
           "title": "Start your business professionally. Complete company registration in one place.",
           "subtitle": "Trusted by over 300 entrepreneurs.",
           "description": "Turn complicated paperwork and legal procedures into a simple process. We take care of everything from setting up your company with the Department of Business Development (DBD), to requesting a corporate ID and tax identification number, so you can fully focus on growing your business.",
-          "cta": "Call 092-882-5556"
+          "cta": "+669 2882 5556"
         },
         "promotion": {
           "title": "Special Deal!",
@@ -558,7 +563,174 @@
       },
       "limited-partnership": {
         "title": "Limited Partnership",
-        "summary": "Fast and compliant limited partnership (LP) registration. We also provide preliminary business structure consulting."
+        "summary": "Fast and compliant limited partnership (LP) registration. We also provide preliminary business structure consulting.",
+        "hero": {
+          "title": "Limited Partnership (Ltd. Part.) Registration. Easy to manage, cost-effective.",
+          "subtitle": "The perfect choice for small businesses.",
+          "description": "Step into a fully registered juristic person to enhance credibility with your partners and customers. With a Limited Partnership structure that is easier to manage and more cost-effective, you can stop worrying about complex legalities. We are ready to be your personal assistant, taking care of everything from start to finish until you are ready to operate your business.",
+          "cta": "+669 2882 5556"
+        },
+        "promotion": {
+          "title": "Special Promotion!",
+          "subtitle": "Don't miss out on special prices and fully-loaded privileges for those who want to start a business cost-effectively.",
+          "cta": "View Promotion now",
+          "slug": "limited-partnership-registration-deal"
+        },
+        "features": {
+          "title": "Everything you need to start a Limited Partnership",
+          "items": [
+            {
+              "title": "Consulting and Liability Structuring",
+              "description": "Analyze and provide advice on designating the \"Managing Partner\" and \"Limited Liability Partner\" to protect your personal assets from risks on a case-by-case basis.",
+              "icon": "Lightbulb"
+            },
+            {
+              "title": "Document and Application Preparation",
+              "description": "Accurately prepare registration application forms and specify capital contribution details via the digital juristic person registration system (DBD Biz Regist).",
+              "icon": "FileSignature"
+            },
+            {
+              "title": "Juristic Person Registration Submission",
+              "description": "Act as your representative to process and submit applications to the Department of Business Development, Ministry of Commerce at every step.",
+              "icon": "Landmark"
+            },
+            {
+              "title": "Tax Identification Number Request",
+              "description": "Handle the request for the juristic person number and tax identification number to prepare the tax system for your Limited Partnership.",
+              "icon": "Calculator"
+            }
+          ]
+        },
+        "benefits": {
+          "title": "Fully loaded! Exclusive privileges just for you",
+          "items": [
+            {
+              "title": "No monthly accounting tie-in!",
+              "icon": "Unlock"
+            },
+            {
+              "title": "FREE! Check and reserve up to 3 Limited Partnership names",
+              "icon": "SearchCheck"
+            },
+            {
+              "title": "FREE! 1 self-inking Limited Partnership stamp",
+              "icon": "Stamp"
+            },
+            {
+              "title": "FREE! Request e-Filing password for the DBD",
+              "icon": "KeySquare"
+            },
+            {
+              "title": "FREE! Request password for the Revenue Department",
+              "icon": "KeyRound"
+            },
+            {
+              "title": "FREE! Document set for opening a corporate bank account",
+              "icon": "Wallet"
+            },
+            {
+              "title": "FREE! Complete set of Limited Partnership certificate documents (DBD)",
+              "icon": "ScrollText"
+            },
+            {
+              "title": "FREE! Tax technique training course (Value 5,900 THB)",
+              "icon": "GraduationCap"
+            },
+            {
+              "title": "FREE! Business cards for issuing receipts/tax invoices",
+              "icon": "Contact2"
+            }
+          ]
+        },
+        "requirements": {
+          "title": "What to prepare for Limited Partnership registration",
+          "subtitle": "Just prepare basic information, and leave the rest to us.",
+          "documents": {
+            "title": "1. Important documents required",
+            "items": [
+              "At least 2 partners \n\n1. Thai partners: Copy of ID card (Clear copy of front and back)\n\n2. Foreign partners: Copy of passport (Only the first page with photo)",
+              "House registration to be used as the head office of the Limited Partnership.",
+              "Stamp design (if any)"
+            ]
+          },
+          "information": {
+            "title": "2. Basic business information",
+            "items": [
+              "Desired Limited Partnership name (Thai-English)",
+              "Capital contribution amount of each person (e.g., Mr. A contributes 990,000 THB, Mr. B contributes 10,000 THB)",
+              "Specify partner status (Who acts as the \"Managing Partner\" and who is the \"Limited Liability Partner\")",
+              "Description of business operations",
+              "Limited Partnership contact information \n1. Phone number \n2. Email",
+              "Contact information of each partner \n1. Phone number \n2. Email \n3. LINE ID"
+            ]
+          }
+        },
+        "process": {
+          "title": "4 simple registration steps",
+          "steps": [
+            {
+              "title": "Consultation and Name Reservation",
+              "description": "We will discuss to gather information, help plan a Limited Partnership structure that best suits your needs, and proceed with name reservation.",
+              "icon": "MessageSquareText"
+            },
+            {
+              "title": "Document Preparation via Government System",
+              "description": "Our team prepares all documents and forms via the digital juristic person registration system (DBD Biz Regist).",
+              "icon": "FileStack"
+            },
+            {
+              "title": "Online Identity Verification (Convenient, No travel required)",
+              "description": "Partners and the Managing Partner verify their identity via the ThaiD or DBD e-Service app. They can choose to scan a QR Code or click to verify via their personal email.",
+              "icon": "SmartphoneNfc"
+            },
+            {
+              "title": "Registration Submission and Delivery",
+              "description": "Our team submits the application to the Department of Business Development. Once approved, we will verify the accuracy and deliver essential documents along with free gifts directly to you.",
+              "icon": "Gift"
+            }
+          ]
+        },
+        "faq": {
+          "title": "Frequently Asked Questions",
+          "items": [
+            {
+              "question": "What is the difference between a Managing Partner and a Limited Liability Partner?",
+              "answer": "The law divides partners in a Limited Partnership into 2 main types, which affects their responsibility over personal assets, as follows:\n\n<b>1. Managing Partner</b> \nThe law requires a Limited Partnership to have at least 1 partner of this type to manage the business. They have full authority to sign and bind the Limited Partnership. However, the caveat is that they must be responsible for the debts of the Limited Partnership on an <b>\"unlimited\"</b> basis (if the business faces problems and has to close, the personal assets of the Managing Partner may be used to pay off debts).\n\n<b>2. Limited Liability Partner</b> \nActs only as a \"co-investor\" with no right to sign orders or manage the business. The advantage is that they will be responsible for the debts of the Limited Partnership <b>\"limited to no more than the amount they promised to invest\"</b> (100% safe for personal assets)."
+            },
+            {
+              "question": "What is the difference between a Company Limited (Co., Ltd.) and a Limited Partnership (Ltd. Part.), and which one should I choose?",
+              "answer": "Although both structures have the status of a <b>\"Juristic Person\"</b> and have the same tax rates, there are major differences regarding <b>\"Liability for debts\"</b>, <b>\"Credibility\"</b>, and <b>\"Restrictions on foreigners\"</b>. To make it easier to understand and decide, let us compare them as follows:\n\n<b>1. Company Limited</b>\n• <b>Liability:</b> <i>\"Limited liability\"</i> (except for directors). All shareholders are liable for the company's debts up to the unpaid amount of their shares (this clearly separates personal wallets from business wallets, keeping personal assets safe).\n• <b>Credibility:</b> Very high. Suitable for long-term business, government bidding, taking on large projects, attracting investors, or B2B (Business-to-Business) operations.\n• <b>In case of foreigners / Work Permit requests:</b> Highly suitable. The law and government agencies excellently support the Company Limited structure, whether it involves foreigners holding shares (up to 49%), Work Permit requests, business visas, or BOI investment promotions, etc.\n• <b>Number of founders:</b> Currently, a minimum of only 2 shareholders is required to register.\n\n<b>2. Limited Partnership</b>\n• <b>Liability:</b> The law requires at least 1 partner to act as the <i>\"Managing Partner\"</i>, who must be responsible for the business's debts on an <b>\"unlimited\"</b> basis (if the business has problems, the managing partner may have to use personal assets to pay debts). Other partners' liability is limited to the money they invested.\n• <b>Credibility:</b> Moderate. Suitable for small businesses, Family Businesses, or enterprises where partners are not too serious about the juristic person format.\n• <b>In case of foreigners:</b> Not recommended. Having foreigners in a Limited Partnership entails highly complex legal restrictions. If a foreigner is made the Managing Partner, it might be interpreted as an alien juristic person, making business operations and Work Permit requests much more difficult than a Company Limited.\n• <b>Number of founders:</b> Requires only 2 founders, the same as registering a company.\n\n<b>Summary: Which one should you choose?</b>\n• Choose a <b>\"Company Limited\"</b> if you are looking for the highest credibility, have plans to expand the business or branches in the future, want to limit risks from affecting personal assets, have foreigners as shareholders, or plan to hire foreign employees (Work Permit requests).\n• Choose a <b>\"Limited Partnership\"</b> if it is a family business or close people you trust 100%, the business does not have high debt risks, there are no foreign partners, and you emphasize the simplest management structure.\n\n<i><b>Note:</b> Currently, the costs for registration, monthly accounting, and annual financial closing for Co., Ltd. and Ltd. Part. are not much different. Registering as a \"Company Limited\" generally yields maximum benefits in the long run.</i>"
+            },
+            {
+              "question": "Does registering a Limited Partnership really save costs on annual accounting audits (CPA / TA)?",
+              "answer": "<b>True.</b> This is one of the most important advantages of registering a Limited Partnership.\n\nBy law, if your Limited Partnership meets the criteria of a small enterprise (Small SME) which means having <b>registered capital not exceeding 5 million THB, total revenue not exceeding 30 million THB, and total assets not exceeding 30 million THB</b>, you are entitled to use a <b>Tax Auditor (TA)</b> to audit and sign the annual financial statements.\n\nNormally, the service fees of a TA are more economical and accessible compared to using a Certified Public Accountant (CPA), which the law mandates for \"Company Limited\" of all business sizes. This results in the Limited Partnership having lower annual management costs."
+            },
+            {
+              "question": "What is the Registered Capital (Capital Contribution) of a Limited Partnership? Can I register if I don't have the entire lump sum?",
+              "answer": "In a Limited Partnership, we refer to the registered capital as <b>\"Capital Contribution\"</b>, which can be invested in cash, assets, or labor. <i>\"Paying the capital contribution\"</i> does not mean paying money to anyone, but it means depositing capital into a bank account under the name of the Limited Partnership to be used as working capital for the business (which can be opened after the Limited Partnership registration is complete).\n\n• <b>If you do not have the entire lump sum:</b> You can gradually deposit money into the account once the Limited Partnership's account is opened (the law does not force you to pay 100% fully immediately). You may start by opening the Limited Partnership's account with 1,000 THB. If there are business-related expenses, you can deposit money into the account and then pay it out. This lump sum does not need to sit idle in the account.\n• <b>Precautions:</b> Except in the case where the Limited Partnership has a total investment of <b>more than 5 million THB</b>, the law requires the actual money to be present, and a Bank Certificate of all partners from the bank must be shown during the registration process."
+            },
+            {
+              "question": "Can foreigners become partners in a Limited Partnership?",
+              "answer": "Legally it can be done, <b>but practically and managerially, we highly do not recommend it.</b>\n\nHaving a foreigner as a partner in a Limited Partnership involves quite complex legal restrictions. Especially if a foreigner becomes a \"Managing Partner\", the Limited Partnership might be interpreted as an <b>\"Alien Juristic Person\"</b>, which could lead to:\n1. Being restricted from operating many types of businesses in Thailand (according to the Foreign Business Act).\n2. Requesting a Work Permit and business visa for foreigners may be complicated and has a much higher chance of being rejected than a Company Limited.\n<i>(If there is foreign co-investment, we recommend choosing to register as a \"Company Limited\", which will be smoother and provide maximum benefits in the long run.)</i>"
+            },
+            {
+              "question": "If I don't have an office yet, or use a rented house/condo as a location, can I register?",
+              "answer": "<b>It can be registered</b> under the following conditions:\n• <b>In case of a rented house/rented space:</b> You must have a <i>\"Letter of Consent to Use the Premises\"</i> along with properly certified copies of the ID card and house registration of the \"House Master or Property Owner\".\n• <b>In case of a condominium:</b> Although the law allows it, you should check with the condominium's juristic person first, because many projects have internal regulations that do not allow residential rooms to be registered as offices.\n<i>(If you are not convenient using your own place, we have a <b>Virtual Office</b> service available to solve this problem.)</i>"
+            },
+            {
+              "question": "Once the Limited Partnership is registered, do I have to register for Value Added Tax (VAT 7%) immediately?",
+              "answer": "Not necessarily. Registering a Limited Partnership and registering for Value Added Tax (VAT) are two different things. A Limited Partnership is forced to register for VAT only when it has business income <b>exceeding 1.8 million THB per year</b>.\n\nHowever, if the Limited Partnership needs to import-export goods, or deal with B2B partners where partners require tax invoices to be issued, the Limited Partnership <b>must apply for Value Added Tax (VAT) registration</b> to be able to issue tax invoices to partners from the start of the business."
+            },
+            {
+              "question": "After the Limited Partnership is registered, but hasn't started selling or hasn't generated income yet, do I need to do accounting?",
+              "answer": "<b>Must do.</b> By law (Accounting Act B.E. 2543), all types of juristic persons are required to prepare accounts and submit financial statements to the Department of Business Development and the Revenue Department <b>\"even if there is no income, no expenses, or the business has not yet started operating in that year (Zero Declaration)\"</b>. Neglecting to submit on time will result in relatively high legal fines."
+            },
+            {
+              "question": "Does the Managing Partner have to deduct their own salary to submit to Social Security?",
+              "answer": "<b>No need.</b> As you are the Managing Partner and business owner, you are in the position of an <b>\"Employer\"</b>, not an employee. Therefore, you cannot and do not need to register as an insured person (Article 33) in your own Limited Partnership.\n\nHowever, whenever the Limited Partnership starts hiring <b>\"full-time employees\"</b>, the law requires the Limited Partnership to register as an employer and submit Social Security for the employees within 30 days from the date of hiring."
+            }
+          ]
+        }
       },
       "foundation": {
         "title": "Foundation",
@@ -1355,5 +1527,16 @@
     "cta": "",
     "badge": "",
     "complimentary": ""
+  },
+  "search": {
+    "heading": "Search results for \"{query}\"",
+    "headingEmpty": "Search services and articles",
+    "resultCount": "{count} results found",
+    "tabAll": "All",
+    "tabServices": "Services",
+    "tabArticles": "Articles",
+    "emptyPrompt": "Type a keyword to search for services or articles",
+    "noResults": "No results found for \"{query}\"",
+    "noResultsHint": "Try searching with different keywords"
   }
 }
