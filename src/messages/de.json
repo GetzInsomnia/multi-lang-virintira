@@ -1641,8 +1641,8 @@
         ],
         "conditions": "Gebühren nach Komplexität und Belegmenge. Reisekosten zum Finanzamt nicht enthalten."
       },
-      "close-financial-deal": {
-        "slug": "close-financial-deal",
+      "close-financial-and-audit-bundle": {
+        "slug": "close-financial-and-audit-bundle",
         "category": "Accounting & Audit",
         "categoryId": "accounting",
         "title": "Jahresabschluss",

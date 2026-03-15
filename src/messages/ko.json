@@ -1622,8 +1622,8 @@
         ],
         "conditions": "개인 소득세 정산 수수료는 업종 복잡도와 서류량에 따라 다르며, 국세청 대리 출석 교통비는 미포함."
       },
-      "close-financial-deal": {
-        "slug": "close-financial-deal",
+      "close-financial-and-audit-bundle": {
+        "slug": "close-financial-and-audit-bundle",
         "category": "회계 및 감사",
         "categoryId": "accounting",
         "title": "연간 재무제표 결산",

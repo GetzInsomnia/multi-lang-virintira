@@ -1641,8 +1641,8 @@
         ],
         "conditions": "शुल्क जटिलता पर निर्भर। यात्रा खर्च शामिल नहीं।"
       },
-      "close-financial-deal": {
-        "slug": "close-financial-deal",
+      "close-financial-and-audit-bundle": {
+        "slug": "close-financial-and-audit-bundle",
         "category": "Accounting & Audit",
         "categoryId": "accounting",
         "title": "वार्षिक वित्तीय विवरण समापन",

@@ -1647,8 +1647,8 @@
         ],
         "conditions": "Personal income tax clearing fees depend on business type complexity and document volume. Travel expenses for representing clients at the Revenue Department office are not included."
       },
-      "close-financial-deal": {
-        "slug": "close-financial-deal",
+      "close-financial-and-audit-bundle": {
+        "slug": "close-financial-and-audit-bundle",
         "category": "Accounting & Audit",
         "categoryId": "accounting",
         "title": "Annual Financial Statement Closing",

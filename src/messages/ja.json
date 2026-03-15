@@ -1623,8 +1623,8 @@
         ],
         "conditions": "個人所得税精算料金は業種の複雑さと書類量により異なり、歳入局への代理出向費は含まれません。"
       },
-      "close-financial-deal": {
-        "slug": "close-financial-deal",
+      "close-financial-and-audit-bundle": {
+        "slug": "close-financial-and-audit-bundle",
         "category": "会計・監査",
         "categoryId": "accounting",
         "title": "年次決算書作成",

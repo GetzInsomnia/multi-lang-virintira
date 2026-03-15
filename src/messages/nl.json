@@ -1622,8 +1622,8 @@
         ],
         "conditions": "Tarieven op basis van complexiteit. Reiskosten niet inbegrepen."
       },
-      "close-financial-deal": {
-        "slug": "close-financial-deal",
+      "close-financial-and-audit-bundle": {
+        "slug": "close-financial-and-audit-bundle",
         "category": "Accounting & Audit",
         "categoryId": "accounting",
         "title": "Jaarlijkse Jaarafsluiting",

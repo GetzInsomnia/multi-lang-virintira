@@ -1622,8 +1622,8 @@
         ],
         "conditions": "Tariffe secondo complessità. Spese di viaggio escluse."
       },
-      "close-financial-deal": {
-        "slug": "close-financial-deal",
+      "close-financial-and-audit-bundle": {
+        "slug": "close-financial-and-audit-bundle",
         "category": "Accounting & Audit",
         "categoryId": "accounting",
         "title": "Chiusura Bilancio Annuale",

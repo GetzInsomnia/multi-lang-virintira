@@ -233,9 +233,9 @@ export const SERVICE_PROMOTION_MAP: Partial<Record<ServiceSlug, string>> = {
   'commercial-shop': 'commercial-shop-registration-deal',
   'monthly-bookkeeping': 'monthly-bookkeeping-and-tax-bundle',
   'monthly-tax': 'monthly-bookkeeping-and-tax-bundle',
-  'close-financial': 'close-financial-deal',
+  'close-financial': 'close-financial-and-audit-bundle',
   'personal-accounts': 'individual-tax-clearing',
-  'audit': 'close-financial-deal',
+  'audit': 'close-financial-and-audit-bundle',
 };
 
 export function getPromotionSlugForService(serviceSlug: string): string | undefined {

@@ -1641,8 +1641,8 @@
         ],
         "conditions": "Tarifs selon complexité. Frais de déplacement non inclus."
       },
-      "close-financial-deal": {
-        "slug": "close-financial-deal",
+      "close-financial-and-audit-bundle": {
+        "slug": "close-financial-and-audit-bundle",
         "category": "Accounting & Audit",
         "categoryId": "accounting",
         "title": "Clôture annuelle des comptes",

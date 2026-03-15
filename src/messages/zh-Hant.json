@@ -1641,8 +1641,8 @@
         ],
         "conditions": "个人所得税清算费用取决于业务类型复杂程度和文件数量，不包含代理客户前往税务局说明的差旅费。"
       },
-      "close-financial-deal": {
-        "slug": "close-financial-deal",
+      "close-financial-and-audit-bundle": {
+        "slug": "close-financial-and-audit-bundle",
         "category": "会计与审计",
         "categoryId": "accounting",
         "title": "年度財務報表結算",

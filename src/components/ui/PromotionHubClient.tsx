@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FaCheckCircle, FaTags, FaPlus } from 'react-icons/fa';
 import Link from 'next/link';
+import Image from 'next/image';
 import { Breadcrumbs } from '@/components/ui/Breadcrumbs';
 
 interface PromotionItem {
@@ -129,13 +130,17 @@ export function PromotionHubClient({ locale, hero, filters, items, ui }: Promoti
                                     key={item.slug}
                                     className={`flex flex-col bg-white rounded-3xl border border-gray-100 overflow-hidden transition-all duration-300 group outline-none focus-visible:ring-2 focus-visible:ring-[#A70909] ${rainbowShadows[idx % 7]}`}
                                 >
-                                    {/* Thumbnail Placeholder */}
-                                    <div className="relative w-full aspect-[4/3] bg-gray-50 flex items-center justify-center border-b border-gray-100 overflow-hidden text-gray-300">
-                                        <span className="text-4xl text-gray-400 font-bold opacity-20 select-none group-hover:scale-105 transition-transform duration-500">
-                                            Virintira
-                                        </span>
-                                        {/* Category Badge absolute positioned over image */}
-                                        <div className="absolute top-4 left-4 inline-flex items-center gap-1.5 bg-white/95 backdrop-blur-sm text-gray-800 px-3 py-1.5 rounded-full text-xs font-bold shadow-sm border border-gray-100/50">
+                                    {/* Card Thumbnail */}
+                                    <div className="relative w-full aspect-[4/3] bg-gray-50 border-b border-gray-100 overflow-hidden">
+                                        <Image
+                                            src={`/promotion/card/${item.slug}.webp`}
+                                            alt={item.title}
+                                            fill
+                                            className="object-cover group-hover:scale-105 transition-transform duration-500"
+                                            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                                        />
+                                        {/* Category Badge */}
+                                        <div className="absolute top-4 left-4 inline-flex items-center gap-1.5 bg-white/95 backdrop-blur-sm text-gray-800 px-3 py-1.5 rounded-full text-xs font-bold shadow-sm border border-gray-100/50 z-10">
                                             <FaTags className="text-[#A70909]" />
                                             {item.category}
                                         </div>

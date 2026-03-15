@@ -1641,8 +1641,8 @@
         ],
         "conditions": "கட்டணம் சிக்கலான தன்மையின் அடிப்படையில்."
       },
-      "close-financial-deal": {
-        "slug": "close-financial-deal",
+      "close-financial-and-audit-bundle": {
+        "slug": "close-financial-and-audit-bundle",
         "category": "Accounting & Audit",
         "categoryId": "accounting",
         "title": "ஆண்டு நிதிநிலை அறிக்கை முடிவு",

@@ -1641,8 +1641,8 @@
         ],
         "conditions": "Kadar bergantung kepada kerumitan. Kos perjalanan tidak termasuk."
       },
-      "close-financial-deal": {
-        "slug": "close-financial-deal",
+      "close-financial-and-audit-bundle": {
+        "slug": "close-financial-and-audit-bundle",
         "category": "Accounting & Audit",
         "categoryId": "accounting",
         "title": "Penutupan Penyata Kewangan Tahunan",

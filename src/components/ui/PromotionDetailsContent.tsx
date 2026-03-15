@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { FaCheckCircle, FaLine, FaPhoneAlt, FaComments, FaInfoCircle } from 'react-icons/fa';
+import Image from 'next/image';
 import { COMPANY } from '@/data/company';
 import { useUI } from '@/context/UIContext';
 import { useLocale } from 'next-intl';
@@ -147,12 +148,16 @@ export function PromotionDetailsContent({ item, ui }: PromotionDetailsContentPro
         <div className="flex flex-col lg:flex-row gap-8 lg:gap-16 w-full pb-24 lg:pb-32">
             {/* Main Content Area (Left) */}
             <div className="flex-1">
-                {/* 1. Full Width Image Placeholder */}
-                <div className="w-full aspect-[21/9] sm:aspect-[16/6] bg-gray-100 rounded-3xl overflow-hidden shadow-sm flex items-center justify-center border-2 border-dashed border-gray-200 mb-8 sm:mb-12">
-                    <div className="text-gray-400 font-medium text-center flex flex-col items-center gap-3">
-                        <svg className="w-16 h-16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2-2v12a2 2 0 002 2z" /></svg>
-                        <span className="text-lg">Main Promotion Banner (Full Width)</span>
-                    </div>
+                {/* 1. Cover Image */}
+                <div className="w-full aspect-[21/9] sm:aspect-[16/6] bg-gray-100 rounded-3xl overflow-hidden shadow-sm mb-8 sm:mb-12 relative">
+                    <Image
+                        src={`/promotion/cover/${item.slug}${item.slug === 'close-financial-and-audit-bundle' ? '-cover' : ''}.webp`}
+                        alt={item.title}
+                        fill
+                        priority
+                        className="object-cover"
+                        sizes="(max-width: 1024px) 100vw, 66vw"
+                    />
                 </div>
 
                 {/* Title and Badge */}
