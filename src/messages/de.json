@@ -126,7 +126,8 @@
         "noResultsHint": "Versuchen Sie es mit anderen Suchbegriffen",
         "services": "Dienstleistungen",
         "articles": "Artikel",
-        "viewAll": "Alle Ergebnisse für \"{query}\" anzeigen"
+        "viewAll": "Alle Ergebnisse für \"{query}\" anzeigen",
+        "didYouMean": "Meinten Sie:"
       },
       "language": {
         "label": "Language",
@@ -574,7 +575,7 @@
           "title": "Sonderaktion!",
           "subtitle": "Verpassen Sie nicht die Sonderpreise und die vielen exklusiven Vorteile für alle, die kostengünstig ein Unternehmen gründen möchten.",
           "cta": "Jetzt Aktion ansehen",
-          "slug": "limited-partnership-registration-deal"
+          "slug": "partnership-registration-deal"
         },
         "features": {
           "title": "Alles, was Sie brauchen, um eine Limited Partnership zu gründen",
@@ -1424,99 +1425,259 @@
   },
   "promotions": {
     "metadata": {
-      "title": "",
-      "description": "",
+      "title": "Virintira | Aktionen",
+      "description": "Entdecken Sie unsere besten Angebote und wertgeladenen Pakete.",
       "keywords": []
     },
     "hub": {
       "hero": {
-        "title": "",
-        "summary": ""
+        "title": "Alle Pakete & Sonderaktionen",
+        "summary": "Entdecken Sie unsere besten Angebote und wertgeladenen Pakete, die Ihnen helfen, Kosten zu senken und Ihr Unternehmen erfolgreich zu starten. Wählen Sie das passende Paket und profitieren Sie von zahlreichen Vorteilen."
       },
       "filters": {
-        "all": "",
-        "registration": "",
-        "accounting": ""
+        "all": "Alle",
+        "registration": "Registrierung",
+        "amendment": "Firmenänderungen",
+        "accounting": "Buchhaltung & Prüfung",
+        "license": "Lizenzen",
+        "marketing": "Digitales Marketing"
       }
     },
     "items": {
       "company-registration-deal": {
         "slug": "company-registration-deal",
-        "category": "",
+        "category": "Registration",
         "categoryId": "registration",
-        "title": "",
+        "title": "Gründung einer Gesellschaft mit beschränkter Haftung",
         "imagePlaceholder": "4:3",
-        "shortInfo": [],
-        "price": "",
-        "originalPrice": "",
-        "benefits": [],
-        "conditions": ""
+        "shortInfo": [
+          "Behördengebühren inklusive — keine Zusatzkosten",
+          "Keine Pflicht für monatliche Buchhaltungsverträge",
+          "Online-Identitätsprüfung — kein Reisen erforderlich",
+          "Gratis! Beratung und vollständige Dokumentenvorbereitung",
+          "Gratis! Kompletter Satz Firmenurkunden (DBD)",
+          "Gratis! Firmenstempel mit Selbstfärbung (1 Stück)",
+          "Gratis! Unterlagen für die Eröffnung eines Geschäftskontos",
+          "Gratis! DBD-e-Filing-Passwortregistrierung",
+          "Gratis! Finanzamt-Passwortregistrierung",
+          "Gratis! Visitenkarten für Quittungen/Steuerrechnungen",
+          "Gratis! Steuer-Technikkurs (Wert 5.900 THB)"
+        ],
+        "price": "Ab 9.900 THB",
+        "originalPrice": "Ab 12.900 THB",
+        "pricingTiers": [
+          {
+            "name": "Nur thailändische Gesellschafter",
+            "price": "9.900",
+            "originalPrice": "12.900"
+          },
+          {
+            "name": "Ausländische Gesellschafter bis 49%",
+            "price": "12.900",
+            "originalPrice": "15.900"
+          },
+          {
+            "name": "100% ausländisch gehalten",
+            "price": "15.900",
+            "originalPrice": "18.900"
+          },
+          {
+            "name": "Juristische Personen als Gesellschafter",
+            "price": "19.900",
+            "originalPrice": "22.900"
+          }
+        ],
+        "benefits": [
+          "<b>Ein Preis, alles inklusive! Behördengebühren enthalten</b> Das transparenteste Angebot — der Aktionspreis deckt alle Registrierungsgebühren beim DBD ab (Stammkapital bis 5 Mio. THB). Keine versteckten Kosten.",
+          "<b>Wahlfreiheit — kein Pflichtbuchhaltungsvertrag</b> Wir sind von unserer Servicequalität überzeugt und verlangen keine langfristigen Verträge.",
+          "<b>Höchster Komfort mit Online-Identitätsprüfung (e-KYC)</b> Keine Reise zur Unterschrift nötig. Verifizierung über ThaID-App, DBD e-Service-App oder E-Mail-Link.",
+          "<b>Gratis! Expertenberatung und Dokumentenerstellung</b> Von der Planung bis zum Abschluss — ein kompletter End-to-End-Service.",
+          "<b>Gratis! Business-Starterpaket</b>\n• Firmenurkunden-Set (DBD)\n• Firmenstempel (1 Stück, Design inklusive)\n• Kontoeröffnungsunterlagen\n• DBD & Finanzamt-Passwortregistrierung\n• Visitenkarten und Vorlagen",
+          "<b>Exklusiv! Steuertechnikkurs (Wert 5.900 THB)</b> Grundlegendes Steuer- und Buchhaltungswissen für sicheres Wirtschaften und maximale Steuerersparnis."
+        ],
+        "conditions": "• Gebühren für Stammkapital bis 5 Mio. THB inklusive.\n• Darüber hinaus 3.000 THB pro Million.\n• Elektronische Registrierung über DBD Biz Regist.\n• Online-Verifizierung über ThaID, DBD e-Service oder E-Mail-Link."
       },
       "partnership-registration-deal": {
         "slug": "partnership-registration-deal",
-        "category": "",
+        "category": "Registration",
         "categoryId": "registration",
-        "title": "",
+        "title": "Gründung einer Kommanditgesellschaft",
         "imagePlaceholder": "4:3",
-        "shortInfo": [],
-        "price": "",
-        "originalPrice": "",
-        "benefits": [],
-        "conditions": ""
-      },
-      "close-financial-deal": {
-        "slug": "close-financial-deal",
-        "category": "",
-        "categoryId": "accounting",
-        "title": "",
-        "imagePlaceholder": "4:3",
-        "shortInfo": [],
-        "price": "",
-        "originalPrice": "",
-        "benefits": [],
-        "conditions": ""
-      },
-      "monthly-bookkeeping-and-tax-bundle": {
-        "slug": "monthly-bookkeeping-and-tax-bundle",
-        "category": "",
-        "categoryId": "accounting",
-        "title": "",
-        "imagePlaceholder": "4:3",
-        "shortInfo": [],
-        "price": "",
-        "originalPrice": "",
-        "benefits": [],
-        "conditions": ""
+        "shortInfo": [
+          "Behördengebühren inklusive",
+          "Keine Pflichtverträge",
+          "Online-Identitätsprüfung",
+          "Gratis! Beratung & Dokumentenvorbereitung",
+          "Gratis! Partnerschaftsurkunden (DBD)",
+          "Gratis! Firmenstempel (1 Stück)",
+          "Gratis! Kontoeröffnungsunterlagen",
+          "Gratis! DBD-Passwortregistrierung",
+          "Gratis! Finanzamt-Passwortregistrierung",
+          "Gratis! Visitenkarten",
+          "Gratis! Steuerkurs (5.900 THB Wert)"
+        ],
+        "price": "Ab 5.900 THB",
+        "originalPrice": "Ab 8.900 THB",
+        "pricingTiers": [
+          {
+            "name": "Nur thailändische Partner",
+            "price": "5.900",
+            "originalPrice": "8.900"
+          },
+          {
+            "name": "Ausländische Partner bis 49%",
+            "price": "8.900",
+            "originalPrice": "11.900"
+          }
+        ],
+        "benefits": [
+          "<b>Ein Preis, alles inklusive!</b> KG-Registrierungsgebühren enthalten (bis 5 Mio. THB).",
+          "<b>Wahlfreiheit</b> Keine Pflichtverträge.",
+          "<b>Online-Verifizierung (e-KYC)</b>",
+          "<b>Gratis! Beratung & Dokumente</b>",
+          "<b>Gratis! Starterpaket</b>\n• Partnerschaftsurkunden\n• Stempel (Design inklusive)\n• Kontoeröffnungsunterlagen\n• Passwortregistrierungen\n• Visitenkarten & Vorlagen",
+          "<b>Steuertechnikkurs (5.900 THB Wert)</b>"
+        ],
+        "conditions": "• Gebühren bis 5 Mio. THB Stammkapital inklusive.\n• Darüber 3.000 THB/Million.\n• Elektronische Registrierung."
       },
       "commercial-shop-registration-deal": {
         "slug": "commercial-shop-registration-deal",
-        "category": "",
+        "category": "Registration",
         "categoryId": "registration",
-        "title": "",
+        "title": "Gewerbeanmeldung",
         "imagePlaceholder": "4:3",
-        "shortInfo": [],
-        "price": "",
-        "originalPrice": "",
+        "shortInfo": [
+          "Behördengebühren inklusive",
+          "Online- und Ladengeschäft abgedeckt",
+          "Wir übernehmen alle Behördengänge",
+          "Schnelle Gewerberegistrierungsbescheinigung",
+          "Vertrauenswürdigkeit für Online-Shops",
+          "Sofort nutzbar für Kredite und Kontoeröffnung"
+        ],
+        "price": "Ab 3.500 THB",
+        "originalPrice": "Ab 5.500 THB",
         "pricingTiers": [],
-        "benefits": [],
-        "conditions": ""
+        "benefits": [
+          "<b>Alles inklusive! Behördengebühren enthalten</b>",
+          "<b>Online- und Ladengeschäft</b>",
+          "<b>Ohne Aufwand</b> Wir erledigen alles.",
+          "<b>Schnelle Bescheinigung</b>",
+          "<b>Vertrauen aufbauen</b>",
+          "<b>Geschäftserweiterung</b>"
+        ],
+        "conditions": "Standardtarife für Bangkok. Außerhalb ggf. Zuschläge."
+      },
+      "monthly-bookkeeping-and-tax-bundle": {
+        "slug": "monthly-bookkeeping-and-tax-bundle",
+        "category": "Accounting & Audit",
+        "categoryId": "accounting",
+        "title": "Monatliches Buchhaltungs- und Steuerpaket",
+        "imagePlaceholder": "4:3",
+        "shortInfo": [
+          "Vollständige standardkonforme Buchführung",
+          "Fristgerechte Steuererklärungen",
+          "Monatliche Finanzberichtsübersicht"
+        ],
+        "price": "Ab 1.500 THB/Monat",
+        "originalPrice": "Ab 2.500/Monat THB",
+        "pricingTiers": [
+          {
+            "name": "Größe S\n(Bis 50 Belege/Monat)",
+            "price": "2.500",
+            "originalPrice": "3.500"
+          },
+          {
+            "name": "Größe M\n(Bis 70 Belege/Monat)",
+            "price": "3.000",
+            "originalPrice": "4.000"
+          },
+          {
+            "name": "Größe L\n(Bis 100 Belege/Monat)",
+            "price": "3.500",
+            "originalPrice": "4.500"
+          },
+          {
+            "name": "Größe XL\n(Über 100 Belege/Monat)",
+            "price": "Auf Anfrage"
+          },
+          {
+            "name": "Leermeldung\n(Pro Berichtstyp)",
+            "price": "500",
+            "originalPrice": "700"
+          }
+        ],
+        "benefits": [
+          "Einnahmen-/Ausgabenbuchführung",
+          "Steuererklärungs-Erstellung und -Einreichung",
+          "Sozialversicherungsbeiträge",
+          "Kostenlose Beratung während der Vertragslaufzeit"
+        ],
+        "conditions": "Preise nach Belegmenge, Branche und Komplexität."
+      },
+      "individual-tax-clearing": {
+        "slug": "individual-tax-clearing",
+        "category": "Accounting & Audit",
+        "categoryId": "accounting",
+        "title": "Einkommensteuererklärung für Privatpersonen",
+        "imagePlaceholder": "4:3",
+        "shortInfo": [
+          "Abzüge maximieren",
+          "Steuerschulden klären",
+          "Fristgerechte Abgabe",
+          "Dokumentenmanagement",
+          "Steuerplanung",
+          "Beratung zur Firmengründung"
+        ],
+        "price": "Ab 2.500 THB",
+        "originalPrice": "Ab 4.500 THB",
+        "pricingTiers": [],
+        "benefits": [
+          "<b>Maximale Steuerabzüge</b>",
+          "<b>Dokumentenmanagement</b>",
+          "<b>Professionelle Steuerschuldenklärung</b>",
+          "<b>Vertretung beim Finanzamt</b>",
+          "<b>Fristgerechte Abgabe — immer pünktlich</b>",
+          "<b>Wachstumsberatung</b>"
+        ],
+        "conditions": "Gebühren nach Komplexität und Belegmenge. Reisekosten zum Finanzamt nicht enthalten."
+      },
+      "close-financial-deal": {
+        "slug": "close-financial-deal",
+        "category": "Accounting & Audit",
+        "categoryId": "accounting",
+        "title": "Jahresabschluss",
+        "imagePlaceholder": "4:3",
+        "shortInfo": [
+          "CPA-geprüfter Jahresabschluss",
+          "100% gesetzeskonform",
+          "PND.50 und e-Filing"
+        ],
+        "price": "Ab 9.900 THB",
+        "originalPrice": "Ab 12.900 THB",
+        "pricingTiers": [],
+        "benefits": [
+          "Jahresabschlussprüfung und -zertifizierung",
+          "Körperschaftsteuererklärung (PND.50)",
+          "DBD e-Filing Einreichung",
+          "Aktionärsliste und SBCh.3"
+        ],
+        "conditions": "Prüfungsgebühren nach Unternehmensgröße und Komplexität."
       }
     },
     "ui": {
-      "ctaPrimary": "",
-      "chatViaLine": "",
-      "callNow": "",
-      "benefitsTitle": "",
-      "conditionsTitle": "",
-      "summaryTitle": "",
-      "specialPrice": "",
-      "serviceRates": "",
-      "freeAssessment": "",
-      "viewDetails": "",
-      "andMore": "",
-      "drawerTitle": "",
-      "emptyHub": "",
-      "otherContacts": ""
+      "benefitsTitle": "Ihre Vorteile",
+      "conditionsTitle": "Geschäftsbedingungen",
+      "summaryTitle": "Paketübersicht",
+      "specialPrice": "Sonderpreis",
+      "serviceRates": "Servicegebühren",
+      "freeAssessment": "Kontaktieren Sie unser Team für eine kostenlose Preisbewertung — ohne versteckte Kosten",
+      "chatViaLine": "Chat über LINE",
+      "callNow": "Anrufen: 092-882-5556",
+      "viewDetails": "Aktionsdetails anzeigen",
+      "andMore": "Und vieles mehr...",
+      "drawerTitle": "Aktionen & Vorteile",
+      "emptyHub": "Leider gibt es derzeit keine Aktionen in dieser Kategorie. Bleiben Sie gespannt auf die neuesten Angebote.",
+      "otherContacts": "Weitere Kontaktmöglichkeiten"
     }
   },
   "promotion": {
@@ -1537,6 +1698,7 @@
     "tabArticles": "Artikel",
     "emptyPrompt": "Geben Sie ein Stichwort ein, um Dienstleistungen oder Artikel zu suchen",
     "noResults": "Keine Ergebnisse für \"{query}\" gefunden",
-    "noResultsHint": "Versuchen Sie es mit anderen Suchbegriffen"
+    "noResultsHint": "Versuchen Sie es mit anderen Suchbegriffen",
+    "didYouMean": "Meinten Sie:"
   }
 }

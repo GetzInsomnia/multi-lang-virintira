@@ -221,3 +221,24 @@ export function buildPopularServicesForLocale(
     };
   });
 }
+
+/**
+ * Centralized mapping: service slug → promotion item slug.
+ * When a new promotion is added, add one entry here and
+ * the banner auto-appears on the service page. No JSON edits needed.
+ */
+export const SERVICE_PROMOTION_MAP: Partial<Record<ServiceSlug, string>> = {
+  'company-limited': 'company-registration-deal',
+  'limited-partnership': 'partnership-registration-deal',
+  'commercial-shop': 'commercial-shop-registration-deal',
+  'monthly-bookkeeping': 'monthly-bookkeeping-and-tax-bundle',
+  'monthly-tax': 'monthly-bookkeeping-and-tax-bundle',
+  'close-financial': 'close-financial-deal',
+  'personal-accounts': 'individual-tax-clearing',
+  'audit': 'close-financial-deal',
+};
+
+export function getPromotionSlugForService(serviceSlug: string): string | undefined {
+  return SERVICE_PROMOTION_MAP[serviceSlug as ServiceSlug];
+}
+

@@ -11,6 +11,7 @@ import Header from '@/components/layout/Header';
 import HeaderSpacer from '@/components/layout/HeaderSpacer';
 import Footer from '@/components/layout/Footer';
 import GlobalContactDrawer from '@/components/layout/GlobalContactDrawer';
+import { CopyCredit } from '@/components/common/CopyCredit';
 import { UIProvider } from '@/context/UIContext';
 
 import { i18n, type Locale } from '@/i18n/config';
@@ -47,6 +48,7 @@ export default async function LocaleLayout({ children, params }: LayoutProps) {
           <main className="flex-1">{children}</main>
           <Footer data={footer} />
           <GlobalContactDrawer />
+          <CopyCredit />
         </div>
       </UIProvider>
     </NextIntlClientProvider>

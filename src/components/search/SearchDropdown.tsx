@@ -4,13 +4,13 @@
 import { memo, useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { useLocale, useTranslations } from 'next-intl';
 import { Link } from '@/i18n/routing';
-import { servicesConfig } from '@/config/services';
 import { getCategoryTheme } from '@/config/categoryThemes';
 import {
   buildServiceSearchIndex,
   searchItems,
   allocateResults,
   highlightMatches,
+  getSuggestions,
   type SearchResultItem,
 } from '@/lib/searchIndex';
 
@@ -18,6 +18,8 @@ type SearchDropdownProps = {
   query: string;
   visible: boolean;
   onSelect?: () => void;
+  /** When user clicks a "Did you mean?" suggestion, fire this with the new query */
+  onSuggestionClick?: (suggestion: string) => void;
 };
 
 const MAX_DROPDOWN_RESULTS = 4;
@@ -66,7 +68,7 @@ function HighlightedText({ text, query }: { text: string; query: string }) {
   );
 }
 
-function SearchDropdown({ query, visible, onSelect }: SearchDropdownProps) {
+function SearchDropdown({ query, visible, onSelect, onSuggestionClick }: SearchDropdownProps) {
   const locale = useLocale();
   const tServices = useTranslations('services');
   const tSearch = useTranslations('layout.header.search');
@@ -86,7 +88,7 @@ function SearchDropdown({ query, visible, onSelect }: SearchDropdownProps) {
       return { services: [], articles: [], hasResults: false, totalCount: 0 };
     }
 
-    const serviceResults = searchItems(serviceIndex, query);
+    const serviceResults = searchItems(serviceIndex, query, locale);
     // TODO: When articles backend is ready, fetch article results here
     const articleResults: SearchResultItem[] = [];
 
@@ -98,7 +100,13 @@ function SearchDropdown({ query, visible, onSelect }: SearchDropdownProps) {
       hasResults: allocated.services.length + allocated.articles.length > 0,
       totalCount: serviceResults.length + articleResults.length,
     };
-  }, [query, serviceIndex]);
+  }, [query, serviceIndex, locale]);
+
+  // "Did you mean?" suggestions when no results
+  const didYouMeanSuggestions = useMemo(() => {
+    if (hasResults || !query.trim()) return [];
+    return getSuggestions(serviceIndex, query, 3);
+  }, [hasResults, query, serviceIndex]);
 
   // Reset active index when query changes
   useEffect(() => {
@@ -155,13 +163,6 @@ function SearchDropdown({ query, visible, onSelect }: SearchDropdownProps) {
 
   if (!visible || !query.trim()) return null;
 
-  // Get suggestions for empty state
-  let suggestions: string[] = [];
-  try {
-    // Try to get suggestions from translations
-    suggestions = ['จดทะเบียน', 'บัญชี', 'ใบอนุญาต', 'ภาษี'];
-  } catch { /* fallback */ }
-
   return (
     <div
       ref={listRef}
@@ -175,19 +176,31 @@ function SearchDropdown({ query, visible, onSelect }: SearchDropdownProps) {
           <div className="mb-2 text-sm text-gray-500">
             {tSearch('noResults', { query })}
           </div>
-          <div className="text-xs text-gray-400">
-            {tSearch('noResultsHint')}
-          </div>
-          <div className="mt-2 flex flex-wrap justify-center gap-2">
-            {suggestions.map((s) => (
-              <span
-                key={s}
-                className="rounded-full bg-gray-100 px-3 py-1 text-xs text-gray-600"
-              >
-                {s}
-              </span>
-            ))}
-          </div>
+
+          {/* "Did you mean?" suggestions (dynamic) */}
+          {didYouMeanSuggestions.length > 0 ? (
+            <div className="mt-3">
+              <div className="text-xs text-gray-400 mb-2">
+                {tSearch('didYouMean')}
+              </div>
+              <div className="flex flex-wrap justify-center gap-2">
+                {didYouMeanSuggestions.map((suggestion) => (
+                  <button
+                    key={suggestion}
+                    type="button"
+                    className="rounded-full bg-red-50 px-3 py-1.5 text-xs font-medium text-[#A70909] hover:bg-red-100 transition-colors cursor-pointer"
+                    onClick={() => onSuggestionClick?.(suggestion)}
+                  >
+                    {suggestion}
+                  </button>
+                ))}
+              </div>
+            </div>
+          ) : (
+            <div className="text-xs text-gray-400">
+              {tSearch('noResultsHint')}
+            </div>
+          )}
         </div>
       ) : (
         <>

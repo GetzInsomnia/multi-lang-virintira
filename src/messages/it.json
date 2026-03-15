@@ -126,7 +126,8 @@
         "noResultsHint": "Prova a cercare con parole chiave diverse",
         "services": "Servizi",
         "articles": "Articoli",
-        "viewAll": "Visualizza tutti i risultati per \"{query}\""
+        "viewAll": "Visualizza tutti i risultati per \"{query}\"",
+        "didYouMean": "Forse cercavi:"
       },
       "language": {
         "label": "Language",
@@ -574,7 +575,7 @@
           "title": "Promozione Speciale!",
           "subtitle": "Non perderti i prezzi speciali e i vantaggi completi per chi desidera avviare un'attività in modo conveniente.",
           "cta": "Vedi la Promozione ora",
-          "slug": "limited-partnership-registration-deal"
+          "slug": "partnership-registration-deal"
         },
         "features": {
           "title": "Tutto ciò che serve per avviare una Società in Accomandita",
@@ -1405,99 +1406,259 @@
   },
   "promotions": {
     "metadata": {
-      "title": "",
-      "description": "",
+      "title": "Virintira | Promozioni",
+      "description": "Le migliori offerte e pacchetti vantaggiosi per avviare la vostra attività.",
       "keywords": []
     },
     "hub": {
       "hero": {
-        "title": "",
-        "summary": ""
+        "title": "Tutti i pacchetti e le promozioni speciali",
+        "summary": "Scoprite le nostre migliori offerte e pacchetti vantaggiosi, pensati per ridurre i costi e facilitare l'avvio della vostra attività. Scegliete il pacchetto più adatto e approfittate dei numerosi vantaggi."
       },
       "filters": {
-        "all": "",
-        "registration": "",
-        "accounting": ""
+        "all": "Tutti",
+        "registration": "Registrazione",
+        "amendment": "Modifiche societarie",
+        "accounting": "Contabilità e revisione",
+        "license": "Licenze",
+        "marketing": "Marketing digitale"
       }
     },
     "items": {
       "company-registration-deal": {
         "slug": "company-registration-deal",
-        "category": "",
+        "category": "Registration",
         "categoryId": "registration",
-        "title": "",
+        "title": "Registrazione Società a Responsabilità Limitata",
         "imagePlaceholder": "4:3",
-        "shortInfo": [],
-        "price": "",
-        "originalPrice": "",
-        "benefits": [],
-        "conditions": ""
+        "shortInfo": [
+          "Tasse governative incluse",
+          "Nessun obbligo contrattuale",
+          "Verifica identità online",
+          "Gratis! Consulenza e documenti",
+          "Gratis! Certificati società (DBD)",
+          "Gratis! Timbro aziendale",
+          "Gratis! Documenti apertura conto",
+          "Gratis! Registrazione password DBD",
+          "Gratis! Registrazione password fiscale",
+          "Gratis! Biglietti da visita",
+          "Gratis! Corso fiscale (5.900 THB)"
+        ],
+        "price": "Da 9.900 THB",
+        "originalPrice": "Da 12.900 THB",
+        "pricingTiers": [
+          {
+            "name": "Solo azionisti thailandesi",
+            "price": "9.900",
+            "originalPrice": "12.900"
+          },
+          {
+            "name": "Azionista/i straniero/i ≤ 49%",
+            "price": "12.900",
+            "originalPrice": "15.900"
+          },
+          {
+            "name": "100% proprietà straniera",
+            "price": "15.900",
+            "originalPrice": "18.900"
+          },
+          {
+            "name": "Azionisti persona giuridica",
+            "price": "19.900",
+            "originalPrice": "22.900"
+          }
+        ],
+        "benefits": [
+          "<b>Prezzo tutto incluso!</b>",
+          "<b>Libertà di scelta</b>",
+          "<b>Verifica identità online (e-KYC)</b>",
+          "<b>Consulenza e documenti gratuiti</b>",
+          "<b>Kit di avvio gratuito</b>",
+          "<b>Corso fiscale esclusivo (5.900 THB)</b>"
+        ],
+        "conditions": "• Capitale ≤ 5M THB incluso. Oltre: 3.000 THB/milione."
       },
       "partnership-registration-deal": {
         "slug": "partnership-registration-deal",
-        "category": "",
+        "category": "Registration",
         "categoryId": "registration",
-        "title": "",
+        "title": "Registrazione Società in Accomandita",
         "imagePlaceholder": "4:3",
-        "shortInfo": [],
-        "price": "",
-        "originalPrice": "",
-        "benefits": [],
-        "conditions": ""
-      },
-      "close-financial-deal": {
-        "slug": "close-financial-deal",
-        "category": "",
-        "categoryId": "accounting",
-        "title": "",
-        "imagePlaceholder": "4:3",
-        "shortInfo": [],
-        "price": "",
-        "originalPrice": "",
-        "benefits": [],
-        "conditions": ""
-      },
-      "monthly-bookkeeping-and-tax-bundle": {
-        "slug": "monthly-bookkeeping-and-tax-bundle",
-        "category": "",
-        "categoryId": "accounting",
-        "title": "",
-        "imagePlaceholder": "4:3",
-        "shortInfo": [],
-        "price": "",
-        "originalPrice": "",
-        "benefits": [],
-        "conditions": ""
+        "shortInfo": [
+          "Tasse incluse",
+          "Nessun obbligo",
+          "Verifica online",
+          "Consulenza gratuita",
+          "Certificati (DBD)",
+          "Timbro gratuito",
+          "Documenti bancari",
+          "Registrazione DBD",
+          "Registrazione fiscale",
+          "Biglietti da visita",
+          "Corso fiscale (5.900 THB)"
+        ],
+        "price": "Da 5.900 THB",
+        "originalPrice": "Da 8.900 THB",
+        "pricingTiers": [
+          {
+            "name": "Solo soci thailandesi",
+            "price": "5.900",
+            "originalPrice": "8.900"
+          },
+          {
+            "name": "Socio/i straniero/i ≤ 49%",
+            "price": "8.900",
+            "originalPrice": "11.900"
+          }
+        ],
+        "benefits": [
+          "<b>Tutto incluso!</b>",
+          "<b>Nessun obbligo contrattuale</b>",
+          "<b>Verifica online</b>",
+          "<b>Consulenza gratuita</b>",
+          "<b>Kit di avvio</b>",
+          "<b>Corso fiscale</b>"
+        ],
+        "conditions": "• Capitale ≤ 5M THB incluso."
       },
       "commercial-shop-registration-deal": {
         "slug": "commercial-shop-registration-deal",
-        "category": "",
+        "category": "Registration",
         "categoryId": "registration",
-        "title": "",
+        "title": "Registrazione Attività Commerciale",
         "imagePlaceholder": "4:3",
-        "shortInfo": [],
-        "price": "",
-        "originalPrice": "",
+        "shortInfo": [
+          "Tasse incluse",
+          "Online e fisico",
+          "Gestiamo tutto",
+          "Certificato rapido",
+          "Credibilità 100%",
+          "Pronto per prestiti"
+        ],
+        "price": "Da 3.500 THB",
+        "originalPrice": "Da 5.500 THB",
         "pricingTiers": [],
-        "benefits": [],
-        "conditions": ""
+        "benefits": [
+          "<b>Tutto incluso!</b>",
+          "<b>Online e fisico</b>",
+          "<b>Senza problemi</b>",
+          "<b>Certificato rapido</b>",
+          "<b>Credibilità garantita</b>",
+          "<b>Espansione commerciale</b>"
+        ],
+        "conditions": "Tariffe Bangkok. Possibile supplemento fuori zona."
+      },
+      "monthly-bookkeeping-and-tax-bundle": {
+        "slug": "monthly-bookkeeping-and-tax-bundle",
+        "category": "Accounting & Audit",
+        "categoryId": "accounting",
+        "title": "Pacchetto Contabilità e Fiscalità Mensile",
+        "imagePlaceholder": "4:3",
+        "shortInfo": [
+          "Contabilità completa e conforme",
+          "Dichiarazioni fiscali puntuali",
+          "Report finanziari mensili"
+        ],
+        "price": "Da 1.500 THB/mese",
+        "originalPrice": "Da 2.500/mese THB",
+        "pricingTiers": [
+          {
+            "name": "Taglia S\n(≤ 50 documenti/mese)",
+            "price": "2.500",
+            "originalPrice": "3.500"
+          },
+          {
+            "name": "Taglia M\n(≤ 70 documenti/mese)",
+            "price": "3.000",
+            "originalPrice": "4.000"
+          },
+          {
+            "name": "Taglia L\n(≤ 100 documenti/mese)",
+            "price": "3.500",
+            "originalPrice": "4.500"
+          },
+          {
+            "name": "Taglia XL\n(> 100 documenti/mese)",
+            "price": "Su preventivo"
+          },
+          {
+            "name": "Report vuoto\n(Per tipo)",
+            "price": "500",
+            "originalPrice": "700"
+          }
+        ],
+        "benefits": [
+          "Contabilità entrate/uscite",
+          "Preparazione e invio dichiarazioni",
+          "Contributi previdenziali",
+          "Consulenza gratuita durante il contratto"
+        ],
+        "conditions": "Prezzi in base a volume, tipo e complessità."
+      },
+      "individual-tax-clearing": {
+        "slug": "individual-tax-clearing",
+        "category": "Accounting & Audit",
+        "categoryId": "accounting",
+        "title": "Dichiarazione Imposta sul Reddito Personale",
+        "imagePlaceholder": "4:3",
+        "shortInfo": [
+          "Deduzioni massimizzate",
+          "Risoluzione arretrati",
+          "Dichiarazioni puntuali",
+          "Gestione documentale",
+          "Pianificazione fiscale",
+          "Consulenza costituzione società"
+        ],
+        "price": "Da 2.500 THB",
+        "originalPrice": "Da 4.500 THB",
+        "pricingTiers": [],
+        "benefits": [
+          "<b>Deduzioni massime</b>",
+          "<b>Gestione documentale</b>",
+          "<b>Risoluzione arretrati</b>",
+          "<b>Rappresentanza fiscale</b>",
+          "<b>Sempre puntuali</b>",
+          "<b>Consulenza crescita</b>"
+        ],
+        "conditions": "Tariffe secondo complessità. Spese di viaggio escluse."
+      },
+      "close-financial-deal": {
+        "slug": "close-financial-deal",
+        "category": "Accounting & Audit",
+        "categoryId": "accounting",
+        "title": "Chiusura Bilancio Annuale",
+        "imagePlaceholder": "4:3",
+        "shortInfo": [
+          "Revisione da CPA",
+          "100% conforme",
+          "PND.50 e e-Filing"
+        ],
+        "price": "Da 9.900 THB",
+        "originalPrice": "Da 12.900 THB",
+        "pricingTiers": [],
+        "benefits": [
+          "Revisione e certificazione annuale",
+          "Dichiarazione imposte società (PND.50)",
+          "Invio via DBD e-Filing",
+          "Registro azionisti"
+        ],
+        "conditions": "Tariffe secondo dimensione e complessità."
       }
     },
     "ui": {
-      "ctaPrimary": "",
-      "chatViaLine": "",
-      "callNow": "",
-      "benefitsTitle": "",
-      "conditionsTitle": "",
-      "summaryTitle": "",
-      "specialPrice": "",
-      "serviceRates": "",
-      "freeAssessment": "",
-      "viewDetails": "",
-      "andMore": "",
-      "drawerTitle": "",
-      "emptyHub": "",
-      "otherContacts": ""
+      "benefitsTitle": "Vantaggi inclusi",
+      "conditionsTitle": "Termini e condizioni",
+      "summaryTitle": "Riepilogo del pacchetto",
+      "specialPrice": "Prezzo speciale",
+      "serviceRates": "Tariffe dei servizi",
+      "freeAssessment": "Contattate il nostro team per una valutazione gratuita — senza costi nascosti",
+      "chatViaLine": "Chat tramite LINE",
+      "callNow": "Chiama 092-882-5556",
+      "viewDetails": "Vedi dettagli promozione",
+      "andMore": "E molto altro...",
+      "drawerTitle": "Promozioni e privilegi",
+      "emptyHub": "Spiacenti, al momento non ci sono promozioni in questa categoria. Restate in attesa delle ultime offerte.",
+      "otherContacts": "Altri canali di contatto"
     }
   },
   "promotion": {
@@ -1518,6 +1679,7 @@
     "tabArticles": "Articoli",
     "emptyPrompt": "Digita una parola chiave per cercare servizi o articoli",
     "noResults": "Nessun risultato trovato per \"{query}\"",
-    "noResultsHint": "Prova a cercare con parole chiave diverse"
+    "noResultsHint": "Prova a cercare con parole chiave diverse",
+    "didYouMean": "Forse cercavi:"
   }
 }

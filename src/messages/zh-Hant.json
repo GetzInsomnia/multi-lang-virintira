@@ -126,7 +126,8 @@
         "noResultsHint": "請嘗試使用其他關鍵詞搜尋",
         "services": "服務",
         "articles": "文章",
-        "viewAll": "查看 \"{query}\" 的所有結果"
+        "viewAll": "查看 \"{query}\" 的所有結果",
+        "didYouMean": "您是不是要搜尋："
       },
       "language": {
         "label": "Language",
@@ -574,7 +575,7 @@
           "title": "特別促銷！",
           "subtitle": "專為希望以高性價比創業的人士提供，千萬不要錯過特價和豐厚福利",
           "cta": "立即查看促銷",
-          "slug": "limited-partnership-registration-deal"
+          "slug": "partnership-registration-deal"
         },
         "features": {
           "title": "開啟有限合夥企業所需的一切",
@@ -1424,99 +1425,259 @@
   },
   "promotions": {
     "metadata": {
-      "title": "",
-      "description": "",
+      "title": "Virintira | 促銷",
+      "description": "匯集最優惠價格和超值套餐，幫助您降低成本並提升創業能力。",
       "keywords": []
     },
     "hub": {
       "hero": {
-        "title": "",
-        "summary": ""
+        "title": "所有套餐和特別促銷",
+        "summary": "匯集我們最優惠的價格和超值套餐，幫助您降低成本並提升創業能力。在這裡選擇最適合您的套餐，享受眾多優惠。"
       },
       "filters": {
-        "all": "",
-        "registration": "",
-        "accounting": ""
+        "all": "全部",
+        "registration": "註冊",
+        "amendment": "企業變更",
+        "accounting": "會計與審計",
+        "license": "許可證",
+        "marketing": "數位行銷"
       }
     },
     "items": {
       "company-registration-deal": {
         "slug": "company-registration-deal",
-        "category": "",
+        "category": "注册",
         "categoryId": "registration",
-        "title": "",
+        "title": "有限公司註冊",
         "imagePlaceholder": "4:3",
-        "shortInfo": [],
-        "price": "",
-        "originalPrice": "",
-        "benefits": [],
-        "conditions": ""
+        "shortInfo": [
+          "已含政府規費——無額外收費",
+          "無需綁定月度記帳合約",
+          "線上身份驗證——無需出行",
+          "免費！諮詢及全套文件準備",
+          "免費！公司證書全套（DBD）",
+          "免費！公司自動蓋章一枚",
+          "免費！企業開戶所需文件",
+          "免費！DBD 電子申報密碼註冊",
+          "免費！稅務局密碼註冊",
+          "免費！用於開具收據/增值稅發票的名片",
+          "免費！稅務技巧培訓課程（價值 5,900 泰銖）"
+        ],
+        "price": "起價 9,900 泰銖",
+        "originalPrice": "起價 12,900",
+        "pricingTiers": [
+          {
+            "name": "全部泰籍股東",
+            "price": "9,900",
+            "originalPrice": "12,900"
+          },
+          {
+            "name": "外籍股東持股不超過 49%",
+            "price": "12,900",
+            "originalPrice": "15,900"
+          },
+          {
+            "name": "外籍股東 100% 持股",
+            "price": "15,900",
+            "originalPrice": "18,900"
+          },
+          {
+            "name": "法人股東",
+            "price": "19,900",
+            "originalPrice": "22,900"
+          }
+        ],
+        "benefits": [
+          "<b>一价全包！已含政府規費</b> 最透明、最超值的報價——本促销价已包含向商业发展厅缴纳的公司註冊费用（註冊资本不超过 500 万泰铢），绝無任何额外收费。",
+          "<b>选择自由——無强制記帳合同</b> 我们对服务品质充满信心，因此绝不要求客户签署长期月度記帳或年度财务结算合同以换取此优惠。",
+          "<b>极致便捷的在线身份驗證（e-KYC）</b> 無需出行签署纸质文件。可通过 ThaID 应用（泰籍人士）、DBD e-Service 应用（外籍人士）或 DBD 系统发送至各股东个人邮箱的驗證链接完成身份驗證。",
+          "<b>免费！专业咨询和全套文件準備</b> 从註冊前的规划到完成，我们提供系统化指导，帮助您全面了解流程。从準備到完成政府表格——一站式全程服务。",
+          "<b>免费！全套创业启动礼包</b>\n• 公司证书全套（DBD）——即可使用\n• 自动盖章一枚（免费设计）\n• 企业银行開戶所需文件\n• DBD 电子申报密码註冊\n• 税务局密码註冊\n• 用于开具收据/增值税發票的名片\n• 報價单、發票等模板",
+          "<b>独家！税务技巧培训课程（价值 5,900 泰铢）</b> 构建每位企业主都应掌握的税务和会计基础知识，让您安全經營并最大限度節稅。"
+        ],
+        "conditions": "• 本服务费率已包含註冊资本不超过 500 万泰铢的公司註冊政府規費。\n• 註冊资本超过 500 万泰铢的，按每百万 3,000 泰铢加收政府規費和服务费。\n• 所有流程均通过商业发展厅 DBD Biz Regist 系统进行电子註冊。\n• 董事和所有股东无需出行签署纸质文件，需通过以下任一渠道进行在线身份驗證：\n  1. ThaID 应用（泰籍人士）\n  2. DBD e-Service 应用（外籍人士）\n  3. 通过 DBD 系统发送至各股东个人邮箱的驗證链接"
       },
       "partnership-registration-deal": {
         "slug": "partnership-registration-deal",
-        "category": "",
+        "category": "注册",
         "categoryId": "registration",
-        "title": "",
+        "title": "有限合夥企業註冊",
         "imagePlaceholder": "4:3",
-        "shortInfo": [],
-        "price": "",
-        "originalPrice": "",
-        "benefits": [],
-        "conditions": ""
-      },
-      "close-financial-deal": {
-        "slug": "close-financial-deal",
-        "category": "",
-        "categoryId": "accounting",
-        "title": "",
-        "imagePlaceholder": "4:3",
-        "shortInfo": [],
-        "price": "",
-        "originalPrice": "",
-        "benefits": [],
-        "conditions": ""
-      },
-      "monthly-bookkeeping-and-tax-bundle": {
-        "slug": "monthly-bookkeeping-and-tax-bundle",
-        "category": "",
-        "categoryId": "accounting",
-        "title": "",
-        "imagePlaceholder": "4:3",
-        "shortInfo": [],
-        "price": "",
-        "originalPrice": "",
-        "benefits": [],
-        "conditions": ""
+        "shortInfo": [
+          "已含政府规费——无额外收费",
+          "无需绑定月度記帳合同",
+          "在线身份驗證——无需出行",
+          "免费！咨询及全套文件准备",
+          "免费！合伙企业证书全套（DBD）",
+          "免费！合伙企业自动盖章一枚",
+          "免费！企业开户所需文件",
+          "免费！DBD 电子申报密码註冊",
+          "免费！税务局密码註冊",
+          "免费！用于开具收据/增值税发票的名片",
+          "免费！税务技巧培训课程（价值 5,900 泰铢）"
+        ],
+        "price": "起價 5,900 泰銖",
+        "originalPrice": "起價 8,900",
+        "pricingTiers": [
+          {
+            "name": "全部泰籍合夥人",
+            "price": "5,900",
+            "originalPrice": "8,900"
+          },
+          {
+            "name": "外籍合夥人出資不超過 49%",
+            "price": "8,900",
+            "originalPrice": "11,900"
+          }
+        ],
+        "benefits": [
+          "<b>一价全包！已含政府規費</b> 最透明、最超值——本促销价已包含有限合伙企业在商业发展厅的註冊费用（註冊资本不超过 500 万泰铢），绝無额外收费。",
+          "<b>选择自由——無强制記帳合同</b> 我们对服务品质充满信心，绝不要求客户签署长期月度記帳或年度结算合同以换取此优惠。",
+          "<b>极致便捷的在线身份驗證（e-KYC）</b> 無需出行签署纸质文件。可通过 ThaID 应用（泰籍人士）、DBD e-Service 应用（外籍人士）或驗證链接完成身份驗證。",
+          "<b>免费！专业咨询和全套文件准备</b> 从规划到完成，系统化指导，全程一站式服务。",
+          "<b>免费！全套创业启动礼包</b>\n• 合伙企业证书全套（DBD）——即可使用\n• 自动盖章一枚（免费设计）\n• 企业银行开户所需文件\n• DBD 电子申报密码註冊\n• 税务局密码註冊\n• 用于开具收据/增值税发票的名片\n• 报价单、发票等模板",
+          "<b>独家！税务技巧培训课程（价值 5,900 泰铢）</b> 构建税务和会计基础知识，让您安全經營并最大限度節稅。"
+        ],
+        "conditions": "• 本服务费率已包含註冊资本不超过 500 万泰铢的有限合伙企业註冊政府規費。\n• 註冊资本超过 500 万泰铢的，按每百万 3,000 泰铢加收。\n• 所有流程通过 DBD Biz Regist 电子註冊系统进行。\n• 执行合伙人和所有合伙人无需出行，需通过以下渠道之一进行在线身份驗證：\n  1. ThaID 应用（泰籍人士）\n  2. DBD e-Service 应用（外籍人士）\n  3. DBD 系统发送至各合伙人个人邮箱的驗證链接"
       },
       "commercial-shop-registration-deal": {
         "slug": "commercial-shop-registration-deal",
-        "category": "",
+        "category": "注册",
         "categoryId": "registration",
-        "title": "",
+        "title": "商業店舖註冊",
         "imagePlaceholder": "4:3",
-        "shortInfo": [],
-        "price": "",
-        "originalPrice": "",
+        "shortInfo": [
+          "已含政府规费——無额外收费",
+          "涵盖网店和实体店註冊",
+          "無忧——我们代您办理所有政府手续",
+          "快速获取商业登记证（PorKor.0403）",
+          "提升网店可信度——客户 100% 放心",
+          "文件可立即用于贷款、商户开户或业务拓展"
+        ],
+        "price": "起價 3,500 泰銖",
+        "originalPrice": "起價 5,500",
         "pricingTiers": [],
-        "benefits": [],
-        "conditions": ""
+        "benefits": [
+          "<b>超值——一价全包！已含政府規費</b> 我们以一口价保证透明度，已包含所有政府註冊费用，無隐藏费用。",
+          "<b>涵盖网店和实体店</b> 無论您的业务是线上销售还是传统实体店，我们都能按各类型要求正确办理。",
+          "<b>無忧体验</b> 我们全程代理，免除您准备复杂表格和出行至政府机构的负担。",
+          "<b>快速获取商业登记证（PorKor.0403）</b> 凭借我们的专业经验，最大限度减少文件错误，帮助您迅速获得登记证。",
+          "<b>提升可信度——客户 100% 放心</b> 商业登记证和认证标志证明您的店铺真实存在且可查验，增强客户购买信心。",
+          "<b>拓展业务——立即開設商户账户或申请贷款</b> 商业登记证是開設企业银行账户、申请支付网关或提交商业贷款申请的重要文件。\n\n（建议：如计划用于贷款申请，建议提前向银行了解条件，部分银行可能要求登记证至少满 6 个月或 1 年。）"
+        ],
+        "conditions": "以上服务費率为曼谷地区标准費率。办公地址在曼谷以外的，可能根据实际距离收取额外的服务费和交通费。我们将在您决定使用服务前提供价格评估。"
+      },
+      "monthly-bookkeeping-and-tax-bundle": {
+        "slug": "monthly-bookkeeping-and-tax-bundle",
+        "category": "会计与审计",
+        "categoryId": "accounting",
+        "title": "月度企業記帳與稅務套餐",
+        "imagePlaceholder": "4:3",
+        "shortInfo": [
+          "完整準確的標準化記帳",
+          "按時申報 PND.1、3、53 和 PP.30 稅表",
+          "月度財務報表匯總"
+        ],
+        "price": "起價 1,500 泰銖/月",
+        "originalPrice": "起價 2,500/月",
+        "pricingTiers": [
+          {
+            "name": "S 号\n（每月不超过 50 份文件）",
+            "price": "2,500",
+            "originalPrice": "3,500"
+          },
+          {
+            "name": "M 号\n（每月不超过 70 份文件）",
+            "price": "3,000",
+            "originalPrice": "4,000"
+          },
+          {
+            "name": "L 号\n（每月不超过 100 份文件）",
+            "price": "3,500",
+            "originalPrice": "4,500"
+          },
+          {
+            "name": "XL 号\n（每月超过 100 份文件）",
+            "price": "联系报价"
+          },
+          {
+            "name": "空白报表提交\n（每类报表）",
+            "price": "500",
+            "originalPrice": "700"
+          }
+        ],
+        "benefits": [
+          "使用符合标准的软件进行收入和支出记账",
+          "编制和申报预扣税和增值税报表",
+          "社会保险缴费提交",
+          "合同期内免费会计和税务咨询"
+        ],
+        "conditions": "定价取决于文件数量、业务类型、复杂程度和每月会计活动水平。"
+      },
+      "individual-tax-clearing": {
+        "slug": "individual-tax-clearing",
+        "category": "会计与审计",
+        "categoryId": "accounting",
+        "title": "個人所得稅清算",
+        "imagePlaceholder": "4:3",
+        "shortInfo": [
+          "最大化减免，精确计税",
+          "清理欠税问题——代理向税务局说明",
+          "按时处理所有申报（PND.90/91/94）",
+          "代您管理复杂的收入/支出文件",
+          "规划减免以最大限度为您省钱",
+          "深度咨询是否应成立法人"
+        ],
+        "price": "起價 2,500 泰銖",
+        "originalPrice": "起價 4,500",
+        "pricingTiers": [],
+        "benefits": [
+          "<b>最大化税务减免规划</b>\n我们不只是填写数字，团队会详细分析您的收入和支出，充分利用每项可用的税务优惠和减免，帮助您合法节税。",
+          "<b>复杂文件管理一手包办</b>\n不再为整理收入/支出文件（如预扣税证明）而头疼，我们代您整理和分类，防止将来可能触发审计的错误。",
+          "<b>专业的欠税处理</b>\n如果您有未申报税款、少报收入或欠税问题，我们随时准备审查、制定策略并找到最佳解决方案以最小化罚款和附加费。",
+          "<b>代理向税务局说明</b>\n如果税务人员要求提供文件或召见，您无需独自面对。我们的团队将作为您的代表，专业地回答问题和谈判。",
+          "<b>完整的申报管理——始终按时</b>\n我们通过税务局的 e-Filing 系统处理所有个人所得税申报（PND.90/91/94），确保 100% 按时完成。",
+          "<b>助力成长的深度咨询</b>\n逐案评估您的收入状况，判断从个人转为成立法人（有限公司/有限合伙企业）是否\"划算\"，实现更有效的长期税务规划。"
+        ],
+        "conditions": "个人所得税清算费用取决于业务类型复杂程度和文件数量，不包含代理客户前往税务局说明的差旅费。"
+      },
+      "close-financial-deal": {
+        "slug": "close-financial-deal",
+        "category": "会计与审计",
+        "categoryId": "accounting",
+        "title": "年度財務報表結算",
+        "imagePlaceholder": "4:3",
+        "shortInfo": [
+          "由注册会计师（CPA）审计财务报表",
+          "100% 合法合规——保证",
+          "编制 PND.50 并提交电子申报"
+        ],
+        "price": "起價 9,900 泰銖",
+        "originalPrice": "起價 12,900",
+        "pricingTiers": [],
+        "benefits": [
+          "年度财务报表审计和认证",
+          "编制企业所得税申报表（PND.50）",
+          "通过 DBD e-Filing 提交财务报表",
+          "编制 SBCh.3 和股东名册（BorOrJor.5）"
+        ],
+        "conditions": "审计服务费取决于业务的复杂程度和规模。"
       }
     },
     "ui": {
-      "ctaPrimary": "",
-      "chatViaLine": "",
-      "callNow": "",
-      "benefitsTitle": "",
-      "conditionsTitle": "",
-      "summaryTitle": "",
-      "specialPrice": "",
-      "serviceRates": "",
-      "freeAssessment": "",
-      "viewDetails": "",
-      "andMore": "",
-      "drawerTitle": "",
-      "emptyHub": "",
-      "otherContacts": ""
+      "benefitsTitle": "您將獲得的權益",
+      "conditionsTitle": "服務條款",
+      "summaryTitle": "套餐摘要",
+      "specialPrice": "特惠價",
+      "serviceRates": "服務費率",
+      "freeAssessment": "聯繫我們的團隊獲取免費報價評估——無隱藏費用",
+      "chatViaLine": "透過 LINE 聊天",
+      "callNow": "致電 092-882-5556",
+      "viewDetails": "查看促銷詳情",
+      "andMore": "以及更多...",
+      "drawerTitle": "促銷與特權",
+      "emptyHub": "抱歉，該類別目前暫無促銷活動。敬請期待最新優惠。",
+      "otherContacts": "其他聯繫方式"
     }
   },
   "promotion": {
@@ -1537,6 +1698,7 @@
     "tabArticles": "文章",
     "emptyPrompt": "輸入關鍵詞搜尋服務或文章",
     "noResults": "未找到 \"{query}\" 的搜尋結果",
-    "noResultsHint": "請嘗試使用其他關鍵詞搜尋"
+    "noResultsHint": "請嘗試使用其他關鍵詞搜尋",
+    "didYouMean": "您是不是要搜尋："
   }
 }

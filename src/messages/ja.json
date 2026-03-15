@@ -126,7 +126,8 @@
         "noResultsHint": "別のキーワードでお試しください",
         "services": "サービス",
         "articles": "記事",
-        "viewAll": "「{query}」の全結果を表示"
+        "viewAll": "「{query}」の全結果を表示",
+        "didYouMean": "もしかして："
       },
       "language": {
         "label": "Language",
@@ -575,7 +576,7 @@
           "title": "特別プロモーション！",
           "subtitle": "コストを抑えてビジネスを始めたい方へ、特別価格と充実した特典をお見逃しなく",
           "cta": "今すぐプロモーションを見る",
-          "slug": "limited-partnership-registration-deal"
+          "slug": "partnership-registration-deal"
         },
         "features": {
           "title": "合資会社（リミテッド・パートナーシップ）の立ち上げに必要なすべて",
@@ -1406,99 +1407,259 @@
   },
   "promotions": {
     "metadata": {
-      "title": "",
-      "description": "",
+      "title": "Virintira | プロモーション",
+      "description": "コスト削減とビジネス立ち上げ力の向上を実現する最もお得なパッケージ。",
       "keywords": []
     },
     "hub": {
       "hero": {
-        "title": "",
-        "summary": ""
+        "title": "全パッケージ＆特別プロモーション",
+        "summary": "コスト削減とビジネス立ち上げ力の向上を実現する、最もお得なパッケージをご用意しました。ニーズに合ったパッケージをお選びいただき、数多くの特典をお楽しみください。"
       },
       "filters": {
-        "all": "",
-        "registration": "",
-        "accounting": ""
+        "all": "すべて",
+        "registration": "登記",
+        "amendment": "法人変更",
+        "accounting": "会計・監査",
+        "license": "許認可",
+        "marketing": "デジタルマーケティング"
       }
     },
     "items": {
       "company-registration-deal": {
         "slug": "company-registration-deal",
-        "category": "",
+        "category": "登記",
         "categoryId": "registration",
-        "title": "",
+        "title": "有限会社（株式会社）登記",
         "imagePlaceholder": "4:3",
-        "shortInfo": [],
-        "price": "",
-        "originalPrice": "",
-        "benefits": [],
-        "conditions": ""
+        "shortInfo": [
+          "政府手数料込み——追加費用なし",
+          "月次記帳契約の義務なし",
+          "オンライン本人確認——移動不要",
+          "無料！相談＆書類一式準備",
+          "無料！会社証明書フルセット（DBD）",
+          "無料！自動インク式会社印 1本",
+          "無料！法人口座開設用書類",
+          "無料！DBD電子申告パスワード登録",
+          "無料！歳入局パスワード登録",
+          "無料！領収書/税務請求書用名刺",
+          "無料！税務テクニック研修（5,900バーツ相当）"
+        ],
+        "price": "9,900バーツから",
+        "originalPrice": "12,900から",
+        "pricingTiers": [
+          {
+            "name": "タイ国籍株主のみ",
+            "price": "9,900",
+            "originalPrice": "12,900"
+          },
+          {
+            "name": "外国人株主49%以下",
+            "price": "12,900",
+            "originalPrice": "15,900"
+          },
+          {
+            "name": "外国人100%出資",
+            "price": "15,900",
+            "originalPrice": "18,900"
+          },
+          {
+            "name": "法人株主あり",
+            "price": "19,900",
+            "originalPrice": "22,900"
+          }
+        ],
+        "benefits": [
+          "<b>一括価格！政府手数料込み</b> 最も透明でお得なプラン——登録資本金500万バーツ以下の会社設立登記手数料が含まれています。追加費用は一切ありません。",
+          "<b>自由な選択——記帳契約の義務なし</b> サービス品質に自信があるため、本プロモーションと引き換えに長期記帳契約を強制することは一切ありません。",
+          "<b>オンライン本人確認（e-KYC）で究極の利便性</b> 紙書類への署名のための移動は不要。ThaIDアプリ（タイ国籍者）、DBD e-Serviceアプリ（外国人）、またはDBDシステムから各株主のメールに送信される認証リンクで本人確認可能。",
+          "<b>無料！専門相談＆書類一式準備</b> 登記前の計画から完了まで、体系的なガイダンスを提供。政府書類の作成から完了まで——ワンストップサービス。",
+          "<b>無料！ビジネススターターキット一式</b>\n• 会社証明書フルセット（DBD）——すぐに使用可能\n• 自動インク式会社印1本（デザイン無料）\n• 法人口座開設用書類一式\n• DBD電子申告パスワード登録\n• 歳入局パスワード登録\n• 領収書/税務請求書用名刺\n• 見積書、請求書テンプレート等",
+          "<b>特別！税務テクニック研修（5,900バーツ相当）</b> 事業主が知るべき税務・会計の基礎知識を構築し、安全な経営と最大限の節税を実現。"
+        ],
+        "conditions": "• 本料金は登録資本金500万バーツ以下の会社登記の政府手数料を含みます。\n• 500万バーツを超える場合、100万バーツごとに3,000バーツの追加手数料が発生します。\n• 全手続きはDBD Biz Registシステムによる電子登記で行われます。\n• 取締役および全株主は紙書類への署名のための移動は不要。以下のいずれかでオンライン本人確認が必要：\n  1. ThaIDアプリ（タイ国籍者）\n  2. DBD e-Serviceアプリ（外国人）\n  3. DBDシステムから各株主のメールに送信される認証リンク"
       },
       "partnership-registration-deal": {
         "slug": "partnership-registration-deal",
-        "category": "",
+        "category": "登記",
         "categoryId": "registration",
-        "title": "",
+        "title": "合資会社（有限責任組合）登記",
         "imagePlaceholder": "4:3",
-        "shortInfo": [],
-        "price": "",
-        "originalPrice": "",
-        "benefits": [],
-        "conditions": ""
-      },
-      "close-financial-deal": {
-        "slug": "close-financial-deal",
-        "category": "",
-        "categoryId": "accounting",
-        "title": "",
-        "imagePlaceholder": "4:3",
-        "shortInfo": [],
-        "price": "",
-        "originalPrice": "",
-        "benefits": [],
-        "conditions": ""
-      },
-      "monthly-bookkeeping-and-tax-bundle": {
-        "slug": "monthly-bookkeeping-and-tax-bundle",
-        "category": "",
-        "categoryId": "accounting",
-        "title": "",
-        "imagePlaceholder": "4:3",
-        "shortInfo": [],
-        "price": "",
-        "originalPrice": "",
-        "benefits": [],
-        "conditions": ""
+        "shortInfo": [
+          "政府手数料込み——追加費用なし",
+          "月次記帳契約の義務なし",
+          "オンライン本人確認——移動不要",
+          "無料！相談＆書類一式準備",
+          "無料！合資会社証明書フルセット（DBD）",
+          "無料！自動インク式会社印1本",
+          "無料！法人口座開設用書類",
+          "無料！DBD電子申告パスワード登録",
+          "無料！歳入局パスワード登録",
+          "無料！領収書/税務請求書用名刺",
+          "無料！税務テクニック研修（5,900バーツ相当）"
+        ],
+        "price": "5,900バーツから",
+        "originalPrice": "8,900から",
+        "pricingTiers": [
+          {
+            "name": "全員タイ国籍パートナー",
+            "price": "5,900",
+            "originalPrice": "8,900"
+          },
+          {
+            "name": "外国人パートナー出資49%以下",
+            "price": "8,900",
+            "originalPrice": "11,900"
+          }
+        ],
+        "benefits": [
+          "<b>一括価格！政府手数料込み</b> 合資会社登記手数料込み（500万バーツ以下）。追加費用なし。",
+          "<b>自由な選択——記帳契約の義務なし</b> 長期契約の強制は一切ありません。",
+          "<b>オンライン本人確認（e-KYC）</b> ThaIDアプリ、DBD e-Serviceアプリ、またはメール認証リンクで本人確認可能。",
+          "<b>無料！専門相談＆書類一式</b> 計画から完了まで、ワンストップサービス。",
+          "<b>無料！スターターキット一式</b>\n• 合資会社証明書フルセット（DBD）\n• 自動インク式印1本（デザイン無料）\n• 口座開設用書類\n• DBD・歳入局パスワード登録\n• 名刺・テンプレート等",
+          "<b>特別！税務テクニック研修（5,900バーツ相当）</b> 税務・会計基礎知識で安全経営と最大節税を実現。"
+        ],
+        "conditions": "• 登録資本金500万バーツ以下の合資会社登記手数料込み。\n• 超過分は100万バーツごとに3,000バーツ追加。\n• DBD Biz Registによる電子登記。\n• 全パートナーはオンライン本人確認が必要。"
       },
       "commercial-shop-registration-deal": {
         "slug": "commercial-shop-registration-deal",
-        "category": "",
+        "category": "登記",
         "categoryId": "registration",
-        "title": "",
+        "title": "商業店舗登記",
         "imagePlaceholder": "4:3",
-        "shortInfo": [],
-        "price": "",
-        "originalPrice": "",
+        "shortInfo": [
+          "政府手数料込み——追加費用なし",
+          "オンラインショップ・実店舗の両方対応",
+          "面倒な手続き不要——政府への申請を代行",
+          "商業登記証（PorKor.0403）を迅速取得",
+          "ネットショップの信頼性向上——顧客100%安心",
+          "書類をすぐにローンや口座開設に利用可能"
+        ],
+        "price": "3,500バーツから",
+        "originalPrice": "5,500から",
         "pricingTiers": [],
-        "benefits": [],
-        "conditions": ""
+        "benefits": [
+          "<b>お得な一括価格！政府手数料込み</b> 登録費用すべて込みの定額制。隠れた費用なし。",
+          "<b>オンライン・実店舗の両方対応</b> どちらの業態でも正確に対応。",
+          "<b>手続き不要</b> 全工程を代行。複雑な書類準備や役所への移動は不要。",
+          "<b>商業登記証を迅速取得</b> 書類エラーを最小限に抑え、迅速に証明書を取得。",
+          "<b>信頼性向上——顧客100%安心</b> 登記証は店舗の実在を証明し、顧客の購買意欲を高めます。",
+          "<b>事業拡大——口座開設やローン申請にすぐ利用可能</b> 法人口座開設、決済ゲートウェイ申請、ローン申請にすぐ使える重要書類。\n\n（ご参考：ローン申請に使用する場合、銀行によっては登記証の取得から6ヶ月～1年以上の経過が必要な場合があります。）"
+        ],
+        "conditions": "上記料金はバンコク都内の事業所向け標準料金です。都外の場合、距離に応じた追加料金が発生する場合があります。"
+      },
+      "monthly-bookkeeping-and-tax-bundle": {
+        "slug": "monthly-bookkeeping-and-tax-bundle",
+        "category": "会計・監査",
+        "categoryId": "accounting",
+        "title": "月次法人記帳＆税務パッケージ",
+        "imagePlaceholder": "4:3",
+        "shortInfo": [
+          "基準に準拠した正確な記帳",
+          "PND.1・3・53およびPP.30の期限内申告",
+          "月次財務諸表サマリー"
+        ],
+        "price": "月額1,500バーツから",
+        "originalPrice": "月額2,500から",
+        "pricingTiers": [
+          {
+            "name": "Sサイズ\n（月50件以下）",
+            "price": "2,500",
+            "originalPrice": "3,500"
+          },
+          {
+            "name": "Mサイズ\n（月70件以下）",
+            "price": "3,000",
+            "originalPrice": "4,000"
+          },
+          {
+            "name": "Lサイズ\n（月100件以下）",
+            "price": "3,500",
+            "originalPrice": "4,500"
+          },
+          {
+            "name": "XLサイズ\n（月100件超）",
+            "price": "お問い合わせ"
+          },
+          {
+            "name": "空白レポート提出\n（1レポートにつき）",
+            "price": "500",
+            "originalPrice": "700"
+          }
+        ],
+        "benefits": [
+          "標準準拠ソフトによる収支記帳",
+          "源泉徴収税・付加価値税の申告書作成・提出",
+          "社会保険料の納付手続き",
+          "契約期間中の会計・税務相談無料"
+        ],
+        "conditions": "料金は書類量・業種・複雑さ・月次会計活動レベルにより決定。"
+      },
+      "individual-tax-clearing": {
+        "slug": "individual-tax-clearing",
+        "category": "会計・監査",
+        "categoryId": "accounting",
+        "title": "個人所得税精算",
+        "imagePlaceholder": "4:3",
+        "shortInfo": [
+          "控除最大化と正確な税計算",
+          "過去の税務問題解決——歳入局への代理対応",
+          "全申告（PND.90/91/94）を期限内処理",
+          "複雑な収支書類を代行管理",
+          "控除プランで最大限の節約",
+          "法人化すべきかの専門アドバイス"
+        ],
+        "price": "2,500バーツから",
+        "originalPrice": "4,500から",
+        "pricingTiers": [],
+        "benefits": [
+          "<b>税控除の最大化プランニング</b>\n数字を記入するだけでなく、収支を詳細に分析し、利用可能な税優遇措置と控除を最大限活用して合法的に節税します。",
+          "<b>複雑な書類管理をお任せ</b>\n源泉徴収証明書等の収支書類の整理・分類を代行し、将来の税務調査リスクを防止。",
+          "<b>プロによる未納税務処理</b>\n未申告や過少申告の税務問題がある場合、最善の解決策を見つけ、ペナルティを最小限に。",
+          "<b>歳入局への代理対応</b>\n税務調査の際、専門チームが代理として対応・交渉。",
+          "<b>完全な申告管理——常に期限内</b>\n全個人所得税申告をe-Filingで100%期限内完了。",
+          "<b>成長のための専門アドバイス</b>\n個人から法人化が「得策」かをケースバイケースで評価し、長期的な税務計画を支援。"
+        ],
+        "conditions": "個人所得税精算料金は業種の複雑さと書類量により異なり、歳入局への代理出向費は含まれません。"
+      },
+      "close-financial-deal": {
+        "slug": "close-financial-deal",
+        "category": "会計・監査",
+        "categoryId": "accounting",
+        "title": "年次決算書作成",
+        "imagePlaceholder": "4:3",
+        "shortInfo": [
+          "公認会計士（CPA）による財務諸表監査",
+          "100%法令遵守——保証",
+          "PND.50作成および電子申告"
+        ],
+        "price": "9,900バーツから",
+        "originalPrice": "12,900から",
+        "pricingTiers": [],
+        "benefits": [
+          "年次財務諸表の監査・認証",
+          "法人所得税申告書（PND.50）の作成",
+          "DBD e-Filing経由の財務諸表提出",
+          "SBCh.3および株主名簿（BorOrJor.5）の作成"
+        ],
+        "conditions": "監査サービス料金は事業の複雑さと規模により異なります。"
       }
     },
     "ui": {
-      "ctaPrimary": "",
-      "chatViaLine": "",
-      "callNow": "",
-      "benefitsTitle": "",
-      "conditionsTitle": "",
-      "summaryTitle": "",
-      "specialPrice": "",
-      "serviceRates": "",
-      "freeAssessment": "",
-      "viewDetails": "",
-      "andMore": "",
-      "drawerTitle": "",
-      "emptyHub": "",
-      "otherContacts": ""
+      "benefitsTitle": "お受けいただける特典",
+      "conditionsTitle": "利用規約",
+      "summaryTitle": "パッケージ概要",
+      "specialPrice": "特別価格",
+      "serviceRates": "サービス料金",
+      "freeAssessment": "無料でお見積もり — 隠れた費用は一切ありません",
+      "chatViaLine": "LINEでチャット",
+      "callNow": "電話 092-882-5556",
+      "viewDetails": "プロモーション詳細を見る",
+      "andMore": "その他多数...",
+      "drawerTitle": "プロモーション＆特典",
+      "emptyHub": "申し訳ございませんが、このカテゴリには現在プロモーションがありません。最新のお得な情報にご期待ください。",
+      "otherContacts": "その他の連絡先"
     }
   },
   "promotion": {
@@ -1519,6 +1680,7 @@
     "tabArticles": "記事",
     "emptyPrompt": "キーワードを入力してサービスや記事を検索",
     "noResults": "「{query}」の検索結果が見つかりません",
-    "noResultsHint": "別のキーワードでお試しください"
+    "noResultsHint": "別のキーワードでお試しください",
+    "didYouMean": "もしかして："
   }
 }

@@ -1,6 +1,6 @@
 import { notFound } from 'next/navigation';
 import { getTranslations, getMessages } from 'next-intl/server';
-import { servicesConfig } from '@/config/services';
+import { servicesConfig, getPromotionSlugForService } from '@/config/services';
 import { getCategoryTheme } from '@/config/categoryThemes';
 import { Breadcrumbs } from '@/components/ui/Breadcrumbs';
 import { ServiceSidebar } from '@/components/services/ServiceSidebar';
@@ -93,10 +93,27 @@ export default async function ServiceDetailPage({ params }: PageProps) {
     const itemsRaw = tPromotions.raw('items') as Record<string, any> | undefined;
     const ui = (tPromotions.raw('ui') ?? {}) as Record<string, string>;
 
-    // Find matching promotion based on the slug from service JSON payload
-    const promotionItem = (promotion && promotion.slug && itemsRaw && itemsRaw[promotion.slug])
-        ? itemsRaw[promotion.slug]
+    // Smart promotion matching:
+    // 1. First try JSON-declared slug from service data
+    // 2. Fall back to centralized SERVICE_PROMOTION_MAP in config
+    const declaredSlug = promotion?.slug;
+    const mappedSlug = getPromotionSlugForService(slug);
+    const effectivePromoSlug = declaredSlug || mappedSlug;
+
+    const promotionItem = (effectivePromoSlug && itemsRaw && itemsRaw[effectivePromoSlug])
+        ? itemsRaw[effectivePromoSlug]
         : undefined;
+
+    // Auto-generate promotion banner text if service has no promotion section
+    // but has a matching promotion item via config map
+    const effectivePromotion = promotion?.title
+        ? promotion
+        : (promotionItem ? {
+            title: ui.drawerTitle || 'Promotion',
+            subtitle: promotionItem.title || '',
+            cta: ui.viewDetails || 'View Details',
+            slug: effectivePromoSlug,
+        } : undefined);
 
     // 4. JSON-LD & Breadcrumbs
     const breadcrumbs = [
@@ -418,9 +435,9 @@ export default async function ServiceDetailPage({ params }: PageProps) {
                 )}
 
                 {/* --- 5. Promotion Section (Special Deal) --- */}
-                {process && promotion && promotion.title && promotionItem && (
+                {effectivePromotion && effectivePromotion.title && promotionItem && (
                     <PromotionSectionItem
-                        promotion={promotion}
+                        promotion={effectivePromotion}
                         item={promotionItem}
                         ui={ui}
                     />

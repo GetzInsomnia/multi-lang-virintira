@@ -49,6 +49,13 @@ export function PromotionHubClient({ locale, hero, filters, items, ui }: Promoti
 
     const breakClass = isCJK ? 'break-keep' : '';
 
+    /** Only prepend ฿ if the string doesn't already contain a currency indicator */
+    const formatPrice = (p: string) => {
+        if (!p) return p;
+        if (/[฿$€¥£₩₹]/.test(p) || /THB|USD|EUR|Baht|バーツ|바트|밧|泰铢|泰銖|บาท|Rupee|Rupiah/i.test(p)) return p;
+        return `฿ ${p}`;
+    };
+
     const rainbowShadows = [
         'shadow-[0_0_25px_rgba(255,0,0,0.15)] hover:shadow-[0_0_40px_rgba(255,0,0,0.35)]',       // Red
         'shadow-[0_0_25px_rgba(255,127,0,0.15)] hover:shadow-[0_0_40px_rgba(255,127,0,0.35)]',   // Orange
@@ -165,17 +172,17 @@ export function PromotionHubClient({ locale, hero, filters, items, ui }: Promoti
 
                                         {/* Pricing Block */}
                                         <div className="mt-auto pt-6 border-t border-gray-100 mb-6 flex justify-start overflow-hidden">
-                                            <div className="flex flex-col text-left max-w-full items-start">
+                                            <div className="flex flex-col text-left max-w-full items-start min-w-0">
                                                 {item.originalPrice && (
-                                                    <div className="text-gray-400 text-sm sm:text-[15px] font-medium line-through mb-1">
-                                                        ฿ {item.originalPrice}
+                                                    <div className="text-gray-400 text-sm sm:text-[15px] font-medium line-through mb-1 truncate max-w-full">
+                                                        {formatPrice(item.originalPrice)}
                                                     </div>
                                                 )}
                                                 <div 
-                                                    className="text-[#A70909] font-bold whitespace-nowrap"
-                                                    style={{ fontSize: 'clamp(1.125rem, 4.5vw, 1.75rem)' }}
+                                                    className="text-[#A70909] font-bold truncate max-w-full"
+                                                    style={{ fontSize: 'clamp(1rem, 3.5vw, 1.5rem)' }}
                                                 >
-                                                    {item.price === 'ติดต่อสอบถามราคา' ? item.price : item.price.includes('ติดต่อ') ? item.price : item.price.includes('เริ่มต้น') ? item.price : `฿ ${item.price}`}
+                                                    {formatPrice(item.price)}
                                                 </div>
                                             </div>
                                         </div>

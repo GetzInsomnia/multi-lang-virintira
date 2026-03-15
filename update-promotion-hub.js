@@ -194,11 +194,11 @@ const THAI_CONTENT = {
             ],
             "conditions": "ค่าบริการเคลียร์ภาษีบุคคลธรรมดาขึ้นอยู่กับความซับซ้อนของประเภทธุรกิจและจำนวนเอกสาร และไม่รวมค่าเดินทางกรณีต้องไปพบเจ้าหน้าที่สรรพากรเพื่อชี้แจงแทนลูกค้า"
         },
-        "close-financial-deal": {
-            "slug": "close-financial-deal",
+        "close-financial-and-audit-bundle": {
+            "slug": "close-financial-and-audit-bundle",
             "category": "บัญชีและตรวจสอบ",
             "categoryId": "accounting",
-            "title": "ปิดงบการเงินประจำปี",
+            "title": "ตรวจสอบและปิดงบการเงินประจำปี",
             "imagePlaceholder": "4:3",
             "shortInfo": [
                 "ตรวจสอบงบการเงินโดยผู้สอบบัญชีรับอนุญาต (CPA)",

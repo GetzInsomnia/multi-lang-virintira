@@ -126,7 +126,8 @@
         "noResultsHint": "Cuba cari dengan kata kunci lain",
         "services": "Perkhidmatan",
         "articles": "Artikel",
-        "viewAll": "Lihat semua hasil untuk \"{query}\""
+        "viewAll": "Lihat semua hasil untuk \"{query}\"",
+        "didYouMean": "Adakah anda maksudkan:"
       },
       "language": {
         "label": "Language",
@@ -574,7 +575,7 @@
           "title": "Promosi Istimewa!",
           "subtitle": "Jangan lepaskan harga istimewa dan keistimewaan penuh untuk mereka yang ingin memulakan perniagaan dengan kos yang menjimatkan.",
           "cta": "Lihat Promosi sekarang",
-          "slug": "limited-partnership-registration-deal"
+          "slug": "partnership-registration-deal"
         },
         "features": {
           "title": "Segalanya yang anda perlukan untuk memulakan Perkongsian Terhad",
@@ -1424,99 +1425,259 @@
   },
   "promotions": {
     "metadata": {
-      "title": "",
-      "description": "",
+      "title": "Virintira | Promosi",
+      "description": "Tawaran terbaik dan pakej berbaloi untuk memulakan perniagaan anda.",
       "keywords": []
     },
     "hub": {
       "hero": {
-        "title": "",
-        "summary": ""
+        "title": "Semua Pakej & Promosi Istimewa",
+        "summary": "Temui tawaran terbaik dan pakej berbaloi daripada kami, direka untuk mengurangkan kos dan meningkatkan keupayaan anda memulakan perniagaan. Pilih pakej yang sesuai dan nikmati pelbagai manfaat di sini."
       },
       "filters": {
-        "all": "",
-        "registration": "",
-        "accounting": ""
+        "all": "Semua",
+        "registration": "Pendaftaran",
+        "amendment": "Perubahan Korporat",
+        "accounting": "Perakaunan & Audit",
+        "license": "Pelesenan",
+        "marketing": "Pemasaran Digital"
       }
     },
     "items": {
       "company-registration-deal": {
         "slug": "company-registration-deal",
-        "category": "",
+        "category": "Registration",
         "categoryId": "registration",
-        "title": "",
+        "title": "Pendaftaran Syarikat Sendirian Berhad",
         "imagePlaceholder": "4:3",
-        "shortInfo": [],
-        "price": "",
-        "originalPrice": "",
-        "benefits": [],
-        "conditions": ""
+        "shortInfo": [
+          "Yuran kerajaan termasuk — tiada caj tambahan",
+          "Tiada kewajiban kontrak simpan kira bulanan",
+          "Pengesahan identiti dalam talian — tiada perlu ke pejabat",
+          "Percuma! Perundingan dan penyediaan dokumen lengkap",
+          "Percuma! Set penuh sijil syarikat (DBD)",
+          "Percuma! Cop syarikat automatik (1 unit)",
+          "Percuma! Dokumen untuk pembukaan akaun bank",
+          "Percuma! Pendaftaran kata laluan DBD e-Filing",
+          "Percuma! Pendaftaran kata laluan Jabatan Hasil",
+          "Percuma! Kad nama untuk resit/invois cukai",
+          "Percuma! Kursus teknik cukai (bernilai 5,900 THB)"
+        ],
+        "price": "Bermula RM 9,900 THB",
+        "originalPrice": "Bermula 12,900 THB",
+        "pricingTiers": [
+          {
+            "name": "Pemegang saham warganegara Thai sahaja",
+            "price": "9,900",
+            "originalPrice": "12,900"
+          },
+          {
+            "name": "Pemegang saham asing ≤ 49%",
+            "price": "12,900",
+            "originalPrice": "15,900"
+          },
+          {
+            "name": "100% milik asing",
+            "price": "15,900",
+            "originalPrice": "18,900"
+          },
+          {
+            "name": "Pemegang saham korporat",
+            "price": "19,900",
+            "originalPrice": "22,900"
+          }
+        ],
+        "benefits": [
+          "<b>Satu harga, semua termasuk! Yuran kerajaan termasuk</b>",
+          "<b>Kebebasan memilih — tiada kontrak wajib</b>",
+          "<b>Pengesahan identiti dalam talian (e-KYC)</b>",
+          "<b>Percuma! Perundingan pakar dan penyediaan dokumen</b>",
+          "<b>Percuma! Kit permulaan perniagaan</b>",
+          "<b>Eksklusif! Kursus teknik cukai (5,900 THB)</b>"
+        ],
+        "conditions": "• Modal ≤ 5M THB termasuk. Melebihi: 3,000 THB/juta.\n• Pendaftaran elektronik melalui DBD Biz Regist."
       },
       "partnership-registration-deal": {
         "slug": "partnership-registration-deal",
-        "category": "",
+        "category": "Registration",
         "categoryId": "registration",
-        "title": "",
+        "title": "Pendaftaran Perkongsian Terhad",
         "imagePlaceholder": "4:3",
-        "shortInfo": [],
-        "price": "",
-        "originalPrice": "",
-        "benefits": [],
-        "conditions": ""
-      },
-      "close-financial-deal": {
-        "slug": "close-financial-deal",
-        "category": "",
-        "categoryId": "accounting",
-        "title": "",
-        "imagePlaceholder": "4:3",
-        "shortInfo": [],
-        "price": "",
-        "originalPrice": "",
-        "benefits": [],
-        "conditions": ""
-      },
-      "monthly-bookkeeping-and-tax-bundle": {
-        "slug": "monthly-bookkeeping-and-tax-bundle",
-        "category": "",
-        "categoryId": "accounting",
-        "title": "",
-        "imagePlaceholder": "4:3",
-        "shortInfo": [],
-        "price": "",
-        "originalPrice": "",
-        "benefits": [],
-        "conditions": ""
+        "shortInfo": [
+          "Yuran kerajaan termasuk",
+          "Tiada kontrak wajib",
+          "Pengesahan dalam talian",
+          "Percuma! Perundingan lengkap",
+          "Percuma! Sijil perkongsian (DBD)",
+          "Percuma! Cop (1 unit)",
+          "Percuma! Dokumen bank",
+          "Percuma! Pendaftaran DBD",
+          "Percuma! Pendaftaran cukai",
+          "Percuma! Kad nama",
+          "Percuma! Kursus cukai (5,900 THB)"
+        ],
+        "price": "Bermula 5,900 THB",
+        "originalPrice": "Bermula 8,900 THB",
+        "pricingTiers": [
+          {
+            "name": "Rakan kongsi Thai sahaja",
+            "price": "5,900",
+            "originalPrice": "8,900"
+          },
+          {
+            "name": "Rakan kongsi asing ≤ 49%",
+            "price": "8,900",
+            "originalPrice": "11,900"
+          }
+        ],
+        "benefits": [
+          "<b>Semua termasuk!</b>",
+          "<b>Tiada kontrak wajib</b>",
+          "<b>Pengesahan dalam talian</b>",
+          "<b>Perundingan percuma</b>",
+          "<b>Kit permulaan percuma</b>",
+          "<b>Kursus cukai eksklusif</b>"
+        ],
+        "conditions": "• Modal ≤ 5M THB termasuk."
       },
       "commercial-shop-registration-deal": {
         "slug": "commercial-shop-registration-deal",
-        "category": "",
+        "category": "Registration",
         "categoryId": "registration",
-        "title": "",
+        "title": "Pendaftaran Kedai Komersial",
         "imagePlaceholder": "4:3",
-        "shortInfo": [],
-        "price": "",
-        "originalPrice": "",
+        "shortInfo": [
+          "Yuran termasuk",
+          "Dalam talian dan fizikal",
+          "Kami uruskan semua",
+          "Sijil pantas",
+          "Kredibiliti 100%",
+          "Sedia untuk pinjaman"
+        ],
+        "price": "Bermula 3,500 THB",
+        "originalPrice": "Bermula 5,500 THB",
         "pricingTiers": [],
-        "benefits": [],
-        "conditions": ""
+        "benefits": [
+          "<b>Semua termasuk!</b>",
+          "<b>Dalam talian dan fizikal</b>",
+          "<b>Tanpa kerumitan</b>",
+          "<b>Sijil pantas</b>",
+          "<b>Kredibiliti dijamin</b>",
+          "<b>Pengembangan perniagaan</b>"
+        ],
+        "conditions": "Kadar Bangkok. Tambahan mungkin dikenakan di luar kawasan."
+      },
+      "monthly-bookkeeping-and-tax-bundle": {
+        "slug": "monthly-bookkeeping-and-tax-bundle",
+        "category": "Accounting & Audit",
+        "categoryId": "accounting",
+        "title": "Pakej Simpan Kira & Cukai Bulanan",
+        "imagePlaceholder": "4:3",
+        "shortInfo": [
+          "Simpan kira lengkap dan tepat",
+          "Penyerahan cukai tepat waktu",
+          "Ringkasan penyata kewangan bulanan"
+        ],
+        "price": "Bermula 1,500 THB/bulan",
+        "originalPrice": "Bermula 2,500/bulan THB",
+        "pricingTiers": [
+          {
+            "name": "Saiz S\n(≤ 50 dokumen/bulan)",
+            "price": "2,500",
+            "originalPrice": "3,500"
+          },
+          {
+            "name": "Saiz M\n(≤ 70 dokumen/bulan)",
+            "price": "3,000",
+            "originalPrice": "4,000"
+          },
+          {
+            "name": "Saiz L\n(≤ 100 dokumen/bulan)",
+            "price": "3,500",
+            "originalPrice": "4,500"
+          },
+          {
+            "name": "Saiz XL\n(> 100 dokumen/bulan)",
+            "price": "Hubungi untuk sebut harga"
+          },
+          {
+            "name": "Laporan kosong\n(Setiap jenis)",
+            "price": "500",
+            "originalPrice": "700"
+          }
+        ],
+        "benefits": [
+          "Simpan kira pendapatan/perbelanjaan",
+          "Penyediaan dan penyerahan borang cukai",
+          "Caruman keselamatan sosial",
+          "Perundingan percuma sepanjang kontrak"
+        ],
+        "conditions": "Harga bergantung kepada jumlah dokumen dan kerumitan."
+      },
+      "individual-tax-clearing": {
+        "slug": "individual-tax-clearing",
+        "category": "Accounting & Audit",
+        "categoryId": "accounting",
+        "title": "Penjelasan Cukai Pendapatan Peribadi",
+        "imagePlaceholder": "4:3",
+        "shortInfo": [
+          "Pemotongan maksimum",
+          "Selesaikan tunggakan",
+          "Penyerahan tepat waktu",
+          "Pengurusan dokumen",
+          "Perancangan cukai",
+          "Nasihat penubuhan syarikat"
+        ],
+        "price": "Bermula 2,500 THB",
+        "originalPrice": "Bermula 4,500 THB",
+        "pricingTiers": [],
+        "benefits": [
+          "<b>Pemotongan cukai maksimum</b>",
+          "<b>Pengurusan dokumen</b>",
+          "<b>Penyelesaian tunggakan</b>",
+          "<b>Perwakilan cukai</b>",
+          "<b>Sentiasa tepat waktu</b>",
+          "<b>Nasihat pertumbuhan</b>"
+        ],
+        "conditions": "Kadar bergantung kepada kerumitan. Kos perjalanan tidak termasuk."
+      },
+      "close-financial-deal": {
+        "slug": "close-financial-deal",
+        "category": "Accounting & Audit",
+        "categoryId": "accounting",
+        "title": "Penutupan Penyata Kewangan Tahunan",
+        "imagePlaceholder": "4:3",
+        "shortInfo": [
+          "Audit oleh CPA",
+          "100% patuh undang-undang",
+          "PND.50 dan e-Filing"
+        ],
+        "price": "Bermula 9,900 THB",
+        "originalPrice": "Bermula 12,900 THB",
+        "pricingTiers": [],
+        "benefits": [
+          "Audit dan pensijilan tahunan",
+          "Penyata cukai korporat (PND.50)",
+          "Penyerahan melalui DBD e-Filing",
+          "Senarai pemegang saham"
+        ],
+        "conditions": "Yuran audit bergantung kepada saiz dan kerumitan."
       }
     },
     "ui": {
-      "ctaPrimary": "",
-      "chatViaLine": "",
-      "callNow": "",
-      "benefitsTitle": "",
-      "conditionsTitle": "",
-      "summaryTitle": "",
-      "specialPrice": "",
-      "serviceRates": "",
-      "freeAssessment": "",
-      "viewDetails": "",
-      "andMore": "",
-      "drawerTitle": "",
-      "emptyHub": "",
-      "otherContacts": ""
+      "benefitsTitle": "Manfaat Yang Anda Akan Terima",
+      "conditionsTitle": "Terma & Syarat",
+      "summaryTitle": "Ringkasan Pakej",
+      "specialPrice": "Harga Istimewa",
+      "serviceRates": "Kadar Perkhidmatan",
+      "freeAssessment": "Hubungi pasukan kami untuk penilaian harga percuma — tiada caj tersembunyi",
+      "chatViaLine": "Sembang melalui LINE",
+      "callNow": "Hubungi 092-882-5556",
+      "viewDetails": "Lihat Butiran Promosi",
+      "andMore": "Dan banyak lagi...",
+      "drawerTitle": "Promosi & Keistimewaan",
+      "emptyHub": "Maaf, tiada promosi dalam kategori ini buat masa ini. Nantikan tawaran terkini yang akan datang.",
+      "otherContacts": "Saluran Hubungan Lain"
     }
   },
   "promotion": {
@@ -1537,6 +1698,7 @@
     "tabArticles": "Artikel",
     "emptyPrompt": "Taip kata kunci untuk mencari perkhidmatan atau artikel",
     "noResults": "Tiada hasil carian untuk \"{query}\"",
-    "noResultsHint": "Cuba cari dengan kata kunci lain"
+    "noResultsHint": "Cuba cari dengan kata kunci lain",
+    "didYouMean": "Adakah anda maksudkan:"
   }
 }

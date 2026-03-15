@@ -50,6 +50,13 @@ export function PromotionDetailsContent({ item, ui }: PromotionDetailsContentPro
     const isCJK = ['ja', 'ko', 'zh-Hans', 'zh-Hant'].includes(locale);
     const breakClass = isCJK ? 'break-keep' : 'break-words';
 
+    /** Only prepend ฿ if the string doesn't already contain a currency indicator */
+    const formatPrice = (p: string) => {
+        if (!p) return p;
+        if (/[฿$€¥£₩₹]/.test(p) || /THB|USD|EUR|Baht|バーツ|바트|밧|泰铢|泰銖|บาท|Rupee|Rupiah/i.test(p)) return p;
+        return `฿ ${p}`;
+    };
+
     const [randomShadow, setRandomShadow] = useState('shadow-[0_8px_30px_rgb(0,0,0,0.08)]');
 
     useEffect(() => {
@@ -227,11 +234,11 @@ export function PromotionDetailsContent({ item, ui }: PromotionDetailsContentPro
                             <div className="text-sm text-gray-500 font-medium mb-1">{ui?.specialPrice}</div>
                             <div className="flex items-end gap-3 flex-wrap">
                                 <span className="text-4xl font-extrabold text-[#A70909]">
-                                    {item.price === 'ติดต่อสอบถามราคา' ? item.price : item.price.includes('ติดต่อ') ? item.price : item.price.includes('เริ่มต้น') ? item.price : `฿ ${item.price}`}
+                                    {formatPrice(item.price)}
                                 </span>
                                 {item.originalPrice && (
                                     <span className="text-xl text-gray-400 font-medium line-through mb-1">
-                                        ฿ {item.originalPrice}
+                                        {formatPrice(item.originalPrice)}
                                     </span>
                                 )}
                             </div>
@@ -241,7 +248,7 @@ export function PromotionDetailsContent({ item, ui }: PromotionDetailsContentPro
                             <div className="text-sm text-gray-500 font-medium mb-3 px-2">{ui?.serviceRates}</div>
                             {item.pricingTiers.map((tier, idx) => {
                                 const [mainName, subName] = tier.name.split('\n');
-                                const isAskForPrice = tier.price.includes('สอบถาม') || tier.price.includes('ติดต่อ');
+                                const isAskForPrice = /สอบถาม|ติดต่อ|contact|inquire|Kontakt|问|聯繫|お問い合わせ|문의|Hubungi|संपर्क|தொடர்பு/i.test(tier.price);
                                 
                                 return (
                                     <div key={idx} className="flex justify-between items-center py-3 border-b border-gray-100 last:border-0 hover:bg-red-50 transition-colors px-3 rounded-xl gap-4">
@@ -251,13 +258,13 @@ export function PromotionDetailsContent({ item, ui }: PromotionDetailsContentPro
                                                 <span className="text-[13px] text-gray-500 font-normal mt-0.5">{parseFormattedText(subName)}</span>
                                             )}
                                         </div>
-                                        <div className="flex flex-col items-end shrink-0">
+                                    <div className="flex flex-col items-end shrink-0">
                                             <span className={`${isAskForPrice ? 'text-gray-600 text-[14px] font-medium bg-gray-100/80 px-2.5 py-1 rounded-md' : 'text-[#A70909] text-[17px]'} font-bold whitespace-nowrap`}>
-                                                {isAskForPrice ? tier.price : `฿ ${tier.price}`}
+                                                {isAskForPrice ? tier.price : formatPrice(tier.price)}
                                             </span>
                                             {tier.originalPrice && (
                                                 <span className="text-xs text-gray-400 font-medium line-through">
-                                                    ฿ {tier.originalPrice}
+                                                    {formatPrice(tier.originalPrice)}
                                                 </span>
                                             )}
                                         </div>

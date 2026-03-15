@@ -126,7 +126,8 @@
         "noResultsHint": "अन्य कीवर्ड से खोजने का प्रयास करें",
         "services": "सेवाएं",
         "articles": "लेख",
-        "viewAll": "\"{query}\" के सभी परिणाम देखें"
+        "viewAll": "\"{query}\" के सभी परिणाम देखें",
+        "didYouMean": "क्या आपका मतलब था:"
       },
       "language": {
         "label": "Language",
@@ -574,7 +575,7 @@
           "title": "विशेष छूट!",
           "subtitle": "उन लोगों के लिए विशेष कीमतों और पूर्ण लाभों को न चूकें जो लागत प्रभावी ढंग से व्यवसाय शुरू करना चाहते हैं।",
           "cta": "अभी प्रमोशन देखें",
-          "slug": "limited-partnership-registration-deal"
+          "slug": "partnership-registration-deal"
         },
         "features": {
           "title": "सीमित भागीदारी शुरू करने के लिए आवश्यक सब कुछ",
@@ -1424,99 +1425,259 @@
   },
   "promotions": {
     "metadata": {
-      "title": "",
-      "description": "",
+      "title": "Virintira | प्रमोशन",
+      "description": "व्यापार शुरू करने के लिए सर्वोत्तम सौदे और मूल्य-पैक पैकेज।",
       "keywords": []
     },
     "hub": {
       "hero": {
-        "title": "",
-        "summary": ""
+        "title": "सभी पैकेज और विशेष प्रमोशन",
+        "summary": "हमारे सर्वोत्तम सौदों और मूल्य-पैक पैकेजों की खोज करें, जो लागत कम करने और व्यापार शुरू करने की आपकी क्षमता को बढ़ाने के लिए डिज़ाइन किए गए हैं। अपनी आवश्यकताओं के अनुसार पैकेज चुनें और यहीं अनेक लाभों का आनंद लें।"
       },
       "filters": {
-        "all": "",
-        "registration": "",
-        "accounting": ""
+        "all": "सभी",
+        "registration": "पंजीकरण",
+        "amendment": "कॉर्पोरेट संशोधन",
+        "accounting": "लेखांकन और ऑडिट",
+        "license": "लाइसेंसिंग",
+        "marketing": "डिजिटल मार्केटिंग"
       }
     },
     "items": {
       "company-registration-deal": {
         "slug": "company-registration-deal",
-        "category": "",
+        "category": "Registration",
         "categoryId": "registration",
-        "title": "",
+        "title": "प्राइवेट लिमिटेड कंपनी पंजीकरण",
         "imagePlaceholder": "4:3",
-        "shortInfo": [],
-        "price": "",
-        "originalPrice": "",
-        "benefits": [],
-        "conditions": ""
+        "shortInfo": [
+          "सरकारी शुल्क शामिल — कोई अतिरिक्त चार्ज नहीं",
+          "मासिक बुककीपिंग अनुबंध की बाध्यता नहीं",
+          "ऑनलाइन पहचान सत्यापन — यात्रा की आवश्यकता नहीं",
+          "मुफ्त! परामर्श और पूर्ण दस्तावेज़ तैयारी",
+          "मुफ्त! कंपनी प्रमाणपत्र पूर्ण सेट (DBD)",
+          "मुफ्त! ऑटो-इंक कंपनी स्टैम्प (1 पीस)",
+          "मुफ्त! बैंक खाता खोलने के दस्तावेज़",
+          "मुफ्त! DBD e-Filing पासवर्ड पंजीकरण",
+          "मुफ्त! राजस्व विभाग पासवर्ड पंजीकरण",
+          "मुफ्त! रसीद/कर चालान के लिए विजिटिंग कार्ड",
+          "मुफ्त! कर तकनीक प्रशिक्षण पाठ्यक्रम (5,900 THB मूल्य)"
+        ],
+        "price": "9,900 THB से शुरू",
+        "originalPrice": "12,900 से शुरू THB",
+        "pricingTiers": [
+          {
+            "name": "सभी थाई शेयरधारक",
+            "price": "9,900",
+            "originalPrice": "12,900"
+          },
+          {
+            "name": "विदेशी शेयरधारक ≤ 49%",
+            "price": "12,900",
+            "originalPrice": "15,900"
+          },
+          {
+            "name": "100% विदेशी स्वामित्व",
+            "price": "15,900",
+            "originalPrice": "18,900"
+          },
+          {
+            "name": "कॉर्पोरेट शेयरधारक",
+            "price": "19,900",
+            "originalPrice": "22,900"
+          }
+        ],
+        "benefits": [
+          "<b>एक कीमत, सब शामिल!</b>",
+          "<b>चुनने की स्वतंत्रता</b>",
+          "<b>ऑनलाइन पहचान सत्यापन (e-KYC)</b>",
+          "<b>मुफ्त! विशेषज्ञ परामर्श</b>",
+          "<b>मुफ्त! बिजनेस स्टार्टर किट</b>",
+          "<b>विशेष! कर प्रशिक्षण पाठ्यक्रम (5,900 THB)</b>"
+        ],
+        "conditions": "• पूंजी ≤ 5M THB शामिल। इससे अधिक: 3,000 THB/मिलियन।"
       },
       "partnership-registration-deal": {
         "slug": "partnership-registration-deal",
-        "category": "",
+        "category": "Registration",
         "categoryId": "registration",
-        "title": "",
+        "title": "सीमित भागीदारी पंजीकरण",
         "imagePlaceholder": "4:3",
-        "shortInfo": [],
-        "price": "",
-        "originalPrice": "",
-        "benefits": [],
-        "conditions": ""
-      },
-      "close-financial-deal": {
-        "slug": "close-financial-deal",
-        "category": "",
-        "categoryId": "accounting",
-        "title": "",
-        "imagePlaceholder": "4:3",
-        "shortInfo": [],
-        "price": "",
-        "originalPrice": "",
-        "benefits": [],
-        "conditions": ""
-      },
-      "monthly-bookkeeping-and-tax-bundle": {
-        "slug": "monthly-bookkeeping-and-tax-bundle",
-        "category": "",
-        "categoryId": "accounting",
-        "title": "",
-        "imagePlaceholder": "4:3",
-        "shortInfo": [],
-        "price": "",
-        "originalPrice": "",
-        "benefits": [],
-        "conditions": ""
+        "shortInfo": [
+          "सरकारी शुल्क शामिल",
+          "कोई बाध्यता नहीं",
+          "ऑनलाइन सत्यापन",
+          "मुफ्त! परामर्श",
+          "मुफ्त! प्रमाणपत्र",
+          "मुफ्त! स्टैम्प",
+          "मुफ्त! बैंक दस्तावेज",
+          "मुफ्त! DBD पंजीकरण",
+          "मुफ्त! कर पंजीकरण",
+          "मुफ्त! विजिटिंग कार्ड",
+          "मुफ्त! कर प्रशिक्षण (5,900 THB)"
+        ],
+        "price": "5,900 THB से शुरू",
+        "originalPrice": "8,900 से शुरू THB",
+        "pricingTiers": [
+          {
+            "name": "सभी थाई भागीदार",
+            "price": "5,900",
+            "originalPrice": "8,900"
+          },
+          {
+            "name": "विदेशी भागीदार ≤ 49%",
+            "price": "8,900",
+            "originalPrice": "11,900"
+          }
+        ],
+        "benefits": [
+          "<b>सब शामिल!</b>",
+          "<b>कोई बाध्यता नहीं</b>",
+          "<b>ऑनलाइन सत्यापन</b>",
+          "<b>मुफ्त परामर्श</b>",
+          "<b>मुफ्त स्टार्टर किट</b>",
+          "<b>कर प्रशिक्षण</b>"
+        ],
+        "conditions": "• पूंजी ≤ 5M THB शामिल।"
       },
       "commercial-shop-registration-deal": {
         "slug": "commercial-shop-registration-deal",
-        "category": "",
+        "category": "Registration",
         "categoryId": "registration",
-        "title": "",
+        "title": "वाणिज्यिक दुकान पंजीकरण",
         "imagePlaceholder": "4:3",
-        "shortInfo": [],
-        "price": "",
-        "originalPrice": "",
+        "shortInfo": [
+          "शुल्क शामिल",
+          "ऑनलाइन और भौतिक",
+          "सब हम करते हैं",
+          "तेज़ प्रमाणपत्र",
+          "100% विश्वसनीय",
+          "ऋण के लिए तैयार"
+        ],
+        "price": "3,500 THB से शुरू",
+        "originalPrice": "5,500 से शुरू THB",
         "pricingTiers": [],
-        "benefits": [],
-        "conditions": ""
+        "benefits": [
+          "<b>सब शामिल!</b>",
+          "<b>ऑनलाइन और भौतिक</b>",
+          "<b>बिना झंझट</b>",
+          "<b>तेज़ प्रमाणपत्र</b>",
+          "<b>विश्वसनीयता</b>",
+          "<b>व्यापार विस्तार</b>"
+        ],
+        "conditions": "बैंकॉक क्षेत्र के लिए मानक दरें।"
+      },
+      "monthly-bookkeeping-and-tax-bundle": {
+        "slug": "monthly-bookkeeping-and-tax-bundle",
+        "category": "Accounting & Audit",
+        "categoryId": "accounting",
+        "title": "मासिक बुककीपिंग और कर पैकेज",
+        "imagePlaceholder": "4:3",
+        "shortInfo": [
+          "पूर्ण और सटीक बुककीपिंग",
+          "समय पर कर रिटर्न",
+          "मासिक वित्तीय सारांश"
+        ],
+        "price": "1,500 THB/माह से शुरू",
+        "originalPrice": "2,500/माह से शुरू THB",
+        "pricingTiers": [
+          {
+            "name": "S साइज़\n(≤ 50 दस्तावेज़/माह)",
+            "price": "2,500",
+            "originalPrice": "3,500"
+          },
+          {
+            "name": "M साइज़\n(≤ 70 दस्तावेज़/माह)",
+            "price": "3,000",
+            "originalPrice": "4,000"
+          },
+          {
+            "name": "L साइज़\n(≤ 100 दस्तावेज़/माह)",
+            "price": "3,500",
+            "originalPrice": "4,500"
+          },
+          {
+            "name": "XL साइज़\n(> 100 दस्तावेज़/माह)",
+            "price": "संपर्क करें"
+          },
+          {
+            "name": "खाली रिपोर्ट\n(प्रति प्रकार)",
+            "price": "500",
+            "originalPrice": "700"
+          }
+        ],
+        "benefits": [
+          "आय/व्यय बुककीपिंग",
+          "कर रिटर्न तैयारी और दाखिल",
+          "सामाजिक सुरक्षा अंशदान",
+          "अनुबंध अवधि में मुफ्त परामर्श"
+        ],
+        "conditions": "मूल्य दस्तावेज़ संख्या और जटिलता पर निर्भर।"
+      },
+      "individual-tax-clearing": {
+        "slug": "individual-tax-clearing",
+        "category": "Accounting & Audit",
+        "categoryId": "accounting",
+        "title": "व्यक्तिगत आयकर निपटान",
+        "imagePlaceholder": "4:3",
+        "shortInfo": [
+          "अधिकतम कटौती",
+          "बकाया कर समाधान",
+          "समय पर दाखिल",
+          "दस्तावेज़ प्रबंधन",
+          "कर नियोजन",
+          "कंपनी बनाने की सलाह"
+        ],
+        "price": "2,500 THB से शुरू",
+        "originalPrice": "4,500 से शुरू THB",
+        "pricingTiers": [],
+        "benefits": [
+          "<b>अधिकतम कर कटौती</b>",
+          "<b>दस्तावेज़ प्रबंधन</b>",
+          "<b>बकाया समाधान</b>",
+          "<b>कर प्रतिनिधित्व</b>",
+          "<b>हमेशा समय पर</b>",
+          "<b>वृद्धि परामर्श</b>"
+        ],
+        "conditions": "शुल्क जटिलता पर निर्भर। यात्रा खर्च शामिल नहीं।"
+      },
+      "close-financial-deal": {
+        "slug": "close-financial-deal",
+        "category": "Accounting & Audit",
+        "categoryId": "accounting",
+        "title": "वार्षिक वित्तीय विवरण समापन",
+        "imagePlaceholder": "4:3",
+        "shortInfo": [
+          "CPA द्वारा ऑडिट",
+          "100% कानूनी अनुपालन",
+          "PND.50 और e-Filing"
+        ],
+        "price": "9,900 THB से शुरू",
+        "originalPrice": "12,900 से शुरू THB",
+        "pricingTiers": [],
+        "benefits": [
+          "वार्षिक ऑडिट और प्रमाणन",
+          "कॉर्पोरेट आयकर रिटर्न (PND.50)",
+          "DBD e-Filing द्वारा जमा",
+          "शेयरधारक सूची"
+        ],
+        "conditions": "ऑडिट शुल्क व्यवसाय के आकार पर निर्भर।"
       }
     },
     "ui": {
-      "ctaPrimary": "",
-      "chatViaLine": "",
-      "callNow": "",
-      "benefitsTitle": "",
-      "conditionsTitle": "",
-      "summaryTitle": "",
-      "specialPrice": "",
-      "serviceRates": "",
-      "freeAssessment": "",
-      "viewDetails": "",
-      "andMore": "",
-      "drawerTitle": "",
-      "emptyHub": "",
-      "otherContacts": ""
+      "benefitsTitle": "आपको मिलने वाले लाभ",
+      "conditionsTitle": "नियम और शर्तें",
+      "summaryTitle": "पैकेज सारांश",
+      "specialPrice": "विशेष मूल्य",
+      "serviceRates": "सेवा दरें",
+      "freeAssessment": "हमारी टीम से संपर्क करें मुफ्त मूल्यांकन के लिए — कोई छिपी लागत नहीं",
+      "chatViaLine": "LINE पर चैट करें",
+      "callNow": "कॉल करें 092-882-5556",
+      "viewDetails": "प्रमोशन विवरण देखें",
+      "andMore": "और भी बहुत कुछ...",
+      "drawerTitle": "प्रमोशन और विशेषाधिकार",
+      "emptyHub": "क्षमा करें, इस श्रेणी में वर्तमान में कोई प्रमोशन नहीं है। नवीनतम ऑफ़र के लिए बने रहें।",
+      "otherContacts": "अन्य संपर्क चैनल"
     }
   },
   "promotion": {
@@ -1537,6 +1698,7 @@
     "tabArticles": "लेख",
     "emptyPrompt": "सेवाओं या लेखों को खोजने के लिए कीवर्ड टाइप करें",
     "noResults": "\"{query}\" के लिए कोई परिणाम नहीं मिला",
-    "noResultsHint": "अन्य कीवर्ड से खोजने का प्रयास करें"
+    "noResultsHint": "अन्य कीवर्ड से खोजने का प्रयास करें",
+    "didYouMean": "क्या आपका मतलब था:"
   }
 }

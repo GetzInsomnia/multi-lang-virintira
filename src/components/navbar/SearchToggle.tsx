@@ -181,6 +181,7 @@ export default function SearchToggle({
               query={deferredQuery}
               visible={open && deferredQuery.trim().length > 0}
               onSelect={close}
+              onSuggestionClick={(suggestion) => setQuery(suggestion)}
             />
           </div>
         </div>

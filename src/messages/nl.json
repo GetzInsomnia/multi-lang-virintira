@@ -126,7 +126,8 @@
         "noResultsHint": "Probeer te zoeken met andere trefwoorden",
         "services": "Diensten",
         "articles": "Artikelen",
-        "viewAll": "Alle resultaten bekijken voor \"{query}\""
+        "viewAll": "Alle resultaten bekijken voor \"{query}\"",
+        "didYouMean": "Bedoelde u:"
       },
       "language": {
         "label": "Language",
@@ -574,7 +575,7 @@
           "title": "Speciale Aanbieding!",
           "subtitle": "Mis de speciale prijzen en volledige voordelen niet voor degenen die kosteneffectief een bedrijf willen starten.",
           "cta": "Bekijk de aanbieding nu",
-          "slug": "limited-partnership-registration-deal"
+          "slug": "partnership-registration-deal"
         },
         "features": {
           "title": "Alles wat u nodig heeft om een Commanditaire Vennootschap te starten",
@@ -1405,99 +1406,259 @@
   },
   "promotions": {
     "metadata": {
-      "title": "",
-      "description": "",
+      "title": "Virintira | Aanbiedingen",
+      "description": "De beste deals en voordelige pakketten voor uw bedrijfsstart.",
       "keywords": []
     },
     "hub": {
       "hero": {
-        "title": "",
-        "summary": ""
+        "title": "Alle pakketten en speciale aanbiedingen",
+        "summary": "Ontdek onze beste aanbiedingen en voordelige pakketten, ontworpen om kosten te verlagen en uw bedrijfsstart te verbeteren. Kies het pakket dat bij u past en geniet van talrijke voordelen."
       },
       "filters": {
-        "all": "",
-        "registration": "",
-        "accounting": ""
+        "all": "Alle",
+        "registration": "Registratie",
+        "amendment": "Bedrijfswijzigingen",
+        "accounting": "Boekhouding & Audit",
+        "license": "Vergunningen",
+        "marketing": "Digitale Marketing"
       }
     },
     "items": {
       "company-registration-deal": {
         "slug": "company-registration-deal",
-        "category": "",
+        "category": "Registration",
         "categoryId": "registration",
-        "title": "",
+        "title": "Registratie Besloten Vennootschap",
         "imagePlaceholder": "4:3",
-        "shortInfo": [],
-        "price": "",
-        "originalPrice": "",
-        "benefits": [],
-        "conditions": ""
+        "shortInfo": [
+          "Overheidskosten inbegrepen",
+          "Geen verplicht boekhoudcontract",
+          "Online identiteitsverificatie",
+          "Gratis! Advies en documentvoorbereiding",
+          "Gratis! Bedrijfscertificaten (DBD)",
+          "Gratis! Bedrijfsstempel (1 stuk)",
+          "Gratis! Documenten voor bankrekening",
+          "Gratis! DBD e-Filing registratie",
+          "Gratis! Belastingdienst registratie",
+          "Gratis! Visitekaartjes",
+          "Gratis! Belastingcursus (5.900 THB)"
+        ],
+        "price": "Vanaf 9.900 THB",
+        "originalPrice": "Vanaf 12.900 THB",
+        "pricingTiers": [
+          {
+            "name": "Alleen Thaise aandeelhouders",
+            "price": "9.900",
+            "originalPrice": "12.900"
+          },
+          {
+            "name": "Buitenlandse aandeelhouder(s) ≤ 49%",
+            "price": "12.900",
+            "originalPrice": "15.900"
+          },
+          {
+            "name": "100% buitenlands eigendom",
+            "price": "15.900",
+            "originalPrice": "18.900"
+          },
+          {
+            "name": "Rechtspersoon als aandeelhouder",
+            "price": "19.900",
+            "originalPrice": "22.900"
+          }
+        ],
+        "benefits": [
+          "<b>Alles inbegrepen!</b>",
+          "<b>Vrije keuze</b>",
+          "<b>Online verificatie (e-KYC)</b>",
+          "<b>Gratis advies en documenten</b>",
+          "<b>Gratis starterspakket</b>",
+          "<b>Exclusieve belastingcursus (5.900 THB)</b>"
+        ],
+        "conditions": "• Kapitaal ≤ 5M THB inbegrepen. Daarboven: 3.000 THB/miljoen."
       },
       "partnership-registration-deal": {
         "slug": "partnership-registration-deal",
-        "category": "",
+        "category": "Registration",
         "categoryId": "registration",
-        "title": "",
+        "title": "Registratie Commanditaire Vennootschap",
         "imagePlaceholder": "4:3",
-        "shortInfo": [],
-        "price": "",
-        "originalPrice": "",
-        "benefits": [],
-        "conditions": ""
-      },
-      "close-financial-deal": {
-        "slug": "close-financial-deal",
-        "category": "",
-        "categoryId": "accounting",
-        "title": "",
-        "imagePlaceholder": "4:3",
-        "shortInfo": [],
-        "price": "",
-        "originalPrice": "",
-        "benefits": [],
-        "conditions": ""
-      },
-      "monthly-bookkeeping-and-tax-bundle": {
-        "slug": "monthly-bookkeeping-and-tax-bundle",
-        "category": "",
-        "categoryId": "accounting",
-        "title": "",
-        "imagePlaceholder": "4:3",
-        "shortInfo": [],
-        "price": "",
-        "originalPrice": "",
-        "benefits": [],
-        "conditions": ""
+        "shortInfo": [
+          "Overheidskosten inbegrepen",
+          "Geen verplicht contract",
+          "Online verificatie",
+          "Gratis! Advies",
+          "Gratis! CV-certificaten",
+          "Gratis! Stempel",
+          "Gratis! Bankdocumenten",
+          "Gratis! DBD registratie",
+          "Gratis! Belastingregistratie",
+          "Gratis! Visitekaartjes",
+          "Gratis! Belastingcursus (5.900 THB)"
+        ],
+        "price": "Vanaf 5.900 THB",
+        "originalPrice": "Vanaf 8.900 THB",
+        "pricingTiers": [
+          {
+            "name": "Alleen Thaise partners",
+            "price": "5.900",
+            "originalPrice": "8.900"
+          },
+          {
+            "name": "Buitenlandse partner(s) ≤ 49%",
+            "price": "8.900",
+            "originalPrice": "11.900"
+          }
+        ],
+        "benefits": [
+          "<b>Alles inbegrepen!</b>",
+          "<b>Vrije keuze</b>",
+          "<b>Online verificatie</b>",
+          "<b>Gratis advies</b>",
+          "<b>Gratis starterspakket</b>",
+          "<b>Belastingcursus</b>"
+        ],
+        "conditions": "• Kapitaal ≤ 5M THB inbegrepen."
       },
       "commercial-shop-registration-deal": {
         "slug": "commercial-shop-registration-deal",
-        "category": "",
+        "category": "Registration",
         "categoryId": "registration",
-        "title": "",
+        "title": "Registratie Commercieel Bedrijf",
         "imagePlaceholder": "4:3",
-        "shortInfo": [],
-        "price": "",
-        "originalPrice": "",
+        "shortInfo": [
+          "Kosten inbegrepen",
+          "Online en fysiek",
+          "Wij regelen alles",
+          "Snel certificaat",
+          "100% betrouwbaar",
+          "Direct te gebruiken"
+        ],
+        "price": "Vanaf 3.500 THB",
+        "originalPrice": "Vanaf 5.500 THB",
         "pricingTiers": [],
-        "benefits": [],
-        "conditions": ""
+        "benefits": [
+          "<b>Alles inbegrepen!</b>",
+          "<b>Online en fysiek</b>",
+          "<b>Zonder gedoe</b>",
+          "<b>Snel certificaat</b>",
+          "<b>Betrouwbaarheid</b>",
+          "<b>Bedrijfsuitbreiding</b>"
+        ],
+        "conditions": "Standaardtarieven Bangkok. Buiten Bangkok mogelijk toeslag."
+      },
+      "monthly-bookkeeping-and-tax-bundle": {
+        "slug": "monthly-bookkeeping-and-tax-bundle",
+        "category": "Accounting & Audit",
+        "categoryId": "accounting",
+        "title": "Maandelijks Boekhouding & Belasting Pakket",
+        "imagePlaceholder": "4:3",
+        "shortInfo": [
+          "Volledige conforme boekhouding",
+          "Tijdige belastingaangiften",
+          "Maandelijkse financiële overzichten"
+        ],
+        "price": "Vanaf 1.500 THB/maand",
+        "originalPrice": "Vanaf 2.500/maand THB",
+        "pricingTiers": [
+          {
+            "name": "S\n(≤ 50 documenten/maand)",
+            "price": "2.500",
+            "originalPrice": "3.500"
+          },
+          {
+            "name": "M\n(≤ 70 documenten/maand)",
+            "price": "3.000",
+            "originalPrice": "4.000"
+          },
+          {
+            "name": "L\n(≤ 100 documenten/maand)",
+            "price": "3.500",
+            "originalPrice": "4.500"
+          },
+          {
+            "name": "XL\n(> 100 documenten/maand)",
+            "price": "Op aanvraag"
+          },
+          {
+            "name": "Blanco rapport\n(Per type)",
+            "price": "500",
+            "originalPrice": "700"
+          }
+        ],
+        "benefits": [
+          "Inkomsten-/uitgavenboekhouding",
+          "Belastingaangiften opstellen en indienen",
+          "Sociale premies",
+          "Gratis advies tijdens contractperiode"
+        ],
+        "conditions": "Prijzen op basis van volume en complexiteit."
+      },
+      "individual-tax-clearing": {
+        "slug": "individual-tax-clearing",
+        "category": "Accounting & Audit",
+        "categoryId": "accounting",
+        "title": "Aangifte Inkomstenbelasting",
+        "imagePlaceholder": "4:3",
+        "shortInfo": [
+          "Aftrekposten maximaliseren",
+          "Belastingschulden oplossen",
+          "Tijdige aangifte",
+          "Documentbeheer",
+          "Belastingplanning",
+          "Advies over rechtsvorm"
+        ],
+        "price": "Vanaf 2.500 THB",
+        "originalPrice": "Vanaf 4.500 THB",
+        "pricingTiers": [],
+        "benefits": [
+          "<b>Maximale aftrekposten</b>",
+          "<b>Documentbeheer</b>",
+          "<b>Professionele schuldoplossing</b>",
+          "<b>Vertegenwoordiging</b>",
+          "<b>Altijd op tijd</b>",
+          "<b>Groeiadvies</b>"
+        ],
+        "conditions": "Tarieven op basis van complexiteit. Reiskosten niet inbegrepen."
+      },
+      "close-financial-deal": {
+        "slug": "close-financial-deal",
+        "category": "Accounting & Audit",
+        "categoryId": "accounting",
+        "title": "Jaarlijkse Jaarafsluiting",
+        "imagePlaceholder": "4:3",
+        "shortInfo": [
+          "CPA-controle",
+          "100% wettelijk conform",
+          "PND.50 en e-Filing"
+        ],
+        "price": "Vanaf 9.900 THB",
+        "originalPrice": "Vanaf 12.900 THB",
+        "pricingTiers": [],
+        "benefits": [
+          "Jaarlijkse controle en certificering",
+          "Vennootschapsbelastingaangifte (PND.50)",
+          "DBD e-Filing indiening",
+          "Aandeelhoudersregister"
+        ],
+        "conditions": "Controletarieven op basis van bedrijfsomvang."
       }
     },
     "ui": {
-      "ctaPrimary": "",
-      "chatViaLine": "",
-      "callNow": "",
-      "benefitsTitle": "",
-      "conditionsTitle": "",
-      "summaryTitle": "",
-      "specialPrice": "",
-      "serviceRates": "",
-      "freeAssessment": "",
-      "viewDetails": "",
-      "andMore": "",
-      "drawerTitle": "",
-      "emptyHub": "",
-      "otherContacts": ""
+      "benefitsTitle": "Voordelen die u ontvangt",
+      "conditionsTitle": "Voorwaarden",
+      "summaryTitle": "Pakketoverzicht",
+      "specialPrice": "Speciale prijs",
+      "serviceRates": "Servicetarieven",
+      "freeAssessment": "Neem contact op met ons team voor een gratis prijsbeoordeling — geen verborgen kosten",
+      "chatViaLine": "Chat via LINE",
+      "callNow": "Bel 092-882-5556",
+      "viewDetails": "Bekijk actiedetails",
+      "andMore": "En nog veel meer...",
+      "drawerTitle": "Aanbiedingen & Voordelen",
+      "emptyHub": "Sorry, er zijn momenteel geen aanbiedingen in deze categorie. Houd de nieuwste aanbiedingen in de gaten.",
+      "otherContacts": "Andere contactkanalen"
     }
   },
   "promotion": {
@@ -1518,6 +1679,7 @@
     "tabArticles": "Artikelen",
     "emptyPrompt": "Typ een trefwoord om diensten of artikelen te zoeken",
     "noResults": "Geen resultaten gevonden voor \"{query}\"",
-    "noResultsHint": "Probeer te zoeken met andere trefwoorden"
+    "noResultsHint": "Probeer te zoeken met andere trefwoorden",
+    "didYouMean": "Bedoelde u:"
   }
 }

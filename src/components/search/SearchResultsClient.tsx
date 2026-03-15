@@ -1,7 +1,7 @@
 'use client';
 
 import { useMemo, useState } from 'react';
-import { useSearchParams } from 'next/navigation';
+import { useSearchParams, useRouter } from 'next/navigation';
 import { useLocale, useTranslations } from 'next-intl';
 import { Link } from '@/i18n/routing';
 import { getCategoryTheme } from '@/config/categoryThemes';
@@ -9,6 +9,7 @@ import {
   buildServiceSearchIndex,
   searchItems,
   highlightMatches,
+  getSuggestions,
   type SearchResultItem,
 } from '@/lib/searchIndex';
 
@@ -111,9 +112,15 @@ export default function SearchResultsClient() {
 
   // Search
   const serviceResults = useMemo(
-    () => searchItems(serviceIndex, query),
-    [serviceIndex, query],
+    () => searchItems(serviceIndex, query, locale),
+    [serviceIndex, query, locale],
   );
+
+  // "Did you mean?" suggestions when no results
+  const didYouMeanSuggestions = useMemo(() => {
+    if (!query.trim() || serviceResults.length > 0) return [];
+    return getSuggestions(serviceIndex, query, 3);
+  }, [serviceIndex, query, serviceResults.length]);
   // TODO: article results from CMS/API later
   const articleResults: SearchResultItem[] = [];
 
@@ -184,7 +191,24 @@ export default function SearchResultsClient() {
         <div className="rounded-2xl border border-gray-100 bg-gray-50 px-6 py-16 text-center">
           <p className="text-4xl mb-3">😕</p>
           <p className="text-gray-700 font-medium">{tSearch('noResults', { query })}</p>
-          <p className="mt-2 text-sm text-gray-400">{tSearch('noResultsHint')}</p>
+          {didYouMeanSuggestions.length > 0 ? (
+            <div className="mt-4">
+              <p className="text-sm text-gray-400 mb-3">{tSearch('didYouMean')}</p>
+              <div className="flex flex-wrap justify-center gap-2">
+                {didYouMeanSuggestions.map((suggestion) => (
+                  <Link
+                    key={suggestion}
+                    href={`/search?q=${encodeURIComponent(suggestion)}`}
+                    className="rounded-full bg-red-50 px-4 py-2 text-sm font-medium text-[#A70909] hover:bg-red-100 transition-colors"
+                  >
+                    {suggestion}
+                  </Link>
+                ))}
+              </div>
+            </div>
+          ) : (
+            <p className="mt-2 text-sm text-gray-400">{tSearch('noResultsHint')}</p>
+          )}
         </div>
       ) : (
         <div className="space-y-3">

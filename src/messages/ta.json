@@ -126,7 +126,8 @@
         "noResultsHint": "வேறு முக்கிய வார்த்தைகளுடன் தேடுங்கள்",
         "services": "சேவைகள்",
         "articles": "கட்டுரைகள்",
-        "viewAll": "\"{query}\" க்கான அனைத்து முடிவுகளையும் காண்க"
+        "viewAll": "\"{query}\" க்கான அனைத்து முடிவுகளையும் காண்க",
+        "didYouMean": "நீங்கள் இதை தேடுகிறீர்களா:"
       },
       "language": {
         "label": "Language",
@@ -574,7 +575,7 @@
           "title": "சிறப்பு சலுகை!",
           "subtitle": "செலவு குறைந்த முறையில் வணிகத்தைத் தொடங்க விரும்புவோருக்கான சிறப்பு விலைகள் மற்றும் முழுமையான சலுகைகளைத் தவறவிடாதீர்கள்.",
           "cta": "இப்போது சலுகையைக் காண்க",
-          "slug": "limited-partnership-registration-deal"
+          "slug": "partnership-registration-deal"
         },
         "features": {
           "title": "வரையறுக்கப்பட்ட கூட்டாண்மையைத் தொடங்க உங்களுக்குத் தேவையான அனைத்தும்",
@@ -1424,99 +1425,259 @@
   },
   "promotions": {
     "metadata": {
-      "title": "",
-      "description": "",
+      "title": "Virintira | பிரமோஷன்கள்",
+      "description": "வணிகம் தொடங்க சிறந்த சலுகைகள் மற்றும் மதிப்புமிக்க பேக்கேஜ்கள்.",
       "keywords": []
     },
     "hub": {
       "hero": {
-        "title": "",
-        "summary": ""
+        "title": "அனைத்து பேக்கேஜ்கள் & சிறப்பு பிரமோஷன்கள்",
+        "summary": "செலவைக் குறைத்து வணிகத்தைத் தொடங்கும் உங்கள் திறனை மேம்படுத்த வடிவமைக்கப்பட்ட எங்களின் சிறந்த சலுகைகள் மற்றும் மதிப்புமிக்க பேக்கேஜ்களைக் கண்டறியுங்கள்."
       },
       "filters": {
-        "all": "",
-        "registration": "",
-        "accounting": ""
+        "all": "அனைத்தும்",
+        "registration": "பதிவு",
+        "amendment": "நிறுவன மாற்றங்கள்",
+        "accounting": "கணக்கியல் & தணிக்கை",
+        "license": "உரிமம்",
+        "marketing": "டிஜிட்டல் மார்க்கெட்டிங்"
       }
     },
     "items": {
       "company-registration-deal": {
         "slug": "company-registration-deal",
-        "category": "",
+        "category": "Registration",
         "categoryId": "registration",
-        "title": "",
+        "title": "பிரைவேட் லிமிடெட் நிறுவனப் பதிவு",
         "imagePlaceholder": "4:3",
-        "shortInfo": [],
-        "price": "",
-        "originalPrice": "",
-        "benefits": [],
-        "conditions": ""
+        "shortInfo": [
+          "அரசாங்க கட்டணங்கள் உள்ளடக்கம்",
+          "மாதாந்திர கணக்கியல் ஒப்பந்தம் கட்டாயமில்லை",
+          "ஆன்லைன் அடையாள சரிபார்ப்பு",
+          "இலவசம்! ஆலோசனை மற்றும் ஆவணம்",
+          "இலவசம்! நிறுவனச் சான்றிதழ்கள் (DBD)",
+          "இலவசம்! நிறுவன முத்திரை (1 பீஸ்)",
+          "இலவசம்! வங்கி ஆவணங்கள்",
+          "இலவசம்! DBD பதிவு",
+          "இலவசம்! வரி பதிவு",
+          "இலவசம்! விசிட்டிங் கார்டு",
+          "இலவசம்! வரி பயிற்சி (5,900 THB)"
+        ],
+        "price": "9,900 THB இலிருந்து",
+        "originalPrice": "12,900 இலிருந்து THB",
+        "pricingTiers": [
+          {
+            "name": "தாய் பங்குதாரர்கள் மட்டும்",
+            "price": "9,900",
+            "originalPrice": "12,900"
+          },
+          {
+            "name": "வெளிநாட்டு பங்குதாரர் ≤ 49%",
+            "price": "12,900",
+            "originalPrice": "15,900"
+          },
+          {
+            "name": "100% வெளிநாட்டு உரிமை",
+            "price": "15,900",
+            "originalPrice": "18,900"
+          },
+          {
+            "name": "கார்ப்பரேட் பங்குதாரர்",
+            "price": "19,900",
+            "originalPrice": "22,900"
+          }
+        ],
+        "benefits": [
+          "<b>ஒரே விலை, அனைத்தும் உள்ளடக்கம்!</b>",
+          "<b>தேர்வு சுதந்திரம்</b>",
+          "<b>ஆன்லைன் சரிபார்ப்பு (e-KYC)</b>",
+          "<b>இலவச ஆலோசனை</b>",
+          "<b>இலவச ஸ்டார்ட்டர் கிட்</b>",
+          "<b>சிறப்பு! வரி பயிற்சி (5,900 THB)</b>"
+        ],
+        "conditions": "• மூலதனம் ≤ 5M THB உள்ளடக்கம்."
       },
       "partnership-registration-deal": {
         "slug": "partnership-registration-deal",
-        "category": "",
+        "category": "Registration",
         "categoryId": "registration",
-        "title": "",
+        "title": "கூட்டாண்மை நிறுவனப் பதிவு",
         "imagePlaceholder": "4:3",
-        "shortInfo": [],
-        "price": "",
-        "originalPrice": "",
-        "benefits": [],
-        "conditions": ""
-      },
-      "close-financial-deal": {
-        "slug": "close-financial-deal",
-        "category": "",
-        "categoryId": "accounting",
-        "title": "",
-        "imagePlaceholder": "4:3",
-        "shortInfo": [],
-        "price": "",
-        "originalPrice": "",
-        "benefits": [],
-        "conditions": ""
-      },
-      "monthly-bookkeeping-and-tax-bundle": {
-        "slug": "monthly-bookkeeping-and-tax-bundle",
-        "category": "",
-        "categoryId": "accounting",
-        "title": "",
-        "imagePlaceholder": "4:3",
-        "shortInfo": [],
-        "price": "",
-        "originalPrice": "",
-        "benefits": [],
-        "conditions": ""
+        "shortInfo": [
+          "கட்டணங்கள் உள்ளடக்கம்",
+          "கட்டாயமில்லை",
+          "ஆன்லைன் சரிபார்ப்பு",
+          "இலவச ஆலோசனை",
+          "இலவச சான்றிதழ்கள்",
+          "இலவச முத்திரை",
+          "இலவச வங்கி ஆவணம்",
+          "இலவச DBD பதிவு",
+          "இலவச வரி பதிவு",
+          "இலவச கார்டு",
+          "இலவச வரி பயிற்சி"
+        ],
+        "price": "5,900 THB இலிருந்து",
+        "originalPrice": "8,900 இலிருந்து THB",
+        "pricingTiers": [
+          {
+            "name": "தாய் கூட்டாளிகள் மட்டும்",
+            "price": "5,900",
+            "originalPrice": "8,900"
+          },
+          {
+            "name": "வெளிநாட்டு கூட்டாளி ≤ 49%",
+            "price": "8,900",
+            "originalPrice": "11,900"
+          }
+        ],
+        "benefits": [
+          "<b>அனைத்தும் உள்ளடக்கம்!</b>",
+          "<b>கட்டாயமில்லை</b>",
+          "<b>ஆன்லைன் சரிபார்ப்பு</b>",
+          "<b>இலவச ஆலோசனை</b>",
+          "<b>இலவச கிட்</b>",
+          "<b>வரி பயிற்சி</b>"
+        ],
+        "conditions": "• மூலதனம் ≤ 5M THB உள்ளடக்கம்."
       },
       "commercial-shop-registration-deal": {
         "slug": "commercial-shop-registration-deal",
-        "category": "",
+        "category": "Registration",
         "categoryId": "registration",
-        "title": "",
+        "title": "வணிகக் கடைப் பதிவு",
         "imagePlaceholder": "4:3",
-        "shortInfo": [],
-        "price": "",
-        "originalPrice": "",
+        "shortInfo": [
+          "கட்டணம் உள்ளடக்கம்",
+          "ஆன்லைன் & ஆஃப்லைன்",
+          "அனைத்தும் நாங்கள்",
+          "விரைவான சான்றிதழ்",
+          "100% நம்பகத்தன்மை",
+          "கடன் தயார்"
+        ],
+        "price": "3,500 THB இலிருந்து",
+        "originalPrice": "5,500 இலிருந்து THB",
         "pricingTiers": [],
-        "benefits": [],
-        "conditions": ""
+        "benefits": [
+          "<b>அனைத்தும் உள்ளடக்கம்!</b>",
+          "<b>ஆன்லைன் & ஆஃப்லைன்</b>",
+          "<b>சிரமம் இல்லை</b>",
+          "<b>விரைவு சான்றிதழ்</b>",
+          "<b>நம்பகத்தன்மை</b>",
+          "<b>வணிக விரிவாக்கம்</b>"
+        ],
+        "conditions": "பாங்காக் பகுதிக்கான நிலையான கட்டணம்."
+      },
+      "monthly-bookkeeping-and-tax-bundle": {
+        "slug": "monthly-bookkeeping-and-tax-bundle",
+        "category": "Accounting & Audit",
+        "categoryId": "accounting",
+        "title": "மாதாந்திர கணக்கியல் & வரி பேக்கேஜ்",
+        "imagePlaceholder": "4:3",
+        "shortInfo": [
+          "முழுமையான கணக்கியல்",
+          "சரியான நேரத்தில் வரி தாக்கல்",
+          "மாதாந்திர நிதி சுருக்கம்"
+        ],
+        "price": "1,500 THB/மாதம் இலிருந்து",
+        "originalPrice": "2,500/மாதம் THB",
+        "pricingTiers": [
+          {
+            "name": "S அளவு\n(≤ 50 ஆவணம்/மாதம்)",
+            "price": "2,500",
+            "originalPrice": "3,500"
+          },
+          {
+            "name": "M அளவு\n(≤ 70 ஆவணம்/மாதம்)",
+            "price": "3,000",
+            "originalPrice": "4,000"
+          },
+          {
+            "name": "L அளவு\n(≤ 100 ஆவணம்/மாதம்)",
+            "price": "3,500",
+            "originalPrice": "4,500"
+          },
+          {
+            "name": "XL அளவு\n(> 100 ஆவணம்/மாதம்)",
+            "price": "தொடர்பு கொள்ளவும்"
+          },
+          {
+            "name": "வெற்று அறிக்கை\n(ஒவ்வொரு வகை)",
+            "price": "500",
+            "originalPrice": "700"
+          }
+        ],
+        "benefits": [
+          "வருமான/செலவு கணக்கியல்",
+          "வரி தாக்கல் தயாரிப்பு",
+          "சமூக பாதுகாப்பு பங்களிப்பு",
+          "ஒப்பந்த காலத்தில் இலவச ஆலோசனை"
+        ],
+        "conditions": "விலை ஆவண எண்ணிக்கை மற்றும் சிக்கலான தன்மையின் அடிப்படையில்."
+      },
+      "individual-tax-clearing": {
+        "slug": "individual-tax-clearing",
+        "category": "Accounting & Audit",
+        "categoryId": "accounting",
+        "title": "தனிநபர் வருமான வரி தீர்வு",
+        "imagePlaceholder": "4:3",
+        "shortInfo": [
+          "அதிகபட்ச கழிவுகள்",
+          "நிலுவை வரி தீர்வு",
+          "சரியான நேரத்தில் தாக்கல்",
+          "ஆவண மேலாண்மை",
+          "வரி திட்டமிடல்",
+          "நிறுவனம் அமைப்பது பற்றிய ஆலோசனை"
+        ],
+        "price": "2,500 THB இலிருந்து",
+        "originalPrice": "4,500 இலிருந்து THB",
+        "pricingTiers": [],
+        "benefits": [
+          "<b>அதிகபட்ச கழிவுகள்</b>",
+          "<b>ஆவண மேலாண்மை</b>",
+          "<b>நிலுவை தீர்வு</b>",
+          "<b>வரி பிரதிநிதித்துவம்</b>",
+          "<b>எப்போதும் சரியான நேரத்தில்</b>",
+          "<b>வளர்ச்சி ஆலோசனை</b>"
+        ],
+        "conditions": "கட்டணம் சிக்கலான தன்மையின் அடிப்படையில்."
+      },
+      "close-financial-deal": {
+        "slug": "close-financial-deal",
+        "category": "Accounting & Audit",
+        "categoryId": "accounting",
+        "title": "ஆண்டு நிதிநிலை அறிக்கை முடிவு",
+        "imagePlaceholder": "4:3",
+        "shortInfo": [
+          "CPA தணிக்கை",
+          "100% சட்ட இணக்கம்",
+          "PND.50 மற்றும் e-Filing"
+        ],
+        "price": "9,900 THB இலிருந்து",
+        "originalPrice": "12,900 இலிருந்து THB",
+        "pricingTiers": [],
+        "benefits": [
+          "ஆண்டு தணிக்கை மற்றும் சான்றிதழ்",
+          "கார்ப்பரேட் வருமான வரி (PND.50)",
+          "DBD e-Filing மூலம் சமர்ப்பிப்பு",
+          "பங்குதாரர் பட்டியல்"
+        ],
+        "conditions": "தணிக்கை கட்டணம் வணிக அளவின் அடிப்படையில்."
       }
     },
     "ui": {
-      "ctaPrimary": "",
-      "chatViaLine": "",
-      "callNow": "",
-      "benefitsTitle": "",
-      "conditionsTitle": "",
-      "summaryTitle": "",
-      "specialPrice": "",
-      "serviceRates": "",
-      "freeAssessment": "",
-      "viewDetails": "",
-      "andMore": "",
-      "drawerTitle": "",
-      "emptyHub": "",
-      "otherContacts": ""
+      "benefitsTitle": "நீங்கள் பெறும் சலுகைகள்",
+      "conditionsTitle": "விதிமுறைகள் & நிபந்தனைகள்",
+      "summaryTitle": "பேக்கேஜ் சுருக்கம்",
+      "specialPrice": "சிறப்பு விலை",
+      "serviceRates": "சேவை கட்டணங்கள்",
+      "freeAssessment": "இலவச விலை மதிப்பீட்டிற்கு எங்கள் குழுவைத் தொடர்பு கொள்ளுங்கள் — மறைவான கட்டணங்கள் இல்லை",
+      "chatViaLine": "LINE வழியாக அரட்டை",
+      "callNow": "அழைக்கவும் 092-882-5556",
+      "viewDetails": "பிரமோஷன் விவரங்களைக் காண",
+      "andMore": "மேலும் பலவும்...",
+      "drawerTitle": "பிரமோஷன்கள் & சிறப்புரிமைகள்",
+      "emptyHub": "மன்னிக்கவும், இந்த வகையில் தற்போது பிரமோஷன்கள் இல்லை. சமீபத்திய சலுகைகளுக்காக காத்திருங்கள்.",
+      "otherContacts": "பிற தொடர்பு வழிகள்"
     }
   },
   "promotion": {
@@ -1537,6 +1698,7 @@
     "tabArticles": "கட்டுரைகள்",
     "emptyPrompt": "சேவைகள் அல்லது கட்டுரைகளைத் தேட ஒரு முக்கிய வார்த்தையைத் தட்டச்சு செய்யுங்கள்",
     "noResults": "\"{query}\" க்கான தேடல் முடிவுகள் காணப்படவில்லை",
-    "noResultsHint": "வேறு முக்கிய வார்த்தைகளுடன் தேடுங்கள்"
+    "noResultsHint": "வேறு முக்கிய வார்த்தைகளுடன் தேடுங்கள்",
+    "didYouMean": "நீங்கள் இதை தேடுகிறீர்களா:"
   }
 }
